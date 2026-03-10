@@ -1,0 +1,6 @@
+{
+  "localModels": {
+    "emailSort": "ollama/llama-3.2",
+    "calendarParse": "ollama/llama-3.2"
+  }
+}
