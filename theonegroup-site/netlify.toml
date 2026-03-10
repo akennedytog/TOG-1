@@ -1,5 +1,10 @@
 [build]
-  base = "/"
+  base = "/theonegroup-site"
+  publish = "dist"
+  command = "npm run build"
+
+[context.production]
+  base = "/theonegroup-site"
   publish = "dist"
   command = "npm run build"
 
