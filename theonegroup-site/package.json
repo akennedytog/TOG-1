@@ -1,0 +1,14 @@
+{
+  "name": "theonegroup-site",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}

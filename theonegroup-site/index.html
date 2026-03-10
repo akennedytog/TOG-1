@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The One Group | Practical AI Systems for SMBs</title>
+  <meta name="description" content="We help small businesses deploy practical AI agents that save time, increase response speed, and drive revenue." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- SEO Meta Tags -->
+  <meta property="og:title" content="Practical AI Consulting for SMBs | The One Group" />
+  <meta property="og:description" content="Deploy AI agents that remove bottlenecks and increase revenue. Book a call today!" />
+  <meta property="og:image" content="https://your-domain.com/assets/social-preview.png" />
+  <meta property="og:url" content="https://theonegroup.info" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@TheOneGroupAI" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The One Group AI",
+    "url": "https://theonegroup.info",
+    "logo": "https://theonegroup.info/assets/logo.png",
+    "sameAs": [
+      "https://x.com/TheOneGroupAI",
+      "https://www.linkedin.com/in/alec-kennedy-1b3a7371/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="contact-top">
+      <span>Email: <a href="mailto:akennedy@theonegroup.info">akennedy@theonegroup.info</a></span>
+      <span>Phone: <a href="tel:5024037201">502-403-7201</a></span>
+      <span>LinkedIn: <a href="https://www.linkedin.com/in/alec-kennedy-1b3a7371/" target="_blank" rel="noopener">Alec Kennedy</a></span>
+    </div>
+    <nav class="nav">
+      <div class="logo">The One Group</div>
+      <a class="btn ghost" href="https://x.com/TheOneGroupAI" target="_blank" rel="noopener">DM “AI” on X</a>
+    </nav>
+    <section class="hero">
+      <div>
+        <span class="pill">Practical AI Consulting for SMBs</span>
+        <h1>Deploy AI agents that remove bottlenecks and increase revenue.</h1>
+        <p>We help small businesses implement AI systems that actually get used: faster lead response, automated follow-up, and cleaner daily operations.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#book">Book a Call</a>
+          <a class="btn ghost" href="#form">Get a Custom Plan</a>
+          <a class="btn ghost" href="https://x.com/TheOneGroupAI" target="_blank" rel="noopener">DM “AI”</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">What we implement</h3>
+        <ul style="color:var(--muted);line-height:1.8;padding-left:18px">
+          <li>Speed-to-lead AI responders</li>
+          <li>Inbox → tasks/workflow automation</li>
+          <li>Follow-up + scheduling assistants</li>
+          <li>Operator dashboards for daily ops</li>
+        </ul>
+        <div class="kpi">
+          <div><strong>&lt;60s</strong><br><small>Lead response target</small></div>
+          <div><strong>7 days</strong><br><small>First deployment goal</small></div>
+          <div><strong>ROI-first</strong><br><small>Execution over hype</small></div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Who this is for</h2>
+      <div class="grid">
+        <div class="card"><h3>Home Services</h3><p>Contractors, plumbers, HVAC, landscaping — stop losing jobs after hours.</p></div>
+        <div class="card"><h3>Local SMB Teams</h3><p>Automate repetitive admin and improve customer response speed.</p></div>
+        <div class="card"><h3>Owner-Operators</h3><p>Get a practical AI stack without enterprise complexity.</p></div>
+      </div>
+    </section>
+    <section class="section" id="pricing">
+  <h2>Pricing & Plans</h2>
+  <div class="carousel">
+    <div class="slide">
+      <h3>Starter</h3>
+      <p>$499/month</p>
+      <ul>
+        <li>Up to 3 simple automations</li>
+        <li>Basic Rasa chatbot setup</li>
+        <li>Email support</li>
+      </ul>
+      <a class="btn primary" href="#form">Start</a>
+    </div>
+    <div class="slide">
+      <h3>Professional</h3>
+      <p>$999/month</p>
+      <ul>
+        <li>Up to 10 automations</li>
+        <li>Advanced Rasa chatbot</li>
+        <li>Analytics & reporting</li>
+      </ul>
+      <a class="btn primary" href="#form">Upgrade</a>
+    </div>
+    <div class="slide">
+      <h3>Enterprise</h3>
+      <p>Custom pricing</p>
+      <ul>
+        <li>Unlimited automations</li>
+        <li>Dedicated agent skills</li>
+        <li>24/7 support</li>
+      </ul>
+      <a class="btn primary" href="#form">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="chatbot">
+  <h2>Live Chat & AI Assistant</h2>
+  <!-- Rasa Webchat widget -->
+  <script src="https://unpkg.com/@rasahq/rasa-webchat/lib/index.js"></script>
+  <div id="webchat" />
+  <script>
+    WebChat.default({
+      selector: '#webchat',
+      initPayload: '/greet',
+      socketUrl: 'https://your-vps.example.com',
+      socketPath: '/socket.io/',
+      title: 'AI Assistant',
+      subtitle: 'Powered by Rasa & OpenClaw',
+    });
+  </script>
+</section>
+
+<section class="section" id="newsletter">
+  <h2>Stay Updated</h2>
+  <p>Subscribe to our newsletter for weekly AI tips and updates.</p>
+  <form action="https://your-mailing-list-service.com/subscribe" method="post">
+    <input type="email" name="email" placeholder="Your email" required>
+    <button class="btn primary" type="submit">Subscribe</button>
+  </form>
+</section>
+
+<section class="section" id="book">
+      <h2>Choose your next step</h2>
+      <div class="cta">
+        <a class="btn primary" href="https://calendly.com/theonegroup/ai-strategy" target="_blank" rel="noopener">Book a Call</a>
+        <a class="btn ghost" href="#form">Fill Out the Form</a>
+        <a class="btn ghost" href="https://x.com/TheOneGroupAI" target="_blank" rel="noopener">DM “AI” on X</a>
+      </div>
+      <p style="font-size:14px;margin-top:10px">(We can swap the booking link anytime.)</p>
+    </section>
+    <section class="section" id="form">
+      <div class="card">
+        <h2 style="margin-top:0">Request your starter plan</h2>
+        <p>Tell us your workflow bottleneck and we’ll map the first 1–2 automations to implement.</p>
+        <form onsubmit="window.location.href='mailto:akennedy@theonegroup.info?subject=AI%20Starter%20Plan&body=' + encodeURIComponent(document.getElementById('message').value); return false;">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <input type="text" name="business" placeholder="Business type">
+          <textarea id="message" name="message" rows="5" placeholder="What do you want automated first?" required></textarea>
+          <button class="btn primary" type="submit">Send Request</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      © <span id="y"></span> The One Group — Practical AI systems for real businesses.
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>

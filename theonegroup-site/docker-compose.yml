@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  rasa:
+    image: rasa/rasa:latest-full
+    command: run --enable-api --cors "*"
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./rasa/models:/app/models
+      - ./rasa/data:/app/data
+
+  action_server:
+    image: rasa/rasa-sdk:latest
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./rasa/actions:/app/actions
