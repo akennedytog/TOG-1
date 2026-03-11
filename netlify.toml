@@ -1,4 +1,4 @@
 [build]
-  # Install all dependencies at root and then build the frontend workspace
-  command = "npm ci && npm --workspace frontend run build"
+  # Install & build inside the frontend folder directly
+  command = "cd frontend && npm ci && npm run build"
   publish = "frontend/build"
