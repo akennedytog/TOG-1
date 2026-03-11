@@ -2,4 +2,4 @@
   # working directory for commands relative to the repo root
   base    = "frontend"
   command = "npm run build"
-  publish = "frontend/build"
+  publish = "build"
