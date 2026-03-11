@@ -1,4 +1,4 @@
 [build]
-  # Install & build inside the frontend folder directly
-  command = "cd frontend && npm ci && npm run build"
+  # Install frontend dependencies (npm install works without a lockfile)
+  command = "cd frontend && npm install && npm run build"
   publish = "frontend/build"
