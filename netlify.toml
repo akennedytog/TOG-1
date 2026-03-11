@@ -1,0 +1,7 @@
+[build]
+  # Set the base directory where your React app lives
+  base    = "frontend"
+  # Build command to run
+  command = "npm --workspace frontend run build"
+  # Publish directory after build
+  publish = "frontend/build"
