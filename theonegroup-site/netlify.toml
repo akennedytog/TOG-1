@@ -1,14 +1,4 @@
 [build]
-  base = "/theonegroup-site"
-  publish = "dist"
-  command = "npm run build"
-
-[context.production]
-  base = "/theonegroup-site"
-  publish = "dist"
-  command = "npm run build"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  base    = "frontend"
+  command = "npm --workspace frontend run build"
+  publish = "frontend/build"
