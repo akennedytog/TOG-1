@@ -1,0 +1,100 @@
+{
+  "agents": {
+    "jerry": {
+      "name": "Jerry",
+      "role": "CEO",
+      "status": "active",
+      "last_activity": "2026-03-22T14:45:00Z",
+      "current_task": "Evaluating South Florida expansion",
+      "tasks_completed_today": 3,
+      "tasks_pending": 2,
+      "efficiency": 94,
+      "color": "purple"
+    },
+    "arlo": {
+      "name": "Arlo", 
+      "role": "Research",
+      "status": "active",
+      "last_activity": "2026-03-22T14:42:00Z",
+      "current_task": "Researching HVAC automation trends",
+      "tasks_completed_today": 5,
+      "tasks_pending": 3,
+      "efficiency": 97,
+      "color": "blue"
+    },
+    "iris": {
+      "name": "Iris",
+      "role": "Sales & Marketing", 
+      "status": "active",
+      "last_activity": "2026-03-22T14:48:00Z",
+      "current_task": "Creating cold email sequences",
+      "tasks_completed_today": 8,
+      "tasks_pending": 4,
+      "efficiency": 91,
+      "color": "pink"
+    },
+    "opal": {
+      "name": "Opal",
+      "role": "Organization",
+      "status": "idle",
+      "last_activity": "2026-03-22T14:30:00Z",
+      "current_task": "Monitoring organizational coherence",
+      "tasks_completed_today": 2,
+      "tasks_pending": 1,
+      "efficiency": 100,
+      "color": "teal"
+    },
+    "dev": {
+      "name": "Dev",
+      "role": "Engineering",
+      "status": "active", 
+      "last_activity": "2026-03-22T14:46:00Z",
+      "current_task": "Building lead tracking dashboard",
+      "tasks_completed_today": 4,
+      "tasks_pending": 2,
+      "efficiency": 88,
+      "color": "indigo"
+    },
+    "rico": {
+      "name": "Rico",
+      "role": "Operations",
+      "status": "active",
+      "last_activity": "2026-03-22T14:47:00Z",
+      "current_task": "Setting up automated outreach pipeline",
+      "tasks_completed_today": 6,
+      "tasks_pending": 3,
+      "efficiency": 95,
+      "color": "orange"
+    },
+    "dante": {
+      "name": "Dante",
+      "role": "Creative",
+      "status": "active",
+      "last_activity": "2026-03-22T14:44:00Z",
+      "current_task": "Producing Twitter content",
+      "tasks_completed_today": 3,
+      "tasks_pending": 2,
+      "efficiency": 92,
+      "color": "rose"
+    },
+    "abby": {
+      "name": "Abby",
+      "role": "Quality Control",
+      "status": "idle",
+      "last_activity": "2026-03-22T14:35:00Z",
+      "current_task": "Reviewing outputs",
+      "tasks_completed_today": 1,
+      "tasks_pending": 1,
+      "efficiency": 99,
+      "color": "cyan"
+    }
+  },
+  "system": {
+    "last_sync": "2026-03-22T14:50:00Z",
+    "active_agents": 6,
+    "idle_agents": 2,
+    "total_tasks_today": 32,
+    "system_health": "operational",
+    "api_latency_ms": 45
+  }
+}

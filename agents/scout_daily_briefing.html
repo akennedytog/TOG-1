@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road to Cinco - Daily Briefing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%); }
+    .glass-panel { background: rgba(30, 41, 59, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(148, 163, 184, 0.2); }
+    .metric-card { border-left: 4px solid; }
+    .status-behind { border-left-color: #ef4444; }
+    .status-ontrack { border-left-color: #22c55e; }
+    .status-exceeding { border-left-color: #eab308; }
+    .alert-red { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); }
+    .alert-yellow { background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); }
+    .alert-green { background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); }
+  </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen">
+  <div class="max-w-6xl mx-auto p-6">
+    
+    <!-- Header -->
+    <header class="gradient-bg rounded-2xl p-8 mb-6 border border-slate-700">
+      <div class="flex justify-between items-start">
+        <div>
+          <h1 class="text-4xl font-bold mb-2">🌵 ROAD TO CINCO DAILY BRIEFING</h1>
+          <p class="text-blue-200 text-lg">Monday, April 27, 2026</p>
+          <p class="text-blue-300 text-sm mt-1">B-F FY26 Q4 H&R</p>
+        </div>
+        <div class="text-right">
+          <div class="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-4 py-2 border border-emerald-500/30">
+            <span class="text-emerald-400 font-semibold">Live Data</span>
+            <span class="text-emerald-300 text-sm">146 Reps</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Team Performance -->
+    <section class="glass-panel rounded-2xl p-6 mb-6">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span>📊</span> TEAM PERFORMANCE
+      </h2>
+      <div class="h-1 w-full bg-slate-700 mb-6 rounded"></div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="metric-card status-behind glass-panel rounded-xl p-4">
+          <p class="text-slate-400 text-sm">New POD</p>
+          <p class="text-3xl font-bold">265</p>
+          <p class="text-red-400 text-sm">Goal: 2,226</p>
+        </div>
+        <div class="metric-card status-behind glass-panel rounded-xl p-4">
+          <p class="text-slate-400 text-sm">% to Goal</p>
+          <p class="text-3xl font-bold text-red-400">11.9%</p>
+          <p class="text-red-400 text-sm">Critical gap</p>
+        </div>
+        <div class="metric-card status-ontrack glass-panel rounded-xl p-4">
+          <p class="text-slate-400 text-sm">Total Payouts</p>
+          <p class="text-3xl font-bold text-emerald-400">$3,975</p>
+          <p class="text-emerald-400 text-sm">Earned to-date</p>
+        </div>
+        <div class="metric-card status-exceeding glass-panel rounded-xl p-4">
+          <p class="texttext-slate-400 text-sm">Reps Tracked</p>
+          <p class="text-3xl font-bold">146</p>
+          <p class="text-yellow-400 text-sm">81 behind goal</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status Breakdown -->
+    <section class="glass-panel rounded-2xl p-6 mb-6">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span>📈</span> STATUS BREAKDOWN
+      </h2>
+      <div class="h-1 w-full bg-slate-700 mb-6 rounded"></div>
+      
+      <div class="space-y-3">
+        <div class="alert-red rounded-lg p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🚨</span>
+            <span class="font-semibold">Behind Goal</span>
+          </div>
+          <span class="text-2xl font-bold text-red-400">81 reps</span>
+        </div>
+        
+        <div class="alert-yellow rounded-lg p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">⚠️</span>
+            <span class="font-semibold">At Risk</span>
+          </div>
+          <span class="text-2xl font-bold text-yellow-400">0 reps</span>
+        </div>
+        
+        <div class="alert-green rounded-lg p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">✅</span>
+            <span class="font-semibold">On Track</span>
+          </div>
+          <span class="text-2xl font-bold text-emerald-400">0 reps</span>
+        </div>
+        
+        <div class="alert-green rounded-lg p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🏆</span>
+            <span class="font-semibold">Exceeding</span>
+          </div>
+          <span class="text-2xl font-bold text-yellow-400">0 reps</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Insights -->
+    <section class="glass-panel rounded-2xl p-6 mb-6">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span>💡</span> KEY INSIGHTS
+      </h2>
+      <div class="h-1 w-full bg-slate-700 mb-6 rounded"></div>
+      
+      <div class="space-y-3">
+        <div class="bg-red-900/30 border border-red-500/30 rounded-lg p-4">
+          <p class="text-red-300 font-semibold">🚨 URGENT: Team at 11.9% of goal - critical gap to close</p>
+        </div>
+        <div class="bg-red-900/30 border border-red-500/30 rounded-lg p-4">
+          <p class="text-red-300 font-semibold">❗ 81 reps significantly behind - immediate coaching needed</p>
+        </div>
+        <div class="bg-emerald-900/30 border border-emerald-500/30 rounded-lg p-4">
+          <p class="text-emerald-300 font-semibold">💰 Team earned $3,975 in Herradura payouts to-date</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Performer -->
+    <section class="glass-panel rounded-2xl p-6 mb-6">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span>🏆</span> TOP PERFORMER
+      </h2>
+      <div class="h-1 w-full bg-slate-700 mb-6 rounded"></div>
+      
+      <div class="bg-gradient-to-r from-yellow-900/30 to-amber-900/30 border border-yellow-500/30 rounded-xl p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="text-4xl">👑</span>
+          <div>
+            <h3 class="text-2xl font-bold text-yellow-400">GAVIN LAWRENCE</h3>
+            <p class="text-slate-400">Field Sales Manager</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="text-center">
+            <p class="text-slate-400 text-sm">New POD</p>
+            <p class="text-2xl font-bold">10</p>
+          </div>
+          <div class="text-center">
+            <p class="text-slate-400 text-sm">Goal</p>
+            <p class="text-2xl font-bold">15</p>
+          </div>
+          <div class="text-center">
+            <p class="text-slate-400 text-sm">% to Goal</p>
+            <p class="text-2xl font-bold text-yellow-400">67%</p>
+          </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-yellow-500/30">
+          <p class="text-slate-300">Prior POD: <span class="font-semibold">100</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top 10 Performers -->
+    <section class="glass-panel rounded-2xl p-6 mb-6">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span>⭐</span> TOP 10 PERFORMERS
+      </h2>
+      <div class="h-1 w-full bg-slate-700 mb-6 rounded"></div>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-800 text-slate-400 uppercase text-xs">
+            <tr>
+              <th class="px-4 py-3 text-left">Rank</th>
+              <th class="px-4 py-3 text-left">Name</th>
+              <th class="px-4 py-3 text-left">Level</th>
+              <th class="px-4 py-3 text-right">New POD</th>
+              <th class="px-4 py-3 text-right">Goal</th>
+              <th class="px-4 py-3 text-right">% to Goal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800">
+            <tr class="bg-yellow-900/20">
+              <td class="px-4 py-3"><span class="text-yellow-400 font-bold">#1</span></td>
+              <td class="px-4 py-3 font-semibold">GAVIN LAWRENCE</td>
+              <td class="px-4 py-3"><span class="text-blue-400">FSM</span></td>
+              <td class="px-4 py-3 text-right">10</td>
+              <td class="px-4 py-3 text-right">15</td>
+              <td class="px-4 py-3 text-right text-yellow-400 font-semibold">67%</td>
+            </tr>
+            <tr class="bg-slate-800/50">
+              <td class="px-4 py-3"><span class="text-slate-400 font-bold">#2</span></td>
+              <td class="px-4 py-3 font-semibold">VON UNGERN STERNBERG THEO</td>
+              <td class="px-4 py-3"><span class="text-blue-400">FSM</span></td>
+              <td class="px-4 py-3 text-right">10</td>
+              <td class="px-4 py-3 text-right">15</td>
+              <td class="px-4 py-3 text-right text-yellow-400 font-semibold">67%</td>
+            </tr>
+            <tr class="bg-slate-800/50">
+              <td class="px-4 py-3"><span class="text-slate-400 font-bold">#3</span></td>
+              <td class="px-4 py-3 font-semibold">BRAY JAMES</td>
+              <td class="px-4 py-3"><span class="text-emerald-400">Rep</span></td>
+              <td class="px-4 py-3 text-right">9</td>
+              <td class="px-4 py-3 text-right">15</td>
+              <td class="px-4 py-3 text-right text-yellow-400 font-semibold">60%</td>
+            </tr>
+            <tr class="bg-slate-800/50">
+              <td class="px-4 py-3"><span class="text-slate-400 font-bold">#4</span></td>
+              <td class="px-4 py-3 font-semibold">APARICIO VANESSA</td>
+              <td class="px-4 py-3"><span class="text-blue-400">FSM</span></td>
+              <td class="px-4 py-3 text-right">12</td>
+              <td class="px-4 py-3 text-right">21</td>
+              <td class="px-4 py-3 text-right text-yellow-400 font-semibold">57%</td>
+            </tr>
+            <tr class="bg-slate-800/50">
+              <td class="px-4 py-3"><span class="text-slate-400 font-bold">#5</span></td>
+              <td class="px-4 py-3 font-semibold">FETTERMAN GILLIAN</td>
+              <td class="px-4 py-3"><span class="text-blue-400">FSM</span></td>
+              <td class="px-4 py-3 text-right">10</td>
+              <td class="px-4 py-3 text-right">18</td>
+              <td class="px-4 py-3 text-right text-yellow-400 font-semibold">56%</td>
+            </tr>
+            <tr class="bg-slate-800/50">
+              <td class="px-4 py-3"><span class="text-slate-400 font-bold">#6</span></td>
+              <td class="px-4 py-3 font-semibold">TAPPAN CHARLES</td>
+              <td class="px-4 py-3"><span class="text-blue-400">FSM</span></td>
+              <td class="px-4 py-3 text-right">8</td>
+              <td class="px-4 py-3 text-right">16</td>
+              <td class="px-4 py-3 text-right text-yellow-400 font-semibold">50%</td>
+            </tr>
+            <tr class="bg-slate-800/50">
+              <td class="px-4 py-3"><span class="text-slate-400 font-bold">#7</span></td>
+              <td class="px-4 py-3 font-semibold">HARTMANN CHRISTIAN</td>
+              <td class="px-4 py-3"><span class="text-blue-400">FSM</span></td>
+              <td class="px-4 py-3 text-right">7</td>
+              <td class="px-4 py-3 text-right">15</td>
+              <td class="px-4 py-3 text-right text-red-400 font-semibold">47%</td>
+            </tr>
+            <tr class="bg-slate-800/50">
+              <td class="px-4 py-3"><span class="text-slate-400 font-bold">#8</span></td>
+              <td class="px-4 py-3 font-semibold">DRUASH KENDALL</td>
+              <td class="px-4 py-3"><span class="text-blue-400">FSM</span></td>
+              <td class="px-4 py-3 text-right">7</td>
+              <td class="px-4 py-3 text-right">15</td>
+              <td class="px-4 py-3 text-right text-red-400 font-semibold">47%</td>
+            </tr>
+            <tr class="bg-slate-800/50">
+              <td class="px-4 py-3"><span class="text-slate-400 font-bold">#9</span></td>
+              <td class="px-4 py-3 font-semibold">GAGNELIUS WESLEY</td>
+              <td class="px-4 py-3"><span class="text-blue-400">FSM</span></td>
+              <td class="px-4 py-3 text-right">8</td>
+              <td class="px-4 py-3 text-right">18</td>
+              <td class="px-4 py-3 text-right text-red-400 font-semibold">44%</td>
+            </tr>
+            <tr class="bg-slate-800/50">
+              <td class="px-4 py-3"><span class="text-slate-400 font-bold">#10</span></td>
+              <td class="px-4 py-3 font-semibold">LEONE ALESSANDRA</td>
+              <td class="px-4 py-3"><span class="text-blue-400">FSM</span></td>
+              <td class="px-4 py-3 text-right">6</td>
+              <td class="px-4 py-3 text-right">15</td>
+              <td class="px-4 py-3 text-right text-red-400 font-semibold">40%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Needs Attention -->
+    <section class="glass-panel rounded-2xl p-6 mb-6">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span>🚨</span> NEEDS ATTENTION (Zero Activity)
+      </h2>
+      <div class="h-1 w-full bg-slate-700 mb-6 rounded"></div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="alert-red rounded-lg p-3 flex items-center justify-between">
+          <span class="font-semibold">PH ZPRM CHAINS + ATTRACTIONS FSM</span>
+          <span class="text-red-400">0% to goal</span>
+        </div>
+        <div class="alert-red rounded-lg p-3 flex items-center justify-between">
+          <span class="font-semibold">HOUSE H&R SPIRIT-36 MIR S</span>
+          <span class="text-red-400">0% to goal</span>
+        </div>
+        <div class="alert-red rounded-lg p-3 flex items-center justify-between">
+          <span class="font-semibold">FREE LINDA</span>
+          <span class="text-red-400">0% to goal</span>
+        </div>
+        <div class="alert-red rounded-lg p-3 flex items-center justify-between">
+          <span class="font-semibold">ROBLES ALANA</span>
+          <span class="text-red-400">0% to goal</span>
+        </div>
+        <div class="alert-red rounded-lg p-3 flex items-center justify-between">
+          <span class="font-semibold">HOUSE H&R SPIRIT-33 JAX</span>
+          <span class="text-red-400">0% to goal</span>
+        </div>
+        <div class="alert-red rounded-lg p-3 flex items-center justify-between">
+          <span class="font-semibold">HOUSE H&R WINE-41 TPA N</span>
+          <span class="text-red-400">0% to goal</span>
+        </div>
+        <div class="alert-red rounded-lg p-3 flex items-center justify-between">
+          <span class="font-semibold">OPN-793 ZPRM</span>
+          <span class="text-red-400">0% to goal</span>
+        </div>
+        <div class="alert-red rounded-lg p-3 flex items-center justify-between">
+          <span class="font-semibold">SWEISGOOD MARY</span>
+          <span class="text-red-400">0% to goal</span>
+        </div>
+      </div>
+      <p class="text-slate-400 text-sm mt-4">...and 65 more reps at 0% to goal</p>
+    </section>
+
+    <!-- Recommended Actions -->
+    <section class="glass-panel rounded-2xl p-6 mb-6">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span>✅</span> RECOMMENDED ACTIONS
+      </h2>
+      <div class="h-1 w-full bg-slate-700 mb-6 rounded"></div>
+      
+      <div class="space-y-3">
+        <div class="bg-slate-800/50 rounded-lg p-4 flex items-start gap-3">
+          <span class="text-emerald-400 font-bold">1.</span>
+          <p>Schedule 1:1s with bottom 20 performers immediately</p>
+        </div>
+        <div class="bg-slate-800/50 rounded-lg p-4 flex items-start gap-3">
+          <span class="text-emerald-400 font-bold">2.</span>
+          <p>Review territory coverage for underperforming FSMs</p>
+        </div>
+        <div class="bg-slate-800/50 rounded-lg p-4 flex items-start gap-3">
+          <span class="text-emerald-400 font-bold">3.</span>
+          <p>Identify blockers preventing POD conversion</p>
+        </div>
+        <div class="bg-slate-800/50 rounded-lg p-4 flex items-start gap-3">
+          <span class="text-emerald-400 font-bold">4.</span>
+          <p>Consider incentive adjustments to drive urgency</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-slate-500 text-sm py-6 border-t border-slate-800">
+      <p>Generated: 2026-04-27 15:18 EDT</p>
+      <p class="mt-1">═══════════════════════════════════════════════════════</p>
+    </footer>
+
+  </div>
+</body>
+</html>

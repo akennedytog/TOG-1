@@ -1,0 +1,47 @@
+[
+  {
+    "id": "thread_1",
+    "text": "A guy offered me $1,000 to follow him around for a day and tell him where he's wasting time.\n\nI said no.\n\nNot because it wasn't interesting—but because it doesn't scale.\n\nHere's what I built instead 👇",
+    "type": "thread_start"
+  },
+  {
+    "id": "thread_2",
+    "text": "But his request revealed something massive: people don't need more AI tools.\n\nThey need someone to look at their chaos and tell them what to do.\n\nThe demand is there. The model just needed to change.",
+    "type": "thread"
+  },
+  {
+    "id": "thread_3",
+    "text": "So I productized it.\n\n$999 AI Assessment. Flat rate. 1-week delivery.\n\nHere's the exact process:\n\n• 45-min recorded interview (I use @fathom_ai to transcribe)\n• Drop the transcript into Claude with a custom analysis prompt\n• Results formatted into a clean report using @Gamma\n\nTakes me ~2 hours. Client gets a roadmap.",
+    "type": "thread"
+  },
+  {
+    "id": "thread_4",
+    "text": "The assessment covers:\n\n→ Current workflow audit\n→ AI opportunity mapping\n→ Tool recommendations with specific vendors\n→ Implementation priority (what to do first, second, third)\n\nNo generic fluff. Every recommendation ties to their actual business.",
+    "type": "thread"
+  },
+  {
+    "id": "thread_5",
+    "text": "Here's where it gets interesting.\n\nThe $999 assessment isn't the endgame—it's the entry point.\n\nAfter they see the roadmap, they hit you with:\n\n'Can you just... do this for us?'\n\nThat's where the real money lives.",
+    "type": "thread"
+  },
+  {
+    "id": "thread_6",
+    "text": "Upsells I'm seeing:\n\n• Custom GPT builds: $3K-5K\n• Workflow automation: $5K-10K\n• Team training + implementation: $5K-15K\n\nThe assessment is the thin edge of the wedge.\n\nIt builds trust fast and surfaces bigger projects.",
+    "type": "thread"
+  },
+  {
+    "id": "thread_7",
+    "text": "Recent client: business broker drowning in 400 emails/day.\n\nAssessment spotted the pattern: 80% were repetitive qualification questions.\n\nBuilt him a custom GPT that drafts responses from his CRM data.\n\nProject total: $3,800 ($999 + $2,801 implementation)\n\nTook 6 hours of my time.",
+    "type": "thread"
+  },
+  {
+    "id": "thread_8",
+    "text": "Stop selling 'AI consulting.'\n\nStart selling clarity.\n\nBusiness owners don't want to become prompt engineers.\n\nThey want someone to hand them a marked-up map and say 'start here.'\n\nThat's the product.",
+    "type": "thread"
+  },
+  {
+    "id": "thread_9",
+    "text": "If you're decent with AI and understand a specific industry:\n\nThis model is wide open.\n\nNo competition because most people overcomplicate it.\n\nSimple offer. Clear deliverable. Natural upsell path.\n\nYou're not selling complexity.\n\nYou're selling clarity.",
+    "type": "thread_end"
+  }
+]

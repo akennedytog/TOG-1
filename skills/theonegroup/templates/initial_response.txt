@@ -1,0 +1,22 @@
+Hi {{name}},
+
+Thanks for reaching out about AI automation for {{company}}.
+
+Based on what you shared about {{notes_summary}}, I'd recommend starting with our **{{service}}** ({{price}}).
+
+Here's what happens next:
+1. Book a 15-min discovery call: https://calendly.com/theonegroup/discovery
+2. I'll audit your current AI visibility/setup
+3. You'll get a clear roadmap and next steps
+
+What's your availability this week?
+
+Best,
+Alec Kennedy
+Founder, The One Group
+
+P.S. Here's what others are saying: https://theonegroup.info/case-studies.html
+
+---
+The One Group | AI Automation for Small Businesses
+https://theonegroup.info

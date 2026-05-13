@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "releases/**"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint & Type Check
+        run: |
+          npm run build --workspace backend
+          # Frontend uses TypeScript too
+          npx tsc --noEmit --project frontend/tsconfig.json || true
+
+      - name: Run Backend Build
+        run: npm run build --workspace backend
+
+      - name: Run Frontend Build
+        run: npm run build --workspace frontend
+
+      - name: Run Frontend Tests
+        run: npm test --workspace frontend -- --watchAll=false

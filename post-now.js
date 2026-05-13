@@ -1,0 +1,52 @@
+// One-off tweet poster - bypasses rate limits
+import dotenv from 'dotenv';
+import { TwitterApi } from 'twitter-api-v2';
+import fs from 'fs';
+
+dotenv.config();
+
+const client = new TwitterApi({
+  appKey: process.env.TWITTER_API_KEY,
+  appSecret: process.env.TWITTER_API_SECRET,
+  accessToken: process.env.TWITTER_ACCESS_TOKEN,
+  accessSecret: process.env.TWITTER_ACCESS_SECRET,
+});
+const rwClient = client.readWrite;
+
+const state = JSON.parse(fs.readFileSync('state.json', 'utf-8'));
+const post = state.queuedPosts[0];
+
+if (!post) {
+  console.log('No posts in queue');
+  process.exit(0);
+}
+
+const postText = typeof post === 'string' ? post : post.text;
+console.log(`Posting: ${postText.substring(0, 80)}...`);
+
+try {
+  const result = await rwClient.v2.tweet(postText);
+  console.log(`✅ Posted! ID: ${result.data.id}`);
+  
+  // Update state
+  state.queuedPosts.shift();
+  state.lastPostTime = Date.now().toString();
+  fs.writeFileSync('state.json', JSON.stringify(state, null, 2));
+  
+  // Update analytics
+  const analytics = JSON.parse(fs.readFileSync('twitter-analytics.json', 'utf-8'));
+  const today = new Date().toISOString().split('T')[0];
+  if (!analytics.dailyStats[today]) analytics.dailyStats[today] = { tweets: 0 };
+  analytics.dailyStats[today].tweets++;
+  analytics.totalTweets++;
+  analytics.engagementLog.push({
+    type: 'tweet',
+    text: postText.substring(0, 100),
+    tweetId: result.data.id,
+    timestamp: new Date().toISOString(),
+  });
+  fs.writeFileSync('twitter-analytics.json', JSON.stringify(analytics, null, 2));
+  
+} catch (err) {
+  console.error(`❌ Failed: ${err.message}`);
+}

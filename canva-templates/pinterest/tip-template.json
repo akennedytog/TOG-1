@@ -1,0 +1,72 @@
+{
+  "templateId": "pin-tip-001",
+  "platform": "pinterest",
+  "type": "tip",
+  "dimensions": {"width": 1000, "height": 1500},
+  "background": {
+    "type": "gradient",
+    "colors": ["#1DA1F2", "#0A0A0A"],
+    "angle": 180
+  },
+  "elements": [
+    {
+      "type": "badge",
+      "text": "AI TIP",
+      "position": {"x": 100, "y": 100},
+      "backgroundColor": "#FFD700",
+      "textColor": "#0A0A0A",
+      "fontSize": 14,
+      "padding": "8px 16px",
+      "borderRadius": 20
+    },
+    {
+      "type": "text",
+      "content": "{{tip_number}}.",
+      "font": "Inter-Bold",
+      "size": 120,
+      "color": "#FFD700",
+      "position": {"x": 100, "y": 200},
+      "opacity": 0.2
+    },
+    {
+      "type": "text",
+      "content": "{{tip_title}}",
+      "font": "Inter-Bold",
+      "size": 42,
+      "color": "#FFFFFF",
+      "position": {"x": 100, "y": 280},
+      "maxWidth": 800,
+      "alignment": "left"
+    },
+    {
+      "type": "text",
+      "content": "{{tip_description}}",
+      "font": "OpenSans-Regular",
+      "size": 24,
+      "color": "#CCCCCC",
+      "position": {"x": 100, "y": 450},
+      "maxWidth": 800,
+      "alignment": "left",
+      "lineHeight": 1.6
+    },
+    {
+      "type": "action",
+      "text": "Save for later ↓",
+      "position": {"x": 100, "y": 1300},
+      "color": "#FFD700",
+      "fontSize": 18
+    },
+    {
+      "type": "logo",
+      "src": "assets/logo-stacked-white.png",
+      "position": {"x": 500, "y": 1420},
+      "width": 150,
+      "opacity": 0.9
+    }
+  ],
+  "export": {
+    "format": "png",
+    "quality": "high",
+    "canvaImport": true
+  }
+}

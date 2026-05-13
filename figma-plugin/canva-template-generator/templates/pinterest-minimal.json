@@ -1,0 +1,33 @@
+{
+  "name": "Pinterest Minimal - April 30",
+  "template": "pinterest",
+  "theme": "minimal",
+  "dimensions": {
+    "width": 1000,
+    "height": 1500
+  },
+  "colors": [
+    "#FFFFFF",
+    "#FAFAFA",
+    "#E0E0E0",
+    "#9E9E9E",
+    "#616161",
+    "#212121",
+    "#000000"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Helvetica Neue",
+      "style": "Light"
+    },
+    "body": {
+      "family": "Helvetica Neue",
+      "style": "UltraLight"
+    },
+    "accent": {
+      "family": "Helvetica Neue",
+      "style": "Medium"
+    }
+  },
+  "createdAt": "2026-04-30T14:00:54.665Z"
+}

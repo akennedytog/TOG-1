@@ -1,0 +1,66 @@
+{
+  "lastUpdated": "2026-04-06T14:02:00Z",
+  "totalTemplates": 6,
+  "byPlatform": {
+    "instagram": {
+      "count": 2,
+      "templates": [
+        {
+          "name": "quote-template",
+          "file": "quote-template.json",
+          "size": "1080x1080",
+          "type": "quote",
+          "lastModified": "2026-03-30"
+        },
+        {
+          "name": "reels-agent-spotlight",
+          "file": "reels-agent-spotlight.json",
+          "size": "1080x1920",
+          "type": "reels",
+          "lastModified": "2026-03-31"
+        }
+      ]
+    },
+    "linkedin": {
+      "count": 2,
+      "templates": [
+        {
+          "name": "carousel-stats",
+          "file": "carousel-stats.json",
+          "size": "1080x1080",
+          "type": "carousel",
+          "lastModified": "2026-03-31"
+        },
+        {
+          "name": "data-template",
+          "file": "data-template.json",
+          "size": "1200x627",
+          "type": "data-visualization",
+          "lastModified": "2026-03-30"
+        }
+      ]
+    },
+    "pinterest": {
+      "count": 2,
+      "templates": [
+        {
+          "name": "infographic-5-steps",
+          "file": "infographic-5-steps.json",
+          "size": "1000x1500",
+          "type": "infographic",
+          "lastModified": "2026-03-31"
+        },
+        {
+          "name": "tip-template",
+          "file": "tip-template.json",
+          "size": "1000x1500",
+          "type": "tip-card",
+          "lastModified": "2026-03-30"
+        }
+      ]
+    }
+  },
+  "todayGenerated": 0,
+  "nextGeneration": "2026-04-07T10:00:00Z",
+  "notes": "Manual template generation required - Figma CLI not configured for automated builds"
+}

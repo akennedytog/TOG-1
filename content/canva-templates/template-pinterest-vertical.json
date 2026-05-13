@@ -1,0 +1,75 @@
+{
+  "templateId": "tog-ai-pin-001",
+  "name": "The One Group AI - Pinterest How-To Guide",
+  "platform": "Pinterest",
+  "format": "Vertical",
+  "dimensions": {
+    "width": 1000,
+    "height": 1500,
+    "unit": "px"
+  },
+  "design": {
+    "background": {
+      "type": "gradient",
+      "colors": ["#1a365d", "#234876", "#2c5282"],
+      "angle": 180
+    },
+    "layout": {
+      "padding": 50,
+      "sections": 5
+    },
+    "typography": {
+      "title": {
+        "font": "Inter Bold",
+        "size": 56,
+        "color": "#ffffff",
+        "alignment": "center"
+      },
+      "stepNumber": {
+        "font": "Inter Bold",
+        "size": 40,
+        "color": "#63b3ed"
+      },
+      "stepTitle": {
+        "font": "Inter SemiBold",
+        "size": 32,
+        "color": "#ffffff"
+      },
+      "stepDescription": {
+        "font": "Inter Regular",
+        "size": 24,
+        "color": "#e2e8f0",
+        "lineHeight": 1.4
+      },
+      "footer": {
+        "font": "Inter Medium",
+        "size": 22,
+        "color": "#90cdf4"
+      }
+    },
+    "stepCards": {
+      "background": "rgba(255,255,255,0.08)",
+      "borderRadius": 16,
+      "padding": 24,
+      "margin": 16
+    },
+    "icons": {
+      "style": "line",
+      "color": "#63b3ed",
+      "size": 48
+    },
+    "logo": {
+      "position": "bottom-center",
+      "size": 80
+    }
+  },
+  "contentStructure": {
+    "titleArea": "Top 15% - Catchy title with keywords",
+    "stepsArea": "Middle 70% - 3-5 numbered steps with icons",
+    "footerArea": "Bottom 15% - Branding and CTA"
+  },
+  "useCase": "How-to guides, step-by-step tutorials, checklists, and infographics",
+  "exportFormats": ["PNG", "PDF"],
+  "createdAt": "2026-04-01T10:00:00Z",
+  "version": "1.0"
+}

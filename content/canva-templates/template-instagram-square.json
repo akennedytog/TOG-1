@@ -1,0 +1,64 @@
+{
+  "templateId": "tog-ai-ig-001",
+  "name": "The One Group AI - Instagram Quick Tip",
+  "platform": "Instagram",
+  "format": "Square",
+  "dimensions": {
+    "width": 1080,
+    "height": 1080,
+    "unit": "px"
+  },
+  "design": {
+    "background": {
+      "type": "gradient",
+      "colors": ["#1a365d", "#2c5282"],
+      "angle": 135
+    },
+    "layout": {
+      "padding": 60,
+      "safeZone": 108
+    },
+    "typography": {
+      "title": {
+        "font": "Inter Bold",
+        "size": 72,
+        "color": "#ffffff",
+        "alignment": "center"
+      },
+      "body": {
+        "font": "Inter Regular",
+        "size": 36,
+        "color": "#e2e8f0",
+        "alignment": "center",
+        "lineHeight": 1.4
+      },
+      "hashtag": {
+        "font": "Inter Medium",
+        "size": 28,
+        "color": "#63b3ed",
+        "alignment": "center"
+      }
+    },
+    "logo": {
+      "position": "top-left",
+      "size": 120,
+      "margin": 40
+    },
+    "cta": {
+      "position": "bottom",
+      "text": "Follow @TheOneGroupAI",
+      "font": "Inter SemiBold",
+      "size": 24,
+      "color": "#90cdf4"
+    }
+  },
+  "contentStructure": {
+    "titleArea": "Top 25% - Hook/Question",
+    "mainArea": "Middle 50% - Quote or Tip",
+    "footerArea": "Bottom 25% - CTA & Branding"
+  },
+  "useCase": "Quick AI tips, quotes, and myth-busting content",
+  "exportFormats": ["PNG", "PDF"],
+  "createdAt": "2026-04-01T10:00:00Z",
+  "version": "1.0"
+}

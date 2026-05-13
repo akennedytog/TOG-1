@@ -1,0 +1,92 @@
+[
+  {
+    "dayOfWeek": 1,
+    "time": "9:00",
+    "title": "I hired 8 AI agents to run my business",
+    "hook": "Day 1 of building an AI-powered company",
+    "cta": "Comment 'AGENTS' to see the setup",
+    "hashtags": ["#AIautomation", "#smallbusiness", "#buildinginpublic", "#aitools"],
+    "format": "Screen recording + text overlays",
+    "duration": "60-90 sec"
+  },
+  {
+    "dayOfWeek": 1,
+    "time": "15:00",
+    "title": "Meet Jerry - My AI CEO",
+    "hook": "Jerry (CEO agent) analyzed my business",
+    "cta": "Comment 'DASHBOARD' for the template",
+    "hashtags": ["#AIagents", "#automation", "#entrepreneur", "#aitools"],
+    "format": "Screen recording + agent intro",
+    "duration": "45-60 sec"
+  },
+  {
+    "dayOfWeek": 2,
+    "time": "9:00",
+    "title": "These 8 AI agents replace my entire team",
+    "hook": "Meet Jerry, Arlo, Iris, Rico, Dev, Dante, Opal, Abby",
+    "cta": "Comment 'TEAM' for agent breakdown",
+    "hashtags": ["#AIteam", "#businessautomation", "#smallbusiness", "#ai"],
+    "format": "Agent showcase montage",
+    "duration": "60 sec"
+  },
+  {
+    "dayOfWeek": 3,
+    "time": "9:00",
+    "title": "My AI posts to Twitter while I sleep",
+    "hook": "24/7 content automation revealed",
+    "cta": "Comment 'AUTO' for the script",
+    "hashtags": ["#contentautomation", "#socialmedia", "#aitools", "#marketing"],
+    "format": "Screen recording of automation",
+    "duration": "60 sec"
+  },
+  {
+    "dayOfWeek": 4,
+    "time": "15:00",
+    "title": "I built a competitor spy system for $0",
+    "hook": "Firecrawl monitors competitors weekly",
+    "cta": "Comment 'SPY' for the code",
+    "hashtags": ["#competitoranalysis", "#businessintelligence", "#automation", "#ai"],
+    "format": "Screen recording + results",
+    "duration": "60-90 sec"
+  },
+  {
+    "dayOfWeek": 5,
+    "time": "19:00",
+    "title": "My AI writes my blog posts now",
+    "hook": "Content pipeline generates blogs automatically",
+    "cta": "Comment 'CONTENT' for the system",
+    "hashtags": ["#contentmarketing", "#AIwriting", "#automation", "#blogging"],
+    "format": "Screen recording of pipeline",
+    "duration": "60 sec"
+  },
+  {
+    "dayOfWeek": 6,
+    "time": "11:00",
+    "title": "I never miss a lead again",
+    "hook": "10 leads captured and enriched automatically",
+    "cta": "Comment 'LEADS' for the workflow",
+    "hashtags": ["#leadgeneration", "#sales", "#crm", "#automation"],
+    "format": "Screen recording of lead system",
+    "duration": "60 sec"
+  },
+  {
+    "dayOfWeek": 0,
+    "time": "10:00",
+    "title": "From idea to automation in 30 days",
+    "hook": "The full OpenClaw business system",
+    "cta": "Comment 'SYSTEM' for the roadmap",
+    "hashtags": ["#buildinginpublic", "#startup", "#automation", "#ai"],
+    "format": "Recap + system overview",
+    "duration": "90 sec"
+  },
+  {
+    "dayOfWeek": 0,
+    "time": "18:00",
+    "title": "I run a business with 0 employees",
+    "hook": "The AI-powered business model",
+    "cta": "Comment 'DM' to automate yours",
+    "hashtags": ["#solopreneur", "#ai", "#automation", "#business"],
+    "format": "Results showcase + CTA",
+    "duration": "60 sec"
+  }
+]

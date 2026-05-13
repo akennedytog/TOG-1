@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scout Detailed Dashboard</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121933;
+      --panel-2: #182142;
+      --border: #28345f;
+      --text: #eef2ff;
+      --muted: #9aa7d1;
+      --accent: #4ade80;
+      --accent-2: #22d3ee;
+      --warn: #f59e0b;
+      --danger: #fb7185;
+      --shadow: 0 20px 40px rgba(0,0,0,.28);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top right, rgba(34,211,238,.12), transparent 25%), var(--bg);
+      color: var(--text);
+    }
+    .wrap { max-width: 1500px; margin: 0 auto; padding: 24px; }
+    .header {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+      margin-bottom: 24px;
+    }
+    .title h1 { margin: 0; font-size: 32px; }
+    .title p { margin: 6px 0 0; color: var(--muted); }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px;
+      border: 1px solid var(--border); background: rgba(18,25,51,.78); border-radius: 999px;
+      color: var(--muted); font-size: 14px;
+    }
+    .grid { display: grid; gap: 16px; }
+    .stats { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-bottom: 20px; }
+    .card, .panel {
+      background: linear-gradient(180deg, rgba(24,33,66,.96), rgba(18,25,51,.96));
+      border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow);
+    }
+    .card { padding: 18px; }
+    .card .label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+    .card .value { font-size: 32px; font-weight: 800; margin-top: 10px; }
+    .card .sub { color: var(--muted); margin-top: 8px; font-size: 13px; }
+    .toolbar {
+      display: grid; grid-template-columns: 1.2fr .8fr .8fr auto; gap: 12px; margin-bottom: 18px;
+    }
+    input, select, button {
+      width: 100%; border-radius: 12px; border: 1px solid var(--border); background: var(--panel-2);
+      color: var(--text); padding: 12px 14px; font: inherit;
+    }
+    button { cursor: pointer; font-weight: 700; }
+    button.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04111d; border: none; }
+    .section { margin-bottom: 18px; }
+    .section-head {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      padding: 18px 20px; border-bottom: 1px solid rgba(154,167,209,.12);
+    }
+    .section-head h2 { margin: 0; font-size: 20px; }
+    .section-head p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+    .section-body { padding: 18px 20px 20px; }
+    .programs { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .program-card { padding: 18px; }
+    .program-card h3 { margin: 0 0 8px; font-size: 20px; }
+    .meta { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .chip { padding: 6px 10px; border-radius: 999px; background: rgba(74,222,128,.12); color: #b9fbcf; font-size: 12px; border: 1px solid rgba(74,222,128,.2); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 12px; border-bottom: 1px solid rgba(154,167,209,.12); vertical-align: top; }
+    th { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    tbody tr:hover { background: rgba(255,255,255,.02); }
+    .row-button {
+      background: transparent; border: none; color: var(--accent-2); padding: 0; width: auto; font-weight: 700;
+    }
+    .detail-row { display: none; }
+    .detail-row.open { display: table-row; }
+    .detail-box {
+      margin: 10px 0 4px; padding: 16px; border-radius: 14px; background: rgba(8,13,28,.55); border: 1px solid rgba(154,167,209,.12);
+    }
+    .kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 14px; }
+    .kv .item { background: rgba(255,255,255,.03); border-radius: 12px; padding: 12px; }
+    .kv .item .k { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+    .kv .item .v { font-size: 20px; font-weight: 700; margin-top: 6px; }
+    .nested { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .nested-card { background: rgba(255,255,255,.03); border-radius: 12px; padding: 14px; }
+    .nested-card h4 { margin: 0 0 10px; font-size: 14px; color: #dbe6ff; }
+    .nested-card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .nested-card li { margin: 6px 0; }
+    .footer-note { color: var(--muted); font-size: 12px; margin-top: 12px; }
+    .error { padding: 18px; border-radius: 14px; background: rgba(251,113,133,.12); border: 1px solid rgba(251,113,133,.22); color: #ffd7df; }
+    @media (max-width: 900px) {
+      .toolbar { grid-template-columns: 1fr; }
+      .header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="title">
+        <h1>Scout Detailed Dashboard</h1>
+        <p>Program-level intelligence for Cinco and Derby, with drill-down by sheet.</p>
+      </div>
+      <div class="pill">Last refresh: <span id="generatedAt">Loading…</span></div>
+    </div>
+
+    <div id="app">
+      <div class="panel section">
+        <div class="section-body">
+          <div class="error">Loading dashboard…</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const DATA_PATHS = [
+      '../data/scout_output/briefing_latest.json',
+      './data/scout_output/briefing_latest.json',
+      'data/scout_output/briefing_latest.json',
+      '/Users/aleckennedy/.openclaw/workspace/data/scout_output/briefing_latest.json'
+    ];
+
+    let rawData = null;
+    let flattenedSheets = [];
+
+    const fmtNum = (n) => typeof n === 'number' ? n.toLocaleString(undefined, { maximumFractionDigits: 2 }) : '—';
+    const fmtMoney = (n) => typeof n === 'number' ? '$' + n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—';
+
+    function inferProgram(name) {
+      const lower = name.toLowerCase();
+      if (lower.includes('cinco')) return 'Cinco';
+      if (lower.includes('derby') || lower.includes('woodford')) return 'Derby';
+      return 'Other';
+    }
+
+    function flattenData(data) {
+      return (data.reports || []).flatMap(report => {
+        const program = inferProgram(report.file_name || '');
+        return (report.sheets || []).map((sheet, index) => ({
+          program,
+          reportFile: report.file_name,
+          reportSheetCount: report.sheet_count,
+          parsedSheetCount: report.parsed_sheet_count,
+          sheetIndex: index + 1,
+          sheetName: sheet.sheet_name,
+          reportType: sheet.report_type,
+          summary: sheet.summary || {}
+        }));
+      });
+    }
+
+    function aggregateProgram(report) {
+      const rows = report.sheets || [];
+      const counts = {};
+      let totalRecords = 0;
+      let totalRevenue = 0;
+      let totalCases = 0;
+      rows.forEach(sheet => {
+        counts[sheet.report_type] = (counts[sheet.report_type] || 0) + 1;
+        totalRecords += Number(sheet.summary?.record_count || 0);
+        totalRevenue += Number(sheet.summary?.revenue_net_total || 0);
+        totalCases += Number(sheet.summary?.total_cases || 0);
+      });
+      return { counts, totalRecords, totalRevenue, totalCases };
+    }
+
+    function render() {
+      const app = document.getElementById('app');
+      const query = document.getElementById('search')?.value?.trim().toLowerCase() || '';
+      const programFilter = document.getElementById('programFilter')?.value || 'all';
+      const typeFilter = document.getElementById('typeFilter')?.value || 'all';
+
+      const reports = (rawData.reports || []).filter(report => {
+        const program = inferProgram(report.file_name || '');
+        return programFilter === 'all' || program === programFilter;
+      });
+
+      let rows = flattenData({ reports });
+      rows = rows.filter(row => {
+        const matchesType = typeFilter === 'all' || row.reportType === typeFilter;
+        const haystack = [row.program, row.reportFile, row.sheetName, row.reportType, JSON.stringify(row.summary)].join(' ').toLowerCase();
+        const matchesQuery = !query || haystack.includes(query);
+        return matchesType && matchesQuery;
+      });
+
+      const totalReports = reports.length;
+      const totalSheets = rows.length;
+      const totalRecords = rows.reduce((sum, row) => sum + Number(row.summary.record_count || 0), 0);
+      const totalRevenue = rows.reduce((sum, row) => sum + Number(row.summary.revenue_net_total || 0), 0);
+      const totalCases = rows.reduce((sum, row) => sum + Number(row.summary.total_cases || 0), 0);
+
+      const programCards = reports.map(report => {
+        const program = inferProgram(report.file_name || '');
+        const agg = aggregateProgram(report);
+        const typeChips = Object.entries(agg.counts).map(([type, count]) => `<span class="chip">${type}: ${count}</span>`).join('');
+        return `
+          <div class="card program-card">
+            <h3>${program}</h3>
+            <div class="meta">${report.file_name}</div>
+            <div class="kv">
+              <div class="item"><div class="k">Parsed Sheets</div><div class="v">${fmtNum(report.parsed_sheet_count || report.sheets?.length || 0)}</div></div>
+              <div class="item"><div class="k">Total Records</div><div class="v">${fmtNum(agg.totalRecords)}</div></div>
+              <div class="item"><div class="k">Revenue</div><div class="v">${fmtMoney(agg.totalRevenue)}</div></div>
+              <div class="item"><div class="k">Cases</div><div class="v">${fmtNum(agg.totalCases)}</div></div>
+            </div>
+            <div class="chips">${typeChips}</div>
+          </div>`;
+      }).join('') || '<div class="card">No programs match current filters.</div>';
+
+      const tableRows = rows.map((row, idx) => {
+        const summary = row.summary || {};
+        const detailId = `detail-${idx}`;
+        return `
+          <tr>
+            <td>${row.program}</td>
+            <td>${row.reportFile}</td>
+            <td>${row.sheetName}</td>
+            <td>${row.reportType}</td>
+            <td>${fmtNum(summary.record_count)}</td>
+            <td>${fmtMoney(summary.revenue_net_total)}</td>
+            <td>${fmtNum(summary.total_cases)}</td>
+            <td><button class="row-button" onclick="toggleDetail('${detailId}')">Expand</button></td>
+          </tr>
+          <tr id="${detailId}" class="detail-row">
+            <td colspan="8">
+              <div class="detail-box">
+                <div class="kv">${Object.entries(summary).map(([k,v]) => `<div class="item"><div class="k">${humanize(k)}</div><div class="v">${renderValue(v)}</div></div>`).join('')}</div>
+                <div class="nested">${renderNested(summary)}</div>
+                <div class="footer-note">Sheet ${row.sheetIndex} of ${fmtNum(row.reportSheetCount)} in source workbook.</div>
+              </div>
+            </td>
+          </tr>`;
+      }).join('') || '<tr><td colspan="8">No sheets match current filters.</td></tr>';
+
+      app.innerHTML = `
+        <div class="grid stats">
+          <div class="card"><div class="label">Reports</div><div class="value">${fmtNum(totalReports)}</div><div class="sub">Workbook-level programs loaded</div></div>
+          <div class="card"><div class="label">Visible Sheets</div><div class="value">${fmtNum(totalSheets)}</div><div class="sub">After current filters</div></div>
+          <div class="card"><div class="label">Total Records</div><div class="value">${fmtNum(totalRecords)}</div><div class="sub">Summed from sheet summaries</div></div>
+          <div class="card"><div class="label">Revenue + Cases</div><div class="value">${fmtMoney(totalRevenue)}</div><div class="sub">Cases: ${fmtNum(totalCases)}</div></div>
+        </div>
+
+        <div class="panel section">
+          <div class="section-body">
+            <div class="toolbar">
+              <input id="search" placeholder="Search programs, sheets, report types, brands, promotion types…" value="${escapeHtml(query)}" />
+              <select id="programFilter">
+                <option value="all" ${programFilter === 'all' ? 'selected' : ''}>All Programs</option>
+                <option value="Cinco" ${programFilter === 'Cinco' ? 'selected' : ''}>Cinco</option>
+                <option value="Derby" ${programFilter === 'Derby' ? 'selected' : ''}>Derby</option>
+              </select>
+              <select id="typeFilter">
+                <option value="all" ${typeFilter === 'all' ? 'selected' : ''}>All Report Types</option>
+                ${[...new Set(flattenedSheets.map(x => x.reportType))].sort().map(type => `<option value="${type}" ${typeFilter === type ? 'selected' : ''}>${type}</option>`).join('')}
+              </select>
+              <button class="primary" onclick="exportCSV()">Export CSV</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel section">
+          <div class="section-head"><div><h2>Program Breakdown</h2><p>Cinco and Derby summaries from the actual JSON structure.</p></div></div>
+          <div class="section-body"><div class="grid programs">${programCards}</div></div>
+        </div>
+
+        <div class="panel section">
+          <div class="section-head"><div><h2>Sheet-Level Drilldown</h2><p>Every parsed sheet with expandable details.</p></div></div>
+          <div class="section-body">
+            <table>
+              <thead>
+                <tr>
+                  <th>Program</th>
+                  <th>Workbook</th>
+                  <th>Sheet</th>
+                  <th>Type</th>
+                  <th>Records</th>
+                  <th>Revenue</th>
+                  <th>Cases</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>${tableRows}</tbody>
+            </table>
+          </div>
+        </div>`;
+
+      document.getElementById('search').addEventListener('input', render);
+      document.getElementById('programFilter').addEventListener('change', render);
+      document.getElementById('typeFilter').addEventListener('change', render);
+    }
+
+    function renderNested(summary) {
+      return Object.entries(summary).filter(([, value]) => Array.isArray(value) || (value && typeof value === 'object' && !Array.isArray(value))).map(([key, value]) => {
+        if (Array.isArray(value)) {
+          return `<div class="nested-card"><h4>${humanize(key)}</h4><ul>${value.map(item => `<li>${Array.isArray(item) ? item.map(renderValue).join(': ') : renderValue(item)}</li>`).join('')}</ul></div>`;
+        }
+        return `<div class="nested-card"><h4>${humanize(key)}</h4><ul>${Object.entries(value).map(([k,v]) => `<li><strong>${humanize(k)}:</strong> ${renderValue(v)}</li>`).join('')}</ul></div>`;
+      }).join('');
+    }
+
+    function renderValue(value) {
+      if (Array.isArray(value)) return `${value.length} items`;
+      if (value && typeof value === 'object') return `${Object.keys(value).length} fields`;
+      if (typeof value === 'number') return Number.isInteger(value) ? value.toLocaleString() : value.toLocaleString(undefined, { maximumFractionDigits: 2 });
+      return escapeHtml(String(value));
+    }
+
+    function humanize(str) {
+      return escapeHtml(str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()));
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>'"]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+    }
+
+    function toggleDetail(id) {
+      const row = document.getElementById(id);
+      if (row) row.classList.toggle('open');
+    }
+
+    function exportCSV() {
+      const query = document.getElementById('search')?.value?.trim().toLowerCase() || '';
+      const programFilter = document.getElementById('programFilter')?.value || 'all';
+      const typeFilter = document.getElementById('typeFilter')?.value || 'all';
+      const rows = flattenedSheets.filter(row => {
+        const matchesProgram = programFilter === 'all' || row.program === programFilter;
+        const matchesType = typeFilter === 'all' || row.reportType === typeFilter;
+        const haystack = [row.program, row.reportFile, row.sheetName, row.reportType, JSON.stringify(row.summary)].join(' ').toLowerCase();
+        const matchesQuery = !query || haystack.includes(query);
+        return matchesProgram && matchesType && matchesQuery;
+      });
+      const headers = ['program','report_file','sheet_name','report_type','record_count','revenue_net_total','total_cases','summary_json'];
+      const csv = [headers.join(',')].concat(rows.map(row => [
+        row.program,
+        row.reportFile,
+        row.sheetName,
+        row.reportType,
+        row.summary.record_count ?? '',
+        row.summary.revenue_net_total ?? '',
+        row.summary.total_cases ?? '',
+        JSON.stringify(row.summary).replace(/"/g, '""')
+      ].map(val => `"${String(val ?? '').replace(/"/g, '""')}"`).join(','))).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'scout_detailed_export.csv';
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    async function loadData() {
+      let lastError = null;
+      for (const path of DATA_PATHS) {
+        try {
+          const response = await fetch(path);
+          if (!response.ok) continue;
+          const data = await response.json();
+          if (!data || !Array.isArray(data.reports)) continue;
+          rawData = data;
+          flattenedSheets = flattenData(data);
+          document.getElementById('generatedAt').textContent = new Date(data.generated_at || Date.now()).toLocaleString();
+          render();
+          return;
+        } catch (err) {
+          lastError = err;
+        }
+      }
+      document.getElementById('app').innerHTML = `<div class="panel section"><div class="section-body"><div class="error">Could not load briefing_latest.json. Open this dashboard through the workspace web server or next to the data folder. ${lastError ? escapeHtml(lastError.message) : ''}</div></div></div>`;
+    }
+
+    loadData();
+  </script>
+</body>
+</html>

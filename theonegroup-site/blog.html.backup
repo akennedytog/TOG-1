@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | The One Group</title>
+  <meta name="description" content="Practical AI automation insights for small businesses. No hype, just results.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' },
+            accent: { 500: '#8b5cf6', 600: '#7c3aed' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); }
+    .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    .dark .glass { background: rgba(17, 24, 39, 0.8); }
+    .prose p { margin-bottom: 1.25rem; line-height: 1.75; }
+    .prose h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+    .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose blockquote { border-left: 4px solid #3b82f6; padding-left: 1rem; font-style: italic; color: #6b7280; margin: 1.5rem 0; }
+  </style>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors duration-300">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="/" class="font-display font-bold text-xl"><span class="gradient-text">The One Group</span></a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/about.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">About</a>
+          <div class="relative group">
+            <a href="/services.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Services</a>
+            <div class="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 z-50">
+              <a href="/ai-audit.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 rounded-lg transition">📊 AI Visibility Audit</a>
+              <a href="/ai-optimization.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 rounded-lg transition">⚡ AI Implementation</a>
+              <a href="/competitor-monitoring.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 rounded-lg transition">👁️ Competitor Intel</a>
+              <a href="/social-media.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 rounded-lg transition">📱 Social Media</a>
+              <a href="/web-design.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 rounded-lg transition">💻 Web Design</a>
+              <a href="/openclaw-setup.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 rounded-lg transition">🔥 OpenClaw Setup</a>
+            </div>
+          </div>
+          <a href="/case-studies.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Case Studies</a>
+          <a href="/blog.html" class="text-primary-600 dark:text-primary-400 font-medium">Blog</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+          <a href="/index.html#book" class="hidden sm:inline-flex items-center px-4 py-2 gradient-bg text-white font-medium rounded-lg hover:opacity-90 transition">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-32 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+        <div class="inline-flex items-center px-3 py-1 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium mb-4">
+          Blog
+        </div>
+        <h1 class="font-display text-4xl lg:text-5xl font-bold mb-4">AI Automation Insights</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">Practical tactics for small businesses. No hype, just results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+
+        <!-- NEW: OpenClaw Optimization Without Claude Max -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 ring-2 ring-green-500" data-aos="fade-up">
+          <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+            <span class="text-6xl">⚡</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>April 4, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">AI Optimization</span>
+              <span class="mx-2">•</span>
+              <span class="bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 px-2 py-0.5 rounded text-xs font-medium">NEW</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/openclaw-optimization-without-claude-max.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">How to Optimize Your OpenClaw Setup Without Claude Max</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">A practical guide to multi-LLM cost optimization. Learn how we cut costs by 70% while maintaining output quality...</p>
+            <a href="blog/openclaw-optimization-without-claude-max.html" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- NEW: OpenClaw Agents -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 ring-2 ring-primary-500" data-aos="fade-up">
+          <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+            <span class="text-6xl">🤖</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 22, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">AI Automation</span>
+              <span class="mx-2">•</span>
+              <span class="bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 px-2 py-0.5 rounded text-xs font-medium">NEW</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/openclaw-github-agents.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">The OpenClaw Advantage: 50 AI Agents That Replace Coordination Work</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">How we deployed agent armies to handle entire workflows autonomously. The complete list of 50 GitHub agents we use...</p>
+            <a href="blog/openclaw-github-agents.html" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- NEW: AI Data Myth -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 ring-2 ring-purple-500" data-aos="fade-up" data-aos-delay="50">
+          <div class="h-48 bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
+            <span class="text-6xl">💾</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 25, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">AI Strategy</span>
+              <span class="mx-2">•</span>
+              <span class="bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded text-xs font-medium">NEW</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/ai-data-myth.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">The AI Data Myth: Why You Don't Need Big Data</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">The conventional wisdom is wrong. You don't need terabytes of data to build AI that delivers real value...</p>
+            <a href="blog/ai-data-myth.html" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- NEW: Tight Feedback Loops -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 ring-2 ring-cyan-500" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+            <span class="text-6xl">⚡</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 30, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">AI Strategy</span>
+              <span class="mx-2">•</span>
+              <span class="bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 px-2 py-0.5 rounded text-xs font-medium">NEW</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/tight-feedback-loops.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">Why Tight Feedback Loops Beat Big Models</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">The businesses winning with AI aren't using the biggest models. They're using the fastest feedback loops...</p>
+            <a href="blog/tight-feedback-loops.html" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 1 - Building in Public Series -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up">
+          <div class="h-48 bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
+            <span class="text-6xl">📈</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 21, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Building in Public</span>
+              <span class="mx-2">•</span>
+              <span class="text-gray-400">Week 3</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/building-in-public-week3.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">Building in Public: Week 3 - Systems & Scale</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Real automation vs scheduled posting, feedback loops, and an AI that made its first autonomous decision...</p>
+            <a href="blog/building-in-public-week3.html" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 2 - Building in Public Week 2 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="50">
+          <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+            <span class="text-6xl">🎯</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 14, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Building in Public</span>
+              <span class="mx-2">•</span>
+              <span class="text-gray-400">Week 2</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/building-in-public-week2.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">Building in Public: Week 2 - First Wins</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">First paying clients, refining the pitch, and learning what actually sells in AI automation...</p>
+            <a href="blog/building-in-public-week2.html" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 3 - Building in Public Week 1 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
+            <span class="text-6xl">🚀</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 7, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Building in Public</span>
+              <span class="mx-2">•</span>
+              <span class="text-gray-400">Week 1</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/building-in-public-week1.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">Building in Public: Week 1 - The Foundation</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Setting up the systems, first experiments, and what I learned about starting an AI automation business...</p>
+            <a href="blog/building-in-public-week1.html" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="150">
+          <div class="h-48 bg-gradient-to-br from-emerald-500 to-cyan-600 flex items-center justify-center">
+            <span class="text-6xl">👻</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 20, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Strategy</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/invisible-automation.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">The Invisible Automation Principle</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">The AI tools that stick don't ask users to change their workflow. They adapt to it. The best automation is invisible...</p>
+            <a href="blog/invisible-automation.html" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 5 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+            <span class="text-6xl">🚀</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 19, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Building in Public</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/building-in-public.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">Building in Public: Week 3 Learnings</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Week 3 of building @TheOneGroupAI: Here's what I learned about AI automation that nobody talks about...</p>
+            <a href="blog/building-in-public.html" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+            <span class="text-6xl">🧵</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 19, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Frameworks</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/3-question-test.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">The 3-Question AI Readiness Test</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">I've talked to 50+ SMB owners about AI. The ones seeing results all answered YES to these 3 questions...</p>
+            <a href="#" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+            <span class="text-6xl">💡</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 18, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Myth-Busting</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/ai-myth-data.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">AI Myth #1: "You need tons of data"</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Reality: Most SMBs see results with just 10-20 examples. The barrier isn't data volume...</p>
+            <a href="#" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+            <span class="text-6xl">📊</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 17, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Case Study</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/hvac-case-study.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">How we saved 10 hours/week for an HVAC company</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Real numbers from a client last week: 40% faster response time, 3x more meetings booked...</p>
+            <a href="#" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up">
+          <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+            <span class="text-6xl">🚀</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 16, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Building in Public</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="blog/ai-autonomous-decision.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition">Week 3: Our AI made its first autonomous decision</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Behind the scenes: It noticed a pattern in engagement data and suggested we test a new hook format...</p>
+            <a href="#" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 5 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+            <span class="text-6xl">⚡</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 15, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Strategy</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="#" class="hover:text-primary-600 dark:hover:text-primary-400 transition">The businesses winning with AI right now</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">They're not the ones with the biggest models. They're the ones with the tightest feedback loops...</p>
+            <a href="#" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Post 6 -->
+        <article class="card-hover bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-48 bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center">
+            <span class="text-6xl">🎯</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <span>March 14, 2026</span>
+              <span class="mx-2">•</span>
+              <span class="text-primary-600 dark:text-primary-400">Education</span>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3"><a href="#" class="hover:text-primary-600 dark:hover:text-primary-400 transition">SMB owners: You do not need an AI strategy</a></h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">You need ONE task automated this week. Pick something that takes 30+ minutes, happens weekly, follows a pattern...</p>
+            <a href="#" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">Read more →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="mt-16 text-center">
+        <div class="inline-flex items-center justify-center p-8 rounded-2xl bg-gradient-to-br from-primary-900 to-accent-600 text-white max-w-2xl">
+          <h3 class="font-display text-2xl font-bold mb-2">Get posts like this weekly</h3>
+          <p class="text-primary-100 mb-6">No spam. Unsubscribe anytime.</p>
+          <form class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+            <input type="email" placeholder="your@email.com" class="flex-1 px-4 py-3 rounded-lg text-gray-900">
+            <button type="submit" class="px-6 py-3 bg-white text-primary-700 font-semibold rounded-lg hover:bg-gray-100 transition">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <a href="/" class="font-display font-bold text-xl mb-4 inline-block"><span class="gradient-text">The One Group</span></a>
+        <p class="text-gray-400 mb-4">Practical AI automation for small businesses.</p>
+        <div class="flex justify-center space-x-6">
+          <a href="https://x.com/TheOneGroupAI" target="_blank" class="text-gray-400 hover:text-white transition">X/Twitter</a>
+          <a href="https://www.linkedin.com/in/alec-kennedy-1b3a7371/" target="_blank" class="text-gray-400 hover:text-white transition">LinkedIn</a>
+        </div>
+        <p class="mt-8 text-gray-500">&copy; 2026 The One Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+    
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+    });
+  </script>
+
+<script src="sections.js"></script>
+</body>
+</html>

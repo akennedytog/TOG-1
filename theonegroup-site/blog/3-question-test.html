@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 3-Question AI Readiness Test | The One Group</title>
+  <meta name="description" content="I've talked to 50+ SMB owners about AI. The ones seeing results all answered YES to these 3 questions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+          colors: { primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }, accent: { 500: '#8b5cf6', 600: '#7c3aed' } }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); }
+    .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    .dark .glass { background: rgba(17, 24, 39, 0.8); }
+    .prose p { margin-bottom: 1.25rem; line-height: 1.75; }
+    .prose h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors duration-300">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="/" class="font-display font-bold text-xl"><span class="gradient-text">The One Group</span></a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/services.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Services</a>
+          <a href="/case-studies.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Case Studies</a>
+          <a href="/blog.html" class="text-primary-600 dark:text-primary-400 font-medium">Blog</a>
+          <a href="/about.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">About</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+          <a href="https://calendly.com/akennedy-theonegroup/30min" class="hidden sm:inline-flex items-center px-4 py-2 gradient-bg text-white font-medium rounded-lg hover:opacity-90 transition">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="pt-32 pb-8">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div data-aos="fade-up">
+        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+          <span>March 19, 2026</span>
+          <span class="mx-2">•</span>
+          <span class="text-primary-600 dark:text-primary-400">Frameworks</span>
+        </div>
+        <h1 class="font-display text-3xl lg:text-4xl font-bold mb-4">The 3-Question AI Readiness Test</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">I've talked to 50+ SMB owners about AI. The ones seeing results all answered YES to these 3 questions.</p>
+      </div>
+    </div>
+  </section>
+
+  <article class="pb-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose dark:prose-invert max-w-none" data-aos="fade-up" data-aos-delay="100">
+        
+        <p class="text-lg">Most SMBs struggle with AI not because they lack technical skills, but because they don't know where to start. After working with dozens of businesses, I've distilled readiness into 3 simple questions.</p>
+
+        <h2>Question 1: Do you repeat this task weekly?</h2>
+        <p>AI excels at patterns. If you're doing something repeatedly—whether it's lead follow-up, invoice processing, or content scheduling—that's your candidate. Sporadic, one-off tasks don't benefit from automation.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+          <li>Following up with leads every day</li>
+          <li>Sorting and triaging emails</li>
+          <li>Scheduling appointments</li>
+          <li>Sending reminders</li>
+        </ul>
+
+        <h2>Question 2: Does it follow a pattern you could explain?</h2>
+        <p>Can you write down the steps? If yes, AI can probably handle it. The key is explicit logic: "If X happens, do Y." Vague tasks like "improve marketing" don't work. Specific tasks like "when a lead fills out the form, send this email sequence" do.</p>
+
+        <h2>Question 3: Would a 10% improvement matter?</h2>
+        <p>This is the ROI test. If you handle 10 leads per month, saving 5 minutes per lead won't change your business. If you handle 500 leads per month, it changes everything. AI multiplies effort—you need volume for the math to work.</p>
+
+        <hr class="my-8 border-gray-200 dark:border-gray-700">
+
+        <h2>If you answered YES to all 3, you're ready for AI automation.</h2>
+        
+        <p>The businesses seeing results aren't the ones with the biggest budgets or technical teams. They're the ones who picked one repetitive task, mapped the pattern, and deployed a simple system.</p>
+
+        <p><strong>Your next step:</strong> Pick one task this week. Not two. Not a whole system. One task that passes all three questions.</p>
+
+        <div class="mt-6">
+          <a href="https://calendly.com/akennedy-theonegroup/30min" class="inline-flex items-center px-6 py-3 gradient-bg text-white font-semibold rounded-lg hover:opacity-90 transition">
+            Let's talk about your task →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <span class="font-display font-bold text-xl gradient-text">The One Group</span>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">AI automation for small businesses</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="https://x.com/TheOneGroupAI" target="_blank" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">X/Twitter</a>
+          <a href="/blog.html" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">Blog</a>
+          <a href="https://calendly.com/akennedy-theonegroup/30min" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">Contact</a>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
+        © 2026 The One Group. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 600, once: true });
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+    });
+  </script>
+
+</body>
+</html>

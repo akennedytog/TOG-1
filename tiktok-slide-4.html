@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Slide 4 - Proof</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 1080px;
+            height: 1920px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        .glow-top {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            top: -10%;
+            left: -20%;
+            pointer-events: none;
+        }
+        .glow-bottom {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+            bottom: -10%;
+            right: -20%;
+            pointer-events: none;
+        }
+        .content {
+            text-align: center;
+            z-index: 1;
+            padding: 60px;
+            width: 100%;
+        }
+        .header {
+            font-size: 56px;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin-bottom: 60px;
+        }
+        .header span {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .agents-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .agent-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: 30px;
+            padding: 50px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .agent-card:nth-child(2) {
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+        .agent-card:nth-child(3) {
+            border-color: rgba(168, 85, 247, 0.4);
+        }
+        .agent-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            flex-shrink: 0;
+        }
+        .agent-info {
+            flex: 1;
+        }
+        .agent-name {
+            font-size: 56px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        .agent-role {
+            font-size: 40px;
+            color: #3b82f6;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .agent-card:nth-child(2) .agent-role {
+            color: #8b5cf6;
+        }
+        .agent-card:nth-child(3) .agent-role {
+            color: #a855f7;
+        }
+        .agent-action {
+            font-size: 36px;
+            color: #94a3b8;
+        }
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 32px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        .status-dot {
+            width: 20px;
+            height: 20px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-top"></div>
+    <div class="glow-bottom"></div>
+    <div class="content">
+        <div class="header">Meet My <span>AI Agents</span></div>
+        <div class="agents-grid">
+            <div class="agent-card">
+                <div class="agent-avatar">🕵️</div>
+                <div class="agent-info">
+                    <div class="agent-name">Arlo</div>
+                    <div class="agent-role">Lead Hunter</div>
+                    <div class="agent-action">Finding qualified prospects 24/7</div>
+                </div>
+                <div class="status">
+                    <div class="status-dot"></div>
+                    Active
+                </div>
+            </div>
+            <div class="agent-card">
+                <div class="agent-avatar">✍️</div>
+                <div class="agent-info">
+                    <div class="agent-name">Dante</div>
+                    <div class="agent-role">Content Creator</div>
+                    <div class="agent-action">Writing posts that convert</div>
+                </div>
+                <div class="status">
+                    <div class="status-dot"></div>
+                    Active
+                </div>
+            </div>
+            <div class="agent-card">
+                <div class="agent-avatar">📧</div>
+                <div class="agent-info">
+                    <div class="agent-name">Iris</div>
+                    <div class="agent-role">Outreach Pro</div>
+                    <div class="agent-action">Sending personalized emails</div>
+                </div>
+                <div class="status">
+                    <div class="status-dot"></div>
+                    Active
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

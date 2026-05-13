@@ -1,0 +1,46 @@
+{
+  "id": "business_card",
+  "name": "Professional Business Card",
+  "generatedAt": "2026-03-23T02:56:37.788Z",
+  "version": "1.0.0",
+  "files": {
+    "figma": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/business_card/business_card_1774234597788_figma_commands.json",
+    "canva": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/business_card/business_card_1774234597788_canva_import.md"
+  },
+  "config": {
+    "id": "business_card",
+    "name": "Professional Business Card",
+    "category": "print",
+    "sizes": [
+      {
+        "width": 1050,
+        "height": 600,
+        "pages": 2
+      }
+    ],
+    "style": "corporate_elegant",
+    "colors": [
+      "#1a1a1a",
+      "#f5f5f5",
+      "#c9a227"
+    ],
+    "elements": [
+      "logo_placeholder",
+      "contact_info",
+      "qr_code"
+    ],
+    "price": {
+      "etsy": 4.99,
+      "creative_market": 6,
+      "designcuts": 5.5
+    },
+    "tags": [
+      "business card",
+      "professional",
+      "networking",
+      "print",
+      "corporate"
+    ]
+  },
+  "status": "ready_for_export"
+}

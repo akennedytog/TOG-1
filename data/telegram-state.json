@@ -1,0 +1,18 @@
+{
+  "pendingMessages": [
+    {
+      "id": 1774231534164,
+      "text": "Hello",
+      "from": "telegram",
+      "chatId": 8387309460,
+      "timestamp": "2026-03-23T02:05:34.164Z"
+    },
+    {
+      "id": 1774232103395,
+      "text": "Show me the dashboard",
+      "from": "telegram",
+      "chatId": 8387309460,
+      "timestamp": "2026-03-23T02:15:03.395Z"
+    }
+  ]
+}

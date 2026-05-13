@@ -1,0 +1,58 @@
+{
+  "name": "Pinterest Infographic - Wellness/Mindfulness",
+  "template": "pinterest-infographic",
+  "theme": "digital-zen",
+  "dimensions": {
+    "width": 1000,
+    "height": 1500
+  },
+  "colors": [
+    "#F5F5F0",
+    "#8FA39A",
+    "#5A6B63",
+    "#D4A5A5",
+    "#2C3E36",
+    "#FFFFFF"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Playfair Display",
+      "style": "Bold"
+    },
+    "body": {
+      "family": "Inter",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "Caveat",
+      "style": "Regular"
+    }
+  },
+  "sections": [
+    {
+      "name": "header",
+      "height": 250,
+      "elements": ["title", "subtitle"]
+    },
+    {
+      "name": "steps",
+      "height": 900,
+      "layout": "vertical-cards",
+      "cards": 5,
+      "cardHeight": 160,
+      "elements": ["number", "title", "description"]
+    },
+    {
+      "name": "footer",
+      "height": 350,
+      "elements": ["cta", "website", "social-proof"]
+    }
+  ],
+  "canvaImport": {
+    "format": "JSON",
+    "compatible": true,
+    "notes": "Optimized for Pinterest SEO, tall format for max engagement"
+  },
+  "createdAt": "2026-03-28T10:01:00-04:00",
+  "generatedBy": "dante-agent-cron"
+}

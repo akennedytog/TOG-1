@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The One Group - Lead Management Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🔥 Lead Management Dashboard</h1>
+      <p>The One Group - Prospect Tracker</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Stats Section -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Total Leads</h3>
+        <div class="value" id="totalLeads">0</div>
+      </div>
+      <div class="stat-card">
+        <h3>Average Score</h3>
+        <div class="value" id="avgScore">0</div>
+      </div>
+      <div class="stat-card">
+        <h3>High Priority</h3>
+        <div class="value" id="highPriority">0</div>
+      </div>
+      <div class="stat-card industry-breakdown">
+        <h3>Leads by Industry</h3>
+        <div class="industry-stats" id="industryStats"></div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search leads by name, industry, city...">
+      </div>
+      <div class="sort-controls">
+        <label>Sort by:</label>
+        <select id="sortSelect">
+          <option value="score:desc">Score (High → Low)</option>
+          <option value="score:asc">Score (Low → High)</option>
+          <option value="name:asc">Name (A → Z)</option>
+          <option value="name:desc">Name (Z → A)</option>
+          <option value="industry:asc">Industry (A → Z)</option>
+          <option value="city:asc">City (A → Z)</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" id="exportBtn">
+        📥 Export CSV
+      </button>
+    </div>
+
+    <!-- Leads Table (Desktop) -->
+    <div class="leads-container">
+      <table class="leads-table">
+        <thead>
+          <tr>
+            <th>Score</th>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Status</th>
+            <th>Email Campaign</th>
+            <th>Notes</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="leadsTableBody"></tbody>
+      </table>
+
+      <!-- Mobile Cards -->
+      <div class="mobile-cards" id="mobileCards"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>The One Group Lead Management Dashboard | Data persists in browser localStorage</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,4 +1,7 @@
-// twitter-automation.js (ESM)
+// twitter-automation.js (ESM) - POSTING ONLY VERSION
+// TheOneGroupAI Twitter Automation - Simplified for cost efficiency
+// Posts only - no search/engagement to save API credits
+
 import dotenv from 'dotenv';
 import { TwitterApi } from 'twitter-api-v2';
 import fs from 'fs';
@@ -18,37 +21,13 @@ console.log('[env] loaded keys:', {
 console.log('LOADED FILE:', import.meta.url);
 
 // ---------- Config ----------
-const HASHTAGS = ['OpenClawAI', 'AgentSkills']; // NO "#" here
-const SEARCH_MAX_RESULTS = 20;
-const MAX_ACTIONS_PER_RUN = 5; // like/reply/tweet each count as 1
-const RUN_EVERY_MS = 15 * 60 * 1000;
-
-const REPLY_TEXT = 'Great insights on AI—thanks for sharing! 🚀';
+const RUN_EVERY_MS = 60 * 60 * 1000; // Check queue every hour (was 15 min)
+const MAX_POSTS_PER_RUN = 1; // Post max 1 per hour to avoid spam
 
 const STATE_FILE = path.resolve(process.cwd(), 'state.json');
-const MAX_SEEN_TWEETS = 1500;
-const MAX_COMMENT_LOG = 1500;
+const ANALYTICS_FILE = path.resolve(process.cwd(), 'twitter-analytics.json');
 
 // ---------- Required Env ----------
-const requiredEnv = [
-  'TWITTER_API_KEY',
-  'TWITTER_API_SECRET',
-  'TWITTER_ACCESS_TOKEN',
-  'TWITTER_ACCESS_SECRET',
-  'TWITTER_USER_ID',
-];
-
-let missing = false;
-for (const k of requiredEnv) {
-  if (!process.env[k]) {
-    console.error(`[config] Missing env var: ${k}`);
-    missing = true;
-  }
-}
-if (missing) {
-  console.error('[config] Missing env vars — bot will likely fail until fixed.');
-}
-
 const userId = String(process.env.TWITTER_USER_ID || '');
 
 // ---------- Twitter Client ----------
@@ -60,227 +39,139 @@ const client = new TwitterApi({
 });
 const rwClient = client.readWrite;
 
-// ---------- X API Credit Guard ----------
-let creditsBlockedUntil = 0;
-
-function isCreditsDepleted(err) {
-  const data = err?.data || err?.response?.data || err;
-  return (
-    data?.title === 'CreditsDepleted' ||
-    data?.type === 'https://api.twitter.com/2/problems/credits'
-  );
-}
-
-function blockCredits(hours = 6) {
-  creditsBlockedUntil = Date.now() + hours * 60 * 60 * 1000;
-  console.error(`[x] Credits depleted. Blocking search/post calls for ${hours} hours.`);
-}
-
-function creditsBlocked() {
-  return Date.now() < creditsBlockedUntil;
-}
-
-// ---------- State ----------
+// ---------- State Management ----------
 function loadState() {
   try {
     const raw = fs.readFileSync(STATE_FILE, 'utf-8');
-    const parsed = JSON.parse(raw);
-
-    const migrated = {
-      queuedPosts: Array.isArray(parsed.queuedPosts) ? parsed.queuedPosts : [],
-      seenTweetIds: Array.isArray(parsed.seenTweetIds) ? parsed.seenTweetIds : [],
-      follows: Array.isArray(parsed.follows) ? parsed.follows : [],
-      comments: Array.isArray(parsed.comments) ? parsed.comments : [],
-      posts: parsed.posts, // legacy
-    };
-
-    // Migrate legacy `posts`
-    if (Array.isArray(parsed.posts) && parsed.posts.length) {
-      for (const item of parsed.posts) {
-        if (typeof item !== 'string') continue;
-        if (/^\d{5,}$/.test(item)) {
-          if (!migrated.seenTweetIds.includes(item)) migrated.seenTweetIds.push(item);
-        } else {
-          if (!migrated.queuedPosts.includes(item)) migrated.queuedPosts.push(item);
-        }
-      }
-    }
-
-    migrated.seenTweetIds = migrated.seenTweetIds.slice(-MAX_SEEN_TWEETS);
-    migrated.comments = migrated.comments.slice(-MAX_COMMENT_LOG);
-    return migrated;
+    return JSON.parse(raw);
   } catch {
-    return { queuedPosts: [], seenTweetIds: [], follows: [], comments: [] };
+    return { queuedPosts: [], lastPostTime: null };
   }
 }
 
 function saveState(state) {
-  state.seenTweetIds = (state.seenTweetIds || []).slice(-MAX_SEEN_TWEETS);
-  state.comments = (state.comments || []).slice(-MAX_COMMENT_LOG);
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
-// ---------- Helpers ----------
-function nowIso() {
-  return new Date().toISOString();
-}
-
-function logTwitterError(prefix, e) {
-  console.error(prefix);
-  console.error(e?.data || e);
-}
-
-function isLikelySelfTweet(tweet) {
-  return tweet?.author_id && String(tweet.author_id) === String(userId);
-}
-
-// Prevent overlapping runs
-let running = false;
-
-// ---------- Main Logic ----------
-async function runOnce() {
-  if (running) {
-    console.log(`[${nowIso()}] Skipping run: previous run still in progress`);
-    return;
+// ---------- Analytics Tracking ----------
+function loadAnalytics() {
+  try {
+    return JSON.parse(fs.readFileSync(ANALYTICS_FILE, 'utf-8'));
+  } catch {
+    return {
+      dailyStats: {},
+      totalTweets: 0,
+      engagementLog: [],
+      startDate: new Date().toISOString(),
+    };
   }
-  running = true;
+}
+
+function saveAnalytics(analytics) {
+  fs.writeFileSync(ANALYTICS_FILE, JSON.stringify(analytics, null, 2));
+}
+
+function getTodayKey() {
+  return new Date().toISOString().split('T')[0];
+}
+
+function logTweet(analytics, text, tweetId) {
+  const today = getTodayKey();
+  if (!analytics.dailyStats[today]) {
+    analytics.dailyStats[today] = { tweets: 0 };
+  }
+  analytics.dailyStats[today].tweets++;
+  analytics.totalTweets++;
+  analytics.engagementLog.push({
+    type: 'tweet',
+    text: text.substring(0, 100),
+    tweetId,
+    timestamp: new Date().toISOString(),
+  });
+  saveAnalytics(analytics);
+}
+
+// ---------- Main Logic - POSTING ONLY ----------
+async function runOnce() {
+  console.log(`[${new Date().toISOString()}] Run started`);
 
   const state = loadState();
-  let actionsCount = 0;
+  const analytics = loadAnalytics();
+
+  // Check if we have posts in queue
+  if (!Array.isArray(state.queuedPosts) || state.queuedPosts.length === 0) {
+    console.log('[queue] No posts queued');
+    return;
+  }
+
+  // Rate limit: Don't post more than once per hour
+  const now = Date.now();
+  const lastPost = state.lastPostTime ? parseInt(state.lastPostTime) : 0;
+  const hoursSinceLastPost = (now - lastPost) / (60 * 60 * 1000);
+
+  if (hoursSinceLastPost < 1) {
+    console.log(`[rate] Last post was ${hoursSinceLastPost.toFixed(2)}h ago. Waiting...`);
+    console.log(`[queue] ${state.queuedPosts.length} posts waiting`);
+    return;
+  }
+
+  const postData = state.queuedPosts[0];
+  
+  // Handle various post formats safely
+  let postText;
+  if (typeof postData === 'string') {
+    postText = postData;
+  } else if (postData && typeof postData === 'object') {
+    postText = postData.text || postData.content || JSON.stringify(postData);
+  } else {
+    console.error(`[tweet] Invalid post data format: ${typeof postData}`);
+    // Remove invalid post from queue
+    state.queuedPosts.shift();
+    saveState(state);
+    return;
+  }
+  
+  // Ensure postText is a string
+  if (typeof postText !== 'string') {
+    console.error(`[tweet] Post text is not a string: ${typeof postText}`);
+    state.queuedPosts.shift();
+    saveState(state);
+    return;
+  }
+  console.log(`[tweet] Posting: ${postText.substring(0, 60)}...`);
 
   try {
-    console.log(`[${nowIso()}] Run started`);
+    const result = await rwClient.v2.tweet(postText);
+    console.log(`[tweet] ✅ Posted! ID: ${result.data.id}`);
 
-    // 1) Verify auth
-    try {
-      const me = await rwClient.v2.me();
-      const authedId = String(me?.data?.id || '');
-      if (authedId && userId && authedId !== userId) {
-        console.warn(
-          `[warn] TWITTER_USER_ID (${userId}) does not match authenticated user (${authedId}). Fix .env.`
-        );
-      }
-    } catch (e) {
-      logTwitterError('[auth] Failed to call v2.me()', e);
-      return;
-    }
-
-    // 2) Engage via hashtag search
-    for (const tag of HASHTAGS) {
-      if (actionsCount >= MAX_ACTIONS_PER_RUN) break;
-      if (creditsBlocked()) {
-        console.log('[x] Credits blocked — skipping searches.');
-        break;
-      }
-
-      let paginator;
-      try {
-        paginator = await rwClient.v2.search(`#${tag}`, {
-          max_results: SEARCH_MAX_RESULTS,
-          expansions: ['author_id'],
-          'tweet.fields': ['author_id', 'created_at', 'lang', 'possibly_sensitive'],
-        });
-      } catch (err) {
-        if (isCreditsDepleted(err)) blockCredits(6);
-        console.error(`[search] Failed searching #${tag}`);
-        console.error(err?.data || err);
-        continue; // next tag
-      }
-
-      try {
-        for await (const tweet of paginator) {
-          if (actionsCount >= MAX_ACTIONS_PER_RUN) break;
-          if (!tweet?.id) continue;
-
-          const tweetId = String(tweet.id);
-
-          // Skip sensitive
-          if (tweet.possibly_sensitive) {
-            state.seenTweetIds.push(tweetId);
-            continue;
-          }
-
-          // Skip already handled
-          if (state.seenTweetIds.includes(tweetId)) continue;
-          if (state.comments.some((c) => String(c.tweetId) === tweetId)) continue;
-
-          // Skip your own tweets
-          if (isLikelySelfTweet(tweet)) {
-            state.seenTweetIds.push(tweetId);
-            continue;
-          }
-
-          // Like
-          try {
-            await rwClient.v2.like(userId, tweetId);
-            console.log(`[like] ${tweetId} (#${tag})`);
-            actionsCount++;
-          } catch (e) {
-            logTwitterError(`[like] Failed on tweet ${tweetId}`, e);
-          }
-
-          if (actionsCount >= MAX_ACTIONS_PER_RUN) {
-            state.seenTweetIds.push(tweetId);
-            break;
-          }
-
-          // Reply
-          try {
-            await rwClient.v2.reply(REPLY_TEXT, tweetId);
-            console.log(`[reply] ${tweetId}`);
-            state.comments.push({ tweetId, text: REPLY_TEXT, at: nowIso() });
-            actionsCount++;
-          } catch (e) {
-            logTwitterError(`[reply] Failed on tweet ${tweetId}`, e);
-          }
-
-          // Mark as seen regardless
-          state.seenTweetIds.push(tweetId);
-
-          // Periodic save
-          if (actionsCount % 5 === 0) saveState(state);
-        }
-      } catch (err) {
-        if (isCreditsDepleted(err)) blockCredits(6);
-        logTwitterError(`[iterate] Failed iterating results for #${tag}`, err);
-      }
-    }
-
-    // 3) Post queued tweets
-    if (Array.isArray(state.queuedPosts) && state.queuedPosts.length) {
-      if (creditsBlocked()) {
-        console.log('[x] Credits blocked — skipping queued posts.');
-      } else {
-        console.log(`[queue] ${state.queuedPosts.length} queued posts found`);
-
-        while (state.queuedPosts.length && actionsCount < MAX_ACTIONS_PER_RUN) {
-          const postText = state.queuedPosts[0];
-
-          try {
-            await rwClient.v2.tweet(postText);
-            console.log(`[tweeted] ${postText}`);
-            state.queuedPosts.shift();
-            actionsCount++;
-            saveState(state);
-          } catch (err) {
-            if (isCreditsDepleted(err)) blockCredits(6);
-            logTwitterError('[tweet] Failed posting queued tweet (leaving it in queue)', err);
-            break;
-          }
-        }
-      }
-    }
-
+    // Update state
+    state.queuedPosts.shift();
+    state.lastPostTime = now.toString();
     saveState(state);
 
-    console.log(
-      `[${nowIso()}] Run finished. actions=${actionsCount}, seen=${state.seenTweetIds.length}, comments=${state.comments.length}, queued=${state.queuedPosts.length}`
-    );
-  } finally {
-    running = false;
+    // Log analytics
+    logTweet(analytics, postText, result.data.id);
+
+    console.log(`[analytics] Today's tweets: ${analytics.dailyStats[getTodayKey()]?.tweets || 0}`);
+    console.log(`[queue] ${state.queuedPosts.length} posts remaining`);
+
+  } catch (err) {
+    console.error(`[tweet] ❌ Failed: ${err.message}`);
+    if (err.code === 403) {
+      console.error('[tweet] Rate limited or billing cap reached. Will retry later.');
+    }
   }
+
+  console.log(`[${new Date().toISOString()}] Run finished`);
 }
 
 // ---------- Schedule ----------
-runOnce().catch((e) => logTwitterError('[startup] runOnce crashed', e));
-setInterval(() => runOnce().catch((e) => logTwitterError('[interval] runOnce crashed', e)), RUN_EVERY_MS);
+console.log('[start] Twitter bot started (POSTING ONLY mode)');
+console.log(`[config] Checking queue every ${RUN_EVERY_MS / 60000} minutes`);
+console.log(`[config] Max ${MAX_POSTS_PER_RUN} post per hour`);
+
+// Run immediately on startup
+runOnce().catch((e) => console.error('[startup error]', e));
+
+// Then schedule
+setInterval(() => runOnce().catch((e) => console.error('[interval error]', e)), RUN_EVERY_MS);

@@ -1,0 +1,52 @@
+{
+  "templateId": "ig-quote-001",
+  "platform": "instagram",
+  "type": "quote",
+  "dimensions": {"width": 1080, "height": 1080},
+  "background": {
+    "type": "gradient",
+    "colors": ["#0A0A0A", "#1a1a2e"],
+    "angle": 135
+  },
+  "elements": [
+    {
+      "type": "text",
+      "content": "{{quote_text}}",
+      "font": "Inter-Bold",
+      "size": 48,
+      "color": "#FFFFFF",
+      "position": {"x": 540, "y": 400},
+      "maxWidth": 900,
+      "alignment": "center"
+    },
+    {
+      "type": "text",
+      "content": "— {{author}}",
+      "font": "Inter-Medium",
+      "size": 24,
+      "color": "#1DA1F2",
+      "position": {"x": 540, "y": 600},
+      "alignment": "center"
+    },
+    {
+      "type": "logo",
+      "src": "assets/logo-wordmark-white.png",
+      "position": {"x": 540, "y": 950},
+      "width": 200,
+      "opacity": 0.8
+    },
+    {
+      "type": "decoration",
+      "shape": "circle",
+      "color": "#1DA1F2",
+      "position": {"x": 100, "y": 100},
+      "size": 20,
+      "opacity": 0.3
+    }
+  ],
+  "export": {
+    "format": "png",
+    "quality": "high",
+    "canvaImport": true
+  }
+}

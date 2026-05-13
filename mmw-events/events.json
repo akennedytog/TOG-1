@@ -1,0 +1,116 @@
+{
+  "events": [
+    {
+      "name": "Winter Music Conference 2026",
+      "venue": "Downtown Miami",
+      "date": "2026-03-24",
+      "time": "10:00 AM - 6:00 PM",
+      "price": "Badge Required",
+      "ticketUrl": "https://wintermusicconference.com",
+      "genre": "Industry / Conference",
+      "source": "Official"
+    },
+    {
+      "name": "Ultra Music Festival 2026",
+      "venue": "Bayfront Park",
+      "date": "2026-03-27",
+      "time": "12:00 PM - 12:00 AM",
+      "price": "$399+",
+      "ticketUrl": "https://ultramusicfestival.com",
+      "genre": "Electronic / Dance",
+      "source": "Official"
+    },
+    {
+      "name": "Defected Miami",
+      "venue": "The Ground",
+      "date": "2026-03-25",
+      "time": "10:00 PM - 6:00 AM",
+      "price": "$60-$120",
+      "ticketUrl": "https://ra.co/events/2000000",
+      "genre": "House",
+      "source": "RA"
+    },
+    {
+      "name": "Drumcode Pool Party",
+      "venue": "Delano Beach Club",
+      "date": "2026-03-26",
+      "time": "12:00 PM - 10:00 PM",
+      "price": "$50-$85",
+      "ticketUrl": "https://ra.co/events/2000001",
+      "genre": "Techno",
+      "source": "RA"
+    },
+    {
+      "name": "Anjunadeep Miami",
+      "venue": "The Deck at Island Gardens",
+      "date": "2026-03-24",
+      "time": "2:00 PM - 10:00 PM",
+      "price": "$45-$75",
+      "ticketUrl": "https://ra.co/events/2000002",
+      "genre": "Deep House / Progressive",
+      "source": "RA"
+    },
+    {
+      "name": "Paradise (Jamie Jones)",
+      "venue": "Space",
+      "date": "2026-03-28",
+      "time": "11:00 PM - 12:00 PM",
+      "price": "$40-$80",
+      "ticketUrl": "https://clubspace.com",
+      "genre": "Tech House",
+      "source": "Venue"
+    },
+    {
+      "name": "Masters at Work",
+      "venue": "Club Space",
+      "date": "2026-03-27",
+      "time": "11:00 PM - 12:00 PM",
+      "price": "$50-$100",
+      "ticketUrl": "https://clubspace.com",
+      "genre": "House / Classics",
+      "source": "Venue"
+    },
+    {
+      "name": "Factory 93 Miami",
+      "venue": "Factory Town",
+      "date": "2026-03-26",
+      "time": "10:00 PM - 6:00 AM",
+      "price": "$75-$150",
+      "ticketUrl": "https://factory93.com",
+      "genre": "Techno / House",
+      "source": "Official"
+    },
+    {
+      "name": "Shiba San @ Treehouse",
+      "venue": "Treehouse Miami",
+      "date": "2026-03-25",
+      "time": "11:00 PM - 5:00 AM",
+      "price": "$30-$60",
+      "ticketUrl": "https://ra.co/events/2000003",
+      "genre": "Tech House",
+      "source": "RA"
+    },
+    {
+      "name": "Solomun +1",
+      "venue": "Club Space",
+      "date": "2026-03-29",
+      "time": "11:00 PM - 12:00 PM",
+      "price": "$60-$120",
+      "ticketUrl": "https://clubspace.com",
+      "genre": "Melodic House",
+      "source": "Venue"
+    },
+    {
+      "name": "Spinnin' Sessions Pool Party",
+      "venue": "National Hotel Pool",
+      "date": "2026-03-27",
+      "time": "12:00 PM - 8:00 PM",
+      "price": "$40-$75",
+      "ticketUrl": "https://ra.co/events/2000004",
+      "genre": "EDM / Dance Pop",
+      "source": "RA"
+    }
+  ],
+  "count": 11,
+  "updated": "2026-03-20T23:31:00.000Z"
+}

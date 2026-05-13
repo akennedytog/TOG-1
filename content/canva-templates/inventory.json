@@ -1,0 +1,51 @@
+{
+  "lastUpdated": "2026-04-01T10:04:00Z",
+  "totalTemplates": 3,
+  "templates": [
+    {
+      "templateId": "tog-ai-ig-001",
+      "name": "Instagram Quick Tip",
+      "platform": "Instagram",
+      "format": "Square",
+      "dimensions": "1080x1080",
+      "file": "template-instagram-square.json",
+      "useCase": "Quick AI tips, quotes, and myth-busting content",
+      "status": "ready"
+    },
+    {
+      "templateId": "tog-ai-li-001",
+      "name": "LinkedIn Professional Insight",
+      "platform": "LinkedIn",
+      "format": "Landscape",
+      "dimensions": "1200x627",
+      "file": "template-linkedin-landscape.json",
+      "useCase": "Case studies, statistics, professional insights",
+      "status": "ready"
+    },
+    {
+      "templateId": "tog-ai-pin-001",
+      "name": "Pinterest How-To Guide",
+      "platform": "Pinterest",
+      "format": "Vertical",
+      "dimensions": "1000x1500",
+      "file": "template-pinterest-vertical.json",
+      "useCase": "How-to guides, step-by-step tutorials, infographics",
+      "status": "ready"
+    }
+  ],
+  "brandGuidelines": {
+    "primaryColor": "#1a365d",
+    "secondaryColor": "#2c5282",
+    "accentColor": "#63b3ed",
+    "textPrimary": "#ffffff",
+    "textSecondary": "#e2e8f0",
+    "fontFamily": "Inter",
+    "logoFile": "assets/logo-white.png"
+  },
+  "exportSettings": {
+    "defaultFormat": "PNG",
+    "highResDPI": 300,
+    "webDPI": 72,
+    "colorSpace": "sRGB"
+  }
+}

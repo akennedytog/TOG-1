@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Slide 1 - Hook</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 1080px;
+            height: 1920px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        .glow {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+        .content {
+            text-align: center;
+            z-index: 1;
+            padding: 60px;
+        }
+        .number {
+            font-size: 280px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            letter-spacing: -10px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 80px rgba(59, 130, 246, 0.5);
+        }
+        .agents-text {
+            font-size: 120px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 8px;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+        }
+        .subtitle {
+            font-size: 56px;
+            color: #94a3b8;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 40px;
+        }
+        .free-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: #ffffff;
+            font-size: 72px;
+            font-weight: 800;
+            padding: 30px 80px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.4);
+        }
+        .emoji {
+            font-size: 80px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow"></div>
+    <div class="content">
+        <div class="number">8</div>
+        <div class="agents-text">AI AGENTS</div>
+        <div class="subtitle">I'm showing you my entire setup</div>
+        <div class="free-badge">For Free</div>
+        <div class="emoji">🤖</div>
+    </div>
+</body>
+</html>

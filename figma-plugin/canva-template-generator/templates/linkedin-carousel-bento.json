@@ -1,0 +1,70 @@
+{
+  "name": "LinkedIn Carousel - Bento Grid Style",
+  "template": "linkedin-carousel",
+  "theme": "modular-bento",
+  "dimensions": {
+    "width": 1080,
+    "height": 1080
+  },
+  "slides": 5,
+  "colors": [
+    "#FAFAFA",
+    "#F5F5F5",
+    "#1A1A1A",
+    "#C9A227",
+    "#4A4A4A"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Montserrat",
+      "style": "Bold"
+    },
+    "body": {
+      "family": "Open Sans",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "Montserrat",
+      "style": "SemiBold"
+    }
+  },
+  "slideLayout": [
+    {
+      "slide": 1,
+      "type": "title",
+      "layout": "centered",
+      "elements": ["headline", "subheadline", "author"]
+    },
+    {
+      "slide": 2,
+      "type": "content",
+      "layout": "bento-2x2",
+      "elements": ["stat-1", "stat-2", "insight-1", "insight-2"]
+    },
+    {
+      "slide": 3,
+      "type": "content",
+      "layout": "bento-3-col",
+      "elements": ["point-1", "point-2", "point-3"]
+    },
+    {
+      "slide": 4,
+      "type": "content",
+      "layout": "featured-quote",
+      "elements": ["quote", "attribution"]
+    },
+    {
+      "slide": 5,
+      "type": "cta",
+      "layout": "centered",
+      "elements": ["cta-text", "link", "profile"]
+    }
+  ],
+  "canvaImport": {
+    "format": "JSON",
+    "compatible": true,
+    "notes": "Each slide is a separate page, carousel export ready"
+  },
+  "createdAt": "2026-03-28T10:01:00-04:00",
+  "generatedBy": "dante-agent-cron"
+}

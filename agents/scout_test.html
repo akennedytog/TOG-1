@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout Test - Click Me</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background: #0f172a; color: white; }
+        button { padding: 15px 30px; margin: 10px; background: #22c55e; border: none; border-radius: 8px; color: white; cursor: pointer; }
+        button:hover { background: #16a34a; }
+        #output { margin-top: 20px; padding: 20px; background: #1e293b; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Button Test</h1>
+    <button id="btn1">Click Me</button>
+    <button id="btn2">Download</button>
+    <button id="btn3">Upload</button>
+    <div id="output">Output will appear here...</div>
+
+    <script>
+        // Test if buttons work
+        document.getElementById('btn1').onclick = function() {
+            document.getElementById('output').innerHTML += '<p>✅ Button 1 clicked!</p>';
+        };
+        
+        document.getElementById('btn2').onclick = function() {
+            document.getElementById('output').innerHTML += '<p>✅ Download clicked!</p>';
+        };
+        
+        document.getElementById('btn3').onclick = function() {
+            document.getElementById('output').innerHTML += '<p>✅ Upload clicked!</p>';
+        };
+        
+        // Check if buttons exist
+        console.log('Buttons found:', {
+            btn1: !!document.getElementById('btn1'),
+            btn2: !!document.getElementById('btn2'),
+            btn3: !!document.getElementById('btn3')
+        });
+    </script>
+</body>
+</html>

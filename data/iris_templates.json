@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "agency": "The One Group",
+    "campaign": "South Florida Cold Outreach Q1 2026",
+    "created": "2026-03-22",
+    "agent": "Iris - Sales & Marketing",
+    "sender_name": "Alec",
+    "sender_email": "alec@theonegroup.io",
+    "sender_phone": "(305) 555-0142"
+  },
+  "industries": {
+    "hvac": {
+      "name": "HVAC - Heating, Ventilation & Air Conditioning",
+      "pain_points": [
+        "Overwhelmed during peak seasons",
+        "Missed calls = lost revenue",
+        "Technicians in the field can't answer",
+        "After-hours emergency calls go to voicemail"
+      ],
+      "templates": {
+        "cold_email": {
+          "subject": "{{company_name}} — ready for the busy season rush?",
+          "body": "Good Morning {{first_name}},\n\nI help {{industry}} companies in South Florida automate their lead capture and follow-up.\n\nQuick question: Are you losing calls to voicemail during peak season?\n\nI built an AI system that answers 24/7, qualifies leads, and books appointments automatically.\n\nWould you be open to a 15-min call to see if this makes sense for {{company_name}}?\n\nOther ways we help {{industry}} businesses:\n• Speed-to-Lead AI — Instant email/SMS response to web inquiries (under 60 seconds)\n• Inbox Automation — AI triage that flags urgent emails and drafts responses\n• Follow-up Assistant — Automated sequences that keep leads warm until they book\n• AI Coaching — Train your team to use AI tools effectively\n• Competitor Intel — See how competitors show up in ChatGPT & Perplexity searches\n\nCheck out our website for everything we offer that could help save time, increase revenue and meet your customer needs.\n\nhttps://theonegroup.info/\n\nAlec\nThe One Group",
+          "tone": "casual, empathetic, urgency-focused",
+          "cta": "15-minute conversation"
+        },
+        "value_prop": "Never miss another emergency call — capture revenue even when your team is in the field"
+      }
+    },
+    "legal": {
+      "name": "Legal - Law Firms & Attorneys",
+      "pain_points": [
+        "Every missed call is a potential case walking away",
+        "Intake process is inconsistent",
+        "After-hours leads go unanswered",
+        "Difficult to qualify leads quickly"
+      ],
+      "templates": {
+        "cold_email": {
+          "subject": "Following up with every {{company_name}} lead?",
+          "body": "Good Morning {{first_name}},\n\nI help {{industry}} firms in South Florida automate their lead capture and follow-up.\n\nQuick question: Are you losing potential cases to competitors who respond faster?\n\nI built an AI system that answers 24/7, qualifies leads by practice area, and schedules consultations automatically.\n\nWould you be open to a 15-min call to see if this makes sense for {{company_name}}?\n\nOther ways we help {{industry}} firms:\n• Speed-to-Lead AI — Instant response to web inquiries and form submissions\n• Inbox Automation — AI triage that prioritizes urgent client communications\n• Follow-up Assistant — Nurture leads who aren't ready to hire yet\n• AI Coaching — Train your intake team to maximize conversion rates\n• Competitor Intel — See how competing firms show up in AI search results\n\nCheck out our website for everything we offer that could help save time, increase revenue and meet your client needs.\n\nhttps://theonegroup.info/\n\nAlec\nThe One Group",
+          "tone": "professional, consultative, revenue-focused",
+          "cta": "15-minute discovery call"
+        },
+        "value_prop": "Capture every potential case with intelligent intake routing and 24/7 availability"
+      }
+    },
+    "accounting": {
+      "name": "Accounting & Tax Services",
+      "pain_points": [
+        "Crushed during tax season",
+        "Clients expect immediate responses",
+        "Overflow calls during deadline crunch",
+        "Can't hire seasonal staff fast enough"
+      ],
+      "templates": {
+        "cold_email": {
+          "subject": "Tax season automation for {{company_name}}?",
+          "body": "Good Morning {{first_name}},\n\nI help {{industry}} firms in South Florida automate their client communication and follow-up.\n\nQuick question: How many client calls went to voicemail during crunch time this season?\n\nI built an AI system that handles overflow calls, schedules consultations, and manages urgent client questions — so your team can focus on the work that matters.\n\nWould you be open to a 15-min call to see if this makes sense for {{company_name}}?\n\nOther ways we help {{industry}} firms:\n• Speed-to-Lead AI — Instant response to new client inquiries\n• Inbox Automation — AI triage that flags urgent emails and drafts responses\n• Follow-up Assistant — Automated sequences for deadline reminders and document requests\n• AI Coaching — Train your team on AI tools for faster data entry and research\n• Competitor Intel — See how other {{industry}} firms appear in AI search results\n\nCheck out our website for everything we offer that could help save time, increase revenue and meet your client needs.\n\nhttps://theonegroup.info/\n\nAlec\nThe One Group",
+          "tone": "empathetic, relatable, forward-looking",
+          "cta": "15-minute discovery call"
+        },
+        "value_prop": "Eliminate tax season chaos — scale your phone support without hiring seasonal staff"
+      }
+    },
+    "medical": {
+      "name": "Medical Practices & Healthcare",
+      "pain_points": [
+        "High call volume overwhelming front desk",
+        "Patients waiting on hold too long",
+        "After-hours calls going unanswered",
+        "Appointment scheduling bottlenecks",
+        "No-show rates hurting revenue"
+      ],
+      "templates": {
+        "cold_email": {
+          "subject": "{{company_name}} — reducing patient hold times?",
+          "body": "Good Morning {{first_name}},\n\nI help {{industry}} practices in South Florida automate patient communication and scheduling.\n\nQuick question: Are patients complaining about long hold times or getting stuck in voicemail?\n\nI built an AI system that answers calls 24/7, schedules appointments, and handles prescription refill requests — reducing front desk workload.\n\nWould you be open to a 15-min call to see if this makes sense for {{company_name}}?\n\nOther ways we help {{industry}} practices:\n• Speed-to-Lead AI — Instant response to new patient inquiries\n• Inbox Automation — AI triage for patient portal messages\n• Follow-up Assistant — Automated appointment reminders and confirmations\n• AI Coaching — Train staff on AI tools for faster documentation\n• Competitor Intel — See how other {{industry}} practices appear in AI search\n\nCheck out our website for everything we offer that could help save time, increase revenue and improve patient satisfaction.\n\nhttps://theonegroup.info/\n\nAlec\nThe One Group",
+          "tone": "professional, patient-focused, efficiency-minded",
+          "cta": "15-minute discovery call"
+        },
+        "value_prop": "Reduce patient wait times and front desk stress with AI-powered communication"
+      }
+    },
+    "dental": {
+      "name": "Dental Practices",
+      "pain_points": [
+        "Scheduling conflicts and cancellations",
+        "Emergency dental calls after hours",
+        "Front desk can't keep up with calls",
+        "New patient inquiries slipping through",
+        "Insurance verification delays"
+      ],
+      "templates": {
+        "cold_email": {
+          "subject": "More new patients for {{company_name}}?",
+          "body": "Good Morning {{first_name}},\n\nI help {{industry}} practices in South Florida capture more new patient calls and reduce no-shows.\n\nQuick question: Are potential new patients calling after hours and getting voicemail instead of scheduling?\n\nI built an AI system that books appointments 24/7, sends reminders, and even handles emergency triage — so you never miss a new patient opportunity.\n\nWould you be open to a 15-min call to see if this makes sense for {{company_name}}?\n\nOther ways we help {{industry}} practices:\n• Speed-to-Lead AI — Instant response to online appointment requests\n• Inbox Automation — AI handling patient emails and insurance questions\n• Follow-up Assistant — Automated recall and reminder sequences\n• AI Coaching — Train team on AI for treatment planning and documentation\n• Competitor Intel — See how other {{industry}} practices appear in AI searches\n\nCheck out our website for everything we offer that could help grow your practice and improve patient care.\n\nhttps://theonegroup.info/\n\nAlec\nThe One Group",
+          "tone": "friendly, growth-oriented, patient-centric",
+          "cta": "15-minute discovery call"
+        },
+        "value_prop": "Fill your schedule and reduce no-shows with automated patient management"
+      }
+    },
+    "real_estate": {
+      "name": "Real Estate Agencies & Brokerages",
+      "pain_points": [
+        "Missing buyer inquiries during showings",
+        "Seller leads going to competitors",
+        "Agents can't answer while with clients",
+        "After-hours property inquiries unanswered",
+        "Lead qualification taking too long"
+      ],
+      "templates": {
+        "cold_email": {
+          "subject": "Every buyer inquiry captured at {{company_name}}?",
+          "body": "Good Morning {{first_name}},\n\nI help {{industry}} agencies in South Florida capture every buyer and seller lead — even when agents are in showings.\n\nQuick question: Are potential buyers calling about listings and getting voicemail instead of immediate answers?\n\nI built an AI system that responds to inquiries instantly, qualifies leads, and schedules appointments — so you never miss a commission opportunity.\n\nWould you be open to a 15-min call to see if this makes sense for {{company_name}}?\n\nOther ways we help {{industry}} agencies:\n• Speed-to-Lead AI — Instant response to Zillow/Redfin inquiries\n• Inbox Automation — AI triage for agent emails and contract questions\n• Follow-up Assistant — Automated nurture sequences for long-term prospects\n• AI Coaching — Train agents on AI for listing descriptions and market analysis\n• Competitor Intel — See how other {{industry}} agencies appear in AI searches\n\nCheck out our website for everything we offer that could help close more deals and grow your team.\n\nhttps://theonegroup.info/\n\nAlec\nThe One Group",
+          "tone": "professional, commission-focused, results-driven",
+          "cta": "15-minute discovery call"
+        },
+        "value_prop": "Never miss another buyer inquiry — capture leads while your agents sell"
+      }
+    },
+    "plumbing": {
+      "name": "Plumbing Services",
+      "pain_points": [
+        "Emergency calls going to voicemail",
+        "Dispatchers overwhelmed during peak times",
+        "After-hours emergencies missed",
+        "Difficulty qualifying urgent vs routine",
+        "Lost revenue to competitors who answer"
+      ],
+      "templates": {
+        "cold_email": {
+          "subject": "Emergency calls captured at {{company_name}}?",
+          "body": "Good Morning {{first_name}},\n\nI help {{industry}} companies in South Florida capture emergency calls 24/7 and dispatch automatically.\n\nQuick question: When someone's basement is flooding at 2 AM, are they getting your voicemail or a live response?\n\nI built an AI system that answers emergency calls immediately, qualifies severity, and dispatches your on-call tech — so you never lose a revenue job to voicemail.\n\nWould you be open to a 15-min call to see if this makes sense for {{company_name}}?\n\nOther ways we help {{industry}} businesses:\n• Speed-to-Lead AI — Instant response to online quote requests\n• Inbox Automation — AI handling supplier emails and permit questions\n• Follow-up Assistant — Automated follow-up for estimates and invoices\n• AI Coaching — Train dispatchers on AI tools for faster scheduling\n• Competitor Intel — See how other {{industry}} companies appear in AI searches\n\nCheck out our website for everything we offer that could help save time, increase revenue and grow your business.\n\nhttps://theonegroup.info/\n\nAlec\nThe One Group",
+          "tone": "urgent, service-oriented, revenue-focused",
+          "cta": "15-minute discovery call"
+        },
+        "value_prop": "Capture emergency calls 24/7 — never lose revenue to voicemail again"
+      }
+    },
+    "electrical": {
+      "name": "Electrical Services",
+      "pain_points": [
+        "Emergency outage calls missed",
+        "Office staff can't handle call volume",
+        "After-hours commercial calls unanswered",
+        "Dispatch coordination delays",
+        "Lost jobs to competitors"
+      ],
+      "templates": {
+        "cold_email": {
+          "subject": "Power outage calls answered at {{company_name}}?",
+          "body": "Good Morning {{first_name}},\n\nI help {{industry}} contractors in South Florida capture emergency calls and dispatch techs automatically.\n\nQuick question: When a business loses power or a panel fails, are they getting a live response or leaving a voicemail?\n\nI built an AI system that answers emergency calls 24/7, triages urgency, and dispatches your nearest available tech — so you never lose a commercial job.\n\nWould you be open to a 15-min call to see if this makes sense for {{company_name}}?\n\nOther ways we help {{industry}} contractors:\n• Speed-to-Lead AI — Instant response to commercial project inquiries\n• Inbox Automation — AI handling permits, inspections, and vendor emails\n• Follow-up Assistant — Automated follow-up for estimates and invoices\n• AI Coaching — Train team on AI for load calculations and code research\n• Competitor Intel — See how other {{industry}} contractors appear in AI searches\n\nCheck out our website for everything we offer that could help save time, increase revenue and grow your business.\n\nhttps://theonegroup.info/\n\nAlec\nThe One Group",
+          "tone": "professional, urgent, commercial-focused",
+          "cta": "15-minute discovery call"
+        },
+        "value_prop": "Answer every emergency call 24/7 — maximize revenue from outage opportunities"
+      }
+    }
+  },
+  "linkedin_templates": {
+    "connection_request": {
+      "version_a": {
+        "name": "Direct Value",
+        "message": "Hi {{first_name}}, came across {{company_name}} while researching top {{industry}} firms in South Florida. Noticed you're handling {{specific_challenge}}. Would love to connect and share some insights we've gathered working with similar firms. - Alec"
+      },
+      "version_b": {
+        "name": "Common Ground",
+        "message": "Hi {{first_name}}, fellow {{city}} business owner here. Saw {{company_name}}'s recent work on {{recent_news_or_project}}. Impressive stuff. Would love to connect with other local {{industry}} leaders. - Alec"
+      },
+      "version_c": {
+        "name": "Referral Based",
+        "message": "Hi {{first_name}}, {{mutual_connection}} suggested I reach out. They mentioned {{company_name}} is doing great work in {{city}}. Would love to connect and learn more about your approach to {{industry_challenge}}. - Alec"
+      }
+    },
+    "follow_up_dm": {
+      "template": "Thanks for connecting, {{first_name}}. Quick question: what's your biggest challenge with {{industry_specific_pain}} right now? We've been helping similar firms in {{city}} and I'm curious if you're facing the same headaches."
+    }
+  },
+  "personalization_variables": {
+    "required": ["first_name", "company_name", "industry", "city"],
+    "recommended": ["nearby_city", "specific_challenge", "recent_news_or_project", "mutual_connection"],
+    "sender": ["sender_name", "phone", "email", "calendar_link"]
+  },
+  "compliance_notes": [
+    "Include unsubscribe link in all emails",
+    "Honor opt-outs within 24 hours",
+    "Follow CAN-SPAM requirements",
+    "Personalize every outreach — no mass blasts",
+    "LinkedIn: Max 100 connection requests/day per account"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "queued": [
+    {
+      "id": "post-2026-03-18-2000",
+      "text": "Behind the scenes: Our AI agent just made its first autonomous decision.\n\nIt noticed a pattern in engagement data and suggested we test a new hook format.\n\nI approved. We will see how it performs.\n\nThis is the future: AI suggests, humans decide.\n\n#BuildingInPublic #AI #Automation",
+      "scheduledFor": "2026-03-18T22:00:00-04:00",
+      "status": "pending",
+      "attempts": 2
+    }
+  ],
+  "posted": [
+    {
+      "id": "post-2026-03-18-2030",
+      "text": "AI Myth #1: \"You need tons of data to get started\"...",
+      "postedAt": "2026-03-18T20:30:00-04:00",
+      "status": "success"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, initial-scale=1.0">
+  <title>OpenClaw Cost Optimization - Twitter Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1a1a2e;
+      padding: 20px;
+    }
+    
+    .card {
+      width: 1200px;
+      height: 675px;
+      background: linear-gradient(135deg, #1e3a8a 0%, #581c87 50%, #0f172a 100%);
+      border-radius: 20px;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    }
+    
+    /* Animated background elements */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulse 4s ease-in-out infinite;
+    }
+    
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulse 4s ease-in-out infinite 2s;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+    
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      color: #a78bfa;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+      border: 1px solid rgba(167, 139, 250, 0.3);
+    }
+    
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 30px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    
+    h1 span {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .stats {
+      display: flex;
+      gap: 50px;
+      margin: 40px 0;
+    }
+    
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+      color: #4ade80;
+      line-height: 1;
+    }
+    
+    .stat-label {
+      font-size: 16px;
+      color: #94a3b8;
+      margin-top: 8px;
+    }
+    
+    .stat-compare {
+      font-size: 14px;
+      color: #64748b;
+      text-decoration: line-through;
+    }
+    
+    .quote-box {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border-left: 4px solid #a78bfa;
+      border-radius: 12px;
+      padding: 25px 30px;
+      margin-top: 30px;
+    }
+    
+    .quote-text {
+      font-size: 22px;
+      color: #e2e8f0;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    
+    .quote-author {
+      font-size: 14px;
+      color: #94a3b8;
+      margin-top: 10px;
+    }
+    
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    
+    .url {
+      font-size: 16px;
+      color: #60a5fa;
+      font-weight: 500;
+    }
+    
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+    }
+    
+    .logo span {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Floating icons */
+    .floating-icon {
+      position: absolute;
+      opacity: 0.1;
+      font-size: 100px;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .icon-1 { top: 10%; right: 15%; animation-delay: 0s; }
+    .icon-2 { bottom: 20%; right: 25%; animation-delay: 2s; font-size: 80px; }
+    .icon-3 { top: 30%; right: 5%; animation-delay: 4s; font-size: 60px; }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    /* Screenshot hint */
+    .hint {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Floating background icons -->
+    <div class="floating-icon icon-1">🤖</div>
+    <div class="floating-icon icon-2">💰</div>
+    <div class="floating-icon icon-3">⚡</div>
+    
+    <div class="content">
+      <div class="badge">💡 Cost Optimization Guide</div>
+      
+      <h1>How to Optimize Your <span>OpenClaw Setup</span> Without Claude Max</h1>
+      
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">70%</div>
+          <div class="stat-label">Cost Reduction</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">$150</div>
+          <div class="stat-label">Monthly Cost <span class="stat-compare">was $2,000+</span></div>
+        </div>
+        
+        <div class="stat">
+          <div class="stat-number" style="color: #fbbf24;">4</div>
+          <div class="stat-label">LLMs in Stack</div>
+        </div>
+      </div>
+      
+      <div class="quote-box">
+        <div class="quote-text">"Who's written How To Transition OpenClaw from Claude to GPT While Maintaining Vibes? Because I need that."</div>
+        <div class="quote-author">— Twitter user asking what everyone is thinking</div>
+      </div>
+      
+      <div class="footer">
+        <div class="url">theonegroup.info/blog/openclaw-optimization</div>
+        <div class="logo">The <span>One Group</span></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hint">💡 Press Cmd+Shift+4 then Space to screenshot this window (1200×675 perfect for Twitter)</div>
+</body>
+</html>

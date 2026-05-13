@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Mission Control</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="logo">👨‍👩‍👧‍👦 FamilyOS</div>
+      <ul class="nav-links">
+        <li class="active" data-page="dashboard">📊 Dashboard</li>
+        <li data-page="calendar">📅 Calendar</li>
+        <li data-page="tasks">✅ Tasks</li>
+        <li data-page="shopping">🛒 Shopping</li>
+        <li data-page="chat">💬 Messages</li>
+        <li data-page="settings">⚙️ Settings</li>
+      </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Dashboard Page -->
+      <section id="dashboard" class="page active">
+        <h1>Family Dashboard</h1>
+        
+        <div class="quick-stats">
+          <div class="stat-card">
+            <span class="stat-number" id="upcoming-events">0</span>
+            <span class="stat-label">Today's Events</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="pending-tasks">0</span>
+            <span class="stat-label">Pending Tasks</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="shopping-items">0</span>
+            <span class="stat-label">Shopping Items</span>
+          </div>
+        </div>
+        
+        <div class="dashboard-grid">
+          <!-- Family Members -->
+          <div class="panel">
+            <h2>Family Members</h2>
+            <div id="family-list"></div>
+            <button onclick="addFamilyMember()">+ Add Member</button>
+          </div>
+          
+          <!-- Today's Schedule -->
+          <div class="panel">
+            <h2>Today's Schedule</h2>
+            <div id="today-schedule"></div>
+          </div>
+          
+          <!-- Quick Actions -->
+          <div class="panel">
+            <h2>Quick Actions</h2>
+            <button onclick="quickAddTask()">Add Task</button>
+            <button onclick="quickAddEvent()">Add Event</button>
+            <button onclick="quickAddShopping()">Add to List</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Other pages will be added in chunks -->
+      <section id="calendar" class="page">
+<h1>Family Calendar</h1>
+<div class="calendar-container">
+<div class="add-event-form">
+<input type="text" id="event-title" placeholder="Event name...">
+<input type="date" id="event-date">
+<input type="time" id="event-time">
+<select id="event-type">
+<option value="school">School</option>
+<option value="sports">Sports</option>
+<option value="medical">Medical</option>
+<option value="activity">Activity</option>
+<option value="family">Family</option>
+</select>
+<button onclick="calendarModule.add()">Add Event</button>
+</div>
+<div id="calendar-view"></div>
+</div>
+</section>
+      <section id="tasks" class="page">
+<h1>Family Tasks</h1>
+<div class="tasks-container">
+<div class="add-task-form">
+<input type="text" id="new-task-name" placeholder="What needs to be done?">
+<select id="task-assignee"></select>
+<input type="date" id="task-due-date">
+<button onclick="tasksModule.add()">Add Task</button>
+</div>
+<div id="tasks-list"></div>
+</div>
+</section>
+      <section id="shopping" class="page">
+<h1>Shopping List</h1>
+<div class="shopping-container">
+<div class="add-shopping-form">
+<input type="text" id="shopping-item-name" placeholder="Item to buy...">
+<input type="number" id="shopping-quantity" value="1" min="1">
+<select id="shopping-category"></select>
+<button onclick="shoppingModule.add()">Add Item</button>
+<button onclick="shoppingModule.clear()" class="btn-secondary">Clear Purchased</button>
+</div>
+<div id="shopping-list"></div>
+</div>
+</section>
+      <section id="chat" class="page">
+<h1>Family Chat</h1>
+<div class="messages-container">
+<div class="chat-sidebar">
+<h3>Contacts</h3>
+<div id="contacts-list"></div>
+<button onclick="messagesModule.addContact()">+ Add Contact</button>
+</div>
+<div class="chat-main">
+<div id="chat-messages"></div>
+<div class="chat-input-area">
+<select id="message-recipient"></select>
+<input type="text" id="message-input" placeholder="Type a message...">
+<button onclick="messagesModule.send()">Send</button>
+</div>
+</div>
+</div>
+</section>
+      <section id="settings" class="page">Settings coming...</section>
+    </main>
+  </div>
+  
+  <script src="js/app.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/shopping.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "Pinterest Pin - Nature",
+  "template": "pinterest",
+  "theme": "nature",
+  "dimensions": {
+    "width": 1000,
+    "height": 1500
+  },
+  "colors": [
+    "#E8F5E9",
+    "#C8E6C9",
+    "#A5D6A7",
+    "#66BB6A",
+    "#43A047",
+    "#2E7D32",
+    "#1B5E20"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Montserrat",
+      "style": "SemiBold"
+    },
+    "body": {
+      "family": "Source Sans Pro",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "Crimson Text",
+      "style": "Regular"
+    }
+  },
+  "createdAt": "2026-03-27T14:02:25.036Z"
+}

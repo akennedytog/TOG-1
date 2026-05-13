@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scout AI Daily Briefing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%); }
+    .glass-panel { 
+      background: rgba(30, 58, 95, 0.4); 
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(100, 149, 237, 0.2);
+    }
+    .priority-urgent { border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.1); }
+    .priority-high { border-left: 4px solid #f97316; background: rgba(249, 115, 22, 0.1); }
+    .priority-medium { border-left: 4px solid #eab308; background: rgba(234, 179, 8, 0.1); }
+    .priority-low { border-left: 4px solid #10b981; background: rgba(16, 185, 129, 0.1); }
+    .pulse-glow { animation: pulse-glow 2s infinite; }
+    @keyframes pulse-glow { 
+      0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); } 
+      50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); } 
+    }
+    .metric-card {
+      background: linear-gradient(135deg, rgba(30, 58, 95, 0.6) 0%, rgba(30, 58, 95, 0.4) 100%);
+      border: 1px solid rgba(100, 149, 237, 0.2);
+    }
+    .velocity-bar {
+      height: 8px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #ef4444 0%, #eab308 50%, #10b981 100%);
+      position: relative;
+    }
+    .velocity-indicator {
+      position: absolute;
+      top: -4px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      border: 3px solid #3b82f6;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen">
+  
+  <div class="max-w-6xl mx-auto p-8">
+    
+    <!-- Header -->
+    <header class="mb-8">
+      <div class="flex justify-between items-center">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-2xl">
+              🤖
+            </div>
+            <div>
+              <h1 class="text-3xl font-bold">AI Daily Briefing</h1>
+              <p class="text-slate-400">Your personalized sales intelligence</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-4">
+          <div id="briefing-timestamp" class="text-sm text-slate-400">Generated just now</div>
+          <button onclick="refreshBriefing()" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">
+            <i class="fas fa-sync-alt mr-2"></i>Refresh
+          </button>
+          <a href="scout_sales_dashboard.html" class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-lg transition">
+            <i class="fas fa-arrow-left mr-2"></i>Back to CRM
+          </a>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Summary Card -->
+    <div id="summary-card" class="glass-panel rounded-xl p-6 mb-6">
+      <div class="flex items-start gap-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center">
+          <i class="fas fa-bullseye text-3xl"></i>
+        </div>
+        <div class="flex-1">
+          <h2 id="greeting" class="text-2xl font-bold mb-2">Good morning, Alec</h2>
+          <p id="focus-area" class="text-lg text-slate-300 mb-4">Loading your briefing...</p>
+          
+          <div id="top-priority" class="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg">
+            <i class="fas fa-star text-yellow-400"></i>
+            <span class="font-medium">Top Priority:</span>
+            <span id="top-priority-text">Analyzing your data...</span>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <div id="briefing-score" class="text-5xl font-bold text-emerald-400">--</div>
+          <p class="text-sm text-slate-400 mt-1">Focus Score</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Metrics Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div class="metric-card rounded-xl p-5">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+            <i class="fas fa-chart-line text-blue-400"></i>
+          </div>
+          <div>
+            <p class="text-slate-400 text-sm">Pipeline Value</p>
+            <p id="metric-pipeline" class="text-2xl font-bold">$0</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="metric-card rounded-xl p-5">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+            <i class="fas fa-calendar-check text-emerald-400"></i>
+          </div>
+          <div>
+            <p class="text-slate-400 text-sm">Closing This Month</p>
+            <p id="metric-closing" class="text-2xl font-bold">0</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="metric-card rounded-xl p-5">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center"
+          >
+            <i class="fas fa-exclamation-triangle text-orange-400"></i>
+          </div>
+          <div>
+            <p class="text-slate-400 text-sm">Stalled Deals</p>
+            <p id="metric-stalled" class="text-2xl font-bold">0</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="metric-card rounded-xl p-5">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+            <i class="fas fa-clock text-purple-400"></i>
+          </div>
+          <div>
+            <p class="text-slate-400 text-sm">Tasks Due</p>
+            <p id="metric-tasks" class="text-2xl font-bold">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Priority Actions -->
+      <div class="lg:col-span-2 space-y-4">
+        <div class="flex justify-between items-center">
+          <h3 class="text-xl font-bold">🎯 Priority Actions</h3>
+          <div class="flex gap-2">
+            <button onclick="filterPriority('all')" class="px-3 py-1 text-sm bg-blue-600 rounded-lg">All</button>
+            <button onclick="filterPriority('urgent')" class="px-3 py-1 text-sm bg-slate-700 hover:bg-slate-600 rounded-lg">Urgent</button>
+            <button onclick="filterPriority('high')" class="px-3 py-1 text-sm bg-slate-700 hover:bg-slate-600 rounded-lg">High</button>
+          </div>
+        </div>
+        
+        <div id="priority-actions" class="space-y-3">
+          <!-- Populated by JS -->
+          <div class="glass-panel rounded-xl p-6 text-center text-slate-400">
+            <i class="fas fa-spinner fa-spin mr-2"></i>
+            Analyzing your priorities...
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        
+        <!-- Win/Loss Stats -->
+        <div class="glass-panel rounded-xl p-5">
+          <h3 class="font-bold mb-4">📊 Last 90 Days</h3>
+          
+          <div id="win-loss-loading" class="text-center py-4">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
+          
+          <div id="win-loss-stats" class="hidden space-y-3">
+            <div class="flex justify-between">
+              <span class="text-slate-400">Win Rate</span>
+              <span id="win-rate" class="font-bold">--%</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Avg Deal Size</span>
+              <span id="avg-deal" class="font-bold">$--</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Sales Cycle</span>
+              <span id="sales-cycle" class="font-bold">-- days</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Revenue</span>
+              <span id="total-revenue" class="font-bold text-emerald-400">$--</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- AI Insights -->
+        <div class="glass-panel rounded-xl p-5">
+          <h3 class="font-bold mb-4">💡 AI Insights</h3>
+          
+          <div id="ai-insights-loading" class="text-center py-4">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
+          
+          <div id="ai-insights" class="hidden space-y-4">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="glass-panel rounded-xl p-5">
+          <h3 class="font-bold mb-4">📈 Activity This Week</h3>
+          
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-500/20 rounded flex items-center justify-center">
+                  <i class="fas fa-phone text-blue-400 text-sm"></i>
+                </div>
+                <span class="text-slate-400">Calls</span>
+              </div>
+              <span id="stat-calls" class="font-bold">0</span>
+            </div>
+            
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-emerald-500/20 rounded flex items-center justify-center">
+                  <i class="fas fa-envelope text-emerald-400 text-sm"></i>
+                </div>
+                <span class="text-slate-400">Emails</span>
+              </div>
+              <span id="stat-emails" class="font-bold">0</span>
+            </div>
+            
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-purple-500/20 rounded flex items-center justify-center">
+                  <i class="fas fa-calendar text-purple-400 text-sm"></i>
+                </div>
+                <span class="text-slate-400">Meetings</span>
+              </div>
+              <span id="stat-meetings" class="font-bold">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = 'http://localhost:5001';
+    let currentBriefing = null;
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      loadBriefing();
+      loadWinLoss();
+    });
+    
+    async function loadBriefing() {
+      try {
+        const response = await fetch(`${API_URL}/api/briefing`);
+        const data = await response.json();
+        
+        currentBriefing = data;
+        
+        // Update summary
+        document.getElementById('greeting').textContent = data.summary.greeting;
+        document.getElementById('focus-area').textContent = data.summary.focus;
+        document.getElementById('top-priority-text').textContent = data.summary.top_priority;
+        document.getElementById('briefing-timestamp').textContent = 
+          `Generated ${new Date(data.generated_at).toLocaleTimeString()}`;
+        
+        // Calculate focus score (0-100 based on task completion and pipeline health)
+        const urgent = data.summary.stats.urgent || 0;
+        const high = data.summary.stats.high || 0;
+        const score = Math.max(0, 100 - (urgent * 20) - (high * 10));
+        document.getElementById('briefing-score').textContent = Math.round(score);
+        
+        // Update metrics
+        document.getElementById('metric-pipeline').textContent = 
+          `$${(data.metrics.total_pipeline || 0).toLocaleString()}`;
+        document.getElementById('metric-closing').textContent = 
+          data.metrics.deals_closing_this_month || 0;
+        document.getElementById('metric-stalled').textContent = 
+          data.metrics.stalled_deals || 0;
+        document.getElementById('metric-tasks').textContent = 
+          data.metrics.tasks_due_today || 0;
+        
+        // Render priority actions
+        renderPriorityActions(data.priority_actions);
+        
+        // Render AI insights
+        renderAIInsights(data.insights);
+        
+        // Update activity stats
+        document.getElementById('stat-calls').textContent = '--';
+        document.getElementById('stat-emails').textContent = '--';
+        document.getElementById('stat-meetings').textContent = '--';
+        
+      } catch (e) {
+        console.error('Failed to load briefing:', e);
+        document.getElementById('priority-actions').innerHTML = `
+          <div class="glass-panel rounded-xl p-6 text-center text-red-400">
+            <i class="fas fa-exclamation-circle mr-2"></i>
+            Failed to load briefing. Is the API running?
+          </div>
+        `;
+      }
+    }
+    
+    async function loadWinLoss() {
+      try {
+        const response = await fetch(`${API_URL}/api/briefing/win-loss`);
+        const data = await response.json();
+        
+        document.getElementById('win-loss-loading').classList.add('hidden');
+        document.getElementById('win-loss-stats').classList.remove('hidden');
+        
+        if (data.total_closed > 0) {
+          document.getElementById('win-rate').textContent = `${data.win_rate}%`;
+          document.getElementById('avg-deal').textContent = `$${(data.avg_deal_size || 0).toLocaleString()}`;
+          document.getElementById('sales-cycle').textContent = `${data.avg_sales_cycle_days} days`;
+          document.getElementById('total-revenue').textContent = `$${(data.total_revenue || 0).toLocaleString()}`;
+        } else {
+          document.getElementById('win-loss-stats').innerHTML = `
+            <p class="text-slate-400 text-center py-4">No closed deals in the last 90 days</p>
+          `;
+        }
+        
+      } catch (e) {
+        console.error('Failed to load win/loss:', e);
+      }
+    }
+    
+    function renderPriorityActions(actions) {
+      const container = document.getElementById('priority-actions');
+      
+      if (!actions || actions.length === 0) {
+        container.innerHTML = `
+          <div class="glass-panel rounded-xl p-8 text-center">
+            <i class="fas fa-check-circle text-4xl text-emerald-400 mb-4"></i>
+            <p class="text-lg font-medium">All caught up!</p>
+            <p class="text-slate-400">No urgent priorities for today</p>
+          </div>
+        `;
+        return;
+      }
+      
+      container.innerHTML = actions.map(action => `
+        <div class="glass-panel rounded-xl p-5 priority-${action.priority}" data-priority="${action.priority}">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 ${getPriorityIconBg(action.type)} rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas ${getPriorityIcon(action.type)}"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex justify-between items-start">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xs uppercase font-bold ${getPriorityColor(action.priority)}">${action.priority}</span>
+                    <span class="text-xs text-slate-500 capitalize">${action.type.replace('_', ' ')}</span>
+                  </div>
+                  <p class="font-medium text-lg">${action.title}</p>
+                  <p class="text-slate-400 mt-1">${action.description}</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4 mt-3 text-sm">
+                <span class="text-slate-500"><i class="fas fa-info-circle mr-1"></i>${action.reason}</span>
+              </div>
+              
+              <div class="flex gap-2 mt-3">
+                <button onclick="takeAction('${action.entity_type}', '${action.entity_id}')" 
+                        class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium transition">
+                  ${action.suggested_action}
+                </button>
+                <button onclick="snoozeAction('${action.entity_id}')" 
+                        class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-lg text-sm transition">
+                  Snooze
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    function renderAIInsights(insights) {
+      document.getElementById('ai-insights-loading').classList.add('hidden');
+      const container = document.getElementById('ai-insights');
+      container.classList.remove('hidden');
+      
+      if (!insights || insights.length === 0) {
+        container.innerHTML = `
+          <p class="text-slate-400 text-center py-4">AI insights not available. Add your OpenAI API key to enable AI-powered analysis.</p>
+        `;
+        return;
+      }
+      
+      container.innerHTML = insights.map(insight => `
+        <div class="p-4 bg-slate-800/50 rounded-lg">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs uppercase bg-purple-500/20 text-purple-400 px-2 py-1 rounded">${insight.type || 'insight'}</span>
+          </div>
+          <p class="font-medium mb-1">${insight.title}</p>
+          <p class="text-sm text-slate-400 mb-2">${insight.description}</p>
+          ${insight.recommended_action ? `
+            <p class="text-sm text-blue-400"><i class="fas fa-arrow-right mr-1"></i>${insight.recommended_action}</p>
+          ` : ''}
+        </div>
+      `).join('');
+    }
+    
+    function getPriorityIcon(type) {
+      const icons = {
+        'call': 'fa-phone',
+        'follow_up': 'fa-reply',
+        'at_risk': 'fa-exclamation-triangle',
+        'opportunity': 'fa-star',
+        'task': 'fa-check-square',
+        'insight': 'fa-lightbulb'
+      };
+      return icons[type] || 'fa-circle';
+    }
+    
+    function getPriorityIconBg(type) {
+      const bgs = {
+        'call': 'bg-blue-500/20 text-blue-400',
+        'follow_up': 'bg-emerald-500/20 text-emerald-400',
+        'at_risk': 'bg-red-500/20 text-red-400',
+        'opportunity': 'bg-yellow-500/20 text-yellow-400',
+        'task': 'bg-orange-500/20 text-orange-400',
+        'insight': 'bg-purple-500/20 text-purple-400'
+      };
+      return bgs[type] || 'bg-slate-700 text-slate-400';
+    }
+    
+    function getPriorityColor(priority) {
+      const colors = {
+        'urgent': 'text-red-400',
+        'high': 'text-orange-400',
+        'medium': 'text-yellow-400',
+        'low': 'text-emerald-400'
+      };
+      return colors[priority] || 'text-slate-400';
+    }
+    
+    function filterPriority(priority) {
+      const items = document.querySelectorAll('#priority-actions > div');
+      items.forEach(item => {
+        if (priority === 'all' || item.dataset.priority === priority) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+      
+      // Update button styles
+      document.querySelectorAll('[onclick^="filterPriority"]').forEach(btn => {
+        btn.classList.remove('bg-blue-600');
+        btn.classList.add('bg-slate-700');
+      });
+      event.target.classList.remove('bg-slate-700');
+      event.target.classList.add('bg-blue-600');
+    }
+    
+    function refreshBriefing() {
+      loadBriefing();
+      loadWinLoss();
+    }
+    
+    function takeAction(entityType, entityId) {
+      if (entityType === 'deal') {
+        window.location.href = `scout_sales_dashboard.html?view=deal&id=${entityId}`;
+      } else if (entityType === 'contact') {
+        window.location.href = `scout_sales_dashboard.html?view=contact&id=${entityId}`;
+      } else if (entityType === 'task') {
+        completeTask(entityId);
+      }
+    }
+    
+    async function completeTask(taskId) {
+      try {
+        await fetch(`${API_URL}/api/tasks/${taskId}/complete`, { method: 'POST' });
+        refreshBriefing();
+      } catch (e) {
+        console.error('Failed to complete task:', e);
+      }
+    }
+    
+    function snoozeAction(entityId) {
+      // Could implement snooze functionality
+      alert('Snoozed for 24 hours');
+    }
+  </script>
+</body>
+</html>

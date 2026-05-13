@@ -1,0 +1,67 @@
+{
+  "name": "Instagram Story - Tech/AI Theme",
+  "template": "instagram-story",
+  "theme": "neo-cyber",
+  "dimensions": {
+    "width": 1080,
+    "height": 1920
+  },
+  "colors": [
+    "#0A0A0F",
+    "#1E1E2E",
+    "#7D3CFF",
+    "#00F0FF",
+    "#FF006E",
+    "#FFFFFF"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Space Grotesk",
+      "style": "Bold"
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "JetBrains Mono",
+      "style": "Medium"
+    }
+  },
+  "elements": [
+    {
+      "type": "background",
+      "gradient": "linear-gradient(135deg, #0A0A0F 0%, #1E1E2E 100%)"
+    },
+    {
+      "type": "text",
+      "placeholder": "HEADLINE",
+      "font": "heading",
+      "size": 72,
+      "color": "#FFFFFF",
+      "position": { "x": 540, "y": 400 }
+    },
+    {
+      "type": "text",
+      "placeholder": "Subheadline text here",
+      "font": "body",
+      "size": 32,
+      "color": "#00F0FF",
+      "position": { "x": 540, "y": 520 }
+    },
+    {
+      "type": "cta-button",
+      "text": "SWIPE UP",
+      "background": "#7D3CFF",
+      "color": "#FFFFFF",
+      "position": { "x": 540, "y": 1600 }
+    }
+  ],
+  "canvaImport": {
+    "format": "JSON",
+    "compatible": true,
+    "notes": "Import as new design, elements are editable"
+  },
+  "createdAt": "2026-03-28T10:01:00-04:00",
+  "generatedBy": "dante-agent-cron"
+}

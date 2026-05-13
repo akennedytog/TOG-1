@@ -1,0 +1,6 @@
+Date,Business Name,Website URL,Email,Industry,Premium?,Crawler Score,Structured Data Score,Entity Score,Citation Score,Total Score,Rating,Priority,Report Sent,Follow-up 1,Follow-up 2,Converted,Revenue,Notes
+2026-03-19,Acme HVAC,https://acmehvac.com,john@acmehvac.com,HVAC,FALSE,20,15,18,12,65,Good,Medium,2026-03-19,2026-03-22,2026-03-26,FALSE,$0,First lead - follow up on 3/22
+2026-03-19,Smith Law Firm,https://smithlaw.com,sarah@smithlaw.com,Legal,TRUE,22,20,20,18,80,Excellent,Low,2026-03-19,2026-03-22,2026-03-26,FALSE,$0,Premium audit - schedule consultation call
+2026-03-20,Metro Dental,https://metrodental.com,dr.jones@metrodental.com,Medical,FALSE,18,12,15,8,53,Needs Work,High,2026-03-20,2026-03-23,2026-03-27,FALSE,$0,Critical issues - prioritize this one
+2026-03-20,Elite Consulting,https://eliteconsulting.com,mike@eliteconsulting.com,Consulting,FALSE,25,22,20,15,82,Excellent,Low,2026-03-20,2026-03-23,2026-03-27,FALSE,$0,High score but low citations - easy wins
+2026-03-21,Quick Fix Electric,https://quickfixelectric.com,tom@quickfixelectric.com,Electrical,FALSE,15,10,12,10,47,Needs Work,High,2026-03-21,2026-03-24,2026-03-28,FALSE,$0,No schema markup at all - big opportunity

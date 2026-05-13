@@ -1,0 +1,47 @@
+{
+  "id": "presentation_deck",
+  "name": "Pitch Deck Presentation",
+  "generatedAt": "2026-03-26T14:01:40.002Z",
+  "version": "1.0.0",
+  "files": {
+    "figma": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/presentation_deck/presentation_deck_1774533700002_figma_commands.json",
+    "canva": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/presentation_deck/presentation_deck_1774533700002_canva_import.md"
+  },
+  "config": {
+    "id": "presentation_deck",
+    "name": "Pitch Deck Presentation",
+    "category": "presentation",
+    "sizes": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "pages": 20
+      }
+    ],
+    "style": "startup_modern",
+    "colors": [
+      "#667eea",
+      "#764ba2",
+      "#f093fb"
+    ],
+    "elements": [
+      "slides",
+      "charts",
+      "infographics",
+      "icons"
+    ],
+    "price": {
+      "etsy": 12.99,
+      "creative_market": 18,
+      "designcuts": 15
+    },
+    "tags": [
+      "presentation",
+      "pitch deck",
+      "startup",
+      "business",
+      "slides"
+    ]
+  },
+  "status": "ready_for_export"
+}

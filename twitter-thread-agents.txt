@@ -1,0 +1,110 @@
+## The Top 50 GitHub/Repository Agents for OpenClaw
+
+### 🏗️ Core Coding Agents (5)
+
+• **coding-agent** - Spawn Codex/Claude/Pi agents for building, reviewing, refactoring
+• **claude** - Claude Code integration for complex reasoning
+• **codex** - OpenAI Codex execution for fast feature building  
+• **opencode** - OpenCode agent runner for quick parallel tasks
+• **pi** - Pi coding agent for cost-effective assistance
+
+### 🔧 GitHub & Repository Automation (10)
+
+• **gh-issues** - Auto-fetch, fix, and PR issues
+• **github** - GitHub CLI operations (PRs, issues, CI, code review)
+• **git-worktree** - Safe PR reviews with parallel worktrees
+• **pr-review** - Multi-agent PR analysis
+• **repo-analyzer** - Codebase insights (architecture, deps, tech debt)
+• **commit-helper** - Conventional commits from diffs
+• **changelog-gen** - Auto-generate release notes from commits
+• **dependency-updater** - Auto-update vulnerable dependencies
+• **release-manager** - Tag, release, publish workflows
+• **repo-cloner** - Bulk repo analysis for research
+
+### 🧪 Testing & Quality (6)
+
+• **test-runner** - Automated testing (Jest, pytest, go test)
+• **coverage-reporter** - Code coverage tracking
+• **bug-predictor** - ML-based bug prediction
+• **security-scanner** - Vulnerability detection (Snyk, CodeQL, semgrep)
+• **lint-enforcer** - Style consistency (ESLint, prettier, black)
+• **type-checker** - Type safety (TypeScript, mypy)
+
+### 🚀 Deployment & DevOps (10)
+
+• **docker** - Container management
+• **k8s-deploy** - Kubernetes deployment
+• **vercel-deploy** - Frontend deployment
+• **netlify-deploy** - Jamstack deployment
+• **aws-deploy** - AWS automation
+• **gcp-deploy** - Google Cloud deployment
+• **azure-deploy** - Azure DevOps
+• **terraform** - Infrastructure as Code
+• **pulumi** - Modern IaC
+• **ci-cd** - Pipeline automation
+
+### 📊 Monitoring & Observability (6)
+
+• **log-analyzer** - Log aggregation
+• **metrics-dashboard** - Visualization (Grafana)
+• **error-tracker** - Bug monitoring (Sentry)
+• **uptime-monitor** - Health checks
+• **apm-tracer** - Performance tracing
+• **cost-optimizer** - Cloud cost reduction
+
+### 📝 Documentation & Content (6)
+
+• **doc-generator** - Auto documentation
+• **readme-writer** - README creation from code
+• **code-explainer** - Inline documentation
+• **tutorial-creator** - Step-by-step guides
+• **api-docs** - OpenAPI/Postman docs
+• **adr-writer** - Architecture decision records
+
+### 🔍 Research & Intelligence (5)
+
+• **repo-cloner** - Bulk repo analysis
+• **code-search** - Pattern finding
+• **license-checker** - License compatibility
+• **contributor-analyzer** - Community health
+• **trend-tracker** - Tech trends monitoring
+
+### 🤝 Collaboration & Communication (6)
+
+• **slack** - Team notifications
+• **discord** - Community updates
+• **teams** - Microsoft integration
+• **email-reporter** - Status reports
+• **meeting-summarizer** - Standup notes
+• **notion-sync** - Wiki auto-sync
+
+### 🔐 Security & Compliance (4)
+
+• **secret-scanner** - Credential detection
+• **compliance-checker** - SOC2, GDPR, HIPAA
+• **access-reviewer** - Permission auditing
+• **threat-modeler** - Security design
+
+### 🎨 Frontend & Design (5)
+
+• **ui-generator** - Component creation
+• **css-optimizer** - Style optimization
+• **a11y-checker** - Accessibility (WCAG)
+• **perf-analyzer** - Core Web Vitals
+• **responsive-tester** - Multi-device testing
+
+### 🧠 AI/ML Specific (5)
+
+• **model-trainer** - Training pipelines
+• **prompt-tester** - A/B testing prompts
+• **embedding-manager** - Vector operations
+• **data-validator** - Dataset QA
+• **experiment-tracker** - MLflow/Weights & Biases
+
+---
+
+**Total: 50+ Agents**
+
+These aren't just tools — they're autonomous team members.
+
+**Full breakdown in the article:** https://theonegroup.info/blog/openclaw-github-agents.html

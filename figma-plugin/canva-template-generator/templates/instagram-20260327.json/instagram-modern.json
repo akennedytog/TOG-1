@@ -1,0 +1,33 @@
+{
+  "name": "Instagram Post - Modern",
+  "template": "instagram",
+  "theme": "modern",
+  "dimensions": {
+    "width": 1080,
+    "height": 1080
+  },
+  "colors": [
+    "#FFFFFF",
+    "#F5F5F5",
+    "#333333",
+    "#007BFF",
+    "#28A745",
+    "#FFC107",
+    "#DC3545"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "style": "Bold"
+    },
+    "body": {
+      "family": "Inter",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "Poppins",
+      "style": "SemiBold"
+    }
+  },
+  "createdAt": "2026-03-27T14:02:25.036Z"
+}

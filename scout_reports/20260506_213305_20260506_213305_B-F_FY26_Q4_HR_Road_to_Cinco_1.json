@@ -1,0 +1,41 @@
+{
+  "id": "20260506_213305_20260506_213305_B-F_FY26_Q4_HR_Road_to_Cinco_1",
+  "filename": "20260506_213305_B-F_FY26_Q4_HR_Road_to_Cinco_1.xlsx",
+  "uploaded_at": "2026-05-06T21:33:10.805728",
+  "file_type": ".xlsx",
+  "row_count": 8,
+  "insights": {
+    "summary": "The sales report indicates that the top performer, Chad Fraser, has significantly higher case sales compared to others, while the overall performance shows a total of 54 cases sold with 34 being from menus/features with 4+ cases. There are opportunities for improvement in engagement with lower-performing accounts.",
+    "top_performers": [
+      {
+        "name": "Chad Fraser",
+        "metric": "Cases Sold",
+        "value": 42
+      }
+    ],
+    "accounts_at_risk": [
+      {
+        "name": "PH North On Prem AM",
+        "reason": "Low case sales (11 total, 7 with 4+ cases)",
+        "action": "Increase engagement and promotional efforts to boost sales."
+      }
+    ],
+    "call_today": [
+      {
+        "name": "PH North On Prem AM",
+        "priority": "high",
+        "reason": "To discuss strategies for increasing case sales and address any barriers."
+      }
+    ],
+    "skus_down": [],
+    "opportunities": [
+      {
+        "description": "Enhance promotional activities for underperforming accounts to increase case sales.",
+        "potential_value": "Potential increase of 20-30% in case sales."
+      }
+    ],
+    "alerts": [
+      "Focus on improving sales strategies for accounts with low performance to mitigate risks."
+    ]
+  }
+}

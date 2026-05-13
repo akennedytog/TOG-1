@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📡 Scout CRM - Sales Intelligence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #059669 100%); }
+    .glass-panel { 
+      background: rgba(6, 78, 59, 0.8); 
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .drop-zone {
+      border: 2px dashed #10b981;
+      background: rgba(16, 185, 129, 0.05);
+      transition: all 0.3s ease;
+    }
+    .drop-zone.drag-over {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: #34d399;
+    }
+    .insight-card {
+      background: linear-gradient(135deg, rgba(6, 78, 59, 0.9) 0%, rgba(6, 95, 70, 0.9) 100%);
+      border-left: 4px solid;
+    }
+    .insight-card.top { border-color: #10b981; }
+    .insight-card.risk { border-color: #ef4444; }
+    .insight-card.call { border-color: #f59e0b; }
+    .insight-card.sku { border-color: #8b5cf6; }
+    .insight-card.opp { border-color: #3b82f6; }
+    .pulse-green { animation: pulse-green 2s infinite; }
+    @keyframes pulse-green { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+    .loading {
+      border: 3px solid rgba(16, 185, 129, 0.2);
+      border-top: 3px solid #10b981;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen">
+  
+  <!-- Header -->
+  <header class="gradient-bg p-4 border-b border-emerald-700">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center text-2xl">
+            📡
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold">Scout CRM</h1>
+            <p class="text-emerald-200 text-sm">AI-Powered Sales Intelligence</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-4">
+          <div id="api-status" class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50">
+            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+            <span class="text-sm text-slate-300">Connecting...</span>
+          </div>
+          <button onclick="window.location.reload()" class="bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-lg text-sm font-medium transition">
+            <i class="fas fa-sync-alt mr-2"></i>Refresh
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto p-4 space-y-4">
+    
+    <!-- Upload Zone -->
+    <section class="glass-panel rounded-xl p-6">
+      <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+        <i class="fas fa-cloud-upload-alt text-emerald-400"></i>
+        Upload Sales Report
+      </h2>
+      
+      <div id="drop-zone" class="drop-zone rounded-xl p-8 text-center cursor-pointer">
+        <input type="file" id="file-input" accept=".csv,.xlsx,.xls,.pdf" class="hidden">
+        
+        <div id="upload-prompt">
+          <i class="fas fa-file-upload text-5xl text-emerald-400 mb-4"></i>
+          <p class="text-lg font-medium mb-2">Drop your sales report here</p>
+          <p class="text-slate-400 text-sm">or click to browse</p>
+          <p class="text-slate-500 text-xs mt-2">Supports: CSV, Excel (.xlsx, .xls), PDF</p>
+        </div>
+        
+        <div id="upload-loading" class="hidden">
+          <div class="loading mx-auto mb-4"></div>
+          <p class="text-emerald-300">Analyzing with AI...</p>
+          <p class="text-slate-500 text-xs mt-2">This may take 10-30 seconds</p>
+        </div>
+        
+        <div id="upload-success" class="hidden">
+          <i class="fas fa-check-circle text-5xl text-green-400 mb-4"></i>
+          <p class="text-lg font-medium text-green-400 mb-2">Analysis Complete!</p>
+          <p class="text-slate-400 text-sm">Your actionable insights are ready below</p>
+        </div>
+        
+        <div id="upload-error" class="hidden">
+          <i class="fas fa-exclamation-circle text-5xl text-red-400 mb-4"></i>
+          <p class="text-lg font-medium text-red-400 mb-2">Upload Failed</p>
+          <p id="error-message" class="text-slate-400 text-sm"></p>
+          <button onclick="resetUpload()" class="mt-4 bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-lg text-sm">
+            Try Again
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analysis Results -->
+    <section id="analysis-results" class="hidden space-y-4">
+      <div class="flex justify-between items-center">
+        <h2 class="text-xl font-bold flex items-center gap-2">
+          <i class="fas fa-chart-line text-emerald-400"></i>
+          Analysis Results
+        </h2>
+        <button onclick="exportReport()" class="bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-lg text-sm font-medium transition">
+          <i class="fas fa-download mr-2"></i>Export
+        </button>
+      </div>
+      
+      <!-- Summary Card -->
+      <div class="glass-panel rounded-xl p-6">
+        <h3 class="text-lg font-semibold mb-3 text-emerald-300">Executive Summary</h3>
+        <p id="report-summary" class="text-slate-300 leading-relaxed"></p>
+      </div>
+      
+      <!-- Actionable Insights Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="insights-grid">
+        <!-- Insights rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Report History -->
+    <section class="glass-panel rounded-xl p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-semibold flex items-center gap-2">
+          <i class="fas fa-history text-emerald-400"></i>
+          Report History
+        </h2>
+        <button onclick="loadReports()" class="text-emerald-400 hover:text-emerald-300 text-sm">
+          <i class="fas fa-sync-alt mr-1"></i>Refresh
+        </button>
+      </div>
+      
+      <div id="reports-list" class="space-y-2">
+        <p class="text-slate-500 text-center py-8">No reports analyzed yet</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const API_URL = 'http://localhost:5001';
+    let currentReport = null;
+    
+    // Check API health
+    async function checkApiHealth() {
+      try {
+        const response = await fetch(`${API_URL}/health`, { method: 'GET' });
+        if (response.ok) {
+          document.getElementById('api-status').innerHTML = `
+            <span class="w-2 h-2 bg-green-400 rounded-full pulse-green"></span>
+            <span class="text-sm text-green-400">Connected</span>
+          `;
+          loadReports();
+        } else {
+          throw new Error('API not responding');
+        }
+      } catch (e) {
+        document.getElementById('api-status').innerHTML = `
+          <span class="w-2 h-2 bg-red-400 rounded-full"></span>
+          <span class="text-sm text-red-400">API Offline - Start with: python scout_api.py</span>
+        `;
+      }
+    }
+    
+    // Drag and drop
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+    
+    dropZone.addEventListener('click', () => fileInput.click());
+    
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('drag-over');
+    });
+    
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('drag-over');
+    });
+    
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('drag-over');
+      const files = e.dataTransfer.files;
+      if (files.length > 0) handleFile(files[0]);
+    });
+    
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) handleFile(e.target.files[0]);
+    });
+    
+    async function handleFile(file) {
+      // Show loading
+      document.getElementById('upload-prompt').classList.add('hidden');
+      document.getElementById('upload-loading').classList.remove('hidden');
+      
+      const formData = new FormData();
+      formData.append('file', file);
+      
+      try {
+        const response = await fetch(`${API_URL}/upload`, {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok && result.success) {
+          currentReport = result.report;
+          document.getElementById('upload-loading').classList.add('hidden');
+          document.getElementById('upload-success').classList.remove('hidden');
+          displayAnalysis(result.report);
+          loadReports();
+        } else {
+          throw new Error(result.error || 'Upload failed');
+        }
+      } catch (e) {
+        document.getElementById('upload-loading').classList.add('hidden');
+        document.getElementById('upload-error').classList.remove('hidden');
+        document.getElementById('error-message').textContent = e.message;
+      }
+    }
+    
+    function resetUpload() {
+      document.getElementById('upload-prompt').classList.remove('hidden');
+      document.getElementById('upload-loading').classList.add('hidden');
+      document.getElementById('upload-success').classList.add('hidden');
+      document.getElementById('upload-error').classList.add('hidden');
+      document.getElementById('file-input').value = '';
+    }
+    
+    function displayAnalysis(report) {
+      const insights = report.insights;
+      
+      // Show results section
+      document.getElementById('analysis-results').classList.remove('hidden');
+      
+      // Summary
+      document.getElementById('report-summary').textContent = insights.summary || 'No summary available';
+      
+      // Build insight cards
+      const grid = document.getElementById('insights-grid');
+      grid.innerHTML = '';
+      
+      // Top performers
+      if (insights.top_performers?.length > 0) {
+        grid.innerHTML += `
+          <div class="insight-card top rounded-xl p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-trophy text-emerald-400"></i>
+              <h3 class="font-semibold">Top Performers</h3>
+            </div>
+            ${insights.top_performers.map(p => `
+              <div class="mb-2 p-2 bg-slate-800/50 rounded">
+                <p class="font-medium">${p.name}</p>
+                <p class="text-emerald-400 text-sm">${p.metric}: ${p.value}</p>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+      
+      // Accounts at risk
+      if (insights.accounts_at_risk?.length > 0) {
+        grid.innerHTML += `
+          <div class="insight-card risk rounded-xl p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-exclamation-triangle text-red-400"></i>
+              <h3 class="font-semibold">Accounts at Risk</h3>
+            </div>
+            ${insights.accounts_at_risk.map(a => `
+              <div class="mb-2 p-2 bg-slate-800/50 rounded">
+                <p class="font-medium">${a.name}</p>
+                <p class="text-red-300 text-sm">${a.reason}</p>
+                <p class="text-slate-400 text-xs mt-1">Action: ${a.action}</p>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+      
+      // Call today
+      if (insights.call_today?.length > 0) {
+        grid.innerHTML += `
+          <div class="insight-card call rounded-xl p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-phone-alt text-amber-400"></i>
+              <h3 class="font-semibold">Call Today (${insights.call_today.length})</h3>
+            </div>
+            ${insights.call_today.map(c => `
+              <div class="mb-2 p-2 bg-slate-800/50 rounded flex justify-between items-start">
+                <div>
+                  <p class="font-medium">${c.name}</p>
+                  <p class="text-slate-400 text-xs">${c.reason}</p>
+                </div>
+                <span class="px-2 py-1 rounded text-xs ${c.priority === 'high' ? 'bg-red-500/30 text-red-300' : 'bg-amber-500/30 text-amber-300'}">${c.priority}</span>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+      
+      // SKUs down
+      if (insights.skus_down?.length > 0) {
+        grid.innerHTML += `
+          <div class="insight-card sku rounded-xl p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-chart-line-down text-purple-400"></i>
+              <h3 class="font-semibold">Underperforming SKUs</h3>
+            </div>
+            ${insights.skus_down.map(s => `
+              <div class="mb-2 p-2 bg-slate-800/50 rounded">
+                <p class="font-medium">${s.sku} - ${s.name}</p>
+                <p class="text-red-400 text-sm">${s.decline}</p>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+      
+      // Opportunities
+      if (insights.opportunities?.length > 0) {
+        grid.innerHTML += `
+          <div class="insight-card opp rounded-xl p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-lightbulb text-blue-400"></i>
+              <h3 class="font-semibold">Opportunities</h3>
+            </div>
+            ${insights.opportunities.map(o => `
+              <div class="mb-2 p-2 bg-slate-800/50 rounded">
+                <p class="text-sm">${o.description}</p>
+                ${o.potential_value ? `<p class="text-emerald-400 text-xs mt-1">Value: ${o.potential_value}</p>` : ''}
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+      
+      // Alerts
+      if (insights.alerts?.length > 0) {
+        grid.innerHTML += `
+          <div class="insight-card risk rounded-xl p-4 col-span-full">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-bell text-red-400"></i>
+              <h3 class="font-semibold">Critical Alerts</h3>
+            </div>
+            ${insights.alerts.map(a => `
+              <div class="mb-2 p-2 bg-red-500/10 border border-red-500/30 rounded">
+                <p class="text-red-300">${a}</p>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+    }
+    
+    async function loadReports() {
+      try {
+        const response = await fetch(`${API_URL}/reports`);
+        const data = await response.json();
+        
+        const list = document.getElementById('reports-list');
+        
+        if (data.reports?.length > 0) {
+          list.innerHTML = data.reports.slice(0, 10).map(r => `
+            <div class="flex justify-between items-center p-3 bg-slate-800/50 rounded hover:bg-slate-800 transition cursor-pointer" onclick="loadReport('${r.id}')">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-file-alt text-emerald-400"></i>
+                <div>
+                  <p class="font-medium text-sm">${r.filename}</p>
+                  <p class="text-slate-500 text-xs">${new Date(r.uploaded_at).toLocaleString()} • ${r.row_count || 0} rows</p>
+                </div>
+              </div>
+              <button onclick="event.stopPropagation(); deleteReport('${r.id}')" class="text-slate-500 hover:text-red-400 transition">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+          `).join('');
+        }
+      } catch (e) {
+        console.log('Failed to load reports:', e);
+      }
+    }
+    
+    async function loadReport(reportId) {
+      try {
+        const response = await fetch(`${API_URL}/report/${reportId}`);
+        const report = await response.json();
+        
+        if (report) {
+          currentReport = report;
+          displayAnalysis(report);
+          document.getElementById('analysis-results').scrollIntoView({ behavior: 'smooth' });
+        }
+      } catch (e) {
+        alert('Failed to load report');
+      }
+    }
+    
+    async function deleteReport(reportId) {
+      if (!confirm('Delete this report?')) return;
+      
+      try {
+        await fetch(`${API_URL}/report/${reportId}`, { method: 'DELETE' });
+        loadReports();
+      } catch (e) {
+        alert('Failed to delete report');
+      }
+    }
+    
+    function exportReport() {
+      if (!currentReport) return;
+      
+      const blob = new Blob([JSON.stringify(currentReport, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `scout_report_${currentReport.id}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+    
+    // Initialize
+    checkApiHealth();
+  </script>
+</body>
+</html>

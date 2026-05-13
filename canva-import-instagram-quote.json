@@ -1,0 +1,75 @@
+{
+  "name": "Instagram Quote Post - AI Leverage",
+  "type": "instagram_post",
+  "pages": [
+    {
+      "width": 1080,
+      "height": 1080,
+      "background": {
+        "type": "gradient",
+        "colors": ["#0A0A0A", "#1a1a2e"],
+        "direction": "135deg"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "text": "AI won't replace you.",
+          "font_family": "Inter",
+          "font_weight": "bold",
+          "font_size": 48,
+          "color": "#FFFFFF",
+          "alignment": "center",
+          "x": 540,
+          "y": 350,
+          "width": 900,
+          "text_align": "center"
+        },
+        {
+          "type": "text",
+          "text": "But someone using AI will.",
+          "font_family": "Inter",
+          "font_weight": "bold",
+          "font_size": 48,
+          "color": "#FFFFFF",
+          "alignment": "center",
+          "x": 540,
+          "y": 420,
+          "width": 900,
+          "text_align": "center"
+        },
+        {
+          "type": "text",
+          "text": "— The One Group",
+          "font_family": "Inter",
+          "font_weight": "medium",
+          "font_size": 24,
+          "color": "#1DA1F2",
+          "alignment": "center",
+          "x": 540,
+          "y": 550,
+          "text_align": "center"
+        },
+        {
+          "type": "shape",
+          "shape": "circle",
+          "color": "#1DA1F2",
+          "opacity": 0.3,
+          "x": 100,
+          "y": 100,
+          "size": 20
+        },
+        {
+          "type": "text",
+          "text": "@TheOneGroupAI",
+          "font_family": "Inter",
+          "font_size": 18,
+          "color": "#FFFFFF",
+          "opacity": 0.7,
+          "x": 540,
+          "y": 1000,
+          "text_align": "center"
+        }
+      ]
+    }
+  ]
+}

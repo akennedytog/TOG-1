@@ -1,0 +1,59 @@
+{
+  "id": "20260506_134414_20260506_134414_B-F ON ADS Goal Model Mar-Apr 2026",
+  "filename": "20260506_134414_B-F ON ADS Goal Model Mar-Apr 2026.xlsx",
+  "uploaded_at": "2026-05-06T13:44:25.644558",
+  "file_type": ".xlsx",
+  "row_count": 24,
+  "insights": {
+    "summary": "The sales report for March-April 2026 outlines revenue goals and developmental objectives for various brands, highlighting both percentage increases and specific activity goals. Key brands such as Jack Daniel's and Woodford Reserve are targeted for significant growth, while several brands are set to feature in themed promotions and staff training initiatives.",
+    "top_performers": [
+      {
+        "name": "Brown Forman Spirits & Wines",
+        "metric": "Percentage Increase",
+        "value": "11%"
+      },
+      {
+        "name": "Woodford FOB",
+        "metric": "Percentage Increase",
+        "value": "6%"
+      },
+      {
+        "name": "Jack Daniel's",
+        "metric": "Percentage Increase",
+        "value": "5%"
+      }
+    ],
+    "accounts_at_risk": [],
+    "call_today": [
+      {
+        "name": "Jack Daniel's",
+        "priority": "high",
+        "reason": "Secure 5 menu features to enhance visibility and sales."
+      },
+      {
+        "name": "Woodford Reserve",
+        "priority": "medium",
+        "reason": "Implement Derby-themed menu features and staff training."
+      },
+      {
+        "name": "Herradura FOB",
+        "priority": "medium",
+        "reason": "Execute promotional tastings for Cinco De Mayo."
+      }
+    ],
+    "skus_down": [],
+    "opportunities": [
+      {
+        "description": "Themed menu features for Jack Daniel's, Woodford Reserve, and Herradura FOB can drive sales during key events.",
+        "potential_value": "Increased brand visibility and potential revenue growth."
+      },
+      {
+        "description": "Staff training initiatives for various brands to improve product knowledge and sales techniques.",
+        "potential_value": "Enhanced customer engagement and increased sales."
+      }
+    ],
+    "alerts": [
+      "Monitor the performance of brands with lower percentage increases to ensure they meet sales goals."
+    ]
+  }
+}

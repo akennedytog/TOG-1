@@ -1,0 +1,7 @@
+Just finished wiring my 8th agent into Mission Control.
+
+Took 3 attempts.
+
+The first two failed because I assumed the config syntax. Third time I just copy-pasted from the working one and tweaked.
+
+Sometimes the docs lie. Ship anyway.

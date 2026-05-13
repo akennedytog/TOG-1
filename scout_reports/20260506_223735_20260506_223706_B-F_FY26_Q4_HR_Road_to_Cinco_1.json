@@ -1,0 +1,88 @@
+{
+  "id": "20260506_223735_20260506_223706_B-F_FY26_Q4_HR_Road_to_Cinco_1",
+  "filename": "20260506_223706_B-F_FY26_Q4_HR_Road_to_Cinco_1.xlsx",
+  "uploaded_at": "2026-05-06T22:37:35.714316",
+  "file_type": "excel",
+  "row_count": 32917,
+  "column_analysis": {
+    "Unnamed: 0": "text",
+    "Unnamed: 1": "text",
+    "Unnamed: 2": "text",
+    "Unnamed: 3": "text",
+    "Unnamed: 4": "text",
+    "Reminder:": "text",
+    "_source_sheet": "text"
+  },
+  "metrics": {
+    "total_records": 32917,
+    "monetary_columns": [],
+    "entity_columns": [],
+    "product_columns": []
+  },
+  "insights": {
+    "summary": "The sales report indicates a total of 32,917 records with varying performance across different accounts and products. Key performers include Chad Fraser and Vanessa Aparicio, while several accounts are underperforming and at risk of missing their sales goals.",
+    "top_performers": [
+      {
+        "name": "Chad Fraser",
+        "metric": "Total Sales",
+        "value": 42,
+        "insight": "Chad has consistently high sales with 27 cases sold, indicating strong customer relationships and effective sales strategies."
+      },
+      {
+        "name": "Vanessa Aparicio",
+        "metric": "Total Sales",
+        "value": 138,
+        "insight": "Vanessa's performance shows a significant contribution to the overall sales with a positive goal percentage, suggesting effective targeting and engagement."
+      }
+    ],
+    "accounts_at_risk": [
+      {
+        "name": "Gavin Lawrence",
+        "reason": "Underperformed with only 10 cases sold against a goal of 15, resulting in a negative goal percentage.",
+        "recommended_action": "Schedule a meeting to discuss strategies for improving sales and addressing any barriers to achieving targets."
+      },
+      {
+        "name": "Williams Gerald",
+        "reason": "Significantly below target with only 3 cases sold against a goal of 17, indicating a need for immediate intervention.",
+        "recommended_action": "Conduct a performance review to identify challenges and provide support or resources to improve sales."
+      }
+    ],
+    "call_today": [
+      {
+        "name": "Chad Fraser",
+        "priority": "high",
+        "reason": "Top performer with consistent sales; leverage his strategies to boost other accounts.",
+        "talking_points": "Discuss successful tactics and explore how these can be replicated across other accounts."
+      },
+      {
+        "name": "Vanessa Aparicio",
+        "priority": "medium",
+        "reason": "Strong performance; potential to mentor underperforming sales reps.",
+        "talking_points": "Explore her approach to customer engagement and how it can be shared with the team."
+      }
+    ],
+    "skus_down": [
+      {
+        "sku": "Chambord",
+        "name": "Chambord Liqueur",
+        "decline": "Sales have decreased significantly, with only 3 cases sold against a goal of 15.",
+        "action": "Implement a targeted marketing campaign to boost visibility and sales of Chambord."
+      }
+    ],
+    "opportunities": [
+      {
+        "description": "Increase sales of Chambord through promotional events and tastings.",
+        "potential_value": "$5,000",
+        "how_to_capture": "Organize in-store tastings and partner with local bars for cocktail promotions."
+      }
+    ],
+    "alerts": [
+      "Critical underperformance in several accounts that could jeopardize overall sales targets."
+    ],
+    "recommendations": [
+      "1. Conduct a thorough review of underperforming accounts to identify barriers and provide tailored support.",
+      "2. Leverage top performers to mentor and share best practices with the sales team.",
+      "3. Implement targeted marketing strategies for low-performing products to stimulate sales growth."
+    ]
+  }
+}

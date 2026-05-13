@@ -1,0 +1,54 @@
+# Enhanced Business Automation Cron Jobs
+# Includes Firecrawl competitor monitoring
+
+SHELL=/bin/zsh
+PATH=/Users/aleckennedy/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/aleckennedy/.openclaw/bin:/Users/aleckennedy/.npm-global/bin
+OPENCLAW_GATEWAY_URL=ws://127.0.0.1:18789
+OPENCLAW_GATEWAY_TOKEN=7355ae0ef6337ecba83763ce94192d05bfe92fa4c8deefc4de88b69101683c33
+
+# === CONTENT PIPELINE ===
+
+# Daily 8am: Generate content from calendar
+0 8 * * * cd ~/.openclaw/workspace && node content-pipeline/generate.js >> content-pipeline/cron.log 2>&1
+
+# Daily 9am: AI news briefings
+0 9 * * * cd ~/.openclaw/workspace && openclaw skills run ai-news-oracle >> content-pipeline/cron.log 2>&1
+
+# Daily 10am: Blog monitoring
+0 10 * * * cd ~/.openclaw/workspace && openclaw skills run blogwatcher >> content-pipeline/cron.log 2>&1
+
+# === COMPETITOR MONITORING (Firecrawl) ===
+
+# Monday 8am: Weekly competitor research (NEW)
+0 8 * * 1 cd ~/.openclaw/workspace && ./scripts/monitor-competitors.sh >> logs/competitor-monitor.log 2>&1
+
+# Tuesday/Thursday 3pm: Content research for Twitter (NEW)
+0 15 * * 2,4 cd ~/.openclaw/workspace && firecrawl search "AI automation small business" --tbs qdr:w --limit 5 -o .firecrawl/content-ideas-$(date +\%Y\%m\%d).json >> logs/firecrawl.log 2>&1
+
+# === WEEKLY OPERATIONS ===
+
+# Sunday 9am: Newsletter sending
+0 9 * * 0 cd ~/.openclaw/workspace && node content-pipeline/send-newsletter.js 2>&1 | openclaw skills run gog --stdin
+
+# Monday 10am: Business intelligence report
+0 10 * * 1 cd ~/.openclaw/workspace && openclaw skills run biz-reporter >> content-pipeline/cron.log 2>&1
+
+# === WEBSITE & INFRASTRUCTURE ===
+
+# Every 4 hours: Check for website updates
+0 */4 * * * cd ~/.openclaw/workspace/theonegroup-site && git status --short >> content-pipeline/cron.log 2>&1
+
+# Daily 6am: Security health check
+0 6 * * * cd ~/.openclaw/workspace && openclaw skills run healthcheck >> content-pipeline/cron.log 2>&1
+
+# === MONETIZATION ===
+
+# Daily 2pm: Affiliate opportunity scan
+0 14 * * * cd ~/.openclaw/workspace && openclaw skills run affiliate-master >> content-pipeline/cron.log 2>&1
+
+# Hourly: Check task tracker for overdue items
+0 * * * * cd ~/.openclaw/workspace && openclaw skills run task-tracker --check-overdue >> content-pipeline/cron.log 2>&1
+
+# === TWITTER AUTOMATION (PM2 manages this - not cron) ===
+# PM2 runs: node twitter-automation.js
+# Check status: pm2 list

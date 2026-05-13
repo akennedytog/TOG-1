@@ -1,0 +1,210 @@
+AI VISIBILITY AUDIT REPORT
+[BUSINESS NAME]
+
+Prepared by: The One Group
+Date: [DATE]
+Website: [WEBSITE URL]
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+Your AI Visibility Score: [SCORE]/100
+Rating: [EXCELLENT/GOOD/NEEDS WORK/CRITICAL]
+
+Key Finding:
+[One sentence summary]
+
+Bottom Line:
+[2-3 sentences about what this means for their business]
+
+================================================================================
+DETAILED FINDINGS
+================================================================================
+
+1. AI CRAWLER ACCESS: [X]/25 points
+Status: [PASS/NEEDS WORK/CRITICAL]
+
+What We Found:
+[Description of robots.txt, JavaScript issues, load speed]
+
+Why It Matters:
+AI crawlers like GPTBot, ClaudeBot, and PerplexityBot need to access your site
+to understand your business. If they can't crawl your site, you don't exist to AI.
+
+Impact: [High/Medium/Low]
+
+--------------------------------------------------------------------------------
+
+2. STRUCTURED DATA: [X]/25 points
+Status: [PASS/NEEDS WORK/CRITICAL]
+
+What We Found:
+[Description of schema markup, JSON-LD, missing fields]
+
+Why It Matters:
+Structured data tells AI exactly what your business is, where you're located,
+what services you offer, and how to contact you. Without it, AI has to guess.
+
+Key Issues:
+- [Issue 1]
+- [Issue 2]
+- [Issue 3]
+
+Impact: [High/Medium/Low]
+
+--------------------------------------------------------------------------------
+
+3. ENTITY RECOGNITION: [X]/25 points
+Status: [PASS/NEEDS WORK/CRITICAL]
+
+What We Found:
+[Description of business type clarity, location signals, content clarity]
+
+Why It Matters:
+AI needs to understand "This is a [business type] in [location] that does [service]."
+If your content is unclear, AI won't recommend you.
+
+Clarity Score:
+- Business Type: [Clear/Unclear]
+- Location: [Clear/Unclear]
+- Services: [Clear/Unclear]
+- Contact Info: [Clear/Unclear]
+
+Impact: [High/Medium/Low]
+
+--------------------------------------------------------------------------------
+
+4. CITATION PRESENCE: [X]/25 points
+Status: [PASS/NEEDS WORK/CRITICAL]
+
+What We Found:
+[Description of directory listings, reviews, social presence]
+
+Why It Matters:
+AI learns about businesses from citations across the web. The more places you're
+mentioned, the more likely AI is to recommend you.
+
+Current Presence:
+- Google Business Profile: [Status]
+- Industry Directories: [X] listings
+- Review Sites: [Status]
+- Social Media: [Status]
+
+Impact: [High/Medium/Low]
+
+================================================================================
+PRIORITY RECOMMENDATIONS
+================================================================================
+
+🔴 IMMEDIATE (Do This Week)
+
+1. [Priority 1 Title]
+What: [Description]
+Why: [Business impact]
+How: [Brief instructions]
+Expected Impact: [X]% improvement
+Difficulty: [Easy/Medium/Hard]
+Time: [X] hours
+
+2. [Priority 2 Title]
+What: [Description]
+Why: [Business impact]
+How: [Brief instructions]
+Expected Impact: [X]% improvement
+Difficulty: [Easy/Medium/Hard]
+Time: [X] hours
+
+🟡 SHORT-TERM (This Month)
+
+3. [Priority 3 Title]
+What: [Description]
+Why: [Business impact]
+How: [Brief instructions]
+Expected Impact: [X]% improvement
+
+4. [Priority 4 Title]
+What: [Description]
+Why: [Business impact]
+How: [Brief instructions]
+Expected Impact: [X]% improvement
+
+🟢 ONGOING (Quarterly)
+
+5. [Priority 5 Title]
+What: [Description]
+Why: [Business impact]
+How: [Brief instructions]
+Time: [X] hours/month
+
+================================================================================
+IMPLEMENTATION OPTIONS
+================================================================================
+
+OPTION A: DIY Implementation
+Cost: $0 (just your time)
+Timeline: [X] weeks
+Best For: Businesses with technical staff
+
+Pros: No ongoing costs, full control
+Cons: Steep learning curve, time-intensive
+
+OPTION B: Done-For-You Service (RECOMMENDED)
+Cost: $2,500 setup + $500/month
+Timeline: 2-3 weeks
+Best For: Businesses that want results fast
+
+What's Included:
+✓ Complete implementation of all recommendations
+✓ AI crawler optimization
+✓ Structured data setup
+✓ Entity optimization
+✓ Citation building (10 sources)
+✓ Monthly monitoring and updates
+✓ Priority support
+
+Expected Results:
+- 40-60% improvement in AI visibility within 60 days
+- More mentions in ChatGPT, Claude, Perplexity
+- Increased traffic from AI sources
+- Better qualified leads
+
+Guarantee: If you don't see improvement in 60 days, we work free until you do.
+
+OPTION C: Hybrid Approach
+Cost: $1,500 for critical fixes + $500/month
+Timeline: 1 week for critical items
+Best For: Businesses that want easy wins first
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+To get started:
+1. Review this report with your team
+2. Prioritize recommendations based on your goals
+3. Decide on DIY vs. Done-For-You
+4. Schedule a call: https://calendly.com/YOUR_LINK
+
+Questions? Reply to this email or call/text: 502-403-7201
+
+================================================================================
+ABOUT THE ONE GROUP
+================================================================================
+
+We help small businesses get cited by AI—ChatGPT, Claude, Perplexity, and Gemini.
+
+Mission: Make sure AI knows who you are, what you do, and why you're the best.
+
+Why It Matters: 40% of Gen Z uses AI instead of Google. If you're not optimized
+for AI, you're invisible to the next generation of customers.
+
+Contact:
+- Email: akennedy@theonegroup.info
+- Phone: 502-403-7201
+- Website: https://theonegroup.info
+- Twitter: @TheOneGroupAI
+
+================================================================================
+This report is confidential and prepared specifically for [Business Name].
+© 2026 The One Group. All rights reserved.

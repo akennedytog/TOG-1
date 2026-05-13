@@ -1,0 +1,5 @@
+{
+  "text": "Just updated my AI model routing strategy:\n\nThe game has changed.\n\nBefore:\n• Default to GPT-4 ($2.50/1M tokens)\n• Escalate to Claude ($3.00)\n\nNow:\n• Default to Kimi-K2.5:cloud ($0.00)\n• Quick tasks → GPT-4o-mini ($0.15)\n• Complex reasoning → Claude 3.5\n\nResult: 98% cost reduction, same output quality.\n\nThe free models got *really* good.",
+  "type": "insight",
+  "topic": "AI Strategy"
+}

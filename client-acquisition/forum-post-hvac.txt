@@ -1,0 +1,26 @@
+SUBJECT: Not selling - just sharing what worked for a Miami HVAC company
+
+Hey everyone,
+
+Not here to pitch. Just wanted to share something interesting I saw working with an HVAC contractor in South Florida.
+
+Their problem: They were missing 12-15 calls a week during busy season. Customers calling after hours, during jobs, when everyone's on calls already. Standard stuff.
+
+They tried:
+- Hiring a part-time receptionist ($800/week, couldn't keep up)
+- Call answering service ($3/call, but leads went cold waiting for callback)
+
+What worked: AI phone answering that books directly into their calendar
+
+Results after 30 days:
+- Missed calls: 15/week → 3/week
+- Appointments booked: +18 (from calls that would've gone to voicemail)
+- No-shows: Down 40% (because they get SMS confirmations)
+
+The AI isn't magic - it's just consistent. Answers 24/7, qualifies the lead ("emergency or quote?"), checks availability, books the slot.
+
+Biggest surprise: Customers didn't care it wasn't human. They cared that someone answered and they got an appointment.
+
+If anyone's curious about the setup (not selling, just geeking out on the tech), happy to share.
+
+- Alec

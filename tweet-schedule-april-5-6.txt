@@ -1,0 +1,121 @@
+# Tweet Schedule - April 5-6, 2026
+
+## Saturday, April 5th
+
+**9:00 AM**
+Our AI stack costs $0/month.
+
+Here's what we use:
+• Ollama (local LLMs) - FREE
+• n8n (workflows) - FREE  
+• Docker (deployment) - FREE
+• GitHub (version control) - FREE
+
+The myth: You need enterprise budgets to automate.
+The reality: You need to know how to wire the pieces together.
+
+---
+
+**3:00 PM**
+What we PAY for (and why):
+
+→ Claude: Complex reasoning only
+→ ElevenLabs: Voice synthesis  
+→ Hosting: VPS when needed
+
+Monthly spend: ~$150
+What others pay: $2,000+
+
+Same results. Different approach.
+
+DM for the full $0 AI stack setup.
+
+---
+
+**9:00 PM**
+Same task. 4 models. Real costs.
+
+Task: "Summarize this 500-word article"
+
+Kimi K2.5 (Ollama): $0.00
+Claude 3.5 Sonnet: $0.015
+GPT-4o: $0.025
+GPT-4: $0.060
+
+Same output. 60x cost difference.
+
+Your routing logic matters.
+
+---
+
+## Sunday, April 6th
+
+**9:00 AM**
+How our OpenClaw router works:
+
+┌─────────────┐
+│ Task comes  │
+│    in       │
+└──────┬──────┘
+       ▼
+┌─────────────┐
+│ Analyze     │
+│ complexity  │
+└──────┬──────┘
+       ▼
+┌─────────────┐
+│ Route to    │
+│ cheapest    │
+│ capable LLM │
+└─────────────┘
+
+Simple. Effective. Cheap.
+
+---
+
+**3:00 PM**
+Our routing rules in plain English:
+
+IF "summarize" → Ollama (free)
+IF "code_review" → Kimi (cheap)
+IF "complex_reasoning" → Claude ($)
+IF "vision_task" → GPT-4o ($$)
+IF "emergency" → GPT-4 ($$$)
+
+Most tasks: Free or cheap
+Only exceptions: Pay for quality
+
+Cost per day: ~$5
+Would cost: $50+ without routing
+
+---
+
+**9:00 PM**
+When to use FREE AI (Ollama, local):
+
+✓ Summarizing documents
+✓ Routine email drafting
+✓ Simple data extraction
+✓ Internal tools
+✓ High volume, low complexity
+
+Cost: $0.00
+Speed: Fast (local)
+Quality: Good enough
+
+---
+
+**11:00 PM**
+When to PAY for AI (Claude, GPT-4):
+
+✓ Customer-facing content
+✓ Complex reasoning
+✓ Creative writing
+✓ Code architecture
+✓ High-stakes decisions
+
+Cost: $0.01-0.06 per 1K tokens
+Speed: Slower (API)
+Quality: Best available
+
+The rule: Routinely paying $0.06 when $0.00 works = burning money.

@@ -1,0 +1,15 @@
+[dotenv@17.3.1] injecting env (5) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[env] loaded keys: {
+  apiKey: true,
+  apiSecret: true,
+  accessToken: true,
+  accessSecret: true,
+  userId: true
+}
+LOADED FILE: file:///Users/aleckennedy/.openclaw/workspace/twitter-automation.js
+[start] Twitter bot started (POSTING ONLY mode)
+[config] Checking queue every 60 minutes
+[config] Max 1 post per hour
+[2026-03-25T18:20:07.567Z] Run started
+[rate] Last post was 0.20h ago. Waiting...
+[queue] 21 posts waiting

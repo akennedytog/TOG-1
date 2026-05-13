@@ -1,0 +1,17 @@
+<!-- Floating Calendly Widget -->
+<div id="calendly-float" class="fixed bottom-6 right-6 z-50">
+  <button onclick="openCalendly()" class="group flex items-center gap-2 px-6 py-3 gradient-bg text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition hover:scale-105">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+    </svg>
+    <span>Book a Call</span>
+  </button>
+</div>
+
+<script>
+  function openCalendly() {
+    Calendly.initPopupWidget({url: 'https://calendly.com/akennedy-theonegroup/30min'});
+  }
+</script>
+
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>

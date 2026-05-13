@@ -1,0 +1,50 @@
+{
+  "templates": [
+    {
+      "id": "ig-004",
+      "platform": "Instagram",
+      "size": "1080x1080",
+      "topic": "AI Agent System",
+      "headline": "8 Agents. 1 Business.",
+      "subheadline": "Meet the team that never sleeps",
+      "visual": "Grid layout with 8 agent icons (Arlo, Dante, Iris, Abby, Dev, Opal, Rico, Jerry)",
+      "colorScheme": "gradient-purple-blue",
+      "cta": "Swipe to meet them →",
+      "hashtags": "#AI #Automation #SMB #Team",
+      "created": "2026-04-04"
+    },
+    {
+      "id": "li-004",
+      "platform": "LinkedIn",
+      "size": "1200x627",
+      "topic": "Invisible Automation",
+      "headline": "The Best AI Is Invisible",
+      "subheadline": "Why tools that adapt to your workflow win",
+      "visual": "Split screen: Before/After workflow diagram",
+      "colorScheme": "professional-blue",
+      "cta": "Read the full framework →",
+      "hashtags": "#AI #BusinessAutomation #Leadership",
+      "created": "2026-04-04"
+    },
+    {
+      "id": "pin-004",
+      "platform": "Pinterest",
+      "size": "1000x1500",
+      "topic": "Weekend Automation Checklist",
+      "headline": "Automate Your Weekend",
+      "subheadline": "5 tasks to delegate to AI before Monday",
+      "visual": "Checklist infographic with checkboxes",
+      "colorScheme": "warm-orange",
+      "cta": "Save for later ⚡",
+      "hashtags": "#Productivity #Automation #WeekendPrep",
+      "created": "2026-04-04"
+    }
+  ],
+  "inventory": {
+    "total": 12,
+    "instagram": 4,
+    "linkedin": 4,
+    "pinterest": 4,
+    "lastUpdated": "2026-04-04T10:15:00-04:00"
+  }
+}

@@ -1,0 +1,110 @@
+🧵 How I fixed AI routing (and cut costs 3x) after just 3 months of coding
+
+Context: I'm not technical.
+
+Started in January with zero coding experience.
+10+ years in sales/marketing/finance.
+Every free moment outside my corp job = build mode.
+
+Here's the problem I hit and how I fixed it:
+
+---
+
+1/ THE PROBLEM
+
+OpenClaw kept hitting rate limits.
+
+"Request too large for gpt-4o: Limit 30000, Requested 98358"
+
+Large tasks (building HTML pages, complex code) were failing.
+
+I was losing hours retrying failed requests.
+
+---
+
+2/ THE ROUTING BREAKDOWN
+
+Built emergency routing that checks task size FIRST:
+
+>100k tokens → Claude Sonnet (200k context)
+  Cost: $3/1M tokens
+  Why: Absolute reliability for massive tasks
+
+30k-100k tokens → o3-mini (200k context, 100k output)
+  Cost: $1.10/1M tokens  
+  Why: 3x cheaper than Sonnet, huge output capacity
+
+<30k tokens → Smart routing (Haiku/o3-mini/Ollama)
+  Cost: $0-0.80/1M tokens
+  Why: Cheapest capable model for the job
+
+---
+
+3/ THE MATH
+
+Before: GPT-4o ($2.50/1M) × failed attempts = $$$ wasted
+
+After:
+• 50k token task → o3-mini ($0.055 vs $0.125)
+• Large coding tasks → 60% cost reduction
+• Zero rate limit errors
+
+Monthly savings: ~$50-75
+
+---
+
+4/ HOW I DID IT (NO CS DEGREE)
+
+Step 1: Read OpenClaw's entry point
+Step 2: Created wrapper script that intercepts requests
+Step 3: Added token estimation (chars ÷ 4)
+Step 4: Hard-coded emergency rules at the TOP
+Step 5: Tested, broke, fixed, deployed
+
+Tools used:
+• Node.js (free)
+• VS Code (free)
+• Google (free)
+• Trial and error (free)
+
+---
+
+5/ WHY THIS MATTERS
+
+You don't need:
+• CS degree
+• 10 years experience  
+• Fancy tools
+
+You need:
+• A problem worth solving
+• Google
+• Willingness to break things
+
+I'm not special. I'm just obsessed.
+
+Every free moment → build mode.
+
+---
+
+6/ THE REAL WIN
+
+Not the cost savings.
+
+Not the rate limits fixed.
+
+It's knowing that when something breaks, I can fix it.
+
+That confidence is worth more than $50/month.
+
+Building in public hits different when you actually ship.
+
+---
+
+DM if you want the routing script.
+
+Or just Google "node child_process spawn" and figure it out like I did.
+
+Both work. One teaches you more.
+
+Follow @theonegroup for more "I had no idea what I was doing but shipped anyway" content.

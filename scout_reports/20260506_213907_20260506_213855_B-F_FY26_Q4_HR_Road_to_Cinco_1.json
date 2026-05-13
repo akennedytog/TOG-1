@@ -1,0 +1,63 @@
+{
+  "id": "20260506_213907_20260506_213855_B-F_FY26_Q4_HR_Road_to_Cinco_1",
+  "filename": "20260506_213855_B-F_FY26_Q4_HR_Road_to_Cinco_1.xlsx",
+  "uploaded_at": "2026-05-06T21:39:07.961911",
+  "file_type": "excel",
+  "row_count": 8,
+  "column_analysis": {
+    "Unnamed: 0": "text",
+    "Unnamed: 1": "text",
+    "Unnamed: 2": "text",
+    "Unnamed: 3": "text",
+    "Unnamed: 4": "text",
+    "Reminder:": "text"
+  },
+  "metrics": {
+    "total_records": 8,
+    "monetary_columns": [],
+    "entity_columns": [],
+    "product_columns": []
+  },
+  "insights": {
+    "summary": "The sales report indicates a total of 54 menu/feature activations, with 34 activations involving 4 or more cases. Chad Fraser is the top performer with 42 activations, significantly contributing to the overall performance. The report highlights the need for targeted promotional strategies to boost underperforming accounts.",
+    "top_performers": [
+      {
+        "name": "Chad Fraser",
+        "metric": "Activations",
+        "value": 42,
+        "insight": "Chad Fraser has the highest number of activations, indicating effective engagement and possibly strong relationships with clients."
+      }
+    ],
+    "accounts_at_risk": [
+      {
+        "name": "PH North On Prem AM",
+        "reason": "Only 11 activations with 7 involving 4+ cases, indicating lower engagement compared to top performers.",
+        "recommended_action": "Implement targeted promotional strategies to increase engagement and activations."
+      }
+    ],
+    "call_today": [
+      {
+        "name": "Chad Fraser",
+        "priority": "high",
+        "reason": "To discuss successful strategies and explore how to replicate his success across other accounts.",
+        "talking_points": "Discuss best practices, challenges faced, and potential areas for further growth."
+      }
+    ],
+    "skus_down": [],
+    "opportunities": [
+      {
+        "description": "Increase activations in underperforming accounts like PH North On Prem AM.",
+        "potential_value": "Estimated increase of 20 activations.",
+        "how_to_capture": "Conduct a targeted marketing campaign and offer incentives for increased engagement."
+      }
+    ],
+    "alerts": [
+      "Need to address the low activation rates in specific accounts to prevent further decline."
+    ],
+    "recommendations": [
+      "Develop a targeted promotional strategy for underperforming accounts to boost activations.",
+      "Leverage the success of top performers like Chad Fraser to train and mentor other team members.",
+      "Regularly review and analyze sales data to identify trends and adjust strategies accordingly."
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "templateId": "ig-reels-001",
+  "name": "Instagram Reels - AI Agent Spotlight",
+  "platform": "instagram",
+  "format": "reels",
+  "dimensions": { "width": 1080, "height": 1920 },
+  "background": {
+    "type": "gradient",
+    "colors": ["#0F172A", "#1E293B"],
+    "direction": "vertical"
+  },
+  "elements": [
+    {
+      "type": "circle",
+      "position": { "x": 540, "y": 400 },
+      "size": 180,
+      "style": { "fill": "#3B82F6", "opacity": 0.15 }
+    },
+    {
+      "type": "emoji",
+      "emoji": "🤖",
+      "position": { "x": 540, "y": 400 },
+      "size": 80
+    },
+    {
+      "type": "text",
+      "content": "Meet {{agent_name}}",
+      "position": { "x": 540, "y": 600 },
+      "style": {
+        "font": "Inter",
+        "size": 56,
+        "color": "#FFFFFF",
+        "weight": "bold",
+        "align": "center"
+      }
+    },
+    {
+      "type": "text",
+      "content": "{{agent_role}}",
+      "position": { "x": 540, "y": 680 },
+      "style": {
+        "font": "Inter",
+        "size": 32,
+        "color": "#3B82F6",
+        "align": "center"
+      }
+    },
+    {
+      "type": "text",
+      "content": "{{agent_description}}",
+      "position": { "x": 540, "y": 800 },
+      "style": {
+        "font": "Inter",
+        "size": 28,
+        "color": "#94A3B8",
+        "align": "center",
+        "maxWidth": 900
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "rectangle",
+      "position": { "x": 540, "y": 1700 },
+      "size": { "width": 400, "height": 80 },
+      "style": {
+        "fill": "#3B82F6",
+        "borderRadius": 40
+      }
+    },
+    {
+      "type": "text",
+      "content": "Follow for more",
+      "position": { "x": 540, "y": 1700 },
+      "style": {
+        "font": "Inter",
+        "size": 28,
+        "color": "#FFFFFF",
+        "weight": "600",
+        "align": "center"
+      }
+    }
+  ],
+  "animations": [
+    {
+      "element": 0,
+      "type": "scale",
+      "duration": "2s",
+      "from": 0.8,
+      "to": 1.2,
+      "loop": true
+    }
+  ],
+  "export": {
+    "formats": ["mp4", "png"],
+    "canva_compatible": true
+  },
+  "created": "2026-03-31",
+  "status": "ready"
+}

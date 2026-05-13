@@ -1,0 +1,58 @@
+{
+  "createFile": {
+    "name": "Modern Resume/CV Template - 2026-03-26",
+    "type": "figma_file"
+  },
+  "createPages": [
+    {
+      "name": "Page 1 - 794x1123",
+      "width": 794,
+      "height": 1123,
+      "background": "#2c3e50"
+    }
+  ],
+  "addElements": [
+    {
+      "type": "sections",
+      "style": "clean_professional",
+      "colors": [
+        "#2c3e50",
+        "#ecf0f1",
+        "#3498db"
+      ]
+    },
+    {
+      "type": "progress_bars",
+      "style": "clean_professional",
+      "colors": [
+        "#2c3e50",
+        "#ecf0f1",
+        "#3498db"
+      ]
+    },
+    {
+      "type": "icons",
+      "style": "clean_professional",
+      "colors": [
+        "#2c3e50",
+        "#ecf0f1",
+        "#3498db"
+      ]
+    },
+    {
+      "type": "timeline",
+      "style": "clean_professional",
+      "colors": [
+        "#2c3e50",
+        "#ecf0f1",
+        "#3498db"
+      ]
+    }
+  ],
+  "exportSettings": {
+    "format": "PDF",
+    "svg": true,
+    "png": true,
+    "canva_compatible": true
+  }
+}

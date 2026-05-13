@@ -1,0 +1,47 @@
+[
+  {
+    "account_name": "Food Services Inc",
+    "priority_score": 76.743252,
+    "status": "hot",
+    "alert": "Revenue up 222% - growth opportunity",
+    "last_order": "2026-04-14",
+    "suggested_action": "Capitalize on growth - upsell opportunity",
+    "estimated_time": "30-45 min"
+  },
+  {
+    "account_name": "Global Retail Partners",
+    "priority_score": 74.435959,
+    "status": "down",
+    "alert": "Revenue down 31% vs earlier period",
+    "last_order": "2026-04-02",
+    "suggested_action": "Investigate decline - offer support/promotions",
+    "estimated_time": "30-45 min"
+  },
+  {
+    "account_name": "Coastal Construction",
+    "priority_score": 73.82290499999999,
+    "status": "down",
+    "alert": "Revenue down 31% vs earlier period",
+    "last_order": "2026-04-12",
+    "suggested_action": "Investigate decline - offer support/promotions",
+    "estimated_time": "30-45 min"
+  },
+  {
+    "account_name": "Acme Manufacturing",
+    "priority_score": 73.439003,
+    "status": "hot",
+    "alert": "Revenue up 89% - growth opportunity",
+    "last_order": "2026-04-23",
+    "suggested_action": "Capitalize on growth - upsell opportunity",
+    "estimated_time": "30-45 min"
+  },
+  {
+    "account_name": "Green Energy Corp",
+    "priority_score": 71.37462099999999,
+    "status": "at_risk",
+    "alert": "No orders in 65 days",
+    "last_order": "2026-02-19",
+    "suggested_action": "Priority visit - address churn risk",
+    "estimated_time": "30-45 min"
+  }
+]

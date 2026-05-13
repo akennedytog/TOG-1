@@ -1,0 +1,93 @@
+{
+  "id": "template-007",
+  "platform": "instagram",
+  "type": "post",
+  "dimensions": "1080x1080",
+  "theme": "ai-automation",
+  "name": "AI Automation Awareness Post",
+  "description": "Square Instagram post for promoting AI automation services",
+  "colors": {
+    "primary": "#7C3AED",
+    "secondary": "#06B6D4",
+    "accent": "#F59E0B",
+    "background": "#0F172A",
+    "text": "#FFFFFF"
+  },
+  "fonts": {
+    "headline": "Inter Bold",
+    "body": "Inter Regular",
+    "accent": "Space Grotesk"
+  },
+  "elements": [
+    {
+      "type": "background",
+      "style": "gradient",
+      "gradient": {
+        "from": "#0F172A",
+        "to": "#1E293B",
+        "angle": 135
+      }
+    },
+    {
+      "type": "text",
+      "layer": "headline",
+      "content": "Stop Missing Calls.",
+      "position": { "x": 80, "y": 280 },
+      "size": 72,
+      "color": "#FFFFFF",
+      "font": "Inter Bold",
+      "maxWidth": 920
+    },
+    {
+      "type": "text",
+      "layer": "subheadline",
+      "content": "Start Capturing Revenue.",
+      "position": { "x": 80, "y": 380 },
+      "size": 72,
+      "color": "#7C3AED",
+      "font": "Inter Bold",
+      "maxWidth": 920
+    },
+    {
+      "type": "text",
+      "layer": "body",
+      "content": "AI answers your business calls 24/7.\nBooks appointments. Qualifies leads.\nWhile you focus on what matters.",
+      "position": { "x": 80, "y": 520 },
+      "size": 28,
+      "color": "#CBD5E1",
+      "font": "Inter Regular",
+      "maxWidth": 920,
+      "lineHeight": 1.5
+    },
+    {
+      "type": "shape",
+      "shape": "rounded-rect",
+      "position": { "x": 80, "y": 720 },
+      "size": { "width": 280, "height": 64 },
+      "color": "#7C3AED",
+      "cornerRadius": 32
+    },
+    {
+      "type": "text",
+      "layer": "cta",
+      "content": "Learn More →",
+      "position": { "x": 160, "y": 745 },
+      "size": 24,
+      "color": "#FFFFFF",
+      "font": "Inter Bold"
+    },
+    {
+      "type": "icon",
+      "icon": "robot",
+      "position": { "x": 880, "y": 80 },
+      "size": 80,
+      "color": "#06B6D4"
+    }
+  ],
+  "exportFormat": ["png", "canva-import"],
+  "canvaNotes": {
+    "importAs": "custom-template",
+    "editable": ["text", "colors", "fonts"],
+    "locked": ["layout", "dimensions"]
+  }
+}

@@ -1,0 +1,13 @@
+Anthropic just terminated Claude Code access for OpenClaw users.
+
+Translation: One API change and thousands of dev workflows broke overnight.
+
+The lesson for SMBs:
+
+✓ Build on open-source (Ollama, local LLMs)
+✓ Keep escape hatches (don't go all-in on one provider)
+✓ Own your infrastructure
+
+Vendor risk is real. The cheapest option today can become the most expensive tomorrow when they change terms.
+
+Diversify your AI stack.

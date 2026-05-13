@@ -1,0 +1,59 @@
+{
+  "templateId": "li-data-001",
+  "platform": "linkedin",
+  "type": "data",
+  "dimensions": {"width": 1200, "height": 627},
+  "background": {
+    "type": "solid",
+    "color": "#FFFFFF"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "content": "{{headline}}",
+      "font": "Inter-Bold",
+      "size": 36,
+      "color": "#0A0A0A",
+      "position": {"x": 100, "y": 80},
+      "maxWidth": 1000,
+      "alignment": "left"
+    },
+    {
+      "type": "stat",
+      "number": "{{stat_number}}",
+      "label": "{{stat_label}}",
+      "position": {"x": 100, "y": 200},
+      "numberSize": 72,
+      "numberColor": "#1DA1F2",
+      "labelSize": 18,
+      "labelColor": "#666666"
+    },
+    {
+      "type": "chart",
+      "style": "bar",
+      "data": "{{chart_data}}",
+      "position": {"x": 600, "y": 180},
+      "width": 500,
+      "height": 300,
+      "colors": ["#1DA1F2", "#0A0A0A", "#FFD700"]
+    },
+    {
+      "type": "cta",
+      "text": "Full report →",
+      "position": {"x": 100, "y": 520},
+      "color": "#1DA1F2",
+      "fontSize": 16
+    },
+    {
+      "type": "logo",
+      "src": "assets/logo-icon-blue.png",
+      "position": {"x": 1100, "y": 580},
+      "width": 60
+    }
+  ],
+  "export": {
+    "format": "png",
+    "quality": "high",
+    "canvaImport": true
+  }
+}

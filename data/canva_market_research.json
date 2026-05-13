@@ -1,0 +1,394 @@
+{
+  "research_metadata": {
+    "date": "2026-03-22",
+    "researcher": "Arlo (Research Agent)",
+    "data_sources": [
+      "Etsy marketplace analysis",
+      "Creative Market trends",
+      "Canva official design trends 2026",
+      "Pinterest trending designs",
+      "Social media platform data 2026",
+      "E-commerce market reports"
+    ]
+  },
+  "executive_summary": {
+    "market_size": "Digital artwork market valued at $5.57 billion in 2024; planner market projected to reach $6.26M by 2029",
+    "growth_drivers": [
+      "Rise of e-commerce and content marketing",
+      "Social media content demand explosion",
+      "Small business branding needs",
+      "Creator economy growth"
+    ],
+    "opportunity_rating": "HIGH - Canva templates offer passive income potential with low overhead"
+  },
+  "top_5_template_categories": [
+    {
+      "rank": 1,
+      "category": "Social Media Templates",
+      "subcategories": [
+        "Instagram Posts & Stories",
+        "TikTok/Reels Video Covers",
+        "LinkedIn Posts",
+        "Facebook Banners",
+        "Pinterest Pins"
+      ],
+      "demand_level": "Very High",
+      "demand_score": 9.5,
+      "competition_level": "High",
+      "price_range": {
+        "low": "$5",
+        "mid": "$12",
+        "high": "$25",
+        "bundles": "$35-$75"
+      },
+      "why_hot": "Every business needs social content; vertical formats (9:16, 4:5) dominate 2026"
+    },
+    {
+      "rank": 2,
+      "category": "Planners & Organizers",
+      "subcategories": [
+        "Daily/Weekly Planners",
+        "Budget Trackers",
+        "Habit Trackers",
+        "Meal Planners",
+        "2025-2026 Academic Planners"
+      ],
+      "demand_level": "Very High",
+      "demand_score": 9.0,
+      "competition_level": "Medium-High",
+      "price_range": {
+        "low": "$7",
+        "mid": "$15",
+        "high": "$35",
+        "bundles": "$45-$99"
+      },
+      "why_hot": "Productivity trend + digital planning adoption; physical planners from templates are top Amazon sellers"
+    },
+    {
+      "rank": 3,
+      "category": "Business & Marketing Templates",
+      "subcategories": [
+        "Business Cards",
+        "Flyers & Brochures",
+        "Price Lists",
+        "Media Kits",
+        "Email Headers"
+      ],
+      "demand_level": "High",
+      "demand_score": 8.5,
+      "competition_level": "Medium",
+      "price_range": {
+        "low": "$5",
+        "mid": "$10",
+        "high": "$20",
+        "bundles": "$30-$60"
+      },
+      "why_hot": "Small businesses need professional branding on tight budgets"
+    },
+    {
+      "rank": 4,
+      "category": "Wedding & Event Templates",
+      "subcategories": [
+        "Wedding Invitations",
+        "Save the Date",
+        "Seating Charts",
+        "Menu Cards",
+        "Thank You Cards"
+      ],
+      "demand_level": "High",
+      "demand_score": 8.0,
+      "competition_level": "High",
+      "price_range": {
+        "low": "$8",
+        "mid": "$18",
+        "high": "$40",
+        "bundles": "$50-$120"
+      },
+      "why_hot": "Weddings are high-ticket events; couples want customization without designer costs"
+    },
+    {
+      "rank": 5,
+      "category": "Presentation & Course Templates",
+      "subcategories": [
+        "PowerPoint/Keynote Alternatives",
+        "Webinar Slides",
+        "Course Workbooks",
+        "E-book Templates",
+        "Lead Magnet PDFs"
+      ],
+      "demand_level": "High",
+      "demand_score": 7.8,
+      "competition_level": "Medium",
+      "price_range": {
+        "low": "$10",
+        "mid": "$20",
+        "high": "$45",
+        "bundles": "$60-$150"
+      },
+      "why_hot": "Creator economy boom; online courses and coaching businesses need professional materials"
+    }
+  ],
+  "design_trends_2026": {
+    "canva_official_trends": [
+      {
+        "trend_name": "Prompt Playground",
+        "description": "Bringing the fun to productivity software aesthetic",
+        "application": "Templates with playful, interactive elements"
+      },
+      {
+        "trend_name": "Reality Warp",
+        "description": "Distorting reality with warped visuals and otherworldly photography",
+        "application": "Bold, experimental social media templates"
+      },
+      {
+        "trend_name": "Texture Check",
+        "description": "Design so tactile you want to reach out and feel it",
+        "application": "Tactile, paper-like textures in digital templates"
+      },
+      {
+        "trend_name": "Notes App Chic",
+        "description": "Owning the mess with raw visuals that feel honest",
+        "application": "Minimalist, hand-drawn aesthetic planners"
+      },
+      {
+        "trend_name": "Opt Out Era",
+        "description": "Stripping back clutter with structured simplicity",
+        "application": "Clean, minimalist business templates"
+      },
+      {
+        "trend_name": "Granny Wave",
+        "description": "Maximalist remix of heritage and modern design",
+        "application": "Vintage-inspired wedding and event templates"
+      }
+    ],
+    "social_media_format_trends_2026": {
+      "vertical_dominant": true,
+      "key_formats": [
+        {
+          "format": "9:16 (Vertical)",
+          "platforms": ["TikTok", "Reels", "Stories", "Shorts"],
+          "priority": "Highest"
+        },
+        {
+          "format": "4:5 (Vertical Feed)",
+          "platforms": ["Instagram", "Facebook", "LinkedIn"],
+          "priority": "High"
+        },
+        {
+          "format": "3:4 (Expanded Vertical)",
+          "platforms": ["Instagram Feed"],
+          "priority": "Emerging"
+        }
+      ],
+      "recommendation": "Design all social templates in vertical first, then adapt to square/horizontal"
+    }
+  },
+  "top_sellers_analysis": {
+    "pricing_insights": {
+      "sweet_spot": "$12-$20",
+      "entry_level": "$5-$8",
+      "premium_bundles": "$35-$99",
+      "volume_strategy": "Start at $5-7 to gain reviews, increase to $12-18 after 20+ sales"
+    },
+    "successful_shop_characteristics": [
+      "Niche specialization (e.g., only boutique fitness templates)",
+      "Consistent brand aesthetic",
+      "50+ listings minimum",
+      "Bundle offers (3x, 5x packs)",
+      "Regular new releases (weekly/monthly)"
+    ],
+    "revenue_indicators": {
+      "low_end_monthly": "$500-$2,000",
+      "mid_tier_monthly": "$3,000-$10,000",
+      "high_tier_monthly": "$15,000-$50,000+",
+      "top_reported_earnings": "$300K+ annually"
+    }
+  },
+  "high_demand_low_competition_opportunities": [
+    {
+      "niche": "Industry-Specific Templates",
+      "examples": [
+        "Real estate agent social media kits",
+        "Therapist/counselor marketing materials",
+        "Salon/beauty business templates",
+        "Non-profit fundraising materials"
+      ],
+      "competition": "Low",
+      "rationale": "Generic templates dominate; industry-specific underserved"
+    },
+    {
+      "niche": "B2B LinkedIn Templates",
+      "examples": [
+        "Executive personal branding posts",
+        "Company announcement graphics",
+        "Thought leadership carousels",
+        "Recruitment/hiring posts"
+      ],
+      "competition": "Low-Medium",
+      "rationale": "Most Canva templates are B2C focused; B2B professional aesthetic underserved"
+    },
+    {
+      "niche": "AI-Optimized Templates",
+      "examples": [
+        "ChatGPT prompt result graphics",
+        "AI tool comparison charts",
+        "Tech startup pitch decks",
+        "AI newsletter formats"
+      ],
+      "competition": "Low",
+      "rationale": "Emerging market; few templates specifically designed for AI content sharing"
+    },
+    {
+      "niche": "Accessibility-First Templates",
+      "examples": [
+        "High contrast social posts",
+        "Screen reader friendly PDFs",
+        "Color blind friendly palettes",
+        "Large print event materials"
+      ],
+      "competition": "Very Low",
+      "rationale": "Growing demand for inclusive design; rarely addressed in template market"
+    },
+    {
+      "niche": "Localized/Niche Cultural Templates",
+      "examples": [
+        "Specific holiday templates (beyond major Western holidays)",
+        "Regional business formats",
+        "Cultural celebration invitations"
+      ],
+      "competition": "Low",
+      "rationale": "Most templates are US/Western-centric; global opportunities exist"
+    }
+  ],
+  "file_formats_best_practices": {
+    "primary_format": "Canva Link (shareable template link)",
+    "why_canva_link": [
+      "Customer can edit in their own Canva account",
+      "No software download needed",
+      "Updates automatically if you modify master",
+      "Enables template selling vs file selling"
+    ],
+    "supplemental_formats": {
+      "PDF": "For printables, workbooks, planners",
+      "PNG/JPG": "For static image exports",
+      "MP4": "For animated/video templates"
+    },
+    "delivery_method": "Etsy digital download with PDF containing Canva links and instructions",
+    "recommended_structure": {
+      "main_file": "PDF with clickable Canva links",
+      "bonus_files": [
+        "Quick start guide PDF",
+        "Font download links",
+        "Video tutorial link"
+      ]
+    }
+  },
+  "pricing_strategy": {
+    "individual_templates": {
+      "social_media_single": "$5-$8",
+      "planner_single": "$7-$12",
+      "business_card": "$5-$10",
+      "wedding_invitation": "$10-$20"
+    },
+    "bundles": {
+      "3_pack": "$15-$25 (25% discount)",
+      "5_pack": "$25-$40 (30% discount)",
+      "10_pack": "$45-$75 (40% discount)",
+      "mega_bundle": "$99-$199 (50%+ discount)"
+    },
+    "competitive_positioning": {
+      "strategy": "Price at or slightly below market average initially",
+      "justification": "Use quality and unique niche to differentiate, not just price"
+    }
+  },
+  "recommended_first_products": [
+    {
+      "priority": 1,
+      "product": "Instagram Reels Cover Template Pack",
+      "includes": "30 vertical templates in trending 2026 styles",
+      "price_point": "$12-$18",
+      "why_first": "Highest demand, fastest to create, quick sales cycle"
+    },
+    {
+      "priority": 2,
+      "product": "2025-2026 Academic Digital Planner",
+      "includes": "Hyperlinked PDF planner with 12 months, habit tracker, budget section",
+      "price_point": "$15-$25",
+      "why_first": "Evergreen demand, high perceived value, can sell year-round"
+    },
+    {
+      "priority": 3,
+      "product": "Small Business Marketing Bundle",
+      "includes": "Business card, flyer, price list, social media starter pack",
+      "price_point": "$25-$35",
+      "why_first": "Targets hungry market, solves multiple problems, bundle increases order value"
+    },
+    {
+      "priority": 4,
+      "product": "LinkedIn Personal Branding Kit",
+      "includes": "Profile banner, post templates, carousel deck, featured section",
+      "price_point": "$18-$28",
+      "why_first": "Low competition niche, high-value customers, B2B market"
+    },
+    {
+      "priority": 5,
+      "product": "E-Course Creator Workbook Template",
+      "includes": "Fillable workbook, checklist, certificate template, slide deck",
+      "price_point": "$30-$45",
+      "why_first": "Creator economy market, high ticket price, repeat buyers"
+    }
+  ],
+  "platform_specific_insights": {
+    "etsy": {
+      "pros": [
+        "Built-in traffic from template searches",
+        "Established trust with buyers",
+        "Digital download infrastructure"
+      ],
+      "cons": [
+        "High competition",
+        "Transaction fees (~6.5%)",
+        "Algorithm dependent"
+      ],
+      "tips": [
+        "Use all 13 tags strategically",
+        "Upload 10 high-quality mockup images",
+        "Fill out all listing attributes",
+        "Offer free sample page to build email list"
+      ]
+    },
+    "creative_market": {
+      "pros": [
+        "Design-focused audience",
+        "Higher price tolerance",
+        "Can sell bundles more easily"
+      ],
+      "cons": [
+        "Application required to sell",
+        "70% commission to platform initially",
+        "More stringent quality standards"
+      ]
+    },
+    "gumroad": {
+      "pros": [
+        "Lower fees",
+        "Direct customer relationship",
+        "Easy email marketing integration"
+      ],
+      "cons": [
+        "Must drive own traffic",
+        "Less marketplace discovery"
+      ]
+    }
+  },
+  "key_takeaways": [
+    "Social media templates (especially vertical/Reels) are the highest demand category in 2026",
+    "Niche specialization beats general templates - pick an industry or audience",
+    "Vertical formats (9:16, 4:5) are essential - horizontal is secondary",
+    "Price individual templates at $12-18, bundles at $25-75 for optimal conversion",
+    "B2B and industry-specific templates have lower competition than lifestyle/personal templates",
+    "2026 design trends favor 'imperfect,' textured, and playful aesthetics over sterile minimalism",
+    "Canva links are the preferred delivery method over static files",
+    "Start with 3-5 listings in a specific niche rather than scattered templates"
+  ]
+}

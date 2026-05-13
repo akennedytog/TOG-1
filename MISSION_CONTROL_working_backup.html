@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 Mission Control - The One Group</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%); }
+    .glass-panel { 
+      background: rgba(30, 41, 59, 0.8); 
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    .agent-card { 
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 2px solid;
+      transition: all 0.3s ease;
+    }
+    .agent-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .status-active { border-color: #10b981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); }
+    .status-idle { border-color: #f59e0b; }
+    .pulse-green { animation: pulse-green 2s infinite; }
+    @keyframes pulse-green { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+    .lead-row:hover { background: rgba(51, 65, 85, 0.5); }
+    .metric-card { border-left: 4px solid; }
+    .nav-tab { transition: all 0.2s; }
+    .nav-tab.active { background: rgba(59, 130, 246, 0.3); border-color: #3b82f6; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen">
+  
+  <!-- Header -->
+  <header class="gradient-bg p-4 border-b border-slate-700">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl">
+            🚀
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold">Mission Control</h1>
+            <p class="text-blue-200 text-sm">The One Group • AI Automation Dashboard</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-6">
+          <div class="text-right">
+            <p class="font-semibold">Alec Kennedy</p>
+            <p class="text-xs text-slate-400">akennedy@theonegroup.info</p>
+            <p class="text-xs text-slate-400">502-403-7201</p>
+          </div>
+          <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center">
+            <span class="font-bold">AK</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Navigation Tabs -->
+      <nav class="flex gap-2 mt-4">
+        <button onclick="showSection('overview')" id="tab-overview" class="nav-tab active px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium">
+          📊 Overview
+        </button>
+        <button onclick="showSection('agents')" id="tab-agents" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium">
+          🤖 AI Agents
+        </button>
+        <button onclick="showSection('leads')" id="tab-leads" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium">
+          🔥 Leads (70)
+        </button>
+        <button onclick="showSection('content')" id="tab-content" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium">
+          📝 Content
+        </button>
+        <button onclick="showSection('competitors')" id="tab-competitors" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium">
+          👁️ Competitors
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto p-4">
+    
+    <!-- OVERVIEW SECTION -->
+    <section id="section-overview" class="space-y-4">
+      
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #3b82f6;">
+          <p class="text-slate-400 text-xs uppercase">AI Agents</p>
+          <p class="text-3xl font-bold text-blue-400">8</p>
+          <p class="text-xs text-green-400">6 active • 2 idle</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #8b5cf6;">
+          <p class="text-slate-400 text-xs uppercase">Leads</p>
+          <p class="text-3xl font-bold text-purple-400">70</p>
+          <p class="text-xs text-slate-400">8 qualified • 20 new today</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #10b981;">
+          <p class="text-slate-400 text-xs uppercase">Tasks Today</p>
+          <p class="text-3xl font-bold text-emerald-400">45</p>
+          <p class="text-xs text-green-400">+13 vs yesterday</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #f59e0b;">
+          <p class="text-slate-400 text-xs uppercase">Content Pipeline</p>
+          <p class="text-3xl font-bold text-amber-400">9</p>
+          <p class="text-xs text-slate-400">6 blogs • 3 newsletters</p>
+        </div>
+      </div>
+
+      <!-- System Status -->
+      <div class="glass-panel rounded-xl p-4">
+        <h2 class="text-lg font-semibold mb-4">⚡ System Status</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 bg-green-400 rounded-full pulse-green"></span>
+            <div>
+              <p class="text-sm font-medium">Twitter Bot</p>
+              <p class="text-xs text-slate-400">Online (PM2)</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 bg-green-400 rounded-full pulse-green"></span>
+            <div>
+              <p class="text-sm font-medium">Content Pipeline</p>
+              <p class="text-xs text-slate-400">Auto-generating</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 bg-green-400 rounded-full pulse-green"></span>
+            <div>
+              <p class="text-sm font-medium">Cron Jobs</p>
+              <p class="text-xs text-slate-400">8 jobs running</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 bg-green-400 rounded-full pulse-green"></span>
+            <div>
+              <p class="text-sm font-medium">Firecrawl</p>
+              <p class="text-xs text-slate-400">Monitoring 16 competitors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="glass-panel rounded-xl p-4">
+        <h2 class="text-lg font-semibold mb-4">📊 Recent Activity</h2>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 py-2 border-b border-slate-700">
+            <span class="text-green-400">✓</span>
+            <span class="text-sm">Competitor report generated</span>
+            <span class="text-xs text-slate-400 ml-auto">Today 3:46 PM</span>
+          </div>
+          <div class="flex items-center gap-3 py-2 border-b border-slate-700">
+            <span class="text-green-400">✓</span>
+            <span class="text-sm">Twitter post: "AI Myth #1" published</span>
+            <span class="text-xs text-slate-400 ml-auto">Today 10:08 AM</span>
+          </div>
+          <div class="flex items-center gap-3 py-2 border-b border-slate-700">
+            <span class="text-green-400">✓</span>
+            <span class="text-sm">10 new leads added to database</span>
+            <span class="text-xs text-slate-400 ml-auto">Today 9:30 AM</span>
+          </div>
+          <div class="flex items-center gap-3 py-2 border-b border-slate-700">
+            <span class="text-green-400">✓</span>
+            <span class="text-sm">System health check complete</span>
+            <span class="text-xs text-slate-400 ml-auto">Today 8:00 AM</span>
+          </div>
+          <div class="flex items-center gap-3 py-2">
+            <span class="text-blue-400">🤖</span>
+            <span class="text-sm">6 agents completed daily tasks</span>
+            <span class="text-xs text-slate-400 ml-auto">Today 6:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENTS SECTION -->
+    <section id="section-agents" class="hidden space-y-4">
+      <h2 class="text-xl font-bold mb-4">🤖 My 8 AI Agents</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="agents-grid">
+        <!-- Agents rendered by JavaScript -->
+      </div>
+    </section>
+
+    <!-- LEADS SECTION -->
+    <section id="section-leads" class="hidden space-y-4">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold">🔥 Active Leads (70)</h2>
+        <div class="flex gap-2">
+          <button onclick="showAllLeadsModal()" class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-lg text-sm transition">👁️ View All 70 Leads</button>
+          <select id="leads-industry-filter" class="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-sm">
+            <option value="all">All Industries</option>
+            <option value="HVAC">HVAC</option>
+            <option value="Legal">Legal</option>
+            <option value="Medical">Medical</option>
+            <option value="Accounting">Accounting</option>
+            <option value="Dental">Dental</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Electrical">Electrical</option>
+          </select>
+          <button onclick="refreshLeadsData()" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm transition" title="Load latest from arlo_findings.json">🔄 Refresh</button>
+        </div>
+      </div>
+      
+      <div class="glass-panel rounded-xl overflow-hidden">
+        <table class="w-full">
+          <thead class="bg-slate-800">
+            <tr>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Company</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Industry</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">City</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Contact</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Phone</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Score</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Action</th>
+            </tr>
+          </thead>
+          <tbody id="leads-table-body">
+            <!-- Leads rendered by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ALL LEADS MODAL -->
+    <div id="all-leads-modal" class="fixed inset-0 bg-black/80 hidden z-50 overflow-y-auto">
+      <div class="min-h-screen px-4 py-8">
+        <div class="glass-panel rounded-xl max-w-7xl mx-auto p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">🔥 All Leads (50+)</h2>
+            <button onclick="closeAllLeadsModal()" class="text-slate-400 hover:text-white text-2xl">&times;</button>
+          </div>
+          
+          <div class="mb-4 flex gap-2">
+            <input type="text" id="leads-search" placeholder="Search leads..." 
+              class="bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 text-sm flex-1">
+            <select id="leads-filter" class="bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 text-sm">
+              <option value="all">All Industries</option>
+              <option value="HVAC">HVAC</option>
+              <option value="Legal">Legal</option>
+              <option value="Medical">Medical</option>
+              <option value="Accounting">Accounting</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Dental">Dental</option>
+            </select>
+          </div>
+          
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-slate-800">
+                <tr>
+                  <th class="text-left p-3 text-xs font-semibold text-slate-400 uppercase">Company</th>
+                  <th class="text-left p-3 text-xs font-semibold text-slate-400 uppercase">Industry</th>
+                  <th class="text-left p-3 text-xs font-semibold text-slate-400 uppercase">City</th>
+                  <th class="text-left p-3 text-xs font-semibold text-slate-400 uppercase">Contact</th>
+                  <th class="text-left p-3 text-xs font-semibold text-slate-400 uppercase">Email</th>
+                  <th class="text-left p-3 text-xs font-semibold text-slate-400 uppercase">Score</th>
+                  <th class="text-left p-3 text-xs font-semibold text-slate-400 uppercase">Action</th>
+                </tr>
+              </thead>
+              <tbody id="all-leads-table-body">
+                <!-- All leads rendered here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COPY TOAST -->
+    <div id="copy-toast" class="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg transform translate-y-20 transition-transform duration-300 z-50">
+      📋 Email copied to clipboard!
+    </div>
+
+    <!-- CONTENT SECTION -->
+    <section id="section-content" class="hidden space-y-4">
+      <h2 class="text-xl font-bold mb-4">📝 Content Pipeline</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="glass-panel rounded-xl p-4">
+          <h3 class="font-semibold mb-4 flex items-center">
+            <span class="text-2xl mr-2">🐦</span> Twitter Queue
+          </h3>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
+              <span class="text-sm truncate w-2/3">Just audited 50 South Florida businesses...</span>
+              <span class="text-xs text-slate-400">Queued</span>
+            </div>
+            <div class="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
+              <span class="text-sm truncate w-2/3">Coral Gables law firms: You're in one of the most competitive...</span>
+              <span class="text-xs text-slate-400">Queued</span>
+            </div>
+            <div class="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
+              <span class="text-sm truncate w-2/3">What's the #1 thing that makes you choose one service...</span>
+              <span class="text-xs text-purple-400">Scheduled 3pm</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4">
+          <h3 class="font-semibold mb-4 flex items-center">
+            <span class="text-2xl mr-2">✍️</span> Blog Posts Ready
+          </h3>
+          <div class="space-y-3">
+            <div class="p-3 bg-slate-800 rounded-lg">
+              <p class="font-medium">The AI Data Myth</p>
+              <p class="text-sm text-slate-400">Why you don't need big data to get big results</p>
+              <p class="text-xs text-slate-500 mt-2">5,528 bytes • Ready to publish</p>
+            </div>
+            <div class="p-3 bg-slate-800 rounded-lg">
+              <p class="font-medium">Competitor Intelligence Report</p>
+              <p class="text-sm text-slate-400">Week 13 analysis: 16 competitors tracked</p>
+              <p class="text-xs text-slate-500 mt-2">Auto-generated today</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4">
+          <h3 class="font-semibold mb-4 flex items-center">
+            <span class="text-2xl mr-2">📧</span> Newsletters (3)
+          </h3>
+          <div class="space-y-2">
+            <div class="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
+              <span>Week of March 24, 2026</span>
+              <span class="text-xs text-green-400">Ready</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4">
+          <h3 class="font-semibold mb-4 flex items-center">
+            <span class="text-2xl mr-2">🎨</span> Canva Templates
+          </h3>
+          <div class="space-y-2">
+            <div class="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
+              <span>Instagram Post</span>
+              <span class="text-xs text-blue-400">1080x1080</span>
+            </div>
+            <div class="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
+              <span>LinkedIn Post</span>
+              <span class="text-xs text-blue-400">1200x627</span>
+            </div>
+            <div class="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
+              <span>Pinterest Pin</span>
+              <span class="text-xs text-blue-400">1000x1500</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETITORS SECTION -->
+    <section id="section-competitors" class="hidden space-y-4">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold">👁️ Competitor Intelligence</h2>
+        <span class="text-sm text-slate-400">Last updated: Today 3:46 PM</span>
+      </div>
+      
+      <div class="glass-panel rounded-xl p-4">
+        <h3 class="font-semibold mb-4">Latest Report: Week 2026-week-13</h3>
+        
+        <div class="mb-6">
+          <h4 class="text-sm font-semibold text-slate-400 mb-3">Keywords Tracked</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">AI automation Miami</span>
+            <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">AI automation Fort Lauderdale</span>
+            <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">AI answering service HVAC</span>
+            <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">AI legal intake Miami</span>
+            <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">AI medical scheduling</span>
+            <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">small business AI automation</span>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-sm font-semibold text-slate-400 mb-3">Competitor Domains Found (16)</h4>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="p-3 bg-slate-800 rounded-lg">
+              <p class="font-medium text-orange-400">myaifrontdesk.com</p>
+              <p class="text-xs text-slate-400">AI Receptionist</p>
+            </div>
+            <div class="p-3 bg-slate-800 rounded-lg">
+              <p class="font-medium text-blue-400">capstoneitservices.com</p>
+              <p class="text-xs text-slate-400">AI for Businesses</p>
+            </div>
+            <div class="p-3 bg-slate-800 rounded-lg">
+              <p class="font-medium text-green-400">hummingagent.ai</p>
+              <p class="text-xs text-slate-400">West Palm Beach AI</p>
+            </div>
+            <div class="p-3 bg-slate-800 rounded-lg">
+              <p class="font-medium text-purple-400">digismart.io</p>
+              <p class="text-xs text-slate-400">Miami AI Services</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-6 p-4 bg-slate-800/50 rounded-lg">
+          <h4 class="font-semibold mb-2">🎯 Recommended Actions</h4>
+          <ul class="text-sm text-slate-300 space-y-1">
+            <li>Review myaifrontdesk.com pricing ($99-149/mo vs your $297)</li>
+            <li>Differentiate on industry-specific focus (HVAC/Legal/Medical)</li>
+            <li>Monitor their content strategy for gaps</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    // Navigation
+    function showSection(sectionName) {
+      // Hide all sections
+      ['overview', 'agents', 'leads', 'content', 'competitors'].forEach(s => {
+        document.getElementById('section-' + s).classList.add('hidden');
+        document.getElementById('tab-' + s).classList.remove('active', 'bg-blue-500/30', 'border-blue-500');
+      });
+      
+      // Show selected section
+      document.getElementById('section-' + sectionName).classList.remove('hidden');
+      document.getElementById('tab-' + sectionName).classList.add('active', 'bg-blue-500/30', 'border-blue-500');
+    }
+
+    // Agent data
+    const agents = [
+      { id: "jerry", name: "Jerry", role: "CEO", status: "active", current_task: "Evaluating South Florida expansion", tasks_today: 3, efficiency: 94, color: "#8B5CF6", emoji: "👔" },
+      { id: "arlo", name: "Arlo", role: "Research", status: "active", current_task: "Researching HVAC automation trends", tasks_today: 5, efficiency: 97, color: "#3B82F6", emoji: "🔍" },
+      { id: "iris", name: "Iris", role: "Sales & Marketing", status: "active", current_task: "Creating cold email sequences", tasks_today: 8, efficiency: 91, color: "#EC4899", emoji: "💼" },
+      { id: "rico", name: "Rico", role: "Operations", status: "active", current_task: "Setting up automated outreach", tasks_today: 6, efficiency: 95, color: "#F97316", emoji: "⚙️" },
+      { id: "dev", name: "Dev", role: "Engineering", status: "active", current_task: "Building lead tracking dashboard", tasks_today: 4, efficiency: 88, color: "#6366F1", emoji: "💻" },
+      { id: "dante", name: "Dante", role: "Creative", status: "active", current_task: "Producing Twitter content", tasks_today: 3, efficiency: 92, color: "#EF4444", emoji: "🎨" },
+      { id: "opal", name: "Opal", role: "Organization", status: "idle", current_task: "Monitoring organizational coherence", tasks_today: 2, efficiency: 100, color: "#14B8A6", emoji: "📋" },
+      { id: "abby", name: "Abby", role: "Quality Control", status: "idle", current_task: "Reviewing outputs", tasks_today: 1, efficiency: 99, color: "#06B6D4", emoji: "✅" }
+    ];
+
+    // Leads data - will be loaded from arlo_findings.json
+    let leads = [];
+    
+    // Load leads from JSON file
+    async function loadLeadsData() {
+      try {
+        const response = await fetch('data/arlo_findings.json');
+        const data = await response.json();
+        if (data.leads && data.leads.length > 0) {
+          leads = data.leads.slice(0, 20).map((lead, index) => ({
+            id: index + 1,
+            businessName: lead.name,
+            industry: lead.industry,
+            location: lead.city + ', FL',
+            city: lead.city,
+            phone: lead.phone,
+            website: lead.website,
+            address: lead.address,
+            score: lead.score,
+            status: 'new',
+            notes: lead.notes
+          }));
+          renderLeads();
+        }
+      } catch (err) {
+        console.log('Using fallback leads data');
+        // Fallback to static data if file not accessible
+        leads = getFallbackLeads();
+        renderLeads();
+      }
+    }
+    
+    function getFallbackLeads() {
+      return [
+        { id: 1, businessName: "RCI Air Conditioning Company", industry: "HVAC", city: "Miami", phone: "(305) 396-3728", website: "https://rci-air.com", score: 9, notes: "Trane Comfort Specialist dealer. Commercial and residential HVAC services." },
+        { id: 2, businessName: "Trinity Air Conditioning Company", industry: "HVAC", city: "Miami", phone: "(305) 224-6935", website: "https://trinityac.com", score: 9, notes: "Established 1986, serving South Florida for over 40 years." },
+        { id: 3, businessName: "Panther AC & Electric", industry: "HVAC", city: "Miami", phone: "(786) 228-8777", website: "https://www.panthermiami.com", score: 8, notes: "Woman-owned and operated. 30+ years experience." },
+        { id: 4, businessName: "Greenberg Traurig, LLP", industry: "Law Firm", city: "Miami", phone: "(305) 579-0500", website: "https://www.gtlaw.com", score: 10, notes: "One of the largest law offices in Miami with 200+ attorneys." },
+        { id: 5, businessName: "Akerman LLP", industry: "Law Firm", city: "Miami", phone: "(305) 374-5600", website: "https://www.akerman.com", score: 10, notes: "Am Law 100 firm. 300+ lawyers practicing in 30+ practice areas." },
+        { id: 6, businessName: "Gonzalez Law Offices, P.A.", industry: "Law Firm", city: "Miami", phone: "(305) 676-6677", website: "https://aglawoffices.com", score: 8, notes: "Civil litigation firm. Nominated for Best Law Firm by Miami Herald 2023-2025." },
+        { id: 7, businessName: "Kaufman Rossin", industry: "Accounting Firm", city: "Miami", phone: "(305) 858-5600", website: "https://kaufmanrossin.com", score: 9, notes: "One of Florida's largest accounting firms." },
+        { id: 8, businessName: "Martinez-Marquez, CPA, P.A.", industry: "Accounting Firm", city: "Miami", phone: "(305) 274-2626", website: "https://www.mgccpa.net", score: 8, notes: "Full-service CPA firm licensed in FL. Over 15 years experience." },
+        { id: 9, businessName: "Miami Dental Group", industry: "Dental Practice", city: "Miami", phone: "(305) 271-0160", website: "https://miamidentalgroup.com", score: 9, notes: "Multi-location dental practice with 4 offices." },
+        { id: 10, businessName: "Ross Medical Group", industry: "Medical Practice", city: "Miami", phone: "(305) 279-7677", website: "https://www.rossmedicalgroup.com", score: 10, notes: "Family owned and operated since 1995. Multi-specialty." }
+      ];
+    }
+
+    // Render agents
+    function renderAgents() {
+      const container = document.getElementById('agents-grid');
+      if (!container) return;
+      
+      container.innerHTML = agents.map(agent => `
+        <div class="agent-card ${agent.status === 'active' ? 'status-active' : 'status-idle'} rounded-xl p-4 cursor-pointer">
+          <div class="flex items-start justify-between mb-3">
+            <div class="text-3xl">${agent.emoji}</div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full ${agent.status === 'active' ? 'bg-green-400 pulse-green' : 'bg-amber-400'}"></span>
+              <span class="text-xs ${agent.status === 'active' ? 'text-green-400' : 'text-amber-400'}">${agent.status === 'active' ? 'Active' : 'Idle'}</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold mb-1" style="color: ${agent.color}">${agent.name}</h3>
+          <p class="text-slate-400 text-sm mb-3">${agent.role}</p>
+          
+          <div class="bg-slate-900/50 rounded-lg p-2 mb-3">
+            <p class="text-xs text-slate-500 mb-1">Currently:</p>
+            <p class="text-xs text-slate-300 truncate">${agent.current_task}</p>
+          </div>
+          
+          <div class="flex justify-between text-xs">
+            <span class="text-slate-400">Tasks: <span class="text-white">${agent.tasks_today}</span></span>
+            <span class="text-slate-400">Eff: <span class="text-green-400">${agent.efficiency}%</span></span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render leads with new columns - shows top 10 high-scoring leads
+    function renderLeads() {
+      const container = document.getElementById('leads-table-body');
+      if (!container) return;
+      
+      // Sort by score descending and take top 10
+      const topLeads = leads
+        .sort((a, b) => b.score - a.score)
+        .filter(lead => lead.score >= 7) // Only show 7+ scores
+        .slice(0, 10);
+      
+      container.innerHTML = topLeads.map(lead => `
+        <tr class="lead-row border-b border-slate-700 hover:bg-slate-800/50">
+          <td class="p-4">
+            <p class="font-medium text-orange-400">${lead.businessName}</p>
+            <a href="${lead.website}" target="_blank" class="text-xs text-blue-400 hover:text-blue-300">${lead.website?.replace('https://', '') || 'N/A'}</a>
+          </td>
+          <td class="p-4">
+            <span class="px-2 py-1 bg-slate-800 rounded-full text-xs">${lead.industry}</span>
+          </td>
+          <td class="p-4 text-sm text-slate-300">${lead.city}</td>
+          <td class="p-4">
+            <p class="text-sm text-slate-300">${lead.contactName || 'Contact via website'}</p>
+          </td>
+          <td class="p-4">
+            <div class="flex items-center gap-2">
+              <span class="text-sm text-slate-300">${lead.phone}</span>
+              <button onclick="copyText('${lead.phone}')" class="text-slate-400 hover:text-white" title="Copy phone">📋</button>
+            </div>
+          </td>
+          <td class="p-4">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full ${lead.score >= 8 ? 'bg-green-900 text-green-400' : lead.score >= 6 ? 'bg-yellow-900 text-yellow-400' : 'bg-red-900 text-red-400'}">
+              ${lead.score}
+            </span>
+          </td>
+          <td class="p-4">
+            <button onclick="generateEmailTemplate('${lead.businessName}', '${lead.industry}', '${lead.city}', '${lead.phone}')" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm transition flex items-center gap-2">
+              ✉️ Generate Email
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+    
+    // Copy text to clipboard
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('📋 Copied to clipboard!');
+      });
+    }
+    
+    // Generate email template using updated format
+    function generateEmailTemplate(companyName, industry, city, phone) {
+      const templates = {
+        'HVAC': `Good Morning,
+
+I help HVAC companies in South Florida automate their lead capture and follow-up.
+
+Quick question: Are you losing calls to voicemail during peak summer season?
+
+I built an AI system that answers 24/7, qualifies leads, and books appointments automatically.
+
+Would you be open to a 15-min call to see if this makes sense for ${companyName}?
+
+Other ways we help HVAC businesses:
+• Speed-to-Lead AI — Instant email/SMS response to web inquiries (under 60 seconds)
+• Inbox Automation — AI triage that flags urgent emails and drafts responses
+• Follow-up Assistant — Automated sequences that keep leads warm until they book
+• AI Coaching — Train your team to use AI tools effectively
+• Competitor Intel — See how competitors show up in ChatGPT & Perplexity searches
+
+Check out our website for everything we offer that could help save time, increase revenue and meet your customer needs.
+
+https://theonegroup.info/
+
+Alec
+The One Group`,
+        
+        'Law Firm': `Good Morning,
+
+I help law firms in South Florida automate their lead capture and follow-up.
+
+Quick question: Are you losing potential cases to competitors who respond faster?
+
+I built an AI system that answers 24/7, qualifies leads by practice area, and schedules consultations automatically.
+
+Would you be open to a 15-min call to see if this makes sense for ${companyName}?
+
+Other ways we help law firms:
+• Speed-to-Lead AI — Instant response to web inquiries and form submissions
+• Inbox Automation — AI triage that prioritizes urgent client communications
+• Follow-up Assistant — Nurture leads who aren't ready to hire yet
+• AI Coaching — Train your intake team to maximize conversion rates
+• Competitor Intel — See how competing firms show up in AI search results
+
+Check out our website for everything we offer that could help save time, increase revenue and meet your client needs.
+
+https://theonegroup.info/
+
+Alec
+The One Group`,
+        
+        'Accounting Firm': `Good Morning,
+
+I help accounting firms in South Florida automate their client communication and follow-up.
+
+Quick question: How many client calls went to voicemail during crunch time this season?
+
+I built an AI system that handles overflow calls, schedules consultations, and manages urgent client questions — so your team can focus on the work that matters.
+
+Would you be open to a 15-min call to see if this makes sense for ${companyName}?
+
+Other ways we help accounting firms:
+• Speed-to-Lead AI — Instant response to new client inquiries
+• Inbox Automation — AI triage for client portal messages
+• Follow-up Assistant — Automated sequences for deadline reminders and document requests
+• AI Coaching — Train your team on AI tools for faster data entry and research
+• Competitor Intel — See how other accounting firms appear in AI search results
+
+Check out our website for everything we offer that could help save time, increase revenue and meet your client needs.
+
+https://theonegroup.info/
+
+Alec
+The One Group`,
+        
+        'Medical Practice': `Good Morning,
+
+I help medical practices in South Florida automate patient communication and scheduling.
+
+Quick question: Are patients complaining about long hold times or getting stuck in voicemail?
+
+I built an AI system that answers calls 24/7, schedules appointments, and handles prescription refill requests — reducing front desk workload.
+
+Would you be open to a 15-min call to see if this makes sense for ${companyName}?
+
+Other ways we help medical practices:
+• Speed-to-Lead AI — Instant response to new patient inquiries
+• Inbox Automation — AI triage for patient portal messages
+• Follow-up Assistant — Automated appointment reminders and confirmations
+• AI Coaching — Train staff on AI tools for faster documentation
+• Competitor Intel — See how other medical practices appear in AI search
+
+Check out our website for everything we offer that could help save time, increase revenue and improve patient satisfaction.
+
+https://theonegroup.info/
+
+Alec
+The One Group`,
+        
+        'Dental Practice': `Good Morning,
+
+I help dental practices in South Florida capture more new patient calls and reduce no-shows.
+
+Quick question: Are potential new patients calling after hours and getting voicemail instead of scheduling?
+
+I built an AI system that books appointments 24/7, sends reminders, and even handles emergency triage — so you never miss a new patient opportunity.
+
+Would you be open to a 15-min call to see if this makes sense for ${companyName}?
+
+Other ways we help dental practices:
+• Speed-to-Lead AI — Instant response to online appointment requests
+• Inbox Automation — AI handling patient emails and insurance questions
+• Follow-up Assistant — Automated recall and reminder sequences
+• AI Coaching — Train team on AI for treatment planning and documentation
+• Competitor Intel — See how other dental practices appear in AI searches
+
+Check out our website for everything we offer that could help grow your practice and improve patient care.
+
+https://theonegroup.info/
+
+Alec
+The One Group`,
+        
+        'Real Estate Agency': `Good Morning,
+
+I help real estate agencies in South Florida capture every buyer and seller lead — even when agents are in showings.
+
+Quick question: Are potential buyers calling about listings and getting voicemail instead of immediate answers?
+
+I built an AI system that responds to inquiries instantly, qualifies leads, and schedules appointments — so you never miss a commission opportunity.
+
+Would you be open to a 15-min call to see if this makes sense for ${companyName}?
+
+Other ways we help real estate agencies:
+• Speed-to-Lead AI — Instant response to Zillow/Redfin inquiries
+• Inbox Automation — AI triage for agent emails and contract questions
+• Follow-up Assistant — Automated nurture sequences for long-term prospects
+• AI Coaching — Train agents on AI for listing descriptions and market analysis
+• Competitor Intel — See how other real estate agencies appear in AI searches
+
+Check out our website for everything we offer that could help close more deals and grow your team.
+
+https://theonegroup.info/
+
+Alec
+The One Group`,
+        
+        'Plumbing': `Good Morning,
+
+I help plumbing companies in South Florida capture emergency calls 24/7 and dispatch automatically.
+
+Quick question: When someone's basement is flooding at 2 AM, are they getting your voicemail or a live response?
+
+I built an AI system that answers emergency calls immediately, qualifies severity, and dispatches your on-call tech — so you never lose a revenue job to voicemail.
+
+Would you be open to a 15-min call to see if this makes sense for ${companyName}?
+
+Other ways we help plumbing businesses:
+• Speed-to-Lead AI — Instant response to online quote requests
+• Inbox Automation — AI handling supplier emails and permit questions
+• Follow-up Assistant — Automated follow-up for estimates and invoices
+• AI Coaching — Train dispatchers on AI tools for faster scheduling
+• Competitor Intel — See how other plumbing companies appear in AI searches
+
+Check out our website for everything we offer that could help save time, increase revenue and grow your business.
+
+https://theonegroup.info/
+
+Alec
+The One Group`,
+        
+        'Electrical': `Good Morning,
+
+I help electrical contractors in South Florida capture emergency calls and dispatch techs automatically.
+
+Quick question: When a business loses power or a panel fails, are they getting a live response or leaving a voicemail?
+
+I built an AI system that answers emergency calls 24/7, triages urgency, and dispatches your nearest available tech — so you never lose a commercial job.
+
+Would you be open to a 15-min call to see if this makes sense for ${companyName}?
+
+Other ways we help electrical contractors:
+• Speed-to-Lead AI — Instant response to commercial project inquiries
+• Inbox Automation — AI handling permits, inspections, and vendor emails
+• Follow-up Assistant — Automated follow-up for estimates and invoices
+• AI Coaching — Train team on AI for load calculations and code research
+• Competitor Intel — See how other electrical contractors appear in AI searches
+
+Check out our website for everything we offer that could help save time, increase revenue and grow your business.
+
+https://theonegroup.info/
+
+Alec
+The One Group`,
+        
+        'default': `Good Morning,
+
+I help ${industry}s in South Florida automate their lead capture and customer communication.
+
+Quick question: Are you missing calls or leads because you're busy with other tasks?
+
+I built an AI system that answers calls 24/7, qualifies leads, and follows up automatically.
+
+Would you be open to a 15-min call to see if this makes sense for ${companyName}?
+
+Other ways we help ${industry}s:
+• Speed-to-Lead AI — Instant response to inquiries
+• Inbox Automation — AI triage for emails
+• Follow-up Assistant — Automated nurture sequences
+• AI Coaching — Train team on AI tools
+• Competitor Intel — See how competitors appear in AI searches
+
+Check out our website for everything we offer that could help save time, increase revenue and meet your customer needs.
+
+https://theonegroup.info/
+
+Alec
+The One Group`
+      };
+      
+      // Map industry names to template keys
+      let templateKey = industry;
+      if (industry.includes('HVAC')) templateKey = 'HVAC';
+      else if (industry.includes('Law') || industry.includes('Legal')) templateKey = 'Law Firm';
+      else if (industry.includes('Accounting')) templateKey = 'Accounting Firm';
+      else if (industry.includes('Medical')) templateKey = 'Medical Practice';
+      else if (industry.includes('Dental')) templateKey = 'Dental Practice';
+      else if (industry.includes('Real Estate')) templateKey = 'Real Estate Agency';
+      else if (industry.includes('Plumbing')) templateKey = 'Plumbing';
+      else if (industry.includes('Electrical')) templateKey = 'Electrical';
+      
+      const template = templates[templateKey] || templates['default'];
+      
+      navigator.clipboard.writeText(template).then(() => {
+        showToast('✉️ Email template copied! Ready to paste into Gmail');
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+      });
+    }
+    
+    // Show toast notification
+    function showToast(message) {
+      const toast = document.getElementById('copy-toast');
+      toast.textContent = message;
+      toast.classList.remove('translate-y-20');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20');
+      }, 3000);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      renderAgents();
+      loadLeadsData(); // Load from JSON instead of static data
+    });
+
+    // All scraped leads data (abbreviated for demo - full data would be here)
+    const allScrapedLeads = [
+      { name: "Cool Breeze HVAC", industry: "HVAC", city: "Miami", contact: "Cool Breeze HVAC", email: "info@coolbreezehvac.com", score: 10 },
+      { name: "Miami Legal Group", industry: "Legal", city: "Miami", contact: "Miami Legal Group", email: "info@miamilegal.com", score: 10 },
+      { name: "Broward Accounting", industry: "Accounting", city: "Fort Lauderdale", contact: "Broward Accounting", email: "info@browardcpa.com", score: 9 },
+      { name: "Palm Beach Realty", industry: "Real Estate", city: "West Palm Beach", contact: "Palm Beach Realty", email: "info@palmbeachrealty.com", score: 10 },
+      { name: "Sunshine Dental", industry: "Dental", city: "Boca Raton", contact: "Sunshine Dental", email: "info@sunshinedental.com", score: 9 },
+      { name: "Elite Medical Miami", industry: "Medical", city: "Miami", contact: "Elite Medical Miami", email: "info@elitemedical.com", score: 9 },
+      { name: "Fort Lauderdale Law", industry: "Legal", city: "Fort Lauderdale", contact: "Fort Lauderdale Law", email: "info@ftllaw.com", score: 10 },
+      { name: "Coastal HVAC", industry: "HVAC", city: "Fort Lauderdale", contact: "Coastal HVAC", email: "info@coastalhvac.com", score: 10 },
+      { name: "Boca Accounting Pros", industry: "Accounting", city: "Boca Raton", contact: "Boca Accounting Pros", email: "info@bocacpa.com", score: 7 },
+      { name: "Miami Property Management", industry: "Real Estate", city: "Miami", contact: "Miami Property Management", email: "info@miamipm.com", score: 10 },
+      { name: "Betty's Air Services", industry: "HVAC", city: "Miami", contact: "Betty Thomas", email: "betty@bettysairservices.com", score: 7 },
+      { name: "Susan's Climate Control", industry: "HVAC", city: "Miami", contact: "Susan Jones", email: "susan@susansclimatecontrol.com", score: 5 },
+      { name: "James's Cooling Services", industry: "HVAC", city: "Miami", contact: "James Martinez", email: "james@jamesscoolingservices.com", score: 6 },
+      { name: "Jennifer's HVAC Solutions", industry: "HVAC", city: "Fort Lauderdale", contact: "Jennifer Gonzalez", email: "jennifer@jennifershvacsolutions.com", score: 7 },
+      { name: "John's Climate Control", industry: "HVAC", city: "Fort Lauderdale", contact: "John Gonzalez", email: "john@johnsclimatecontrol.com", score: 7 },
+      { name: "Sarah's Climate Control", industry: "HVAC", city: "Fort Lauderdale", contact: "Sarah Taylor", email: "sarah@sarahsclimatecontrol.com", score: 7 },
+      { name: "Linda's Air Conditioning", industry: "HVAC", city: "Fort Lauderdale", contact: "Linda Davis", email: "linda@lindasairconditioning.com", score: 5 },
+      { name: "Jessica's Air Conditioning", industry: "HVAC", city: "West Palm Beach", contact: "Jessica Rodriguez", email: "jessica@jessicasairconditioning.com", score: 5 },
+      { name: "Patricia's HVAC Solutions", industry: "HVAC", city: "West Palm Beach", contact: "Patricia Smith", email: "patricia@patriciashvacsolutions.com", score: 6 },
+      { name: "Robert's Climate Control", industry: "HVAC", city: "West Palm Beach", contact: "Robert Wilson", email: "robert@robertsclimatecontrol.com", score: 7 },
+      { name: "Maria's Air Services", industry: "HVAC", city: "West Palm Beach", contact: "Maria Wilson", email: "maria@mariasairservices.com", score: 8 },
+      { name: "Betty's Legal Services", industry: "Legal", city: "Miami", contact: "Betty Williams", email: "betty@bettyslegalservices.com", score: 7 },
+      { name: "Robert's Law Group", industry: "Legal", city: "Miami", contact: "Robert Jones", email: "robert@robertslawgroup.com", score: 5 },
+      { name: "James's Law Group", industry: "Legal", city: "Fort Lauderdale", contact: "James Taylor", email: "james@jamesslawgroup.com", score: 8 },
+      { name: "Karen's Legal Services", industry: "Legal", city: "Fort Lauderdale", contact: "Karen Thomas", email: "karen@karenslegalservices.com", score: 7 },
+      { name: "Karen's Law Group", industry: "Legal", city: "Fort Lauderdale", contact: "Karen Johnson", email: "karen@karenslawgroup.com", score: 7 },
+      { name: "William's Attorneys at Law", industry: "Legal", city: "Fort Lauderdale", contact: "William Smith", email: "william@williamsattorneysatlaw.com", score: 5 },
+      { name: "Sandra's Legal Associates", industry: "Legal", city: "Boca Raton", contact: "Sandra Wilson", email: "sandra@sandraslegalassociates.com", score: 8 },
+      { name: "Betty's Attorneys at Law", industry: "Legal", city: "Boca Raton", contact: "Betty Gonzalez", email: "betty@bettysattorneysatlaw.com", score: 8 },
+      { name: "Lisa's Law Group", industry: "Legal", city: "Boca Raton", contact: "Lisa Taylor", email: "lisa@lisaslawgroup.com", score: 7 },
+      { name: "Patricia's Attorneys at Law", industry: "Legal", city: "Boca Raton", contact: "Patricia Jackson", email: "patricia@patriciasattorneysatlaw.com", score: 5 },
+      { name: "Karen's Financial Services", industry: "Accounting", city: "Miami", contact: "Karen Smith", email: "karen@karensfinancialservices.com", score: 7 },
+      { name: "Susan's Accounting", industry: "Accounting", city: "Miami", contact: "Susan Anderson", email: "susan@susansaccounting.com", score: 5 },
+      { name: "Maria's Accounting", industry: "Accounting", city: "Miami", contact: "Maria Garcia", email: "maria@mariasaccounting.com", score: 8 },
+      { name: "Sarah's Tax Services", industry: "Accounting", city: "Miami", contact: "Sarah Smith", email: "sarah@sarahstaxservices.com", score: 6 },
+      { name: "Sarah's Financial Services", industry: "Accounting", city: "Fort Lauderdale", contact: "Sarah Garcia", email: "sarah@sarahsfinancialservices.com", score: 8 },
+      { name: "Karen's Financial Services", industry: "Accounting", city: "Fort Lauderdale", contact: "Karen Davis", email: "karen@karensfinancialservices.com", score: 6 },
+      { name: "Lisa's Homes", industry: "Real Estate", city: "Miami", contact: "Lisa Brown", email: "lisa@lisashomes.com", score: 8 },
+      { name: "Maria's Real Estate", industry: "Real Estate", city: "Miami", contact: "Maria Moore", email: "maria@mariasrealestate.com", score: 8 },
+      { name: "Linda's Homes", industry: "Real Estate", city: "Fort Lauderdale", contact: "Linda Moore", email: "linda@lindashomes.com", score: 8 },
+      { name: "James's Properties", industry: "Real Estate", city: "Fort Lauderdale", contact: "James Martinez", email: "james@jamessproperties.com", score: 8 },
+      { name: "Jennifer's Real Estate Group", industry: "Real Estate", city: "Fort Lauderdale", contact: "Jennifer Johnson", email: "jennifer@jennifersrealestategroup.com", score: 8 },
+      { name: "James's Realty", industry: "Real Estate", city: "Fort Lauderdale", contact: "James Jones", email: "james@jamessrealty.com", score: 7 },
+      { name: "William's Dental Group", industry: "Dental", city: "Miami", contact: "William Johnson", email: "william@williamsdentalgroup.com", score: 6 },
+      { name: "John's Smile Center", industry: "Dental", city: "Miami", contact: "John Smith", email: "john@johnssmilecenter.com", score: 6 },
+      { name: "Karen's Dental Group", industry: "Dental", city: "Miami", contact: "Karen Jones", email: "karen@karensdentalgroup.com", score: 5 },
+      { name: "John's Dental", industry: "Dental", city: "Fort Lauderdale", contact: "John Hernandez", email: "john@johnsdental.com", score: 7 },
+      { name: "Susan's Dental Group", industry: "Dental", city: "Fort Lauderdale", contact: "Susan Brown", email: "susan@susansdentalgroup.com", score: 7 },
+      { name: "Lisa's Smile Center", industry: "Dental", city: "Fort Lauderdale", contact: "Lisa Williams", email: "lisa@lisassmilecenter.com", score: 5 }
+    ];
+
+    // Modal functions
+    function showAllLeadsModal() {
+      document.getElementById('all-leads-modal').classList.remove('hidden');
+      renderAllScrapedLeads();
+    }
+
+    function closeAllLeadsModal() {
+      document.getElementById('all-leads-modal').classList.add('hidden');
+    }
+
+    // Render all scraped leads in modal
+    function renderAllScrapedLeads() {
+      const container = document.getElementById('all-leads-table-body');
+      const filter = document.getElementById('leads-filter')?.value || 'all';
+      const search = document.getElementById('leads-search')?.value?.toLowerCase() || '';
+      
+      let filteredLeads = allScrapedLeads;
+      
+      // Filter by industry
+      if (filter !== 'all') {
+        filteredLeads = filteredLeads.filter(lead => lead.industry === filter);
+      }
+      
+      // Filter by search
+      if (search) {
+        filteredLeads = filteredLeads.filter(lead => 
+          lead.name.toLowerCase().includes(search) || 
+          lead.city.toLowerCase().includes(search) ||
+          lead.industry.toLowerCase().includes(search)
+        );
+      }
+      
+      container.innerHTML = filteredLeads.map(lead => `
+        <tr class="border-b border-slate-700 hover:bg-slate-800/50">
+          <td class="p-3">
+            <p class="font-medium text-orange-400">${lead.name}</p>
+          </td>
+          <td class="p-3">
+            <span class="px-2 py-1 bg-slate-800 rounded-full text-xs">${lead.industry}</span>
+          </td>
+          <td class="p-3 text-sm text-slate-300">${lead.city}</td>
+          <td class="p-3 text-sm text-slate-300">${lead.contact}</td>
+          <td class="p-3">
+            <div class="flex items-center gap-2">
+              <span class="text-blue-400 text-sm">${lead.email}</span>
+              <button onclick="copyEmail('${lead.email}')" class="text-slate-400 hover:text-white" title="Copy email">
+                📋
+              </button>
+            </div>
+          </td>
+          <td class="p-3">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full ${lead.score >= 8 ? 'bg-green-900 text-green-400' : lead.score >= 6 ? 'bg-yellow-900 text-yellow-400' : 'bg-red-900 text-red-400'}">
+              ${lead.score}
+            </span>
+          </td>
+          <td class="p-3">
+            <button onclick="generateEmailTemplate('${lead.name}', '${lead.industry}', '${lead.city}', '${lead.email}')" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition">
+              📋 Copy Email
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // Add event listeners for filter and search
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('leads-search');
+      const filterSelect = document.getElementById('leads-filter');
+      
+      if (searchInput) {
+        searchInput.addEventListener('input', renderAllScrapedLeads);
+      }
+      if (filterSelect) {
+        filterSelect.addEventListener('change', renderAllScrapedLeads);
+      }
+    });
+
+    // Initialize
+    renderAgents();
+    loadLeadsData();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scout | Report Intelligence (Local)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass { background: rgba(15, 23, 42, 0.82); backdrop-filter: blur(14px); border: 1px solid rgba(148, 163, 184, 0.1); }
+    .glass-soft { background: rgba(30, 41, 59, 0.58); backdrop-filter: blur(12px); border: 1px solid rgba(148, 163, 184, 0.08); }
+    .tab-btn.active { background: linear-gradient(135deg, rgba(34,197,94,0.25), rgba(34,211,238,0.18)); border-color: rgba(34,197,94,0.35); color: #f8fafc; box-shadow: inset 0 1px 0 rgba(255,255,255,0.05); }
+    .pill { border: 1px solid rgba(148,163,184,0.12); background: rgba(15,23,42,0.55); }
+    .metric-card { background: linear-gradient(180deg, rgba(30,41,59,0.85), rgba(15,23,42,0.85)); }
+    .table-wrap::-webkit-scrollbar { height: 8px; width: 8px; }
+    .table-wrap::-webkit-scrollbar-thumb { background: rgba(100,116,139,0.5); border-radius: 9999px; }
+    .file-drop { border: 2px dashed rgba(148,163,184,0.3); transition: all 0.2s; }
+    .file-drop:hover, .file-drop.dragover { border-color: rgba(34,197,94,0.5); background: rgba(34,197,94,0.05); }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+    <header class="glass rounded-3xl p-6 md:p-8">
+      <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold tracking-[0.22em] uppercase text-emerald-300 border border-emerald-500/20">Scout dashboard</div>
+          <h1 class="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight">Tabbed sales intelligence by report type</h1>
+          <p class="mt-2 text-slate-400 max-w-3xl">One view for the whole book, then clean drill-downs for POD, volume, accounts, inventory, and incentives.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-sm">
+          <div class="glass-soft rounded-2xl px-4 py-3">
+            <div class="text-slate-500">Programs loaded</div>
+            <div id="metaPrograms" class="mt-1 text-xl font-bold">—</div>
+          </div>
+          <div class="glass-soft rounded-2xl px-4 py-3">
+            <div class="text-slate-500">Last refresh</div>
+            <div id="metaUpdated" class="mt-1 text-sm font-semibold">—</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- File Upload Section -->
+    <section id="uploadSection" class="glass rounded-3xl p-6">
+      <div class="text-center space-y-4">
+        <h2 class="text-xl font-bold text-slate-200">Load Scout Data</h2>
+        <p class="text-slate-400 text-sm">Upload your dashboard_data.json file to view the dashboard</p>
+        
+        <div id="dropZone" class="file-drop rounded-2xl p-8 cursor-pointer">
+          <div class="text-4xl mb-3">📁</div>
+          <p class="text-slate-300 font-medium">Drop dashboard_data.json here</p>
+          <p class="text-slate-500 text-sm mt-2">or click to browse</p>
+          <input type="file" id="fileInput" accept=".json" class="hidden" />
+        </div>
+        
+        <div class="flex justify-center gap-3 mt-4">
+          <button onclick="loadSampleData()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm transition">
+            Load Sample Data
+          </button>
+          <button onclick="window.open('https://github.com/openclaw/openclaw','_blank')" class="px-4 py-2 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 rounded-lg text-sm transition text-blue-300">
+            Need Help?
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Content (hidden until data loaded) -->
+    <section id="dashboardContent" class="hidden space-y-6">
+      <div class="glass rounded-3xl p-4 md:p-5 space-y-4">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div id="tabBar" class="flex flex-wrap gap-2"></div>
+          <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
+            <label class="text-xs uppercase tracking-[0.2em] text-slate-500">Program</label>
+            <select id="programSelect" class="pill rounded-xl px-4 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500/40">
+              <option value="all">All programs</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <div id="statusMsg" class="rounded-2xl border border-emerald-400/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200 flex-1 mr-4">
+            Data loaded successfully.
+          </div>
+          <button onclick="resetData()" class="px-4 py-2 bg-rose-600/20 hover:bg-rose-600/30 border border-rose-500/30 rounded-lg text-sm transition text-rose-300">
+            Upload New File
+          </button>
+        </div>
+      </div>
+
+      <section id="tabContent" class="space-y-6"></section>
+    </section>
+  </div>
+
+  <script>
+    const TABS = [
+      { id: 'overview', label: 'Overview' },
+      { id: 'pod', label: 'POD' },
+      { id: 'volume', label: 'Volume' },
+      { id: 'accounts', label: 'Accounts' },
+      { id: 'inventory', label: 'Inventory' },
+      { id: 'incentives', label: 'Incentives' }
+    ];
+
+    const app = {
+      activeTab: 'overview',
+      activeProgram: 'all',
+      data: null,
+      normalized: []
+    };
+
+    const fmt = {
+      int: (n) => Number(n || 0).toLocaleString(),
+      num: (n, d = 1) => Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: d, maximumFractionDigits: d }),
+      money: (n) => '$' + Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+      pct: (n) => Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '%'
+    };
+
+    // Sample data for testing
+    const SAMPLE_DATA = {
+      "programs": [
+        {
+          "programName": "H&R Woodford Derby",
+          "grouped": {
+            "pod": [],
+            "volume": [{"sheet_name": "Vol_Check", "report_type": "volume", "summary": {"record_count": 5868, "total_cases": 21660}}],
+            "accounts": [{"sheet_name": "ADS_List", "report_type": "accounts_sold", "summary": {"record_count": 857, "revenue_net_total": 69517512, "top_ads_by_accounts": [["PEREZ EDUARDO", 110], ["ROTH STEVEN", 98], ["ROBERTS WYATT", 93]]}}],
+            "inventory": [{"sheet_name": "Salesforce", "report_type": "inventory", "summary": {"record_count": 110350, "revenue_net_total": 72673834, "top_field_sales_managers": [["VON UNGERN STERNBERG THEO", 6018], ["BOWAN BIANCA", 5835], ["GAGNELIUS WESLEY", 5650]]}}],
+            "incentives": [{"sheet_name": "CPGTable", "report_type": "incentive", "summary": {"record_count": 21, "promotion_types": [["Feature Activation (spirits/on)", 21]], "brands": [["WOODFORD RESERVE BOURBON", 14], ["WOODFORD RESERVE", 7]]}}]
+          }
+        },
+        {
+          "programName": "Q4 H&R Road to Cinco",
+          "grouped": {
+            "pod": [
+              {"sheet_name": "FSM", "report_type": "pod", "summary": {"record_count": 27, "totals": {"herr_pod_prior": 2445, "herr_new_pod": 149, "new_goal": 366}}},
+              {"sheet_name": "AM", "report_type": "pod", "summary": {"record_count": 3, "totals": {"menus_features": 29, "w_4_cases": 17}}},
+              {"sheet_name": "Reps", "report_type": "pod", "summary": {"record_count": 68, "totals": {"sum_of_herr_new_pod": 264, "total_payout": 3960, "menus_features": 125, "w_4_cases": 50}}}
+            ],
+            "volume": [{"sheet_name": "Vol_Check", "report_type": "volume", "summary": {"record_count": 1180, "total_cases": 5045}}],
+            "accounts": [{"sheet_name": "ADS_List", "report_type": "accounts_sold", "summary": {"record_count": 862, "revenue_net_total": 69592937, "top_ads_by_accounts": [["PEREZ EDUARDO", 111], ["ROTH STEVEN", 99], ["ROBERTS WYATT", 93]]}}],
+            "inventory": [{"sheet_name": "Salesforce", "report_type": "inventory", "summary": {"record_count": 110350, "revenue_net_total": 72673834, "top_field_sales_managers": [["VON UNGERN STERNBERG THEO", 6018], ["BOWAN BIANCA", 5835], ["GAGNELIUS WESLEY", 5650]]}}],
+            "incentives": [{"sheet_name": "CPGTable", "report_type": "incentive", "summary": {"record_count": 25, "promotion_types": [["Feature Activation (spirits/on)", 25]], "brands": [["HERRADURA BLANCO", 16], ["HERRADURA", 5], ["HERRADURA REPOSADO", 4]]}}]
+          }
+        }
+      ],
+      "timestamp": "2026-04-27T15:30:00Z"
+    };
+
+    // File upload handling
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+
+    dropZone.addEventListener('click', () => fileInput.click());
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      const files = e.dataTransfer.files;
+      if (files.length > 0) handleFile(files[0]);
+    });
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) handleFile(e.target.files[0]);
+    });
+
+    function handleFile(file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const json = JSON.parse(e.target.result);
+          initDashboard(json);
+        } catch (err) {
+          alert('Error parsing JSON: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function loadSampleData() {
+      initDashboard(SAMPLE_DATA);
+    }
+
+    function resetData() {
+      document.getElementById('uploadSection').classList.remove('hidden');
+      document.getElementById('dashboardContent').classList.add('hidden');
+      app.data = null;
+      app.normalized = [];
+    }
+
+    function initDashboard(json) {
+      app.data = json;
+      app.normalized = normalizeData(json);
+      document.getElementById('metaPrograms').textContent = fmt.int(app.normalized.length);
+      document.getElementById('metaUpdated').textContent = new Date(json.timestamp || json.generated_at || Date.now()).toLocaleString();
+      document.getElementById('uploadSection').classList.add('hidden');
+      document.getElementById('dashboardContent').classList.remove('hidden');
+      renderProgramSelect();
+      renderTabs();
+      renderTabContent();
+    }
+
+    // [Rest of the functions from the original dashboard...]
+    function normalizeData(raw) {
+      return (raw.programs || raw.reports || []).map(report => {
+        const programId = slugifyProgram(report.file_name);
+        const programName = report.programName || prettyProgram(programId, report.file_name);
+        const grouped = report.grouped || { pod: [], volume: [], accounts: [], inventory: [], incentives: [] };
+        return { ...report, programId, programName, grouped };
+      });
+    }
+
+    function slugifyProgram(fileName = '') {
+      const lower = (fileName || '').toLowerCase();
+      if (lower.includes('cinco')) return 'cinco';
+      if (lower.includes('derby')) return 'derby';
+      return lower.replace(/\.xlsx?$/, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'unknown';
+    }
+
+    function prettyProgram(slug, fileName = '') {
+      if (slug === 'cinco') return 'Cinco';
+      if (slug === 'derby') return 'Derby';
+      return (fileName || slug).replace(/\.xlsx?$/, '').replace(/^B-F FY\d+\s*/i, '').trim() || slug;
+    }
+
+    function currentPrograms() {
+      return app.activeProgram === 'all'
+        ? app.normalized
+        : app.normalized.filter(r => r.programId === app.activeProgram);
+    }
+
+    function aggregatePod(programs) {
+      const rows = [];
+      programs.forEach(report => {
+        (report.grouped.pod || []).forEach(sheet => {
+          const totals = sheet.summary?.totals || {};
+          rows.push({
+            program: report.programName,
+            sheet: sheet.sheet_name,
+            recordCount: sheet.summary?.record_count || 0,
+            priorPod: totals.herr_pod_prior || totals.prior_pod || 0,
+            newPod: totals.herr_new_pod || totals.sum_of_herr_new_pod || 0,
+            goalUnits: totals.new_goal || totals.goal || 0,
+            totalPayout: totals.total_payout || totals.dist_payout || totals.payout || 0,
+            features: totals.menus_features || 0,
+            fourCaseWins: totals.w_4_cases || 0
+          });
+        });
+      });
+      return rows;
+    }
+
+    function aggregateVolume(programs) {
+      return programs.flatMap(report => (report.grouped.volume || []).map(sheet => ({
+        program: report.programName,
+        sheet: sheet.sheet_name,
+        recordCount: sheet.summary?.record_count || 0,
+        totalCases: sheet.summary?.total_cases || 0
+      })));
+    }
+
+    function aggregateAccounts(programs) {
+      return programs.flatMap(report => (report.grouped.accounts || []).map(sheet => ({
+        program: report.programName,
+        sheet: sheet.sheet_name,
+        recordCount: sheet.summary?.record_count || 0,
+        revenue: sheet.summary?.revenue_net_total || 0,
+        topAds: sheet.summary?.top_ads_by_accounts || []
+      })));
+    }
+
+    function aggregateInventory(programs) {
+      return programs.flatMap(report => (report.grouped.inventory || []).map(sheet => ({
+        program: report.programName,
+        sheet: sheet.sheet_name,
+        recordCount: sheet.summary?.record_count || 0,
+        revenue: sheet.summary?.revenue_net_total || 0,
+        topManagers: sheet.summary?.top_field_sales_managers || []
+      })));
+    }
+
+    function aggregateIncentives(programs) {
+      return programs.flatMap(report => (report.grouped.incentives || []).map(sheet => ({
+        program: report.programName,
+        sheet: sheet.sheet_name,
+        recordCount: sheet.summary?.record_count || 0,
+        promoTypes: sheet.summary?.promotion_types || [],
+        brands: sheet.summary?.brands || []
+      })));
+    }
+
+    function sum(arr, fn) { return arr.reduce((acc, item) => acc + fn(item), 0); }
+
+    function topCounts(entries) {
+      const map = new Map();
+      entries.forEach(([name, count]) => map.set(name, (map.get(name) || 0) + Number(count || 0)));
+      return [...map.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
+    }
+
+    function metricCard(label, value, subtext, tone = 'slate') {
+      const toneMap = {
+        slate: 'text-slate-100',
+        emerald: 'text-emerald-300',
+        cyan: 'text-cyan-300',
+        amber: 'text-amber-300',
+        rose: 'text-rose-300'
+      };
+      return `
+        <div class="metric-card rounded-2xl p-5 border border-slate-800 shadow-lg shadow-black/10">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-500">${label}</div>
+          <div class="mt-3 text-3xl font-extrabold ${toneMap[tone] || toneMap.slate}">${value}</div>
+          <div class="mt-2 text-sm text-slate-400">${subtext}</div>
+        </div>`;
+    }
+
+    function renderTable(headers, rows, emptyMessage = 'No data for this view.') {
+      if (!rows.length) return `<div class="glass-soft rounded-2xl p-6 text-slate-400">${emptyMessage}</div>`;
+      return `
+        <div class="glass-soft rounded-2xl overflow-hidden">
+          <div class="table-wrap overflow-x-auto">
+            <table class="min-w-full text-sm">
+              <thead class="bg-slate-900/70 text-slate-400 uppercase tracking-[0.16em] text-xs">
+                <tr>${headers.map(h => `<th class="px-4 py-3 text-left font-semibold whitespace-nowrap">${h}</th>`).join('')}</tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/80">
+                ${rows.map(row => `<tr class="hover:bg-slate-900/40">${row.map(cell => `<td class="px-4 py-3 align-top whitespace-nowrap">${cell}</td>`).join('')}</tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>`;
+    }
+
+    function renderOverview(programs) {
+      const pod = aggregatePod(programs);
+      const volume = aggregateVolume(programs);
+      const accounts = aggregateAccounts(programs);
+      const inventory = aggregateInventory(programs);
+      const incentives = aggregateIncentives(programs);
+      const topBrands = topCounts(incentives.flatMap(item => item.brands));
+
+      return `
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+          ${metricCard('Programs in view', fmt.int(programs.length), 'Scoped by the selector above', 'emerald')}
+          ${metricCard('POD units', fmt.int(sum(pod, x => x.newPod)), 'Combined new POD across POD sheets', 'cyan')}
+          ${metricCard('Volume cases', fmt.num(sum(volume, x => x.totalCases)), 'Total liquid volume cases', 'amber')}
+          ${metricCard('Promo activations', fmt.int(sum(incentives, x => x.recordCount)), 'Rows flagged as incentive activity', 'rose')}
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div class="xl:col-span-2 glass rounded-3xl p-6 space-y-4">
+            <div class="flex items-center justify-between">
+              <h2 class="text-lg font-bold">Report coverage snapshot</h2>
+              <div class="text-sm text-slate-500">Auto-derived from dashboard_data.json</div>
+            </div>
+            ${renderTable(
+              ['Program', 'POD sheets', 'Volume sheets', 'Accounts sheets', 'Inventory sheets', 'Incentive sheets'],
+              programs.map(report => [
+                `<span class="font-semibold text-slate-100">${report.programName}</span>`,
+                fmt.int((report.grouped.pod || []).length),
+                fmt.int((report.grouped.volume || []).length),
+                fmt.int((report.grouped.accounts || []).length),
+                fmt.int((report.grouped.inventory || []).length),
+                fmt.int((report.grouped.incentives || []).length)
+              ])
+            )}
+          </div>
+          <div class="glass rounded-3xl p-6 space-y-4">
+            <h2 class="text-lg font-bold">Top promoted brands</h2>
+            <div class="space-y-3">
+              ${topBrands.length ? topBrands.map(([name, count], idx) => `
+                <div class="flex items-center justify-between rounded-2xl bg-slate-900/55 px-4 py-3 border border-slate-800">
+                  <div>
+                    <div class="text-xs text-slate-500">#${idx + 1}</div>
+                    <div class="font-semibold">${name}</div>
+                  </div>
+                  <div class="text-xl font-bold text-emerald-300">${fmt.int(count)}</div>
+                </div>`).join('') : '<div class="text-slate-400">No incentive brand data.</div>'}
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function renderPod(programs) {
+      const pod = aggregatePod(programs);
+      return `
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          ${metricCard('POD sheets', fmt.int(pod.length), 'FSM / AM / Reps where available', 'emerald')}
+          ${metricCard('New POD', fmt.int(sum(pod, x => x.newPod)), 'Current case sales output', 'cyan')}
+          ${metricCard('Goal units', fmt.num(sum(pod, x => x.goalUnits)), 'Target volume from parsed totals', 'amber')}
+          ${metricCard('Payouts', fmt.money(sum(pod, x => x.totalPayout)), 'Dist + total payout columns', 'rose')}
+        </div>
+        ${renderTable(
+          ['Program', 'Sheet', 'Rows', 'Prior POD', 'New POD', 'Goal units', 'Features', '4-case wins', 'Payout'],
+          pod.map(item => [
+            `<span class="font-semibold">${item.program}</span>`,
+            item.sheet,
+            fmt.int(item.recordCount),
+            fmt.int(item.priorPod),
+            `<span class="text-emerald-300 font-semibold">${fmt.int(item.newPod)}</span>`,
+            fmt.num(item.goalUnits),
+            fmt.int(item.features),
+            fmt.int(item.fourCaseWins),
+            `<span class="text-cyan-300">${fmt.money(item.totalPayout)}</span>`
+          ]),
+          'No POD sheets in this selection.'
+        )}`;
+    }
+
+    function renderVolume(programs) {
+      const volume = aggregateVolume(programs);
+      return `
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          ${metricCard('Volume sheets', fmt.int(volume.length), 'Detected liquid volume reports', 'emerald')}
+          ${metricCard('Total cases', fmt.num(sum(volume, x => x.totalCases)), 'Aggregate case volume', 'cyan')}
+          ${metricCard('Avg per sheet', fmt.num(volume.length ? sum(volume, x => x.totalCases) / volume.length : 0), 'Mean case count by sheet', 'amber')}
+        </div>
+        ${renderTable(
+          ['Program', 'Sheet', 'Rows', 'Total cases'],
+          volume.map(item => [
+            `<span class="font-semibold">${item.program}</span>`,
+            item.sheet,
+            fmt.int(item.recordCount),
+            `<span class="text-cyan-300 font-semibold">${fmt.num(item.totalCases, 3)}</span>`
+          ]),
+          'No volume sheets in this selection.'
+        )}`;
+    }
+
+    function renderAccounts(programs) {
+      const accounts = aggregateAccounts(programs);
+      const leaders = topCounts(accounts.flatMap(item => item.topAds));
+      return `
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          ${metricCard('Account sheets', fmt.int(accounts.length), 'Detected ADS / accounts sold reports', 'emerald')}
+          ${metricCard('Rows', fmt.int(sum(accounts, x => x.recordCount)), 'Sold-account level records', 'cyan')}
+          ${metricCard('Revenue', fmt.money(sum(accounts, x => x.revenue)), 'Net revenue total from summaries', 'amber')}
+          ${metricCard('Top ADS', leaders[0]?.[0] || '—', leaders[0] ? fmt.int(leaders[0][1]) + ' accounts' : 'No leader data', 'rose')}
+        </div>
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div class="xl:col-span-2">
+            ${renderTable(
+              ['Program', 'Sheet', 'Rows', 'Revenue', 'Top ADS snapshot'],
+              accounts.map(item => [
+                `<span class="font-semibold">${item.program}</span>`,
+                item.sheet,
+                fmt.int(item.recordCount),
+                `<span class="text-emerald-300 font-semibold">${fmt.money(item.revenue)}</span>`,
+                item.topAds.slice(0, 2).map(([name, count]) => `${name} (${fmt.int(count)})`).join('<br>') || '<span class="text-slate-500">—</span>'
+              ]),
+              'No accounts-sold sheets in this selection.'
+            )}
+          </div>
+          <div class="glass rounded-3xl p-6">
+            <h2 class="text-lg font-bold">Top ADS by accounts</h2>
+            <div class="mt-4 space-y-3">
+              ${leaders.length ? leaders.map(([name, count], idx) => `
+                <div class="rounded-2xl bg-slate-900/55 border border-slate-800 px-4 py-3 flex items-center justify-between">
+                  <div>
+                    <div class="text-xs text-slate-500">#${idx + 1}</div>
+                    <div class="font-semibold">${name}</div>
+                  </div>
+                  <div class="text-lg font-bold text-cyan-300">${fmt.int(count)}</div>
+                </div>`).join('') : '<div class="text-slate-400">No ADS leaderboard data.</div>'}
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function renderInventory(programs) {
+      const inventory = aggregateInventory(programs);
+      const leaders = topCounts(inventory.flatMap(item => item.topManagers));
+      return `
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          ${metricCard('Inventory sheets', fmt.int(inventory.length), 'Salesforce / stock-facing sheets', 'emerald')}
+          ${metricCard('Rows', fmt.int(sum(inventory, x => x.recordCount)), 'Inventory-level records', 'cyan')}
+          ${metricCard('Revenue', fmt.money(sum(inventory, x => x.revenue)), 'Net revenue across inventory summaries', 'amber')}
+          ${metricCard('Top FSM', leaders[0]?.[0] || '—', leaders[0] ? fmt.int(leaders[0][1]) + ' rows' : 'No FSM ranking found', 'rose')}
+        </div>
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div class="xl:col-span-2">
+            ${renderTable(
+              ['Program', 'Sheet', 'Rows', 'Revenue', 'Top managers'],
+              inventory.map(item => [
+                `<span class="font-semibold">${item.program}</span>`,
+                item.sheet,
+                fmt.int(item.recordCount),
+                `<span class="text-emerald-300 font-semibold">${fmt.money(item.revenue)}</span>`,
+                item.topManagers.slice(0, 3).map(([name, count]) => `${name} (${fmt.int(count)})`).join('<br>') || '<span class="text-slate-500">—</span>'
+              ]),
+              'No inventory sheets in this selection.'
+            )}
+          </div>
+          <div class="glass rounded-3xl p-6">
+            <h2 class="text-lg font-bold">Top field sales managers</h2>
+            <div class="mt-4 space-y-3">
+              ${leaders.length ? leaders.map(([name, count], idx) => `
+                <div class="rounded-2xl bg-slate-900/55 border border-slate-800 px-4 py-3 flex items-center justify-between gap-4">
+                  <div>
+                    <div class="text-xs text-slate-500">#${idx + 1}</div>
+                    <div class="font-semibold leading-tight">${name}</div>
+                  </div>
+                  <div class="text-lg font-bold text-amber-300">${fmt.int(count)}</div>
+                </div>`).join('') : '<div class="text-slate-400">No manager leaderboard data.</div>'}
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function renderIncentives(programs) {
+      const incentives = aggregateIncentives(programs);
+      const promoLeaders = topCounts(incentives.flatMap(item => item.promoTypes));
+      const brandLeaders = topCounts(incentives.flatMap(item => item.brands));
+      return `
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          ${metricCard('Incentive sheets', fmt.int(incentives.length), 'Promo and payout report tabs', 'emerald')}
+          ${metricCard('Activation rows', fmt.int(sum(incentives, x => x.recordCount)), 'Total promo rows across sheets', 'cyan')}
+          ${metricCard('Top promo type', promoLeaders[0]?.[0] || '—', promoLeaders[0] ? fmt.int(promoLeaders[0][1]) + ' hits' : 'No type counts', 'amber')}
+          ${metricCard('Top brand', brandLeaders[0]?.[0] || '—', brandLeaders[0] ? fmt.int(brandLeaders[0][1]) + ' hits' : 'No brand counts', 'rose')}
+        </div>
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+          <div>
+            ${renderTable(
+              ['Program', 'Sheet', 'Rows', 'Top promo types', 'Top brands'],
+              incentives.map(item => [
+                `<span class="font-semibold">${item.program}</span>`,
+                item.sheet,
+                fmt.int(item.recordCount),
+                item.promoTypes.slice(0, 2).map(([name, count]) => `${name} (${fmt.int(count)})`).join('<br>') || '<span class="text-slate-500">—</span>',
+                item.brands.slice(0, 3).map(([name, count]) => `${name} (${fmt.int(count)})`).join('<br>') || '<span class="text-slate-500">—</span>'
+              ]),
+              'No incentive sheets in this selection.'
+            )}
+          </div>
+          <div class="space-y-6">
+            <div class="glass rounded-3xl p-6">
+              <h2 class="text-lg font-bold">Promotion type leaderboard</h2>
+              <div class="mt-4 space-y-3">
+                ${promoLeaders.length ? promoLeaders.map(([name, count], idx) => `
+                  <div class="rounded-2xl bg-slate-900/55 border border-slate-800 px-4 py-3 flex items-center justify-between gap-4">
+                    <div>
+                      <div class="text-xs text-slate-500">#${idx + 1}</div>
+                      <div class="font-semibold leading-tight">${name}</div>
+                    </div>
+                    <div class="text-lg font-bold text-cyan-300">${fmt.int(count)}</div>
+                  </div>`).join('') : '<div class="text-slate-400">No promotion leaderboard data.</div>'}
+              </div>
+            </div>
+            <div class="glass rounded-3xl p-6">
+              <h2 class="text-lg font-bold">Brand leaderboard</h2>
+              <div class="mt-4 space-y-3">
+                ${brandLeaders.length ? brandLeaders.map(([name, count], idx) => `
+                  <div class="rounded-2xl bg-slate-900/55 border border-slate-800 px-4 py-3 flex items-center justify-between gap-4">
+                    <div>
+                      <div class="text-xs text-slate-500">#${idx + 1}</div>
+                      <div class="font-semibold leading-tight">${name}</div>
+                    </div>
+                    <div class="text-lg font-bold text-rose-300">${fmt.int(count)}</div>
+                  </div>`).join('') : '<div class="text-slate-400">No brand leaderboard data.</div>'}
+              </div>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function renderTabContent() {
+      const programs = currentPrograms();
+      const content = document.getElementById('tabContent');
+      const renderers = {
+        overview: renderOverview,
+        pod: renderPod,
+        volume: renderVolume,
+        accounts: renderAccounts,
+        inventory: renderInventory,
+        incentives: renderIncentives
+      };
+      content.innerHTML = (renderers[app.activeTab] || renderOverview)(programs);
+    }
+
+    function renderTabs() {
+      const tabBar = document.getElementById('tabBar');
+      tabBar.innerHTML = TABS.map(tab => `
+        <button data-tab="${tab.id}" class="tab-btn ${tab.id === app.activeTab ? 'active' : ''} rounded-2xl border border-slate-800 px-4 py-2.5 text-sm font-semibold text-slate-400 transition hover:text-slate-100 hover:border-slate-700">
+          ${tab.label}
+        </button>`).join('');
+
+      tabBar.querySelectorAll('[data-tab]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          app.activeTab = btn.dataset.tab;
+          renderTabs();
+          renderTabContent();
+        });
+      });
+    }
+
+    function renderProgramSelect() {
+      const select = document.getElementById('programSelect');
+      const options = app.normalized.map(report => `<option value="${report.programId}">${report.programName}</option>`).join('');
+      select.innerHTML = `<option value="all">All programs</option>${options}`;
+      select.value = app.activeProgram;
+      select.onchange = () => {
+        app.activeProgram = select.value;
+        renderTabContent();
+      };
+    }
+  </script>
+</body>
+</html>

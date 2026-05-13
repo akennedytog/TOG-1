@@ -1,0 +1,20 @@
+🚀 Friday night shipped:
+
+1️⃣ Miami Music Week guide LIVE
+   • 25 events scraped from official sources
+   • Community submission form
+   • Filterable by day
+   
+2️⃣ Truerep.com concept MVP
+   • Anonymous professional reputation
+   • No comments = no defamation risk
+   • 5-category rating system
+
+3️⃣ Installed 10+ new AI agents
+   • Browser automation
+   • Task management
+   • Design systems
+
+Building in public at https://theonegroup.info
+
+#BuildInPublic #MiamiMusicWeek #AI #NoCode #Startup

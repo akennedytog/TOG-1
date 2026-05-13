@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building in Public: Week 2 - First Wins | The One Group</title>
+  <meta name="description" content="Week 2 of building @TheOneGroupAI: First paying clients, refining the pitch, and learning what actually sells.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' },
+            accent: { 500: '#8b5cf6', 600: '#7c3aed' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); }
+    .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    .dark .glass { background: rgba(17, 24, 39, 0.8); }
+    .prose p { margin-bottom: 1.25rem; line-height: 1.75; }
+    .prose h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+    .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose blockquote { border-left: 4px solid #3b82f6; padding-left: 1rem; font-style: italic; color: #6b7280; margin: 1.5rem 0; }
+  </style>
+</head>
+<body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors duration-300">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="/" class="font-display font-bold text-xl"><span class="gradient-text">The One Group</span></a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/services.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Services</a>
+          <a href="/ai-coaching.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">AI Coaching</a>
+          <a href="/ai-optimization.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">AI Optimization</a>
+          <a href="/competitor-monitoring.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Competitor Intel</a>
+          <a href="/events.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Events</a>
+          <a href="/case-studies.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Case Studies</a>
+          <a href="/blog.html" class="text-primary-600 dark:text-primary-400 font-medium">Blog</a>
+          <a href="/about.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">About</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+          <a href="https://calendly.com/akennedy-theonegroup/30min" class="hidden sm:inline-flex items-center px-4 py-2 gradient-bg text-white font-medium rounded-lg hover:opacity-90 transition">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <section class="pt-32 pb-8">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div data-aos="fade-up">
+        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+          <span>March 14, 2026</span>
+          <span class="mx-2">•</span>
+          <span class="text-primary-600 dark:text-primary-400">Building in Public</span>
+          <span class="mx-2">•</span>
+          <span class="text-gray-400">Week 2</span>
+        </div>
+        <h1 class="font-display text-3xl lg:text-4xl font-bold mb-4">Building in Public: Week 2 - First Wins</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">First paying clients, refining the pitch, and learning what actually sells in AI automation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="pb-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose dark:prose-invert max-w-none" data-aos="fade-up" data-aos-delay="100">
+        
+        <blockquote>
+          📈 Week 2 of @TheOneGroupAI: Landed first 2 clients, learned what actually resonates, and iterated fast. Here's the breakdown.
+        </blockquote>
+
+        <h2>The first sale</h2>
+        <p>Monday morning. I got on a call with an HVAC company owner I'd met through a mutual connection. I didn't pitch AI. I asked about his follow-up process.</p>
+        <p>"It's a mess," he said. "Leads come in, I mean to call them back, but I'm on a job, then it's 9 PM, and I'm exhausted."</p>
+        <p>I showed him a 2-minute demo of the system I'd built in Week 1. Nothing fancy—just a screen share of how an AI could draft responses to quote requests, ready for his review.</p>
+        <p>He signed up on the spot. $500 setup, $200/month. My first revenue.</p>
+
+        <h2>What worked in the pitch</h2>
+        <p>I tested three different approaches this week:</p>
+        <ul>
+          <li><strong>Approach A:</strong> "I build AI automation for small businesses" → Crickets</li>
+          <li><strong>Approach B:</strong> "I help businesses save time with AI tools" → Mild interest</li>
+          <li><strong>Approach C:</strong> "What's one task that eats up your time but doesn't need your expertise?" → Conversations</li>
+        </ul>
+        <p>Approach C won by a landslide. People love talking about their problems. They don't love being sold to.</p>
+
+        <h2>Second client, different industry</h2>
+        <p>Thursday I closed a bookkeeping firm. Same process—ask about pain points first, show the solution second.</p>
+        <p>Their pain: Categorizing receipts and matching them to transactions. 4 hours per week of tedious work.</p>
+        <p>The solution: An AI system that reads receipts, suggests categories, and creates draft entries. Human reviews, AI does the grunt work.</p>
+        <p>Another $500 setup, $200/month. Two clients, $400 MRR.</p>
+
+        <h2>Building the content engine</h2>
+        <p>I also started documenting everything on Twitter/X. Not just wins—the failures, the awkward moments, the lessons.</p>
+        <p>The engagement surprised me. People DM'd me saying "I'm building something too, let's connect."</p>
+        <p>Building in public isn't just marketing. It's networking at scale.</p>
+
+        <h2>Week 2 Lessons</h2>
+        <p><strong>Lesson 1:</strong> Lead with the problem, not the technology. "AI automation" is abstract. "Getting your evenings back" is concrete.</p>
+        <p><strong>Lesson 2:</strong> Pricing is about value, not hours. Both clients would have paid more—they're saving 10+ hours/month.</p>
+        <p><strong>Lesson 3:</strong> Every conversation teaches you something. Even the "no"s tell you what messaging to fix.</p>
+
+        <h2>Week 3 goals</h2>
+        <ul>
+          <li>Get to 5 total clients</li>
+          <li>Build a simple feedback tracking system</li>
+          <li>Document the onboarding process</li>
+          <li>Keep sharing publicly</li>
+        </ul>
+
+        <hr class="my-8 border-gray-200 dark:border-gray-700">
+
+        <h3>Ready to get your time back?</h3>
+        <p>We help small businesses deploy AI systems that actually get used. Not just installed—integrated.</p>
+        
+        <div class="mt-6">
+          <a href="https://calendly.com/akennedy-theonegroup/30min" class="inline-flex items-center px-6 py-3 gradient-bg text-white font-semibold rounded-lg hover:opacity-90 transition">
+            Book a free consultation →
+          </a>
+        </div>
+
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-6">
+          Follow <a href="https://x.com/TheOneGroupAI" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">@TheOneGroupAI</a> for weekly AI insights. | <a href="building-in-public-week3.html" class="text-primary-600 dark:text-primary-400 hover:underline">Read Week 3 →</a>
+        </p>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <span class="font-display font-bold text-xl gradient-text">The One Group</span>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">AI automation for small businesses</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="https://x.com/TheOneGroupAI" target="_blank" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">X/Twitter</a>
+          <a href="/blog.html" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">Blog</a>
+          <a href="https://calendly.com/akennedy-theonegroup/30min" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">Contact</a>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
+        © 2026 The One Group. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 600, once: true });
+    
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+    
+    if (localStorage.getItem('theme') === 'light') {
+      html.classList.remove('dark');
+    }
+  </script>
+
+</body>
+</html>

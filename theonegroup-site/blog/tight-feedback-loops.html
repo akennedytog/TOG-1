@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Tight Feedback Loops Beat Big Models | The One Group</title>
+  <meta name="description" content="Speed of iteration beats size of model. How tight feedback loops deliver better AI results than bigger models.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+          colors: { primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' } }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .prose p { margin-bottom: 1.25rem; line-height: 1.75; }
+    .prose h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+    .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose blockquote { border-left: 4px solid #3b82f6; padding-left: 1rem; font-style: italic; color: #6b7280; margin: 1.5rem 0; }
+    .glass { background: rgba(17, 24, 39, 0.8); backdrop-filter: blur(10px); }
+  </style>
+</head>
+<body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-gray-900">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="/" class="font-display font-bold text-xl"><span class="gradient-text">The One Group</span></a>
+        <div class="flex items-center space-x-6">
+          <a href="/blog.html" class="text-primary-400 font-medium">← Back to Blog</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <article class="pt-32 pb-20 max-w-3xl mx-auto px-4 sm:px-6">
+    <header class="mb-12" data-aos="fade-up">
+      <div class="flex items-center text-sm text-gray-400 mb-4">
+        <span>March 30, 2026</span>
+        <span class="mx-2">•</span>
+        <span class="text-primary-400">AI Strategy</span>
+      </div>
+      <h1 class="font-display text-4xl lg:text-5xl font-bold mb-6">Why Tight Feedback Loops Beat Big Models</h1>
+      <p class="text-xl text-gray-400">The businesses winning with AI aren't using the biggest models. They're using the fastest feedback loops.</p>
+    </header>
+
+    <div class="prose dark:prose-invert max-w-none">
+      <h2>The Insight</h2>
+      <p>The businesses winning with AI right now aren't the ones with the biggest models.</p>
+      <p><strong>They're the ones with the tightest feedback loops.</strong></p>
+
+      <h2>Ship → Measure → Learn → Ship Again</h2>
+      <p>Speed of iteration beats size of model. Every time.</p>
+
+      <h2>The Model Arms Race Myth</h2>
+      <p>There's a dangerous narrative in AI right now: <strong>bigger is better.</strong></p>
+
+      <ul>
+        <li>"We use GPT-4" (as if that's a differentiator)</li>
+        <li>"Powered by the latest Claude" (so is everyone else)</li>
+        <li>"State-of-the-art models" (available to anyone with a credit card)</li>
+      </ul>
+
+      <p>Here's the reality: <strong>Access to AI models is commoditized.</strong> The playing field is level. Your competitors have the same access you do.</p>
+
+      <p>So what's the actual advantage?</p>
+
+      <h2>The Feedback Loop Advantage</h2>
+      <p>While everyone's obsessing over which model to use, the winners are obsessing over something else entirely:</p>
+
+      <blockquote>How fast can we learn?</blockquote>
+
+      <h3>Case Study: Content Automation</h3>
+
+      <p><strong>Company A (Big Model approach):</strong></p>
+      <ul>
+        <li>Uses GPT-4 to generate 100 tweets/week</li>
+        <li>Schedules them evenly across the week</li>
+        <li>Gets 50-100 likes per post</li>
+        <li>Never changes the strategy</li>
+      </ul>
+
+      <p><strong>Company B (Tight Feedback Loop approach):</strong></p>
+      <ul>
+        <li>Uses a smaller model (GPT-3.5)</li>
+        <li>Tracks engagement on every post</li>
+        <li>Identifies that threads outperform single tweets 3:1</li>
+        <li>Shifts to thread-first strategy</li>
+        <li>Gets 200-500 likes per thread</li>
+      </ul>
+
+      <p><strong>Who wins?</strong> Company B, despite using the "inferior" model. Because they learned faster.</p>
+
+      <h2>Anatomy of a Tight Feedback Loop</h2>
+
+      <h3>Step 1: Ship</h3>
+      <p>Put something out there. Don't wait for perfect. The goal isn't perfection—it's signal. You need data to learn from.</p>
+
+      <h3>Step 2: Measure</h3>
+      <p>Track what actually matters:</p>
+      <ul>
+        <li>Did people engage?</li>
+        <li>Did it drive the desired action?</li>
+        <li>What was the response time?</li>
+        <li>How does it compare to baseline?</li>
+      </ul>
+
+      <p><strong>Key insight:</strong> Most businesses track vanity metrics. Track business metrics instead.</p>
+
+      <h3>Step 3: Learn</h3>
+      <p>Analyze the data. Look for patterns:</p>
+      <ul>
+        <li>What worked?</li>
+        <li>What didn't?</li>
+        <li>What was surprising?</li>
+        <li>What should we try differently?</li>
+      </ul>
+
+      <p>This is where most AI projects fail. They ship, they measure, but they never learn.</p>
+
+      <h3>Step 4: Ship Again</h3>
+      <p>Apply what you learned. Fast.</p>
+
+      <pre class="bg-gray-800 p-4 rounded-lg text-sm text-gray-300">Ship → Measure → Learn → Ship again
+     ↑___________________|
+         (repeat fast)</pre>
+
+      <h2>The 24-Hour Rule</h2>
+      <p>Here's a rule that changes everything:</p>
+
+      <blockquote>If it takes more than 24 hours to go from idea to live test, your feedback loop is too slow.</blockquote>
+
+      <p>Not 24 hours to perfect. Not 24 hours to get approval. <strong>24 hours to live, real-world data.</strong></p>
+
+      <h2>Why Most AI Projects Fail</h2>
+
+      <p>They optimize for the wrong thing:</p>
+
+      <ul>
+        <li><strong>Wrong:</strong> "We need better data before we can start"</li>
+        <li><strong>Right:</strong> "Let's ship with what we have and learn"</li>
+      </ul>
+
+      <ul>
+        <li><strong>Wrong:</strong> "We should wait for the new model release"</li>
+        <li><strong>Right:</strong> "Let's make this one work better"</li>
+      </ul>
+
+      <ul>
+        <li><strong>Wrong:</strong> "We need a comprehensive strategy"</li>
+        <li><strong>Right:</strong> "Let's automate one workflow this week"</li>
+      </ul>
+
+      <h2>The Bottom Line</h2>
+
+      <p>The AI arms race isn't about who has the biggest model. It's about who learns fastest.</p>
+
+      <p>You can have GPT-5, Claude 4, and every tool in the arsenal. But if your feedback loop is measured in weeks, you're losing to someone with GPT-3.5 and a 24-hour loop.</p>
+
+      <p><strong>Your competitive advantage isn't your AI. It's your speed of iteration.</strong></p>
+
+      <blockquote>"The best time to ship was yesterday. The second best time is right now." — Someone who actually ships</blockquote>
+
+      <p><strong>Your move:</strong> What's one AI workflow you could ship today, measure tomorrow, and improve by Friday?</p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-800">
+      <p class="text-gray-400">Ready to build tight feedback loops for your AI automation? <a href="https://calendly.com/akennedy-theonegroup/30min" class="text-primary-400 hover:underline">Let's talk</a>.</p>
+    </div>
+  </article>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 600, once: true });</script>
+</body>
+</html>

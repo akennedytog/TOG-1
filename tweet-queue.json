@@ -1,0 +1,102 @@
+[
+  {
+    "text": "🧵 Top 10 things you can do with Clawdbot (your personal AI assistant) — Thread 👇\n\n1/ Schedule complex tasks\n2/ Research and summarize articles\n3/ Draft emails and messages\n4/ Code review and debugging\n5/ Generate content ideas\n6/ Analyze data and reports\n7/ Set reminders and follow-ups\n8/ Translate documents\n9/ Create presentations\n10/ Brainstorm solutions\n\nWhat would you automate first?",
+    "type": "thread",
+    "scheduledFor": null
+  },
+  {
+    "text": "Clawdbot use case: I needed to analyze 50 customer feedback emails.\n\nInstead of reading each one:\n→ Clawdbot extracted key themes\n→ Summarized top complaints\n→ Suggested 3 action items\n→ Time saved: 2 hours\n\nAI is not just for big companies.",
+    "type": "insight",
+    "scheduledFor": null
+  },
+  {
+    "text": "Real talk: Most AI 'productivity hacks' are just faster typing.\n\nThe real wins come from:\n→ Delegating entire workflows\n→ Building feedback loops\n→ Letting AI make suggestions you approve\n\nClawdbot does the second one. That's the difference.",
+    "type": "insight",
+    "scheduledFor": null
+  },
+  {
+    "text": "SMB owners: You do not need an AI strategy.\n\nYou need ONE task automated this week.\n\nPick something that:\n• Takes 30+ minutes\n• Happens weekly\n• Follows a pattern\n\nThat is your starting point. Everything else is noise.",
+    "type": "framework",
+    "scheduledFor": null
+  },
+  {
+    "text": "Clawdbot feature spotlight: Memory that persists.\n\nUnlike ChatGPT, Clawdbot remembers:\n→ Your preferences\n→ Past conversations\n→ Project context\n→ Your writing style\n\nIt gets smarter the more you use it.",
+    "type": "feature",
+    "scheduledFor": null
+  },
+  {
+    "text": "Question for SMB owners:\n\nWhat is the one task in your business that eats up time but does not require your specific expertise?\n\nI am building a library of AI automation playbooks and want to know what actually matters to you.",
+    "type": "question",
+    "scheduledFor": null
+  },
+  {
+    "text": "Building with AI is not about replacing humans.\n\nIt is about removing the 80% of work that is repetitive so you can focus on the 20% that requires judgment, creativity, and relationships.\n\nThat is what Clawdbot is built for.",
+    "type": "philosophy",
+    "scheduledFor": null
+  },
+  {
+    "text": "AI Myth #2: 'You need to be technical to use AI agents'\n\nReality: The best AI tools are conversational.\n\nYou describe what you want.\nThe agent figures out how to do it.\n\nClawdbot works this way. No coding required.",
+    "type": "myth-busting",
+    "scheduledFor": null
+  },
+  {
+    "text": "Use case: Content calendar management\n\nBefore:\n→ 3 hours planning posts\n→ Manual scheduling\n→ Inconsistent timing\n\nWith Clawdbot:\n→ Describe your goals\n→ AI generates calendar\n→ Auto-schedules to Buffer/Twitter\n→ Time saved: 2.5 hours/week",
+    "type": "case-study",
+    "scheduledFor": null
+  },
+  {
+    "text": "The businesses winning with AI right now are not the ones with the biggest models.\n\nThey are the ones with the tightest feedback loops.\n\nShip → Measure → Learn → Ship again\n\nSpeed of iteration beats size of model. Every time.",
+    "type": "insight",
+    "scheduledFor": null
+  },
+  {
+    "text": "Clawdbot vs ChatGPT:\n\nChatGPT = General purpose, starts fresh every time\nClawdbot = Your personal agent, remembers everything\n\nOne is a tool.\nThe other is a team member.\n\nThat is the difference.",
+    "type": "comparison",
+    "scheduledFor": null
+  },
+  {
+    "text": "Weekend thought experiment:\n\nIf you could automate one thing in your business and never think about it again, what would it be?\n\nNo constraints. Dream big.\n\nI will share the most interesting answers next week.",
+    "type": "question",
+    "scheduledFor": null
+  },
+  {
+    "text": "Behind the scenes: How we use Clawdbot to build TheOneGroupAI\n\n→ Drafts Twitter threads\n→ Reviews code changes\n→ Summarizes customer calls\n→ Generates newsletter ideas\n→ Tracks project tasks\n\nWe eat our own dog food. It works.",
+    "type": "behind-scenes",
+    "scheduledFor": null
+  },
+  {
+    "text": "The 3-Question AI Readiness Test:\n\n1. Do you repeat this task weekly?\n2. Does it follow a pattern you could explain?\n3. Would a 10% improvement matter?\n\nIf yes to all → You are ready for AI automation\n\nMost businesses have 5-10 tasks that pass this test.",
+    "type": "framework",
+    "scheduledFor": null
+  },
+  {
+    "text": "Clawdbot use case: Email triage\n\nProblem: 200+ emails/day, important ones buried\n\nSolution:\n→ Clawdbot scans inbox hourly\n→ Flags urgent items\n→ Summarizes newsletters\n→ Drafts responses to common questions\n\nResult: Inbox zero by 10am, daily.",
+    "type": "case-study",
+    "scheduledFor": null
+  },
+  {
+    "text": "What is your biggest blocker with AI right now?\n\nA) Do not know where to start\nB) Tried tools that did not deliver\nC) Worried about cost/ROI\nD) Team resistance to change\n\nReply A/B/C/D — I will share specific resources for each.",
+    "type": "poll",
+    "scheduledFor": null
+  },
+  {
+    "text": "AI tools that stick share one trait:\n\nThey do not ask users to change their workflow.\nThey adapt to it.\n\nThe best automation is invisible.\nIt just feels like you are suddenly better at your job.\n\nThat is the Clawdbot philosophy.",
+    "type": "philosophy",
+    "scheduledFor": null
+  },
+  {
+    "text": "Use case: Meeting prep and follow-up\n\nBefore meetings:\n→ Clawdbot researches attendees\n→ Summarizes past interactions\n→ Suggests talking points\n\nAfter meetings:\n→ Auto-generates summary\n→ Creates action items\n→ Schedules follow-ups\n\nTime saved: 45 min per meeting",
+    "type": "case-study",
+    "scheduledFor": null
+  },
+  {
+    "text": "Building an AI business while using AI to build it is... meta.\n\nEvery day I discover new edge cases.\nEvery day the system gets smarter.\n\nThe product IS the process.\n\nDocumenting everything so others can learn from our mistakes.",
+    "type": "building-in-public",
+    "scheduledFor": null
+  },
+  {
+    "text": "Sunday reflection:\n\nThe most surprising thing about building with AI?\n\nIt is not the technology.\nIt is how fast your own assumptions get challenged.\n\nWhat I thought users wanted ≠ What they actually need\n\nThe AI keeps me honest.",
+    "type": "reflection",
+    "scheduledFor": null
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "templateId": "pin-infographic-001",
+  "name": "Pinterest Infographic - 5 Steps",
+  "platform": "pinterest",
+  "format": "infographic",
+  "dimensions": { "width": 1000, "height": 2000 },
+  "background": {
+    "type": "solid",
+    "color": "#FAFAFA"
+  },
+  "header": {
+    "text": "{{infographic_title}}",
+    "position": { "x": 500, "y": 100 },
+    "style": {
+      "font": "Inter",
+      "size": 52,
+      "color": "#1E293B",
+      "weight": "bold",
+      "align": "center",
+      "maxWidth": 900
+    }
+  },
+  "steps": [
+    {
+      "number": 1,
+      "title": "{{step1_title}}",
+      "description": "{{step1_description}}",
+      "color": "#3B82F6",
+      "y": 350
+    },
+    {
+      "number": 2,
+      "title": "{{step2_title}}",
+      "description": "{{step2_description}}",
+      "color": "#8B5CF6",
+      "y": 700
+    },
+    {
+      "number": 3,
+      "title": "{{step3_title}}",
+      "description": "{{step3_description}}",
+      "color": "#10B981",
+      "y": 1050
+    },
+    {
+      "number": 4,
+      "title": "{{step4_title}}",
+      "description": "{{step4_description}}",
+      "color": "#F59E0B",
+      "y": 1400
+    },
+    {
+      "number": 5,
+      "title": "{{step5_title}}",
+      "description": "{{step5_description}}",
+      "color": "#EF4444",
+      "y": 1750
+    }
+  ],
+  "stepStyle": {
+    "numberSize": 72,
+    "numberWeight": "bold",
+    "titleSize": 36,
+    "titleWeight": "600",
+    "descSize": 28,
+    "descColor": "#64748B",
+    "numberCircle": {
+      "size": 100,
+      "opacity": 0.1
+    }
+  },
+  "footer": {
+    "text": "Save this for later! 📌",
+    "position": { "x": 500, "y": 1950 },
+    "style": {
+      "font": "Inter",
+      "size": 32,
+      "color": "#64748B",
+      "align": "center"
+    }
+  },
+  "export": {
+    "formats": ["png"],
+    "canva_compatible": true
+  },
+  "created": "2026-03-31",
+  "status": "ready"
+}

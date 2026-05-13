@@ -1,0 +1,40 @@
+🧵 THREAD: What we shipped this morning (Sunday, 4 hours of work)
+
+1/ Fixed our website navigation
+- Moved About to the front
+- Services dropdown now works on all pages
+- Added OpenClaw Setup as a new service ($500 + $297/month)
+
+2/ Created a new service page
+- 8 AI agents (Arlo, Dante, Iris, Abby, Dev, Opal, Rico, Jerry)
+- Cost comparison: $30k employees vs $297/month agents
+- Live at: theonegroup.info/openclaw-setup.html
+
+3/ Fixed our AI routing (biggest win)
+- Was hitting GPT-4o's 30k token limit on large tasks
+- Built emergency routing: >30k tokens → o3-mini, >100k → Claude Sonnet
+- 3x cost savings + no more rate limit errors
+
+4/ Published a blog post
+- "How to Optimize Your OpenClaw Setup Without Claude Max"
+- Includes the Twitter quote that started it all
+- Live at: theonegroup.info/blog/openclaw-optimization-without-claude-max.html
+
+5/ Updated cost tracking
+- Weekly audit scheduled (Sundays 9am)
+- Real-time budget alerts at $125
+- Currently tracking $150/month budget
+
+All in 4 hours on a Sunday morning.
+
+The difference between "Idea Guy" and "Builder":
+- Idea Guy: "We should fix the routing"
+- Builder: Opens terminal, edits 5 files, tests, deploys
+
+Building in public hits different when you actually ship.
+
+Follow @theonegroup for more AI automation wins.
+
+---
+
+*P.S. The routing fix alone saves us ~$50/month. The OpenClaw Setup service? That's quick, easy money. DM if you want the same for your business.*

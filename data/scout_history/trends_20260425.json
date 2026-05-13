@@ -1,0 +1,1462 @@
+{
+  "team_performance": {
+    "current_pct": 72.1311475409836,
+    "previous_pct": 72.1311475409836,
+    "change": 0.0,
+    "direction": "flat",
+    "current_new_pod": 264.0,
+    "previous_new_pod": 264.0,
+    "new_pod_change": 0.0
+  },
+  "rep_changes": [
+    {
+      "rep_name": "APARICIO VANESSA",
+      "current_pct": 57.14285714285714,
+      "previous_pct": 57.14285714285714,
+      "pct_change": 0.0,
+      "current_pod": 12.0,
+      "previous_pod": 12.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GAVIN LAWRENCE",
+      "current_pct": 66.66666666666666,
+      "previous_pct": 66.66666666666666,
+      "pct_change": 0.0,
+      "current_pod": 10.0,
+      "previous_pod": 10.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "VON UNGERN STERNBERG THEO",
+      "current_pct": 66.66666666666666,
+      "previous_pct": 66.66666666666666,
+      "pct_change": 0.0,
+      "current_pod": 10.0,
+      "previous_pod": 10.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "FETTERMAN GILLIAN",
+      "current_pct": 55.55555555555556,
+      "previous_pct": 55.55555555555556,
+      "pct_change": 0.0,
+      "current_pod": 10.0,
+      "previous_pod": 10.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BRAY JAMES",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 9.0,
+      "previous_pod": 9.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CARTWRIGHT MEGAN",
+      "current_pct": 36.36363636363637,
+      "previous_pct": 36.36363636363637,
+      "pct_change": 0.0,
+      "current_pod": 8.0,
+      "previous_pod": 8.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GAGNELIUS WESLEY",
+      "current_pct": 44.44444444444444,
+      "previous_pct": 44.44444444444444,
+      "pct_change": 0.0,
+      "current_pod": 8.0,
+      "previous_pod": 8.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "TAPPAN CHARLES",
+      "current_pct": 50.0,
+      "previous_pct": 50.0,
+      "pct_change": 0.0,
+      "current_pod": 8.0,
+      "previous_pod": 8.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HARTMANN CHRISTIAN",
+      "current_pct": 46.666666666666664,
+      "previous_pct": 46.666666666666664,
+      "pct_change": 0.0,
+      "current_pod": 7.0,
+      "previous_pod": 7.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "DRUASH KENDALL",
+      "current_pct": 46.666666666666664,
+      "previous_pct": 46.666666666666664,
+      "pct_change": 0.0,
+      "current_pod": 7.0,
+      "previous_pod": 7.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "DEMARA ERIN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 6.0,
+      "previous_pod": 6.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "LEONE ALESSANDRA",
+      "current_pct": 40.0,
+      "previous_pct": 40.0,
+      "pct_change": 0.0,
+      "current_pod": 6.0,
+      "previous_pod": 6.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "PATTERSON LUCAS",
+      "current_pct": 37.5,
+      "previous_pct": 37.5,
+      "pct_change": 0.0,
+      "current_pod": 6.0,
+      "previous_pod": 6.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "SPOSATO MICHAEL",
+      "current_pct": 40.0,
+      "previous_pct": 40.0,
+      "pct_change": 0.0,
+      "current_pod": 6.0,
+      "previous_pod": 6.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "WOMBLE ALEXANDRA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 5.0,
+      "previous_pod": 5.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GOLDEN JORDAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 5.0,
+      "previous_pod": 5.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "VAN LANDINGHAM GLYNN",
+      "current_pct": 25.0,
+      "previous_pct": 25.0,
+      "pct_change": 0.0,
+      "current_pod": 5.0,
+      "previous_pod": 5.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BOWAN BIANCA",
+      "current_pct": 29.411764705882355,
+      "previous_pct": 29.411764705882355,
+      "pct_change": 0.0,
+      "current_pod": 5.0,
+      "previous_pod": 5.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CATO MATTHEW",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 4.0,
+      "previous_pod": 4.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "KAFFERLY EVAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 4.0,
+      "previous_pod": 4.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "VERST SYDNEE",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 4.0,
+      "previous_pod": 4.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "RIVERO LAUREN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 4.0,
+      "previous_pod": 4.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MCNAUGHTON SEAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 4.0,
+      "previous_pod": 4.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GWIDT JACKIE",
+      "current_pct": 23.52941176470588,
+      "previous_pct": 23.52941176470588,
+      "pct_change": 0.0,
+      "current_pod": 4.0,
+      "previous_pod": 4.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "DIETRICH MICHAEL",
+      "current_pct": 23.52941176470588,
+      "previous_pct": 23.52941176470588,
+      "pct_change": 0.0,
+      "current_pod": 4.0,
+      "previous_pod": 4.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GOLDBERG KEVIN",
+      "current_pct": 26.666666666666668,
+      "previous_pct": 26.666666666666668,
+      "pct_change": 0.0,
+      "current_pod": 4.0,
+      "previous_pod": 4.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "PALAZZO KRISTEN",
+      "current_pct": 26.666666666666668,
+      "previous_pct": 26.666666666666668,
+      "pct_change": 0.0,
+      "current_pod": 4.0,
+      "previous_pod": 4.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CARMONA LUIS",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "WALSH SHAWN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "THOMAS MATTHEW",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MANKOFF JILLIAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "O'TOOLE SARAH",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "THOMAS GREGORY",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CLASSEN ISABELLA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HARDISON CAMERON",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "D'AMBROSIO SAMUEL",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MORENO LUISA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "WILLIAMS GERALD",
+      "current_pct": 17.647058823529413,
+      "previous_pct": 17.647058823529413,
+      "pct_change": 0.0,
+      "current_pod": 3.0,
+      "previous_pod": 3.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HILL ERIC",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "OGDEN BLAKE",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "STANSELL KENTON",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOUSE H&R SPIRIT-35 MIR N",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "POCCHIA CARMINE",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "KELLER RYAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MOYER KEATON",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "WITT LENWARD",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GARDEN JASON",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "FISHER AJA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOUSE H&R SPIRIT-31 TPA N",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "WHITELY WILLIAM",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CASTILLO CARLOS",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MORAES RAFAEL",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "REISS KATELYNN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "REILLY COLLEEN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "IOANNIDES ALEXANDER",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "YAP ROBERT",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "KNIGHT KALYN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MCCULLOUGH CORI",
+      "current_pct": 11.76470588235294,
+      "previous_pct": 11.76470588235294,
+      "pct_change": 0.0,
+      "current_pod": 2.0,
+      "previous_pod": 2.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HENSLEY BROOKE",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "RANDAZZO LOUIS",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BAKER KYLE",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "FARBER TAYLOR",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "ABOLAFIA JORDAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HATFIELD MARISA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BONIC TAYLOR",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BRUNO JOSEPH",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "SHOCK KATE",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GOOD BRITTANY",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "JONES GREGORY",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BEASLEY BRENDA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BROWN KARI",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "JUNIOR LOUIS",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CLOSED H&R SPRT-399 TAM N",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GUERRERO PABLO",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "WRONSKY MICHAEL",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "SATTERFIELD ROBERT",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "AHMED LINDSAY",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOFFMAN JULIA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MINES WILLIAM",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "KETCHUM PETER",
+      "current_pct": 6.666666666666667,
+      "previous_pct": 6.666666666666667,
+      "pct_change": 0.0,
+      "current_pod": 1.0,
+      "previous_pod": 1.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOUSE H&R SPIRIT-36 MIR S",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "FREE LINDA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "ROBLES ALANA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOUSE H&R SPIRIT-33 JAX",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOUSE H&R WINE-41 TPA N",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "OPN-793 ZPRM",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "SWEISGOOD MARY",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "NAVARRETE VERGARA LAURA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GASPARRE BRANDON",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOUSE H&R WINE-46 MIR S",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "KLEIN JORDAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GERTZ NATALIE",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "STREAT CHRISTIAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "LOPEZ JOEL",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "OPN-568 ZPMB",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "FARIAS ANTHONY",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOUSE H&R SPIRIT-30 TPA S",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CLOSED H&R WINE-498 ORL",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOUSE H&R SPIRIT-34 PEN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "TAMAYO DAVID",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BURCHAM REBECCA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CLOSED H&R SPRT-399 MIR N",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "REESE CASEY",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "OPN-425 ZPMB",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "ALMAN EVAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MARKOWITZ LISA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "THORNTON KRISTINA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "DOLSON KASSI",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BARCHARD HALEIGH",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "EMERY AMY",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BATISTA GODOY CYNTHIA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MENDEZ RACIEL",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "MILLS JOHN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GEDULD DAVID",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "DENOVA KEVIN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "DASILVEIRA NICOLE",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "TAYLOR TIESHA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GILMUDINOV ALAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "REILLY NOAH",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "LEWIS NINA",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "LONBAKEN CLINTON",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BARAD BRIAN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CARLSON THOMAS",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BRETON ROMAIN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "COOK KELSEY",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "BRIGHT LAUREN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HARDY DAVID",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "RICHARDSON STEPHEN",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "ROSENTHAL LESLIE",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "WARD HUNTER",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "GALARZA MARGARET",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "DISNEY H&R SPIRITS (ORL)",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CHICO LOUIS",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "HOUSE H&R SPIRIT-32 ORL",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "CLOSED H&R SPRT-396 JAX",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "TERMINI JOSEPH",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "FRASER CHAD",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0,
+      "previous_pod": 0,
+      "pod_change": 0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "PEREZ ORLANDO",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0,
+      "previous_pod": 0,
+      "pod_change": 0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "SEXTON ROBERT",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0,
+      "previous_pod": 0,
+      "pod_change": 0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "PH NORTH ON PREM AM",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0,
+      "previous_pod": 0,
+      "pod_change": 0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "PH ZPRM CHAINS + ATTRACTIONS AM",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0,
+      "previous_pod": 0,
+      "pod_change": 0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "PH ZPRM CHAINS + ATTRACTIONS FSM",
+      "current_pct": 0.0,
+      "previous_pct": 0.0,
+      "pct_change": 0.0,
+      "current_pod": 0.0,
+      "previous_pod": 0.0,
+      "pod_change": 0.0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "PH WEST ON PREM AM",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0,
+      "previous_pod": 0,
+      "pod_change": 0,
+      "direction": "stable"
+    },
+    {
+      "rep_name": "ENGEL MARC",
+      "current_pct": 0,
+      "previous_pct": 0,
+      "pct_change": 0,
+      "current_pod": 0,
+      "previous_pod": 0,
+      "pod_change": 0,
+      "direction": "stable"
+    }
+  ],
+  "alerts": [],
+  "summary": {
+    "total_reps_tracked": 144,
+    "improving": 0,
+    "declining": 0,
+    "stable": 144,
+    "critical_alerts": 0,
+    "positive_alerts": 0
+  }
+}

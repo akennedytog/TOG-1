@@ -1,0 +1,219 @@
+{
+  "lastUpdated": "2026-04-03T21:00:00-04:00",
+  "weekOf": "2026-03-31 to 2026-04-03",
+  "metrics": {
+    "totalLeads": 90,
+    "leadsContacted": 22,
+    "leadsResearchedToday": 20,
+    "totalTweets": 45,
+    "tweetsThisWeek": 25,
+    "blogsPublished": 1,
+    "threadsPosted": 1,
+    "emailsSent": 22,
+    "agentsActive": 8
+  },
+  "thisWeeksWins": [
+    {
+      "date": "2026-04-03",
+      "agent": "Dante",
+      "action": "Posted 3 tweets (week recap)",
+      "icon": "🐦",
+      "color": "blue"
+    },
+    {
+      "date": "2026-04-03",
+      "agent": "Clawd",
+      "action": "Published blog: Invisible Automation",
+      "icon": "📝",
+      "color": "purple"
+    },
+    {
+      "date": "2026-04-03",
+      "agent": "Dante",
+      "action": "Posted 7-tweet thread on invisible AI",
+      "icon": "🧵",
+      "color": "blue"
+    },
+    {
+      "date": "2026-04-03",
+      "agent": "Dev",
+      "action": "Deployed Mission Control v2 (PM2)",
+      "icon": "🚀",
+      "color": "orange"
+    },
+    {
+      "date": "2026-04-03",
+      "agent": "Arlo",
+      "action": "Researched 20 new South Florida leads",
+      "icon": "🔍",
+      "color": "green"
+    },
+    {
+      "date": "2026-04-03",
+      "agent": "Iris",
+      "action": "Emailed 11 Apollo leads (9 AM batch)",
+      "icon": "📧",
+      "color": "purple"
+    },
+    {
+      "date": "2026-04-02",
+      "agent": "Abby",
+      "action": "Completed QC review (5 PM)",
+      "icon": "✅",
+      "color": "green"
+    },
+    {
+      "date": "2026-04-02",
+      "agent": "Dante",
+      "action": "Posted 4 tweets + HyperAgent demo",
+      "icon": "🐦",
+      "color": "blue"
+    },
+    {
+      "date": "2026-04-02",
+      "agent": "Iris",
+      "action": "Emailed 11 leads (first batch)",
+      "icon": "📧",
+      "color": "purple"
+    },
+    {
+      "date": "2026-04-01",
+      "agent": "Arlo",
+      "action": "Found 15 qualified leads",
+      "icon": "🔍",
+      "color": "green"
+    },
+    {
+      "date": "2026-03-31",
+      "agent": "Dante",
+      "action": "Posted 3 scheduled tweets",
+      "icon": "🐦",
+      "color": "blue"
+    },
+    {
+      "date": "2026-03-30",
+      "agent": "Clawd",
+      "action": "Set up 8-agent system",
+      "icon": "🤖",
+      "color": "purple"
+    }
+  ],
+  "contentPublished": [
+    {
+      "type": "Blog Post",
+      "title": "The Secret to AI Tools That Actually Get Used",
+      "url": "https://theonegroup.info/blog/invisible-automation.html",
+      "date": "2026-04-03",
+      "status": "Published"
+    },
+    {
+      "type": "Tweet Thread",
+      "title": "7 tweets on invisible automation framework",
+      "date": "2026-04-03",
+      "status": "Published"
+    },
+    {
+      "type": "Tweet",
+      "title": "Week recap: What we shipped",
+      "date": "2026-04-03",
+      "status": "Published"
+    },
+    {
+      "type": "Tweet",
+      "title": "Claude agentic features update",
+      "date": "2026-04-03",
+      "status": "Published"
+    },
+    {
+      "type": "Tweet",
+      "title": "8-agent system breakdown",
+      "date": "2026-04-03",
+      "status": "Published"
+    }
+  ],
+  "agentStatus": [
+    {
+      "name": "Arlo",
+      "role": "Research Agent",
+      "status": "Active",
+      "lastRun": "2026-04-03T21:00:00",
+      "tasksToday": 1,
+      "description": "Finding 20 new South Florida leads daily"
+    },
+    {
+      "name": "Dante",
+      "role": "Creative Agent",
+      "status": "Active",
+      "lastRun": "2026-04-03T20:55:00",
+      "tasksToday": 3,
+      "description": "Creating 3 Twitter posts daily"
+    },
+    {
+      "name": "Iris",
+      "role": "Sales Agent",
+      "status": "Active",
+      "lastRun": "2026-04-03T09:00:00",
+      "tasksToday": 1,
+      "description": "Sending 20 emails/day via Gmail"
+    },
+    {
+      "name": "Abby",
+      "role": "QC Agent",
+      "status": "Active",
+      "lastRun": "2026-04-03T17:00:00",
+      "tasksToday": 1,
+      "description": "Reviewing all agent outputs"
+    },
+    {
+      "name": "Dev",
+      "role": "Dev Agent",
+      "status": "Active",
+      "lastRun": "2026-04-03T21:00:00",
+      "tasksToday": 2,
+      "description": "Development tasks & deployments"
+    },
+    {
+      "name": "Opal",
+      "role": "Ops Agent",
+      "status": "Idle",
+      "lastRun": "2026-04-02T18:00:00",
+      "tasksToday": 0,
+      "description": "Operations management"
+    },
+    {
+      "name": "Rico",
+      "role": "Analytics Agent",
+      "status": "Active",
+      "lastRun": "2026-04-03T17:00:00",
+      "tasksToday": 1,
+      "description": "Tracking metrics & reports"
+    },
+    {
+      "name": "Jerry",
+      "role": "Support Agent",
+      "status": "Idle",
+      "lastRun": "2026-04-02T12:00:00",
+      "tasksToday": 0,
+      "description": "General support tasks"
+    }
+  ],
+  "leadsBreakdown": {
+    "total": 90,
+    "new": 68,
+    "contacted": 22,
+    "responded": 0,
+    "qualified": 15,
+    "byIndustry": {
+      "HVAC": 12,
+      "Legal": 8,
+      "Dental": 6,
+      "Medical": 7,
+      "Real Estate": 5,
+      "Accounting": 4,
+      "Home Services": 8,
+      "Plumbing": 5,
+      "Electrical": 4,
+      "Other": 31
+    }
+  }
+}

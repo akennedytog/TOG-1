@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: HVAC Company Saves 10 Hours/Week | The One Group</title>
+  <meta name="description" content="Real numbers: 40% faster response time, 3x more meetings booked. How AI automation transformed an HVAC company's lead follow-up.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+          colors: { primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }, accent: { 500: '#8b5cf6', 600: '#7c3aed' } }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); }
+    .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    .dark .glass { background: rgba(17, 24, 39, 0.8); }
+    .prose p { margin-bottom: 1.25rem; line-height: 1.75; }
+    .prose h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+    .stat-card { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+  </style>
+</head>
+<body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors duration-300">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="/" class="font-display font-bold text-xl"><span class="gradient-text">The One Group</span></a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/services.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Services</a>
+          <a href="/case-studies.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Case Studies</a>
+          <a href="/blog.html" class="text-primary-600 dark:text-primary-400 font-medium">Blog</a>
+          <a href="/about.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">About</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+          <a href="https://calendly.com/akennedy-theonegroup/30min" class="hidden sm:inline-flex items-center px-4 py-2 gradient-bg text-white font-medium rounded-lg hover:opacity-90 transition">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="pt-32 pb-8">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div data-aos="fade-up">
+        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+          <span>March 17, 2026</span>
+          <span class="mx-2">•</span>
+          <span class="text-primary-600 dark:text-primary-400">Case Study</span>
+        </div>
+        <h1 class="font-display text-3xl lg:text-4xl font-bold mb-4">How We Saved 10 Hours/Week for an HVAC Company</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">Real numbers from a 12-person team drowning in lead follow-up.</p>
+      </div>
+    </div>
+  </section>
+
+  <article class="pb-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-4 mb-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-card rounded-xl p-6 text-white text-center">
+          <div class="text-3xl font-display font-bold">40%</div>
+          <div class="text-sm opacity-90">Faster Response</div>
+        </div>
+        <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-6 text-white text-center">
+          <div class="text-3xl font-display font-bold">3x</div>
+          <div class="text-sm opacity-90">More Meetings</div>
+        </div>
+        <div class="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl p-6 text-white text-center">
+          <div class="text-3xl font-display font-bold">10h</div>
+          <div class="text-sm opacity-90">Saved Weekly</div>
+        </div>
+      </div>
+
+      <div class="prose dark:prose-invert max-w-none" data-aos="fade-up" data-aos-delay="200">
+        
+        <h2>The Problem: Lead Response Bottleneck</h2>
+        
+        <p>Davis HVAC is a 12-person residential HVAC company in Kentucky. Like most service businesses, they live and die by lead response speed. But their process was broken:</p>
+
+        <ul>
+          <li>Leads came in from website, phone, and Google Ads</li>
+          <li>Owner John personally handled all follow-ups</li>
+          <li>Average response time: 2-4 hours (sometimes next day)</li>
+          <li>60% of leads never got a second touch</li>
+          <li>2 hours/day spent on follow-up tasks</li>
+        </ul>
+
+        <p>John knew speed mattered. He'd read the studies: responding within 5 minutes makes you 100x more likely to connect. But he was also running the business, managing techs, and handling emergencies. Something had to give—and it was usually follow-up.</p>
+
+        <h2>The Solution: AI Lead Response Agent</h2>
+        
+        <p>We deployed a simple AI system that:</p>
+
+        <ul>
+          <li><strong>Responds to inquiries in under 60 seconds</strong> with a personalized message</li>
+          <li><strong>Qualifies leads</strong> by asking about square footage, system type, and urgency</li>
+          <li><strong>Schedules appointments</strong> directly into their calendar</li>
+          <li><strong>Follows up automatically</strong> with unresponsive leads after 24 hours</li>
+          <li><strong>Flags hot leads</strong> for John to personally call</li>
+        </ul>
+
+        <p>The AI was trained on 20 of John's best email responses. It learned his tone—professional but friendly, direct but not pushy. It knew their service areas, pricing tiers, and scheduling constraints.</p>
+
+        <h2>The Results</h2>
+        
+        <p><strong>Week 1:</strong> The AI handled 47 leads. John reviewed them all and made 3 tweaks to the responses. Response time dropped from 2+ hours to under 60 seconds.</p>
+
+        <p><strong>Week 4:</strong> Response rate improved 40%. More leads were answering because they were getting immediate responses—even at 11 PM on a Saturday.</p>
+
+        <p><strong>Week 8:</strong> Meetings booked tripled. The AI was qualifying leads better than John had time to. It asked all the right questions upfront, so their techs arrived prepared.</p>
+
+        <p><strong>Week 12:</strong> John was spending 15 minutes/day reviewing AI-handled leads instead of 2 hours on follow-up. He used that time to train new techs and expand service areas.</p>
+
+        <hr class="my-8 border-gray-200 dark:border-gray-700">
+
+        <blockquote class="border-l-4 border-green-500 pl-4 italic text-gray-700 dark:text-gray-300 my-6">
+          "The AI didn't replace our team—it gave them superpowers. They're closing more deals and actually have time to breathe. I wish I'd done this two years ago."
+          <footer class="text-sm mt-2 not-italic">— John Davis, Owner, Davis HVAC</footer>
+        </blockquote>
+
+        <h2>The Real Win</h2>
+        
+        <p>It's not just about saving 10 hours/week. It's about what John does with those 10 hours. He's building the business instead of chasing leads. He's training staff instead of answering emails. He's sleeping better instead of worrying about missed opportunities.</p>
+
+        <p>That's the ROI that matters.</p>
+
+        <div class="mt-6">
+          <a href="https://calendly.com/akennedy-theonegroup/30min" class="inline-flex items-center px-6 py-3 gradient-bg text-white font-semibold rounded-lg hover:opacity-90 transition">
+            See if we can help your business →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <span class="font-display font-bold text-xl gradient-text">The One Group</span>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">AI automation for small businesses</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="https://x.com/TheOneGroupAI" target="_blank" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">X/Twitter</a>
+          <a href="/blog.html" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">Blog</a>
+          <a href="https://calendly.com/akennedy-theonegroup/30min" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">Contact</a>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
+        © 2026 The One Group. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 600, once: true });
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+    });
+  </script>
+
+</body>
+</html>

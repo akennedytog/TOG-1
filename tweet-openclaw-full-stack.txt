@@ -1,0 +1,29 @@
+Full OpenClaw stack transparency:
+
+8 agents → smart router → 5+ LLM providers
+
+AGENTS:
+🔍 Arlo (research)
+✍️ Dante (content)  
+📧 Iris (outreach)
+✅ Abby (QA)
+💻 Dev (code)
+⚙️ Opal (ops)
+📊 Rico (analytics)
+🎧 Jerry (support)
+
+ROUTING:
+<8K tokens: Ollama (FREE)
+8-15K: Haiku ($0.80/1M)
+15-100K: o3-mini ($1.10/1M)
+>100K: Claude Sonnet ($3/1M)
+
+SKILLS:
+📧 Gmail | 🐦 Twitter | 💼 LinkedIn
+📅 Calendar | ✅ Todoist | 📊 Sheets
+👤 Apollo | 🎨 Canva | 🚀 Netlify
+
+Cost: $150/month
+Compare: 8 employees = $30,000/month
+
+Full breakdown: theonegroup.info/openclaw-setup.html

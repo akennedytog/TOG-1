@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Slide 5 - Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 1080px;
+            height: 1920px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        .glow {
+            position: absolute;
+            width: 900px;
+            height: 900px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, rgba(139, 92, 246, 0.15) 50%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        .content {
+            text-align: center;
+            z-index: 1;
+            padding: 60px;
+            width: 100%;
+        }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: #ffffff;
+            font-size: 56px;
+            font-weight: 800;
+            padding: 25px 60px;
+            border-radius: 60px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 80px;
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.4);
+        }
+        .date-time {
+            background: rgba(30, 41, 59, 0.8);
+            border: 2px solid rgba(139, 92, 246, 0.4);
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 60px;
+        }
+        .date {
+            font-size: 72px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .time {
+            font-size: 56px;
+            color: #8b5cf6;
+            font-weight: 700;
+        }
+        .spots {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(249, 115, 22, 0.2) 100%);
+            border: 2px solid rgba(239, 68, 68, 0.5);
+            border-radius: 25px;
+            padding: 40px 60px;
+            margin-bottom: 60px;
+        }
+        .spots-number {
+            font-size: 100px;
+            font-weight: 900;
+            color: #f87171;
+            line-height: 1;
+        }
+        .spots-text {
+            font-size: 40px;
+            color: #fca5a5;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            font-size: 44px;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow"></div>
+    <div class="content">
+        <div class="badge">Free Workshop</div>
+        <div class="date-time">
+            <div class="date">May 20</div>
+            <div class="time">5:30 PM EST</div>
+        </div>
+        <div class="spots">
+            <div class="spots-number">20</div>
+            <div class="spots-text">Spots Only</div>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">▶</div>
+                <div>Live Demos</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">?</div>
+                <div>Live Q&A</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

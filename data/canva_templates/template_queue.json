@@ -1,0 +1,74 @@
+{
+  "pending": [
+    {
+      "templateId": "flyer_poster",
+      "priority": "normal",
+      "addedAt": "2026-03-23T02:56:37.773Z",
+      "id": "0f74f8e2-a889-40a2-97e2-e79fe9960996"
+    },
+    {
+      "templateId": "ebook_cover",
+      "priority": "normal",
+      "addedAt": "2026-03-23T02:56:37.774Z",
+      "id": "fc091c88-2aaa-4aef-8e57-e855d03cd7b0"
+    }
+  ],
+  "inProgress": [],
+  "completed": [
+    {
+      "templateId": "instagram_carousel",
+      "priority": "normal",
+      "addedAt": "2026-03-23T02:56:37.772Z",
+      "id": "693e8bed-b10e-4f2c-b0c0-8901a0700e73",
+      "startedAt": "2026-03-23T02:56:37.774Z",
+      "completedAt": "2026-03-23T02:56:37.786Z",
+      "outputPath": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel"
+    },
+    {
+      "templateId": "youtube_thumbnail",
+      "priority": "normal",
+      "addedAt": "2026-03-23T02:56:37.772Z",
+      "id": "b33818f7-bf88-4cf4-85ec-8115a2edf68a",
+      "startedAt": "2026-03-23T02:56:37.786Z",
+      "completedAt": "2026-03-23T02:56:37.787Z",
+      "outputPath": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/youtube_thumbnail"
+    },
+    {
+      "templateId": "business_card",
+      "priority": "normal",
+      "addedAt": "2026-03-23T02:56:37.773Z",
+      "id": "f2360264-3057-4243-a280-149c0b3440c2",
+      "startedAt": "2026-03-23T02:56:37.787Z",
+      "completedAt": "2026-03-23T02:56:37.788Z",
+      "outputPath": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/business_card"
+    },
+    {
+      "templateId": "resume_cv",
+      "priority": "normal",
+      "addedAt": "2026-03-23T02:56:37.773Z",
+      "id": "06ac8774-860a-4b43-b9da-c22c508d5b69",
+      "startedAt": "2026-03-26T14:01:39.988Z",
+      "completedAt": "2026-03-26T14:01:40.001Z",
+      "outputPath": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/resume_cv"
+    },
+    {
+      "templateId": "presentation_deck",
+      "priority": "normal",
+      "addedAt": "2026-03-23T02:56:37.773Z",
+      "id": "4b91bcef-8edc-4359-9d96-4b54c6fce0a2",
+      "startedAt": "2026-03-26T14:01:40.002Z",
+      "completedAt": "2026-03-26T14:01:40.002Z",
+      "outputPath": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/presentation_deck"
+    },
+    {
+      "templateId": "story_templates",
+      "priority": "normal",
+      "addedAt": "2026-03-23T02:56:37.773Z",
+      "id": "d5fba015-7b84-4216-a397-1c9dd94b5e18",
+      "startedAt": "2026-03-26T14:01:40.002Z",
+      "completedAt": "2026-03-26T14:01:40.003Z",
+      "outputPath": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/story_templates"
+    }
+  ],
+  "failed": []
+}

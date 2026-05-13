@@ -1,0 +1,119 @@
+[
+  {
+    "id": "a705cc44-fe90-4474-85ab-73ddaba4b6aa",
+    "templateId": "instagram_carousel",
+    "status": "TEMPLATE_READY",
+    "timestamp": "2026-03-23T02:56:28.078Z",
+    "details": {
+      "path": {
+        "metadata": {
+          "id": "instagram_carousel",
+          "name": "Instagram Carousel Post",
+          "generatedAt": "2026-03-23T02:56:28.065Z",
+          "version": "1.0.0",
+          "files": {
+            "figma": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel/instagram_carousel_1774234588064_figma_commands.json",
+            "canva": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel/instagram_carousel_1774234588064_canva_import.md"
+          },
+          "config": {
+            "id": "instagram_carousel",
+            "name": "Instagram Carousel Post",
+            "category": "social_media",
+            "sizes": [
+              {
+                "width": 1080,
+                "height": 1080,
+                "pages": 5
+              }
+            ],
+            "style": "modern_minimal",
+            "colors": [
+              "#FF6B6B",
+              "#4ECDC4",
+              "#45B7D1"
+            ],
+            "elements": [
+              "text_boxes",
+              "image_placeholders",
+              "icons"
+            ],
+            "price": {
+              "etsy": 5.99,
+              "creative_market": 7,
+              "designcuts": 6.5
+            },
+            "tags": [
+              "instagram",
+              "carousel",
+              "social media",
+              "engagement",
+              "posts"
+            ]
+          },
+          "status": "ready_for_export"
+        },
+        "outputDir": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel",
+        "files": [
+          "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel/instagram_carousel_1774234588064_figma_commands.json",
+          "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel/instagram_carousel_1774234588064_canva_import.md",
+          "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel/instagram_carousel_1774234588064_metadata.json",
+          "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel/instagram_carousel_1774234588064_preview.html"
+        ]
+      }
+    }
+  },
+  {
+    "id": "873d1730-8ea1-4f9a-b1db-2717a5bdf420",
+    "templateId": "instagram_carousel",
+    "status": "TEMPLATE_READY",
+    "timestamp": "2026-03-23T02:56:37.791Z",
+    "details": {
+      "path": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel"
+    }
+  },
+  {
+    "id": "9456a5a8-2f4c-4784-b759-d73859ebca5b",
+    "templateId": "youtube_thumbnail",
+    "status": "TEMPLATE_READY",
+    "timestamp": "2026-03-23T02:56:37.791Z",
+    "details": {
+      "path": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/youtube_thumbnail"
+    }
+  },
+  {
+    "id": "5513bf09-be7e-4aa4-bc88-f196a708d426",
+    "templateId": "business_card",
+    "status": "TEMPLATE_READY",
+    "timestamp": "2026-03-23T02:56:37.791Z",
+    "details": {
+      "path": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/business_card"
+    }
+  },
+  {
+    "id": "2acb4b2a-8a98-4552-bf8e-f787a5c7eb02",
+    "templateId": "resume_cv",
+    "status": "TEMPLATE_READY",
+    "timestamp": "2026-03-26T14:01:40.006Z",
+    "details": {
+      "path": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/resume_cv"
+    }
+  },
+  {
+    "id": "06460317-f7fc-4ce8-9617-f24a5bb0de1b",
+    "templateId": "presentation_deck",
+    "status": "TEMPLATE_READY",
+    "timestamp": "2026-03-26T14:01:40.007Z",
+    "details": {
+      "path": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/presentation_deck"
+    }
+  },
+  {
+    "id": "dd29962d-f279-4809-b442-dc74640201f0",
+    "templateId": "story_templates",
+    "status": "TEMPLATE_READY",
+    "timestamp": "2026-03-26T14:01:40.007Z",
+    "details": {
+      "path": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/story_templates"
+    }
+  }
+]

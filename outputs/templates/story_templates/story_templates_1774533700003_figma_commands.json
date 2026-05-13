@@ -1,0 +1,58 @@
+{
+  "createFile": {
+    "name": "Instagram Stories Pack - 2026-03-26",
+    "type": "figma_file"
+  },
+  "createPages": [
+    {
+      "name": "Page 1 - 1080x1920",
+      "width": 1080,
+      "height": 1920,
+      "background": "#FF6B9D"
+    }
+  ],
+  "addElements": [
+    {
+      "type": "stickers",
+      "style": "trendy_aesthetic",
+      "colors": [
+        "#FF6B9D",
+        "#C44569",
+        "#F8B500"
+      ]
+    },
+    {
+      "type": "text_animations",
+      "style": "trendy_aesthetic",
+      "colors": [
+        "#FF6B9D",
+        "#C44569",
+        "#F8B500"
+      ]
+    },
+    {
+      "type": "masks",
+      "style": "trendy_aesthetic",
+      "colors": [
+        "#FF6B9D",
+        "#C44569",
+        "#F8B500"
+      ]
+    },
+    {
+      "type": "filters",
+      "style": "trendy_aesthetic",
+      "colors": [
+        "#FF6B9D",
+        "#C44569",
+        "#F8B500"
+      ]
+    }
+  ],
+  "exportSettings": {
+    "format": "PDF",
+    "svg": true,
+    "png": true,
+    "canva_compatible": true
+  }
+}

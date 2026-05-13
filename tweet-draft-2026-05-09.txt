@@ -1,0 +1,28 @@
+Twitter Content Draft - 2026-05-09
+==================================================
+
+Post 1: question
+Text: What model are you using most right now?
+
+A) GPT-4 (OpenAI)
+B) Claude (Anthropic)
+C) Gemini (Google)
+D) Local models (Llama, Mistral, etc.)
+
+Curious about the community breakdown.
+
+Reply with your go-to.
+
+Post 2: reflection
+Text: This week's theme: AI is getting *local*.
+
+• Google Gemma runs on phones
+• Mistral drops open weights weekly
+• Anthropic pushes agentic workflows
+
+The big players aren't just competing on cloud—they're racing to put AI everywhere.
+
+Your phone. Your laptop. Your edge devices.
+
+The 'always online' era might be ending.
+

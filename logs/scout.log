@@ -1,0 +1,1044 @@
+Sun Apr 26 09:59:10 EDT 2026: === Scout Daily Run Started ===
+Sun Apr 26 09:59:10 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:214: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:214: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:214: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:214: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+🎯 Scout Agent Starting...
+📅 2026-04-26 09:59
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+📊 Detected data type: field_activity
+  ⚠️ Sheet 'AM': No account data found
+📊 Detected data type: field_activity
+  ⚠️ Sheet 'FSM': No account data found
+📊 Detected data type: field_activity
+  ⚠️ Sheet 'Reps': No account data found
+📊 Detected data type: field_activity
+  ⚠️ Sheet 'ADS': No account data found
+📊 Detected data type: sales
+  ✅ Sheet 'Opp': 7506 records
+📊 Detected data type: sales
+  ✅ Sheet 'TableS_Off': 11787 records
+📊 Detected data type: field_activity
+  ✅ Sheet 'CPGTable': 25 records
+📊 Detected data type: field_activity
+  ✅ Sheet 'CPGTable_Chambord': 4 records
+📊 Detected data type: sales
+  ✅ Sheet 'Salesforce': 11051 records
+📊 Detected data type: sales
+  ✅ Sheet 'ADS_List': 874 records
+📊 Detected data type: sales
+  ✅ Sheet 'Vol_Check': 1192 records
+📊 Detected data type: field_activity
+  ✅ Sheet 'Mar1-18': 5 records
+📊 Detected data type: field_activity
+  ✅ Sheet 'Mar1-24': 6 records
+📊 Detected data type: field_activity
+  ✅ Sheet 'Mar-Apr1': 7 records
+📊 Detected data type: field_activity
+  ✅ Sheet 'Mar-Apr8': 9 records
+📊 Detected data type: field_activity
+  ✅ Sheet 'Mar-Apr15': 13 records
+📊 Detected data type: field_activity
+  ✅ Sheet 'Mar-Apr20': 25 records
+Traceback (most recent call last):
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 789, in <module>
+    results = scout.run(source)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 744, in run
+    df = self.load_data(source)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 47, in load_data
+    return self._load_excel()
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 99, in _load_excel
+    combined = pd.concat(all_data, ignore_index=True)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/reshape/concat.py", line 395, in concat
+    return op.get_result()
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/reshape/concat.py", line 680, in get_result
+    indexers[ax] = obj_labels.get_indexer(new_labels)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/indexes/base.py", line 3892, in get_indexer
+    raise InvalidIndexError(self._requires_unique_msg)
+pandas.errors.InvalidIndexError: Reindexing only valid with uniquely valued Index objects
+Sun Apr 26 09:59:18 EDT 2026: ❌ Scout failed
+Sun Apr 26 09:59:18 EDT 2026: === Scout Run Complete ===
+
+Mon Apr 27 11:02:18 EDT 2026: === Scout Daily Run Started ===
+Mon Apr 27 11:02:18 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-04-27 11:02
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+Traceback (most recent call last):
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 839, in <module>
+    results = scout.run(source)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 804, in run
+    accounts_data = self.analyze_accounts(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 344, in analyze_accounts
+    return self._analyze_field_activity(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 353, in _analyze_field_activity
+    account_stats = df.groupby('account_name').agg({
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 1432, in aggregate
+    result = op.agg()
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 1603, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 496, in compute_dict_like
+    results = [
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 497, in <listcomp>
+    getattr(obj._gotitem(key, ndim=1), op_name)(how, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 257, in aggregate
+    ret = self._aggregate_multiple_funcs(func, *args, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 362, in _aggregate_multiple_funcs
+    results[key] = self.aggregate(func, *args, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 294, in aggregate
+    return self._python_agg_general(func, *args, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 327, in _python_agg_general
+    result = self._grouper.agg_series(obj, f)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/ops.py", line 873, in agg_series
+    result = self._aggregate_series_pure_python(obj, func)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/ops.py", line 894, in _aggregate_series_pure_python
+    res = func(group)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 324, in <lambda>
+    f = lambda x: func(x, *args, **kwargs)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 356, in <lambda>
+    'activity_type': lambda x: x.dropna().unique().tolist() if len(x.dropna()) > 0 else [],
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 6321, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'unique'
+Mon Apr 27 11:02:33 EDT 2026: ❌ Scout failed
+Mon Apr 27 11:02:33 EDT 2026: === Scout Run Complete ===
+
+Tue Apr 28 15:52:07 EDT 2026: === Scout Daily Run Started ===
+Tue Apr 28 15:52:07 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-04-28 15:52
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+Traceback (most recent call last):
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 839, in <module>
+    results = scout.run(source)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 804, in run
+    accounts_data = self.analyze_accounts(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 344, in analyze_accounts
+    return self._analyze_field_activity(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 353, in _analyze_field_activity
+    account_stats = df.groupby('account_name').agg({
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 1432, in aggregate
+    result = op.agg()
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 1603, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 496, in compute_dict_like
+    results = [
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 497, in <listcomp>
+    getattr(obj._gotitem(key, ndim=1), op_name)(how, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 257, in aggregate
+    ret = self._aggregate_multiple_funcs(func, *args, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 362, in _aggregate_multiple_funcs
+    results[key] = self.aggregate(func, *args, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 294, in aggregate
+    return self._python_agg_general(func, *args, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 327, in _python_agg_general
+    result = self._grouper.agg_series(obj, f)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/ops.py", line 873, in agg_series
+    result = self._aggregate_series_pure_python(obj, func)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/ops.py", line 894, in _aggregate_series_pure_python
+    res = func(group)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 324, in <lambda>
+    f = lambda x: func(x, *args, **kwargs)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 356, in <lambda>
+    'activity_type': lambda x: x.dropna().unique().tolist() if len(x.dropna()) > 0 else [],
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 6321, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'unique'
+Tue Apr 28 15:52:33 EDT 2026: ❌ Scout failed
+Tue Apr 28 15:52:33 EDT 2026: === Scout Run Complete ===
+
+Wed Apr 29 08:57:49 EDT 2026: === Scout Daily Run Started ===
+Wed Apr 29 08:57:49 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-04-29 08:57
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+Traceback (most recent call last):
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 839, in <module>
+    results = scout.run(source)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 804, in run
+    accounts_data = self.analyze_accounts(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 344, in analyze_accounts
+    return self._analyze_field_activity(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 353, in _analyze_field_activity
+    account_stats = df.groupby('account_name').agg({
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 1432, in aggregate
+    result = op.agg()
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 1603, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 496, in compute_dict_like
+    results = [
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/apply.py", line 497, in <listcomp>
+    getattr(obj._gotitem(key, ndim=1), op_name)(how, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 257, in aggregate
+    ret = self._aggregate_multiple_funcs(func, *args, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 362, in _aggregate_multiple_funcs
+    results[key] = self.aggregate(func, *args, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 294, in aggregate
+    return self._python_agg_general(func, *args, **kwargs)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 327, in _python_agg_general
+    result = self._grouper.agg_series(obj, f)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/ops.py", line 873, in agg_series
+    result = self._aggregate_series_pure_python(obj, func)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/ops.py", line 894, in _aggregate_series_pure_python
+    res = func(group)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/generic.py", line 324, in <lambda>
+    f = lambda x: func(x, *args, **kwargs)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 356, in <lambda>
+    'activity_type': lambda x: x.dropna().unique().tolist() if len(x.dropna()) > 0 else [],
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 6321, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'unique'
+Wed Apr 29 09:13:05 EDT 2026: ❌ Scout failed
+Wed Apr 29 09:13:05 EDT 2026: === Scout Run Complete ===
+
+Wed Apr 29 09:13:38 EDT 2026: === Scout Daily Run Started ===
+Wed Apr 29 09:13:38 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-04-29 09:13
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+Traceback (most recent call last):
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 844, in <module>
+    results = scout.run(source)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 809, in run
+    accounts_data = self.analyze_accounts(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 344, in analyze_accounts
+    return self._analyze_field_activity(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 367, in _analyze_field_activity
+    account_stats = account_stats.merge(activity_stats.rename('activity_types'), on='account_name', how='left')
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/frame.py", line 5789, in rename
+    return super()._rename(
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 1125, in _rename
+    indexer = ax.get_indexer_for(replacements)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/indexes/base.py", line 6194, in get_indexer_for
+    return self.get_indexer(target)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/indexes/base.py", line 3887, in get_indexer
+    target = self._maybe_cast_listlike_indexer(target)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/indexes/base.py", line 6729, in _maybe_cast_listlike_indexer
+    target_index = ensure_index(target)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/indexes/base.py", line 7715, in ensure_index
+    return Index(index_like, copy=copy)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/indexes/base.py", line 527, in __new__
+    raise cls._raise_scalar_data_error(data)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/indexes/base.py", line 5299, in _raise_scalar_data_error
+    raise TypeError(
+TypeError: Index(...) must be called with a collection of some kind, 'activity_types' was passed
+Wed Apr 29 09:13:50 EDT 2026: ❌ Scout failed
+Wed Apr 29 09:13:50 EDT 2026: === Scout Run Complete ===
+
+Wed Apr 29 09:27:19 EDT 2026: === Scout Daily Run Started ===
+Wed Apr 29 09:27:19 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-04-29 09:27
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+Traceback (most recent call last):
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 849, in <module>
+    results = scout.run(source)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 814, in run
+    accounts_data = self.analyze_accounts(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 344, in analyze_accounts
+    return self._analyze_field_activity(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 369, in _analyze_field_activity
+    activity_stats_df.columns = ['account_name', 'activity_types']
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 6335, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 817, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/internals/managers.py", line 238, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/internals/base.py", line 98, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 3 elements, new values have 2 elements
+Wed Apr 29 09:31:20 EDT 2026: ❌ Scout failed
+Wed Apr 29 09:31:20 EDT 2026: === Scout Run Complete ===
+
+Wed Apr 29 09:31:50 EDT 2026: === Scout Daily Run Started ===
+Wed Apr 29 09:31:50 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-04-29 09:31
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+Traceback (most recent call last):
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 847, in <module>
+    results = scout.run(source)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 812, in run
+    accounts_data = self.analyze_accounts(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 344, in analyze_accounts
+    return self._analyze_field_activity(df)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 364, in _analyze_field_activity
+    activity_stats = df.groupby('account_name')['activity_type'].apply(lambda x: x.dropna().unique().tolist() if len(x.dropna()) > 0 else [])
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/groupby.py", line 1826, in apply
+    result = self._python_apply_general(f, self._selected_obj)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/groupby.py", line 1887, in _python_apply_general
+    values, mutated = self._grouper.apply_groupwise(f, data, self.axis)
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/groupby/ops.py", line 928, in apply_groupwise
+    res = f(group)
+  File "/Users/aleckennedy/.openclaw/workspace/agents/scout.py", line 364, in <lambda>
+    activity_stats = df.groupby('account_name')['activity_type'].apply(lambda x: x.dropna().unique().tolist() if len(x.dropna()) > 0 else [])
+  File "/Users/aleckennedy/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 6321, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'unique'
+Wed Apr 29 09:46:54 EDT 2026: ❌ Scout failed
+Wed Apr 29 09:46:54 EDT 2026: === Scout Run Complete ===
+
+Wed Apr 29 09:47:09 EDT 2026: === Scout Daily Run Started ===
+Wed Apr 29 09:47:09 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-04-29 09:47
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+✅ Analyzed 42 accounts
+🗺️ Generating route recommendations...
+✅ Generated route with 5 stops
+📋 Creating briefing...
+💾 Saving outputs...
+✅ Saved outputs to /Users/aleckennedy/.openclaw/workspace/data/scout_output
+--------------------------------------------------
+✨ Scout analysis complete!
+📁 Output: /Users/aleckennedy/.openclaw/workspace/data/scout_output
+
+📊 SUMMARY:
+Accounts analyzed: 42
+Route stops: 5
+
+Top Priority: BLACK HAMMOCK LAZY GATOR BAR
+Wed Apr 29 09:47:21 EDT 2026: ✅ Scout completed successfully
+Wed Apr 29 09:47:21 EDT 2026: 📧 Briefing generated, ready for email
+Wed Apr 29 09:47:21 EDT 2026: 📊 Dashboard updated
+Wed Apr 29 09:47:21 EDT 2026: === Scout Run Complete ===
+
+Thu Apr 30 08:58:16 EDT 2026: === Scout Daily Run Started ===
+Thu Apr 30 08:58:16 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-04-30 08:58
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+✅ Analyzed 42 accounts
+🗺️ Generating route recommendations...
+✅ Generated route with 5 stops
+📋 Creating briefing...
+💾 Saving outputs...
+✅ Saved outputs to /Users/aleckennedy/.openclaw/workspace/data/scout_output
+--------------------------------------------------
+✨ Scout analysis complete!
+📁 Output: /Users/aleckennedy/.openclaw/workspace/data/scout_output
+
+📊 SUMMARY:
+Accounts analyzed: 42
+Route stops: 5
+
+Top Priority: BLACK HAMMOCK LAZY GATOR BAR
+Thu Apr 30 08:58:25 EDT 2026: ✅ Scout completed successfully
+Thu Apr 30 08:58:25 EDT 2026: 📧 Briefing generated, ready for email
+Thu Apr 30 08:58:25 EDT 2026: 📊 Dashboard updated
+Thu Apr 30 08:58:25 EDT 2026: === Scout Run Complete ===
+
+Fri May  1 08:14:27 EDT 2026: === Scout Daily Run Started ===
+Fri May  1 08:14:27 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-05-01 08:14
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+✅ Analyzed 42 accounts
+🗺️ Generating route recommendations...
+✅ Generated route with 5 stops
+📋 Creating briefing...
+💾 Saving outputs...
+✅ Saved outputs to /Users/aleckennedy/.openclaw/workspace/data/scout_output
+--------------------------------------------------
+✨ Scout analysis complete!
+📁 Output: /Users/aleckennedy/.openclaw/workspace/data/scout_output
+
+📊 SUMMARY:
+Accounts analyzed: 42
+Route stops: 5
+
+Top Priority: OCEAN AVE BAR & KITCHEN
+Fri May  1 08:14:42 EDT 2026: ✅ Scout completed successfully
+Fri May  1 08:14:42 EDT 2026: 📧 Briefing generated, ready for email
+Fri May  1 08:14:42 EDT 2026: 📊 Dashboard updated
+Fri May  1 08:14:42 EDT 2026: === Scout Run Complete ===
+
+Sun May  3 03:40:37 EDT 2026: === Scout Daily Run Started ===
+Sun May  3 03:40:37 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-05-03 03:40
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+✅ Analyzed 42 accounts
+🗺️ Generating route recommendations...
+✅ Generated route with 5 stops
+📋 Creating briefing...
+💾 Saving outputs...
+✅ Saved outputs to /Users/aleckennedy/.openclaw/workspace/data/scout_output
+--------------------------------------------------
+✨ Scout analysis complete!
+📁 Output: /Users/aleckennedy/.openclaw/workspace/data/scout_output
+
+📊 SUMMARY:
+Accounts analyzed: 42
+Route stops: 5
+
+Top Priority: OCEAN AVE BAR & KITCHEN
+Sun May  3 03:40:46 EDT 2026: ✅ Scout completed successfully
+Sun May  3 03:40:46 EDT 2026: 📧 Briefing generated, ready for email
+Sun May  3 03:40:46 EDT 2026: 📊 Dashboard updated
+Sun May  3 03:40:46 EDT 2026: === Scout Run Complete ===
+
+Sun May  3 09:04:11 EDT 2026: === Scout Daily Run Started ===
+Sun May  3 09:04:11 EDT 2026: 🎯 Running Scout Agent...
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:261: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['activity_date'] = pd.to_datetime(df['activity_date'], errors='coerce')
+/Users/aleckennedy/.openclaw/workspace/agents/scout.py:124: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined = pd.concat(normalized_dfs, ignore_index=True)
+🎯 Scout Agent Starting...
+📅 2026-05-03 09:04
+--------------------------------------------------
+📊 Loading data from excel...
+📂 Loading B-F FY26 Q4 H&R Road to Cinco.xlsx...
+  ✅ Sheet 'Opp': 7506 sales records
+  ✅ Sheet 'TableS_Off': 11787 sales records
+  ✅ Sheet 'CPGTable': 25 field activity records
+  ✅ Sheet 'Salesforce': 11051 sales records
+  ✅ Sheet 'ADS_List': 874 sales records
+  ✅ Sheet 'Vol_Check': 1192 sales records
+  ✅ Sheet 'Mar1-18': 5 field activity records
+  ✅ Sheet 'Mar1-24': 6 field activity records
+  ✅ Sheet 'Mar-Apr1': 7 field activity records
+  ✅ Sheet 'Mar-Apr8': 9 field activity records
+  ✅ Sheet 'Mar-Apr15': 13 field activity records
+  ✅ Sheet 'Mar-Apr20': 25 field activity records
+📂 Loading B-F FY26 H&R Woodford Derby.xlsx...
+  ✅ Sheet 'CPGTable': 21 field activity records
+  ✅ Sheet 'Salesforce': 16747 sales records
+  ✅ Sheet 'ADS_List': 869 sales records
+  ✅ Sheet 'Vol_Check': 5880 sales records
+  ✅ Sheet 'Mar-Apr2': 1 field activity records
+  ✅ Sheet 'Mar-Apr8': 3 field activity records
+  ✅ Sheet 'Mar-Apr15': 4 field activity records
+  ✅ Sheet 'Mar-Apr20': 21 field activity records
+
+📊 Using FIELD ACTIVITY data: 140 records
+✅ Loaded 140 records
+🔍 Analyzing accounts...
+✅ Analyzed 42 accounts
+🗺️ Generating route recommendations...
+✅ Generated route with 5 stops
+📋 Creating briefing...
+💾 Saving outputs...
+✅ Saved outputs to /Users/aleckennedy/.openclaw/workspace/data/scout_output
+--------------------------------------------------
+✨ Scout analysis complete!
+📁 Output: /Users/aleckennedy/.openclaw/workspace/data/scout_output
+
+📊 SUMMARY:
+Accounts analyzed: 42
+Route stops: 5
+
+Top Priority: OCEAN AVE BAR & KITCHEN
+Sun May  3 09:04:19 EDT 2026: ✅ Scout completed successfully
+Sun May  3 09:04:19 EDT 2026: 📧 Briefing generated, ready for email
+Sun May  3 09:04:19 EDT 2026: 📊 Dashboard updated
+Sun May  3 09:04:19 EDT 2026: === Scout Run Complete ===
+
+Tue May  5 08:33:41 EDT 2026: === Scout Daily Run Started ===
+Tue May  5 08:33:41 EDT 2026: 🎯 Running Scout Agent (Optimized v3.1)...
+🎯 Scout v3.1 - Optimized B-F Sales Performance
+--------------------------------------------------
+📦 Using cached fsm_data (file unchanged)
+✅ Loaded 29 FSMs
+📦 Using cached reps_data (file unchanged)
+✅ Loaded 115 reps
+✅ Total unique reps: 144
+🔍 Analyzing performance...
+📋 Creating briefing...
+--------------------------------------------------
+✨ COMPLETE in 0.0s
+
+📊 ROAD TO CINCO SUMMARY:
+   Total Reps: 144
+   New POD: 264 (Goal: 366)
+   Team % to Goal: 72.1%
+   Total Payouts: $2,010
+   🏆 0 | ✅ 0 | ⚠️ 0 | ❗ 21
+
+📁 Files saved to scout_output/
+Tue May  5 08:33:42 EDT 2026: ✅ Scout completed successfully
+Tue May  5 08:33:42 EDT 2026: 📧 Briefing generated, ready for email
+Tue May  5 08:33:42 EDT 2026: 📤 Sending email...
+Tue May  5 08:33:42 EDT 2026: === Scout Run Complete ===
+
+Wed May  6 08:53:14 EDT 2026: === Scout Daily Run Started ===
+Wed May  6 08:53:14 EDT 2026: 🎯 Running Scout Agent (Optimized v3.1)...
+🎯 Scout v3.1 - Optimized B-F Sales Performance
+--------------------------------------------------
+📦 Using cached fsm_data (file unchanged)
+✅ Loaded 29 FSMs
+📦 Using cached reps_data (file unchanged)
+✅ Loaded 115 reps
+✅ Total unique reps: 144
+🔍 Analyzing performance...
+📋 Creating briefing...
+--------------------------------------------------
+✨ COMPLETE in 0.0s
+
+📊 ROAD TO CINCO SUMMARY:
+   Total Reps: 144
+   New POD: 264 (Goal: 366)
+   Team % to Goal: 72.1%
+   Total Payouts: $2,010
+   🏆 0 | ✅ 0 | ⚠️ 0 | ❗ 21
+
+📁 Files saved to scout_output/
+Wed May  6 08:53:15 EDT 2026: ✅ Scout completed successfully
+Wed May  6 08:53:15 EDT 2026: 📧 Briefing generated, ready for email
+Wed May  6 08:53:15 EDT 2026: 📤 Sending email...
+Wed May  6 08:53:15 EDT 2026: === Scout Run Complete ===
+
+Thu May  7 08:15:26 EDT 2026: === Scout Daily Run Started ===
+Thu May  7 08:15:26 EDT 2026: 🎯 Running Scout Agent (Optimized v3.1)...
+🎯 Scout v3.1 - Optimized B-F Sales Performance
+--------------------------------------------------
+📦 Using cached fsm_data (file unchanged)
+✅ Loaded 29 FSMs
+📦 Using cached reps_data (file unchanged)
+✅ Loaded 115 reps
+✅ Total unique reps: 144
+🔍 Analyzing performance...
+📋 Creating briefing...
+--------------------------------------------------
+✨ COMPLETE in 0.0s
+
+📊 ROAD TO CINCO SUMMARY:
+   Total Reps: 144
+   New POD: 264 (Goal: 366)
+   Team % to Goal: 72.1%
+   Total Payouts: $2,010
+   🏆 0 | ✅ 0 | ⚠️ 0 | ❗ 21
+
+📁 Files saved to scout_output/
+Thu May  7 08:15:26 EDT 2026: ✅ Scout completed successfully
+Thu May  7 08:15:26 EDT 2026: 📧 Briefing generated, ready for email
+Thu May  7 08:15:26 EDT 2026: 📤 Sending email...
+Thu May  7 08:15:26 EDT 2026: === Scout Run Complete ===
+
+Sat May  9 08:09:39 EDT 2026: === Scout Daily Run Started ===
+Sat May  9 08:09:39 EDT 2026: 🎯 Running Scout Agent (Optimized v3.1)...
+🎯 Scout v3.1 - Optimized B-F Sales Performance
+--------------------------------------------------
+📦 Using cached fsm_data (file unchanged)
+✅ Loaded 29 FSMs
+📦 Using cached reps_data (file unchanged)
+✅ Loaded 115 reps
+✅ Total unique reps: 144
+🔍 Analyzing performance...
+📋 Creating briefing...
+--------------------------------------------------
+✨ COMPLETE in 0.0s
+
+📊 ROAD TO CINCO SUMMARY:
+   Total Reps: 144
+   New POD: 264 (Goal: 366)
+   Team % to Goal: 72.1%
+   Total Payouts: $2,010
+   🏆 0 | ✅ 0 | ⚠️ 0 | ❗ 21
+
+📁 Files saved to scout_output/
+Sat May  9 08:09:39 EDT 2026: ✅ Scout completed successfully
+Sat May  9 08:09:39 EDT 2026: 📧 Briefing generated, ready for email
+Sat May  9 08:09:39 EDT 2026: 📤 Sending email...
+Sat May  9 08:09:39 EDT 2026: === Scout Run Complete ===
+
+Sun May 10 08:07:49 EDT 2026: === Scout Daily Run Started ===
+Sun May 10 08:07:49 EDT 2026: 🎯 Running Scout Agent (Optimized v3.1)...
+🎯 Scout v3.1 - Optimized B-F Sales Performance
+--------------------------------------------------
+📦 Using cached fsm_data (file unchanged)
+✅ Loaded 29 FSMs
+📦 Using cached reps_data (file unchanged)
+✅ Loaded 115 reps
+✅ Total unique reps: 144
+🔍 Analyzing performance...
+📋 Creating briefing...
+--------------------------------------------------
+✨ COMPLETE in 0.1s
+
+📊 ROAD TO CINCO SUMMARY:
+   Total Reps: 144
+   New POD: 264 (Goal: 366)
+   Team % to Goal: 72.1%
+   Total Payouts: $2,010
+   🏆 0 | ✅ 0 | ⚠️ 0 | ❗ 21
+
+📁 Files saved to scout_output/
+Sun May 10 08:07:50 EDT 2026: ✅ Scout completed successfully
+Sun May 10 08:07:50 EDT 2026: 📧 Briefing generated, ready for email
+Sun May 10 08:07:50 EDT 2026: 📤 Sending email...
+Sun May 10 08:07:50 EDT 2026: === Scout Run Complete ===
+
+Mon May 11 08:22:44 EDT 2026: === Scout Daily Run Started ===
+Mon May 11 08:22:44 EDT 2026: 🎯 Running Scout Agent (Optimized v3.1)...
+🎯 Scout v3.1 - Optimized B-F Sales Performance
+--------------------------------------------------
+📦 Using cached fsm_data (file unchanged)
+✅ Loaded 29 FSMs
+📦 Using cached reps_data (file unchanged)
+✅ Loaded 115 reps
+✅ Total unique reps: 144
+🔍 Analyzing performance...
+📋 Creating briefing...
+--------------------------------------------------
+✨ COMPLETE in 0.0s
+
+📊 ROAD TO CINCO SUMMARY:
+   Total Reps: 144
+   New POD: 264 (Goal: 366)
+   Team % to Goal: 72.1%
+   Total Payouts: $2,010
+   🏆 0 | ✅ 0 | ⚠️ 0 | ❗ 21
+
+📁 Files saved to scout_output/
+Mon May 11 08:22:45 EDT 2026: ✅ Scout completed successfully
+Mon May 11 08:22:45 EDT 2026: 📧 Briefing generated, ready for email
+Mon May 11 08:22:45 EDT 2026: 📤 Sending email...
+Mon May 11 08:22:45 EDT 2026: === Scout Run Complete ===
+
+Tue May 12 08:15:46 EDT 2026: === Scout Daily Run Started ===
+Tue May 12 08:15:46 EDT 2026: 🎯 Running Scout Agent (Optimized v3.1)...
+🎯 Scout v3.1 - Optimized B-F Sales Performance
+--------------------------------------------------
+📦 Using cached fsm_data (file unchanged)
+✅ Loaded 29 FSMs
+📦 Using cached reps_data (file unchanged)
+✅ Loaded 115 reps
+✅ Total unique reps: 144
+🔍 Analyzing performance...
+📋 Creating briefing...
+--------------------------------------------------
+✨ COMPLETE in 0.0s
+
+📊 ROAD TO CINCO SUMMARY:
+   Total Reps: 144
+   New POD: 264 (Goal: 366)
+   Team % to Goal: 72.1%
+   Total Payouts: $2,010
+   🏆 0 | ✅ 0 | ⚠️ 0 | ❗ 21
+
+📁 Files saved to scout_output/
+Tue May 12 08:15:47 EDT 2026: ✅ Scout completed successfully
+Tue May 12 08:15:47 EDT 2026: 📧 Briefing generated, ready for email
+Tue May 12 08:15:47 EDT 2026: 📤 Sending email...
+Tue May 12 08:15:47 EDT 2026: === Scout Run Complete ===
+

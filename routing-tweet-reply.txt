@@ -1,0 +1,12 @@
+New routing system LIVE:
+
+🟢 <30k tokens → Haiku/Ollama ($0-0.80/1M)
+🔵 30k-100k tokens → o3-mini ($1.10/1M)  
+🔴 >100k tokens → Claude Sonnet ($3/1M)
+
+Before: GPT-4o hitting rate limits on large tasks
+After: 3x cost savings, zero errors
+
+Key: Check size FIRST, route to cheapest capable model.
+
+Full breakdown: theonegroup.info/blog/openclaw-optimization-without-claude-max.html

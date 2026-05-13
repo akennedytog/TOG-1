@@ -1,0 +1,884 @@
+[
+  {
+    "account_name": "OCEAN AVE BAR & KITCHEN",
+    "total_visits": 10,
+    "unique_visit_days": 1,
+    "visits_per_week": 10.0,
+    "last_visit": "2026-03-30",
+    "days_since_visit": 33,
+    "reps": [
+      "ANDREW WEILAND"
+    ],
+    "rep_count": 1,
+    "city": "RIVIERA BEACH",
+    "address": "2551 OCEAN AVE",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 33 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 96.0
+  },
+  {
+    "account_name": "BLACK HAMMOCK LAZY GATOR BAR",
+    "total_visits": 7,
+    "unique_visit_days": 1,
+    "visits_per_week": 7.0,
+    "last_visit": "2026-03-10",
+    "days_since_visit": 53,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "OVIEDO",
+    "address": "2356 BLACK HAMMOND FC R",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 53 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 95.7
+  },
+  {
+    "account_name": "CHEERS ON",
+    "total_visits": 7,
+    "unique_visit_days": 2,
+    "visits_per_week": 4.1,
+    "last_visit": "2026-03-23",
+    "days_since_visit": 40,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "ORLANDO",
+    "address": "6923 MUNICIPAL DR",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 40 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 95.7
+  },
+  {
+    "account_name": "EL PATRON MEXICAN REST",
+    "total_visits": 7,
+    "unique_visit_days": 1,
+    "visits_per_week": 7.0,
+    "last_visit": "2026-03-10",
+    "days_since_visit": 53,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "ORLANDO",
+    "address": "12167 S APOPKA VINELAND RD",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 53 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 95.7
+  },
+  {
+    "account_name": "VIDA COCINA & TEQUILA",
+    "total_visits": 7,
+    "unique_visit_days": 1,
+    "visits_per_week": 7.0,
+    "last_visit": "2026-03-10",
+    "days_since_visit": 53,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "ALTAMONTE SPRINGS",
+    "address": "275 W SR 436",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 53 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 95.7
+  },
+  {
+    "account_name": "WHOLE ENCHILADA FRESH MEX",
+    "total_visits": 7,
+    "unique_visit_days": 1,
+    "visits_per_week": 7.0,
+    "last_visit": "2026-03-10",
+    "days_since_visit": 53,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "WINTER GARDEN",
+    "address": "129 W PLANT ST",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 53 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 95.7
+  },
+  {
+    "account_name": "TUFFYS BOTTLE SHOP & LOUN",
+    "total_visits": 6,
+    "unique_visit_days": 1,
+    "visits_per_week": 6.0,
+    "last_visit": "2026-03-23",
+    "days_since_visit": 40,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "SANFORD",
+    "address": "200 S MYRTLE AVE",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 40 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 95.6
+  },
+  {
+    "account_name": "LOBSTER BAR SEA GRILLE",
+    "total_visits": 8,
+    "unique_visit_days": 1,
+    "visits_per_week": 8.0,
+    "last_visit": "2026-04-02",
+    "days_since_visit": 30,
+    "reps": [
+      "AJA FISHER"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "450 E LAS OLAS BLVD STE 190",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 30 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 85.8
+  },
+  {
+    "account_name": "HYATT CENTRIC LAS OLAS FT",
+    "total_visits": 4,
+    "unique_visit_days": 1,
+    "visits_per_week": 4.0,
+    "last_visit": "2026-04-02",
+    "days_since_visit": 30,
+    "reps": [
+      "AJA FISHER"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "100 E LAS OLAS BLVD",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 30 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 85.4
+  },
+  {
+    "account_name": "PUBLIX #0683 LIQ",
+    "total_visits": 4,
+    "unique_visit_days": 1,
+    "visits_per_week": 4.0,
+    "last_visit": "2026-04-08",
+    "days_since_visit": 24,
+    "reps": [
+      "BRIAN BENCO"
+    ],
+    "rep_count": 1,
+    "city": "FT MYERS",
+    "address": "5995 S POINTE BLVD",
+    "activity_types": [
+      "Feature Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 24 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 85.4
+  },
+  {
+    "account_name": "COWBOYS ORLANDO",
+    "total_visits": 3,
+    "unique_visit_days": 1,
+    "visits_per_week": 3.0,
+    "last_visit": "2026-04-10",
+    "days_since_visit": 22,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "ORLANDO",
+    "address": "1108 S  ORANGE BLSM TR",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 22 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 85.3
+  },
+  {
+    "account_name": "EL ZOCALO RESTAURANTE",
+    "total_visits": 3,
+    "unique_visit_days": 1,
+    "visits_per_week": 3.0,
+    "last_visit": "2026-04-10",
+    "days_since_visit": 22,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "SANFORD",
+    "address": "406 S SANFORD AVE",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 22 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 85.3
+  },
+  {
+    "account_name": "RITZ-CARLTON ORLANDO - BLEU",
+    "total_visits": 3,
+    "unique_visit_days": 1,
+    "visits_per_week": 3.0,
+    "last_visit": "2026-04-10",
+    "days_since_visit": 22,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "ORLANDO",
+    "address": "4012 CENTRAL FL PKWY",
+    "activity_types": [
+      "Cocktail List Activation"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 22 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 85.3
+  },
+  {
+    "account_name": "TRICK SHOTS",
+    "total_visits": 3,
+    "unique_visit_days": 1,
+    "visits_per_week": 3.0,
+    "last_visit": "2026-04-10",
+    "days_since_visit": 22,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "ORLANDO",
+    "address": "11351 LAKE UNDERHILL RD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "at_risk",
+    "alert": "No visits in 22 days",
+    "suggested_action": "Priority visit - re-engage account",
+    "priority_score": 85.3
+  },
+  {
+    "account_name": "TATTOOS AND SCARS",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-17",
+    "days_since_visit": 15,
+    "reps": [
+      "LENWARD WITT"
+    ],
+    "rep_count": 1,
+    "city": "KEY WEST",
+    "address": "512 GREEN STREET",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "needs_visit",
+    "alert": "15 days since last visit",
+    "suggested_action": "Schedule routine check-in",
+    "priority_score": 80.2
+  },
+  {
+    "account_name": "BIG CITY TAVERN",
+    "total_visits": 5,
+    "unique_visit_days": 3,
+    "visits_per_week": 5.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "STEVEN ROTH"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "609 E LAS OLAS BLVD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "hot",
+    "alert": "High activity (5.0 visits/week)",
+    "suggested_action": "Capitalize momentum - plan promotion",
+    "priority_score": 75.5
+  },
+  {
+    "account_name": "YOT",
+    "total_visits": 4,
+    "unique_visit_days": 2,
+    "visits_per_week": 4.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "DAVID TAMAYO"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "2015 SW 20 ST",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "hot",
+    "alert": "High activity (4.0 visits/week)",
+    "suggested_action": "Capitalize momentum - plan promotion",
+    "priority_score": 75.4
+  },
+  {
+    "account_name": "430 BOARD ROOM BAR",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "3343 NE 32ND ST",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "AMERICAN SOCIAL",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-21",
+    "days_since_visit": 11,
+    "reps": [
+      "AJA FISHER"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "721 E LAS OLAS BLVD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "BOATYARD",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "DAVID TAMAYO"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "1555 SE 17TH STREET",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "BOBBYS",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "Billy Mines"
+    ],
+    "rep_count": 1,
+    "city": "VERO BCH",
+    "address": "3450 OCEAN DRIVE",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "BRIMSTONE WOODFIRE GRILL",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "DAVID TAMAYO"
+    ],
+    "rep_count": 1,
+    "city": "PEMBROKE PINES",
+    "address": "14575 SW 5TH STREET",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "CT CANTINA AND TAQUERIA",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "DAVID TAMAYO"
+    ],
+    "rep_count": 1,
+    "city": "DANIA BCH",
+    "address": "176 N POINTE DR",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "DEL MAR WEST PALM BEACH",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-21",
+    "days_since_visit": 12,
+    "reps": [
+      "ERIN DEMARA"
+    ],
+    "rep_count": 1,
+    "city": "WEST PALM BEACH",
+    "address": "1015 N RAILROAD AVE",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "DRYNK",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "WILTON MANORS",
+    "address": "2255 WILTON DR",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "ELISABETTAS",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-21",
+    "days_since_visit": 12,
+    "reps": [
+      "ERIN DEMARA"
+    ],
+    "rep_count": 1,
+    "city": "WEST PALM BEACH",
+    "address": "185 BANYAN BLVD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "G7",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "DAVID TAMAYO"
+    ],
+    "rep_count": 1,
+    "city": "HOLLYWOOD",
+    "address": "5530 SR 7 7TH FL",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "GRAFTON STREET PUB CROWN ALLEY",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "ABIGAIL WHITAKER"
+    ],
+    "rep_count": 1,
+    "city": "LAKE MARY",
+    "address": "7055 COUNTRY RD 46AQ",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "GULFSTREAM PK FD & BEV",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "DAVID TAMAYO"
+    ],
+    "rep_count": 1,
+    "city": "HALLANDALE",
+    "address": "901 S FEDERAL HWY",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "GYMSPORTS BAR",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "WILTON MANORS",
+    "address": "2287 WILTON MANOR DR",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "HUNTERS NIGHTCLUB",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "WILTON MANORS",
+    "address": "2232 WILTON DR",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "LA BAMBA MEXICAN SPANISH",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "DAVID TAMAYO"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "1901 CORDOVA RD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "LIT",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "WILTON MANORS",
+    "address": "2440 WILTON DRIVE",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "MANOR LANES SPORTS DEN",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "WILTON MANORS",
+    "address": "1517 NE 26TH STREET",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "PENROD'S ELBOW ROOM",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "241 S ATLANTIC BLVD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "PROOF",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "WILTON MANORS",
+    "address": "2045 WILTON DR",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "QUARTERDECK SEAFOOD BAR",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "DAVID TAMAYO"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "1035 SE 17 ST",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "RIVERSIDE CAFE",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "Billy Mines"
+    ],
+    "rep_count": 1,
+    "city": "VERO BCH",
+    "address": "1 BEACHLAND BLVD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "SCANDALS SALOON",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "WILTON MANORS",
+    "address": "3073 NE 6TH AVE",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "SEASONS 52 #4502",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "JAMES BRAY"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "2428 SUNRISE BLVD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "SICILIAN OVEN WOOD",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-20",
+    "days_since_visit": 12,
+    "reps": [
+      "DAVID TAMAYO"
+    ],
+    "rep_count": 1,
+    "city": "COOPER CITY",
+    "address": "5544 S FLAMINGO RD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  },
+  {
+    "account_name": "YOLO",
+    "total_visits": 2,
+    "unique_visit_days": 1,
+    "visits_per_week": 2.0,
+    "last_visit": "2026-04-21",
+    "days_since_visit": 11,
+    "reps": [
+      "AJA FISHER"
+    ],
+    "rep_count": 1,
+    "city": "FT LAUDERDALE",
+    "address": "333 EAST LAS OLAS BLVD",
+    "activity_types": [
+      "Feature Activation (spirits/on)"
+    ],
+    "status": "active",
+    "alert": null,
+    "suggested_action": "Standard visit",
+    "priority_score": 70.2
+  }
+]

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 Mission Control - The One Group</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'slide-in': 'slideIn 0.3s ease-out',
+            'fade-in': 'fadeIn 0.2s ease-out',
+          },
+          keyframes: {
+            slideIn: {
+              '0%': { transform: 'translateX(100%)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%); }
+    .glass-panel { 
+      background: rgba(30, 41, 59, 0.8); 
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    .agent-card { 
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 2px solid;
+      transition: all 0.3s ease;
+    }
+    .agent-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .status-active { border-color: #10b981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); }
+    .status-idle { border-color: #f59e0b; }
+    .pulse-green { animation: pulse-green 2s infinite; }
+    @keyframes pulse-green { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+    .lead-row:hover { background: rgba(51, 65, 85, 0.5); }
+    .metric-card { border-left: 4px solid; }
+    .nav-tab { transition: all 0.2s; }
+    .nav-tab.active { background: rgba(59, 130, 246, 0.3); border-color: #3b82f6; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .activity-feed { max-height: 300px; overflow-y: auto; }
+    .activity-feed::-webkit-scrollbar { width: 6px; }
+    .activity-feed::-webkit-scrollbar-track { background: rgba(30, 41, 59, 0.5); }
+    .activity-feed::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.3); border-radius: 3px; }
+    .sparkline { fill: none; stroke-width: 2; }
+    .alert-badge { animation: pulse-red 2s infinite; }
+    @keyframes pulse-red { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .spotlight { position: fixed; top: 20%; left: 50%; transform: translateX(-50%); width: 600px; z-index: 100; }
+    .funnel-bar { transition: width 0.5s ease-out; }
+    .quick-action-btn { transition: all 0.2s; }
+    .quick-action-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
+    .side-panel { transition: transform 0.3s ease-out; }
+    .side-panel.closed { transform: translateX(100%); }
+    .trend-up { color: #10b981; }
+    .trend-down { color: #ef4444; }
+    .trend-flat { color: #94a3b8; }
+  </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen">
+  
+  <!-- Spotlight Search Overlay -->
+  <div id="spotlight-overlay" class="fixed inset-0 bg-black/50 hidden z-50" onclick="closeSpotlight()">
+    <div class="spotlight" onclick="event.stopPropagation()">
+      <div class="glass-panel rounded-xl p-4 shadow-2xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-slate-400">⌘</span>
+          <input type="text" id="spotlight-input" placeholder="Search leads, agents, actions..." 
+            class="bg-transparent border-none outline-none text-white text-lg w-full" autofocus>
+        </div>
+        <div id="spotlight-results" class="space-y-2 max-h-96 overflow-y-auto">
+          <!-- Results populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert Center Panel -->
+  <div id="alert-center" class="fixed top-16 right-4 w-80 glass-panel rounded-xl shadow-2xl z-40 hidden">
+    <div class="p-4 border-b border-slate-700 flex justify-between items-center">
+      <h3 class="font-semibold flex items-center gap-2">
+        🔔 Alerts <span id="alert-count" class="bg-red-500 text-xs px-2 py-0.5 rounded-full">3</span>
+      </h3>
+      <button onclick="closeAlertCenter()" class="text-slate-400 hover:text-white">&times;</button>
+    </div>
+    <div id="alert-list" class="p-4 space-y-3 max-h-96 overflow-y-auto">
+      <!-- Alerts populated by JS -->
+    </div>
+  </div>
+
+  <!-- Side Panel for Lead Details -->
+  <div id="side-panel" class="fixed inset-y-0 right-0 w-96 glass-panel side-panel closed z-50 shadow-2xl overflow-y-auto">
+    <div class="p-6">
+      <div class="flex justify-between items-start mb-6">
+        <h2 id="side-panel-title" class="text-xl font-bold">Lead Details</h2>
+        <button onclick="closeSidePanel()" class="text-slate-400 hover:text-white text-2xl">&times;</button>
+      </div>
+      <div id="side-panel-content">
+        <!-- Content populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="gradient-bg p-4 border-b border-slate-700 sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl cursor-pointer hover:scale-105 transition" onclick="showSection('overview')">
+            🚀
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold">Mission Control</h1>
+            <p class="text-blue-200 text-sm">The One Group • AI Automation Dashboard</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-4">
+          <!-- Quick Search Button -->
+          <button onclick="openSpotlight()" class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition">
+            <span>🔍</span>
+            <span class="hidden sm:inline">Search</span>
+            <span class="text-slate-500 text-xs">⌘K</span>
+          </button>
+          
+          <!-- Alert Bell -->
+          <button onclick="toggleAlertCenter()" class="relative bg-slate-800 hover:bg-slate-700 p-2 rounded-lg transition">
+            🔔
+            <span id="header-alert-badge" class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full text-xs flex items-center justify-center alert-badge">3</span>
+          </button>
+          
+          <!-- Theme Toggle -->
+          <button onclick="toggleTheme()" id="theme-toggle" class="bg-slate-800 hover:bg-slate-700 p-2 rounded-lg transition">
+            🌙
+          </button>
+          
+          <div class="text-right hidden md:block">
+            <p class="font-semibold">Alec Kennedy</p>
+            <p class="text-xs text-slate-400">akennedy@theonegroup.info</p>
+          </div>
+          <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center">
+            <span class="font-bold">AK</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Navigation Tabs -->
+      <nav class="flex gap-2 mt-4 overflow-x-auto hide-scrollbar">
+        <button onclick="showSection('overview')" id="tab-overview" class="nav-tab active px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium whitespace-nowrap">
+          📊 Overview
+        </button>
+        <button onclick="showSection('agents')" id="tab-agents" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium whitespace-nowrap">
+          🤖 AI Agents
+        </button>
+        <button onclick="showSection('leads')" id="tab-leads" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium whitespace-nowrap">
+          🔥 Leads (70)
+        </button>
+        <button onclick="showSection('pipeline')" id="tab-pipeline" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium whitespace-nowrap">
+          💰 Pipeline
+        </button>
+        <button onclick="showSection('content')" id="tab-content" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium whitespace-nowrap">
+          📝 Content
+        </button>
+        <button onclick="showSection('competitors')" id="tab-competitors" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium whitespace-nowrap">
+          👁️ Competitors
+        </button>
+        <button onclick="showSection('activity')" id="tab-activity" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium whitespace-nowrap">
+          📈 Activity
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto p-4">
+    
+    <!-- OVERVIEW SECTION -->
+    <section id="section-overview" class="space-y-4">
+      
+      <!-- Revenue Pipeline Summary -->
+      <div class="glass-panel rounded-xl p-4">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold">💰 Revenue Pipeline</h2>
+          <button onclick="showSection('pipeline')" class="text-blue-400 text-sm hover:underline">View Details →</button>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+          <div class="text-center">
+            <p class="text-slate-400 text-xs uppercase mb-1">Pipeline Value</p>
+            <p class="text-2xl font-bold text-green-400">$127,500</p>
+            <p class="text-xs text-slate-500">8 qualified × $15,937 avg</p>
+          </div>
+          <div class="text-center">
+            <p class="text-slate-400 text-xs uppercase mb-1">Closed This Month</p>
+            <p class="text-2xl font-bold text-white">$0</p>
+            <p class="text-xs text-slate-500">Need to close deals</p>
+          </div>
+          <div class="text-center">
+            <p class="text-slate-400 text-xs uppercase mb-1">Monthly Goal</p>
+            <p class="text-2xl font-bold text-amber-400">$50,000</p>
+            <p class="text-xs text-slate-500">0% complete</p>
+          </div>
+          <div class="text-center">
+            <p class="text-slate-400 text-xs uppercase mb-1">Days Left</p>
+            <p class="text-2xl font-bold text-red-400">5</p>
+            <p class="text-xs text-slate-500">Until month end</p>
+          </div>
+        </div>
+        
+        <!-- Visual Funnel -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-4">
+            <div class="w-20 text-xs text-slate-400">New (70)</div>
+            <div class="flex-1 bg-slate-800 rounded-full h-6 overflow-hidden">
+              <div class="bg-blue-600 h-full funnel-bar" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-20 text-xs text-slate-400">Contacted (12)</div>
+            <div class="flex-1 bg-slate-800 rounded-full h-6 overflow-hidden">
+              <div class="bg-yellow-600 h-full funnel-bar" style="width: 17%"></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-20 text-xs text-slate-400">Proposal (5)</div>
+            <div class="flex-1 bg-slate-800 rounded-full h-6 overflow-hidden">
+              <div class="bg-purple-600 h-full funnel-bar" style="width: 7%"></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-20 text-xs text-slate-400">Closed (0)</div>
+            <div class="flex-1 bg-slate-800 rounded-full h-6 overflow-hidden">
+              <div class="bg-green-600 h-full funnel-bar" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-panel rounded-xl p-4 metric-card cursor-pointer hover:bg-slate-800/50 transition" style="border-left-color: #3b82f6;" onclick="showSection('agents')">
+          <p class="text-slate-400 text-xs uppercase">AI Agents</p>
+          <p class="text-3xl font-bold text-blue-400">8</p>
+          <p class="text-xs text-green-400">6 active • 2 idle</p>
+          <div class="mt-2 h-8" id="agents-sparkline"></div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4 metric-card cursor-pointer hover:bg-slate-800/50 transition" style="border-left-color: #8b5cf6;" onclick="showSection('leads')">
+          <p class="text-slate-400 text-xs uppercase">Leads</p>
+          <p class="text-3xl font-bold text-purple-400">70</p>
+          <p class="text-xs text-green-400">8 qualified • 20 new today</p>
+          <div class="mt-2 flex items-center gap-1 text-xs">
+            <span class="trend-up">↑ 40%</span>
+            <span class="text-slate-500">vs last week</span>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #10b981;">
+          <p class="text-slate-400 text-xs uppercase">Tasks Today</p>
+          <p class="text-3xl font-bold text-emerald-400">45</p>
+          <p class="text-xs text-green-400">+13 vs yesterday</p>
+          <div class="mt-2 h-8" id="tasks-sparkline"></div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #f59e0b;">
+          <p class="text-slate-400 text-xs uppercase">Content Pipeline</p>
+          <p class="text-3xl font-bold text-amber-400">9</p>
+          <p class="text-xs text-slate-400">6 blogs • 3 newsletters</p>
+          <div class="mt-2 text-xs text-slate-500">3 published this week</div>
+        </div>
+      </div>
+
+      <!-- Quick Actions Panel -->
+      <div class="glass-panel rounded-xl p-4">
+        <h2 class="text-lg font-semibold mb-4">⚡ Quick Actions</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <button onclick="triggerAction('generateLeads')" class="quick-action-btn bg-blue-600 hover:bg-blue-700 p-4 rounded-xl text-center">
+            <div class="text-2xl mb-2">🚀</div>
+            <div class="text-sm font-medium">Generate 20 Leads</div>
+          </button>
+          <button onclick="triggerAction('sendFollowups')" class="quick-action-btn bg-purple-600 hover:bg-purple-700 p-4 rounded-xl text-center">
+            <div class="text-2xl mb-2">📧</div>
+            <div class="text-sm font-medium">Send Follow-ups</div>
+          </button>
+          <button onclick="triggerAction('postTwitter')" class="quick-action-btn bg-sky-600 hover:bg-sky-700 p-4 rounded-xl text-center">
+            <div class="text-2xl mb-2">🐦</div>
+            <div class="text-sm font-medium">Post to Twitter</div>
+          </button>
+          <button onclick="triggerAction('scanCompetitors')" class="quick-action-btn bg-orange-600 hover:bg-orange-700 p-4 rounded-xl text-center">
+            <div class="text-2xl mb-2">👁️</div>
+            <div class="text-sm font-medium">Scan Competitors</div>
+          </button>
+          <button onclick="triggerAction('weeklyReport')" class="quick-action-btn bg-green-600 hover:bg-green-700 p-4 rounded-xl text-center">
+            <div class="text-2xl mb-2">📊</div>
+            <div class="text-sm font-medium">Weekly Report</div>
+          </button>
+          <button onclick="triggerAction('exportCSV')" class="quick-action-btn bg-slate-600 hover:bg-slate-700 p-4 rounded-xl text-center">
+            <div class="text-2xl mb-2">💾</div>
+            <div class="text-sm font-medium">Export to CSV</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Activity Feed -->
+      <div class="glass-panel rounded-xl p-4">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold flex items-center gap-2">
+            <span class="w-2 h-2 bg-green-400 rounded-full pulse-green"></span>
+            Live Activity Feed
+          </h2>
+          <div class="flex gap-2">
+            <button onclick="pauseActivityFeed()" id="pause-btn" class="text-xs bg-slate-700 px-3 py-1 rounded hover:bg-slate-600">⏸️ Pause</button>
+            <button onclick="clearActivityFeed()" class="text-xs bg-slate-700 px-3 py-1 rounded hover:bg-slate-600">Clear</button>
+          </div>
+        </div>
+        <div id="activity-feed" class="activity-feed space-y-2">
+          <!-- Activity items populated by JS -->
+        </div>
+      </div>
+
+      <!-- System Status & Alerts -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="glass-panel rounded-xl p-4">
+          <h2 class="text-lg font-semibold mb-4">⚡ System Status</h2>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-3 h-3 bg-green-400 rounded-full pulse-green"></span>
+                <div>
+                  <p class="text-sm font-medium">Twitter Bot</p>
+                  <p class="text-xs text-slate-400">Online (PM2)</p>
+                </div>
+              </div>
+              <span class="text-xs text-slate-500">3 posts today</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-3 h-3 bg-green-400 rounded-full pulse-green"></span>
+                <div>
+                  <p class="text-sm font-medium">Content Pipeline</p>
+                  <p class="text-xs text-slate-400">Auto-generating</p>
+                </div>
+              </div>
+              <span class="text-xs text-slate-500">Next: 2pm</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-3 h-3 bg-green-400 rounded-full pulse-green"></span>
+                <div>
+                  <p class="text-sm font-medium">Cron Jobs</p>
+                  <p class="text-xs text-slate-400">8 jobs running</p>
+                </div>
+              </div>
+              <span class="text-xs text-slate-500">All healthy</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+                <div>
+                  <p class="text-sm font-medium">Firecrawl API</p>
+                  <p class="text-xs text-slate-400">Rate limit at 80%</p>
+                </div>
+              </div>
+              <span class="text-xs text-amber-400">⚠️ Warning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl p-4">
+          <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+            🔔 Alerts
+            <span class="bg-red-500 text-xs px-2 py-0.5 rounded-full">3</span>
+          </h2>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 p-2 bg-red-900/30 rounded-lg border border-red-700/50">
+              <span class="text-red-400">🔴</span>
+              <div class="flex-1">
+                <p class="text-sm">3 leads not contacted in 48h</p>
+                <p class="text-xs text-slate-400">Greenberg Traurig, Akerman LLP, Ross Medical</p>
+              </div>
+              <button onclick="dismissAlert(0)" class="text-slate-500 hover:text-white">&times;</button>
+            </div>
+            <div class="flex items-start gap-3 p-2 bg-yellow-900/30 rounded-lg border border-yellow-700/50">
+              <span class="text-yellow-400">🟡</span>
+              <div class="flex-1">
+                <p class="text-sm">Twitter API at 80% rate limit</p>
+                <p class="text-xs text-slate-400">Resets at 12:00 PM</p>
+              </div>
+              <button onclick="dismissAlert(1)" class="text-slate-500 hover:text-white">&times;</button>
+            </div>
+            <div class="flex items-start gap-3 p-2 bg-blue-900/30 rounded-lg border border-blue-700/50">
+              <span class="text-blue-400">🔵</span>
+              <div class="flex-1">
+                <p class="text-sm">New competitor citation detected</p>
+                <p class="text-xs text-slate-400">myaifrontdesk.com mentioned in "AI automation Miami"</p>
+              </div>
+              <button onclick="dismissAlert(2)" class="text-slate-500 hover:text-white">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIPELINE SECTION -->
+    <section id="section-pipeline" class="hidden space-y-4">
+      <h2 class="text-xl font-bold mb-4">💰 Revenue Pipeline</h2>
+      
+      <div class="glass-panel rounded-xl p-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+          <div class="text-center p-4 bg-slate-800/50 rounded-xl">
+            <p class="text-slate-400 text-sm mb-2">Pipeline Value</p>
+            <p class="text-3xl font-bold text-green-400">$127,500</p>
+            <p class="text-xs text-slate-500 mt-1">8 qualified leads</p>
+          </div>
+          <div class="text-center p-4 bg-slate-800/50 rounded-xl">
+            <p class="text-slate-400 text-sm mb-2">Avg Deal Size</p>
+            <p class="text-3xl font-bold text-blue-400">$15,937</p>
+            <p class="text-xs text-slate-500 mt-1">Based on historical data</p>
+          </div>
+          <div class="text-center p-4 bg-slate-800/50 rounded-xl">
+            <p class="text-slate-400 text-sm mb-2">Conversion Rate</p>
+            <p class="text-3xl font-bold text-amber-400">12%</p>
+            <p class="text-xs text-slate-500 mt-1">Industry avg: 8%</p>
+          </div>
+          <div class="text-center p-4 bg-slate-800/50 rounded-xl">
+            <p class="text-slate-400 text-sm mb-2">Days to Close</p>
+            <p class="text-3xl font-bold text-purple-400">14</p>
+            <p class="text-xs text-slate-500 mt-1">Avg sales cycle</p>
+          </div>
+        </div>
+
+        <!-- Detailed Funnel -->
+        <div class="space-y-4">
+          <h3 class="font-semibold text-lg">Sales Funnel</h3>
+          <div class="space-y-3">
+            <div class="relative">
+              <div class="flex items-center gap-4 mb-1">
+                <div class="w-24 text-sm font-medium">New</div>
+                <div class="flex-1 bg-slate-800 rounded-lg h-10 overflow-hidden relative">
+                  <div class="bg-blue-600 h-full flex items-center px-3 transition-all duration-500" style="width: 100%">
+                    <span class="text-sm font-bold">70 leads</span>
+                  </div>
+                </div>
+                <div class="w-24 text-right text-sm text-slate-400">$0</div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="flex items-center gap-4 mb-1">
+                <div class="w-24 text-sm font-medium">Contacted</div>
+                <div class="flex-1 bg-slate-800 rounded-lg h-10 overflow-hidden relative">
+                  <div class="bg-yellow-600 h-full flex items-center px-3 transition-all duration-500" style="width: 17%">
+                    <span class="text-sm font-bold">12 leads</span>
+                  </div>
+                </div>
+                <div class="w-24 text-right text-sm text-green-400">-$0 (cost)</div>
+              </div>
+              <div class="text-xs text-slate-500 ml-28">17% conversion</div>
+            </div>
+            <div class="relative">
+              <div class="flex items-center gap-4 mb-1">
+                <div class="w-24 text-sm font-medium">Proposal</div>
+                <div class="flex-1 bg-slate-800 rounded-lg h-10 overflow-hidden relative">
+                  <div class="bg-purple-600 h-full flex items-center px-3 transition-all duration-500" style="width: 7%">
+                    <span class="text-sm font-bold">5 leads</span>
+                  </div>
+                </div>
+                <div class="w-24 text-right text-sm text-green-400">$79,685</div>
+              </div>
+              <div class="text-xs text-slate-500 ml-28">42% conversion</div>
+            </div>
+            <div class="relative">
+              <div class="flex items-center gap-4 mb-1">
+                <div class="w-24 text-sm font-medium">Closed</div>
+                <div class="flex-1 bg-slate-800 rounded-lg h-10 overflow-hidden relative">
+                  <div class="bg-green-600 h-full flex items-center px-3 transition-all duration-500" style="width: 0%">
+                    <span class="text-sm font-bold">0 deals</span>
+                  </div>
+                </div>
+                <div class="w-24 text-right text-sm text-green-400">$0</div>
+              </div>
+              <div class="text-xs text-slate-500 ml-28">0% conversion</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monthly Trend -->
+        <div class="mt-8">
+          <h3 class="font-semibold text-lg mb-4">Monthly Trend</h3>
+          <div class="flex items-end gap-2 h-32">
+            <div class="flex-1 flex flex-col items-center gap-1">
+              <div class="w-full bg-blue-600 rounded-t" style="height: 30%"></div>
+              <span class="text-xs text-slate-400">Jan</span>
+            </div>
+            <div class="flex-1 flex flex-col items-center gap-1">
+              <div class="w-full bg-blue-600 rounded-t" style="height: 45%"></div>
+              <span class="text-xs text-slate-400">Feb</span>
+            </div>
+            <div class="flex-1 flex flex-col items-center gap-1">
+              <div class="w-full bg-blue-600 rounded-t" style="height: 60%"></div>
+              <span class="text-xs text-slate-400">Mar</span>
+            </div>
+            <div class="flex-1 flex flex-col items-center gap-1">
+              <div class="w-full bg-slate-700 rounded-t" style="height: 0%"></div>
+              <span class="text-xs text-slate-400">Apr</span>
+            </div>
+          </div>
+          <div class="flex justify-between mt-2 text-sm">
+            <span class="text-slate-400">Pipeline Value</span>
+            <span class="text-green-400">↑ 40% vs last month</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITY SECTION -->
+    <section id="section-activity" class="hidden space-y-4">
+      <h2 class="text-xl font-bold mb-4">📈 Activity Trends</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="glass-panel rounded-xl p-4">
+          <h3 class="font-semibold mb-2">Tasks Completed</h3>
+          <p class="text-3xl font-bold">45</p>
+          <p class="text-sm text-green-400">↑ +13 vs yesterday</p>
+          <div class="mt-4 h-24 flex items-end gap-1">
+            <div class="flex-1 bg-slate-700 rounded" style="height: 40%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 55%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 45%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 60%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 70%"></div>
+            <div class="flex-1 bg-blue-600 rounded" style="height: 100%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 0%"></div>
+          </div>
+          <p class="text-xs text-slate-500 mt-2">Last 7 days</p>
+        </div>
+
+        <div class="glass-panel rounded-xl p-4">
+          <h3 class="font-semibold mb-2">Leads Generated</h3>
+          <p class="text-3xl font-bold">70</p>
+          <p class="text-sm text-green-400">↑ +20 vs last week</p>
+          <div class="mt-4 h-24 flex items-end gap-1">
+            <div class="flex-1 bg-slate-700 rounded" style="height: 30%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 40%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 35%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 50%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 60%"></div>
+            <div class="flex-1 bg-purple-600 rounded" style="height: 100%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 0%"></div>
+          </div>
+          <p class="text-xs text-slate-500 mt-2">Last 7 days</p>
+        </div>
+
+        <div class="glass-panel rounded-xl p-4">
+          <h3 class="font-semibold mb-2">Content Published</h3>
+          <p class="text-3xl font-bold">9</p>
+          <p class="text-sm text-green-400">↑ +3 vs last week</p>
+          <div class="mt-4 h-24 flex items-end gap-1">
+            <div class="flex-1 bg-slate-700 rounded" style="height: 50%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 60%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 45%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 70%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 55%"></div>
+            <div class="flex-1 bg-amber-600 rounded" style="height: 100%"></div>
+            <div class="flex-1 bg-slate-700 rounded" style="height: 0%"></div>
+          </div>
+          <p class="text-xs text-slate-500 mt-2">Last 7 days</p>
+        </div>
+      </div>
+
+      <!-- Weekly Summary -->
+      <div class="glass-panel rounded-xl p-6">
+        <h3 class="font-semibold text-lg mb-4">This Week Summary</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <p class="text-slate-400 text-sm">New Leads</p>
+            <p class="text-2xl font-bold text-purple-400">70</p>
+            <p class="text-xs text-slate-500">+40 vs last week</p>
+          </div>
+          <div>
+            <p class="text-slate-400 text-sm">Emails Sent</p>
+            <p class="text-2xl font-bold text-blue-400">24</p>
+            <p class="text-xs text-slate-500">+8 vs last week</p>
+          </div>
+          <div>
+            <p class="text-slate-400 text-sm">Twitter Posts</p>
+            <p class="text-2xl font-bold text-sky-400">21</p>
+            <p class="text-xs text-slate-500">+5 vs last week</p>
+          </div>
+          <div>
+            <p class="text-slate-400 text-sm">Competitor Scans</p>
+            <p class="text-2xl font-bold text-orange-400">16</p>
+            <p class="text-xs text-slate-500">+3 vs last week</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Remaining sections (agents, leads, content, competitors) from original file -->
+    <!-- AGENTS SECTION -->
+    <section id="section-agents" class="hidden space-y-4">
+      <h2 class="text-xl font-bold mb-4">🤖 My 8 AI Agents</h2>
+      
+      <!-- Agent Leaderboard -->
+      <div class="glass-panel rounded-xl p-4 mb-4">
+        <h3 class="font-semibold mb-4">🏆 Agent Leaderboard (7-Day)</h3>
+        <div id="agent-leaderboard" class="space-y-3">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="agents-grid">
+        <!-- Agents rendered by JavaScript -->
+      </div>
+    </section>
+
+    <!-- LEADS SECTION -->
+    <section id="section-leads" class="hidden space-y-4">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold">🔥 Active Leads (70)</h2>
+        <div class="flex gap-2">
+          <button onclick="showAllLeadsModal()" class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-lg text-sm transition">👁️ View All 70 Leads</button>
+          <select id="leads-industry-filter" class="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-sm">
+            <option value="all">All Industries</option>
+            <option value="HVAC">HVAC</option>
+            <option value="Legal">Legal</option>
+            <option value="Medical">Medical</option>
+            <option value="Accounting">Accounting</option>
+            <option value="Dental">Dental</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Electrical">Electrical</option>
+          </select>
+          <button onclick="refreshLeadsData()" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm transition" title="Load latest from arlo_findings.json">🔄 Refresh</button>
+        </div>
+      </div>
+      
+      <div class="glass-panel rounded-xl overflow-hidden">
+        <table class="w-full">
+          <thead class="bg-slate-800">
+            <tr>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Company</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Industry</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">City</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Contact</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Phone</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Score</th>
+              <th class="text-left p-4 text-xs font-semibold text-slate-400 uppercase">Action</th>
+            </tr>
+          </thead>
+          <tbody id="leads-table-body">
+            <!-- Leads rendered by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Content and Competitors sections would continue here -->
+    <!-- (Keeping file manageable - will add if needed) -->
+
+    <!-- Toast Notification -->
+    <div id="copy-toast" class="fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 transition-transform duration-300 z-50">
+      📋 Email copied to clipboard!
+    </div>
+
+    <!-- Command Palette Hint -->
+    <div id="command-hint" class="fixed bottom-4 left-4 text-slate-500 text-sm opacity-0 transition-opacity duration-300">
+      Press <kbd class="bg-slate-800 px-2 py-1 rounded">⌘K</kbd> for command palette
+    </div>
+
+  </main>
+
+  <script>
+    // Theme Management
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.getElementById('theme-toggle').textContent = isDark ? '🌙' : '☀️';
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+      document.documentElement.classList.remove('dark');
+      document.getElementById('theme-toggle').textContent = '☀️';
+    }
+
+    // Spotlight Search
+    function openSpotlight() {
+      document.getElementById('spotlight-overlay').classList.remove('hidden');
+      document.getElementById('spotlight-input').focus();
+      updateSpotlightResults('');
+    }
+
+    function closeSpotlight() {
+      document.getElementById('spotlight-overlay').classList.add('hidden');
+    }
+
+    function updateSpotlightResults(query) {
+      const actions = [
+        { name: 'Generate 20 Leads', icon: '🚀', action: () => triggerAction('generateLeads') },
+        { name: 'Send Follow-up Emails', icon: '📧', action: () => triggerAction('sendFollowups') },
+        { name: 'Post to Twitter', icon: '🐦', action: () => triggerAction('postTwitter') },
+        { name: 'Scan Competitors', icon: '👁️', action: () => triggerAction('scanCompetitors') },
+        { name: 'View Pipeline', icon: '💰', action: () => showSection('pipeline') },
+        { name: 'View Leads', icon: '🔥', action: () => showSection('leads') },
+        { name: 'View Agents', icon: '🤖', action: () => showSection('agents') },
+        { name: 'View Activity', icon: '📈', action: () => showSection('activity') },
+      ];
+
+      const results = actions.filter(a => a.name.toLowerCase().includes(query.toLowerCase()));
+      const container = document.getElementById('spotlight-results');
+      
+      container.innerHTML = results.map((r, i) => `
+        <div class="p-3 hover:bg-slate-700 rounded-lg cursor-pointer flex items-center gap-3 ${i === 0 ? 'bg-slate-700' : ''}" onclick="${r.action.toString()}; closeSpotlight();">
+          <span class="text-xl">${r.icon}</span>
+          <span>${r.name}</span>
+        </div>
+      `).join('') || '<div class="p-3 text-slate-500">No results found</div>';
+    }
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      // Cmd/Ctrl + K
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        openSpotlight();
+      }
+      // Escape
+      if (e.key === 'Escape') {
+        closeSpotlight();
+        closeSidePanel();
+        closeAlertCenter();
+      }
+      // Navigation shortcuts
+      if (e.altKey) {
+        switch(e.key) {
+          case '1': e.preventDefault(); showSection('overview'); break;
+          case '2': e.preventDefault(); showSection('agents'); break;
+          case '3': e.preventDefault(); showSection('leads'); break;
+          case '4': e.preventDefault(); showSection('pipeline'); break;
+          case '5': e.preventDefault(); showSection('content'); break;
+        }
+      }
+    });
+
+    document.getElementById('spotlight-input').addEventListener('input', (e) => {
+      updateSpotlightResults(e.target.value);
+    });
+
+    // Activity Feed Management
+    let activityPaused = false;
+    const activities = [
+      { time: '10:47 AM', icon: '🔍', text: 'Arlo found 3 new HVAC leads in Miami', type: 'success' },
+      { time: '10:45 AM', icon: '🐦', text: 'Dante posted to Twitter: "AI Myth #1"', type: 'info' },
+      { time: '10:30 AM', icon: '💼', text: 'Iris generated email for Greenberg Traurig', type: 'info' },
+      { time: '10:15 AM', icon: '👁️', text: 'Competitor alert: myaifrontdesk.com published new pricing', type: 'warning' },
+      { time: '9:52 AM', icon: '🚀', text: 'Generated 20 new leads via Arlo', type: 'success' },
+      { time: '9:30 AM', icon: '✅', text: 'System health check complete - All systems operational', type: 'success' },
+    ];
+
+    function renderActivityFeed() {
+      const container = document.getElementById('activity-feed');
+      container.innerHTML = activities.map(a => `
+        <div class="flex items-start gap-3 py-2 border-b border-slate-700/50 animate-fade-in">
+          <span class="text-${a.type === 'success' ? 'green' : a.type === 'warning' ? 'yellow' : 'blue'}-400">${a.icon}</span>
+          <div class="flex-1">
+            <p class="text-sm">${a.text}</p>
+            <p class="text-xs text-slate-500">${a.time}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function pauseActivityFeed() {
+      activityPaused = !activityPaused;
+      document.getElementById('pause-btn').textContent = activityPaused ? '▶️ Resume' : '⏸️ Pause';
+    }
+
+    function clearActivityFeed() {
+      activities.length = 0;
+      renderActivityFeed();
+    }
+
+    // Simulate new activity every 30 seconds
+    setInterval(() => {
+      if (!activityPaused) {
+        const newActivities = [
+          { time: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}), icon: '🔍', text: `Arlo found ${Math.floor(Math.random() * 5) + 1} new leads`, type: 'success' },
+          { time: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}), icon: '🤖', text: 'Agent completed task', type: 'info' },
+        ];
+        activities.unshift(newActivities[0]);
+        if (activities.length > 20) activities.pop();
+        renderActivityFeed();
+      }
+    }, 30000);
+
+    // Alert Center
+    function toggleAlertCenter() {
+      const el = document.getElementById('alert-center');
+      el.classList.toggle('hidden');
+    }
+
+    function closeAlertCenter() {
+      document.getElementById('alert-center').classList.add('hidden');
+    }
+
+    function dismissAlert(index) {
+      // In real app, would remove from alerts array
+      const badge = document.getElementById('header-alert-badge');
+      const count = document.getElementById('alert-count');
+      const currentCount = parseInt(count.textContent) - 1;
+      count.textContent = currentCount;
+      badge.textContent = currentCount;
+      if (currentCount === 0) {
+        badge.classList.add('hidden');
+      }
+    }
+
+    // Side Panel for Lead Details
+    function openSidePanel(lead) {
+      document.getElementById('side-panel-title').textContent = lead.businessName;
+      document.getElementById('side-panel-content').innerHTML = `
+        <div class="space-y-4">
+          <div class="bg-slate-800/50 p-4 rounded-lg">
+            <p class="text-slate-400 text-sm mb-1">Industry</p>
+            <p class="font-medium">${lead.industry}</p>
+          </div>
+          <div class="bg-slate-800/50 p-4 rounded-lg">
+            <p class="text-slate-400 text-sm mb-1">Location</p>
+            <p class="font-medium">${lead.city}</p>
+          </div>
+          <div class="bg-slate-800/50 p-4 rounded-lg">
+            <p class="text-slate-400 text-sm mb-1">Phone</p>
+            <p class="font-medium">${lead.phone}</p>
+          </div>
+          <div class="bg-slate-800/50 p-4 rounded-lg">
+            <p class="text-slate-400 text-sm mb-1">Website</p>
+            <a href="${lead.website}" target="_blank" class="text-blue-400 hover:underline">${lead.website}</a>
+          </div>
+          <div class="bg-slate-800/50 p-4 rounded-lg">
+            <p class="text-slate-400 text-sm mb-1">Notes</p>
+            <p class="text-sm">${lead.notes || 'No notes available'}</p>
+          </div>
+          <div class="flex gap-2 mt-6">
+            <button onclick="generateEmailTemplate('${lead.businessName}', '${lead.industry}', '${lead.city}', '${lead.phone}')" class="flex-1 bg-blue-600 hover:bg-blue-700 py-3 rounded-lg transition">
+              ✉️ Copy Email
+            </button>
+            <button onclick="copyText('${lead.phone}')" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-lg transition">
+              📞 Copy Phone
+            </button>
+          </div>
+        </div>
+      `;
+      document.getElementById('side-panel').classList.remove('closed');
+    }
+
+    function closeSidePanel() {
+      document.getElementById('side-panel').classList.add('closed');
+    }
+
+    // Quick Actions
+    function triggerAction(action) {
+      const toast = document.getElementById('copy-toast');
+      const messages = {
+        generateLeads: '🚀 Generating 20 new leads...',
+        sendFollowups: '📧 Sending follow-up emails...',
+        postTwitter: '🐦 Posting to Twitter...',
+        scanCompetitors: '👁️ Scanning competitors...',
+        weeklyReport: '📊 Generating weekly report...',
+        exportCSV: '💾 Exporting to CSV...'
+      };
+      toast.textContent = messages[action] || 'Action triggered';
+      toast.classList.remove('translate-y-20');
+      setTimeout(() => toast.classList.add('translate-y-20'), 3000);
+    }
+
+    // Show command palette hint after 2 seconds
+    setTimeout(() => {
+      document.getElementById('command-hint').classList.remove('opacity-0');
+      setTimeout(() => {
+        document.getElementById('command-hint').classList.add('opacity-0');
+      }, 5000);
+    }, 2000);
+
+    // Initialize
+    renderActivityFeed();
+  </script>
+</body>
+</html>

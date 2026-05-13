@@ -1,0 +1,126 @@
+🧵 THREAD: How to Optimize Your OpenClaw Setup Without Claude Max
+
+Someone asked: "Who's written How To Transition OpenClaw from Claude to GPT While Maintaining Vibes? Because I need that."
+
+We wrote the guide. Here's the playbook 👇
+
+---
+
+1/ THE PROBLEM
+
+Claude Max is gone for OpenClaw users.
+
+Everyone's scrambling for alternatives, paying $2,000+/month for API access.
+
+But you don't need Claude Max.
+
+Here's how we built something better:
+
+---
+
+2/ THE SOLUTION: MULTI-LLM ROUTING
+
+Instead of one expensive model, we route tasks across 4 LLMs based on complexity.
+
+Simple rule: Use the cheapest tool that can do the job.
+
+---
+
+3/ OUR $0 AI STACK
+
+• Ollama (local) → Routine tasks: $0.00
+• n8n → Automation: $0.00
+• Kimi K2.5 → Code review: $0.003/1K tokens
+• Claude 3.5 → Complex reasoning: $0.015/1K tokens
+• GPT-4o → Vision tasks: $0.025/1K tokens
+
+TOTAL: ~$150/month
+
+Others pay: $2,000+
+
+---
+
+4/ THE DECISION TREE
+
+Summarize → Ollama (free)
+Code review → Kimi (cheap)
+Complex reasoning → Claude ($)
+Vision tasks → GPT-4o ($$)
+Emergency → GPT-4 ($$$)
+
+Match the tool to the task.
+
+---
+
+5/ SETUP IN 3 STEPS
+
+1. Install Ollama locally
+2. Configure model routing in OpenClaw
+3. Track spend per model
+
+That's it.
+
+---
+
+6/ REAL RESULTS
+
+After implementing multi-LLM routing:
+
+✅ 70% cost reduction ($2,000 → $150/month)
+✅ Same (or better) output quality
+✅ Zero vendor lock-in
+✅ Faster responses (local models)
+
+---
+
+7/ WHEN TO PAY VS. FREE
+
+Use FREE (Ollama):
+• Summaries
+• Email drafts
+• Data extraction
+• Internal tools
+
+Pay for AI (Claude/GPT):
+• Customer content
+• Complex reasoning
+• High-stakes decisions
+
+---
+
+8/ THE BOTTOM LINE
+
+Don't rely on one provider.
+
+By diversifying across multiple LLMs:
+• Lower costs
+• Better performance
+• More resilience
+• Future-proof setup
+
+---
+
+9/ FULL GUIDE
+
+I wrote the complete guide with:
+• Exact routing config
+• Cost monitoring setup
+• Step-by-step instructions
+
+Read it here → https://theonegroup.info/blog/openclaw-optimization-without-claude-max.html
+
+---
+
+10/ NEED HELP?
+
+We consult with businesses to optimize OpenClaw deployments.
+
+Typical result: 60-80% cost reduction in month one.
+
+Book free: https://calendly.com/akennedy-theonegroup/30min
+
+---
+
+Follow @theonegroup for more practical AI automation tips.
+
+RT if you found this helpful 🙏

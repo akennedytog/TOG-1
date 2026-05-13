@@ -1,0 +1,130 @@
+# FORMSPREE SETUP - COMPLETE INSTRUCTIONS
+
+## YOUR GOAL
+Get form submissions from https://theonegroup.info/ai-audit.html
+to email akennedy@theonegroup.info
+
+## STEP-BY-STEP (Takes 10 minutes)
+
+### STEP 1: Create Formspree Account (2 minutes)
+1. Open browser → Go to https://formspree.io
+2. Click "Sign Up" (top right corner)
+3. Choose "Sign up with Google"
+4. Select: akennedy@theonegroup.info
+5. Click "Allow" to give permissions
+6. Check your email for verification link
+7. Click verification link
+
+### STEP 2: Create Your Form (1 minute)
+1. Click big "New Form" button
+2. Form name: AI Visibility Audit
+3. Click "Create Form"
+4. You'll see a page with your Form ID
+5. COPY THIS ID (looks like: xeqvdlpl or similar)
+6. Save it somewhere - you'll need it!
+
+### STEP 3: Update Your Website (2 minutes)
+
+I need you to do this part:
+
+1. Open file: /Users/aleckennedy/.openclaw/workspace/theonegroup-site/ai-audit.html
+2. Find line ~180 that says:
+   fetch('https://formspree.io/f/YOUR_FORM_ID'
+
+3. Replace YOUR_FORM_ID with your actual Form ID:
+   fetch('https://formspree.io/f/xeqvdlpl'
+   (use YOUR actual ID, not xeqvdlpl)
+
+4. Save the file
+
+### STEP 4: Deploy (2 minutes)
+
+Option A - Command Line:
+```
+cd ~/.openclaw/workspace/theonegroup-site
+netlify deploy --prod
+```
+
+Option B - Drag & Drop:
+1. Go to https://app.netlify.com
+2. Log in with your account
+3. Find site: "theonegroup"
+4. Click "Deploys" tab
+5. Drag ai-audit.html to deploy area
+
+### STEP 5: Test (3 minutes)
+1. Go to https://theonegroup.info/ai-audit.html
+2. Fill out the form:
+   - Website: https://theonegroup.info
+   - Business Name: Test Business
+   - Industry: Consulting
+   - Email: your-test-email@gmail.com
+3. Click "Get My Free AI Visibility Audit"
+4. Check akennedy@theonegroup.info inbox
+5. You should receive an email with the form data!
+
+## WHAT YOU'LL RECEIVE
+
+Email subject: "New submission from AI Visibility Audit"
+
+Email body will show:
+- websiteUrl: https://theonegroup.info
+- businessName: Test Business
+- industry: consulting
+- email: your-test-email@gmail.com
+- isPremium: true/false
+- source: AI Audit Tool
+- submittedAt: timestamp
+
+## FREE TIER LIMITS
+
+✅ FREE: 50 submissions per month
+✅ Unlimited forms
+✅ Email notifications
+✅ Basic spam filtering
+
+When you hit 50/month:
+- Upgrade to Gold: $10/month (1,000 submissions)
+- Or create a second free form
+
+## TROUBLESHOOTING
+
+### Not receiving emails?
+1. Check spam/junk folder
+2. Verify akennedy@theonegroup.info is correct in Formspree
+3. Check Formspree dashboard for submissions
+
+### Form not working?
+1. Check browser console (F12) for errors
+2. Verify Form ID is correct (no spaces)
+3. Make sure file was deployed
+
+### Need help?
+- Formspree docs: https://help.formspree.io
+- Email them: support@formspree.io
+
+## YOUR FORM ID
+
+Write your Form ID here once you get it:
+
+Form ID: _______________
+
+Then update ai-audit.html with this ID and deploy.
+
+## NEXT STEPS AFTER SETUP
+
+1. ✅ Test the form (submit your own website)
+2. ✅ Verify email arrives
+3. ✅ Create Google Sheets tracker
+4. ✅ Create Google Doc template
+5. ✅ Get first real lead!
+
+## TIME ESTIMATE
+
+- Account setup: 2 min
+- Form creation: 1 min
+- Update HTML: 2 min
+- Deploy: 2 min
+- Test: 3 min
+
+Total: 10 minutes to go live!

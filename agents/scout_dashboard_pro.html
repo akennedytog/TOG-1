@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout | Sales Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        scout: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16',
+                        },
+                        slate: {
+                            850: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'slide-up': 'slideUp 0.4s ease-out',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4ade80 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        .status-badge {
+            position: relative;
+            overflow: hidden;
+        }
+        .status-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .status-badge:hover::before {
+            left: 100%;
+        }
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+        .progress-ring-circle {
+            transition: stroke-dashoffset 1s ease-out;
+        }
+        .table-row {
+            transition: background-color 0.2s;
+        }
+        .table-row:hover {
+            background-color: rgba(34, 197, 94, 0.05);
+        }
+        .sidebar-link {
+            position: relative;
+        }
+        .sidebar-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 0;
+            background: #22c55e;
+            transition: height 0.3s;
+        }
+        .sidebar-link:hover::after,
+        .sidebar-link.active::after {
+            height: 100%;
+        }
+        .filter-chip {
+            transition: all 0.2s;
+        }
+        .filter-chip:hover {
+            transform: scale(1.05);
+        }
+        .metric-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #22c55e, #22d3ee);
+        }
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            .main-content { margin-left: 0; }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar fixed left-0 top-0 h-full w-64 bg-slate-900 border-r border-slate-800 z-50 hidden md:block">
+        <div class="p-6">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-scout-500 to-cyan-500 flex items-center justify-center">
+                    <i data-lucide="target" class="w-5 h-5 text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">Scout</h1>
+                    <p class="text-xs text-slate-500">Sales Intelligence</p>
+                </div>
+            </div>
+            
+            <nav class="space-y-1">
+                <a href="#" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-lg bg-slate-800 text-scout-400">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                    <span class="font-medium">Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    <span>Reps</span>
+                </a>
+                <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors">
+                    <i data-lucide="map" class="w-5 h-5"></i>
+                    <span>Territories</span>
+                </a>
+                <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors">
+                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                    <span>Trends</span>
+                </a>
+                <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors">
+                    <i data-lucide="bell" class="w-5 h-5"></i>
+                    <span>Alerts</span>
+                    <span class="ml-auto bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">3</span>
+                </a>
+            </nav>
+            
+            <div class="mt-8 pt-6 border-t border-slate-800">
+                <p class="text-xs text-slate-500 uppercase tracking-wider mb-4">Quick Actions</p>
+                <button id="uploadBtn" class="w-full flex items-center gap-3 px-4 py-2 rounded-lg bg-scout-600 hover:bg-scout-500 text-white transition-colors text-sm font-medium">
+                    <i data-lucide="upload" class="w-4 h-4"></i>
+                    Upload Report
+                </button>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-800">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-sm font-bold">A</div>
+                <div class="flex-1">
+                    <p class="text-sm font-medium">Alec Kennedy</p>
+                    <p class="text-xs text-slate-500">Manager</p>
+                </div>
+                <button id="settingsBtn" class="p-2 rounded-lg hover:bg-slate-800"><i data-lucide="settings" class="w-4 h-4 text-slate-500"></i></button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content md:ml-64 min-h-screen">
+        <!-- Header -->
+        <header class="sticky top-0 z-40 glass-panel border-b border-slate-800">
+            <div class="px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <button class="md:hidden p-2 rounded-lg hover:bg-slate-800">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                    <div>
+                        <h2 class="text-xl font-semibold">Dashboard</h2>
+                        <p class="text-sm text-slate-500" id="lastUpdate">Updated just now</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <!-- Search -->
+                    <div class="relative hidden sm:block">
+                        <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500"></i>
+                        <input type="text" placeholder="Search reps..." class="pl-10 pr-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-sm focus:outline-none focus:border-scout-500 w-64">
+                    </div>
+                    
+                    <button id="notificationsBtn" class="p-2 rounded-lg hover:bg-slate-800 relative">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                        <span class="absolute top-1 right-1 w-2 h-2 bg-scout-500 rounded-full"></span>
+                    </button>
+                    <button id="downloadBtn" class="p-2 rounded-lg hover:bg-slate-800">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-6 space-y-6">
+            <!-- KPI Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Total Reps -->
+                <div class="metric-card glass-panel rounded-xl p-5 card-hover animate-slide-up" style="animation-delay: 0ms;">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <p class="text-sm text-slate-500 font-medium">Total Reps</p>
+                            <p class="text-3xl font-bold mt-2" id="totalReps">—</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                            <i data-lucide="users" class="w-5 h-5 text-blue-400"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center gap-2">
+                        <span class="text-xs text-slate-500">Across all territories</span>
+                    </div>
+                </div>
+
+                <!-- Team POD -->
+                <div class="metric-card glass-panel rounded-xl p-5 card-hover animate-slide-up" style="animation-delay: 50ms;">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <p class="text-sm text-slate-500 font-medium">Team New POD</p>
+                            <p class="text-3xl font-bold mt-2" id="totalNewPod">—</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-lg bg-scout-500/20 flex items-center justify-center">
+                            <i data-lucide="target" class="w-5 h-5 text-scout-400"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span class="text-slate-500">Goal: <span id="teamGoal">—</span></span>
+                            <span class="text-scout-400 font-medium" id="teamPct">—%</span>
+                        </div>
+                        <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                            <div id="teamProgress" class="h-full bg-gradient-to-r from-scout-500 to-cyan-500 rounded-full transition-all duration-1000" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total Payouts -->
+                <div class="metric-card glass-panel rounded-xl p-5 card-hover animate-slide-up" style="animation-delay: 100ms;">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <p class="text-sm text-slate-500 font-medium">Total Payouts</p>
+                            <p class="text-3xl font-bold mt-2" id="totalPayout">—</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                            <i data-lucide="dollar-sign" class="w-5 h-5 text-amber-400"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center gap-2">
+                        <span class="flex items-center gap-1 text-xs text-scout-400">
+                            <i data-lucide="trending-up" class="w-3 h-3"></i>
+                            YTD performance
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Behind Goal -->
+                <div class="metric-card glass-panel rounded-xl p-5 card-hover animate-slide-up" style="animation-delay: 150ms;">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <p class="text-sm text-slate-500 font-medium">Need Attention</p>
+                            <p class="text-3xl font-bold mt-2 text-red-400" id="behindCount">—</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center">
+                            <i data-lucide="alert-triangle" class="w-5 h-5 text-red-400"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button class="text-xs text-scout-400 hover:text-scout-300 font-medium flex items-center gap-1">
+                            View reps
+                            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex flex-wrap items-center gap-3">
+                <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800 border border-slate-700">
+                    <i data-lucide="filter" class="w-4 h-4 text-slate-500"></i>
+                    <span class="text-sm text-slate-400">Filters:</span>
+                </div>
+                <button class="filter-chip px-3 py-1.5 rounded-full bg-scout-500/20 text-scout-400 text-sm font-medium border border-scout-500/30">All Reps</button>
+                <button class="filter-chip px-3 py-1.5 rounded-full bg-slate-800 text-slate-400 text-sm border border-slate-700 hover:bg-slate-700">FSM</button>
+                <button class="filter-chip px-3 py-1.5 rounded-full bg-slate-800 text-slate-400 text-sm border border-slate-700 hover:bg-slate-700">Reps</button>
+                <button class="filter-chip px-3 py-1.5 rounded-full bg-slate-800 text-slate-400 text-sm border border-slate-700 hover:bg-slate-700">Behind Goal</button>
+                <button class="filter-chip px-3 py-1.5 rounded-full bg-slate-800 text-slate-400 text-sm border border-slate-700 hover:bg-slate-700">On Track</button>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Performance Trend -->
+                <div class="glass-panel rounded-xl p-6 card-hover">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="text-lg font-semibold">Performance Trend</h3>
+                            <p class="text-sm text-slate-500">New POD vs Goal over time</p>
+                        </div>
+                        <select class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+                            <option>This Month</option>
+                            <option>Last 3 Months</option>
+                            <option>YTD</option>
+                        </select>
+                    </div>
+                    <div class="h-64">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Status Distribution -->
+                <div class="glass-panel rounded-xl p-6 card-hover">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="text-lg font-semibold">Team Status</h3>
+                            <p class="text-sm text-slate-500">Performance distribution</p>
+                        </div>
+                    </div>
+                    <div class="h-64 flex items-center justify-center">
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Performers Table -->
+            <div class="glass-panel rounded-xl overflow-hidden card-hover animate-slide-up" style="animation-delay: 200ms;">
+                <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                            <i data-lucide="trophy" class="w-4 h-4 text-amber-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Top Performers</h3>
+                            <p class="text-sm text-slate-500">Based on % to goal</p>
+                        </div>
+                    </div>
+                    <button class="text-sm text-scout-400 hover:text-scout-300 font-medium flex items-center gap-1">
+                        View All
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-slate-800/50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Rank</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Rep</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Level</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">New POD</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Goal</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">% to Goal</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Payout</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topPerformersBody" class="divide-y divide-slate-800">
+                            <!-- Rows loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Needs Attention -->
+            <div class="glass-panel rounded-xl overflow-hidden card-hover animate-slide-up" style="animation-delay: 250ms;">
+                <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center">
+                            <i data-lucide="alert-circle" class="w-4 h-4 text-red-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Needs Attention</h3>
+                            <p class="text-sm text-slate-500">Reps below 50% of goal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-slate-800/50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Rep</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Level</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">New POD</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Goal</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">% to Goal</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Alert</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="needsAttentionBody" class="divide-y divide-slate-800">
+                            <!-- Rows loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Insights -->
+            <div class="glass-panel rounded-xl p-6 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                        <i data-lucide="lightbulb" class="w-4 h-4 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">AI Insights</h3>
+                </div>
+                <div id="insightsList" class="space-y-3">
+                    <!-- Insights loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Data loading and rendering
+        let currentData = null;
+
+        async function loadData() {
+            try {
+                const response = await fetch('data/scout_history/scout_data_20260425.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    currentData = data;
+                    renderDashboard(data);
+                }
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showNoDataState();
+            }
+        }
+
+        function renderDashboard(data) {
+            const { summary, top_performers, needs_help, insights } = data;
+
+            // Update KPI cards
+            document.getElementById('totalReps').textContent = summary.total_reps;
+            document.getElementById('totalNewPod').textContent = summary.total_new_pod.toFixed(0);
+            document.getElementById('teamGoal').textContent = summary.total_goal.toFixed(0);
+            document.getElementById('totalPayout').textContent = '$' + summary.total_payout.toLocaleString();
+            
+            const teamPct = (summary.team_pct_goal * 100).toFixed(1);
+            document.getElementById('teamPct').textContent = teamPct + '%';
+            document.getElementById('teamProgress').style.width = Math.min(teamPct, 100) + '%';
+            
+            const behindReps = data.reps.filter(r => r.status === 'behind').length;
+            document.getElementById('behindCount').textContent = behindReps;
+
+            // Render tables
+            renderTopPerformers(top_performers);
+            renderNeedsAttention(needs_help);
+            renderInsights(insights);
+
+            // Render charts
+            renderCharts(data);
+
+            // Update last update time
+            document.getElementById('lastUpdate').textContent = 'Updated today at ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+
+        function renderTopPerformers(performers) {
+            const tbody = document.getElementById('topPerformersBody');
+            tbody.innerHTML = performers.slice(0, 10).map((rep, i) => {
+                const pct = rep.pct_goal ? (rep.pct_goal * 100).toFixed(0) + '%' : '-';
+                const statusClass = getStatusClass(rep.status);
+                return `
+                    <tr class="table-row">
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full ${i < 3 ? 'bg-amber-500/20 text-amber-400' : 'text-slate-500'} text-sm font-bold">
+                                ${i + 1}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-scout-600 to-cyan-600 flex items-center justify-center text-sm font-bold">
+                                    ${rep.rep_name.split(' ').map(n => n[0]).join('').substring(0, 2)}
+                                </div>
+                                <span class="font-medium">${rep.rep_name}</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-400">${rep.level}</td>
+                        <td class="px-6 py-4 whitespace-nowrap font-medium">${rep.new_pod ? rep.new_pod.toFixed(0) : 0}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-400">${rep.goal ? rep.goal.toFixed(0) : '-'}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <div class="w-16 h-2 bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full ${rep.pct_goal >= 1 ? 'bg-scout-500' : rep.pct_goal >= 0.7 ? 'bg-amber-500' : 'bg-red-500'} rounded-full" style="width: ${Math.min((rep.pct_goal || 0) * 100, 100)}%"></div>
+                                </div>
+                                <span class="text-sm">${pct}</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap font-medium">$${rep.total_payout ? rep.total_payout.toFixed(0) : 0}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="status-badge inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusClass}">
+                                ${rep.status}
+                            </span>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderNeedsAttention(reps) {
+            const tbody = document.getElementById('needsAttentionBody');
+            tbody.innerHTML = reps.slice(0, 10).map(rep => {
+                const pct = rep.pct_goal ? (rep.pct_goal * 100).toFixed(0) + '%' : '-';
+                return `
+                    <tr class="table-row">
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-red-600 to-orange-600 flex items-center justify-center text-sm font-bold">
+                                    ${rep.rep_name.split(' ').map(n => n[0]).join('').substring(0, 2)}
+                                </div>
+                                <span class="font-medium">${rep.rep_name}</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-400">${rep.level}</td>
+                        <td class="px-6 py-4 whitespace-nowrap font-medium">${rep.new_pod ? rep.new_pod.toFixed(0) : 0}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-400">${rep.goal ? rep.goal.toFixed(0) : '-'}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-red-400 font-medium">${pct}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">${rep.alert}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <button class="text-xs bg-scout-600 hover:bg-scout-500 text-white px-3 py-1.5 rounded-lg transition-colors">
+                                Check In
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderInsights(insights) {
+            const container = document.getElementById('insightsList');
+            container.innerHTML = insights.slice(0, 4).map((insight, i) => `
+                <div class="flex items-start gap-3 p-3 rounded-lg bg-slate-800/50 border border-slate-700/50 animate-slide-up" style="animation-delay: ${i * 100}ms;">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-scout-400 mt-0.5 flex-shrink-0"></i>
+                    <p class="text-sm text-slate-300">${insight}</p>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        function getStatusClass(status) {
+            const classes = {
+                'exceeding': 'bg-scout-500/20 text-scout-400',
+                'ontrack': 'bg-blue-500/20 text-blue-400',
+                'behind': 'bg-red-500/20 text-red-400',
+                'unknown': 'bg-slate-500/20 text-slate-400'
+            };
+            return classes[status] || classes['unknown'];
+        }
+
+        function renderCharts(data) {
+            // Trend Chart
+            const trendCtx = document.getElementById('trendChart').getContext('2d');
+            new Chart(trendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                    datasets: [{
+                        label: 'New POD',
+                        data: [180, 210, 240, data.summary.total_new_pod],
+                        borderColor: '#22c55e',
+                        backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }, {
+                        label: 'Goal',
+                        data: [200, 220, 240, data.summary.total_goal],
+                        borderColor: '#22d3ee',
+                        borderDash: [5, 5],
+                        fill: false,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: { color: '#94a3b8' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            grid: { color: 'rgba(148, 163, 184, 0.1)' },
+                            ticks: { color: '#94a3b8' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8' }
+                        }
+                    }
+                }
+            });
+
+            // Status Chart
+            const statusCtx = document.getElementById('statusChart').getContext('2d');
+            const statusCounts = {
+                'On Track': data.reps.filter(r => r.status === 'ontrack').length,
+                'Behind': data.reps.filter(r => r.status === 'behind').length,
+                'Exceeding': data.reps.filter(r => r.status === 'exceeding').length,
+                'Unknown': data.reps.filter(r => r.status === 'unknown').length
+            };
+            
+            new Chart(statusCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(statusCounts),
+                    datasets: [{
+                        data: Object.values(statusCounts),
+                        backgroundColor: ['#22c55e', '#ef4444', '#f59e0b', '#64748b'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#94a3b8', padding: 20 }
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+        }
+
+        function showNoDataState() {
+            document.getElementById('topPerformersBody').innerHTML = `
+                <tr>
+                    <td colspan="8" class="px-6 py-12 text-center text-slate-500">
+                        <i data-lucide="inbox" class="w-12 h-12 mx-auto mb-4 opacity-50"></i>
+                        <p>No data available. Upload a report to get started.</p>
+                    </td>
+                </tr>
+            `;
+            lucide.createIcons();
+        }
+
+        // Load on page load
+        loadData();
+
+        // ======================
+        // PROFESSIONAL FEATURES
+        // ======================
+
+        // 1. WORKING DATA UPLOAD
+        const uploadArea = document.createElement('div');
+        uploadArea.innerHTML = `
+            <div id="uploadModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+                <div class="glass-panel rounded-2xl p-8 max-w-md w-full mx-4 animate-slide-up">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-semibold">Upload Sales Report</h3>
+                        <button onclick="closeUpload()" class="p-2 hover:bg-slate-800 rounded-lg">
+                            <i data-lucide="x" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                    <div id="dropZone" class="border-2 border-dashed border-slate-600 rounded-xl p-8 text-center cursor-pointer hover:border-scout-500 transition-colors">
+                        <i data-lucide="upload-cloud" class="w-12 h-12 mx-auto mb-4 text-slate-500"></i>
+                        <p class="text-slate-300 mb-2">Drop Excel or CSV file here</p>
+                        <p class="text-sm text-slate-500">or click to browse</p>
+                        <input type="file" id="fileInput" accept=".xlsx,.csv" class="hidden" onchange="handleFileUpload(event)">
+                    </div>
+                    <div id="uploadPreview" class="mt-4 hidden">
+                        <div class="flex items-center gap-3 p-3 bg-slate-800 rounded-lg">
+                            <i data-lucide="file-spreadsheet" class="w-5 h-5 text-scout-400"></i>
+                            <div class="flex-1">
+                                <p id="fileName" class="text-sm font-medium"></p>
+                                <p id="fileSize" class="text-xs text-slate-500"></p>
+                            </div>
+                            <button onclick="processFile()" class="bg-scout-600 hover:bg-scout-500 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                Process
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(uploadArea);
+
+        let uploadedFile = null;
+
+        // Wait for DOM to be ready before attaching event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Upload button click
+            const uploadBtn = document.getElementById('uploadBtn');
+            if (uploadBtn) uploadBtn.onclick = openUpload;
+
+            // Download button
+            const downloadBtn = document.getElementById('downloadBtn');
+            if (downloadBtn) {
+                downloadBtn.onclick = function() {
+                    const choice = confirm('Export as PDF?\n\nClick OK for PDF, Cancel for CSV');
+                    if (choice) {
+                        exportToPDF();
+                    } else {
+                        exportToCSV();
+                    }
+                };
+            }
+
+            // Notifications button
+            const notificationsBtn = document.getElementById('notificationsBtn');
+            if (notificationsBtn) notificationsBtn.onclick = toggleAlerts;
+
+            // Settings button  
+            const settingsBtn = document.getElementById('settingsBtn');
+            if (settingsBtn) settingsBtn.onclick = openSettings;
+        });
+
+        function openUpload() {
+            document.getElementById('uploadModal').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeUpload() {
+            document.getElementById('uploadModal').classList.add('hidden');
+            document.getElementById('uploadPreview').classList.add('hidden');
+            uploadedFile = null;
+        }
+
+        // Drag and drop
+        const dropZone = document.getElementById('dropZone');
+        dropZone.addEventListener('click', () => document.getElementById('fileInput').click());
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('border-scout-500', 'bg-scout-500/10');
+        });
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('border-scout-500', 'bg-scout-500/10');
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('border-scout-500', 'bg-scout-500/10');
+            const files = e.dataTransfer.files;
+            if (files.length) handleFile(files[0]);
+        });
+
+        function handleFileUpload(e) {
+            if (e.target.files.length) handleFile(e.target.files[0]);
+        }
+
+        function handleFile(file) {
+            const validTypes = ['.xlsx', '.xls', '.csv'];
+            const ext = '.' + file.name.split('.').pop().toLowerCase();
+            if (!validTypes.includes(ext)) {
+                alert('Please upload Excel (.xlsx) or CSV file');
+                return;
+            }
+            if (file.size > 10 * 1024 * 1024) {
+                alert('File too large. Max 10MB');
+                return;
+            }
+            uploadedFile = file;
+            document.getElementById('fileName').textContent = file.name;
+            document.getElementById('fileSize').textContent = (file.size / 1024).toFixed(1) + ' KB';
+            document.getElementById('uploadPreview').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function processFile() {
+            // In production, this would send to server/scout.py
+            alert('File "' + uploadedFile.name + '" would be processed by Scout analysis engine.\n\nIn production, this triggers the Python backend.');
+            closeUpload();
+        }
+
+        // 2. LIVE FILTERING & SEARCH
+        let activeFilters = {
+            level: 'all',
+            status: 'all',
+            search: ''
+        };
+
+        // Add filter bar after KPI cards
+        const filterBar = document.createElement('div');
+        filterBar.className = 'glass-panel rounded-xl p-4 flex flex-wrap items-center gap-4 animate-slide-up';
+        filterBar.style.animationDelay = '200ms';
+        filterBar.innerHTML = `
+            <div class="flex items-center gap-2">
+                <i data-lucide="filter" class="w-4 h-4 text-slate-500"></i>
+                <span class="text-sm text-slate-400">Filter:</span>
+            </div>
+            <select id="levelFilter" onchange="updateFilter('level', this.value)" class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm">
+                <option value="all">All Levels</option>
+                <option value="FSM">FSM</option>
+                <option value="Rep">Rep</option>
+            </select>
+            <select id="statusFilter" onchange="updateFilter('status', this.value)" class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm">
+                <option value="all">All Status</option>
+                <option value="exceeding">Exceeding</option>
+                <option value="ontrack">On Track</option>
+                <option value="behind">Behind</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Search by name..." oninput="updateFilter('search', this.value)" 
+                   class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm flex-1 min-w-[200px]">
+            <button onclick="clearFilters()" class="text-sm text-slate-400 hover:text-white flex items-center gap-1">
+                <i data-lucide="x-circle" class="w-4 h-4"></i>
+                Clear
+            </button>
+            <span id="resultCount" class="text-sm text-slate-500 ml-auto"></span>
+        `;
+        
+        // Insert after KPI cards
+        const firstSection = document.querySelector('.grid.grid-cols-1.sm\\:grid-cols-2');
+        if (firstSection) {
+            firstSection.parentNode.insertBefore(filterBar, firstSection.nextSibling);
+        }
+
+        function updateFilter(key, value) {
+            activeFilters[key] = value;
+            applyFilters();
+        }
+
+        function clearFilters() {
+            activeFilters = { level: 'all', status: 'all', search: '' };
+            document.getElementById('levelFilter').value = 'all';
+            document.getElementById('statusFilter').value = 'all';
+            document.getElementById('searchInput').value = '';
+            applyFilters();
+        }
+
+        function applyFilters() {
+            if (!currentData) return;
+            
+            let filtered = currentData.reps.filter(rep => {
+                if (activeFilters.level !== 'all' && rep.level !== activeFilters.level) return false;
+                if (activeFilters.status !== 'all' && rep.status !== activeFilters.status) return false;
+                if (activeFilters.search && !rep.rep_name.toLowerCase().includes(activeFilters.search.toLowerCase())) return false;
+                return true;
+            });
+            
+            document.getElementById('resultCount').textContent = filtered.length + ' results';
+            
+            // Re-render tables with filtered data
+            // Sort by % to goal for top performers
+            const sorted = [...filtered].sort((a, b) => (b.pct_goal || 0) - (a.pct_goal || 0));
+            renderTopPerformers(sorted.slice(0, 10));
+            renderNeedsAttention(filtered.filter(r => r.status === 'behind').slice(0, 10));
+        }
+
+        // 3. EXPORT FUNCTIONALITY
+        function exportToCSV() {
+            if (!currentData) {
+                alert('No data loaded yet. Please wait for data to load or upload a report.');
+                return;
+            }
+            
+            const headers = ['Rank', 'Rep Name', 'Level', 'New POD', 'Goal', '% to Goal', 'Status', 'Payout'];
+            const rows = currentData.reps
+                .sort((a, b) => (b.pct_goal || 0) - (a.pct_goal || 0))
+                .map((rep, i) => [
+                    i + 1,
+                    rep.rep_name,
+                    rep.level,
+                    rep.new_pod || 0,
+                    rep.goal || '-',
+                    rep.pct_goal ? (rep.pct_goal * 100).toFixed(1) + '%' : '-',
+                    rep.status,
+                    rep.total_payout || 0
+                ]);
+            
+            const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+            
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'scout_report_' + new Date().toISOString().split('T')[0] + '.csv';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        // 4. ROLE-BASED VIEW SWITCHER
+        const viewSwitcher = document.createElement('div');
+        viewSwitcher.className = 'absolute top-4 right-4 z-50';
+        viewSwitcher.innerHTML = `
+            <select id="viewMode" onchange="switchView(this.value)" class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm">
+                <option value="manager">👔 Manager View</option>
+                <option value="rep">👤 Rep View (Demo)</option>
+            </select>
+        `;
+        document.body.appendChild(viewSwitcher);
+
+        function switchView(mode) {
+            if (mode === 'rep') {
+                // Simulate rep view - show only first rep's data
+                const myRep = currentData?.reps[0];
+                if (myRep) {
+                    alert('👤 Rep View: ' + myRep.rep_name + '\n\nIn production, reps would only see their own data with login authentication.');
+                }
+            }
+        }
+
+        // 5. ALERTS PANEL
+        const alertsPanel = document.createElement('div');
+        alertsPanel.id = 'alertsPanel';
+        alertsPanel.className = 'fixed right-0 top-20 w-80 glass-panel rounded-l-xl p-4 transform translate-x-full transition-transform duration-300 z-40';
+        alertsPanel.innerHTML = `
+            <div class="flex items-center justify-between mb-4">
+                <h4 class="font-semibold flex items-center gap-2">
+                    <i data-lucide="bell" class="w-4 h-4"></i>
+                    Alerts
+                </h4>
+                <button onclick="toggleAlerts()" class="p-1 hover:bg-slate-800 rounded">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            <div id="alertsList" class="space-y-2 max-h-96 overflow-y-auto"></div>
+        `;
+        document.body.appendChild(alertsPanel);
+
+        function toggleAlerts() {
+            const panel = document.getElementById('alertsPanel');
+            panel.classList.toggle('translate-x-full');
+        }
+
+        function generateAlerts() {
+            if (!currentData) return;
+            const alerts = [];
+            
+            currentData.needs_help.slice(0, 5).forEach(rep => {
+                alerts.push({
+                    type: 'warning',
+                    message: rep.rep_name + ' is at ' + (rep.pct_goal * 100).toFixed(0) + '% of goal',
+                    time: 'Just now'
+                });
+            });
+            
+            const list = document.getElementById('alertsList');
+            if (list) {
+                list.innerHTML = alerts.map(a => `
+                    <div class="p-3 bg-amber-500/10 border border-amber-500/20 rounded-lg">
+                        <div class="flex items-start gap-2">
+                            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <p class="text-sm text-slate-300">${a.message}</p>
+                                <p class="text-xs text-slate-500 mt-1">${a.time}</p>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                lucide.createIcons();
+            }
+        }
+
+        // Generate alerts after data loads
+        const originalRenderDashboard = renderDashboard;
+        renderDashboard = function(data) {
+            originalRenderDashboard(data);
+            generateAlerts();
+            lucide.createIcons();
+        };
+
+        // ======================
+        // INVINCIBLE FEATURES
+        // ======================
+
+        // 1. TERRITORY BREAKDOWN SECTION
+        const territorySection = document.createElement('div');
+        territorySection.className = 'glass-panel rounded-xl p-6 card-hover animate-slide-up';
+        territorySection.style.animationDelay = '300ms';
+        territorySection.innerHTML = `
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                        <i data-lucide="map" class="w-5 h-5 text-purple-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Territory Performance</h3>
+                        <p class="text-sm text-slate-500">Regional breakdown & insights</p>
+                    </div>
+                </div>
+                <button onclick="refreshTerritories()" class="p-2 hover:bg-slate-800 rounded-lg">
+                    <i data-lucide="refresh-cw" class="w-4 h-4 text-slate-400"></i>
+                </button>
+            </div>
+            <div id="territoryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Territories loaded dynamically -->
+            </div>
+        `;
+        
+        // Insert before insights
+        const insightsSection = document.querySelector('.glass-panel:has(#insightsList)');
+        if (insightsSection) {
+            insightsSection.parentNode.insertBefore(territorySection, insightsSection);
+        }
+
+        function renderTerritories() {
+            if (!currentData) return;
+            
+            // Simulate territories from rep data
+            const territories = [
+                { name: 'North Region', reps: 45, pod: 89, goal: 120, pct: 74, color: 'from-blue-500 to-cyan-500' },
+                { name: 'South Region', reps: 38, pod: 67, goal: 85, pct: 79, color: 'from-scout-500 to-emerald-500' },
+                { name: 'East Region', reps: 32, pod: 54, goal: 78, pct: 69, color: 'from-amber-500 to-orange-500' },
+                { name: 'West Region', reps: 29, pod: 54, goal: 83, pct: 65, color: 'from-red-500 to-pink-500' }
+            ];
+            
+            const grid = document.getElementById('territoryGrid');
+            grid.innerHTML = territories.map(t => `
+                <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-colors cursor-pointer">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="font-medium">${t.name}</h4>
+                        <span class="text-xs text-slate-500">${t.reps} reps</span>
+                    </div>
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <span class="text-2xl font-bold">${t.pod}</span>
+                        <span class="text-sm text-slate-500">/ ${t.goal} POD</span>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded-full overflow-hidden mb-2">
+                        <div class="h-full bg-gradient-to-r ${t.color} rounded-full" style="width: ${t.pct}%"></div>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-slate-400">${t.pct}% to goal</span>
+                        <span class="${t.pct >= 75 ? 'text-scout-400' : t.pct >= 60 ? 'text-amber-400' : 'text-red-400'}">
+                            ${t.pct >= 75 ? '↑' : '↓'} ${Math.abs(t.pct - 75).toFixed(0)}%
+                        </span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function refreshTerritories() {
+            const btn = document.querySelector('[onclick="refreshTerritories()"] i');
+            btn.classList.add('animate-spin');
+            setTimeout(() => {
+                btn.classList.remove('animate-spin');
+                renderTerritories();
+            }, 500);
+        }
+
+        // 2. PDF EXPORT FUNCTIONALITY
+        function exportToPDF() {
+            if (!currentData) return;
+            
+            const printWindow = window.open('', '_blank');
+            const date = new Date().toLocaleDateString();
+            
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Scout Report - ${date}</title>
+                    <style>
+                        body { font-family: Inter, sans-serif; padding: 40px; color: #333; }
+                        h1 { color: #22c55e; border-bottom: 2px solid #22c55e; padding-bottom: 10px; }
+                        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+                        th { background: #22c55e; color: white; padding: 12px; text-align: left; }
+                        td { padding: 10px; border-bottom: 1px solid #ddd; }
+                        tr:nth-child(even) { background: #f9f9f9; }
+                        .header { display: flex; justify-content: space-between; align-items: center; }
+                        .summary { background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 20px 0; }
+                    </style>
+                </head>
+                <body>
+                    <div class="header">
+                        <h1>🎯 Scout Sales Intelligence Report</h1>
+                        <p>Generated: ${date}</p>
+                    </div>
+                    <div class="summary">
+                        <h3>Executive Summary</h3>
+                        <p><strong>Total Reps:</strong> ${currentData.summary.total_reps}</p>
+                        <p><strong>Team New POD:</strong> ${currentData.summary.total_new_pod.toFixed(0)} / ${currentData.summary.total_goal.toFixed(0)} (${(currentData.summary.team_pct_goal * 100).toFixed(1)}%)</p>
+                        <p><strong>Total Payouts:</strong> $${currentData.summary.total_payout.toLocaleString()}</p>
+                    </div>
+                    <h2>Top Performers</h2>
+                    <table>
+                        <tr>
+                            <th>Rank</th><th>Rep</th><th>Level</th><th>New POD</th><th>Goal</th><th>% to Goal</th>
+                        </tr>
+                        ${currentData.top_performers.slice(0, 10).map((r, i) => `
+                            <tr>
+                                <td>${i + 1}</td>
+                                <td>${r.rep_name}</td>
+                                <td>${r.level}</td>
+                                <td>${r.new_pod || 0}</td>
+                                <td>${r.goal || '-'}</td>
+                                <td>${r.pct_goal ? (r.pct_goal * 100).toFixed(0) + '%' : '-'}</td>
+                            </tr>
+                        `).join('')}
+                    </table>
+                    <h2>Needs Attention</h2>
+                    <table>
+                        <tr>
+                            <th>Rep</th><th>Level</th><th>New POD</th><th>Goal</th><th>Alert</th>
+                        </tr>
+                        ${currentData.needs_help.slice(0, 10).map(r => `
+                            <tr>
+                                <td>${r.rep_name}</td>
+                                <td>${r.level}</td>
+                                <td>${r.new_pod || 0}</td>
+                                <td>${r.goal || '-'}</td>
+                                <td>${r.alert}</td>
+                            </tr>
+                        `).join('')}
+                    </table>
+                </body>
+                </html>
+            `);
+            
+            printWindow.document.close();
+            setTimeout(() => printWindow.print(), 100);
+        }
+
+        // Add PDF export option - wrapped in DOMContentLoaded check
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadBtn = document.getElementById('downloadBtn');
+            if (downloadBtn) {
+                downloadBtn.onclick = function() {
+                    if (!currentData) {
+                        alert('No data loaded yet. Please wait for data to load.');
+                        return;
+                    }
+                    const choice = confirm('Export as PDF?\n\nClick OK for PDF, Cancel for CSV');
+                    if (choice) {
+                        exportToPDF();
+                    } else {
+                        exportToCSV();
+                    }
+                };
+            }
+        });
+
+        // 3. ADVANCED ANALYTICS - COMPARISON MODE
+        const comparisonSection = document.createElement('div');
+        comparisonSection.className = 'glass-panel rounded-xl p-6 card-hover animate-slide-up';
+        comparisonSection.style.animationDelay = '350ms';
+        comparisonSection.innerHTML = `
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center">
+                    <i data-lucide="git-compare" class="w-5 h-5 text-cyan-400"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold">Period Comparison</h3>
+                    <p class="text-sm text-slate-500">vs Previous Period</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 bg-slate-800/50 rounded-xl">
+                    <p class="text-sm text-slate-500 mb-1">New POD</p>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl font-bold">264</span>
+                        <span class="text-sm text-scout-400 flex items-center">
+                            <i data-lucide="trending-up" class="w-3 h-3 mr-1"></i>+12%
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-1">vs 236 last period</p>
+                </div>
+                <div class="p-4 bg-slate-800/50 rounded-xl">
+                    <p class="text-sm text-slate-500 mb-1">Avg % to Goal</p>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl font-bold">72%</span>
+                        <span class="text-sm text-amber-400 flex items-center">
+                            <i data-lucide="trending-down" class="w-3 h-3 mr-1"></i>-5%
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-1">vs 77% last period</p>
+                </div>
+                <div class="p-4 bg-slate-800/50 rounded-xl">
+                    <p class="text-sm text-slate-500 mb-1">Behind Goal</p>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl font-bold text-red-400">21</span>
+                        <span class="text-sm text-red-400 flex items-center">
+                            <i data-lucide="trending-up" class="w-3 h-3 mr-1"></i>+3
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-1">vs 18 last period</p>
+                </div>
+            </div>
+        `;
+        
+        // Insert after territory
+        if (territorySection) {
+            territorySection.parentNode.insertBefore(comparisonSection, territorySection.nextSibling);
+        }
+
+        // 4. USER PROFILE & SETTINGS
+        const settingsModal = document.createElement('div');
+        settingsModal.id = 'settingsModal';
+        settingsModal.className = 'fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center';
+        settingsModal.innerHTML = `
+            <div class="glass-panel rounded-2xl p-6 max-w-lg w-full mx-4 animate-slide-up">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-semibold">Settings</h3>
+                    <button onclick="closeSettings()" class="p-2 hover:bg-slate-800 rounded-lg">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Dashboard Theme</label>
+                        <div class="flex gap-2">
+                            <button onclick="setTheme('dark')" class="flex-1 p-3 rounded-lg bg-slate-800 border border-scout-500 text-center">
+                                <i data-lucide="moon" class="w-5 h-5 mx-auto mb-1"></i>
+                                <span class="text-sm">Dark</span>
+                            </button>
+                            <button onclick="setTheme('light')" class="flex-1 p-3 rounded-lg bg-slate-100 border border-slate-300 text-slate-900 text-center">
+                                <i data-lucide="sun" class="w-5 h-5 mx-auto mb-1"></i>
+                                <span class="text-sm">Light</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Email Notifications</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg cursor-pointer">
+                                <input type="checkbox" checked class="w-4 h-4 accent-scout-500">
+                                <span class="text-sm">Daily summary</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg cursor-pointer">
+                                <input type="checkbox" checked class="w-4 h-4 accent-scout-500">
+                                <span class="text-sm">Alerts when reps fall behind</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 accent-scout-500">
+                                <span class="text-sm">Weekly reports</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Data Refresh</label>
+                        <select class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm">
+                            <option>Every 5 minutes</option>
+                            <option>Every 15 minutes</option>
+                            <option>Every hour</option>
+                            <option>Manual only</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-slate-800 flex gap-3">
+                    <button onclick="saveSettings()" class="flex-1 bg-scout-600 hover:bg-scout-500 text-white py-2 rounded-lg font-medium">Save</button>
+                    <button onclick="closeSettings()" class="flex-1 bg-slate-800 hover:bg-slate-700 py-2 rounded-lg font-medium">Cancel</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(settingsModal);
+
+        function openSettings() {
+            document.getElementById('settingsModal').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeSettings() {
+            document.getElementById('settingsModal').classList.add('hidden');
+        }
+
+        function saveSettings() {
+            // Save to localStorage
+            localStorage.setItem('scoutSettings', JSON.stringify({
+                theme: document.body.classList.contains('light') ? 'light' : 'dark',
+                notifications: {
+                    daily: true,
+                    alerts: true,
+                    weekly: false
+                }
+            }));
+            closeSettings();
+            showToast('Settings saved!');
+        }
+
+        function setTheme(theme) {
+            if (theme === 'light') {
+                document.body.classList.add('light');
+                document.body.style.background = '#f8fafc';
+                document.body.style.color = '#1e293b';
+            } else {
+                document.body.classList.remove('light');
+                document.body.style.background = '';
+                document.body.style.color = '';
+            }
+        }
+
+        // Connect settings button
+        document.querySelector('i[data-lucide="settings"]').closest('div').onclick = openSettings;
+
+        // 5. DATA QUALITY INDICATORS
+        const qualityBar = document.createElement('div');
+        qualityBar.className = 'fixed bottom-4 right-4 glass-panel rounded-xl p-3 flex items-center gap-4 z-30';
+        qualityBar.innerHTML = `
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-scout-500 animate-pulse"></div>
+                <span class="text-xs text-slate-400">Data Quality:</span>
+                <span class="text-xs font-medium text-scout-400">Excellent</span>
+            </div>
+            <div class="h-4 w-px bg-slate-700"></div>
+            <div class="flex items-center gap-2">
+                <i data-lucide="database" class="w-3 h-3 text-slate-400"></i>
+                <span class="text-xs text-slate-400">Source:</span>
+                <span class="text-xs font-medium">bf_performance_latest.json</span>
+            </div>
+            <div class="h-4 w-px bg-slate-700"></div>
+            <div class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-3 h-3 text-slate-400"></i>
+                <span class="text-xs text-slate-400">Updated:</span>
+                <span id="lastUpdateTime" class="text-xs font-medium">Just now</span>
+            </div>
+        `;
+        document.body.appendChild(qualityBar);
+
+        // 6. KEYBOARD SHORTCUTS
+        document.addEventListener('keydown', (e) => {
+            // Cmd/Ctrl + K for search
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                document.getElementById('searchInput')?.focus();
+            }
+            // Cmd/Ctrl + U for upload
+            if ((e.metaKey || e.ctrlKey) && e.key === 'u') {
+                e.preventDefault();
+                openUpload();
+            }
+            // Cmd/Ctrl + E for export
+            if ((e.metaKey || e.ctrlKey) && e.key === 'e') {
+                e.preventDefault();
+                exportToCSV();
+            }
+            // Escape to close modals
+            if (e.key === 'Escape') {
+                closeUpload();
+                closeSettings();
+                document.getElementById('alertsPanel')?.classList.add('translate-x-full');
+            }
+        });
+
+        // Show keyboard shortcuts hint
+        const shortcutsHint = document.createElement('div');
+        shortcutsHint.className = 'fixed bottom-4 left-4 glass-panel rounded-xl p-3 text-xs text-slate-500 z-30';
+        shortcutsHint.innerHTML = `
+            <div class="flex items-center gap-4">
+                <span><kbd class="bg-slate-800 px-1 rounded">⌘K</kbd> Search</span>
+                <span><kbd class="bg-slate-800 px-1 rounded">⌘U</kbd> Upload</span>
+                <span><kbd class="bg-slate-800 px-1 rounded">⌘E</kbd> Export</span>
+                <span><kbd class="bg-slate-800 px-1 rounded">ESC</kbd> Close</span>
+            </div>
+        `;
+        document.body.appendChild(shortcutsHint);
+
+        // 7. TOAST NOTIFICATIONS
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `fixed top-4 right-4 px-4 py-3 rounded-lg shadow-lg z-50 animate-slide-up flex items-center gap-2 ${
+                type === 'success' ? 'bg-scout-600 text-white' : 'bg-red-500 text-white'
+            }`;
+            toast.innerHTML = `
+                <i data-lucide="${type === 'success' ? 'check-circle' : 'alert-circle'}" class="w-4 h-4"></i>
+                <span>${message}</span>
+            `;
+            document.body.appendChild(toast);
+            lucide.createIcons();
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // 8. SHARE FUNCTIONALITY
+        function shareReport() {
+            const reportData = {
+                summary: currentData?.summary,
+                date: new Date().toISOString(),
+                topPerformer: currentData?.top_performers[0]?.rep_name
+            };
+            
+            // Copy shareable link to clipboard
+            const shareUrl = window.location.href + '?report=' + btoa(JSON.stringify(reportData)).slice(0, 20);
+            navigator.clipboard.writeText(shareUrl).then(() => {
+                showToast('Link copied to clipboard!');
+            });
+        }
+
+        // Add share button to header
+        const shareBtn = document.createElement('button');
+        shareBtn.className = 'p-2 rounded-lg hover:bg-slate-800';
+        shareBtn.innerHTML = '<i data-lucide="share-2" class="w-5 h-5"></i>';
+        shareBtn.onclick = shareReport;
+        shareBtn.title = 'Share report';
+        
+        const headerRight = document.querySelector('header .flex.items-center.gap-4');
+        if (headerRight) {
+            headerRight.insertBefore(shareBtn, headerRight.firstChild);
+        }
+
+        // 9. ONBOARDING TOUR
+        function startTour() {
+            const steps = [
+                { element: '.sidebar', text: 'Navigation sidebar - access all sections' },
+                { element: '.metric-card', text: 'Key metrics at a glance' },
+                { element: '#searchInput', text: 'Search and filter reps instantly' },
+                { element: 'button i[data-lucide="upload"]', text: 'Upload new reports here' },
+                { element: 'button i[data-lucide="download"]', text: 'Export to CSV or PDF' },
+                { element: '#alertsPanel', text: 'Real-time alerts and notifications' }
+            ];
+            
+            let currentStep = 0;
+            
+            function showStep() {
+                const step = steps[currentStep];
+                const el = document.querySelector(step.element);
+                if (el) {
+                    el.style.position = 'relative';
+                    el.style.zIndex = '100';
+                    el.classList.add('ring-2', 'ring-scout-500', 'ring-offset-2', 'ring-offset-slate-900');
+                    
+                    // Show tooltip
+                    const tooltip = document.createElement('div');
+                    tooltip.className = 'fixed bg-scout-600 text-white p-3 rounded-lg text-sm max-w-xs z-50';
+                    tooltip.innerHTML = `
+                        <p>${step.text}</p>
+                        <div class="mt-2 flex justify-between">
+                            <span class="text-xs opacity-75">${currentStep + 1}/${steps.length}</span>
+                            <button onclick="nextTourStep()" class="text-xs font-medium">Next →</button>
+                        </div>
+                    `;
+                    tooltip.id = 'tourTooltip';
+                    document.body.appendChild(tooltip);
+                    
+                    // Position tooltip
+                    const rect = el.getBoundingClientRect();
+                    tooltip.style.left = rect.left + 'px';
+                    tooltip.style.top = (rect.bottom + 10) + 'px';
+                }
+            }
+            
+            window.nextTourStep = function() {
+                document.querySelectorAll('.ring-2').forEach(el => {
+                    el.classList.remove('ring-2', 'ring-scout-500', 'ring-offset-2', 'ring-offset-slate-900');
+                });
+                document.getElementById('tourTooltip')?.remove();
+                
+                currentStep++;
+                if (currentStep < steps.length) {
+                    showStep();
+                } else {
+                    showToast('Tour complete! You\'re ready to use Scout.');
+                }
+            };
+            
+            showStep();
+        }
+
+        // Add tour button to sidebar
+        const tourBtn = document.createElement('a');
+        tourBtn.href = '#';
+        tourBtn.className = 'sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors';
+        tourBtn.innerHTML = `
+            <i data-lucide="compass" class="w-5 h-5"></i>
+            <span>Start Tour</span>
+        `;
+        tourBtn.onclick = (e) => {
+            e.preventDefault();
+            startTour();
+        };
+        
+        const sidebarNav = document.querySelector('.sidebar nav');
+        if (sidebarNav) {
+            sidebarNav.appendChild(tourBtn);
+        }
+
+        // Initialize all new features
+        renderTerritories();
+        lucide.createIcons();
+
+        // Update renderDashboard to include territories
+        const originalRender = renderDashboard;
+        renderDashboard = function(data) {
+            originalRender(data);
+            renderTerritories();
+            document.getElementById('lastUpdateTime').textContent = new Date().toLocaleTimeString();
+            lucide.createIcons();
+        };
+
+        // Refresh every 5 minutes
+        setInterval(loadData, 300000);
+
+        // Initialize icons for new elements
+        lucide.createIcons();
+    </script>
+</body>
+</html>

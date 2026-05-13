@@ -1,0 +1,119 @@
+{
+  "id": "20260506_223828_20260506_223801_B-F_FL_MTD_Portfolio_Update_FY26_April_Ending",
+  "filename": "20260506_223801_B-F_FL_MTD_Portfolio_Update_FY26_April_Ending.xlsm",
+  "uploaded_at": "2026-05-06T22:38:28.035828",
+  "file_type": "excel",
+  "row_count": 1492,
+  "column_analysis": {
+    "Unnamed: 0": "text",
+    "Unnamed: 1": "text",
+    "Unnamed: 2": "text",
+    "Unnamed: 3": "text",
+    "Unnamed: 4": "text",
+    "Unnamed: 5": "text",
+    "Unnamed: 6": "text",
+    "Unnamed: 7": "text",
+    "Unnamed: 8": "text",
+    "Unnamed: 9": "text",
+    "Unnamed: 10": "text",
+    "Unnamed: 11": "text",
+    "Unnamed: 12": "text",
+    "Unnamed: 13": "text",
+    "Unnamed: 14": "text",
+    "Unnamed: 15": "text",
+    "Unnamed: 16": "text",
+    "Unnamed: 17": "text",
+    "Unnamed: 18": "text",
+    "Unnamed: 19": "text",
+    "Unnamed: 20": "text",
+    "SalesDivisionName": "monetary",
+    "All": "text",
+    "Unnamed: 23": "text",
+    "_source_sheet": "text"
+  },
+  "metrics": {
+    "total_records": 1492,
+    "monetary_columns": [
+      "SalesDivisionName"
+    ],
+    "entity_columns": [],
+    "product_columns": []
+  },
+  "insights": {
+    "summary": "The sales report for April 2026 indicates a total of 1492 records, with a significant focus on the Florida market. The data reveals both growth and decline in various product categories, highlighting opportunities for targeted sales strategies and risk management.",
+    "top_performers": [
+      {
+        "name": "FL - PEAK",
+        "metric": "Sales",
+        "value": 17849.91,
+        "insight": "This SKU has shown a remarkable increase of 50.53% compared to the previous month, indicating strong market demand and effective promotional strategies."
+      },
+      {
+        "name": "BREEDING CHAD",
+        "metric": "Sales",
+        "value": 9176.3,
+        "insight": "This account has experienced a significant increase of 25.03%, suggesting successful engagement and customer retention efforts."
+      }
+    ],
+    "accounts_at_risk": [
+      {
+        "name": "TOTAL WINE & MORE CORP",
+        "reason": "Sales declined by 29.89% compared to last year, indicating potential customer dissatisfaction or increased competition.",
+        "recommended_action": "Conduct a customer feedback survey to identify issues and implement targeted marketing strategies to regain market share."
+      },
+      {
+        "name": "COSTCO CORP",
+        "reason": "Sales have decreased by 15.30% year-over-year, which could lead to a loss of account if not addressed.",
+        "recommended_action": "Schedule a meeting to discuss potential product offerings and promotional strategies to boost sales."
+      }
+    ],
+    "call_today": [
+      {
+        "name": "FLANIGANS BIG DADDY LIQUORS",
+        "priority": "high",
+        "reason": "Sales have increased by 5.03% this month, indicating a positive trend that should be nurtured.",
+        "talking_points": "Discuss upcoming promotions and explore opportunities for expanding product offerings."
+      },
+      {
+        "name": "WALT DISNEY COMPANY",
+        "priority": "medium",
+        "reason": "Sales have shown a 12.34% increase, suggesting a good relationship that can be leveraged for further growth.",
+        "talking_points": "Review current product performance and discuss potential new products that align with their needs."
+      }
+    ],
+    "skus_down": [
+      {
+        "sku": "TOTAL WINE & MORE CORP",
+        "name": "TOTAL WINE & MORE CORP",
+        "decline": "29.89%",
+        "action": "Implement a targeted marketing campaign to address the decline and re-engage customers."
+      },
+      {
+        "sku": "COSTCO CORP",
+        "name": "COSTCO CORP",
+        "decline": "15.30%",
+        "action": "Review product offerings and consider bundling strategies to enhance sales."
+      }
+    ],
+    "opportunities": [
+      {
+        "description": "Expand product offerings in the On-Premise segment, which has shown consistent growth.",
+        "potential_value": "Estimated additional revenue of $50,000 per quarter.",
+        "how_to_capture": "Engage with key accounts to introduce new products and create tailored promotions."
+      },
+      {
+        "description": "Leverage the success of the FL - PEAK SKU to create a promotional campaign.",
+        "potential_value": "Estimated additional revenue of $20,000 in the next quarter.",
+        "how_to_capture": "Develop marketing materials and collaborate with retailers to feature this SKU prominently."
+      }
+    ],
+    "alerts": [
+      "Critical decline in sales for TOTAL WINE & MORE CORP and COSTCO CORP that requires immediate attention to prevent account loss."
+    ],
+    "recommendations": [
+      "Implement a customer feedback mechanism to understand the reasons behind declining sales.",
+      "Focus on high-performing SKUs and accounts to maximize revenue potential.",
+      "Develop targeted marketing strategies for at-risk accounts to re-engage and retain customers."
+    ]
+  }
+}

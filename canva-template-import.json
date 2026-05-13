@@ -1,0 +1,225 @@
+{
+  "version": "1.0",
+  "templates": [
+    {
+      "name": "TikTok Hook - Bold White",
+      "dimensions": { "width": 1080, "height": 1920 },
+      "background": { "color": "#000000", "opacity": 0.6 },
+      "elements": [
+        {
+          "type": "text",
+          "text": "I hired 8 AI agents",
+          "position": { "x": 540, "y": 400 },
+          "style": {
+            "font": "Boldonse",
+            "size": 120,
+            "color": "#FFFFFF",
+            "stroke": { "color": "#000000", "width": 8 },
+            "align": "center",
+            "weight": "bold"
+          },
+          "animation": {
+            "type": "fade-in",
+            "duration": "0.5s"
+          }
+        },
+        {
+          "type": "text", 
+          "text": "to run my business",
+          "position": { "x": 540, "y": 550 },
+          "style": {
+            "font": "Boldonse",
+            "size": 120,
+            "color": "#3B82F6",
+            "stroke": { "color": "#000000", "width": 8 },
+            "align": "center",
+            "weight": "bold"
+          },
+          "animation": {
+            "type": "fade-in",
+            "delay": "0.3s",
+            "duration": "0.5s"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Agent Card - Purple",
+      "dimensions": { "width": 1080, "height": 1920 },
+      "background": { "color": "#1e293b" },
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "circle",
+          "position": { "x": 540, "y": 400 },
+          "size": { "width": 200, "height": 200 },
+          "style": { "fill": "#8B5CF6", "opacity": 0.2 }
+        },
+        {
+          "type": "text",
+          "text": "👔",
+          "position": { "x": 540, "y": 400 },
+          "style": { "font": "Arial", "size": 100 }
+        },
+        {
+          "type": "text",
+          "text": "JERRY",
+          "position": { "x": 540, "y": 650 },
+          "style": {
+            "font": "Inter",
+            "size": 72,
+            "color": "#8B5CF6",
+            "weight": "bold",
+            "align": "center"
+          }
+        },
+        {
+          "type": "text",
+          "text": "CEO",
+          "position": { "x": 540, "y": 750 },
+          "style": {
+            "font": "Inter",
+            "size": 48,
+            "color": "#94A3B8",
+            "align": "center"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Reviews metrics daily",
+          "position": { "x": 540, "y": 850 },
+          "style": {
+            "font": "Inter",
+            "size": 36,
+            "color": "#FFFFFF",
+            "align": "center"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stat Highlight - Green",
+      "dimensions": { "width": 1080, "height": 400 },
+      "background": { "color": "#064E3B", "borderRadius": 20 },
+      "elements": [
+        {
+          "type": "text",
+          "text": "40%",
+          "position": { "x": 540, "y": 150 },
+          "style": {
+            "font": "Boldonse",
+            "size": 120,
+            "color": "#10B981",
+            "weight": "bold",
+            "align": "center"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Faster response time",
+          "position": { "x": 540, "y": 280 },
+          "style": {
+            "font": "Inter",
+            "size": 36,
+            "color": "#FFFFFF",
+            "align": "center"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CTA - Comment Below",
+      "dimensions": { "width": 1080, "height": 300 },
+      "background": { "color": "#000000", "opacity": 0.8 },
+      "elements": [
+        {
+          "type": "text",
+          "text": "👇",
+          "position": { "x": 540, "y": 80 },
+          "style": { "font": "Arial", "size": 60 }
+        },
+        {
+          "type": "text",
+          "text": "Comment \"TEAM\" for the setup",
+          "position": { "x": 540, "y": 180 },
+          "style": {
+            "font": "Inter",
+            "size": 48,
+            "color": "#FBBF24",
+            "weight": "bold",
+            "align": "center"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Before/After Split",
+      "dimensions": { "width": 1080, "height": 1920 },
+      "background": { "color": "#0F172A" },
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "rectangle",
+          "position": { "x": 540, "y": 400 },
+          "size": { "width": 1000, "height": 700 },
+          "style": { "fill": "#1E293B", "borderRadius": 20 }
+        },
+        {
+          "type": "text",
+          "text": "BEFORE",
+          "position": { "x": 540, "y": 200 },
+          "style": {
+            "font": "Inter",
+            "size": 48,
+            "color": "#EF4444",
+            "weight": "bold",
+            "align": "center"
+          }
+        },
+        {
+          "type": "text",
+          "text": "❌ Missed calls\n❌ Lost leads\n❌ Manual follow-up",
+          "position": { "x": 540, "y": 450 },
+          "style": {
+            "font": "Inter",
+            "size": 42,
+            "color": "#94A3B8",
+            "align": "center",
+            "lineHeight": 1.8
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rectangle",
+          "position": { "x": 540, "y": 1200 },
+          "size": { "width": 1000, "height": 700 },
+          "style": { "fill": "#064E3B", "borderRadius": 20 }
+        },
+        {
+          "type": "text",
+          "text": "AFTER",
+          "position": { "x": 540, "y": 1000 },
+          "style": {
+            "font": "Inter",
+            "size": 48,
+            "color": "#10B981",
+            "weight": "bold",
+            "align": "center"
+          }
+        },
+        {
+          "type": "text",
+          "text": "✅ 24/7 answering\n✅ Auto follow-up\n✅ 3x more meetings",
+          "position": { "x": 540, "y": 1250 },
+          "style": {
+            "font": "Inter",
+            "size": 42,
+            "color": "#FFFFFF",
+            "align": "center",
+            "lineHeight": 1.8
+          }
+        }
+      ]
+    }
+  ]
+}

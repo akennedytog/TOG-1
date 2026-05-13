@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout Pro | Sales Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(148, 163, 184, 0.1); }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(148, 163, 184, 0.1); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .sidebar-link { position: relative; }
+        .sidebar-link::after { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 3px; height: 0; background: #22c55e; transition: height 0.3s; }
+        .sidebar-link:hover::after, .sidebar-link.active::after { height: 100%; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+    <aside class="fixed left-0 top-0 h-full w-64 glass border-r border-slate-800 z-50 hidden md:block">
+        <div class="p-6">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold">Scout</h1>
+                    <p class="text-xs text-slate-500">Sales Intelligence</p>
+                </div>
+            </div>
+            <nav class="space-y-1">
+                <a href="#" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-lg bg-slate-800 text-green-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                    <span class="font-medium">Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    <span>Reps</span>
+                </a>
+                <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0121 18.382V7.618a1 1 0 00-.553-.894L15 7m0 13V7"/></svg>
+                    <span>Territories</span>
+                </a>
+            </nav>
+            <div class="mt-8 pt-6 border-t border-slate-800">
+                <p class="text-xs text-slate-500 uppercase tracking-wider mb-4">Quick Actions</p>
+                <button id="sidebarUploadBtn" class="w-full flex items-center gap-3 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 text-white transition text-sm font-medium">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+                    Upload Report
+                </button>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-800">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-sm font-bold">A</div>
+                <div class="flex-1">
+                    <p class="text-sm font-medium">Alec Kennedy</p>
+                    <p class="text-xs text-slate-500">Manager</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="md:ml-64 min-h-screen">
+        <header class="glass sticky top-0 z-40 border-b border-slate-800">
+            <div class="px-6 py-4 flex items-center justify-between">
+                <div>
+                    <h2 class="text-xl font-semibold">Dashboard</h2>
+                    <p class="text-sm text-slate-500" id="lastUpdate">Updated just now</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <input type="text" id="searchInput" placeholder="Search reps..." class="bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-sm w-48">
+                    <button id="exportBtn" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg text-sm font-medium">Export</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-6 space-y-6">
+            <div id="statusMsg" class="glass-panel rounded-xl p-4 text-center text-amber-400">
+                Click "Upload Report" to load your sales data
+            </div>
+
+            <div id="dashboardContent" class="hidden space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <p class="text-sm text-slate-500">Total Reps</p>
+                        <p id="kpiReps" class="text-3xl font-bold mt-2">—</p>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <p class="text-sm text-slate-500">Team New POD</p>
+                        <p id="kpiPod" class="text-3xl font-bold mt-2">—</p>
+                        <div class="h-2 bg-slate-800 rounded-full mt-2"><div id="kpiProgress" class="h-full bg-gradient-to-r from-green-500 to-cyan-500 rounded-full" style="width:0%"></div></div>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <p class="text-sm text-slate-500">% to Goal</p>
+                        <p id="kpiPct" class="text-3xl font-bold mt-2 text-green-400">—</p>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <p class="text-sm text-slate-500">Behind Goal</p>
+                        <p id="kpiBehind" class="text-3xl font-bold mt-2 text-red-400">—</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="glass-panel rounded-xl p-6 card-hover">
+                        <h3 class="font-semibold mb-4">Performance Trend</h3>
+                        <div class="h-64"><canvas id="trendChart"></canvas></div>
+                    </div>
+                    <div class="glass-panel rounded-xl p-6 card-hover">
+                        <h3 class="font-semibold mb-4">Status Distribution</h3>
+                        <div class="h-64 flex items-center justify-center"><canvas id="statusChart"></canvas></div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-xl overflow-hidden card-hover">
+                    <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                        <h3 class="font-semibold">Top Performers</h3>
+                        <span id="resultCount" class="text-sm text-slate-500"></span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-slate-800/50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs text-slate-500 uppercase">Rank</th>
+                                    <th class="px-6 py-3 text-left text-xs text-slate-500 uppercase">Rep</th>
+                                    <th class="px-6 py-3 text-left text-xs text-slate-500 uppercase">Level</th>
+                                    <th class="px-6 py-3 text-left text-xs text-slate-500 uppercase">New POD</th>
+                                    <th class="px-6 py-3 text-left text-xs text-slate-500 uppercase">Goal</th>
+                                    <th class="px-6 py-3 text-left text-xs text-slate-500 uppercase">% to Goal</th>
+                                    <th class="px-6 py-3 text-left text-xs text-slate-500 uppercase">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody" class="divide-y divide-slate-800"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="uploadModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center">
+        <div class="glass-panel rounded-2xl p-8 max-w-lg w-full mx-4">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-semibold">Upload Sales Report</h3>
+                <button id="closeUpload" class="text-slate-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <div id="dropZone" class="border-2 border-dashed border-slate-600 rounded-xl p-8 text-center cursor-pointer hover:border-green-500 transition">
+                <svg class="w-12 h-12 mx-auto mb-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-slate-300 mb-2">Drop Excel or CSV file here</p>
+                <p class="text-sm text-slate-500">All sheets will be merged automatically</p>
+                <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" class="hidden">
+            </div>
+            <div id="uploadPreview" class="mt-4 hidden">
+                <div class="flex items-center gap-3 p-3 bg-slate-800 rounded-lg">
+                    <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <div class="flex-1">
+                        <p id="fileName" class="text-sm font-medium"></p>
+                        <p id="sheetInfo" class="text-xs text-slate-500"></p>
+                    </div>
+                    <button id="processBtn" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium">Process</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentData = null;
+        let uploadedFile = null;
+        let sheetCount = 0;
+
+        // AUTO-LOAD briefing JSON on page load
+        async function loadBriefingData() {
+            try {
+                const response = await fetch('../data/scout_output/briefing_latest.json');
+                if (!response.ok) throw new Error('No briefing data found');
+                const briefing = await response.json();
+                
+                // Convert briefing format to dashboard format
+                currentData = {
+                    summary: {
+                        total_reps: briefing.summary.total_reps,
+                        total_new_pod: briefing.summary.total_new_pod,
+                        total_goal: briefing.summary.total_goal,
+                        team_pct_goal: briefing.summary.team_pct_goal,
+                        total_payout: briefing.summary.total_payout,
+                        behind: briefing.summary.behind || 0
+                    },
+                    reps: briefing.top_performers.map(r => ({
+                        rep_name: r.rep_name,
+                        level: r.level,
+                        new_pod: r.new_pod,
+                        goal: r.goal,
+                        pct_goal: r.pct_goal,
+                        status: r.status,
+                        prior_pod: r.prior_pod,
+                        variance: r.variance
+                    }))
+                };
+                
+                renderDashboard();
+                document.getElementById('statusMsg').textContent = '✅ Live data loaded from Scout briefing';
+                document.getElementById('statusMsg').classList.remove('text-amber-400');
+                document.getElementById('statusMsg').classList.add('text-green-400');
+                
+            } catch (err) {
+                console.log('No briefing data found, waiting for Excel upload:', err);
+                document.getElementById('statusMsg').textContent = '⚠️ No briefing data. Click "Upload Report" or run Scout agent.';
+            }
+        }
+
+        // Auto-load on page load
+        document.addEventListener('DOMContentLoaded', loadBriefingData);
+
+        // Parse Excel with MULTI-SHEET support
+        function parseExcelFile(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const data = new Uint8Array(e.target.result);
+                        const workbook = XLSX.read(data, { type: 'array' });
+                        
+                        // Parse ALL sheets
+                        const allData = [];
+                        sheetCount = workbook.SheetNames.length;
+                        
+                        workbook.SheetNames.forEach(sheetName => {
+                            const sheet = workbook.Sheets[sheetName];
+                            const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+                            if (jsonData.length > 0) {
+                                allData.push(...jsonData);
+                            }
+                        });
+                        
+                        resolve(allData);
+                    } catch (err) {
+                        reject(err);
+                    }
+                };
+                reader.onerror = reject;
+                reader.readAsArrayBuffer(file);
+            });
+        }
+
+        function parseCSVFile(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const text = e.target.result;
+                        const lines = text.split('\n').filter(l => l.trim());
+                        const data = lines.map(line => line.split(',').map(cell => cell.trim()));
+                        sheetCount = 1;
+                        resolve(data);
+                    } catch (err) {
+                        reject(err);
+                    }
+                };
+                reader.onerror = reject;
+                reader.readAsText(file);
+            });
+        }
+
+        // Smart data processing
+        function isValidRepName(name) {
+            if (!name || typeof name !== 'string') return false;
+            const str = name.trim();
+            
+            // Skip obvious non-names
+            const skipWords = ['row labels', 'grand total', 'total', 'sum', '#n/a', '#ref', 'column', 'labels', 
+                              'division', 'sales', 'divisionname', 'promo', 'on prem', 'fsm', 'rep', 
+                              'manager', 'am', 'region', 'territory', 'name', 'goal', 'target', 'pod'];
+            if (skipWords.some(w => str.toLowerCase().includes(w))) return false;
+            
+            // Must be a real name (first + last format)
+            // Valid: "FRASER CHAD", "APARICIO VANESSA"
+            // Invalid: "SalesDivisionName", "PH NORTH"
+            const parts = str.split(/\s+/);
+            if (parts.length < 2) return false; // Need at least first + last
+            
+            // Must have letters
+            if (!/[A-Za-z]/.test(str)) return false;
+            
+            // Skip if looks like a header or code
+            if (str === str.toUpperCase() && parts.length === 1) return false;
+            
+            // Skip single words that aren't names
+            if (parts.length === 1 && str.length < 3) return false;
+            
+            return true;
+        }
+
+        function processData(rawData) {
+            // Clean data - remove completely empty rows
+            const clean = rawData.filter(row => row && Array.isArray(row) && row.length > 0 && row.some(c => c !== undefined && c !== null && String(c).trim() !== ''));
+            if (clean.length === 0) throw new Error('No data found');
+            
+            // Find header row - look for "Name" or "Rep" column
+            let headerRow = -1;
+            for (let i = 0; i < Math.min(20, clean.length); i++) {
+                const row = clean[i];
+                if (!row || !Array.isArray(row)) continue;
+                
+                // Safely convert row to string
+                const rowStr = row.map(c => {
+                    if (c === undefined || c === null) return '';
+                    return String(c).toLowerCase();
+                }).join(' ');
+                
+                // Look for header indicators
+                if (rowStr.includes('name') && (rowStr.includes('pod') || rowStr.includes('goal') || rowStr.includes('sales'))) {
+                    headerRow = i;
+                    break;
+                }
+                // Blackford specific: look for "FSM" or "Rep" in header
+                if (rowStr.includes('level') || rowStr.includes('title') || rowStr.includes('fsm')) {
+                    headerRow = i;
+                    break;
+                }
+            }
+            
+            if (headerRow === -1) {
+                console.log('Could not find header row, using first row');
+                headerRow = 0;
+            }
+            
+            // Safely get headers
+            const headerRowData = clean[headerRow];
+            if (!headerRowData || !Array.isArray(headerRowData)) {
+                throw new Error('Invalid header row');
+            }
+            
+            const headers = headerRowData.map(h => {
+                if (h === undefined || h === null) return '';
+                return String(h).toLowerCase().trim();
+            });
+            
+            console.log('Found headers:', headers);
+            console.log(`Total rows: ${clean.length}, header at row ${headerRow}, data rows: ${clean.length - headerRow - 1}`);
+            
+            // Find columns - try multiple patterns
+            let nameIdx = headers.findIndex(h => h.includes('name') || h.includes('rep') || h.includes('photo taker') || h.includes('salesperson'));
+            let levelIdx = headers.findIndex(h => h.includes('level') || h.includes('title') || h.includes('role'));
+            let podIdx = headers.findIndex(h => h.includes('pod') || h.includes('sales') || h.includes('new') || h.includes('amount'));
+            let goalIdx = headers.findIndex(h => h.includes('goal') || h.includes('target') || h.includes('quota'));
+            let priorIdx = headers.findIndex(h => h.includes('prior') || h.includes('previous') || h.includes('last'));
+            
+            // Fallbacks based on Blackford format (typical layout)
+            if (nameIdx === -1) nameIdx = 0;
+            if (levelIdx === -1) levelIdx = headers.findIndex(h => h === 'fsm' || h === 'rep') !== -1 ? headers.findIndex(h => h === 'fsm' || h === 'rep') : 1;
+            if (podIdx === -1) podIdx = headers.findIndex(h => h.includes('new') || h.includes('current')) !== -1 ? headers.findIndex(h => h.includes('new') || h.includes('current')) : 2;
+            if (goalIdx === -1) goalIdx = headers.findIndex(h => h.includes('goal') || h.includes('objective')) !== -1 ? headers.findIndex(h => h.includes('goal') || h.includes('objective')) : 3;
+            
+            console.log(`Column mapping: name=${nameIdx}, level=${levelIdx}, pod=${podIdx}, goal=${goalIdx}, prior=${priorIdx}`);
+            console.log(`Header row contents:`, headerRowData);
+            
+            const reps = [];
+            const seenNames = new Set(); // Prevent duplicates
+            
+            for (let i = headerRow + 1; i < clean.length; i++) {
+                const row = clean[i];
+                if (!row || !Array.isArray(row) || row.length === 0) continue;
+                
+                // Skip rows that look like headers (from other sheets being merged)
+                const rowStr = row.map(c => String(c || '').toLowerCase()).join(' ');
+                if (rowStr.includes('name') && (rowStr.includes('goal') || rowStr.includes('pod') || rowStr.includes('level'))) {
+                    console.log('Skipping header-like row:', i);
+                    continue;
+                }
+                
+                // Safely get name
+                let name = '';
+                if (nameIdx >= 0 && nameIdx < row.length) {
+                    const cell = row[nameIdx];
+                    if (cell !== undefined && cell !== null) {
+                        name = String(cell).trim();
+                    }
+                }
+                if (!isValidRepName(name)) continue;
+                
+                // Skip duplicates
+                const nameKey = name.toLowerCase().replace(/\s+/g, ' ');
+                if (seenNames.has(nameKey)) continue;
+                seenNames.add(nameKey);
+                
+                // Safely get numeric values
+                const getNum = (idx) => {
+                    if (idx >= 0 && idx < row.length) {
+                        const val = parseFloat(row[idx]);
+                        return isNaN(val) ? 0 : val;
+                    }
+                    return 0;
+                };
+                
+                const pod = getNum(podIdx);
+                const goal = getNum(goalIdx);
+                const prior = getNum(priorIdx);
+                
+                // Detect level from name or column
+                let level = 'Rep';
+                if (levelIdx >= 0 && row[levelIdx]) {
+                    const levelStr = String(row[levelIdx]).toUpperCase();
+                    if (levelStr.includes('FSM') || levelStr.includes('MANAGER')) level = 'FSM';
+                    else if (levelStr.includes('REP')) level = 'Rep';
+                }
+                if (name.toUpperCase().includes('FSM')) level = 'FSM';
+                
+                const pct = goal > 0 ? pod / goal : 0;
+                const variance = pod - goal;
+                let status = 'unknown';
+                let alert = '';
+                
+                if (pct >= 1.0) {
+                    status = 'exceeding';
+                    alert = `Exceeding goal (${(pct * 100).toFixed(0)}%)`;
+                } else if (pct >= 0.7) {
+                    status = 'ontrack';
+                    alert = `On track (${(pct * 100).toFixed(0)}%)`;
+                } else if (pct > 0) {
+                    status = 'behind';
+                    alert = `Behind goal (${(pct * 100).toFixed(0)}%)`;
+                } else if (pod > 0) {
+                    status = 'behind';
+                    alert = 'No goal data';
+                }
+                
+                reps.push({ 
+                    rep_name: name, 
+                    level: level, 
+                    new_pod: pod, 
+                    prior_pod: prior,
+                    goal: goal, 
+                    variance: variance,
+                    pct_goal: pct, 
+                    status: status,
+                    alert: alert,
+                    priority_score: goal > 0 ? (1 - pct) * 100 + (prior > 0 ? prior * 0.1 : 0) : 50
+                });
+            }
+            
+            // Calculate team totals
+            const total_reps = reps.length;
+            const total_new_pod = reps.reduce((s, r) => s + r.new_pod, 0);
+            const total_prior_pod = reps.reduce((s, r) => s + r.prior_pod, 0);
+            const total_goal = reps.reduce((s, r) => s + r.goal, 0);
+            const team_pct_goal = total_goal > 0 ? total_new_pod / total_goal : 0;
+            const behind_count = reps.filter(r => r.status === 'behind').length;
+            
+            // Estimate payout (Blackford uses $15 per case typically)
+            const estimated_payout = total_new_pod * 15;
+            
+            console.log(`Processed ${total_reps} unique reps`);
+            
+            return {
+                summary: { 
+                    total_reps, 
+                    total_new_pod, 
+                    total_prior_pod,
+                    total_goal, 
+                    team_pct_goal,
+                    behind: behind_count,
+                    estimated_payout
+                },
+                reps: reps.sort((a, b) => b.pct_goal - a.pct_goal)
+            };
+        }
+
+        function renderDashboard() {
+            if (!currentData) return;
+            
+            const { summary, reps } = currentData;
+            
+            // Show content
+            document.getElementById('statusMsg').classList.add('hidden');
+            document.getElementById('dashboardContent').classList.remove('hidden');
+            
+            // KPIs
+            document.getElementById('kpiReps').textContent = summary.total_reps;
+            document.getElementById('kpiPod').textContent = summary.total_new_pod.toFixed(0);
+            document.getElementById('kpiPct').textContent = (summary.team_pct_goal * 100).toFixed(1) + '%';
+            document.getElementById('kpiProgress').style.width = Math.min(summary.team_pct_goal * 100, 100) + '%';
+            document.getElementById('kpiBehind').textContent = reps.filter(r => r.status === 'behind').length;
+            
+            // Table
+            document.getElementById('tableBody').innerHTML = reps.slice(0, 10).map((r, i) => {
+                const pct = r.pct_goal ? (r.pct_goal * 100).toFixed(0) + '%' : '-';
+                const color = r.status === 'exceeding' ? 'bg-green-500/20 text-green-400' : r.status === 'ontrack' ? 'bg-blue-500/20 text-blue-400' : r.status === 'behind' ? 'bg-red-500/20 text-red-400' : 'bg-slate-500/20 text-slate-400';
+                return `<tr class="hover:bg-slate-800/50"><td class="px-6 py-4">#${i + 1}</td><td class="px-6 py-4 font-medium">${r.rep_name}</td><td class="px-6 py-4 text-slate-400">${r.level}</td><td class="px-6 py-4">${r.new_pod}</td><td class="px-6 py-4 text-slate-400">${r.goal || '-'}</td><td class="px-6 py-4">${pct}</td><td class="px-6 py-4"><span class="px-2 py-1 rounded-full text-xs ${color}">${r.status}</span></td></tr>`;
+            }).join('');
+            
+            document.getElementById('resultCount').textContent = reps.length + ' reps';
+            document.getElementById('lastUpdate').textContent = 'Updated ' + new Date().toLocaleTimeString();
+            
+            // Charts
+            new Chart(document.getElementById('trendChart'), {
+                type: 'line',
+                data: { labels: ['W1', 'W2', 'W3', 'W4'], datasets: [{ label: 'POD', data: [summary.total_new_pod * 0.6, summary.total_new_pod * 0.75, summary.total_new_pod * 0.9, summary.total_new_pod], borderColor: '#22c55e', fill: true, backgroundColor: 'rgba(34,197,94,0.1)', tension: 0.4 }] },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+            
+            new Chart(document.getElementById('statusChart'), {
+                type: 'doughnut',
+                data: { labels: ['Exceeding', 'On Track', 'Behind', 'Unknown'], datasets: [{ data: [reps.filter(r => r.status === 'exceeding').length, reps.filter(r => r.status === 'ontrack').length, reps.filter(r => r.status === 'behind').length, reps.filter(r => r.status === 'unknown').length], backgroundColor: ['#22c55e', '#3b82f6', '#ef4444', '#64748b'] }] },
+                options: { responsive: true, maintainAspectRatio: false, cutout: '70%' }
+            });
+        }
+
+        // Event listeners
+        document.getElementById('sidebarUploadBtn').addEventListener('click', () => {
+            document.getElementById('uploadModal').classList.remove('hidden');
+            document.getElementById('uploadModal').classList.add('flex');
+        });
+
+        document.getElementById('closeUpload').addEventListener('click', () => {
+            document.getElementById('uploadModal').classList.add('hidden');
+            document.getElementById('uploadModal').classList.remove('flex');
+        });
+
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+
+        dropZone.addEventListener('click', () => fileInput.click());
+        dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('border-green-500'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('border-green-500'));
+        dropZone.addEventListener('drop', (e) => { e.preventDefault(); dropZone.classList.remove('border-green-500'); if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]); });
+
+        fileInput.addEventListener('change', (e) => { if (e.target.files.length) handleFile(e.target.files[0]); });
+
+        function handleFile(file) {
+            uploadedFile = file;
+            document.getElementById('fileName').textContent = file.name;
+            document.getElementById('uploadPreview').classList.remove('hidden');
+        }
+
+        document.getElementById('processBtn').addEventListener('click', async () => {
+            if (!uploadedFile) return;
+            
+            try {
+                let rawData;
+                const ext = uploadedFile.name.split('.').pop().toLowerCase();
+                
+                if (ext === 'csv') {
+                    rawData = await parseCSVFile(uploadedFile);
+                } else {
+                    rawData = await parseExcelFile(uploadedFile);
+                }
+                
+                currentData = processData(rawData);
+                
+                document.getElementById('uploadModal').classList.add('hidden');
+                document.getElementById('uploadModal').classList.remove('flex');
+                
+                renderDashboard();
+                
+                alert(`✅ Processed ${currentData.summary.total_reps} reps from ${sheetCount} sheet(s)!\nTotal POD: ${currentData.summary.total_new_pod}`);
+                
+                uploadedFile = null;
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        });
+
+        document.getElementById('exportBtn').addEventListener('click', () => {
+            if (!currentData) { alert('No data to export'); return; }
+            const csv = [['Rank', 'Rep', 'Level', 'New POD', 'Goal', '% to Goal'].join(','), ...currentData.reps.map((r, i) => [i + 1, r.rep_name, r.level, r.new_pod, r.goal, (r.pct_goal * 100).toFixed(0) + '%'].join(','))].join('\n');
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'scout_report.csv';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>

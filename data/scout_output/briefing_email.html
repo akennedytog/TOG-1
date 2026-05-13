@@ -1,0 +1,86 @@
+<![CDATA[<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
+    h1 { color: #1a237e; border-bottom: 2px solid #3949ab; padding-bottom: 10px; }
+    h2 { color: #3949ab; margin-top: 25px; }
+    .summary { background: #e8eaf6; padding: 15px; border-radius: 8px; margin: 15px 0; }
+    .metric { display: inline-block; margin: 10px 20px 10px 0; }
+    .metric-value { font-size: 24px; font-weight: bold; color: #1a237e; }
+    .metric-label { font-size: 12px; color: #666; }
+    .alert { color: #d32f2f; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th { background: #3949ab; color: white; padding: 10px; text-align: left; }
+    td { padding: 8px 10px; border-bottom: 1px solid #ddd; }
+    tr:nth-child(even) { background: #f5f5f5; }
+    .status-exceeding { color: #2e7d32; }
+    .status-behind { color: #d32f2f; }
+    .insights { background: #fff3e0; padding: 15px; border-left: 4px solid #f57c00; margin: 15px 0; }
+    .insights ul { margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <h1>🎯 Road to Cinco - Daily Performance Briefing</h1>
+  <p><strong>Date:</strong> Thursday, May 07, 2026</p>
+  <p><strong>Program:</strong> B-F FY26 Q4 H&R</p>
+  
+  <div class="summary">
+    <h2>Team Summary</h2>
+    <div class="metric"><span class="metric-value">144</span><br><span class="metric-label">Total Reps</span></div>
+    <div class="metric"><span class="metric-value">264</span><br><span class="metric-label">New POD</span></div>
+    <div class="metric"><span class="metric-value">366</span><br><span class="metric-label">Goal</span></div>
+    <div class="metric"><span class="metric-value alert">72%</span><br><span class="metric-label">% to Goal</span></div>
+    <div class="metric"><span class="metric-value">$2,010</span><br><span class="metric-label">Total Payouts</span></div>
+    <br><br>
+    <div class="metric"><span class="metric-value">0</span><br><span class="metric-label">Exceeding 🏆</span></div>
+    <div class="metric"><span class="metric-value">0</span><br><span class="metric-label">On Track ✅</span></div>
+    <div class="metric"><span class="metric-value">0</span><br><span class="metric-label">At Risk ⚠️</span></div>
+    <div class="metric"><span class="metric-value alert">21</span><br><span class="metric-label">Behind ❗</span></div>
+  </div>
+
+  <div class="insights">
+    <h2>🧠 Key Insights</h2>
+    <ul>
+      <li>🚨 Team behind: 72% - urgent action needed</li>
+      <li>❗ 21 reps significantly behind - need coaching</li>
+      <li>💰 Team earned $2,010 in payouts</li>
+    </ul>
+  </div>
+
+  <h2>🏆 Top Performers</h2>
+  <table>
+    <tr><th>Rep</th><th>Level</th><th>New POD</th><th>Goal</th><th>% Goal</th><th>Status</th></tr>
+    <tr><td>APARICIO VANESSA</td><td>FSM</td><td>12</td><td>21</td><td>57%</td><td class="status-behind">Behind</td></tr>
+    <tr><td>GAVIN LAWRENCE</td><td>FSM</td><td>10</td><td>15</td><td>67%</td><td class="status-behind">Behind</td></tr>
+    <tr><td>VON UNGERN STERNBERG THEO</td><td>FSM</td><td>10</td><td>15</td><td>67%</td><td class="status-behind">Behind</td></tr>
+    <tr><td>FETTERMAN GILLIAN</td><td>FSM</td><td>10</td><td>18</td><td>56%</td><td class="status-behind">Behind</td></tr>
+    <tr><td>BRAY JAMES</td><td>Rep</td><td>9</td><td>-</td><td>-</td><td class="status-behind">No data</td></tr>
+    <tr><td>CARTWRIGHT MEGAN</td><td>FSM</td><td>8</td><td>22</td><td>36%</td><td class="status-behind">Behind</td></tr>
+    <tr><td>GAGNELIUS WESLEY</td><td>FSM</td><td>8</td><td>18</td><td>44%</td><td class="status-behind">Behind</td></tr>
+    <tr><td>TAPPAN CHARLES</td><td>FSM</td><td>8</td><td>16</td><td>50%</td><td class="status-behind">Behind</td></tr>
+    <tr><td>HARTMANN CHRISTIAN</td><td>FSM</td><td>7</td><td>15</td><td>47%</td><td class="status-behind">Behind</td></tr>
+    <tr><td>DRUASH KENDALL</td><td>FSM</td><td>7</td><td>15</td><td>47%</td><td class="status-behind">Behind</td></tr>
+  </table>
+
+  <h2>❗ Needs Coaching (Lowest % to Goal)</h2>
+  <table>
+    <tr><th>Rep</th><th>Level</th><th>New POD</th><th>Goal</th><th>% Goal</th><th>Variance</th></tr>
+    <tr><td>KETCHUM PETER</td><td>FSM</td><td>1</td><td>15</td><td class="status-behind">7%</td><td>-14</td></tr>
+    <tr><td>MCCULLOUGH CORI</td><td>FSM</td><td>2</td><td>17</td><td class="status-behind">12%</td><td>-15</td></tr>
+    <tr><td>WILLIAMS GERALD</td><td>FSM</td><td>3</td><td>17</td><td class="status-behind">18%</td><td>-14</td></tr>
+    <tr><td>GWIDT JACKIE</td><td>FSM</td><td>4</td><td>17</td><td class="status-behind">24%</td><td>-13</td></tr>
+    <tr><td>DIETRICH MICHAEL</td><td>FSM</td><td>4</td><td>17</td><td class="status-behind">24%</td><td>-13</td></tr>
+    <tr><td>VAN LANDINGHAM GLYNN</td><td>FSM</td><td>5</td><td>20</td><td class="status-behind">25%</td><td>-15</td></tr>
+    <tr><td>GOLDBERG KEVIN</td><td>FSM</td><td>4</td><td>15</td><td class="status-behind">27%</td><td>-11</td></tr>
+    <tr><td>PALAZZO KRISTEN</td><td>FSM</td><td>4</td><td>15</td><td class="status-behind">27%</td><td>-11</td></tr>
+    <tr><td>BOWAN BIANCA</td><td>FSM</td><td>5</td><td>17</td><td class="status-behind">29%</td><td>-12</td></tr>
+    <tr><td>CARTWRIGHT MEGAN</td><td>FSM</td><td>8</td><td>22</td><td class="status-behind">36%</td><td>-14</td></tr>
+  </table>
+
+  <p style="margin-top: 30px; font-size: 12px; color: #666;">
+    Generated by Scout v3.1 at 2026-05-07 08:15 AM<br>
+    <em>This is an automated daily briefing from your Road to Cinco performance tracking system.</em>
+  </p>
+</body>
+</html>]]>

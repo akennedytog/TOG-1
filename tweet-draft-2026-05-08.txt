@@ -1,0 +1,31 @@
+Twitter Content Draft - 2026-05-08
+==================================================
+
+Post 1: explainer
+Text: What 'context window' actually means:
+
+It's how much text the model can 'remember' at once.
+
+• GPT-4: 128k tokens (~100 pages)
+• Claude 3.5: 200k tokens (~150 pages)
+• Gemini 1.5: 2M tokens (~1,500 pages)
+
+Bigger isn't always better. But for:
+• Code reviews
+• Document analysis
+• Multi-turn conversations
+
+Context = coherence.
+
+Post 2: update
+Text: OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.
+
+The routing logic:
+• Simple tasks → GPT-4 (fast, cheap)
+• Complex reasoning → Claude (nuanced)
+• Document-heavy → Gemini (massive context)
+
+Smart routing beats 'one model for everything'.
+
+Cost optimization + capability matching.
+

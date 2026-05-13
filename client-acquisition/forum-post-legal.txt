@@ -1,0 +1,30 @@
+SUBJECT: Crazy stat from a law firm I worked with
+
+Quick story for the group:
+
+A 5-attorney firm in Fort Lauderdale was losing an average of 8 potential client calls per day to voicemail.
+
+Not because they were bad at their jobs. Because:
+- They're in court 9-3
+- Existing clients call with "emergencies" 
+- Receptionist was overwhelmed
+
+They tracked it for a week: 47 calls went to voicemail. 31 never called back.
+
+That's potentially 31 new cases. Gone.
+
+They set up an AI intake system that:
+1. Answers immediately ("Hi, this is [Firm], are you calling about a new case or existing client?")
+2. For new cases: Collects basic info, schedules consultation
+3. For existing clients: Takes message, sends to attorney via SMS
+
+30 days later:
+- Missed calls: 47/week → 8/week
+- New consultations scheduled: +22/month
+- Existing clients: Actually get faster responses (AI texts attorney immediately)
+
+The attorney told me: "I thought this would feel impersonal. Clients literally don't care. They just want their problem solved."
+
+Anyway - if anyone's dealing with the "phone tag" problem, this setup cost them $297/month vs the $4,200/month they were spending on a full-time intake person who was burning out.
+
+Not selling anything. Just thought it was a cool use case.

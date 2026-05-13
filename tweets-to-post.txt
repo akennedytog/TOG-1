@@ -1,0 +1,51 @@
+Tweet 1:
+
+How we cut AI costs by 70% without losing quality:
+
+We route requests across multiple LLMs based on task complexity.
+
+→ Simple summaries? Ollama (free)
+→ Code review? Kimi K2.5 (cheap)
+→ Complex reasoning? Claude (when needed)
+
+The secret: Match the tool to the task, not the hype.
+
+Want to learn how to set up multiple LLMs on OpenClaw? 
+
+DM me or visit https://theonegroup.info
+
+---
+
+Tweet 2:
+
+Why we use 4 different LLMs at The One Group:
+
+1. Ollama/Kimi → Routine tasks (FREE)
+2. Claude → Complex reasoning ($)
+3. GPT-4 → Vision/analysis ($$)
+4. Haiku → Quick queries ($)
+
+Cost per 1K tokens: $0.00 to $0.03
+
+Smart routing beats single-provider dependency.
+
+Want the full setup? DM me or visit https://theonegroup.info
+
+---
+
+Tweet 3:
+
+Stop overpaying for AI.
+
+We built a smart router that picks the cheapest LLM that can handle each task.
+
+Results:
+• 70% cost reduction
+• Same output quality  
+• Zero vendor lock-in
+
+It's not magic. It's just not using a sledgehammer to hang a picture.
+
+Want to learn how to set up multiple LLMs on OpenClaw?
+
+DM me or visit https://theonegroup.info

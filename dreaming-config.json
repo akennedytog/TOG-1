@@ -1,0 +1,41 @@
+{
+  "mode": "dreaming",
+  "version": "2026.4.5",
+  "goal": "Acquire 5 new HVAC/Legal/Medical clients by end of Q2 2026",
+  "quarter": "Q2",
+  "target_date": "2026-06-30",
+  "agents_enabled": ["jerry", "arlo", "iris", "rico", "dante", "dev"],
+  "strategy": {
+    "phase_1": {
+      "weeks": "1-2",
+      "focus": "Lead research and qualification",
+      "arlo_task": "Find 20 new high-quality leads weekly",
+      "rico_task": "Optimize outreach systems"
+    },
+    "phase_2": {
+      "weeks": "3-8",
+      "focus": "Outreach and nurturing",
+      "iris_task": "Send 50 personalized emails weekly",
+      "dante_task": "Create content that drives inbound",
+      "dev_task": "Build landing pages for conversions"
+    },
+    "phase_3": {
+      "weeks": "9-12",
+      "focus": "Closing and onboarding",
+      "jerry_task": "Review proposals and strategy",
+      "abby_task": "Quality check all deliverables"
+    }
+  },
+  "kpis": {
+    "leads_per_week": 20,
+    "outreach_emails_per_week": 50,
+    "calls_booked_per_month": 10,
+    "conversion_rate": 0.10,
+    "target_clients": 5
+  },
+  "autonomy_level": "high",
+  "check_ins": "weekly",
+  "reporting": "daily_summary",
+  "budget_tracking": true,
+  "cost_target": "$150/month"
+}

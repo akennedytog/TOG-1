@@ -1,0 +1,114 @@
+[
+  {
+    "template": "hook-overlay",
+    "text": "I hired 8 AI agents to run my business",
+    "fontSize": "72px",
+    "color": "#FFFFFF",
+    "stroke": "#000000",
+    "strokeWidth": "4px",
+    "position": "center",
+    "animation": "fade-in"
+  },
+  {
+    "template": "stat-overlay",
+    "text": "$0 spent on employees this month",
+    "fontSize": "48px",
+    "color": "#10B981",
+    "background": "rgba(0,0,0,0.7)",
+    "borderRadius": "12px",
+    "padding": "16px 24px"
+  },
+  {
+    "template": "cta-overlay",
+    "text": "Comment 'TEAM' to see the setup",
+    "fontSize": "36px",
+    "color": "#FBBF24",
+    "animation": "bounce",
+    "position": "bottom"
+  },
+  {
+    "template": "agent-intro",
+    "agentName": "Jerry",
+    "agentRole": "CEO",
+    "agentColor": "#8B5CF6",
+    "text": "Reviews metrics daily",
+    "icon": "👔"
+  },
+  {
+    "template": "agent-intro",
+    "agentName": "Arlo",
+    "agentRole": "Research",
+    "agentColor": "#3B82F6",
+    "text": "Finds market opportunities",
+    "icon": "🔍"
+  },
+  {
+    "template": "agent-intro",
+    "agentName": "Iris",
+    "agentRole": "Sales",
+    "agentColor": "#EC4899",
+    "text": "Follows up with leads",
+    "icon": "💼"
+  },
+  {
+    "template": "agent-intro",
+    "agentName": "Rico",
+    "agentRole": "Operations",
+    "agentColor": "#F97316",
+    "text": "Keeps systems running",
+    "icon": "⚙️"
+  },
+  {
+    "template": "agent-intro",
+    "agentName": "Dev",
+    "agentRole": "Engineering",
+    "agentColor": "#6366F1",
+    "text": "Builds new features",
+    "icon": "💻"
+  },
+  {
+    "template": "agent-intro",
+    "agentName": "Dante",
+    "agentRole": "Creative",
+    "agentColor": "#EF4444",
+    "text": "Creates all content",
+    "icon": "🎨"
+  },
+  {
+    "template": "agent-intro",
+    "agentName": "Opal",
+    "agentRole": "Organization",
+    "agentColor": "#14B8A6",
+    "text": "Keeps everything organized",
+    "icon": "📋"
+  },
+  {
+    "template": "agent-intro",
+    "agentName": "Abby",
+    "agentRole": "Quality",
+    "agentColor": "#06B6D4",
+    "text": "Ensures quality",
+    "icon": "✅"
+  },
+  {
+    "template": "result-highlight",
+    "metric": "40%",
+    "label": "Faster response time",
+    "color": "#10B981",
+    "animation": "count-up"
+  },
+  {
+    "template": "result-highlight",
+    "metric": "3x",
+    "label": "More meetings booked",
+    "color": "#8B5CF6",
+    "animation": "count-up"
+  },
+  {
+    "template": "result-highlight",
+    "metric": "24/7",
+    "label": "AI never sleeps",
+    "color": "#3B82F6",
+    "animation": "pulse"
+  }
+]

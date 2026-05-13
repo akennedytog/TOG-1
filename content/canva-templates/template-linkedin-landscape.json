@@ -1,0 +1,69 @@
+{
+  "templateId": "tog-ai-li-001",
+  "name": "The One Group AI - LinkedIn Professional Insight",
+  "platform": "LinkedIn",
+  "format": "Landscape",
+  "dimensions": {
+    "width": 1200,
+    "height": 627,
+    "unit": "px"
+  },
+  "design": {
+    "background": {
+      "type": "solid",
+      "color": "#1a365d"
+    },
+    "layout": {
+      "padding": 48,
+      "columns": 2
+    },
+    "typography": {
+      "headline": {
+        "font": "Inter Bold",
+        "size": 48,
+        "color": "#ffffff",
+        "alignment": "left",
+        "maxLines": 3
+      },
+      "subheadline": {
+        "font": "Inter Medium",
+        "size": 28,
+        "color": "#90cdf4",
+        "alignment": "left"
+      },
+      "body": {
+        "font": "Inter Regular",
+        "size": 20,
+        "color": "#e2e8f0",
+        "alignment": "left",
+        "lineHeight": 1.5
+      },
+      "stat": {
+        "font": "Inter Bold",
+        "size": 64,
+        "color": "#63b3ed"
+      }
+    },
+    "logo": {
+      "position": "bottom-right",
+      "size": 100,
+      "margin": 36
+    },
+    "accent": {
+      "type": "vertical-bar",
+      "position": "left",
+      "color": "#63b3ed",
+      "width": 8
+    }
+  },
+  "contentStructure": {
+    "headlineArea": "Top 30% - Bold statement or statistic",
+    "visualArea": "Right column - Data visualization or image",
+    "bodyArea": "Left column - Supporting details",
+    "footerArea": "Bottom - Logo and URL"
+  },
+  "useCase": "Case studies, statistics, professional insights, and industry analysis",
+  "exportFormats": ["PNG", "PDF"],
+  "createdAt": "2026-04-01T10:00:00Z",
+  "version": "1.0"
+}

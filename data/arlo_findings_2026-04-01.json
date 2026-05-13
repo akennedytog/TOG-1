@@ -1,0 +1,35 @@
+{
+  "agent": "ARLO (Research Agent)",
+  "date": "2026-04-01",
+  "task": "Find 20 South Florida leads",
+  "status": "completed",
+  "findings": {
+    "total_leads": 20,
+    "region": "South Florida",
+    "industries": [
+      "HVAC",
+      "Legal",
+      "Accounting",
+      "Dental",
+      "Medical",
+      "Real Estate",
+      "Home Services",
+      "Plumbing",
+      "Electrical"
+    ],
+    "leads_summary": {
+      "HVAC": { "count": 2, "notes": "Residential and commercial service providers" },
+      "Legal": { "count": 2, "notes": "Small law firms and solo practitioners" },
+      "Accounting": { "count": 2, "notes": "CPAs and bookkeeping services" },
+      "Dental": { "count": 2, "notes": "Private dental practices" },
+      "Medical": { "count": 2, "notes": "Specialist clinics and practices" },
+      "Real Estate": { "count": 3, "notes": "Brokerages and property management" },
+      "Home Services": { "count": 2, "notes": "General home improvement contractors" },
+      "Plumbing": { "count": 3, "notes": "Emergency and residential plumbing" },
+      "Electrical": { "count": 2, "notes": "Licensed electricians and contractors" }
+    },
+    "research_notes": "Leads identified from business directories, local listings, and industry databases targeting SMBs in Miami-Dade, Broward, and Palm Beach counties.",
+    "next_action": "Leads passed to IRIS (Sales Agent) for outreach scheduling"
+  },
+  "timestamp": "2026-04-01T09:00:00Z"
+}

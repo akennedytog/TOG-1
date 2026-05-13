@@ -1,0 +1,44 @@
+{
+  "fiscal_year_comparison": {
+    "f26_total": 1715000,
+    "f27_total_target": 1426259,
+    "budget_change": -288741,
+    "budget_change_percent": -16.84
+  },
+  "f26_employee_breakdown": {
+    "alec_kennedy": 754272,
+    "brenda_terry": 197681,
+    "charles_stafford": 177974,
+    "eric_gudger": 368516,
+    "natalia_cardenas": 126619,
+    "total_with_natalia": 1625062,
+    "total_without_natalia": 1498443
+  },
+  "f27_employee_breakdown": {
+    "alec_kennedy": {
+      "amount": 717850,
+      "percentage_of_f26": 95.17
+    },
+    "brenda_terry": {
+      "amount": 188122,
+      "percentage_of_f26": 95.17
+    },
+    "charles_stafford": {
+      "amount": 169298,
+      "percentage_of_f26": 95.17
+    },
+    "eric_gudger": {
+      "amount": 350989,
+      "percentage_of_f26": 95.24
+    },
+    "natalia_cardenas": {
+      "amount": 0,
+      "note": "No budget allocated as requested"
+    },
+    "verification": {
+      "sum": 1426259,
+      "matches_target": true
+    }
+  },
+  "calculation_method": "Applied proportional reduction from F26 to F27 (84.33% of F26 amounts), with Natalia Cardenas set to $0"
+}

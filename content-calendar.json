@@ -1,0 +1,114 @@
+[
+  {
+    "dayOfWeek": 1,
+    "hour": 9,
+    "minute": 0,
+    "type": "insight",
+    "topic": "AI News",
+    "text": "Google Gemma 4 now runs on iPhone offline.\n\nThis matters:\n• No API calls = no ongoing costs\n• No latency = instant responses\n• Privacy = data stays on device\n\nThe shift: AI moving from cloud-dependent to edge-native.\n\nExpect more local-first AI tools this year."
+  },
+  {
+    "dayOfWeek": 1,
+    "hour": 15,
+    "minute": 30,
+    "type": "insight",
+    "topic": "AI News",
+    "text": "Amazon is acquiring Globalstar to build a satellite network.\n\nWhy this matters for AI:\n• Rural/offline areas get connectivity\n• Edge AI becomes truly everywhere\n• The 'always connected' assumption breaks down\n\nWe're moving toward a world where AI works whether you're in a data center or in the middle of nowhere.\n\nInfrastructure enabling intelligence."
+  },
+  {
+    "dayOfWeek": 2,
+    "hour": 8,
+    "minute": 30,
+    "type": "insight",
+    "topic": "Anthropic",
+    "text": "Anthropic's Claude Code Routines just dropped.\n\nThink of it as: 'save this entire workflow and run it again with one command'\n\nNot just prompt templates. Full agentic sequences:\n• Multi-step reasoning\n• File operations\n• Tool calls\n• Error handling\n\nThis is the bridge between 'AI helps' and 'AI does'."
+  },
+  {
+    "dayOfWeek": 2,
+    "hour": 14,
+    "minute": 0,
+    "type": "comparison",
+    "topic": "Models",
+    "text": "Model comparison worth watching:\n\nClaude 3.5 Sonnet vs GPT-4o vs Gemini 1.5 Pro\n\nClaude: Best at complex reasoning, longer context\nGPT-4o: Fastest, best tool ecosystem\nGemini: Massive context (2M tokens), best for documents\n\nThe winner? Depends on your task.\n\nSmart builders use all three."
+  },
+  {
+    "dayOfWeek": 3,
+    "hour": 10,
+    "minute": 0,
+    "type": "insight",
+    "topic": "AI Trends",
+    "text": "Claude just dropped 'Code Routines' - basically saved prompt chains for devs.\n\nThis is the pattern:\n1. Start with manual AI use\n2. Notice repeated workflows\n3. Package them into repeatable routines\n\nIt's not magic. It's just systematizing what you already do.\n\nWhat would you turn into a routine?"
+  },
+  {
+    "dayOfWeek": 3,
+    "hour": 16,
+    "minute": 0,
+    "type": "explainer",
+    "topic": "OpenClaw",
+    "text": "OpenClaw's 'skills' system is underrated.\n\nInstead of one giant prompt, you package knowledge into reusable modules:\n\n• 1password skill knows the CLI\n• Firecrawl skill handles scraping\n• Each skill has its own docs\n\nResult: Agents that don't hallucinate commands because the instructions are already validated.\n\nModular AI > Monolithic AI"
+  },
+  {
+    "dayOfWeek": 4,
+    "hour": 9,
+    "minute": 0,
+    "type": "insight",
+    "topic": "Anthropic",
+    "text": "Anthropic's new Computer Use feature in Claude:\n\nThe model can now:\n• See your screen\n• Move your mouse\n• Click buttons\n• Type commands\n\nThis isn't 'AI writes code.'\nThis is 'AI operates your computer.'\n\nWe're one step closer to agents that actually *do* things, not just suggest them."
+  },
+  {
+    "dayOfWeek": 4,
+    "hour": 15,
+    "minute": 30,
+    "type": "analysis",
+    "topic": "OpenAI",
+    "text": "OpenAI's dev day announcements:\n\n• Realtime API for voice apps\n• Vision fine-tuning\n• Structured outputs (finally!)\n• Higher rate limits\n\nThe pattern: OpenAI is building infrastructure for *application developers*, not just chat users.\n\nThey're betting that the next wave isn't consumer chatbots—it's AI-powered apps."
+  },
+  {
+    "dayOfWeek": 5,
+    "hour": 10,
+    "minute": 0,
+    "type": "explainer",
+    "topic": "Models",
+    "text": "What 'context window' actually means:\n\nIt's how much text the model can 'remember' at once.\n\n• GPT-4: 128k tokens (~100 pages)\n• Claude 3.5: 200k tokens (~150 pages)\n• Gemini 1.5: 2M tokens (~1,500 pages)\n\nBigger isn't always better. But for:\n• Code reviews\n• Document analysis\n• Multi-turn conversations\n\nContext = coherence."
+  },
+  {
+    "dayOfWeek": 5,
+    "hour": 17,
+    "minute": 0,
+    "type": "update",
+    "topic": "OpenClaw",
+    "text": "OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.\n\nThe routing logic:\n• Simple tasks → GPT-4 (fast, cheap)\n• Complex reasoning → Claude (nuanced)\n• Document-heavy → Gemini (massive context)\n\nSmart routing beats 'one model for everything'.\n\nCost optimization + capability matching."
+  },
+  {
+    "dayOfWeek": 6,
+    "hour": 11,
+    "minute": 0,
+    "type": "question",
+    "topic": "Community",
+    "text": "What model are you using most right now?\n\nA) GPT-4 (OpenAI)\nB) Claude (Anthropic)\nC) Gemini (Google)\nD) Local models (Llama, Mistral, etc.)\n\nCurious about the community breakdown.\n\nReply with your go-to."
+  },
+  {
+    "dayOfWeek": 6,
+    "hour": 16,
+    "minute": 0,
+    "type": "reflection",
+    "topic": "AI Trends",
+    "text": "This week's theme: AI is getting *local*.\n\n• Google Gemma runs on phones\n• Mistral drops open weights weekly\n• Anthropic pushes agentic workflows\n\nThe big players aren't just competing on cloud—they're racing to put AI everywhere.\n\nYour phone. Your laptop. Your edge devices.\n\nThe 'always online' era might be ending."
+  },
+  {
+    "dayOfWeek": 0,
+    "hour": 10,
+    "minute": 0,
+    "type": "preview",
+    "topic": "AI News",
+    "text": "Next week to watch:\n\n• Anthropic's Computer Use expanding to API\n• OpenAI's rumored 'Operator' agent\n• Google's next Gemini release\n• OpenClaw's skill marketplace launch\n\nThe pace is accelerating.\n\nIf you're not paying attention weekly, you're falling behind daily."
+  },
+  {
+    "dayOfWeek": 0,
+    "hour": 18,
+    "minute": 0,
+    "type": "reflection",
+    "topic": "Building in Public",
+    "text": "Building with AI while the landscape shifts weekly:\n\n• Monday's best practice is Wednesday's outdated advice\n• Models improve faster than documentation\n• The only constant is experimentation\n\nThere's no playbook.\nThere's just: try, learn, adapt, repeat.\n\nThe builders who thrive are the ones comfortable with chaos."
+  }
+]

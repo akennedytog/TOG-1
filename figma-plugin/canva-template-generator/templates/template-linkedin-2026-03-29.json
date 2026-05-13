@@ -1,0 +1,115 @@
+{
+  "id": "template-008",
+  "platform": "linkedin",
+  "type": "post",
+  "dimensions": "1200x627",
+  "theme": "professional-insight",
+  "name": "LinkedIn Professional Insight Post",
+  "description": "LinkedIn article card for thought leadership content",
+  "colors": {
+    "primary": "#0077B5",
+    "secondary": "#0A66C2",
+    "accent": "#C9A227",
+    "background": "#FFFFFF",
+    "text": "#1A1A1A",
+    "muted": "#6B7280"
+  },
+  "fonts": {
+    "headline": "Segoe UI Bold",
+    "body": "Segoe UI Regular",
+    "quote": "Georgia Italic"
+  },
+  "elements": [
+    {
+      "type": "background",
+      "style": "solid",
+      "color": "#FFFFFF"
+    },
+    {
+      "type": "shape",
+      "shape": "rectangle",
+      "position": { "x": 0, "y": 0 },
+      "size": { "width": 1200, "height": 8 },
+      "color": "#0077B5"
+    },
+    {
+      "type": "text",
+      "layer": "headline",
+      "content": "The Real Reason Small Businesses\nStruggle with AI Adoption",
+      "position": { "x": 60, "y": 140 },
+      "size": 42,
+      "color": "#1A1A1A",
+      "font": "Segoe UI Bold",
+      "maxWidth": 680
+    },
+    {
+      "type": "text",
+      "layer": "preview",
+      "content": "It's not the technology.\nIt's not the cost.\n\nIt's the gap between 'what AI can do'\nand 'what your business actually needs'...",
+      "position": { "x": 60, "y": 320 },
+      "size": 22,
+      "color": "#4B5563",
+      "font": "Segoe UI Regular",
+      "maxWidth": 680,
+      "lineHeight": 1.6
+    },
+    {
+      "type": "shape",
+      "shape": "rectangle",
+      "position": { "x": 800, "y": 60 },
+      "size": { "width": 340, "height": 507 },
+      "color": "#F3F6F8",
+      "cornerRadius": 8
+    },
+    {
+      "type": "text",
+      "layer": "stat",
+      "content": "73%",
+      "position": { "x": 840, "y": 180 },
+      "size": 72,
+      "color": "#0077B5",
+      "font": "Segoe UI Bold"
+    },
+    {
+      "type": "text",
+      "layer": "stat-label",
+      "content": "of SMBs say AI is 'too\ncomplicated to implement'",
+      "position": { "x": 840, "y": 280 },
+      "size": 18,
+      "color": "#6B7280",
+      "font": "Segoe UI Regular",
+      "lineHeight": 1.4
+    },
+    {
+      "type": "shape",
+      "shape": "circle",
+      "position": { "x": 940, "y": 420 },
+      "size": { "width": 60, "height": 60 },
+      "color": "#0077B5"
+    },
+    {
+      "type": "text",
+      "layer": "read-more",
+      "content": "Read article →",
+      "position": { "x": 60, "y": 540 },
+      "size": 18,
+      "color": "#0077B5",
+      "font": "Segoe UI Semibold"
+    },
+    {
+      "type": "text",
+      "layer": "author",
+      "content": "Alec Kennedy • AI Automation Consultant",
+      "position": { "x": 60, "y": 580 },
+      "size": 14,
+      "color": "#6B7280",
+      "font": "Segoe UI Regular"
+    }
+  ],
+  "exportFormat": ["png", "canva-import"],
+  "canvaNotes": {
+    "importAs": "custom-template",
+    "editable": ["text", "colors"],
+    "optimalFor": "LinkedIn article previews and thought leadership posts"
+  }
+}

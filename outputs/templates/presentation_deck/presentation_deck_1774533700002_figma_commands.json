@@ -1,0 +1,58 @@
+{
+  "createFile": {
+    "name": "Pitch Deck Presentation - 2026-03-26",
+    "type": "figma_file"
+  },
+  "createPages": [
+    {
+      "name": "Page 1 - 1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "background": "#667eea"
+    }
+  ],
+  "addElements": [
+    {
+      "type": "slides",
+      "style": "startup_modern",
+      "colors": [
+        "#667eea",
+        "#764ba2",
+        "#f093fb"
+      ]
+    },
+    {
+      "type": "charts",
+      "style": "startup_modern",
+      "colors": [
+        "#667eea",
+        "#764ba2",
+        "#f093fb"
+      ]
+    },
+    {
+      "type": "infographics",
+      "style": "startup_modern",
+      "colors": [
+        "#667eea",
+        "#764ba2",
+        "#f093fb"
+      ]
+    },
+    {
+      "type": "icons",
+      "style": "startup_modern",
+      "colors": [
+        "#667eea",
+        "#764ba2",
+        "#f093fb"
+      ]
+    }
+  ],
+  "exportSettings": {
+    "format": "PDF",
+    "svg": true,
+    "png": true,
+    "canva_compatible": true
+  }
+}

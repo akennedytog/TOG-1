@@ -1,0 +1,137 @@
+{
+  "weekOf": "2026-03-19",
+  "posts": [
+    {
+      "day": "Thursday",
+      "date": "2026-03-19",
+      "schedule": [
+        {
+          "time": "08:30",
+          "type": "thread",
+          "pillar": "Frameworks",
+          "text": "🧵 The 3-Question AI Readiness Test:\n\nI've talked to 50+ SMB owners about AI.\n\nThe ones seeing results all answered YES to these 3 questions:\n\n👇",
+          "followUps": [
+            "1/ Do you repeat this task weekly?\n\nIf it happens daily → High automation potential\nIf weekly → Medium potential\nIf monthly → Probably not worth it yet",
+            "2/ Does it follow a pattern you could explain?\n\nExample: 'I check leads, prioritize by budget, send intro email'\n\nIf you can explain the steps → AI can learn them",
+            "3/ Would a 10% improvement matter?\n\n10% faster response time = more conversions\n10% less time = hours back per week\n\nCompound that over a year."
+          ]
+        },
+        {
+          "time": "12:00",
+          "type": "insight",
+          "pillar": "Contrarian",
+          "text": "Hot take: AI strategy is overrated.\n\nMost SMBs don't need an 'AI strategy.'\n\nThey need ONE task automated this week.\n\nStrategy is what you build after you ship."
+        },
+        {
+          "time": "15:30",
+          "type": "case-study",
+          "pillar": "Case Studies",
+          "text": "Client win this week:\n\n❌ Before: 2 hours/day on lead follow-up\n✅ After: 15 min/day + AI handles rest\n\nResult:\n• 40% faster response time\n• 3x more meetings booked\n• 10 hours/week saved\n\nThe AI didn't replace them. It amplified them."
+        },
+        {
+          "time": "19:00",
+          "type": "question",
+          "pillar": "Community",
+          "text": "What is your biggest blocker with AI right now?\n\nA) Do not know where to start\nB) Tried tools that didn't deliver\nC) Worried about cost/ROI\nD) Team resistance to change\n\nReply A/B/C/D — I will share specific resources."
+        }
+      ]
+    },
+    {
+      "day": "Friday",
+      "date": "2026-03-20",
+      "schedule": [
+        {
+          "time": "08:30",
+          "type": "thread",
+          "pillar": "AI Myths",
+          "text": "🧵 AI Myth #2: 'You need to be technical to use AI agents'\n\nReality: The best AI tools are conversational.\n\nYou describe what you want.\nThe agent figures out how to do it.\n\nNo coding required.\n\nHere is proof 👇",
+          "followUps": [
+            "1/ Example: Email triage\n\n'ClawdBot, scan my inbox hourly, flag urgent items, summarize newsletters'\n\nDone. No code written.\n\nThe AI understood intent and executed.",
+            "2/ Example: Content calendar\n\n'Draft 7 tweets about AI automation for SMBs, schedule them evenly'\n\nResult: 7 on-brand tweets, scheduled.\nTime saved: 2 hours.",
+            "3/ The shift:\n\nOld AI: Learn to code → Train models → Build systems\nNew AI: Describe outcome → AI builds → You approve\n\nBarrier to entry: Zero.",
+            "4/ The real skill:\n\nNot knowing HOW to build AI.\nIt's knowing WHAT to automate.\n\nThat's the 10-20 examples that matter.\nThat's the signal.",
+            "5/ SMB owners: You do not need an AI team.\n\nYou need an AI assistant that learns your business.\n\nStart with one task.\nBuild from there.\n\nThat's the Clawdbot approach."
+          ]
+        },
+        {
+          "time": "12:00",
+          "type": "poll",
+          "pillar": "Community",
+          "text": "Poll: If you could automate ONE thing in your business forever, what would it be?\n\n1. Email management\n2. Scheduling/calendar\n3. Lead follow-up\n4. Content creation\n\nReply 1/2/3/4 — I will DM you a playbook for your choice."
+        },
+        {
+          "time": "15:30",
+          "type": "insight",
+          "pillar": "Frameworks",
+          "text": "The AI tools that stick share one trait:\n\nThey don't ask users to change their workflow.\nThey adapt to it.\n\nThe best automation is invisible.\nIt just feels like you're suddenly better at your job."
+        },
+        {
+          "time": "17:00",
+          "type": "thread",
+          "pillar": "Building in Public",
+          "text": "🧵 Week in Review: What happens when you give an AI assistant a mission\n\nEvery Friday I'll show you exactly what we shipped this week. No fluff. Real numbers.\n\n📊 This week's output: 👇",
+          "followUps": [
+            "1/ 📝 New blog post: The Invisible Automation Principle\n\nDeep dive on why the best AI tools adapt to your workflow (not the other way around).\n\n→ https://theonegroup.info/blog/invisible-automation.html",
+            "2/ 🚀 Website updates deployed to production\n\nNew blog section live, content pipeline fully automated.\n\n→ https://theonegroup.info/blog.html",
+            "3/ 📅 Content calendar on autopilot\n\nBlog posts + tweets generated and scheduled. Zero manual posting.\n\n→ DM 'PIPELINE' for the system breakdown",
+            "4/ 📊 Engagement tracking system live\n\nAnalytics dashboard tracking every tweet, reply, and conversion.\n\n→ https://theonegroup.info#book (see it in action)",
+            "5/ 💡 The pattern:\n\n→ Clear direction\n→ Autonomous execution\n→ Human approval\n→ Ship fast\n\nThis is how AI actually works in practice.\n\nWant this for your business? → https://theonegroup.info#book"
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Saturday",
+      "date": "2026-03-21",
+      "schedule": [
+        {
+          "time": "10:00",
+          "type": "question",
+          "pillar": "Community",
+          "text": "Weekend thought experiment:\n\nIf you could automate one thing in your business and never think about it again, what would it be?\n\nNo constraints. Dream big.\n\nI will share the most interesting answers next week."
+        },
+        {
+          "time": "16:00",
+          "type": "reflection",
+          "pillar": "Building in Public",
+          "text": "Building an AI business while using AI to build it is... meta.\n\nEvery day I discover new edge cases.\nEvery day the system gets smarter.\n\nThe product IS the process.\n\nDocumenting everything so others can learn."
+        }
+      ]
+    },
+    {
+      "day": "Sunday",
+      "date": "2026-03-22",
+      "schedule": [
+        {
+          "time": "10:00",
+          "type": "preview",
+          "pillar": "Building in Public",
+          "text": "Next week on @TheOneGroupAI:\n\n🚀 Opening beta to 10 early users\n📊 Publishing our engagement data\n🧵 Deep dive on feedback loops\n💡 New automation playbooks\n\nFollow if you want to see how AI automation actually gets built."
+        },
+        {
+          "time": "18:00",
+          "type": "reflection",
+          "pillar": "Building in Public",
+          "text": "Sunday reflection:\n\nThe most surprising thing about building with AI?\n\nIt is not the technology.\nIt is how fast your own assumptions get challenged.\n\nWhat I thought users wanted ≠ What they actually need\n\nThe AI keeps me honest."
+        }
+      ]
+    }
+  ],
+  "engagementTargets": [
+    "@sama",
+    "@karpathy",
+    "@AndrewYNg",
+    "@naval",
+    "@paulg",
+    "@TheRabbitHole",
+    "@aidailyinsights",
+    "@smbs_ai"
+  ],
+  "replyTemplates": [
+    "This is exactly the kind of insight that drives real AI adoption. Thanks for sharing! 🚀",
+    "Love this perspective. What is your biggest win with AI so far?",
+    "Solid take. The practical applications here are huge for SMBs.",
+    "Building in public with AI is the way. What are you shipping next?",
+    "This resonates. The barrier to entry for AI keeps dropping—exciting times."
+  ]
+}

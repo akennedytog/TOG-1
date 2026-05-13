@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alec's Smart Home Control</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
+      color: #e2e8f0; 
+      min-height: 100vh;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { text-align: center; padding: 30px 0; border-bottom: 1px solid #334155; margin-bottom: 30px; }
+    h1 { font-size: 2.5rem; background: linear-gradient(90deg, #f97316, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { color: #94a3b8; margin-top: 10px; }
+    
+    .status-bar { 
+      display: flex; justify-content: center; gap: 30px; 
+      background: #1e293b; padding: 15px; border-radius: 12px; 
+      margin-bottom: 30px; border: 1px solid #334155;
+    }
+    .status-item { text-align: center; }
+    .status-item .label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; }
+    .status-item .value { font-size: 1.5rem; font-weight: 700; color: #22c55e; }
+    .status-item.offline .value { color: #ef4444; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    
+    .card { 
+      background: #1e293b; border-radius: 16px; padding: 24px; 
+      border: 1px solid #334155; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+    .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    .sonos { background: linear-gradient(135deg, #000, #333); }
+    .yale { background: linear-gradient(135deg, #1e40af, #3b82f6); }
+    .ring { background: linear-gradient(135deg, #1d4ed8, #60a5fa); }
+    .scene { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+    
+    .card-title { font-size: 1.25rem; font-weight: 600; }
+    .card-subtitle { font-size: 0.875rem; color: #94a3b8; }
+    
+    .control-group { margin-bottom: 16px; }
+    .control-label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 8px; }
+    
+    .btn { 
+      background: #334155; border: none; color: white; padding: 12px 20px; 
+      border-radius: 8px; cursor: pointer; font-weight: 500; 
+      transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn:hover { background: #475569; }
+    .btn-primary { background: linear-gradient(135deg, #f97316, #ea580c); }
+    .btn-primary:hover { background: linear-gradient(135deg, #ea580c, #dc2626); }
+    .btn-success { background: #22c55e; }
+    .btn-danger { background: #ef4444; }
+    .btn-lg { padding: 16px 24px; font-size: 1rem; }
+    
+    .btn-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    
+    .volume-slider { width: 100%; margin: 10px 0; }
+    .slider { -webkit-appearance: none; width: 100%; height: 6px; border-radius: 3px; background: #334155; outline: none; }
+    .slider::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #f97316; cursor: pointer; }
+    
+    .device-list { display: flex; flex-direction: column; gap: 10px; }
+    .device-item { 
+      display: flex; justify-content: space-between; align-items: center;
+      background: #0f172a; padding: 12px 16px; border-radius: 8px;
+    }
+    .device-name { font-weight: 500; }
+    .device-status { font-size: 0.875rem; color: #22c55e; }
+    .device-status.offline { color: #ef4444; }
+    
+    .scene-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .scene-btn { 
+      background: linear-gradient(135deg, #334155, #1e293b); 
+      border: 1px solid #475569; padding: 20px; border-radius: 12px;
+      cursor: pointer; text-align: center; transition: all 0.2s;
+    }
+    .scene-btn:hover { border-color: #f97316; transform: scale(1.02); }
+    .scene-icon { font-size: 2rem; margin-bottom: 8px; }
+    .scene-name { font-weight: 600; }
+    
+    .log { 
+      background: #0f172a; border-radius: 8px; padding: 16px; 
+      font-family: 'Monaco', monospace; font-size: 0.75rem; 
+      max-height: 200px; overflow-y: auto; color: #94a3b8;
+    }
+    .log-entry { margin-bottom: 4px; }
+    .log-time { color: #64748b; }
+    
+    .setup-section { 
+      background: linear-gradient(135deg, #1e3a5f, #1e293b); 
+      border: 1px solid #3b82f6; border-radius: 12px; padding: 20px; margin-top: 30px;
+    }
+    .setup-title { color: #60a5fa; font-weight: 600; margin-bottom: 12px; }
+    .setup-step { display: flex; align-items: start; gap: 12px; margin-bottom: 12px; }
+    .step-num { 
+      width: 24px; height: 24px; background: #3b82f6; 
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 700; flex-shrink: 0;
+    }
+    .step-text { font-size: 0.875rem; color: #cbd5e1; }
+    code { background: #0f172a; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+    
+    footer { text-align: center; padding: 30px; color: #64748b; font-size: 0.875rem; border-top: 1px solid #334155; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏠 Smart Home Control</h1>
+      <p class="subtitle">Sonos • Yale • Ring • Eero</p>
+    </header>
+
+    <div class="status-bar">
+      <div class="status-item">
+        <div class="label">Sonos</div>
+        <div class="value" id="sonosStatus">●</div>
+      </div>
+      <div class="status-item">
+        <div class="label">Yale Lock</div>
+        <div class="value" id="yaleStatus">●</div>
+      </div>
+      <div class="status-item">
+        <div class="label">Ring</div>
+        <div class="value" id="ringStatus">●</div>
+      </div>
+      <div class="status-item">
+        <div class="label">Network</div>
+        <div class="value">●</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Sonos Control -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon sonos">🔊</div>
+          <div>
+            <div class="card-title">Sonos</div>
+            <div class="card-subtitle">Multi-room Audio</div>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Speakers</div>
+          <div class="device-list" id="sonosDevices">
+            <div class="device-item">
+              <span class="device-name">Living Room</span>
+              <span class="device-status">Standby</span>
+            </div>
+            <div class="device-item">
+              <span class="device-name">Bedroom</span>
+              <span class="device-status">Standby</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Playback</div>
+          <div class="btn-grid">
+            <button class="btn btn-primary" onclick="sonosAction('play')">▶️ Play</button>
+            <button class="btn" onclick="sonosAction('pause')">⏸️ Pause</button>
+            <button class="btn" onclick="sonosAction('prev')">⏮️ Prev</button>
+            <button class="btn" onclick="sonosAction('next')">⏭️ Next</button>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Volume</div>
+          <input type="range" min="0" max="100" value="30" class="slider" id="sonosVolume" onchange="sonosVolume(this.value)">
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Quick Play</div>
+          <button class="btn btn-lg btn-primary" style="width: 100%;" onclick="sonosPlaylist('chill')">🎵 Play Chill Vibes</button>
+        </div>
+      </div>
+
+      <!-- Yale Lock -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon yale">🔐</div>
+          <div>
+            <div class="card-title">Yale Lock</div>
+            <div class="card-subtitle">Smart Entry</div>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Status</div>
+          <div class="device-item">
+            <span class="device-name">Front Door</span>
+            <span class="device-status" id="lockStatus">🔒 Locked</span>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Control</div>
+          <div class="btn-grid">
+            <button class="btn btn-success btn-lg" onclick="lockAction('unlock')">🔓 Unlock</button>
+            <button class="btn btn-danger btn-lg" onclick="lockAction('lock')">🔒 Lock</button>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Battery</div>
+          <div style="background: #0f172a; padding: 12px; border-radius: 8px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span>🔋 Battery Level</span>
+              <span id="batteryLevel">85%</span>
+            </div>
+            <div style="background: #334155; height: 8px; border-radius: 4px;">
+              <div style="width: 85%; height: 100%; background: #22c55e; border-radius: 4px;"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Recent Activity</div>
+          <div class="log" id="lockLog">
+            <div class="log-entry"><span class="log-time">22:30</span> 🔒 Auto-locked</div>
+            <div class="log-entry"><span class="log-time">18:15</span> 🔓 Unlocked - You</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ring Security -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon ring">📹</div>
+          <div>
+            <div class="card-title">Ring</div>
+            <div class="card-subtitle">Security Cameras</div>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Devices</div>
+          <div class="device-list">
+            <div class="device-item">
+              <span class="device-name">🚪 Doorbell</span>
+              <span class="device-status">Online</span>
+            </div>
+            <div class="device-item">
+              <span class="device-name">🏠 Front Camera</span>
+              <span class="device-status">Online</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Quick Actions</div>
+          <button class="btn btn-primary btn-lg" style="width: 100%; margin-bottom: 10px;" onclick="ringAction('snapshot')">📸 Take Snapshot</button>
+          <button class="btn btn-lg" style="width: 100%;" onclick="ringAction('live')">📺 View Live</button>
+        </div>
+        
+        <div class="control-group">
+          <div class="control-label">Motion Alerts</div>
+          <div style="display: flex; gap: 10px;">
+            <button class="btn btn-success" onclick="ringAction('enable')">✅ Enable</button>
+            <button class="btn" onclick="ringAction('disable')">⏸️ Disable</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenes -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon scene">🎬</div>
+          <div>
+            <div class="card-title">Scenes</div>
+            <div class="card-subtitle">One-tap Automation</div>
+          </div>
+        </div>
+        
+        <div class="scene-grid">
+          <div class="scene-btn" onclick="activateScene('morning')">
+            <div class="scene-icon">☀️</div>
+            <div class="scene-name">Good Morning</div>
+          </div>
+          
+          <div class="scene-btn" onclick="activateScene('leaving')">
+            <div class="scene-icon">🚪</div>
+            <div class="scene-name">Leaving Home</div>
+          </div>
+          
+          <div class="scene-btn" onclick="activateScene('movie')">
+            <div class="scene-icon">🎬</div>
+            <div class="scene-name">Movie Night</div>
+          </div>
+          
+          <div class="scene-btn" onclick="activateScene('sleep')">
+            <div class="scene-icon">😴</div>
+            <div class="scene-name">Good Night</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Setup Instructions -->
+    <div class="setup-section">
+      <div class="setup-title">🔧 Setup Required</div>
+      
+      <div class="setup-step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Sonos:</strong> Find speaker IPs: Open Terminal → Run: <code>dns-sd -B _sonos._tcp</code> → Note device IPs</div>
+      </div>
+      
+      <div class="setup-step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Yale Lock:</strong> Do you use <b>Yale Access app</b> or <b>SmartThings</b>? Need API credentials.</div>
+      </div>
+      
+      <div class="setup-step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Ring:</strong> Need Ring account email/password for API access (stored locally only).</div>
+      </div>
+      
+      <div class="setup-step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>Run Backend:</strong> Install dependencies: <code>npm install node-sonos-http-api ring-client-api</code></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Alec's Smart Home • Built with OpenClaw</p>
+      <p style="margin-top: 10px; font-size: 0.75rem;">Local control • No cloud required • Your data stays private</p>
+    </footer>
+  </div>
+
+  <script>
+    // Device State
+    let devices = {
+      sonos: { connected: false, playing: false, volume: 30 },
+      yale: { locked: true, battery: 85 },
+      ring: { motionEnabled: true }
+    };
+
+    // Sonos Control - Connected to local server
+    async function sonosAction(action) {
+      log(`Sonos: ${action}`);
+      try {
+        const response = await fetch(`http://localhost:5005/Living%20Room/${action}`);
+        const data = await response.json();
+        log(`Sonos response: ${data.success ? 'OK' : 'Failed'}`);
+      } catch (err) {
+        log(`Sonos error: ${err.message}`);
+        alert('Sonos server not running. Start it: node sonos-server.js');
+      }
+    }
+
+    async function sonosVolume(val) {
+      log(`Sonos volume: ${val}%`);
+      try {
+        await fetch(`http://localhost:5005/Living%20Room/SetVolume/${val}`);
+      } catch (err) {
+        log(`Sonos volume error: ${err.message}`);
+      }
+    }
+
+    async function sonosPlaylist(name) {
+      log(`Sonos playing: ${name}`);
+      alert(`Playlist '${name}' - Feature coming soon!`);
+    }
+
+    // Yale Lock Control
+    function lockAction(action) {
+      log(`Lock: ${action}`);
+      const statusEl = document.getElementById('lockStatus');
+      
+      if (action === 'lock') {
+        statusEl.textContent = '🔒 Locked';
+        statusEl.style.color = '#22c55e';
+        addLogEntry('🔒 Manually locked');
+      } else {
+        statusEl.textContent = '🔓 Unlocked';
+        statusEl.style.color = '#ef4444';
+        addLogEntry('🔓 Manually unlocked');
+      }
+      
+      // TODO: Call Yale/SmartThings API
+      // fetch('/api/yale/lock', { method: 'POST', body: { action } })
+    }
+
+    // Ring Control
+    function ringAction(action) {
+      log(`Ring: ${action}`);
+      
+      if (action === 'snapshot') {
+        alert('📸 Snapshot saved - Connect Ring API first');
+      } else if (action === 'live') {
+        alert('📺 Opening Ring app...');
+        window.open('https://ring.com/users/sign_in', '_blank');
+      }
+      
+      // TODO: Call Ring API
+    }
+
+    // Scenes
+    function activateScene(scene) {
+      log(`Scene: ${scene}`);
+      
+      const scenes = {
+        morning: '☀️ Good Morning: Lights on, music playing, door unlocked',
+        leaving: '🚪 Leaving Home: Everything off, door locked, cameras armed',
+        movie: '🎬 Movie Night: Lights dimmed, volume up, door locked',
+        sleep: '😴 Good Night: Everything off, door locked, night mode'
+      };
+      
+      alert(scenes[scene] + '\n\n(Connect backend to activate)');
+      
+      // TODO: Trigger multiple device actions
+    }
+
+    // Logging
+    function log(message) {
+      console.log(`[${new Date().toLocaleTimeString()}] ${message}`);
+    }
+
+    function addLogEntry(text) {
+      const logEl = document.getElementById('lockLog');
+      const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const entry = document.createElement('div');
+      entry.className = 'log-entry';
+      entry.innerHTML = `<span class="log-time">${time}</span> ${text}`;
+      logEl.insertBefore(entry, logEl.firstChild);
+    }
+
+    // Check device status
+    async function checkStatus() {
+      // Check Sonos
+      try {
+        const response = await fetch('http://localhost:5005/');
+        if (response.ok) {
+          document.getElementById('sonosStatus').style.color = '#22c55e';
+          document.getElementById('sonosStatus').textContent = '● Online';
+        }
+      } catch {
+        document.getElementById('sonosStatus').style.color = '#fbbf24';
+        document.getElementById('sonosStatus').textContent = '● Starting...';
+      }
+      
+      // Yale and Ring still pending
+      document.getElementById('yaleStatus').style.color = '#fbbf24';
+      document.getElementById('ringStatus').style.color = '#fbbf24';
+    }
+
+    checkStatus();
+  </script>
+</body>
+</html>

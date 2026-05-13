@@ -1,0 +1,159 @@
+{
+  "pending": [],
+  "completed": [],
+  "today": [
+    {
+      "id": "task_1774205576530_7ycet",
+      "agent": "jerry",
+      "name": "Review daily metrics",
+      "time": "09:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_eebq7",
+      "agent": "jerry",
+      "name": "Evaluate new opportunities",
+      "time": "10:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_twbis",
+      "agent": "arlo",
+      "name": "Research South Florida market",
+      "time": "08:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_ke7i1",
+      "agent": "arlo",
+      "name": "Monitor competitor activity",
+      "time": "12:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_tdh19",
+      "agent": "iris",
+      "name": "Send cold emails (10)",
+      "time": "09:30",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_69ghu",
+      "agent": "iris",
+      "name": "Follow up on leads",
+      "time": "14:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_1so7x",
+      "agent": "iris",
+      "name": "Create Twitter content",
+      "time": "11:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_4xpnr",
+      "agent": "opal",
+      "name": "Update documentation",
+      "time": "17:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_mfg6e",
+      "agent": "opal",
+      "name": "Review agent logs",
+      "time": "16:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_7geng",
+      "agent": "dev",
+      "name": "Build scheduled features",
+      "time": "10:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_ltpmj",
+      "agent": "dev",
+      "name": "Fix bugs",
+      "time": "15:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_a60wt",
+      "agent": "rico",
+      "name": "Check system health",
+      "time": "08:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_yysdf",
+      "agent": "rico",
+      "name": "Optimize automation",
+      "time": "14:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_sadsa",
+      "agent": "dante",
+      "name": "Create blog content",
+      "time": "10:30",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_bbcyq",
+      "agent": "dante",
+      "name": "Design visual assets",
+      "time": "13:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_w14hn",
+      "agent": "abby",
+      "name": "Review agent outputs",
+      "time": "11:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    },
+    {
+      "id": "task_1774205576530_ed2lz",
+      "agent": "abby",
+      "name": "Quality check",
+      "time": "16:00",
+      "status": "pending",
+      "priority": "medium",
+      "created": "2026-03-22T18:52:56.530Z"
+    }
+  ]
+}

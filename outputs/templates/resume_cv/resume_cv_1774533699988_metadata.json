@@ -1,0 +1,48 @@
+{
+  "id": "resume_cv",
+  "name": "Modern Resume/CV Template",
+  "generatedAt": "2026-03-26T14:01:39.988Z",
+  "version": "1.0.0",
+  "files": {
+    "figma": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/resume_cv/resume_cv_1774533699988_figma_commands.json",
+    "canva": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/resume_cv/resume_cv_1774533699988_canva_import.md"
+  },
+  "config": {
+    "id": "resume_cv",
+    "name": "Modern Resume/CV Template",
+    "category": "document",
+    "sizes": [
+      {
+        "width": 794,
+        "height": 1123,
+        "pages": 3
+      }
+    ],
+    "style": "clean_professional",
+    "colors": [
+      "#2c3e50",
+      "#ecf0f1",
+      "#3498db"
+    ],
+    "elements": [
+      "sections",
+      "progress_bars",
+      "icons",
+      "timeline"
+    ],
+    "price": {
+      "etsy": 6.99,
+      "creative_market": 9,
+      "designcuts": 8
+    },
+    "tags": [
+      "resume",
+      "cv",
+      "job",
+      "professional",
+      "career",
+      " ATS-friendly"
+    ]
+  },
+  "status": "ready_for_export"
+}

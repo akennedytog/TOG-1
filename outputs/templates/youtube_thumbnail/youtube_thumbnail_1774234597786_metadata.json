@@ -1,0 +1,47 @@
+{
+  "id": "youtube_thumbnail",
+  "name": "YouTube Thumbnail Pack",
+  "generatedAt": "2026-03-23T02:56:37.787Z",
+  "version": "1.0.0",
+  "files": {
+    "figma": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/youtube_thumbnail/youtube_thumbnail_1774234597786_figma_commands.json",
+    "canva": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/youtube_thumbnail/youtube_thumbnail_1774234597786_canva_import.md"
+  },
+  "config": {
+    "id": "youtube_thumbnail",
+    "name": "YouTube Thumbnail Pack",
+    "category": "youtube",
+    "sizes": [
+      {
+        "width": 1280,
+        "height": 720,
+        "pages": 10
+      }
+    ],
+    "style": "bold_trendy",
+    "colors": [
+      "#FF0000",
+      "#FFFFFF",
+      "#000000"
+    ],
+    "elements": [
+      "text_layers",
+      "emoji",
+      "arrows",
+      "gradients"
+    ],
+    "price": {
+      "etsy": 8.99,
+      "creative_market": 12,
+      "designcuts": 10
+    },
+    "tags": [
+      "youtube",
+      "thumbnail",
+      "video",
+      "clickbait",
+      "views"
+    ]
+  },
+  "status": "ready_for_export"
+}

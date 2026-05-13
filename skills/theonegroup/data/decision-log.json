@@ -1,0 +1,28 @@
+[
+  {
+    "id": "task_1774531695860_e5318",
+    "timestamp": "2026-03-26T13:28:15.860Z",
+    "agent": "arlo",
+    "type": "task_completed",
+    "data": {
+      "task": "Research South Florida market",
+      "agent": "arlo",
+      "result": "completed",
+      "time": "2026-03-26T13:28:15.859Z"
+    },
+    "reviewed": false
+  },
+  {
+    "id": "task_1774531695891_iiukn",
+    "timestamp": "2026-03-26T13:28:15.891Z",
+    "agent": "rico",
+    "type": "task_completed",
+    "data": {
+      "task": "Check system health",
+      "agent": "rico",
+      "result": "completed",
+      "time": "2026-03-26T13:28:15.861Z"
+    },
+    "reviewed": false
+  }
+]

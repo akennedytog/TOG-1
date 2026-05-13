@@ -1,0 +1,51 @@
+{
+  "id": "20260506_131933_20260506_131933_B-F FY26 Q4 H&R Road to Cinco",
+  "filename": "20260506_131933_B-F FY26 Q4 H&R Road to Cinco.xlsx",
+  "uploaded_at": "2026-05-06T13:19:46.484731",
+  "file_type": ".xlsx",
+  "row_count": 8,
+  "insights": {
+    "summary": "The sales report indicates a total of 25 active accounts with 14 featuring 4 or more cases. Chad Fraser and PH North On Prem AM are the top performers, but there are opportunities for improvement in account engagement and SKU performance.",
+    "top_performers": [
+      {
+        "name": "FRASER CHAD",
+        "metric": "Accounts with 4+ Cases",
+        "value": 8
+      },
+      {
+        "name": "PH NORTH ON PREM AM",
+        "metric": "Accounts with 4+ Cases",
+        "value": 6
+      }
+    ],
+    "accounts_at_risk": [
+      {
+        "name": "PH NORTH ON PREM AM",
+        "reason": "Lower engagement with only 6 out of 10 cases",
+        "action": "Increase follow-up and promotional activities to boost case numbers."
+      }
+    ],
+    "call_today": [
+      {
+        "name": "FRASER CHAD",
+        "priority": "high",
+        "reason": "Top performer with high engagement; discuss strategies to maintain momentum."
+      },
+      {
+        "name": "PH NORTH ON PREM AM",
+        "priority": "medium",
+        "reason": "Potential for increased case engagement; assess needs and barriers."
+      }
+    ],
+    "skus_down": [],
+    "opportunities": [
+      {
+        "description": "Increase promotional activities for accounts with less than 4 cases",
+        "potential_value": "Higher sales volume and account retention."
+      }
+    ],
+    "alerts": [
+      "Monitor accounts with low case counts to prevent churn."
+    ]
+  }
+}

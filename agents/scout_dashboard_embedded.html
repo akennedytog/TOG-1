@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Scout Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: Inter, sans-serif; background: #0f172a; color: #f1f5f9; }
+        .glass { background: rgba(30, 41, 59, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(148, 163, 184, 0.1); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+    </style>
+</head>
+<body class="min-h-screen p-6">
+    <div class="max-w-7xl mx-auto">
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-white mb-2">Scout Dashboard</h1>
+            <p class="text-slate-400">Road to Cinco - B-F FY26 Q4 H&R</p>
+        </header>
+        
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+            <div class="glass rounded-xl p-5 card-hover">
+                <p class="text-sm text-slate-400">Programs</p>
+                <p class="text-2xl font-bold mt-1">2</p>
+            </div>
+            <div class="glass rounded-xl p-5 card-hover">
+                <p class="text-sm text-slate-400">Total Sheets</p>
+                <p class="text-2xl font-bold mt-1">30</p>
+            </div>
+            <div class="glass rounded-xl p-5 card-hover">
+                <p class="text-sm text-slate-400">Total Records</p>
+                <p class="text-2xl font-bold mt-1">249064</p>
+            </div>
+            <div class="glass rounded-xl p-5 card-hover">
+                <p class="text-sm text-slate-400">Report Types</p>
+                <p class="text-2xl font-bold mt-1">6</p>
+            </div>
+        </div>
+
+        <!-- Programs -->
+        <div class="space-y-6">
+            <div class="glass rounded-xl p-6">
+                <h2 class="text-xl font-semibold mb-4 text-white">H&R Woodford Derby</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-slate-700 text-left text-sm text-slate-400">
+                                <th class="pb-3 px-4">Sheet</th>
+                                <th class="pb-3 px-4">Type</th>
+                                <th class="pb-3 px-4">Records</th>
+                                <th class="pb-3 px-4">Summary</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">CPGTable</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">21</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: WOODFORD RESERVE BOURBON, WOODFORD RESERVE; Promos: Feature Activation (spirits/on)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar-Apr2</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">1</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: WOODFORD RESERVE; Promos: Cocktail List Activation</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar-Apr8</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">3</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: WOODFORD RESERVE, WOODFORD RESERVE BRBN DBL OAK; Promos: Cocktail List Activation</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar-Apr15</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">4</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: WOODFORD RESERVE, WOODFORD RESERVE BRBN DBL OAK; Promos: Cocktail List Activation, Feature Activation (spirits/on)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar-Apr20</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">24</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: WOODFORD RESERVE BOURBON, WOODFORD RESERVE; Promos: Feature Activation (spirits/on)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Salesforce</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">inventory</span></td>
+                                <td class="py-4 px-4">110350</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">ADS_List</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">accounts_sold</span></td>
+                                <td class="py-4 px-4">857</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Vol_Check</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">volume</span></td>
+                                <td class="py-4 px-4">5868</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">AM</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">unknown</span></td>
+                                <td class="py-4 px-4">4</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">FSM</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">unknown</span></td>
+                                <td class="py-4 px-4">37</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Reps</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">unknown</span></td>
+                                <td class="py-4 px-4">8</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="glass rounded-xl p-6">
+                <h2 class="text-xl font-semibold mb-4 text-white">Q4 H&R Road to Cinco</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-slate-700 text-left text-sm text-slate-400">
+                                <th class="pb-3 px-4">Sheet</th>
+                                <th class="pb-3 px-4">Type</th>
+                                <th class="pb-3 px-4">Records</th>
+                                <th class="pb-3 px-4">Summary</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">FSM</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">pod</span></td>
+                                <td class="py-4 px-4">27</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">AM</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">pod</span></td>
+                                <td class="py-4 px-4">3</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Reps</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">pod</span></td>
+                                <td class="py-4 px-4">68</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">CPGTable</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">25</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: HERRADURA BLANCO, HERRADURA; Promos: Feature Activation (spirits/on)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">CPGTable_Chambord</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">4</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: CHAMBORD; Promos: Cocktail List Activation</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar1-18</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">5</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: HERRADURA; Promos: Cocktail List Activation</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar1-24</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">10</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: HERRADURA, HERRADURA BLANCO; Promos: Cocktail List Activation, Feature Activation (spirits/on)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar-Apr1</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">11</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: HERRADURA, HERRADURA BLANCO; Promos: Cocktail List Activation, Feature Activation (spirits/on)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar-Apr8</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">14</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: HERRADURA, HERRADURA BLANCO; Promos: Cocktail List Activation, Feature Activation</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar-Apr15</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">18</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: HERRADURA, HERRADURA BLANCO; Promos: Cocktail List Activation, Feature Activation (spirits/on)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Mar-Apr20</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">incentive</span></td>
+                                <td class="py-4 px-4">31</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">Brands: HERRADURA, HERRADURA BLANCO; Promos: Feature Activation (spirits/on), Cocktail List Activation</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Salesforce</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">inventory</span></td>
+                                <td class="py-4 px-4">110350</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">ADS_List</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">accounts_sold</span></td>
+                                <td class="py-4 px-4">862</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Vol_Check</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">volume</span></td>
+                                <td class="py-4 px-4">1180</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">ADS</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">unknown</span></td>
+                                <td class="py-4 px-4">2</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Opp</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">unknown</span></td>
+                                <td class="py-4 px-4">7494</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">TableS_Off</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">unknown</span></td>
+                                <td class="py-4 px-4">11781</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-4 font-medium">Sheet3</td>
+                                <td class="py-4 px-4"><span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300">unknown</span></td>
+                                <td class="py-4 px-4">2</td>
+                                <td class="py-4 px-4 text-sm text-slate-400">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="mt-8 text-center text-sm text-slate-500">
+            <p>Generated: 2026-04-27T02:30:00Z</p>
+        </footer>
+    </div>
+</body>
+</html>

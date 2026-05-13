@@ -1,0 +1,232 @@
+{
+  "project": {
+    "name": "Canva Template Project",
+    "version": "1.1.0",
+    "description": "Generated template configuration - Updated April 27"
+  },
+  "defaults": {
+    "template": "instagram",
+    "theme": "modern"
+  },
+  "templates": {
+    "instagram": {
+      "name": "Instagram Post",
+      "width": 1080,
+      "height": 1080,
+      "description": "Square format - perfect for Instagram feed posts",
+      "backgroundStyle": "solid",
+      "elements": [
+        {
+          "type": "text",
+          "position": {"x": 100, "y": 400},
+          "content": "Your Headline",
+          "fontSize": 72,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {"x": 100, "y": 500},
+          "content": "Add your subtitle here",
+          "fontSize": 36,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {"x": 0, "y": 0},
+          "size": {"width": 1080, "height": 300},
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": ["Inter", "Poppins", "Montserrat"]
+    },
+    "instagramStory": {
+      "name": "Instagram Story",
+      "width": 1080,
+      "height": 1920,
+      "description": "Vertical format for Instagram Stories and Reels",
+      "backgroundStyle": "gradient",
+      "elements": [
+        {
+          "type": "text",
+          "position": {"x": 100, "y": 800},
+          "content": "Swipe Up",
+          "fontSize": 96,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {"x": 440, "y": 1600},
+          "size": {"width": 200, "height": 200},
+          "shapeType": "ELLIPSE",
+          "zIndex": 3
+        }
+      ],
+      "recommendedFonts": ["SF Pro Display", "Poppins", "Bebas Neue"]
+    },
+    "linkedin": {
+      "name": "LinkedIn Post",
+      "width": 1200,
+      "height": 627,
+      "description": "LinkedIn article and post image format",
+      "backgroundStyle": "solid",
+      "elements": [
+        {
+          "type": "text",
+          "position": {"x": 80, "y": 200},
+          "content": "Article Title",
+          "fontSize": 56,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {"x": 80, "y": 300},
+          "content": "Your name • Professional title",
+          "fontSize": 24,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {"x": 800, "y": 100},
+          "size": {"width": 400, "height": 427},
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": ["Inter", "Roboto", "Source Sans Pro"]
+    },
+    "linkedinCarousel": {
+      "name": "LinkedIn Carousel",
+      "width": 1080,
+      "height": 1080,
+      "description": "Square format for LinkedIn carousel posts",
+      "backgroundStyle": "solid",
+      "elements": [
+        {
+          "type": "text",
+          "position": {"x": 60, "y": 150},
+          "content": "Slide 1: Hook",
+          "fontSize": 48,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {"x": 60, "y": 250},
+          "content": "Bullet point 1\nBullet point 2\nBullet point 3",
+          "fontSize": 32,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {"x": 700, "y": 100},
+          "size": {"width": 380, "height": 880},
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": ["Inter", "Roboto", "Montserrat"]
+    },
+    "pinterest": {
+      "name": "Pinterest Pin",
+      "width": 1000,
+      "height": 1500,
+      "description": "2:3 ratio - optimal for Pinterest engagement",
+      "backgroundStyle": "gradient",
+      "elements": [
+        {
+          "type": "text",
+          "position": {"x": 50, "y": 1300},
+          "content": "Pin Title Here",
+          "fontSize": 64,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {"x": 0, "y": 0},
+          "size": {"width": 1000, "height": 1200},
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": ["Playfair Display", "Montserrat", "Lato"]
+    },
+    "pinterestIdeaPin": {
+      "name": "Pinterest Idea Pin",
+      "width": 1080,
+      "height": 1920,
+      "description": "Vertical format for Pinterest Idea Pins",
+      "backgroundStyle": "gradient",
+      "elements": [
+        {
+          "type": "text",
+          "position": {"x": 60, "y": 1600},
+          "content": "Step-by-Step Guide",
+          "fontSize": 72,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {"x": 60, "y": 1720},
+          "content": "Swipe for the full tutorial →",
+          "fontSize": 40,
+          "zIndex": 2
+        }
+      ],
+      "recommendedFonts": ["Montserrat", "Open Sans", "Lato"]
+    }
+  },
+  "colors": {
+    "modern": {
+      "name": "Modern",
+      "colors": ["#FFFFFF", "#F5F5F5", "#333333", "#007BFF", "#28A745", "#FFC107", "#DC3545"],
+      "primary": "#007BFF",
+      "secondary": "#28A745",
+      "accent": "#FFC107",
+      "background": "#FFFFFF",
+      "text": "#333333"
+    },
+    "minimal": {
+      "name": "Minimal",
+      "colors": ["#FFFFFF", "#FAFAFA", "#E0E0E0", "#9E9E9E", "#616161", "#212121", "#000000"],
+      "primary": "#212121",
+      "secondary": "#616161",
+      "accent": "#9E9E9E",
+      "background": "#FFFFFF",
+      "text": "#212121"
+    },
+    "bold": {
+      "name": "Bold",
+      "colors": ["#1A1A2E", "#16213E", "#0F3460", "#E94560", "#F39422", "#FFFFFF", "#000000"],
+      "primary": "#E94560",
+      "secondary": "#F39422",
+      "accent": "#0F3460",
+      "background": "#1A1A2E",
+      "text": "#FFFFFF"
+    }
+  },
+  "fonts": {
+    "modern": {
+      "heading": {"family": "Inter", "style": "Bold"},
+      "body": {"family": "Inter", "style": "Regular"},
+      "accent": {"family": "Poppins", "style": "SemiBold"}
+    },
+    "minimal": {
+      "heading": {"family": "Helvetica Neue", "style": "Light"},
+      "body": {"family": "Helvetica Neue", "style": "UltraLight"},
+      "accent": {"family": "Helvetica Neue", "style": "Medium"}
+    },
+    "bold": {
+      "heading": {"family": "Oswald", "style": "Bold"},
+      "body": {"family": "Roboto", "style": "Regular"},
+      "accent": {"family": "Bebas Neue", "style": "Regular"}
+    }
+  },
+  "exportSettings": {
+    "defaultFormat": "png",
+    "defaultScale": 2,
+    "includeMetadata": true
+  },
+  "generatedAt": "2026-04-27T15:17:00.000Z",
+  "cronStatus": "triggered",
+  "note": "Automated Figma plugin execution requires API auth. Manual execution needed for template generation."
+}

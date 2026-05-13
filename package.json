@@ -1,5 +1,19 @@
 {
   "name": "truth-dashboard",
   "private": true,
-  "workspaces": ["backend","frontend","shared"]
+  "workspaces": [
+    "backend",
+    "frontend",
+    "shared"
+  ],
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "hyperagent": "^0.2.10",
+    "node-fetch": "^3.3.2",
+    "node-telegram-bot-api": "^0.67.0",
+    "nodemailer": "^8.0.3",
+    "twitter-api-v2": "^1.29.0"
+  }
 }

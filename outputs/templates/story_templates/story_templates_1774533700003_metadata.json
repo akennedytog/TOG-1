@@ -1,0 +1,47 @@
+{
+  "id": "story_templates",
+  "name": "Instagram Stories Pack",
+  "generatedAt": "2026-03-26T14:01:40.003Z",
+  "version": "1.0.0",
+  "files": {
+    "figma": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/story_templates/story_templates_1774533700003_figma_commands.json",
+    "canva": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/story_templates/story_templates_1774533700003_canva_import.md"
+  },
+  "config": {
+    "id": "story_templates",
+    "name": "Instagram Stories Pack",
+    "category": "social_media",
+    "sizes": [
+      {
+        "width": 1080,
+        "height": 1920,
+        "pages": 15
+      }
+    ],
+    "style": "trendy_aesthetic",
+    "colors": [
+      "#FF6B9D",
+      "#C44569",
+      "#F8B500"
+    ],
+    "elements": [
+      "stickers",
+      "text_animations",
+      "masks",
+      "filters"
+    ],
+    "price": {
+      "etsy": 7.99,
+      "creative_market": 10,
+      "designcuts": 9
+    },
+    "tags": [
+      "instagram stories",
+      "social media",
+      "vertical",
+      "engagement",
+      "aesthetic"
+    ]
+  },
+  "status": "ready_for_export"
+}

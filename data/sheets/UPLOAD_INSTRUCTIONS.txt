@@ -1,0 +1,86 @@
+
+╔══════════════════════════════════════════════════════════════════╗
+║     GOOGLE SHEETS UPLOAD INSTRUCTIONS                            ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📁 CSV File Created: /Users/aleckennedy/.openclaw/workspace/data/sheets/leads_tracking_2026-03-22.csv
+📊 Total Records: 62
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEPS TO UPLOAD TO GOOGLE SHEETS:
+
+1. Open Google Sheets: https://sheets.google.com
+
+2. Create a new spreadsheet
+   Name it: "The One Group - Lead Tracking"
+
+3. Click File → Import
+   Select: Upload → Choose File
+   Find: /Users/aleckennedy/.openclaw/workspace/data/sheets/leads_tracking_2026-03-22.csv
+
+4. Import settings:
+   - Import action: Create new spreadsheet
+   - Separator type: Comma
+   - Convert text to numbers: Yes
+   - Detect dates: Yes
+
+5. After import, format these columns:
+   
+   Conditional Formatting (for Status column):
+   - new = gray
+   - contacted = yellow
+   - qualified = blue
+   - proposal_sent = orange
+   - closed_won = green
+   - closed_lost = red
+
+6. Share with your team:
+   Click Share → Add emails → "Can edit"
+
+7. Set up automation (optional):
+   - Extensions → Apps Script
+   - Create daily email reminder
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📈 CURRENT PIPELINE STATS:
+
+Total Leads: 62
+With Email: 62 (100%)
+Contacted: 0
+Meetings Booked: 0
+Pipeline Value: $0
+
+By Industry:
+  HVAC: 11
+  Legal: 10
+  Accounting: 6
+  Real Estate: 6
+  Dental: 6
+  Medical: 6
+  Home Services: 10
+  Restaurant: 3
+  Retail: 4
+
+By City:
+  Miami: 27
+  Fort Lauderdale: 27
+  West Palm Beach: 4
+  Boca Raton: 4
+
+By Priority:
+  medium: 62
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 READY TO SELL!
+
+Next steps:
+1. Upload CSV to Google Sheets
+2. Verify email addresses (use Hunter.io if needed)
+3. Send 10 emails/day from the "high" priority leads
+4. Update Status column as you get responses
+5. Track everything in the spreadsheet
+
+Good luck!

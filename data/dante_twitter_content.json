@@ -1,0 +1,636 @@
+{
+  "posts": [
+    {
+      "text": "Dentistry is competitive.\n\nPatients have options.\n\nThe practice that answers at 7 PM beats the one with voicemail.\n\nAI voice agents level the playing field for solo practices in Delray Beach.\n\nEnterprise-level availability. Small business budget.",
+      "source": "arlo:Dental",
+      "generated_at": "2026-04-15T14:55:15.855627",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Real estate agents in Lake Worth:\n\nYour best leads come when you're showing houses.\n\nThat's also when you can't answer.\n\nAI can:\n\u2705 Qualify buyer vs tire-kicker\n\u2705 Schedule showings\n\u2705 Send listings\n\u2705 Follow up automatically\n\nYou focus on closing. AI handles the noise.",
+      "source": "arlo:Real Estate",
+      "generated_at": "2026-04-15T14:55:15.855640",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "What I learned from talking to electrical businesses in Boca Raton:\n\nThey're not afraid of AI.\n\nThey're afraid of losing to someone using AI.\n\nDifferent mindset. Same outcome:\n\nAdapt or get left behind.",
+      "source": "arlo:Electrical",
+      "generated_at": "2026-04-15T14:55:15.855645",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Small businesses in Miami:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.",
+      "source": "arlo:Programming",
+      "generated_at": "2026-04-16T08:58:10.271034",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Small businesses in Jupiter:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.",
+      "source": "arlo:Accounting",
+      "generated_at": "2026-04-16T08:58:10.271043",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "What I learned from talking to home services businesses in West Palm Beach:\n\nThey're not afraid of AI.\n\nThey're afraid of losing to someone using AI.\n\nDifferent mindset. Same outcome:\n\nAdapt or get left behind.",
+      "source": "arlo:Home Services",
+      "generated_at": "2026-04-16T08:58:10.271048",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Miami: New patient calls at 6 PM.\n\nOld: Voicemail. Patient books elsewhere.\n\nNew: AI answers, qualifies patient, schedules consult.\n\nOne extra patient/month = AI pays for itself.",
+      "source": "arlo:Dental",
+      "generated_at": "2026-04-17T10:32:47.209863",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Dev agencies in Boca Raton:\n\nSales calls interrupt deep work.\n\nContext switching kills productivity.\n\nAI can:\n\u2705 Qualify prospects\n\u2705 Collect project requirements\n\u2705 Schedule technical calls\n\u2705 Send NDAs\n\nYou code. AI handles the business development.",
+      "source": "arlo:Programming",
+      "generated_at": "2026-04-17T10:32:47.209884",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Contractors in Palm Beach Gardens: Your best leads call when you're busiest.\n\nThat's not a bug. It's physics.\n\nAI fixes the timing problem.\n\nCaptures leads 24/7. You follow up when you're free.",
+      "source": "arlo:Home Services",
+      "generated_at": "2026-04-17T10:32:47.209898",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "OpenClaw's 'skills' system is actually brilliant.\n\nInstead of stuffing everything into a prompt, you:\n1. Write a SKILL.md\n2. Agent reads it\n3. Executes exactly what's documented\n\nIt's like having a README that actually gets used.\n\nMost underrated feature.",
+      "type": "technical_explainer",
+      "style": "A",
+      "scheduled": "morning"
+    },
+    {
+      "text": "Currently running 8 agents in Mission Control:\n\n\u2022 Arlo - Lead research\n\u2022 Dante - Content creation\n\u2022 Iris - Sales outreach\n\u2022 Abby - Quality check\n\u2022 Dev - Code tasks\n\u2022 Opal - Operations\n\u2022 Rico - Analytics\n\u2022 Jerry - General support\n\nThe chaos is... organized?",
+      "type": "behind_scenes",
+      "style": "B",
+      "scheduled": "afternoon"
+    },
+    {
+      "text": "TIL: Context windows aren't just about length.\n\nThey're about:\n\u2022 Keeping the full conversation\n\u2022 Referencing earlier context\n\u2022 Maintaining coherence across long tasks\n\nA model with 2M tokens isn't 'better' - it's just capable of holding more in working memory.\n\nLike RAM vs processing power.",
+      "type": "technical_explainer",
+      "style": "A",
+      "scheduled": "evening"
+    },
+    {
+      "text": "Law firms in Boca Raton are drowning in intake.\n\nEvery missed call = potential $5K-50K case.\n\nAI doesn't replace attorneys.\nIt qualifies leads before they ever reach your desk.\n\nThe best part? It works at 2 AM when you're sleeping.",
+      "source": "arlo:Legal",
+      "generated_at": "2026-04-18T09:20:56.625867",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Electricians in Delray Beach:\n\nEmergency calls at weird hours.\n\nPower outage at 10 PM. Customer needs help NOW.\n\nIf you're not answering, they call the next electrician.\n\nAI captures emergency calls 24/7.\n\nOne emergency job/month = system pays for itself.",
+      "source": "arlo:Electrical",
+      "generated_at": "2026-04-18T09:20:56.625899",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "90\u00b0F outside, AC broken, customer calls HVAC company...\n\nVoicemail.\n\nThey call the next company on Google.\n\nThis happens 100x daily in Palm Beach Gardens.\n\nAI voice agents capture these emergency calls 24/7.",
+      "source": "arlo:HVAC",
+      "generated_at": "2026-04-18T09:20:56.625928",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in West Palm Beach: Potential client calls during sprint.\n\nOld: Context switch, lost flow, stressed dev.\n\nNew: AI qualifies lead, collects needs, schedules discovery.\n\nYou stay in flow. Sales happen async.",
+      "source": "arlo:Programming",
+      "generated_at": "2026-04-20T09:05:51.019383",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Accounting firms in Boca Raton:\n\nTax season = phone chaos.\n\nClients calling with 'quick questions' that take 20 minutes.\n\nAI can handle the routine:\n\u2705 Appointment booking\n\u2705 Document collection reminders\n\u2705 Basic FAQ\n\nYou focus on the actual tax work.",
+      "source": "arlo:Accounting",
+      "generated_at": "2026-04-20T09:05:51.019415",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Miami: Customer wants a quote but you're elbow-deep in a repair.\n\nOld: Missed call, lost job.\n\nNew: AI answers, collects project info, schedules estimate.\n\nYou focus on doing great work. AI keeps the pipeline full.",
+      "source": "arlo:Home Services",
+      "generated_at": "2026-04-20T09:05:51.019440",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Delray Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.",
+      "source": "arlo:Mental Health",
+      "generated_at": "2026-04-21T08:57:09.839631",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Real estate agents in Boca Raton:\n\nYour best leads come when you're showing houses.\n\nThat's also when you can't answer.\n\nAI can:\n\u2705 Qualify buyer vs tire-kicker\n\u2705 Schedule showings\n\u2705 Send listings\n\u2705 Follow up automatically\n\nYou focus on closing. AI handles the noise.",
+      "source": "arlo:Real Estate",
+      "generated_at": "2026-04-21T08:57:09.839662",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Dental offices in Jupiter:\n\nHow many new patient calls go to voicemail after 5 PM?\n\nMost people don't call back. They just book elsewhere.\n\nAI receptionists work 24/7. Capture those after-hours leads.\n\nSimple ROI: One new patient per week pays for the whole system.",
+      "source": "arlo:Dental",
+      "generated_at": "2026-04-21T08:57:09.839688",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "What I learned from talking to mental health businesses in Delray Beach:\n\nThey're not afraid of AI.\n\nThey're afraid of losing to someone using AI.\n\nDifferent mindset. Same outcome:\n\nAdapt or get left behind.",
+      "source": "arlo:Mental Health",
+      "generated_at": "2026-04-21T12:00:34.718048",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Boca Raton: That hot lead calls while you're in a showing.\n\nOld: Voicemail, they move on.\n\nNew: AI captures info, qualifies buyer, schedules follow-up.\n\nYou close more deals. Never miss a lead again.",
+      "source": "arlo:Real Estate",
+      "generated_at": "2026-04-21T12:00:34.718081",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Jupiter: New patient calls at 6 PM.\n\nOld: Voicemail. Patient books elsewhere.\n\nNew: AI answers, qualifies patient, schedules consult.\n\nOne extra patient/month = AI pays for itself.",
+      "source": "arlo:Dental",
+      "generated_at": "2026-04-21T12:00:34.718130",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Jupiter: That hot lead calls while you're in a showing.\n\nOld: Voicemail, they move on.\n\nNew: AI captures info, qualifies buyer, schedules follow-up.\n\nYou close more deals. Never miss a lead again.",
+      "source": "arlo:Real Estate",
+      "generated_at": "2026-04-22T09:09:59.607867",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Dental offices in Miami:\n\nHow many new patient calls go to voicemail after 5 PM?\n\nMost people don't call back. They just book elsewhere.\n\nAI receptionists work 24/7. Capture those after-hours leads.\n\nSimple ROI: One new patient per week pays for the whole system.",
+      "source": "arlo:Dental",
+      "generated_at": "2026-04-22T09:09:59.607903",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Electricians in Palm Beach Gardens:\n\nEmergency calls at weird hours.\n\nPower outage at 10 PM. Customer needs help NOW.\n\nIf you're not answering, they call the next electrician.\n\nAI captures emergency calls 24/7.\n\nOne emergency job/month = system pays for itself.",
+      "source": "arlo:Electrical",
+      "generated_at": "2026-04-22T09:09:59.607937",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Attorneys in West Palm Beach: Your most valuable calls come in after 5 PM.\n\nYou're in court. Client gets voicemail.\n\nThey call Local business.\n\nAI intake runs 24/7. Never misses. Always professional.",
+      "source": "arlo:Legal",
+      "generated_at": "2026-04-23T08:24:05.313866",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "What I learned from talking to plumbing businesses in Palm Beach Gardens:\n\nThey're not afraid of AI.\n\nThey're afraid of losing to someone using AI.\n\nDifferent mindset. Same outcome:\n\nAdapt or get left behind.",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-04-23T08:24:05.313902",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Law firms in Palm Beach Gardens are drowning in intake.\n\nEvery missed call = potential $5K-50K case.\n\nAI doesn't replace attorneys.\nIt qualifies leads before they ever reach your desk.\n\nThe best part? It works at 2 AM when you're sleeping.",
+      "source": "arlo:Legal",
+      "generated_at": "2026-04-23T08:24:05.313931",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Mental Health in Miami: Every missed call = potential revenue walking away.\n\nAI voice agents don't take lunch breaks.\n\nThey capture leads while you focus on the work only you can do.",
+      "source": "arlo:Mental Health",
+      "generated_at": "2026-04-24T09:05:14.285063",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Fort Lauderdale: Client calls at 7 PM with a tax question.\n\nOld: Voicemail, stress callback.\n\nNew: AI answers, collects info, schedules consult.\n\nClient feels heard. You reclaim your evenings.",
+      "source": "arlo:Accounting",
+      "generated_at": "2026-04-24T09:05:14.285101",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "HVAC businesses in Palm Beach Gardens are preparing for summer rush.\n\nMost are still:\n\u274c Missing 30% of calls\n\u274c Playing phone tag\n\u274c Losing emergency jobs\n\nAI changes the game. Not by replacing humans.\nBy capturing what humans miss.",
+      "source": "arlo:HVAC",
+      "generated_at": "2026-04-24T09:05:14.285161",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Miami:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.",
+      "source": "arlo:Mental Health",
+      "generated_at": "2026-04-24T12:07:40.236937",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Accounting firms in Fort Lauderdale:\n\nTax season = phone chaos.\n\nClients calling with 'quick questions' that take 20 minutes.\n\nAI can handle the routine:\n\u2705 Appointment booking\n\u2705 Document collection reminders\n\u2705 Basic FAQ\n\nYou focus on the actual tax work.",
+      "source": "arlo:Accounting",
+      "generated_at": "2026-04-24T12:07:40.236978",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Spoke with an HVAC company in Palm Beach Gardens today.\n\nTheir biggest pain point?\nMissing after-hours calls during summer heat waves.\n\nAI voice agents don't sleep. Customers get 24/7 answers.\n\nSimple shift, big impact.",
+      "source": "arlo:HVAC",
+      "generated_at": "2026-04-24T12:07:40.237012",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Plumbing in Lake Worth: Every missed call = potential revenue walking away.\n\nAI voice agents don't take lunch breaks.\n\nThey capture leads while you focus on the work only you can do.",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-04-25T10:53:23.439977",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "What I learned from talking to mental health businesses in West Palm Beach:\n\nThey're not afraid of AI.\n\nThey're afraid of losing to someone using AI.\n\nDifferent mindset. Same outcome:\n\nAdapt or get left behind.",
+      "source": "arlo:Mental Health",
+      "generated_at": "2026-04-25T10:53:23.440023",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Healthcare automation isn't about replacing nurses.\n\nIt's about removing the friction between patient and care.\n\n\u2022 Appointment scheduling\n\u2022 Prescription refills\n\u2022 Insurance questions\n\nAll handled instantly.\n\nMedical practices in Miami: What would you automate first?",
+      "source": "arlo:Medical",
+      "generated_at": "2026-04-25T10:53:23.440062",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Lake Worth:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-04-25T13:56:57.132014",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Mental Health in West Palm Beach: Every missed call = potential revenue walking away.\n\nAI voice agents don't take lunch breaks.\n\nThey capture leads while you focus on the work only you can do.",
+      "source": "arlo:Mental Health",
+      "generated_at": "2026-04-25T13:56:57.132064",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Medical practices in Miami: Are you still playing phone tag?\n\nPatients call \u2192 Leave voicemail \u2192 Wait for callback\n\nMeanwhile they're googling 'urgent care near me'\n\nAI scheduling fixes this. 24/7 availability. Instant booking.\n\nBetter patient experience. Less admin overhead.",
+      "source": "arlo:Medical",
+      "generated_at": "2026-04-25T13:56:57.132107",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Electrical contractors: Most after-hours calls are emergencies.\n\nMissing them = missing high-margin work.\n\nAI voice agents in Miami ensure you're always reachable.",
+      "source": "arlo:Electrical",
+      "generated_at": "2026-04-26T09:34:40.882926",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Software devs: Every sales call costs 20+ minutes of deep work.\n\nAI voice agents in Fort Lauderdale can pre-qualify leads before you ever hear about them.\n\nWorth it?",
+      "source": "arlo:Programming",
+      "generated_at": "2026-04-26T09:34:40.884417",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "The real estate game:\n\nSpeed to lead = everything\n\nAgent in Lake Worth gets inquiry \u2192 Responds in 5 minutes\nvs\nAgent responds 2 hours later\n\nWho gets the client?\n\nAI ensures you're always first. Even when you're busy.",
+      "source": "arlo:Real Estate",
+      "generated_at": "2026-04-26T09:34:40.885766",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "HVAC in Lake Worth: Every missed call = potential revenue walking away.\n\nAI voice agents don't take lunch breaks.\n\nThey capture leads while you focus on the work only you can do.",
+      "source": "arlo:HVAC",
+      "generated_at": "2026-04-26T10:42:58.158666",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "[1042] What I learned from talking to plumbing businesses in Boca Raton:\n\nThey're not afraid of AI.\n\nThey're afraid of losing to someone using AI.\n\nDifferent mindset. Same outcome:\n\nAdapt or get left behind.",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-04-26T10:42:58.162083",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "What I learned from talking to programming businesses in Lake Worth:\n\nThey're not afraid of AI.\n\nThey're afraid of losing to someone using AI.\n\nDifferent mindset. Same outcome:\n\nAdapt or get left behind.",
+      "source": "arlo:Programming",
+      "generated_at": "2026-04-26T10:42:58.164594",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "[1209] Spoke with an HVAC company in Lake Worth today.\n\nTheir biggest pain point?\nMissing after-hours calls during summer heat waves.\n\nAI voice agents don't sleep. Customers get 24/7 answers.\n\nSimple shift, big impact.",
+      "source": "arlo:HVAC",
+      "generated_at": "2026-04-26T12:09:08.215266",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "[1209] Local business in Boca Raton:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-04-26T12:09:08.218762",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Programming in Lake Worth: Every missed call = potential revenue walking away.\n\nAI voice agents don't take lunch breaks.\n\nThey capture leads while you focus on the work only you can do.",
+      "source": "arlo:Programming",
+      "generated_at": "2026-04-26T12:09:08.221412",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Dev agencies in Delray Beach:\n\nSales calls interrupt deep work.\n\nContext switching kills productivity.\n\nAI can:\n\u2705 Qualify prospects\n\u2705 Collect project requirements\n\u2705 Schedule technical calls\n\u2705 Send NDAs\n\nYou code. AI handles the business development.\n\n[11:02]\n\n[Generated 11:02]",
+      "source": "arlo:Programming",
+      "generated_at": "2026-04-27T11:02:00.534621",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Boca Raton:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[11:02]\n\n[Generated 11:02]",
+      "source": "arlo:Mental Health",
+      "generated_at": "2026-04-27T11:02:00.535298",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "HVAC businesses in Fort Lauderdale are preparing for summer rush.\n\nMost are still:\n\u274c Missing 30% of calls\n\u274c Playing phone tag\n\u274c Losing emergency jobs\n\nAI changes the game. Not by replacing humans.\nBy capturing what humans miss.\n\n[11:02]\n\n[Generated 11:02]",
+      "source": "arlo:HVAC",
+      "generated_at": "2026-04-27T11:02:00.536952",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Boynton Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[15:58]\n\n[Generated 15:58]",
+      "source": "arlo:Mental Health",
+      "generated_at": "2026-04-28T15:58:12.517135",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in West Palm Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[15:58]\n\n[Generated 15:58]",
+      "source": "arlo:Dental",
+      "generated_at": "2026-04-28T15:58:12.518316",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Delray Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[15:58]\n\n[Generated 15:58]",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-04-28T15:58:12.519417",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Law firms in Boca Raton are drowning in intake.\n\nEvery missed call = potential $5K-50K case.\n\nAI doesn't replace attorneys.\nIt qualifies leads before they ever reach your desk.\n\nThe best part? It works at 2 AM when you're sleeping.\n\n[08:57]\n\n[Generated 08:57]",
+      "source": "arlo:Legal",
+      "generated_at": "2026-04-30T08:57:45.426525",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Delray Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:57]\n\n[Generated 08:57]",
+      "source": "arlo:Electrical",
+      "generated_at": "2026-04-30T08:57:45.426929",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Law firms in Delray Beach are drowning in intake.\n\nEvery missed call = potential $5K-50K case.\n\nAI doesn't replace attorneys.\nIt qualifies leads before they ever reach your desk.\n\nThe best part? It works at 2 AM when you're sleeping.\n\n[08:57]\n\n[Generated 08:57]",
+      "source": "arlo:Legal",
+      "generated_at": "2026-04-30T08:57:45.427218",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Boynton Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:13]\n\n[Generated 08:13]",
+      "source": "arlo:Accounting",
+      "generated_at": "2026-05-01T08:13:43.344231",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Lake Worth:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:13]\n\n[Generated 08:13]",
+      "source": "arlo:Home Services",
+      "generated_at": "2026-05-01T08:13:43.344875",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Boynton Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:13]\n\n[Generated 08:13]",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-05-01T08:13:43.345509",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Boynton Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[09:05]\n\n[Generated 09:05]",
+      "source": "arlo:Mental Health",
+      "generated_at": "2026-05-01T09:05:07.621854",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Spoke with an HVAC company in Palm Beach Gardens today.\n\nTheir biggest pain point?\nMissing after-hours calls during summer heat waves.\n\nAI voice agents don't sleep. Customers get 24/7 answers.\n\nSimple shift, big impact.\n\n[09:05]\n\n[Generated 09:05]",
+      "source": "arlo:HVAC",
+      "generated_at": "2026-05-01T09:05:07.623499",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Palm Beach Gardens:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[09:05]\n\n[Generated 09:05]",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-05-01T09:05:07.624132",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Palm Beach Gardens:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[03:37]\n\n[Generated 03:37]",
+      "source": "arlo:Electrical",
+      "generated_at": "2026-05-03T03:37:50.039253",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Lake Worth:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[03:37]\n\n[Generated 03:37]",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-05-03T03:37:50.039672",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Real estate agents in Jupiter:\n\nYour best leads come when you're showing houses.\n\nThat's also when you can't answer.\n\nAI can:\n\u2705 Qualify buyer vs tire-kicker\n\u2705 Schedule showings\n\u2705 Send listings\n\u2705 Follow up automatically\n\nYou focus on closing. AI handles the noise.\n\n[03:37]\n\n[Generated 03:37]",
+      "source": "arlo:Real Estate",
+      "generated_at": "2026-05-03T03:37:50.039750",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Jupiter:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:47]\n\n[Generated 08:47]",
+      "source": "arlo:Accounting",
+      "generated_at": "2026-05-03T08:47:16.570613",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Delray Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:47]\n\n[Generated 08:47]",
+      "source": "arlo:Plumbing",
+      "generated_at": "2026-05-03T08:47:16.571013",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Real estate agents in Jupiter:\n\nYour best leads come when you're showing houses.\n\nThat's also when you can't answer.\n\nAI can:\n\u2705 Qualify buyer vs tire-kicker\n\u2705 Schedule showings\n\u2705 Send listings\n\u2705 Follow up automatically\n\nYou focus on closing. AI handles the noise.\n\n[08:47]\n\n[Generated 08:47]",
+      "source": "arlo:Real Estate",
+      "generated_at": "2026-05-03T08:47:16.571091",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Dev agencies in Delray Beach:\n\nSales calls interrupt deep work.\n\nContext switching kills productivity.\n\nAI can:\n\u2705 Qualify prospects\n\u2705 Collect project requirements\n\u2705 Schedule technical calls\n\u2705 Send NDAs\n\nYou code. AI handles the business development.\n\n[08:18]\n\n[Generated 08:18]",
+      "source": "arlo:Programming",
+      "generated_at": "2026-05-08T08:18:08.552252",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in West Palm Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:18]\n\n[Generated 08:18]",
+      "source": "arlo:Accounting",
+      "generated_at": "2026-05-08T08:18:08.552932",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Dev agencies in Miami:\n\nSales calls interrupt deep work.\n\nContext switching kills productivity.\n\nAI can:\n\u2705 Qualify prospects\n\u2705 Collect project requirements\n\u2705 Schedule technical calls\n\u2705 Send NDAs\n\nYou code. AI handles the business development.\n\n[08:18]\n\n[Generated 08:18]",
+      "source": "arlo:Programming",
+      "generated_at": "2026-05-08T08:18:08.553304",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Law firms in Palm Beach Gardens are drowning in intake.\n\nEvery missed call = potential $5K-50K case.\n\nAI doesn't replace attorneys.\nIt qualifies leads before they ever reach your desk.\n\nThe best part? It works at 2 AM when you're sleeping.\n\n[08:18]\n\n[Generated 08:18]",
+      "source": "arlo:Legal",
+      "generated_at": "2026-05-09T08:18:10.914605",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Delray Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:18]\n\n[Generated 08:18]",
+      "source": "arlo:Home Services",
+      "generated_at": "2026-05-09T08:18:10.915637",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Fort Lauderdale:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:18]\n\n[Generated 08:18]",
+      "source": "arlo:Dental",
+      "generated_at": "2026-05-09T08:18:10.916650",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Real estate agents in Miami:\n\nYour best leads come when you're showing houses.\n\nThat's also when you can't answer.\n\nAI can:\n\u2705 Qualify buyer vs tire-kicker\n\u2705 Schedule showings\n\u2705 Send listings\n\u2705 Follow up automatically\n\nYou focus on closing. AI handles the noise.\n\n[08:09]\n\n[Generated 08:09]",
+      "source": "arlo:Real Estate",
+      "generated_at": "2026-05-10T08:09:14.226475",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Boynton Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:09]\n\n[Generated 08:09]",
+      "source": "arlo:Dental",
+      "generated_at": "2026-05-10T08:09:14.227157",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Dev agencies in Boynton Beach:\n\nSales calls interrupt deep work.\n\nContext switching kills productivity.\n\nAI can:\n\u2705 Qualify prospects\n\u2705 Collect project requirements\n\u2705 Schedule technical calls\n\u2705 Send NDAs\n\nYou code. AI handles the business development.\n\n[08:09]\n\n[Generated 08:09]",
+      "source": "arlo:Programming",
+      "generated_at": "2026-05-10T08:09:14.227460",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Spoke with an HVAC company in Lake Worth today.\n\nTheir biggest pain point?\nMissing after-hours calls during summer heat waves.\n\nAI voice agents don't sleep. Customers get 24/7 answers.\n\nSimple shift, big impact.\n\n[08:48]\n\n[Generated 08:48]",
+      "source": "arlo:HVAC",
+      "generated_at": "2026-05-11T08:48:02.825570",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Law firms in West Palm Beach are drowning in intake.\n\nEvery missed call = potential $5K-50K case.\n\nAI doesn't replace attorneys.\nIt qualifies leads before they ever reach your desk.\n\nThe best part? It works at 2 AM when you're sleeping.\n\n[08:48]\n\n[Generated 08:48]",
+      "source": "arlo:Legal",
+      "generated_at": "2026-05-11T08:48:02.826037",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Dev agencies in Boynton Beach:\n\nSales calls interrupt deep work.\n\nContext switching kills productivity.\n\nAI can:\n\u2705 Qualify prospects\n\u2705 Collect project requirements\n\u2705 Schedule technical calls\n\u2705 Send NDAs\n\nYou code. AI handles the business development.\n\n[08:48]\n\n[Generated 08:48]",
+      "source": "arlo:Programming",
+      "generated_at": "2026-05-11T08:48:02.826334",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Palm Beach Gardens:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[09:16]\n\n[Generated 09:16]",
+      "source": "arlo:Medical",
+      "generated_at": "2026-05-12T09:16:54.558672",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Boca Raton:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[09:16]\n\n[Generated 09:16]",
+      "source": "arlo:Dental",
+      "generated_at": "2026-05-12T09:16:54.559341",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Spoke with an HVAC company in Boynton Beach today.\n\nTheir biggest pain point?\nMissing after-hours calls during summer heat waves.\n\nAI voice agents don't sleep. Customers get 24/7 answers.\n\nSimple shift, big impact.\n\n[09:16]\n\n[Generated 09:16]",
+      "source": "arlo:HVAC",
+      "generated_at": "2026-05-12T09:16:54.561049",
+      "type": "insight",
+      "status": "ready"
+    }
+  ],
+  "assessment_angles": [
+    {
+      "text": "Stop buying AI tools you don't use.\n\nMost businesses:\n\u274c Pay for 8+ AI subscriptions\n\u274c Use 2 of them regularly\n\u274c Forget the rest exist\n\nThe problem isn't the tools.\nIt's not having a strategy.\n\nStart with ONE use case.\nMaster it.\nThen add more.\n\nLess chaos. More results.",
+      "type": "assessment_cta",
+      "campaign": "ai_assessment",
+      "angle": "tool_sprawl",
+      "status": "ready"
+    },
+    {
+      "text": "The $999 AI system that saved me 6 hours/week.\n\nNot $999/month.\nNot $9,999 setup.\n$999 one-time.\n\nWhat it handles:\n\u2705 After-hours calls\n\u2705 Appointment booking\n\u2705 Lead qualification\n\u2705 Follow-up texts\n\n6 hours back in my week.\nEvery week.\n\nROI in month one.\n\nMost businesses overpay for AI.\nThe smart ones start small and scale.\n\nWhich are you?",
+      "type": "assessment_cta",
+      "campaign": "ai_assessment",
+      "angle": "roi_proof",
+      "status": "ready"
+    },
+    {
+      "text": "Most businesses overpay for AI implementation.\n\nHere's what I see:\n\n\u274c $15K+ 'AI transformation' projects\n\u274c 6-month timelines\n\u274c Consultants who disappear after delivery\n\nThe reality?\n\nMost SMBs need ONE thing:\nA simple system that answers calls and books appointments 24/7.\n\nCost: $999 setup + $299/month\nTime to live: 48 hours\nResults: Immediate\n\nStop overthinking it.\nStart with what actually moves the needle.",
+      "type": "assessment_cta",
+      "campaign": "ai_assessment",
+      "angle": "cost_comparison",
+      "status": "ready"
+    }
+  ],
+  "total_generated": 87,
+  "last_run": "2026-05-12T09:16:54.561207",
+  "deduplicated": true
+}

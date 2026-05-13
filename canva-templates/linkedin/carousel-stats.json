@@ -1,0 +1,117 @@
+{
+  "templateId": "li-carousel-001",
+  "name": "LinkedIn Carousel - AI Statistics",
+  "platform": "linkedin",
+  "format": "carousel",
+  "dimensions": { "width": 1080, "height": 1080 },
+  "slides": [
+    {
+      "slideNumber": 1,
+      "type": "cover",
+      "background": { "color": "#1E293B" },
+      "elements": [
+        {
+          "type": "text",
+          "content": "{{carousel_title}}",
+          "position": { "x": 540, "y": 400 },
+          "style": {
+            "font": "Inter",
+            "size": 64,
+            "color": "#FFFFFF",
+            "weight": "bold",
+            "align": "center"
+          }
+        },
+        {
+          "type": "text",
+          "content": "Swipe for the data →",
+          "position": { "x": 540, "y": 600 },
+          "style": {
+            "font": "Inter",
+            "size": 28,
+            "color": "#64748B",
+            "align": "center"
+          }
+        }
+      ]
+    },
+    {
+      "slideNumber": 2,
+      "type": "stat",
+      "background": { "color": "#FFFFFF" },
+      "elements": [
+        {
+          "type": "text",
+          "content": "{{stat_number}}",
+          "position": { "x": 540, "y": 350 },
+          "style": {
+            "font": "Inter",
+            "size": 120,
+            "color": "#3B82F6",
+            "weight": "bold",
+            "align": "center"
+          }
+        },
+        {
+          "type": "text",
+          "content": "{{stat_description}}",
+          "position": { "x": 540, "y": 550 },
+          "style": {
+            "font": "Inter",
+            "size": 36,
+            "color": "#1E293B",
+            "align": "center",
+            "maxWidth": 900
+          }
+        },
+        {
+          "type": "text",
+          "content": "Source: {{stat_source}}",
+          "position": { "x": 540, "y": 750 },
+          "style": {
+            "font": "Inter",
+            "size": 20,
+            "color": "#64748B",
+            "align": "center"
+          }
+        }
+      ]
+    },
+    {
+      "slideNumber": 3,
+      "type": "cta",
+      "background": { "color": "#3B82F6" },
+      "elements": [
+        {
+          "type": "text",
+          "content": "Want these results?",
+          "position": { "x": 540, "y": 400 },
+          "style": {
+            "font": "Inter",
+            "size": 48,
+            "color": "#FFFFFF",
+            "weight": "bold",
+            "align": "center"
+          }
+        },
+        {
+          "type": "text",
+          "content": "Comment 'AI' below",
+          "position": { "x": 540, "y": 550 },
+          "style": {
+            "font": "Inter",
+            "size": 36,
+            "color": "#FFFFFF",
+            "align": "center"
+          }
+        }
+      ]
+    }
+  ],
+  "export": {
+    "formats": ["png"],
+    "canva_compatible": true
+  },
+  "created": "2026-03-31",
+  "status": "ready"
+}

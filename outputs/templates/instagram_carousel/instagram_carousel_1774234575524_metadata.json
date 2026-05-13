@@ -1,0 +1,46 @@
+{
+  "id": "instagram_carousel",
+  "name": "Instagram Carousel Post",
+  "generatedAt": "2026-03-23T02:56:15.524Z",
+  "version": "1.0.0",
+  "files": {
+    "figma": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel/instagram_carousel_1774234575524_figma_commands.json",
+    "canva": "/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel/instagram_carousel_1774234575524_canva_import.md"
+  },
+  "config": {
+    "id": "instagram_carousel",
+    "name": "Instagram Carousel Post",
+    "category": "social_media",
+    "sizes": [
+      {
+        "width": 1080,
+        "height": 1080,
+        "pages": 5
+      }
+    ],
+    "style": "modern_minimal",
+    "colors": [
+      "#FF6B6B",
+      "#4ECDC4",
+      "#45B7D1"
+    ],
+    "elements": [
+      "text_boxes",
+      "image_placeholders",
+      "icons"
+    ],
+    "price": {
+      "etsy": 5.99,
+      "creative_market": 7,
+      "designcuts": 6.5
+    },
+    "tags": [
+      "instagram",
+      "carousel",
+      "social media",
+      "engagement",
+      "posts"
+    ]
+  },
+  "status": "ready_for_export"
+}

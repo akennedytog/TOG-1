@@ -1,0 +1,28 @@
+Twitter Content Draft - 2026-04-15
+==================================================
+
+Post 1: insight
+Text: Claude just dropped 'Code Routines' - basically saved prompt chains for devs.
+
+This is the pattern:
+1. Start with manual AI use
+2. Notice repeated workflows
+3. Package them into repeatable routines
+
+It's not magic. It's just systematizing what you already do.
+
+What would you turn into a routine?
+
+Post 2: explainer
+Text: OpenClaw's 'skills' system is underrated.
+
+Instead of one giant prompt, you package knowledge into reusable modules:
+
+• 1password skill knows the CLI
+• Firecrawl skill handles scraping
+• Each skill has its own docs
+
+Result: Agents that don't hallucinate commands because the instructions are already validated.
+
+Modular AI > Monolithic AI
+

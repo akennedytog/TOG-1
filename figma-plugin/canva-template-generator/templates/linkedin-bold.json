@@ -1,0 +1,33 @@
+{
+  "name": "LinkedIn Bold - April 30",
+  "template": "linkedin",
+  "theme": "bold",
+  "dimensions": {
+    "width": 1200,
+    "height": 627
+  },
+  "colors": [
+    "#1A1A2E",
+    "#16213E",
+    "#0F3460",
+    "#E94560",
+    "#F39422",
+    "#FFFFFF",
+    "#000000"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Oswald",
+      "style": "Bold"
+    },
+    "body": {
+      "family": "Roboto",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "Bebas Neue",
+      "style": "Regular"
+    }
+  },
+  "createdAt": "2026-04-30T14:00:54.665Z"
+}

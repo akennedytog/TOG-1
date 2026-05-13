@@ -1,0 +1,82 @@
+{
+  "id": "20260506_214500_20260506_214426_B-F_FY26_Q4_HR_Road_to_Cinco_1",
+  "filename": "20260506_214426_B-F_FY26_Q4_HR_Road_to_Cinco_1.xlsx",
+  "uploaded_at": "2026-05-06T21:45:00.635202",
+  "file_type": "excel",
+  "row_count": 32917,
+  "column_analysis": {
+    "Unnamed: 0": "text",
+    "Unnamed: 1": "text",
+    "Unnamed: 2": "text",
+    "Unnamed: 3": "text",
+    "Unnamed: 4": "text",
+    "Reminder:": "text",
+    "_source_sheet": "text"
+  },
+  "metrics": {
+    "total_records": 32917,
+    "monetary_columns": [],
+    "entity_columns": [],
+    "product_columns": []
+  },
+  "insights": {
+    "summary": "The sales report indicates a total of 32,917 records, with a focus on performance metrics across various sales representatives and product categories. Key insights reveal both high-performing accounts and those at risk of underperformance, necessitating targeted actions to optimize sales outcomes.",
+    "top_performers": [
+      {
+        "name": "APARICIO VANESSA",
+        "metric": "Total Sales",
+        "value": 138,
+        "insight": "APARICIO VANESSA has achieved the highest sales with a significant number of new product activations, indicating effective engagement strategies."
+      }
+    ],
+    "accounts_at_risk": [
+      {
+        "name": "WILLIAMS GERALD",
+        "reason": "Significant decline in performance with a -14 variance from the goal.",
+        "recommended_action": "Schedule a performance review meeting to identify barriers and develop a recovery plan."
+      },
+      {
+        "name": "GWIDT JACKIE",
+        "reason": "Consistent underperformance with a -13 variance from the goal.",
+        "recommended_action": "Provide additional training and resources to improve sales techniques and product knowledge."
+      }
+    ],
+    "call_today": [
+      {
+        "name": "WILLIAMS GERALD",
+        "priority": "high",
+        "reason": "Critical underperformance that needs immediate attention.",
+        "talking_points": "Discuss challenges faced, potential solutions, and strategies to meet sales targets."
+      },
+      {
+        "name": "GWIDT JACKIE",
+        "priority": "medium",
+        "reason": "Consistent underperformance that requires support.",
+        "talking_points": "Review current sales strategies and explore additional training opportunities."
+      }
+    ],
+    "skus_down": [
+      {
+        "sku": "Chambord",
+        "name": "Chambord",
+        "decline": "Sales have decreased significantly, with a total payout variance of -15.",
+        "action": "Implement a targeted marketing campaign to boost visibility and sales."
+      }
+    ],
+    "opportunities": [
+      {
+        "description": "Increase engagement with underperforming accounts through personalized outreach.",
+        "potential_value": "Estimated increase of 20% in sales if engagement strategies are implemented.",
+        "how_to_capture": "Develop tailored communication plans and promotional offers for at-risk accounts."
+      }
+    ],
+    "alerts": [
+      "Immediate attention required for accounts with negative performance variances exceeding -10."
+    ],
+    "recommendations": [
+      "1. Conduct a comprehensive training session for underperforming sales representatives to enhance their skills.",
+      "2. Implement a mentorship program pairing high performers with those at risk to share best practices.",
+      "3. Launch a promotional campaign focused on high-margin products to drive sales and improve overall performance."
+    ]
+  }
+}

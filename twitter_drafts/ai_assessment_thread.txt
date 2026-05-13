@@ -1,0 +1,165 @@
+TWITTER THREAD: The AI Assessment Business Model
+=================================================
+
+--- TWEET 1 (HOOK) ---
+A guy offered me $1,000 to follow him around for a day and tell him where he's wasting time.
+
+I said no.
+
+Not because it wasn't interesting—but because it doesn't scale.
+
+Here's what I built instead 👇
+
+---
+
+--- TWEET 2 (THE REALIZATION) ---
+But his request revealed something massive: people don't need more AI tools.
+
+They need someone to look at their chaos and tell them what to do.
+
+The demand is there. The model just needed to change.
+
+---
+
+--- TWEET 3 (THE PIVOT) ---
+So I productized it.
+
+$999 AI Assessment. Flat rate. 1-week delivery.
+
+Here's the exact process:
+
+• 45-min recorded interview (I use @fathom_ai to transcribe)
+• Drop the transcript into Claude with a custom analysis prompt
+• Results formatted into a clean report using @Gamma
+
+Takes me ~2 hours. Client gets a roadmap.
+
+---
+
+--- TWEET 4 (THE PROCESS) ---
+The assessment covers:
+
+→ Current workflow audit
+→ AI opportunity mapping  
+→ Tool recommendations with specific vendors
+→ Implementation priority (what to do first, second, third)
+
+No generic fluff. Every recommendation ties to their actual business.
+
+---
+
+--- TWEET 5 (THE UPSELL LADDER) ---
+Here's where it gets interesting.
+
+The $999 assessment isn't the endgame—it's the entry point.
+
+After they see the roadmap, they hit you with:
+
+"Can you just... do this for us?"
+
+That's where the real money lives.
+
+---
+
+--- TWEET 6 (THE REAL NUMBERS) ---
+Upsells I'm seeing:
+
+• Custom GPT builds: $3K-5K
+• Workflow automation: $5K-10K
+• Team training + implementation: $5K-15K
+
+The assessment is the thin edge of the wedge.
+
+It builds trust fast and surfaces bigger projects.
+
+---
+
+--- TWEET 7 (REAL EXAMPLE) ---
+Recent client: business broker drowning in 400 emails/day.
+
+Assessment spotted the pattern: 80% were repetitive qualification questions.
+
+Built him a custom GPT that drafts responses from his CRM data.
+
+Project total: $3,800 ($999 + $2,801 implementation)
+
+Took 6 hours of my time.
+
+---
+
+--- TWEET 8 (THE MINDSET SHIFT) ---
+Stop selling "AI consulting."
+
+Start selling clarity.
+
+Business owners don't want to become prompt engineers.
+
+They want someone to hand them a marked-up map and say "start here."
+
+That's the product.
+
+---
+
+--- TWEET 9 (CTA) ---
+If you're decent with AI and understand a specific industry:
+
+This model is wide open.
+
+No competition because most people overcomplicate it.
+
+Simple offer. Clear deliverable. Natural upsell path.
+
+You're not selling complexity.
+
+You're selling clarity.
+
+/END
+
+
+=================================================
+STANDALONE TWEETS (from this thread)
+=================================================
+
+--- STANDALONE TWEET 1 ---
+A guy offered me $1,000 to follow him around for a day and find his time-wasters.
+
+I built something better instead:
+
+$999 AI Assessment. 45-min interview → Claude analysis → Gamma report.
+
+Takes me 2 hours. Leads to $3K-10K+ implementation projects.
+
+Selling clarity > selling complexity.
+
+---
+
+--- STANDALONE TWEET 2 ---
+Real client win:
+
+Business broker drowning in 400 emails/day.
+
+AI Assessment revealed: 80% were repetitive qualification questions.
+
+Built a custom GPT integrated with his CRM.
+
+$3,800 total project. 6 hours of work.
+
+The assessment is the wedge. Implementation is the business.
+
+---
+
+--- STANDALONE TWEET 3 ---
+Everyone's trying to sell AI tools.
+
+Smart money is selling clarity.
+
+• Record 45-min call with @fathom_ai
+• Analyze with Claude
+• Deliver roadmap via @Gamma
+• Charge $999
+• Upsell implementation at $3K-10K+
+
+Simple offer. Clear value. Repeatable system.
+
+Stop overcomplicating it.
+

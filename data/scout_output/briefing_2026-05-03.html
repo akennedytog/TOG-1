@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road to Cinco - Daily Briefing</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 20px; background: #0f172a; color: #e2e8f0; }
+    .container { max-width: 800px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); border-radius: 12px; padding: 24px; margin-bottom: 20px; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .header h1 { margin: 0 0 8px 0; font-size: 28px; color: #fff; }
+    .header p { margin: 0; color: #93c5fd; }
+    .panel { background: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid #334155; }
+    .panel h2 { margin: 0 0 16px 0; font-size: 18px; color: #f8fafc; }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .metric { background: #0f172a; border-radius: 8px; padding: 16px; text-align: center; border-left: 4px solid #64748b; }
+    .metric.red { border-left-color: #ef4444; }
+    .metric.green { border-left-color: #22c55e; }
+    .metric.yellow { border-left-color: #eab308; }
+    .metric-value { font-size: 32px; font-weight: bold; color: #f8fafc; margin: 4px 0; }
+    .metric-label { font-size: 12px; color: #94a3b8; text-transform: uppercase; }
+    .metric-sub { font-size: 12px; color: #ef4444; margin-top: 4px; }
+    .alert { border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; }
+    .alert-red { background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); }
+    .alert-yellow { background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3); }
+    .alert-green { background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); }
+    .alert p { margin: 0; font-weight: 500; }
+    .alert-red p { color: #fca5a5; }
+    .alert-yellow p { color: #fde047; }
+    .alert-green p { color: #86efac; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { text-align: left; padding: 12px; background: #334155; color: #cbd5e1; font-weight: 600; text-transform: uppercase; font-size: 11px; }
+    td { padding: 12px; border-bottom: 1px solid #334155; }
+    tr:last-child td { border-bottom: none; }
+    .rank { font-weight: bold; color: #eab308; }
+    .name { font-weight: 600; color: #f8fafc; }
+    .level-fsm { color: #60a5fa; }
+    .level-rep { color: #4ade80; }
+    .pct-red { color: #ef4444; font-weight: 600; }
+    .pct-yellow { color: #eab308; font-weight: 600; }
+    .pct-green { color: #22c55e; font-weight: 600; }
+    .footer { text-align: center; color: #64748b; font-size: 12px; margin-top: 20px; padding-top: 20px; border-top: 1px solid #334155; }
+    .top-performer { background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(217, 119, 6, 0.2) 100%); border: 1px solid rgba(234, 179, 8, 0.4); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🌵 ROAD TO CINCO DAILY BRIEFING</h1>
+      <p>Sunday, May 03, 2026 | B-F FY26 Q4 H&R</p>
+    </div>
+
+    <div class="panel">
+      <h2>📊 TEAM PERFORMANCE</h2>
+      <div class="metrics">
+        <div class="metric red">
+          <div class="metric-label">New POD</div>
+          <div class="metric-value">264</div>
+          <div class="metric-sub">Goal: 366</div>
+        </div>
+        <div class="metric red">
+          <div class="metric-label">% to Goal</div>
+          <div class="metric-value">72%</div>
+          <div class="metric-sub">Critical gap</div>
+        </div>
+        <div class="metric green">
+          <div class="metric-label">Total Payouts</div>
+          <div class="metric-value">$2,010</div>
+          <div class="metric-sub" style="color: #22c55e;">Earned to-date</div>
+        </div>
+        <div class="metric yellow">
+          <div class="metric-label">Reps Tracked</div>
+          <div class="metric-value">144</div>
+          <div class="metric-sub" style="color: #eab308;">21 behind</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>💡 KEY INSIGHTS</h2>
+      <div class="alert alert-red"><p>🚨 URGENT: Team at 72% of goal - action needed to close gap</p></div>
+      <div class="alert alert-red"><p>❗ 21 reps significantly behind - coaching needed</p></div>
+      <div class="alert alert-green"><p>💰 Team earned $2,010 in payouts to-date</p></div>
+    </div>
+
+    <div class="panel top-performer">
+      <h2>🏆 TOP PERFORMER</h2>
+      <table>
+        <tr>
+          <td><strong>APARICIO VANESSA</strong></td>
+          <td>FSM</td>
+          <td style="text-align: right;">New POD: <strong>12</strong></td>
+          <td style="text-align: right;">% to Goal: <span class="pct-yellow">57%</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h2>⭐ TOP 10 PERFORMERS</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Level</th>
+            <th>New POD</th>
+            <th>Goal</th>
+            <th>% to Goal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="rank">#1</span></td>
+            <td class="name">APARICIO VANESSA</td>
+            <td><span class="level-fsm">FSM</span></td>
+            <td>12</td>
+            <td>21</td>
+            <td><span class="pct-yellow">57%</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank">#2</span></td>
+            <td class="name">GAVIN LAWRENCE</td>
+            <td><span class="level-fsm">FSM</span></td>
+            <td>10</td>
+            <td>15</td>
+            <td><span class="pct-yellow">67%</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank">#3</span></td>
+            <td class="name">VON UNGERN STERNBERG THEO</td>
+            <td><span class="level-fsm">FSM</span></td>
+            <td>10</td>
+            <td>15</td>
+            <td><span class="pct-yellow">67%</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank">#4</span></td>
+            <td class="name">FETTERMAN GILLIAN</td>
+            <td><span class="level-fsm">FSM</span></td>
+            <td>10</td>
+            <td>18</td>
+            <td><span class="pct-yellow">56%</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank">#5</span></td>
+            <td class="name">BRAY JAMES</td>
+            <td><span class="level-rep">Rep</span></td>
+            <td>9</td>
+            <td>-</td>
+            <td><span class="pct-red">No goal</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank">#6</span></td>
+            <td class="name">CARTWRIGHT MEGAN</td>
+            <td><span class="level-fsm">FSM</span></td>
+            <td>8</td>
+            <td>22</td>
+            <td><span class="pct-red">36%</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank">#7</span></td>
+            <td class="name">GAGNELIUS WESLEY</td>
+            <td><span class="level-fsm">FSM</span></td>
+            <td>8</td>
+            <td>18</td>
+            <td><span class="pct-red">44%</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank">#8</span></td>
+            <td class="name">TAPPAN CHARLES</td>
+            <td><span class="level-fsm">FSM</span></td>
+            <td>8</td>
+            <td>16</td>
+            <td><span class="pct-yellow">50%</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank">#9</span></td>
+            <td class="name">HARTMANN CHRISTIAN</td>
+            <td><span class="level-fsm">FSM</span></td>
+            <td>7</td>
+            <td>15</td>
+            <td><span class="pct-red">47%</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank">#10</span></td>
+            <td class="name">DRUASH KENDALL</td>
+            <td><span class="level-fsm">FSM</span></td>
+            <td>7</td>
+            <td>15</td>
+            <td><span class="pct-red">47%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h2>🚨 NEEDS ATTENTION</h2>
+      <div class="alert alert-red"><p><strong>KETCHUM PETER</strong> - FSM at 7% to goal (1 new POD)</p></div>
+      <div class="alert alert-red"><p><strong>MCCULLOUGH CORI</strong> - FSM at 12% to goal (2 new POD)</p></div>
+      <div class="alert alert-red"><p><strong>WILLIAMS GERALD</strong> - FSM at 18% to goal (3 new POD)</p></div>
+      <div class="alert alert-red"><p><strong>GWIDT JACKIE</strong> - FSM at 24% to goal (4 new POD)</p></div>
+      <div class="alert alert-red"><p><strong>DIETRICH MICHAEL</strong> - FSM at 24% to goal (4 new POD)</p></div>
+    </div>
+
+    <div class="footer">
+      <p>Generated: Sunday, May 03, 2026 at 03:41 AM EDT</p>
+      <p>Scout B-F Analysis v3</p>
+    </div>
+  </div>
+</body>
+</html>

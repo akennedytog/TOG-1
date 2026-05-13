@@ -1,0 +1,58 @@
+{
+  "createFile": {
+    "name": "YouTube Thumbnail Pack - 2026-03-23",
+    "type": "figma_file"
+  },
+  "createPages": [
+    {
+      "name": "Page 1 - 1280x720",
+      "width": 1280,
+      "height": 720,
+      "background": "#FF0000"
+    }
+  ],
+  "addElements": [
+    {
+      "type": "text_layers",
+      "style": "bold_trendy",
+      "colors": [
+        "#FF0000",
+        "#FFFFFF",
+        "#000000"
+      ]
+    },
+    {
+      "type": "emoji",
+      "style": "bold_trendy",
+      "colors": [
+        "#FF0000",
+        "#FFFFFF",
+        "#000000"
+      ]
+    },
+    {
+      "type": "arrows",
+      "style": "bold_trendy",
+      "colors": [
+        "#FF0000",
+        "#FFFFFF",
+        "#000000"
+      ]
+    },
+    {
+      "type": "gradients",
+      "style": "bold_trendy",
+      "colors": [
+        "#FF0000",
+        "#FFFFFF",
+        "#000000"
+      ]
+    }
+  ],
+  "exportSettings": {
+    "format": "PDF",
+    "svg": true,
+    "png": true,
+    "canva_compatible": true
+  }
+}

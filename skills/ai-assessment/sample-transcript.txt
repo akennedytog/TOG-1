@@ -1,0 +1,18 @@
+[00:00:00] Consultant: Thanks for taking the time today, Sarah. Can you walk me through what your company does?
+[00:00:10] Sarah: Absolutely. I'm the founder of GrowthLabs — we're a boutique marketing agency specializing in DTC e-commerce brands. We have about 15 people on the team, mostly account managers and creatives.
+[00:00:45] Consultant: What does your typical week look like? Where does most of your time go?
+[00:01:00] Sarah: Honestly? It's embarrassing. I spend probably 10-12 hours every week just pulling reports for clients. I have to log into Shopify, Klaviyo, Facebook Ads, Google Ads, and Google Analytics, pull all the numbers, copy them into Google Sheets, and then format them into something readable. Every. Single. Week.
+[00:01:45] Consultant: That sounds painful. Is there any part of that you could automate?
+[00:02:00] Sarah: I've thought about it, but I don't know where to start. We tried DashThis for a while but it was expensive and the clients didn't love the format.
+[00:02:30] Consultant: What about new business? How do you handle leads?
+[00:02:45] Sarah: That's our other big gap. We get maybe 8-10 leads a week through the website, but I know we're slow to respond. Sometimes it takes me 24-48 hours to get back to them because I'm buried in those reports. I've definitely lost deals to faster agencies.
+[00:03:30] Consultant: Are you using any CRM or automation there?
+[00:03:40] Sarah: We have HubSpot, but it's basically just a database. Nothing automated happens when someone fills out the form.
+[00:04:00] Consultant: What about client onboarding? How does that work?
+[00:04:15] Sarah: It's manual too. When someone signs, I send them a welcome email with a Google Form for their brand assets, then I have to chase them for logos, copy, access to their accounts... that whole dance takes 2-3 weeks sometimes.
+[00:05:00] Consultant: Any other repetitive tasks that come to mind?
+[00:05:15] Sarah: Oh, social media. We're supposed to be posting thought leadership content, but it never happens consistently because everyone is busy. We have like 20 half-written posts sitting in Notion.
+[00:05:45] Consultant: What about your own marketing? How do you handle that?
+[00:06:00] Sarah: That's the irony — we're so busy doing client work that we neglect our own marketing. I know I should be emailing our list regularly, but it happens maybe once a month when I find time to write something.
+[00:06:45] Consultant: If you could wave a magic wand and automate three things, what would they be?
+[00:07:00] Sarah: Definitely the reporting first. Then lead follow-up — I'd love instant responses with a calendar link. And probably getting those social posts actually published instead of just sitting in drafts.

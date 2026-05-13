@@ -1,0 +1,1045 @@
+{
+  "dailyStats": {
+    "2026-03-19": {
+      "tweets": 2,
+      "replys": 1
+    },
+    "2026-03-20": {
+      "tweets": 2,
+      "replies": 0,
+      "likes": 0
+    },
+    "2026-03-22": {
+      "tweets": 7
+    },
+    "2026-03-23": {
+      "tweets": 11
+    },
+    "2026-03-24": {
+      "tweets": 3
+    },
+    "2026-03-25": {
+      "tweets": 6
+    },
+    "2026-03-26": {
+      "tweets": 5
+    },
+    "2026-03-27": {
+      "tweets": 2
+    },
+    "2026-03-28": {
+      "tweets": 2
+    },
+    "2026-03-29": {
+      "tweets": 1
+    },
+    "2026-03-30": {
+      "tweets": 3
+    },
+    "2026-03-31": {
+      "tweets": 3
+    },
+    "2026-04-01": {
+      "tweets": 1
+    },
+    "2026-04-04": {
+      "tweets": 1
+    },
+    "2026-04-05": {
+      "tweets": 8
+    },
+    "2026-04-06": {
+      "tweets": 4
+    },
+    "2026-04-08": {
+      "tweets": 5
+    },
+    "2026-04-09": {
+      "tweets": 3
+    },
+    "2026-04-12": {
+      "tweets": 5
+    },
+    "2026-04-14": {
+      "tweets": 6
+    },
+    "2026-04-15": {
+      "tweets": 1
+    },
+    "2026-04-16": {
+      "tweets": 3
+    },
+    "2026-04-17": {
+      "tweets": 2
+    },
+    "2026-04-18": {
+      "tweets": 8
+    },
+    "2026-04-19": {
+      "tweets": 2
+    },
+    "2026-04-20": {
+      "tweets": 2
+    },
+    "2026-04-21": {
+      "tweets": 4
+    },
+    "2026-04-22": {
+      "tweets": 6
+    },
+    "2026-04-23": {
+      "tweets": 4
+    },
+    "2026-04-24": {
+      "tweets": 6
+    },
+    "2026-04-25": {
+      "tweets": 5
+    },
+    "2026-04-26": {
+      "tweets": 4
+    },
+    "2026-04-27": {
+      "tweets": 1
+    },
+    "2026-04-28": {
+      "tweets": 4
+    },
+    "2026-04-29": {
+      "tweets": 1
+    },
+    "2026-04-30": {
+      "tweets": 6
+    },
+    "2026-05-01": {
+      "tweets": 3
+    },
+    "2026-05-08": {
+      "tweets": 2
+    },
+    "2026-05-09": {
+      "tweets": 2
+    },
+    "2026-05-11": {
+      "tweets": 2
+    },
+    "2026-05-12": {
+      "tweets": 2
+    }
+  },
+  "totalLikes": 0,
+  "totalReplies": 0,
+  "totalTweets": 150,
+  "totalFollows": 0,
+  "engagementLog": [
+    {
+      "type": "tweet",
+      "text": "AI Myth #1: 'You need tons of data to get started' Reality: Most SMBs see results with just 10-20 ex",
+      "tweetId": "2034718201578234167",
+      "timestamp": "2026-03-19T19:46:37.253Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The 3-Question AI Readiness Test: 1️⃣ Do you repeat this task weekly? 2️⃣ Does it follow a pattern y",
+      "tweetId": "2034722269868470579",
+      "timestamp": "2026-03-19T20:02:47.207Z"
+    },
+    {
+      "type": "reply",
+      "timestamp": "2026-03-19T21:33:45.727Z",
+      "tweetId": "2034428374718800149",
+      "hashtag": "SMB",
+      "text": "Building in public with AI is the way. What are you shipping next?"
+    },
+    {
+      "type": "tweet",
+      "text": "The businesses winning with AI right now aren't the ones with the biggest models. They're the ones w",
+      "tweetId": "2035038020219387953",
+      "timestamp": "2026-03-20T16:57:27.960Z"
+    },
+    {
+      "type": "tweet",
+      "text": "AI consultants are selling complexity. I'm selling clarity. Most SMBs don't need a strategy—they nee",
+      "tweetId": "2035045265166434307",
+      "timestamp": "2026-03-20T17:26:15.275Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Next week on @TheOneGroupAI:\n\n🚀 Opening beta to 10 early users\n📊 Publishing our engagement data (t",
+      "tweetId": "2035748946379735551",
+      "timestamp": "2026-03-22T16:02:25.978Z"
+    },
+    {
+      "type": "tweet",
+      "text": "🧵 I spent 3 months building with OpenClaw. Here's what I learned about AI agents that nobody talks ",
+      "tweetId": "2035776070264242178",
+      "timestamp": "2026-03-22T17:50:12.815Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw isn't just another AI wrapper. It's an agent operating system.\n\nSpawn specialized AI worker",
+      "tweetId": "2035791170421285200",
+      "timestamp": "2026-03-22T18:50:12.970Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What makes OpenClaw different:\n\n1️⃣ Agent Skills Architecture - Think npm for AI. Reusable, versione",
+      "tweetId": "2035809619008782343",
+      "timestamp": "2026-03-22T20:03:31.459Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Real work we've done:\n\n✅ Content pipeline → Blog posts auto-generate from tweets\n✅ Twitter automatio",
+      "tweetId": "2035824717173608687",
+      "timestamp": "2026-03-22T21:03:31.157Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The top 50 GitHub agents we use:\n\n🏗️ Core: coding-agent, claude, codex, pi\n🔧 GitHub: gh-issues, pr",
+      "tweetId": "2035842891885502723",
+      "timestamp": "2026-03-22T22:15:44.300Z"
+    },
+    {
+      "type": "tweet",
+      "text": "How we use them:\n\nMorning: content-pipeline generates drafts, twitter-automation posts\nMidday: Spawn",
+      "tweetId": "2035858002817827273",
+      "timestamp": "2026-03-22T23:15:47.049Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Here's a hot take: South Florida businesses are leaving millions on the table because they think 'go",
+      "tweetId": "2035873102278586875",
+      "timestamp": "2026-03-23T00:15:47.048Z"
+    },
+    {
+      "type": "tweet",
+      "text": "We audited 50+ Miami-area businesses this quarter.\n\nHVAC companies missed 23% of emergency calls dur",
+      "tweetId": "2035888201944965474",
+      "timestamp": "2026-03-23T01:15:47.095Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Your competitors aren't smarter. They're not working harder.\n\nThey're just not missing calls at 8pm ",
+      "tweetId": "2035903301384913126",
+      "timestamp": "2026-03-23T02:15:47.090Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The businesses winning in 2026 aren't the ones with the biggest teams.\n\nThey're the ones that scaled",
+      "tweetId": "2035940251156291781",
+      "timestamp": "2026-03-23T04:42:36.569Z"
+    },
+    {
+      "type": "tweet",
+      "text": "If you're a South Florida business owner and you're still treating 'we'll call them back Monday' as ",
+      "tweetId": "2035962928671723848",
+      "timestamp": "2026-03-23T06:12:43.334Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The most profitable HVAC jobs happen after 6pm and on weekends.\n\nYour techs can't answer the phone w",
+      "tweetId": "2035985130980889066",
+      "timestamp": "2026-03-23T07:40:56.761Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Miami law firms are losing 15-20% of intake calls to voicemail.\n\nFor a 10-attorney firm, that's pote",
+      "tweetId": "2036005833369075940",
+      "timestamp": "2026-03-23T09:03:12.596Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Tax season doesn't have to mean 70-hour weeks and missed family dinners.\n\nSmart accounting firms are",
+      "tweetId": "2036034829494419914",
+      "timestamp": "2026-03-23T10:58:25.812Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The future is agent-first development:\n• Humans define goals\n• Agents explore solutions\n• Humans val",
+      "tweetId": "2036051635403653580",
+      "timestamp": "2026-03-23T12:05:12.673Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The biggest AI trend nobody's talking about:\n\nSmall businesses that automate just ONE workflow (invo",
+      "tweetId": "2036080977521295556",
+      "timestamp": "2026-03-23T14:01:48.378Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What's the first thing you should automate in your business?\n\nNot the biggest problem.\nNot the most ",
+      "tweetId": "2036171241208291540",
+      "timestamp": "2026-03-23T20:00:28.909Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Just pushed a major system update.\n\n8 AI agents now running in parallel:\n→ Arlo finding 20 new leads",
+      "tweetId": "2036240190222577682",
+      "timestamp": "2026-03-24T00:34:27.633Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Nobody:\n\nAI: 'Per my last email regarding the aforementioned matter, I hope this message finds you w",
+      "tweetId": "2036442990814634086",
+      "timestamp": "2026-03-24T14:00:19.081Z"
+    },
+    {
+      "type": "tweet",
+      "text": "HVAC companies in Miami lose $2,000+ per missed emergency call.\n\nWhen it's 95°F and someone's AC die",
+      "tweetId": "2036459277108330926",
+      "timestamp": "2026-03-24T15:05:02.032Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Coral Gables law firms:\n\nYou're in one of the most competitive legal markets in the country.\n\n200+ a",
+      "tweetId": "2036867671698923911",
+      "timestamp": "2026-03-25T18:07:50.882Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What's the #1 thing that makes you choose one service business over another?\n\nA) Price\nB) Reviews\nC)",
+      "tweetId": "2036886288670810205",
+      "timestamp": "2026-03-25T19:21:49.501Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Law firms: Your intake process is costing you cases.\n\nMost prospects call 3-4 firms before choosing ",
+      "tweetId": "2036901388022661393",
+      "timestamp": "2026-03-25T20:21:49.461Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Dental practices lose 30% of new patient calls to voicemail.\n\nEach missed call = $3,000-$5,000 in li",
+      "tweetId": "2036916487512854535",
+      "timestamp": "2026-03-25T21:21:49.954Z"
+    },
+    {
+      "type": "tweet",
+      "text": "AI agents aren't replacing your team.\n\nThey're replacing the $15-25/hr tasks that drain your best pe",
+      "tweetId": "2036931587024040426",
+      "timestamp": "2026-03-25T22:21:49.467Z"
+    },
+    {
+      "type": "tweet",
+      "text": "SMB automation reality check:\n\nYou don't need a 6-figure tech stack.\n\nYou need:\n→ One clear workflow",
+      "tweetId": "2036946686614847877",
+      "timestamp": "2026-03-25T23:21:49.499Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The best automation doesn't feel like automation.\n\nTo your customers, it just feels like:\n• Faster r",
+      "tweetId": "2036961786188927064",
+      "timestamp": "2026-03-26T00:21:49.524Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Here's a $50k lesson I learned the hard way:\n\nWhen your phone rings at 6pm on Friday, someone is wil",
+      "tweetId": "2036978763834007975",
+      "timestamp": "2026-03-26T01:29:17.304Z"
+    },
+    {
+      "type": "tweet",
+      "text": "South Florida HVAC companies:\n\nSummer's coming. Your phones will ring off the hook.\n\n20-25% of those",
+      "tweetId": "2037167895478779927",
+      "timestamp": "2026-03-26T14:00:49.823Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Miami law firms:\n\nPersonal injury. Immigration. Real estate.\n\nThe client who calls you at 5:47 PM on",
+      "tweetId": "2037186161945235849",
+      "timestamp": "2026-03-26T15:13:24.858Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Medical practices in South Florida:\n\nYour front desk is drowning.\n\nHold times climbing. Patients han",
+      "tweetId": "2037201261565555010",
+      "timestamp": "2026-03-26T16:13:24.913Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Quick poll for South Florida business owners:\n\nWhat's your #1 time sink that doesn't require YOUR sp",
+      "tweetId": "2037536541031944251",
+      "timestamp": "2026-03-27T14:25:41.744Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The real cost of missed calls:\n\nHVAC: $2,000+ per emergency call\nLegal: $10,000+ per case\nMedical: $",
+      "tweetId": "2037552047612993650",
+      "timestamp": "2026-03-27T15:27:18.803Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Quick poll for South Florida business owners:\n\nWhat's your #1 time sink that doesn't require YOUR sp",
+      "tweetId": "2037717851973275718",
+      "timestamp": "2026-03-28T02:26:09.634Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The real cost of missed calls:\n\nHVAC: $2,000+ per emergency call\nLegal: $10,000+ per case\nMedical: $",
+      "tweetId": "2037748150471893386",
+      "timestamp": "2026-03-28T04:26:33.365Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The AI consultants selling 'digital transformation' are missing the point.\n\nMost businesses don't ne",
+      "tweetId": "2038288504879247832",
+      "timestamp": "2026-03-29T16:13:43.891Z"
+    },
+    {
+      "type": "tweet",
+      "text": "🧵 Week 4 of building @TheOneGroupAI: Here's what I learned about AI automation that nobody talks ab",
+      "tweetId": "2038628849777332228",
+      "timestamp": "2026-03-30T14:46:08.451Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The businesses winning with AI right now aren't the ones with the biggest models.\n\nThey're the ones ",
+      "tweetId": "2038646188140879880",
+      "timestamp": "2026-03-30T15:55:02.259Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Quick poll for South Florida business owners:\n\nWhat's your biggest time sink that doesn't require YO",
+      "tweetId": "2038708846969974980",
+      "timestamp": "2026-03-30T20:04:01.274Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Behind the scenes: Today our agents processed 8 email follow-ups, generated 3 Canva templates, and f",
+      "tweetId": "2038787259042791818",
+      "timestamp": "2026-03-31T01:15:36.162Z"
+    },
+    {
+      "type": "tweet",
+      "text": "New poll: 15% of Americans say they'd work for an AI boss.\n\nFor SMBs, this isn't about replacing man",
+      "tweetId": "2038981509432914069",
+      "timestamp": "2026-03-31T14:07:29.082Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Question for business owners:\n\nWhen a prospect calls after hours, what happens?\n\nA) Voicemail → they",
+      "tweetId": "2039075271278465383",
+      "timestamp": "2026-03-31T20:20:03.719Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Real numbers from a Miami HVAC company:\n\n❌ Before: 2-hour average callback time\n✅ After: AI answers ",
+      "tweetId": "2039151904903610459",
+      "timestamp": "2026-04-01T01:24:34.521Z"
+    },
+    {
+      "type": "tweet",
+      "text": "New open-source tool (HyperAgent) lets you control web browsers with plain English instructions.\n\nFo",
+      "tweetId": "2040453005330313426",
+      "timestamp": "2026-04-04T15:34:41.048Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Behind the scenes at @TheOneGroupAI:\n\nOur AI agent just made its first autonomous decision.\n\nIt noti",
+      "tweetId": "2040815546237632783",
+      "timestamp": "2026-04-05T15:35:17.509Z"
+    },
+    {
+      "type": "tweet",
+      "text": "🧵 THREAD: What we shipped this morning (Sunday, 4 hours of work)\n\n1/ Fixed our website navigation\n-",
+      "tweetId": "2040834959607300193",
+      "timestamp": "2026-04-05T16:52:26.062Z"
+    },
+    {
+      "type": "tweet",
+      "text": "🧵 How I fixed AI routing (and cut costs 3x) after just 3 months of coding\n\nContext: I'm not technic",
+      "tweetId": "2040854945763557533",
+      "timestamp": "2026-04-05T18:11:51.096Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Butter (YC W25) built a 'behavior cache' that makes AI agents deterministic.\n\nTranslation for SMBs:\n",
+      "tweetId": "2040872732066267432",
+      "timestamp": "2026-04-05T19:22:31.671Z"
+    },
+    {
+      "type": "tweet",
+      "text": "A dev on HN asked: 'AI keeps screwing up my automations. Why bother?'\n\nTop answer: Separate determin",
+      "tweetId": "2040887831308939681",
+      "timestamp": "2026-04-05T20:22:31.603Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Someone built a website that runs itself using n8n + local LLMs + RSS feeds.\n\nNo cloud dependencies.",
+      "tweetId": "2040902930899898632",
+      "timestamp": "2026-04-05T21:22:31.624Z"
+    },
+    {
+      "type": "tweet",
+      "text": "New open-source tool: PromptPerfect optimizes your prompts automatically.\n\nWhy this matters for SMBs",
+      "tweetId": "2040918031182741935",
+      "timestamp": "2026-04-05T22:22:31.839Z"
+    },
+    {
+      "type": "tweet",
+      "text": "AI adoption is up but trust is down.\n\nHere's what that means for your SMB:\n\nCustomers are getting sk",
+      "tweetId": "2040933129964212408",
+      "timestamp": "2026-04-05T23:22:31.650Z"
+    },
+    {
+      "type": "tweet",
+      "text": "ScaleOps just raised $130M to automate cloud infrastructure.\n\nTranslation for SMBs: You don't need a",
+      "tweetId": "2040948496023330905",
+      "timestamp": "2026-04-06T00:23:35.210Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's Claude paid subscriptions just doubled.\n\nMeanwhile OpenAI shut down Sora.\n\nThe pattern? ",
+      "tweetId": "2040979581302128955",
+      "timestamp": "2026-04-06T02:27:06.523Z"
+    },
+    {
+      "type": "tweet",
+      "text": "🧵 Week 3 of building @TheOneGroupAI: Here's what I learned about AI automation that nobody talks ab",
+      "tweetId": "2041156044655595836",
+      "timestamp": "2026-04-06T14:08:18.705Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The businesses winning with AI right now aren't the ones with the biggest models.\n\nThey're the ones ",
+      "tweetId": "2041171143927730631",
+      "timestamp": "2026-04-06T15:08:18.615Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Just audited 50 South Florida businesses. 47 still manually answering calls.\n\nAverage response time:",
+      "tweetId": "2041949447819571285",
+      "timestamp": "2026-04-08T18:41:00.733Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The hardest part about learning AI isn't the technology.\n\nIt's unlearning the assumption that you ne",
+      "tweetId": "2041964965779714371",
+      "timestamp": "2026-04-08T19:42:40.511Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Been watching how people actually use OpenClaw vs how the docs say to use it.\n\nDocs: 'Configure your",
+      "tweetId": "2041981325024829903",
+      "timestamp": "2026-04-08T20:47:40.833Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Friday thought:\n\nThe most interesting AI companies right now aren't the ones building bigger models.",
+      "tweetId": "2042005420332490969",
+      "timestamp": "2026-04-08T22:23:25.597Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Prediction: The next breakthrough in AI won't be a new model.\n\nIt'll be a new interface.\n\nRight now ",
+      "tweetId": "2042022225276989710",
+      "timestamp": "2026-04-08T23:30:12.237Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Started playing with OpenClaw's new browser-use skill yesterday.\n\nMost interesting part isn't what i",
+      "tweetId": "2042052585780113640",
+      "timestamp": "2026-04-09T01:30:50.717Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Honest question:\n\nWhat's the most overhyped AI feature right now?\n\nI'll start - AI image generation ",
+      "tweetId": "2042082239551295794",
+      "timestamp": "2026-04-09T03:28:40.717Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Just finished wiring my 8th agent into Mission Control.\n\nTook 3 attempts.\n\nThe first two failed beca",
+      "tweetId": "2042257740349751361",
+      "timestamp": "2026-04-09T15:06:03.410Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The biggest mistake SMBs make with AI automation: trying to replace humans instead of augmenting the",
+      "tweetId": "2043323637969682898",
+      "timestamp": "2026-04-12T13:41:33.175Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Browser automation is having its iPhone moment.\n\nFor years, bots broke when websites changed a CSS c",
+      "tweetId": "2043338988375683236",
+      "timestamp": "2026-04-12T14:42:33.043Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Stop building AI agents. Start building AI workflows.\n\nThe trend: Tools like n8n are winning because",
+      "tweetId": "2043354340748886050",
+      "timestamp": "2026-04-12T15:43:33.306Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Why most AI browser automation never makes it to production:\n\n1. Relying on DOM selectors (they chan",
+      "tweetId": "2043369691813417162",
+      "timestamp": "2026-04-12T16:44:33.261Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The pattern every SMB should steal:\n\nRead email → AI processes intent → Internal tool pre-filled → H",
+      "tweetId": "2043385042982801616",
+      "timestamp": "2026-04-12T17:45:33.250Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Back from the weekend. First thing I check: Mission Control dashboard.\n\nAll 8 agents green. 47 new l",
+      "tweetId": "2043850203606737349",
+      "timestamp": "2026-04-14T00:33:56.193Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Monday question:\n\nWhat tool do you use every day that you still don't fully understand?\n\nMe: Git. I ",
+      "tweetId": "2043865303126364502",
+      "timestamp": "2026-04-14T01:33:56.181Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Saw this on HN today: Someone bought 30 WordPress plugins and planted backdoors in all of them.\n\n999",
+      "tweetId": "2044030001025049085",
+      "timestamp": "2026-04-14T12:28:23.245Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Quick poll: What's your biggest blocker for automating repetitive tasks?\n\nA) Don't know what can be ",
+      "tweetId": "2044045697037602970",
+      "timestamp": "2026-04-14T13:30:45.462Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Backblaze quietly changed their backup policy this week.\n\nUsed to be: unlimited backups.\nNow: 1.5TB ",
+      "tweetId": "2044060795244306842",
+      "timestamp": "2026-04-14T14:30:45.203Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Backblaze quietly changed their backup policy this week.\n\nUsed to be: unlimited backups.\nNow: 1.5TB ",
+      "tweetId": "2044186160281346203",
+      "timestamp": "2026-04-14T22:48:54.515Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The AI tools that actually get used share one trait:\n\nThey don't ask users to change their workflow.",
+      "tweetId": "2044513247018029423",
+      "timestamp": "2026-04-15T20:28:38.078Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's new Computer Use feature in Claude:\n\nThe model can now:\n• See your screen\n• Move your mo",
+      "tweetId": "2044777264710111295",
+      "timestamp": "2026-04-16T13:57:44.795Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenAI's dev day announcements:\n\n• Realtime API for voice apps\n• Vision fine-tuning\n• Structured out",
+      "tweetId": "2044792620174467452",
+      "timestamp": "2026-04-16T14:58:45.825Z"
+    },
+    {
+      "type": "tweet",
+      "text": "ChatGPT for Excel is trending on HN (243 upvotes).\n\nThis is what mainstream AI adoption looks like:\n",
+      "tweetId": "2044874461451530284",
+      "timestamp": "2026-04-16T20:23:58.300Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What 'context window' actually means:\n\nIt's how much text the model can 'remember' at once.\n\n• GPT-4",
+      "tweetId": "2045163783463604469",
+      "timestamp": "2026-04-17T15:33:38.055Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.\n\nThe routing logic:",
+      "tweetId": "2045179138747642111",
+      "timestamp": "2026-04-17T16:34:39.030Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Currently running 8 agents in Mission Control:\n\n• Arlo - Lead research\n• Dante - Content creation\n• ",
+      "tweetId": "2045301502311301257",
+      "timestamp": "2026-04-18T00:40:52.773Z"
+    },
+    {
+      "type": "tweet",
+      "text": "1. Claude Skills - allow you to automate any process & are excellent for text outputs (copy, proposa",
+      "tweetId": "2045334776781918677",
+      "timestamp": "2026-04-18T02:53:06.024Z"
+    },
+    {
+      "type": "tweet",
+      "text": "2. Scheduled Tasks in Claude Cowork - access to your entire desktop, the web, and your Claude Skills",
+      "tweetId": "2045352670538694824",
+      "timestamp": "2026-04-18T04:04:12.261Z"
+    },
+    {
+      "type": "tweet",
+      "text": "3. Perplexity Computer Agentic Tasks - essentially, an easier version of OpenClaw that allows you to",
+      "tweetId": "2045367874961961227",
+      "timestamp": "2026-04-18T05:04:37.279Z"
+    },
+    {
+      "type": "tweet",
+      "text": "4. Manus - the easiest plug-and-play agentic AI solution.\n\nConnect Manus to your Gmail, Google Calen",
+      "tweetId": "2045384798290550858",
+      "timestamp": "2026-04-18T06:11:52.076Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Start with just one of these, then aim to check off the other three by the end of the week.",
+      "tweetId": "2045402003354861698",
+      "timestamp": "2026-04-18T07:20:14.061Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw's 'skills' system is actually brilliant.\n\nInstead of stuffing everything into a prompt, you",
+      "tweetId": "2045468666150769126",
+      "timestamp": "2026-04-18T11:45:07.826Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Currently running 8 agents in Mission Control:\n\n• Arlo - Lead research\n• Dante - Content creation\n• ",
+      "tweetId": "2045488011442340343",
+      "timestamp": "2026-04-18T13:02:00.009Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Law firms in Boca Raton are drowning in intake.\n\nEvery missed call = potential $5K-50K case.\n\nAI doe",
+      "tweetId": "2046010502661251555",
+      "timestamp": "2026-04-19T23:38:11.639Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Electricians in Delray Beach:\n\nEmergency calls at weird hours.\n\nPower outage at 10 PM. Customer need",
+      "tweetId": "2046011166955040888",
+      "timestamp": "2026-04-19T23:40:50.009Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Today's automation win:\n\nSpent 20 minutes debugging why Twitter wasn't posting.\n\nTurned out the rate",
+      "tweetId": "2046031445928358034",
+      "timestamp": "2026-04-20T01:01:24.895Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Claude Design just dropped.\n\nMost SMBs think AI design tools = Canva clones.\n\nWrong.\n\nThis generates",
+      "tweetId": "2046213234970050974",
+      "timestamp": "2026-04-20T13:03:46.814Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Model comparison worth watching:\n\nClaude 3.5 Sonnet vs GPT-4o vs Gemini 1.5 Pro\n\nClaude: Best at com",
+      "tweetId": "2046664497411031422",
+      "timestamp": "2026-04-21T18:56:56.228Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Skills vs Prompts:\n\nA prompt is instructions for one task.\nA skill is a documented, reusable capabil",
+      "tweetId": "2046679596943257905",
+      "timestamp": "2026-04-21T19:56:56.145Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Wednesday realization:\n\nI'm not building an AI agency.\n\nI'm building an operating system where AI ag",
+      "tweetId": "2046694967733580058",
+      "timestamp": "2026-04-21T20:58:00.945Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Wednesday status:\n\nMission Control Dashboard now shows:\n• Agent health (green/yellow/red)\n• Queue de",
+      "tweetId": "2046710309222494371",
+      "timestamp": "2026-04-21T21:58:58.528Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Claude just dropped 'Code Routines' - basically saved prompt chains for devs.\n\nThis is the pattern:\n",
+      "tweetId": "2046947870146809910",
+      "timestamp": "2026-04-22T13:42:57.464Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw's 'skills' system is underrated.\n\nInstead of one giant prompt, you package knowledge into r",
+      "tweetId": "2046963644819525773",
+      "timestamp": "2026-04-22T14:45:38.490Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Error handling in agent systems:\n\nDon't just catch errors. Classify them.\n\n• Transient (retry) — API",
+      "tweetId": "2046978742640132160",
+      "timestamp": "2026-04-22T15:45:38.044Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Thursday thought:\n\nThe most valuable AI feature isn't automation.\n\nIt's amplification.\n\nTaking what ",
+      "tweetId": "2046996010149224850",
+      "timestamp": "2026-04-22T16:54:14.927Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Technical question:\n\nWhen building agent workflows, how do you handle state?\n\nA) Centralized databas",
+      "tweetId": "2047027247400272366",
+      "timestamp": "2026-04-22T18:58:22.457Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Thursday evening:\n\nTrend monitoring caught something today:\n\nNew OpenClaw release with browser-use s",
+      "tweetId": "2047042346215219471",
+      "timestamp": "2026-04-22T19:58:22.317Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Wednesday wrap:\n\n• 20 new leads discovered (now at 234 total)\n• 3 Twitter posts drafted by Dante\n• C",
+      "tweetId": "2047290793862263288",
+      "timestamp": "2026-04-23T12:25:36.835Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The browser-use skill pattern:\n\n1. Define what to do (navigate, click, extract)\n2. Specify expected ",
+      "tweetId": "2047308255190204567",
+      "timestamp": "2026-04-23T13:34:59.941Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenAI also dropped WebSockets support for their Responses API.\n\nTranslation: AI agents can now upda",
+      "tweetId": "2047323352407122278",
+      "timestamp": "2026-04-23T14:34:59.398Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Yesterday OpenAI dropped 4 updates at once.\n\nThis morning I rewrote today's content in 20 minutes.\n\n",
+      "tweetId": "2047423883804893250",
+      "timestamp": "2026-04-23T21:14:27.951Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What 'context window' actually means:\n\nIt's how much text the model can 'remember' at once.\n\n• GPT-4",
+      "tweetId": "2047670357939642547",
+      "timestamp": "2026-04-24T13:33:51.979Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.\n\nThe routing logic:",
+      "tweetId": "2047703762173599793",
+      "timestamp": "2026-04-24T15:46:36.140Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Rate limiting strategies:\n\nDon't just slow down. Be smart.\n\n• Exponential backoff (not linear)\n• Tok",
+      "tweetId": "2047719126827741600",
+      "timestamp": "2026-04-24T16:47:39.373Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Saturday morning:\n\nWatching the system run without me.\n\nAgents working.\nContent posting.\nTrends bein",
+      "tweetId": "2047734236803678628",
+      "timestamp": "2026-04-24T17:47:41.873Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Weekend question:\n\nWhat's the most 'boring' automation that's had the biggest impact on your life?\n\n",
+      "tweetId": "2047750660058218502",
+      "timestamp": "2026-04-24T18:52:57.500Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Saturday evening:\n\nTweaking the trend detection algorithm.\n\nCurrent filters:\n• Must be AI/automation",
+      "tweetId": "2047767897519382953",
+      "timestamp": "2026-04-24T20:01:27.249Z"
+    },
+    {
+      "type": "tweet",
+      "text": "GPT-5.5 just dropped.\n\nOpenAI's latest is already topping Hacker News with 1400+ upvotes.\n\nWhat this",
+      "tweetId": "2047867137130209281",
+      "timestamp": "2026-04-25T02:35:47.784Z"
+    },
+    {
+      "type": "tweet",
+      "text": "DeepSeek v4 also launched today.\n\nTwo major AI models. Same day.\n\nFor local businesses, this is actu",
+      "tweetId": "2047883383540269383",
+      "timestamp": "2026-04-25T03:40:21.214Z"
+    },
+    {
+      "type": "tweet",
+      "text": "The r/OpenClaw community just updated their rules:\n\n\"Review AI output before posting. Anti-slop. Hig",
+      "tweetId": "2047910593059770663",
+      "timestamp": "2026-04-25T05:28:28.496Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What model are you using most right now?\n\nA) GPT-4 (OpenAI)\nB) Claude (Anthropic)\nC) Gemini (Google)",
+      "tweetId": "2048068081012895862",
+      "timestamp": "2026-04-25T15:54:16.550Z"
+    },
+    {
+      "type": "tweet",
+      "text": "This week's theme: AI is getting *local*.\n\n• Google Gemma runs on phones\n• Mistral drops open weight",
+      "tweetId": "2048083432379384048",
+      "timestamp": "2026-04-25T16:55:16.688Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw skills vs tools:\n\nA tool is a capability.\nA skill is a documented, versioned, tested tool.\n",
+      "tweetId": "2048412958833660108",
+      "timestamp": "2026-04-26T14:44:41.857Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Monday insight:\n\nThe best AI workflows have a 'human in the loop' at the right moment.\n\nNot for ever",
+      "tweetId": "2048429133504356455",
+      "timestamp": "2026-04-26T15:48:58.157Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Technical question:\n\nHow do you validate AI agent outputs?\n\nMy approach:\n1. Schema validation (JSON ",
+      "tweetId": "2048447233134092760",
+      "timestamp": "2026-04-26T17:00:53.462Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Monday evening:\n\nWeek 3, Day 1.\n\nSystem status:\n• 112 posts queued\n• 8 agents operational\n• 0 critic",
+      "tweetId": "2048479032975454467",
+      "timestamp": "2026-04-26T19:07:15.133Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Amazon is acquiring Globalstar to build a satellite network.\n\nWhy this matters for AI:\n• Rural/offli",
+      "tweetId": "2048878263053832326",
+      "timestamp": "2026-04-27T21:33:44.937Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's Claude Code Routines just dropped.\n\nThink of it as: 'save this entire workflow and run i",
+      "tweetId": "2049218668848947346",
+      "timestamp": "2026-04-28T20:06:18.044Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Model comparison worth watching:\n\nClaude 3.5 Sonnet vs GPT-4o vs Gemini 1.5 Pro\n\nClaude: Best at com",
+      "tweetId": "2049234032274141253",
+      "timestamp": "2026-04-28T21:07:20.992Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Question:\n\nWhat's the hardest part of building with AI right now?\n\nFor me:\n• Not the technology\n• No",
+      "tweetId": "2049249189729620409",
+      "timestamp": "2026-04-28T22:07:34.802Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Evening:\n\nDiscovered today:\n\nOne of my agents has been silently failing for 3 days.\n\nThe logs showed",
+      "tweetId": "2049265719766843830",
+      "timestamp": "2026-04-28T23:13:15.853Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Evening:\n\nDiscovered today:\n\nOne of my agents has been silently failing for 3 days.\n\nThe logs showed",
+      "tweetId": "2049452261852536845",
+      "timestamp": "2026-04-29T11:34:30.958Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's new Computer Use feature in Claude:\n\nThe model can now:\n• See your screen\n• Move your mo",
+      "tweetId": "2049846738383454621",
+      "timestamp": "2026-04-30T13:42:01.495Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenAI's dev day announcements:\n\n• Realtime API for voice apps\n• Vision fine-tuning\n• Structured out",
+      "tweetId": "2049861837903089955",
+      "timestamp": "2026-04-30T14:42:01.507Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw's memory system:\n\nAgents don't remember between sessions.\n\nUnless you give them:\n• MEMORY.m",
+      "tweetId": "2049876937686847673",
+      "timestamp": "2026-04-30T15:42:01.572Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Thought:\n\nThe 30-day content experiment is 40% complete.\n\nSurprises so far:\n• Technical posts outper",
+      "tweetId": "2049892037118280047",
+      "timestamp": "2026-04-30T16:42:01.569Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Check-in:\n\nWhat have you learned this week?\n\nDoesn't have to be AI-related.\n\nCould be:\n• A new tool\n",
+      "tweetId": "2049908897301844287",
+      "timestamp": "2026-04-30T17:49:01.350Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Evening:\n\nThe quality assurance agent (Abby) just caught something:\n\nDante generated a post with a b",
+      "tweetId": "2049924785795133782",
+      "timestamp": "2026-04-30T18:52:09.444Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What 'context window' actually means:\n\nIt's how much text the model can 'remember' at once.\n\n• GPT-4",
+      "tweetId": "2050196578502054342",
+      "timestamp": "2026-05-01T12:52:09.884Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.\n\nThe routing logic:",
+      "tweetId": "2050211936982200622",
+      "timestamp": "2026-05-01T13:53:11.639Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Reflection:\n\nWeek 4 complete.\n\nStats:\n• 112 posts published\n• 4,847 engagements\n• 127 new followers\n",
+      "tweetId": "2050228608044544084",
+      "timestamp": "2026-05-01T14:59:26.329Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What 'context window' actually means:\n\nIt's how much text the model can 'remember' at once.\n\n• GPT-4",
+      "tweetId": "2052728909469286628",
+      "timestamp": "2026-05-08T12:34:44.648Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.\n\nThe routing logic:",
+      "tweetId": "2052744006472241635",
+      "timestamp": "2026-05-08T13:34:44.047Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What model are you using most right now?\n\nA) GPT-4 (OpenAI)\nB) Claude (Anthropic)\nC) Gemini (Google)",
+      "tweetId": "2053091377282441332",
+      "timestamp": "2026-05-09T12:35:03.758Z"
+    },
+    {
+      "type": "tweet",
+      "text": "This week's theme: AI is getting *local*.\n\n• Google Gemma runs on phones\n• Mistral drops open weight",
+      "tweetId": "2053117220624977997",
+      "timestamp": "2026-05-09T14:17:45.251Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Google Gemma 4 now runs on iPhone offline.\n\nThis matters:\n• No API calls = no ongoing costs\n• No lat",
+      "tweetId": "2053835638844145937",
+      "timestamp": "2026-05-11T13:52:29.500Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Amazon is acquiring Globalstar to build a satellite network.\n\nWhy this matters for AI:\n• Rural/offli",
+      "tweetId": "2053865835492487284",
+      "timestamp": "2026-05-11T15:52:28.915Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's Claude Code Routines just dropped.\n\nThink of it as: 'save this entire workflow and run i",
+      "tweetId": "2054204461208265106",
+      "timestamp": "2026-05-12T14:18:03.581Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Model comparison worth watching:\n\nClaude 3.5 Sonnet vs GPT-4o vs Gemini 1.5 Pro\n\nClaude: Best at com",
+      "tweetId": "2054220057819943282",
+      "timestamp": "2026-05-12T15:20:02.115Z"
+    }
+  ],
+  "startDate": "2026-03-19T00:34:52.171Z",
+  "totalReplys": null
+}

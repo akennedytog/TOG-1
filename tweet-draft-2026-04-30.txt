@@ -1,0 +1,29 @@
+Twitter Content Draft - 2026-04-30
+==================================================
+
+Post 1: insight
+Text: Anthropic's new Computer Use feature in Claude:
+
+The model can now:
+• See your screen
+• Move your mouse
+• Click buttons
+• Type commands
+
+This isn't 'AI writes code.'
+This is 'AI operates your computer.'
+
+We're one step closer to agents that actually *do* things, not just suggest them.
+
+Post 2: analysis
+Text: OpenAI's dev day announcements:
+
+• Realtime API for voice apps
+• Vision fine-tuning
+• Structured outputs (finally!)
+• Higher rate limits
+
+The pattern: OpenAI is building infrastructure for *application developers*, not just chat users.
+
+They're betting that the next wave isn't consumer chatbots—it's AI-powered apps.
+

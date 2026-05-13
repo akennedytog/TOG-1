@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "agency": "The One Group",
+    "campaign": "South Florida Cold Outreach - Follow-up Sequences",
+    "created": "2026-03-22",
+    "agent": "Iris - Sales & Marketing",
+    "sequence_length": "4 touches per prospect"
+  },
+  "sequences": {
+    "hvac": {
+      "industry": "HVAC",
+      "sequence": [
+        {
+          "touch": 1,
+          "day": 0,
+          "channel": "email",
+          "subject": "{{company_name}} — ready for the busy season rush?",
+          "template_ref": "hvac.cold_email",
+          "goal": "Initial engagement",
+          "follow_if": "no_response_in_3_days"
+        },
+        {
+          "touch": 2,
+          "day": 4,
+          "channel": "email",
+          "subject": "Re: {{company_name}} — the cost of missed AC calls",
+          "body": "Hi {{first_name}},\n\nFollowing up on my note from earlier this week.\n\nWanted to share a quick stat: last July, {{similar_company}} in {{nearby_city}} got 47 after-hours emergency calls. Their old system sent 31 of those to voicemail.\n\nThey switched to our overflow system in August. Since then? Zero missed emergency calls.\n\nSummer's coming. Want to make sure {{company_name}} doesn't leave money on the table?\n\nHappy to show you exactly how it works — 10 minutes, no pressure.\n\n{{sender_name}}\nThe One Group",
+          "goal": "Add social proof, create urgency",
+          "follow_if": "no_response_in_4_days"
+        },
+        {
+          "touch": 3,
+          "day": 8,
+          "channel": "email",
+          "subject": "Should I close the loop on this?",
+          "body": "Hi {{first_name}},\n\nI reached out a couple times about helping {{company_name}} handle overflow calls during peak season.\n\nI'm guessing one of three things:\n1. You're all set (and if so, great — ignore me)\n2. You're interested but swamped (totally get it)\n3. This isn't a priority right now\n\nIf it's #2, I can make this ridiculously easy. One 10-minute call, I'll show you exactly how we help HVAC firms capture more calls. Then you decide.\n\nIf it's #1 or #3, just reply \"not now\" and I'll close the loop.\n\nEither way, hope {{company_name}} has a great summer.\n\n{{sender_name}}\nThe One Group",
+          "goal": "Break the pattern, give easy out",
+          "follow_if": "no_response_in_7_days"
+        },
+        {
+          "touch": 4,
+          "day": 15,
+          "channel": "linkedin",
+          "message": "Hi {{first_name}}, been following {{company_name}}'s work in {{city}}. Quick question — how do you currently handle after-hours emergency calls? We've helped several HVAC firms capture more revenue during peak season and I'm curious about your approach.",
+          "goal": "Final touch via different channel",
+          "end_sequence_if": "no_response"
+        }
+      ]
+    },
+    "legal": {
+      "industry": "Legal",
+      "sequence": [
+        {
+          "touch": 1,
+          "day": 0,
+          "channel": "email",
+          "subject": "Following up with every {{company_name}} lead?",
+          "template_ref": "legal.cold_email",
+          "goal": "Initial engagement",
+          "follow_if": "no_response_in_3_days"
+        },
+        {
+          "touch": 2,
+          "day": 4,
+          "channel": "email",
+          "subject": "Re: {{company_name}} — the math on missed calls",
+          "body": "Hi {{first_name}},\n\nWanted to follow up on my note about intake efficiency.\n\nRan some quick numbers for firms like {{company_name}} in {{city}}:\n\n• Average case value: $8,500\n• Missed calls per week: ~12\n• Capture rate from answered calls: ~35%\n\nThat's roughly $150K in potential annual revenue from calls that never get returned.\n\n{{similar_firm}} implemented our intake system last year. They now answer 100% of calls, qualify leads in real-time, and their attorneys only talk to pre-screened prospects.\n\nWorth a brief conversation to see the numbers for {{company_name}}?\n\n{{sender_name}}\nThe One Group\n\nP.S. — I can send you their case study if helpful.",
+          "goal": "Add specific ROI metrics",
+          "follow_if": "no_response_in_4_days"
+        },
+        {
+          "touch": 3,
+          "day": 8,
+          "channel": "email",
+          "subject": "One last thing about {{company_name}}'s intake",
+          "body": "Hi {{first_name}},\n\nI've reached out a couple times about improving intake at {{company_name}}.\n\nHere's my honest take: if you're already capturing 100% of calls and converting them efficiently, then we're not a fit. And that's fine — plenty of firms have this dialed in.\n\nBut if there's even a 10% gap between calls received and consultations booked, that's real money walking out the door.\n\nI'm not asking for a commitment. Just 15 minutes to see if there's an opportunity you're missing.\n\nIf not, no hard feelings. I'll close your file and won't follow up further.\n\n{{sender_name}}\nThe One Group\n{{calendar_link}}",
+          "goal": "Direct ask, remove pressure",
+          "follow_if": "no_response_in_7_days"
+        },
+        {
+          "touch": 4,
+          "day": 15,
+          "channel": "linkedin",
+          "message": "Hi {{first_name}}, saw {{company_name}} just {{recent_firm_news}}. Congrats on the growth. Curious — how are you handling the increased intake volume? We specialize in legal intake optimization and I'd love to share what's working for similar growing firms.",
+          "goal": "Final touch via different channel",
+          "end_sequence_if": "no_response"
+        }
+      ]
+    },
+    "accounting": {
+      "industry": "Accounting",
+      "sequence": [
+        {
+          "touch": 1,
+          "day": 0,
+          "channel": "email",
+          "subject": "Tax season automation for {{company_name}}?",
+          "template_ref": "accounting.cold_email",
+          "goal": "Initial engagement",
+          "follow_if": "no_response_in_3_days"
+        },
+        {
+          "touch": 2,
+          "day": 4,
+          "channel": "email",
+          "subject": "Re: What {{similar_firm}} did differently this tax season",
+          "body": "Hi {{first_name}},\n\nFollowing up on my note about tax season support.\n\nWanted to share what {{similar_firm}} did this year:\n\nLast tax season: Principal answered every call, worked 65+ hour weeks, still missed 40+ client calls.\n\nThis tax season: Our team handled overflow, scheduled appointments, answered basic questions, and escalated only urgent issues. Principal worked 50 hours/week, zero missed calls.\n\nCost them less than one seasonal employee. Saved them 60+ hours of stress.\n\nTax season 2027 doesn't have to be a nightmare. Want to see how it works?\n\n{{sender_name}}\nThe One Group",
+          "goal": "Concrete before/after story",
+          "follow_if": "no_response_in_4_days"
+        },
+        {
+          "touch": 3,
+          "day": 8,
+          "channel": "email",
+          "subject": "Quick question about {{company_name}}'s client experience",
+          "body": "Hi {{first_name}},\n\nI've reached out a couple times about call handling for {{company_name}}. No pressure — just wanted to ask one thing:\n\nWhen your clients call during tax season and get voicemail, what happens?\n\nDo they:\nA) Leave a detailed message and wait patiently?\nB) Call the next accountant on their list?\n\nI've seen it go both ways. But the firms that answer every call? They keep more clients.\n\nIf you're interested in making sure {{company_name}} is in category A, happy to chat. If not, I'll close the loop and stop following up.\n\nEither way, best of luck with extension season.\n\n{{sender_name}}\nThe One Group",
+          "goal": "Reframe around client retention",
+          "follow_if": "no_response_in_7_days"
+        },
+        {
+          "touch": 4,
+          "day": 15,
+          "channel": "linkedin",
+          "message": "Hi {{first_name}}, hope tax season treated you well at {{company_name}}. I'm connecting with South Florida accounting firms to learn about their client communication strategies during peak season. Would love to hear what's working for you — and share what we've learned from firms like {{similar_firm}}.",
+          "goal": "Final touch via different channel",
+          "end_sequence_if": "no_response"
+        }
+      ]
+    }
+  },
+  "sequence_rules": {
+    "timing": {
+      "touch_1_to_2": "3-4 days",
+      "touch_2_to_3": "4 days",
+      "touch_3_to_4": "7 days",
+      "total_sequence_length": "15 days"
+    },
+    "stop_conditions": [
+      "Prospect replies (any response)",
+      "Prospect unsubscribes",
+      "Email bounces",
+      "After touch 4 if no response"
+    ],
+    "success_metrics": {
+      "reply_rate_target": "15-25%",
+      "meeting_booked_target": "3-5%",
+      "unsubscribe_rate_max": "2%"
+    }
+  },
+  "personalization_requirements": {
+    "every_email_must_include": [
+      "{{first_name}}",
+      "{{company_name}}",
+      "{{city}}"
+    ],
+    "should_include_when_available": [
+      "{{similar_company}}",
+      "{{specific_challenge}}",
+      "{{recent_news_or_project}}"
+    ]
+  }
+}

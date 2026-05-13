@@ -1,0 +1,8 @@
+{
+  "api": "1.0.0",
+  "editorType": ["figma"],
+  "id": "canva-template-gen",
+  "name": "Canva Template Gen",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html"
+}

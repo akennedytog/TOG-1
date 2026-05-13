@@ -1,0 +1,63 @@
+{
+  "id": "20260506_214144_20260506_214133_B-F_FY26_Q4_HR_Road_to_Cinco_1",
+  "filename": "20260506_214133_B-F_FY26_Q4_HR_Road_to_Cinco_1.xlsx",
+  "uploaded_at": "2026-05-06T21:41:44.488067",
+  "file_type": "excel",
+  "row_count": 8,
+  "column_analysis": {
+    "Unnamed: 0": "text",
+    "Unnamed: 1": "text",
+    "Unnamed: 2": "text",
+    "Unnamed: 3": "text",
+    "Unnamed: 4": "text",
+    "Reminder:": "text"
+  },
+  "metrics": {
+    "total_records": 8,
+    "monetary_columns": [],
+    "entity_columns": [],
+    "product_columns": []
+  },
+  "insights": {
+    "summary": "The sales report indicates a total of 54 cases sold across various accounts, with 34 of those being from accounts with 4 or more cases. The top performer is Fraser Chad, significantly outperforming others in both total cases and cases with 4+ orders, suggesting a strong market presence or effective sales strategies.",
+    "top_performers": [
+      {
+        "name": "FRASER CHAD",
+        "metric": "Total Cases Sold",
+        "value": 42,
+        "insight": "Fraser Chad has the highest sales volume, indicating effective engagement strategies or strong product demand."
+      }
+    ],
+    "accounts_at_risk": [
+      {
+        "name": "PH NORTH ON PREM AM",
+        "reason": "Low sales volume with only 11 total cases and 7 with 4+ orders.",
+        "recommended_action": "Initiate a targeted marketing campaign to boost engagement and sales."
+      }
+    ],
+    "call_today": [
+      {
+        "name": "FRASER CHAD",
+        "priority": "high",
+        "reason": "To discuss potential upselling opportunities and maintain strong relationship.",
+        "talking_points": "Explore additional product offerings and gather feedback on current products."
+      }
+    ],
+    "skus_down": [],
+    "opportunities": [
+      {
+        "description": "Increase sales in PH NORTH ON PREM AM",
+        "potential_value": "Estimated increase of 20% in sales if targeted marketing is successful.",
+        "how_to_capture": "Develop a promotional strategy tailored to this account's needs and preferences."
+      }
+    ],
+    "alerts": [
+      "Monitor the performance of PH NORTH ON PREM AM closely, as it shows signs of underperformance."
+    ],
+    "recommendations": [
+      "Enhance promotional efforts for underperforming accounts to stimulate sales.",
+      "Leverage the success of top performers like Fraser Chad to create case studies or best practices.",
+      "Consider implementing a loyalty program to incentivize repeat purchases across all accounts."
+    ]
+  }
+}
