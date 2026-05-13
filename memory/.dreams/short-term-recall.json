@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-11T14:49:17.833Z",
+  "updatedAt": "2026-05-13T04:05:00.825Z",
   "entries": {
     "memory:memory/2026-03-09.md:1:2": {
       "key": "memory:memory/2026-03-09.md:1:2",
@@ -550,19 +550,21 @@
       "endLine": 46,
       "source": "memory",
       "snippet": "## BabyNest One-Stop Pregnancy Shop - Major Update ### Dashboard Completely Rebuilt - May 10, 2026 #### Insurance Card Scanner Fixed - Fixed OCR API to use OpenAI GPT-4 Vision properly - Now analyzes actual uploaded images and extracts insurance details - Provides clear explanations of coverage for newborns #### New Dashboard Tabs Created 1. **Financial Tasks** - State-specific and national task lists with detailed guides 2. **Hospital Bag** - Interactive packing checklist with: - 30+ items organized by category (Mom, Baby, Partner, Tech, Comfort, Documents) - Essential vs nice-to-have distinction - Progress tracking - Pro tips section 3. **Contraction Timer** - Labor trackin",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9150165763254166,
+      "totalScore": 1.3353736605997084,
       "maxScore": 0.541580792939186,
       "firstRecalledAt": "2026-05-11T14:49:17.690Z",
-      "lastRecalledAt": "2026-05-11T14:49:17.833Z",
+      "lastRecalledAt": "2026-05-13T04:05:00.825Z",
       "queryHashes": [
         "d84b096a277a",
-        "bcf4bc017727"
+        "bcf4bc017727",
+        "5fe0c6bbfc30"
       ],
       "recallDays": [
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-13"
       ],
       "conceptTags": [
         "gpt",
@@ -582,18 +584,20 @@
       "endLine": 66,
       "source": "memory",
       "snippet": "- Baby care after birth - Emergency/C-section preferences - Visitor preferences - Printable birth plan 6. **Insurance** - Card scanner and coverage info #### Dashboard Features - Tab-based navigation for all features - Pregnancy week and trimester display in header - AI chat assistant on sidebar - Mobile-responsive design - Professional, clean interface ### Technical Changes - Created TaskManager component (separated from main dashboard) - Added Tabs component from shadcn/ui - Created 5 new feature components: - HospitalBagPlanner.tsx - ContractionTimer.tsx - KickCounter.tsx - BirthPlanBuilder.tsx - TaskManager.tsx - Updated dashboard layout with tab navigation - Fix",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.489018041526976,
+      "totalScore": 0.8674749052879241,
       "maxScore": 0.489018041526976,
       "firstRecalledAt": "2026-05-11T14:49:17.690Z",
-      "lastRecalledAt": "2026-05-11T14:49:17.690Z",
+      "lastRecalledAt": "2026-05-13T04:05:00.825Z",
       "queryHashes": [
-        "d84b096a277a"
+        "d84b096a277a",
+        "5fe0c6bbfc30"
       ],
       "recallDays": [
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-13"
       ],
       "conceptTags": [
         "emergency/c-section",
