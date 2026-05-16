@@ -465,11 +465,14 @@
 
       <!-- Newsletter CTA -->
       <div class="mt-16 text-center">
-        <div class="inline-flex items-center justify-center p-8 rounded-2xl bg-gradient-to-br from-primary-900 to-accent-600 text-white max-w-2xl">
+        <div class="inline-flex flex-col items-center justify-center p-8 rounded-2xl bg-gradient-to-br from-primary-900 to-accent-600 text-white max-w-2xl">
           <h3 class="font-display text-2xl font-bold mb-2">Get posts like this weekly</h3>
           <p class="text-primary-100 mb-6">No spam. Unsubscribe anytime.</p>
-          <form class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
-            <input type="email" placeholder="your@email.com" class="flex-1 px-4 py-3 rounded-lg text-gray-900">
+          <form name="newsletter-subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/newsletter-thanks.html" class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+            <p class="hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            <input type="email" name="email" placeholder="your@email.com" required class="flex-1 px-4 py-3 rounded-lg text-gray-900">
             <button type="submit" class="px-6 py-3 bg-white text-primary-700 font-semibold rounded-lg hover:bg-gray-100 transition">Subscribe</button>
           </form>
         </div>

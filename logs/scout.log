@@ -1042,3 +1042,30 @@ Tue May 12 08:15:47 EDT 2026: 📧 Briefing generated, ready for email
 Tue May 12 08:15:47 EDT 2026: 📤 Sending email...
 Tue May 12 08:15:47 EDT 2026: === Scout Run Complete ===
 
+Wed May 13 08:06:02 EDT 2026: === Scout Daily Run Started ===
+Wed May 13 08:06:02 EDT 2026: 🎯 Running Scout Agent (Optimized v3.1)...
+🎯 Scout v3.1 - Optimized B-F Sales Performance
+--------------------------------------------------
+📦 Using cached fsm_data (file unchanged)
+✅ Loaded 29 FSMs
+📦 Using cached reps_data (file unchanged)
+✅ Loaded 115 reps
+✅ Total unique reps: 144
+🔍 Analyzing performance...
+📋 Creating briefing...
+--------------------------------------------------
+✨ COMPLETE in 0.0s
+
+📊 ROAD TO CINCO SUMMARY:
+   Total Reps: 144
+   New POD: 264 (Goal: 366)
+   Team % to Goal: 72.1%
+   Total Payouts: $2,010
+   🏆 0 | ✅ 0 | ⚠️ 0 | ❗ 21
+
+📁 Files saved to scout_output/
+Wed May 13 08:06:03 EDT 2026: ✅ Scout completed successfully
+Wed May 13 08:06:03 EDT 2026: 📧 Briefing generated, ready for email
+Wed May 13 08:06:03 EDT 2026: 📤 Sending email...
+Wed May 13 08:06:03 EDT 2026: === Scout Run Complete ===
+

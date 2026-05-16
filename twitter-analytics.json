@@ -125,11 +125,14 @@
     },
     "2026-05-12": {
       "tweets": 2
+    },
+    "2026-05-13": {
+      "tweets": 2
     }
   },
   "totalLikes": 0,
   "totalReplies": 0,
-  "totalTweets": 150,
+  "totalTweets": 152,
   "totalFollows": 0,
   "engagementLog": [
     {
@@ -1038,6 +1041,18 @@
       "text": "Model comparison worth watching:\n\nClaude 3.5 Sonnet vs GPT-4o vs Gemini 1.5 Pro\n\nClaude: Best at com",
       "tweetId": "2054220057819943282",
       "timestamp": "2026-05-12T15:20:02.115Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Claude just dropped 'Code Routines' - basically saved prompt chains for devs.\n\nThis is the pattern:\n",
+      "tweetId": "2054542577366430130",
+      "timestamp": "2026-05-13T12:41:36.802Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw's 'skills' system is underrated.\n\nInstead of one giant prompt, you package knowledge into r",
+      "tweetId": "2054557676579770786",
+      "timestamp": "2026-05-13T13:41:36.696Z"
     }
   ],
   "startDate": "2026-03-19T00:34:52.171Z",

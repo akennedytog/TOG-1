@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-13T04:05:00.825Z",
+  "updatedAt": "2026-05-16T20:43:23.338Z",
   "entries": {
     "memory:memory/2026-03-09.md:1:2": {
       "key": "memory:memory/2026-03-09.md:1:2",
@@ -550,21 +550,23 @@
       "endLine": 46,
       "source": "memory",
       "snippet": "## BabyNest One-Stop Pregnancy Shop - Major Update ### Dashboard Completely Rebuilt - May 10, 2026 #### Insurance Card Scanner Fixed - Fixed OCR API to use OpenAI GPT-4 Vision properly - Now analyzes actual uploaded images and extracts insurance details - Provides clear explanations of coverage for newborns #### New Dashboard Tabs Created 1. **Financial Tasks** - State-specific and national task lists with detailed guides 2. **Hospital Bag** - Interactive packing checklist with: - 30+ items organized by category (Mom, Baby, Partner, Tech, Comfort, Documents) - Essential vs nice-to-have distinction - Progress tracking - Pro tips section 3. **Contraction Timer** - Labor trackin",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.3353736605997084,
+      "totalScore": 1.6863000002260207,
       "maxScore": 0.541580792939186,
       "firstRecalledAt": "2026-05-11T14:49:17.690Z",
-      "lastRecalledAt": "2026-05-13T04:05:00.825Z",
+      "lastRecalledAt": "2026-05-14T14:35:57.318Z",
       "queryHashes": [
         "d84b096a277a",
         "bcf4bc017727",
-        "5fe0c6bbfc30"
+        "5fe0c6bbfc30",
+        "941a47df6e8e"
       ],
       "recallDays": [
         "2026-05-11",
-        "2026-05-13"
+        "2026-05-13",
+        "2026-05-14"
       ],
       "conceptTags": [
         "gpt",
@@ -608,6 +610,192 @@
         "contractiontimer.tsx",
         "kickcounter.tsx",
         "birthplanbuilder.tsx"
+      ]
+    },
+    "memory:memory/2026-05-14.md:1:32": {
+      "key": "memory:memory/2026-05-14.md:1:32",
+      "path": "memory/2026-05-14.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# Memory - May 14, 2026 ## BabyNest Development Session ### Completed Work - Successfully built all 6 differentiation features for BabyNest app: 1. Financial Timeline by Trimester (week-by-week pregnancy finance deadlines) 2. Hospital Cost Comparison Tool (ZIP code search with cost comparison) 3. Financial Readiness Score (12-question quiz with 0-100 scoring) 4. Money-Saving Milestones (gamified task tracker with badges) 5. Baby Name + 529 Projection (name picker with compound growth calculator) 6. State Insurance Dashboard Enhancement (state-specific enrollment deadlines) ### Files Created - `/Users/aleckennedy/.openclaw/workspace/babynest/app/financial-timeline/page.tsx` (14",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3727460145950317,
+      "maxScore": 0.3727460145950317,
+      "firstRecalledAt": "2026-05-14T14:35:57.318Z",
+      "lastRecalledAt": "2026-05-14T14:35:57.318Z",
+      "queryHashes": [
+        "941a47df6e8e"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "week-by-week",
+        "12-question",
+        "0-100",
+        "money-saving",
+        "state-specific",
+        "users/aleckennedy",
+        "may",
+        "babynest"
+      ]
+    },
+    "memory:memory/2026-05-13.md:1:34": {
+      "key": "memory:memory/2026-05-13.md:1:34",
+      "path": "memory/2026-05-13.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# Memory Log - May 13, 2026 ## BabyNest Deployment Session ### Newsletter System - COMPLETE - Created newsletter subscription API at `/api/newsletter/route.ts` - Stores subscribers in Supabase `newsletter_subscribers` table - Added admin dashboard at `/admin/newsletter` with authentication - Blog page has working newsletter signup form ### Deployment Attempts - IN PROGRESS - Multiple Netlify deploy attempts with various fixes - Key fixes applied: - Added missing `zod` dependency - Added `tailwind.config.js` - Fixed TypeScript errors in push notification routes - Removed problematic Stripe and push/send routes temporarily - Blocker: Stripe API keys needed in environment variables",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3513888418674469,
+      "maxScore": 0.3513888418674469,
+      "firstRecalledAt": "2026-05-14T14:35:57.318Z",
+      "lastRecalledAt": "2026-05-14T14:35:57.318Z",
+      "queryHashes": [
+        "941a47df6e8e"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "api/newsletter/route.ts",
+        "newsletter-subscribers",
+        "admin/newsletter",
+        "tailwind.config.js",
+        "push/send",
+        "log",
+        "may",
+        "babynest"
+      ]
+    },
+    "memory:memory/2026-05-14.md:26:58": {
+      "key": "memory:memory/2026-05-14.md:26:58",
+      "path": "memory/2026-05-14.md",
+      "startLine": 26,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "### Technical Notes - Built directly (no subagents) due to model availability issues - Used Ollama kimi-k2.5:cloud for all implementation - Followed existing BabyNest design system (Tailwind, warm colors) - All components are responsive TypeScript React # Memory - May 14, 2026 ## BabyNest Development Session ### Completed Work - Successfully built all 6 differentiation features for BabyNest app: 1. Financial Timeline by Trimester (week-by-week pregnancy finance deadlines) 2. Hospital Cost Comparison Tool (ZIP code search with cost comparison) 3. Financial Readiness Score (12-question quiz with 0-100 scoring) 4. Money-Saving Milestones (gamified task tracker with badges) 5. Baby",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3850889205932617,
+      "maxScore": 0.3850889205932617,
+      "firstRecalledAt": "2026-05-16T20:43:23.338Z",
+      "lastRecalledAt": "2026-05-16T20:43:23.338Z",
+      "queryHashes": [
+        "5a3529ecc9fc"
+      ],
+      "recallDays": [
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "kimi-k2.5",
+        "week-by-week",
+        "12-question",
+        "0-100",
+        "money-saving",
+        "technical",
+        "built",
+        "directly"
+      ]
+    },
+    "memory:memory/2026-05-14.md:50:85": {
+      "key": "memory:memory/2026-05-14.md:50:85",
+      "path": "memory/2026-05-14.md",
+      "startLine": 50,
+      "endLine": 85,
+      "source": "memory",
+      "snippet": "- `/Users/aleckennedy/.openclaw/workspace/babynest/app/baby-name/page.tsx` (10.5KB) ### Deployment Status - ZIP file ready: `~/Desktop/babynest-full.zip` (369KB) - Target: babynest12.netlify.app - Pending: Navigation links update, Stripe Price IDs in env vars ### Technical Notes - Built directly (no subagents) due to model availability issues - Used Ollama kimi-k2.5:cloud for all implementation - Followed existing BabyNest design system (Tailwind, warm colors) - All components are responsive TypeScript React --- ## Later Session - May 14, 2026 (Afternoon) ### Deployment Success! 🎉 **Status:** Successfully deployed BabyNest with all 6 differentiation features to Netlify! **URL:** https",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3811486184597015,
+      "maxScore": 0.3811486184597015,
+      "firstRecalledAt": "2026-05-16T20:43:23.338Z",
+      "lastRecalledAt": "2026-05-16T20:43:23.338Z",
+      "queryHashes": [
+        "5a3529ecc9fc"
+      ],
+      "recallDays": [
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "users/aleckennedy",
+        "10.5kb",
+        "desktop/babynest-full.zip",
+        "babynest12.netlify.app",
+        "kimi-k2.5",
+        "users",
+        "aleckennedy",
+        "openclaw"
+      ]
+    },
+    "memory:memory/2026-05-14.md:1:36": {
+      "key": "memory:memory/2026-05-14.md:1:36",
+      "path": "memory/2026-05-14.md",
+      "startLine": 1,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "# Memory - May 14, 2026 ## BabyNest Development Session ### Completed Work - Successfully built all 6 differentiation features for BabyNest app: 1. Financial Timeline by Trimester (week-by-week pregnancy finance deadlines) 2. Hospital Cost Comparison Tool (ZIP code search with cost comparison) 3. Financial Readiness Score (12-question quiz with 0-100 scoring) 4. Money-Saving Milestones (gamified task tracker with badges) 5. Baby Name + 529 Projection (name picker with compound growth calculator) 6. State Insurance Dashboard Enhancement (state-specific enrollment deadlines) ### Files Created - `/Users/aleckennedy/.openclaw/workspace/babynest/app/financial-timeline/page.tsx` (14",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3755015641450882,
+      "maxScore": 0.3755015641450882,
+      "firstRecalledAt": "2026-05-16T20:43:23.338Z",
+      "lastRecalledAt": "2026-05-16T20:43:23.338Z",
+      "queryHashes": [
+        "5a3529ecc9fc"
+      ],
+      "recallDays": [
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "week-by-week",
+        "12-question",
+        "0-100",
+        "money-saving",
+        "state-specific",
+        "users/aleckennedy",
+        "may",
+        "babynest"
+      ]
+    },
+    "memory:memory/2026-05-14.md:141:188": {
+      "key": "memory:memory/2026-05-14.md:141:188",
+      "path": "memory/2026-05-14.md",
+      "startLine": 141,
+      "endLine": 188,
+      "source": "memory",
+      "snippet": "4. **Baby Name Rankings** (`/baby-names`) - Top 100 boys, 100 girls, 100 gender-neutral (300 total) - Meanings, origins, popularity trends (📈📉➡️) - Search by name/meaning/origin - Filter by letter and origin 5. **Community Q&A** (`/community`) - 5 categories: Sleep 😴, Feeding 🍼, Finances 💰, Working Parents 💼, Medical 🩺 - 15 pre-populated questions with expert-verified answers - Upvoting on questions AND answers - \"Expert Verified\" badges with shield icons ### Dashboard Integration - Added \"Discover\" section to dashboard with 5 quick-access cards - Cards link to all new BabyCenter features - Responsive grid: 2 cols mobile → 5 cols desktop ### Navigation Updat",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3678080886602402,
+      "maxScore": 0.3678080886602402,
+      "firstRecalledAt": "2026-05-16T20:43:23.338Z",
+      "lastRecalledAt": "2026-05-16T20:43:23.338Z",
+      "queryHashes": [
+        "5a3529ecc9fc"
+      ],
+      "recallDays": [
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "baby-names",
+        "gender-neutral",
+        "name/meaning/origin",
+        "pre-populated",
+        "expert-verified",
+        "quick-access",
+        "baby",
+        "name"
       ]
     }
   }

@@ -540,3 +540,50 @@ error: unknown option '--check-overdue'
 error: unknown option '--check-overdue'
 error: unknown option '--check-overdue'
 error: unknown option '--check-overdue'
+error: too many arguments for 'skills'. Expected 0 arguments but got 2.
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: too many arguments for 'skills'. Expected 0 arguments but got 2.
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: too many arguments for 'skills'. Expected 0 arguments but got 2.
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+error: unknown option '--check-overdue'
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+Too many arguments for this command.
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help
+OpenClaw does not recognize option "--check-overdue".
+Try: openclaw skills run --help

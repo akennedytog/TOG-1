@@ -1,26 +1,26 @@
 [
   {
-    "text": "🧵 Top 10 things you can do with Clawdbot (your personal AI assistant) — Thread 👇\n\n1/ Schedule complex tasks\n2/ Research and summarize articles\n3/ Draft emails and messages\n4/ Code review and debugging\n5/ Generate content ideas\n6/ Analyze data and reports\n7/ Set reminders and follow-ups\n8/ Translate documents\n9/ Create presentations\n10/ Brainstorm solutions\n\nWhat would you automate first?",
+    "text": "\ud83e\uddf5 Top 10 things you can do with Clawdbot (your personal AI assistant) \u2014 Thread \ud83d\udc47\n\n1/ Schedule complex tasks\n2/ Research and summarize articles\n3/ Draft emails and messages\n4/ Code review and debugging\n5/ Generate content ideas\n6/ Analyze data and reports\n7/ Set reminders and follow-ups\n8/ Translate documents\n9/ Create presentations\n10/ Brainstorm solutions\n\nWhat would you automate first?",
     "type": "thread",
     "scheduledFor": null
   },
   {
-    "text": "Clawdbot use case: I needed to analyze 50 customer feedback emails.\n\nInstead of reading each one:\n→ Clawdbot extracted key themes\n→ Summarized top complaints\n→ Suggested 3 action items\n→ Time saved: 2 hours\n\nAI is not just for big companies.",
+    "text": "Clawdbot use case: I needed to analyze 50 customer feedback emails.\n\nInstead of reading each one:\n\u2192 Clawdbot extracted key themes\n\u2192 Summarized top complaints\n\u2192 Suggested 3 action items\n\u2192 Time saved: 2 hours\n\nAI is not just for big companies.",
     "type": "insight",
     "scheduledFor": null
   },
   {
-    "text": "Real talk: Most AI 'productivity hacks' are just faster typing.\n\nThe real wins come from:\n→ Delegating entire workflows\n→ Building feedback loops\n→ Letting AI make suggestions you approve\n\nClawdbot does the second one. That's the difference.",
+    "text": "Real talk: Most AI 'productivity hacks' are just faster typing.\n\nThe real wins come from:\n\u2192 Delegating entire workflows\n\u2192 Building feedback loops\n\u2192 Letting AI make suggestions you approve\n\nClawdbot does the second one. That's the difference.",
     "type": "insight",
     "scheduledFor": null
   },
   {
-    "text": "SMB owners: You do not need an AI strategy.\n\nYou need ONE task automated this week.\n\nPick something that:\n• Takes 30+ minutes\n• Happens weekly\n• Follows a pattern\n\nThat is your starting point. Everything else is noise.",
+    "text": "SMB owners: You do not need an AI strategy.\n\nYou need ONE task automated this week.\n\nPick something that:\n\u2022 Takes 30+ minutes\n\u2022 Happens weekly\n\u2022 Follows a pattern\n\nThat is your starting point. Everything else is noise.",
     "type": "framework",
     "scheduledFor": null
   },
   {
-    "text": "Clawdbot feature spotlight: Memory that persists.\n\nUnlike ChatGPT, Clawdbot remembers:\n→ Your preferences\n→ Past conversations\n→ Project context\n→ Your writing style\n\nIt gets smarter the more you use it.",
+    "text": "Clawdbot feature spotlight: Memory that persists.\n\nUnlike ChatGPT, Clawdbot remembers:\n\u2192 Your preferences\n\u2192 Past conversations\n\u2192 Project context\n\u2192 Your writing style\n\nIt gets smarter the more you use it.",
     "type": "feature",
     "scheduledFor": null
   },
@@ -40,12 +40,12 @@
     "scheduledFor": null
   },
   {
-    "text": "Use case: Content calendar management\n\nBefore:\n→ 3 hours planning posts\n→ Manual scheduling\n→ Inconsistent timing\n\nWith Clawdbot:\n→ Describe your goals\n→ AI generates calendar\n→ Auto-schedules to Buffer/Twitter\n→ Time saved: 2.5 hours/week",
+    "text": "Use case: Content calendar management\n\nBefore:\n\u2192 3 hours planning posts\n\u2192 Manual scheduling\n\u2192 Inconsistent timing\n\nWith Clawdbot:\n\u2192 Describe your goals\n\u2192 AI generates calendar\n\u2192 Auto-schedules to Buffer/Twitter\n\u2192 Time saved: 2.5 hours/week",
     "type": "case-study",
     "scheduledFor": null
   },
   {
-    "text": "The businesses winning with AI right now are not the ones with the biggest models.\n\nThey are the ones with the tightest feedback loops.\n\nShip → Measure → Learn → Ship again\n\nSpeed of iteration beats size of model. Every time.",
+    "text": "The businesses winning with AI right now are not the ones with the biggest models.\n\nThey are the ones with the tightest feedback loops.\n\nShip \u2192 Measure \u2192 Learn \u2192 Ship again\n\nSpeed of iteration beats size of model. Every time.",
     "type": "insight",
     "scheduledFor": null
   },
@@ -60,22 +60,22 @@
     "scheduledFor": null
   },
   {
-    "text": "Behind the scenes: How we use Clawdbot to build TheOneGroupAI\n\n→ Drafts Twitter threads\n→ Reviews code changes\n→ Summarizes customer calls\n→ Generates newsletter ideas\n→ Tracks project tasks\n\nWe eat our own dog food. It works.",
+    "text": "Behind the scenes: How we use Clawdbot to build TheOneGroupAI\n\n\u2192 Drafts Twitter threads\n\u2192 Reviews code changes\n\u2192 Summarizes customer calls\n\u2192 Generates newsletter ideas\n\u2192 Tracks project tasks\n\nWe eat our own dog food. It works.",
     "type": "behind-scenes",
     "scheduledFor": null
   },
   {
-    "text": "The 3-Question AI Readiness Test:\n\n1. Do you repeat this task weekly?\n2. Does it follow a pattern you could explain?\n3. Would a 10% improvement matter?\n\nIf yes to all → You are ready for AI automation\n\nMost businesses have 5-10 tasks that pass this test.",
+    "text": "The 3-Question AI Readiness Test:\n\n1. Do you repeat this task weekly?\n2. Does it follow a pattern you could explain?\n3. Would a 10% improvement matter?\n\nIf yes to all \u2192 You are ready for AI automation\n\nMost businesses have 5-10 tasks that pass this test.",
     "type": "framework",
     "scheduledFor": null
   },
   {
-    "text": "Clawdbot use case: Email triage\n\nProblem: 200+ emails/day, important ones buried\n\nSolution:\n→ Clawdbot scans inbox hourly\n→ Flags urgent items\n→ Summarizes newsletters\n→ Drafts responses to common questions\n\nResult: Inbox zero by 10am, daily.",
+    "text": "Clawdbot use case: Email triage\n\nProblem: 200+ emails/day, important ones buried\n\nSolution:\n\u2192 Clawdbot scans inbox hourly\n\u2192 Flags urgent items\n\u2192 Summarizes newsletters\n\u2192 Drafts responses to common questions\n\nResult: Inbox zero by 10am, daily.",
     "type": "case-study",
     "scheduledFor": null
   },
   {
-    "text": "What is your biggest blocker with AI right now?\n\nA) Do not know where to start\nB) Tried tools that did not deliver\nC) Worried about cost/ROI\nD) Team resistance to change\n\nReply A/B/C/D — I will share specific resources for each.",
+    "text": "What is your biggest blocker with AI right now?\n\nA) Do not know where to start\nB) Tried tools that did not deliver\nC) Worried about cost/ROI\nD) Team resistance to change\n\nReply A/B/C/D \u2014 I will share specific resources for each.",
     "type": "poll",
     "scheduledFor": null
   },
@@ -85,18 +85,13 @@
     "scheduledFor": null
   },
   {
-    "text": "Use case: Meeting prep and follow-up\n\nBefore meetings:\n→ Clawdbot researches attendees\n→ Summarizes past interactions\n→ Suggests talking points\n\nAfter meetings:\n→ Auto-generates summary\n→ Creates action items\n→ Schedules follow-ups\n\nTime saved: 45 min per meeting",
+    "text": "Use case: Meeting prep and follow-up\n\nBefore meetings:\n\u2192 Clawdbot researches attendees\n\u2192 Summarizes past interactions\n\u2192 Suggests talking points\n\nAfter meetings:\n\u2192 Auto-generates summary\n\u2192 Creates action items\n\u2192 Schedules follow-ups\n\nTime saved: 45 min per meeting",
     "type": "case-study",
     "scheduledFor": null
   },
   {
     "text": "Building an AI business while using AI to build it is... meta.\n\nEvery day I discover new edge cases.\nEvery day the system gets smarter.\n\nThe product IS the process.\n\nDocumenting everything so others can learn from our mistakes.",
     "type": "building-in-public",
-    "scheduledFor": null
-  },
-  {
-    "text": "Sunday reflection:\n\nThe most surprising thing about building with AI?\n\nIt is not the technology.\nIt is how fast your own assumptions get challenged.\n\nWhat I thought users wanted ≠ What they actually need\n\nThe AI keeps me honest.",
-    "type": "reflection",
     "scheduledFor": null
   }
 ]

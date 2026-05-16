@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Green rounded square background -->
+  <rect x="5" y="5" width="90" height="90" rx="25" fill="#5D7A5D"/>
+  
+  <!-- White baby face outline -->
+  <g fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head outline -->
+    <circle cx="42" cy="48" r="22"/>
+    <!-- Hair swirl -->
+    <path d="M42 26 Q52 20 50 32"/>
+    <!-- Left eye -->
+    <circle cx="35" cy="44" r="2.5" fill="white" stroke="none"/>
+    <!-- Right eye -->
+    <circle cx="49" cy="44" r="2.5" fill="white" stroke="none"/>
+    <!-- Smile -->
+    <path d="M36 55 Q42 60 48 55"/>
+    <!-- Hands -->
+    <ellipse cx="18" cy="48" rx="6" ry="8" transform="rotate(-30 18 48)"/>
+    <ellipse cx="66" cy="48" rx="6" ry="8" transform="rotate(30 66 48)"/>
+  </g>
+  
+  <!-- Heart badge -->
+  <circle cx="78" cy="22" r="18" fill="#C75B3A"/>
+  <path d="M78 30 L71.5 23.5 C69 21 69 17.5 71.5 15 C74 12.5 77.5 12.5 80 15 L78 17 L76 15 C73.5 12.5 77 12.5 79.5 15 L84.5 20 C87 22.5 87 26 84.5 28.5 L78 35" fill="white" transform="scale(0.6) translate(52 8)"/>
+  <path d="M78 28 C72 22 72 16 78 14 C84 16 84 22 78 28" fill="white" transform="scale(0.5) translate(78 16)"/>
+</svg>

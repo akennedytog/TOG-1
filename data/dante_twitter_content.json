@@ -605,6 +605,27 @@
       "generated_at": "2026-05-12T09:16:54.561049",
       "type": "insight",
       "status": "ready"
+    },
+    {
+      "text": "Real estate agents in Boynton Beach:\n\nYour best leads come when you're showing houses.\n\nThat's also when you can't answer.\n\nAI can:\n\u2705 Qualify buyer vs tire-kicker\n\u2705 Schedule showings\n\u2705 Send listings\n\u2705 Follow up automatically\n\nYou focus on closing. AI handles the noise.\n\n[08:13]\n\n[Generated 08:13]",
+      "source": "arlo:Real Estate",
+      "generated_at": "2026-05-13T08:13:12.890129",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Local business in Boynton Beach:\n\nThe biggest advantage AI gives you?\n\nNot replacing people.\n\nIt's being available when your competitors aren't.\n\n24/7. Instant. Professional.\n\nThat's how you win local markets.\n\n[08:13]\n\n[Generated 08:13]",
+      "source": "arlo:Accounting",
+      "generated_at": "2026-05-13T08:13:12.890809",
+      "type": "insight",
+      "status": "ready"
+    },
+    {
+      "text": "Law firms in Lake Worth are drowning in intake.\n\nEvery missed call = potential $5K-50K case.\n\nAI doesn't replace attorneys.\nIt qualifies leads before they ever reach your desk.\n\nThe best part? It works at 2 AM when you're sleeping.\n\n[08:13]\n\n[Generated 08:13]",
+      "source": "arlo:Legal",
+      "generated_at": "2026-05-13T08:13:12.891273",
+      "type": "insight",
+      "status": "ready"
     }
   ],
   "assessment_angles": [
@@ -630,7 +651,7 @@
       "status": "ready"
     }
   ],
-  "total_generated": 87,
-  "last_run": "2026-05-12T09:16:54.561207",
+  "total_generated": 90,
+  "last_run": "2026-05-13T08:13:12.891431",
   "deduplicated": true
 }

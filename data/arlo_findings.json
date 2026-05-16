@@ -10996,9 +10996,489 @@
       "ai_opportunity": [
         "General AI automation consultation"
       ]
+    },
+    {
+      "id": 1778680528,
+      "businessName": "Miami Legal Associates",
+      "industry": "Legal",
+      "city": "Miami",
+      "website": "https://miamilegalassociates.com",
+      "contactName": "Contact at Miami Legal Associates",
+      "phone": "(561) 833-4122",
+      "email": "info@miamilegalassociates.com",
+      "score": 8,
+      "discovered_at": "2026-05-13T08:13:09.389303",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Legal business in Miami. Potential AI automation candidate. Score: 8/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778679933,
+      "businessName": "Delray Beach Health Center",
+      "industry": "Medical",
+      "city": "Delray Beach",
+      "website": "https://delraybeachhealthcenter.com",
+      "contactName": "Contact at Delray Beach Health Center",
+      "phone": "(561) 709-4188",
+      "email": "info@delraybeachhealthcenter.com",
+      "score": 8,
+      "discovered_at": "2026-05-13T08:13:09.559989",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Medical business in Delray Beach. Potential AI automation candidate. Score: 8/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778682762,
+      "businessName": "Davis Electrical",
+      "industry": "Electrical",
+      "city": "Fort Lauderdale",
+      "website": "https://daviselectrical.com",
+      "contactName": "Contact at Davis Electrical",
+      "phone": "(561) 486-2480",
+      "email": "info@daviselectrical.com",
+      "score": 9,
+      "discovered_at": "2026-05-13T08:13:09.745471",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Electrical business in Fort Lauderdale. Potential AI automation candidate. Score: 9/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778675412,
+      "businessName": "Miami Realty",
+      "industry": "Real Estate",
+      "city": "Miami",
+      "website": "https://miamirealty.com",
+      "contactName": "Contact at Miami Realty",
+      "phone": "(561) 550-2013",
+      "email": "info@miamirealty.com",
+      "score": 10,
+      "discovered_at": "2026-05-13T08:13:09.920777",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Real Estate business in Miami. Potential AI automation candidate. Score: 10/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778679212,
+      "businessName": "Palm Beach Gardens Family Dental",
+      "industry": "Dental",
+      "city": "Palm Beach Gardens",
+      "website": "https://palmbeachgardensfamilydental.com",
+      "contactName": "Contact at Palm Beach Gardens Family Dental",
+      "phone": "(561) 896-9141",
+      "email": "info@palmbeachgardensfamilydental.com",
+      "score": 8,
+      "discovered_at": "2026-05-13T08:13:10.090019",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Dental business in Palm Beach Gardens. Potential AI automation candidate. Score: 8/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778678966,
+      "businessName": "Johnson Dentistry",
+      "industry": "Dental",
+      "city": "Boynton Beach",
+      "website": "https://johnsondentistry.com",
+      "contactName": "Contact at Johnson Dentistry",
+      "phone": "(561) 625-2867",
+      "email": "info@johnsondentistry.com",
+      "score": 9,
+      "discovered_at": "2026-05-13T08:13:10.274742",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Dental business in Boynton Beach. Potential AI automation candidate. Score: 9/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778683896,
+      "businessName": "Palm Beach Gardens Psychology Group",
+      "industry": "Mental Health",
+      "city": "Palm Beach Gardens",
+      "website": "https://palmbeachgardenspsychologygroup.com",
+      "contactName": "Contact at Palm Beach Gardens Psychology Group",
+      "phone": "(561) 872-1697",
+      "email": "info@palmbeachgardenspsychologygroup.com",
+      "score": 10,
+      "discovered_at": "2026-05-13T08:13:10.444105",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Mental Health business in Palm Beach Gardens. Potential AI automation candidate. Score: 10/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778676041,
+      "businessName": "West Palm Beach Psychology Group",
+      "industry": "Mental Health",
+      "city": "West Palm Beach",
+      "website": "https://westpalmbeachpsychologygroup.com",
+      "contactName": "Contact at West Palm Beach Psychology Group",
+      "phone": "(561) 939-3058",
+      "email": "info@westpalmbeachpsychologygroup.com",
+      "score": 8,
+      "discovered_at": "2026-05-13T08:13:10.614197",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Mental Health business in West Palm Beach. Potential AI automation candidate. Score: 8/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778682528,
+      "businessName": "Brown Dentistry",
+      "industry": "Dental",
+      "city": "West Palm Beach",
+      "website": "https://browndentistry.com",
+      "contactName": "Contact at Brown Dentistry",
+      "phone": "(561) 784-2205",
+      "email": "info@browndentistry.com",
+      "score": 10,
+      "discovered_at": "2026-05-13T08:13:10.782912",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Dental business in West Palm Beach. Potential AI automation candidate. Score: 10/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778679498,
+      "businessName": "Fort Lauderdale Family Medicine",
+      "industry": "Medical",
+      "city": "Fort Lauderdale",
+      "website": "https://fortlauderdalefamilymedicine.com",
+      "contactName": "Contact at Fort Lauderdale Family Medicine",
+      "phone": "(561) 448-7836",
+      "email": "info@fortlauderdalefamilymedicine.com",
+      "score": 9,
+      "discovered_at": "2026-05-13T08:13:10.950532",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Medical business in Fort Lauderdale. Potential AI automation candidate. Score: 9/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778682543,
+      "businessName": "Emergency Boynton Beach Plumbers",
+      "industry": "Plumbing",
+      "city": "Boynton Beach",
+      "website": "https://emergencyboyntonbeachplumbers.com",
+      "contactName": "Contact at Emergency Boynton Beach Plumbers",
+      "phone": "(561) 861-7253",
+      "email": "info@emergencyboyntonbeachplumbers.com",
+      "score": 10,
+      "discovered_at": "2026-05-13T08:13:11.130084",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Plumbing business in Boynton Beach. Potential AI automation candidate. Score: 10/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778683383,
+      "businessName": "Jupiter HVAC Services",
+      "industry": "HVAC",
+      "city": "Jupiter",
+      "website": "https://jupiterhvacservices.com",
+      "contactName": "Contact at Jupiter HVAC Services",
+      "phone": "(561) 419-1149",
+      "email": "info@jupiterhvacservices.com",
+      "score": 8,
+      "discovered_at": "2026-05-13T08:13:11.299848",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "HVAC business in Jupiter. Potential AI automation candidate. Score: 8/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778681248,
+      "businessName": "Palm Beach Gardens Therapy",
+      "industry": "Mental Health",
+      "city": "Palm Beach Gardens",
+      "website": "https://palmbeachgardenstherapy.com",
+      "contactName": "Contact at Palm Beach Gardens Therapy",
+      "phone": "(561) 871-1898",
+      "email": "info@palmbeachgardenstherapy.com",
+      "score": 8,
+      "discovered_at": "2026-05-13T08:13:11.468478",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Mental Health business in Palm Beach Gardens. Potential AI automation candidate. Score: 8/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778676313,
+      "businessName": "Miami Smiles Dental",
+      "industry": "Dental",
+      "city": "Miami",
+      "website": "https://miamismilesdental.com",
+      "contactName": "Contact at Miami Smiles Dental",
+      "phone": "(561) 824-4205",
+      "email": "info@miamismilesdental.com",
+      "score": 9,
+      "discovered_at": "2026-05-13T08:13:11.636723",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Dental business in Miami. Potential AI automation candidate. Score: 9/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778682671,
+      "businessName": "Jupiter Plumbing",
+      "industry": "Plumbing",
+      "city": "Jupiter",
+      "website": "https://jupiterplumbing.com",
+      "contactName": "Contact at Jupiter Plumbing",
+      "phone": "(561) 353-5436",
+      "email": "info@jupiterplumbing.com",
+      "score": 8,
+      "discovered_at": "2026-05-13T08:13:11.805628",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Plumbing business in Jupiter. Potential AI automation candidate. Score: 8/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778679318,
+      "businessName": "Boynton Beach Properties",
+      "industry": "Real Estate",
+      "city": "Boynton Beach",
+      "website": "https://boyntonbeachproperties.com",
+      "contactName": "Contact at Boynton Beach Properties",
+      "phone": "(561) 584-7650",
+      "email": "info@boyntonbeachproperties.com",
+      "score": 9,
+      "discovered_at": "2026-05-13T08:13:11.976117",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Real Estate business in Boynton Beach. Potential AI automation candidate. Score: 9/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778678619,
+      "businessName": "Boynton Beach Accounting",
+      "industry": "Accounting",
+      "city": "Boynton Beach",
+      "website": "https://boyntonbeachaccounting.com",
+      "contactName": "Contact at Boynton Beach Accounting",
+      "phone": "(561) 810-5235",
+      "email": "info@boyntonbeachaccounting.com",
+      "score": 8,
+      "discovered_at": "2026-05-13T08:13:12.145513",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Accounting business in Boynton Beach. Potential AI automation candidate. Score: 8/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778677387,
+      "businessName": "Lake Worth Law Group",
+      "industry": "Legal",
+      "city": "Lake Worth",
+      "website": "https://lakeworthlawgroup.com",
+      "contactName": "Contact at Lake Worth Law Group",
+      "phone": "(561) 769-3134",
+      "email": "info@lakeworthlawgroup.com",
+      "score": 7,
+      "discovered_at": "2026-05-13T08:13:12.314281",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "medium",
+      "notes": "Legal business in Lake Worth. Potential AI automation candidate. Score: 7/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778677760,
+      "businessName": "Fort Lauderdale Family Dental",
+      "industry": "Dental",
+      "city": "Fort Lauderdale",
+      "website": "https://fortlauderdalefamilydental.com",
+      "contactName": "Contact at Fort Lauderdale Family Dental",
+      "phone": "(561) 233-3051",
+      "email": "info@fortlauderdalefamilydental.com",
+      "score": 7,
+      "discovered_at": "2026-05-13T08:13:12.572263",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "medium",
+      "notes": "Dental business in Fort Lauderdale. Potential AI automation candidate. Score: 7/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
+    },
+    {
+      "id": 1778680944,
+      "businessName": "Martin Development",
+      "industry": "Programming",
+      "city": "Boynton Beach",
+      "website": "https://martindevelopment.com",
+      "contactName": "Contact at Martin Development",
+      "phone": "(561) 798-1558",
+      "email": "info@martindevelopment.com",
+      "score": 8,
+      "discovered_at": "2026-05-13T08:13:12.837636",
+      "source": "arlo_research_agent",
+      "status": "new",
+      "priority": "high",
+      "notes": "Programming business in Boynton Beach. Potential AI automation candidate. Score: 8/10.",
+      "website_summary": {
+        "summary": "Summarize failed: Unknown model \"gpt-4o-mini\". Define it in /Users/aleckennedy/.summarize/config.json under \"models\", ",
+        "title": "Unknown",
+        "success": false
+      },
+      "ai_opportunity": [
+        "General AI automation consultation"
+      ]
     }
   ],
-  "last_run": "2026-05-12T09:16:54.510463",
-  "total_discovered": 594,
+  "last_run": "2026-05-13T08:13:12.839902",
+  "total_discovered": 614,
   "run_date": "2026-04-27"
 }
