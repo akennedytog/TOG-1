@@ -1,0 +1,40 @@
+{
+  "apps": [
+    {
+      "name": "langflow",
+      "script": "langflow",
+      "args": "run --host 127.0.0.1 --port 7870",
+      "cwd": "/Users/aleckennedy/.openclaw/workspace",
+      "interpreter": "none",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": "1G",
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      },
+      "out_file": "/Users/aleckennedy/.openclaw/workspace/logs/langflow-out.log",
+      "error_file": "/Users/aleckennedy/.openclaw/workspace/logs/langflow-error.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
+      "merge_logs": true
+    },
+    {
+      "name": "open-seo",
+      "script": "pnpm",
+      "args": "dev --host 127.0.0.1 --port 3017",
+      "cwd": "/Users/aleckennedy/.openclaw/workspace/_install-lab/2026-07-06-gh-stack/open-seo",
+      "interpreter": "none",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": "1G",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "out_file": "/Users/aleckennedy/.openclaw/workspace/logs/open-seo-out.log",
+      "error_file": "/Users/aleckennedy/.openclaw/workspace/logs/open-seo-error.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
+      "merge_logs": true
+    }
+  ]
+}
