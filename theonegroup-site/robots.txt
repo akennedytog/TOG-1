@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Sitemap: https://theonegroup.info/sitemap.xml
+
+# Disallow internal templates
+Disallow: /NAV_SNIPPET.html
+Disallow: /nav-*.html
+Disallow: /calendly-float.html
+Disallow: /email-popup.html
+

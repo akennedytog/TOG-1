@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BabyNest — AI-Powered Baby Financial Planning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #fef3e2 0%, #fde8d0 100%);
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ea580c;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-desc {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+        
+        .tech-stack {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 1rem;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .tech-stack h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .tech-tag {
+            background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .screenshots {
+            margin: 4rem 0;
+        }
+        
+        .screenshots h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .screenshot-card {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, #fef3e2 0%, #fde8d0 100%);
+            border: 2px dashed #f59e0b;
+            border-radius: 0.5rem;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+        
+        .contact {
+            text-align: center;
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 1rem;
+            margin-top: 4rem;
+        }
+        
+        .contact h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        
+        .private-notice {
+            background: rgba(234, 88, 12, 0.1);
+            border: 1px solid rgba(234, 88, 12, 0.3);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">BabyNest</h1>
+            <p class="tagline">AI-Powered Baby Financial Planning — Because every parent deserves clarity on the financial journey</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">$720M</div>
+                    <div class="stat-label">TAM</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Direct Competitors</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3.6M</div>
+                    <div class="stat-label">Annual Births (US)</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="private-notice">
+            🔒 <strong>Private Demo</strong> — This page is for potential employers only. Not indexed by search engines.
+        </div>
+        
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🏦</div>
+                <h3 class="feature-title">529 Plan Optimizer</h3>
+                <p class="feature-desc">Compare state tax benefits, rank options by your income and location. Never leave money on the table.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3 class="feature-title">Insurance Decoder</h3>
+                <p class="feature-desc">Translate plan jargon into actionable deadlines. Know exactly when to enroll to avoid $20,000+ uncovered bills.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3 class="feature-title">Timeline-Based Tasks</h3>
+                <p class="feature-desc">AI-powered prioritization — "Do this now" vs "Do this later" based on your pregnancy stage and deadlines.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3 class="feature-title">Budget Tracker</h3>
+                <p class="feature-desc">Category-based spending with smart suggestions. Track pregnancy costs, childcare, and savings goals.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">State-Aware Guidance</h3>
+                <p class="feature-desc">Automatically detects location, provides relevant deadlines and programs. California CalKids, Florida Prepaid, and more.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3 class="feature-title">AI Recommendations</h3>
+                <p class="feature-desc">Personalized suggestions based on income, location, due date, and existing benefits. No generic advice.</p>
+            </div>
+        </section>
+        
+        <section class="tech-stack">
+            <h2>Technical Stack</h2>
+            <div class="tech-grid">
+                <span class="tech-tag">Next.js 14</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Framer Motion</span>
+                <span class="tech-tag">Shadcn/ui</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Glassmorphism</span>
+            </div>
+        </section>
+        
+        <section class="screenshots">
+            <h2>App Screens</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">Dashboard Preview</div>
+                    <h3>Dashboard</h3>
+                    <p>Overview of tasks, savings, upcoming deadlines</p>
+                </div>
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">Timeline Preview</div>
+                    <h3>Financial Timeline</h3>
+                    <p>Pregnancy-to-preschool journey with key dates</p>
+                </div>
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">Insurance Hub Preview</div>
+                    <h3>Insurance Hub</h3>
+                    <p>Plan comparison and enrollment deadlines</p>
+                </div>
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">529 Planner Preview</div>
+                    <h3>529 Planner</h3>
+                    <p>State-by-state optimization and rankings</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact">
+            <h2>Interested in Learning More?</h2>
+            <p class="contact-info">This is a production-ready application with comprehensive audit complete.<br>Private repository access available upon request.</p>
+            <a href="mailto:akennedy@theonegroup.info" class="btn">Contact Alec Kennedy</a>
+            <p style="margin-top: 1rem; font-size: 0.875rem; color: #6b7280;">akennedy@theonegroup.info • 502-403-7201</p>
+        </section>
+        
+        <footer>
+            <p>© 2026 BabyNest — Built with Next.js, TypeScript, and AI-assisted development</p>
+            <p style="margin-top: 0.5rem;">Private demo page — not indexed by search engines</p>
+        </footer>
+    </div>
+</body>
+</html>
