@@ -36,7 +36,9 @@ FINDINGS = WS / "data/arlo_findings.json"
 CONNECTOR = "http://localhost:3000/v1/actions"
 FETCH = CONNECTOR + "/gmail.fetch_emails"
 
-# Lead statuses that count as "outreach sent, a reply is meaningful".
+# Lead statuses that count as "outreach went out, a reply is meaningful".
+# 'sent' = confirmed sent (reconcile_draft_status.py); 'drafted' = still pending.
+# Note: 'deleted_duplicate' leads are NOT outreach targets (Alec trashed dup drafts).
 OUTREACHED = {"drafted", "sent", "replied"}
 
 # ---- Reply classification (conservative) ------------------------------------
