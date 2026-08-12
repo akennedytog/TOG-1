@@ -130,7 +130,9 @@ The reason owners do it: **the roadmap alone usually pays for itself within 3 we
 
 If you'd rather start smaller, no pressure — I can also send you the free AI Reputation Snapshot and you can take it from there.
 
-Want me to block out 20 minutes this week to walk through your score and the roadmap? Just reply and I'll send my calendar.
+Want me to block out 20 minutes this week to walk through your score and the roadmap? Book a slot here and I'll see you on the call:
+
+👉 https://calendly.com/akennedy-theonegroup/30min
 
 —
 
@@ -159,7 +161,11 @@ Here's where things stand:
 
 The honest read: the businesses that act on this now are the ones that'll be getting the calls 6 months from now. The ones that wait will keep wondering why the phone got quiet.
 
-If you want in, reply "go" and I'll get you on my calendar this week. If not, no hard feelings — the door stays open.
+If you want in, book a slot here and I'll get you on my calendar this week:
+
+👉 https://calendly.com/akennedy-theonegroup/30min
+
+If not, no hard feelings — the door stays open.
 
 —
 
@@ -174,7 +180,7 @@ P.S. [Industry-matched note]
 
 - **Kit setup:** Create the 5 automations with these delays. Tag leads by industry (real estate, HVAC, etc.) so Email 5's P.S. and copy auto-match.
 - **Placeholders:** `[Score]` is filled from the tool's output; `[Industry]`/`[City]` from the form; `[First]` from the lead name.
-- **CTA links:** Email 4 + 5 link to the audit booking (Calendly). Email 3 "reply snapshot" → manual trigger for the free AI Reputation Snapshot.
+- **CTA links:** Email 4 + 5 link to the audit booking: **https://calendly.com/akennedy-theonegroup/30min** (confirmed live Calendly link, 2026-08-12). Email 3 "reply snapshot" → manual trigger for the free AI Reputation Snapshot.
 - **Benchmark tie-in:** The "State of Real Estate in South Florida" report can be sent as an attachment on Email 2 or used as the free snapshot — recycle the asset.
 - **Compliance:** All emails include unsubscribe + physical address line when added to Kit (per CAN-SPAM). Add before launch.
 - **A/B test:** Test Email 1 subject ("Your AI Visibility Score: [Score]/100" vs "Your [City] [Industry] AI score") and Email 2 vs Email 3 as the open-rate leader.

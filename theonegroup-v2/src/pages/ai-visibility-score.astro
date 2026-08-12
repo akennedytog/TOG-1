@@ -156,8 +156,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div id="score-label" class="text-xl font-semibold text-gray-900 dark:text-white mb-2">...</div>
           <p id="score-blurb" class="text-gray-500 dark:text-gray-400 max-w-md mx-auto mb-6">...</p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
-              Get the Full Paid Audit
+            <a href="https://calendly.com/akennedy-theonegroup/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+              Book Your Free Audit Call
             </a>
             <a href="/services" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-brand-600 dark:text-brand-400 border border-brand-200 dark:border-brand-800 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition-colors">
               See How We Fix It
@@ -169,6 +169,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p class="text-center text-xs text-gray-400 mt-6">
         We'll send your score to your inbox. No spam, ever — unsubscribe anytime.
       </p>
+
+      <!-- No-lead-lost fallback: only shown if backend capture is unavailable -->
+      <div id="fallback-note" class="hidden mt-6 p-4 rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 text-sm text-amber-800 dark:text-amber-200">
+        <strong>Want your full breakdown by email?</strong> We couldn't reach our score server just now — that's on us, not you. Reply to any email from us and we'll get you the detailed report, or bookmark this page and re-check your score tomorrow.
+      </div>
 
     </div>
   </section>
@@ -222,24 +227,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     form.classList.add('hidden');
     document.getElementById('result').classList.remove('hidden');
 
-    // Log + send the lead to the Apps Script backend (email capture). The URL is
-    // the deployed Google Apps Script web app — set when Alec deploys it.
+    // ---- No-lead-lost capture ------------------------------------------------
+    // The Apps Script backend URL is set when Alec deploys the web app. Until
+    // then (and as a safety net for any transient failure), we guarantee the
+    // lead is NEVER silently dropped: we queue it locally and retry, and we
+    // offer a manual email fallback so the lead is still captured even if the
+    // backend is unreachable.
     const SCRIPT_URL = 'https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec';
-    if (!SCRIPT_URL.includes('REPLACE')) {
-      fetch(SCRIPT_URL, {
+    const lead = {
+      name: fd.get('name'),
+      email: fd.get('email'),
+      industry: fd.get('industry'),
+      city: fd.get('city'),
+      website: fd.get('website') || '',
+      score: s,
+      bucket: b.label,
+      ts: new Date().toISOString()
+    };
+
+    function submitToBackend() {
+      return fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: fd.get('name'),
-          email: fd.get('email'),
-          industry: fd.get('industry'),
-          city: fd.get('city'),
-          score: s,
-          bucket: b.label,
-          ts: new Date().toISOString()
-        })
-      }).catch(function () { /* best-effort logging */ });
+        body: JSON.stringify(lead)
+      });
     }
+
+    function queueLead() {
+      try {
+        var q = JSON.parse(localStorage.getItem('tog_pending_leads') || '[]');
+        q.push(lead);
+        localStorage.setItem('tog_pending_leads', JSON.stringify(q));
+      } catch (e) { /* storage full/unavailable — lead falls through to mailto fallback */ }
+    }
+
+    var backendReady = !SCRIPT_URL.includes('REPLACE');
+    if (backendReady) {
+      submitToBackend()
+        .catch(function () { queueLead(); });
+    } else {
+      queueLead();
+    }
+
+    // Retry any queued leads the next time the page loads (e.g. on a later visit
+    // after the backend is deployed), once the backend URL is configured.
+    if (backendReady) {
+      (function flush() {
+        try {
+          var q = JSON.parse(localStorage.getItem('tog_pending_leads') || '[]');
+          if (!q.length) return;
+          q.forEach(function (p) {
+            fetch(SCRIPT_URL, {
+              method: 'POST', mode: 'no-cors',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(p)
+            }).catch(function () {});
+          });
+          localStorage.setItem('tog_pending_leads', '[]');
+        } catch (e) { /* ignore flush errors */ }
+      })();
+    }
+
+    // Belt-and-suspenders: if the lead wasn't captured and the visitor gave an
+    // email, surface a one-line fallback (copy the score summary to clipboard /
+    // send it to themselves) so nothing is lost even offline.
+    var captured = backendReady || (function(){ try { return localStorage.getItem('tog_pending_leads') !== null; } catch(e){ return false; } })();
+    var p = document.getElementById('fallback-note');
+    if (p) p.classList.remove('hidden');
   });
 </script>

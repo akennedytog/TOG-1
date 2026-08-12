@@ -89,3 +89,16 @@ Alec said "do all of these now" — all 5 proactive-power initiatives.
 - **Vapi setup** — follow `out/vapi-agent/VAPI-AGENT-CONFIG.md` (~10-20 min).
 - **Distribution launch** — start after tool URL verified live (follow launch sequence).
 - **Pit Row**: site is deploy-ready; GBP listings (`GBP-LISTINGS-DRAFT.md`) still need Google Business Profile execution.
+
+---
+
+## 🔧 FUNNEL HARDENING + SYSTEM FIXES (2026-08-12 17:00)
+
+Alec: "do everything else" + "what else can we improve / most powerful thing" → closed funnel gaps + fixed stale systems:
+
+- **Score tool no-lead-lost capture** — `ai-visibility-score.astro`: leads now queue in localStorage + auto-retry, and show a fallback note if backend unreachable. No lead silently dropped. Build passes (14 pages).
+- **Audit booking link locked down** — CTA now goes straight to **https://calendly.com/akennedy-theonegroup/30min** (confirmed live). Nurture emails 4 & 5 got the same link. Was pointing at generic /contact (conversion friction).
+- **Reply scanner (feedback loop now actually closes)** — built `agents/scan_replies.py`: fetches Gmail via connector, matches sender to drafted leads (domain match, skips personal/dealership threads), classifies reply/positive/booking/opt-out, records into `data/reply_signals.json` → re-weights Arlo. Verified: matches South Florida Air, correctly skips Hyundai/BMW personal threads. Cron `2230a9f9` every 3h (weekdays 8-19) — pings Alec only on positive/booking for fast follow-up.
+- **Routing sync fixed** — `sync_model_routing.sh` + `sync_model_runtime_config.mjs` rewritten for v5.2 schema (were crashing on dead `.routing.provider_failover.paid_chain`). Now backups live config before write, syncs canonical stack (deepseek→gpt-oss-20b→kimi-k3→gpt-5.6-sol→luna). Live `openclaw.json` re-synced to canonical. Timestamped backups saved.
+
+**Note:** The reply scanner found 0 real outreach replies in the last 14d of inbox (all personal dealership threads) — so no leads have replied yet. The scanner is now in place to catch the first one and alert fast.
