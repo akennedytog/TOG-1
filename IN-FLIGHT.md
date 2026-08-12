@@ -55,3 +55,37 @@ Alec said "do all of these now" — all 5 proactive-power initiatives.
 - **Lead magnet funnel** → `research/lead_magnet_funnel.md`: **Kit (ConvertKit) free plan** (10k subs — MailerLite collapsed to 250 in 2026). Build "Did AI Just Steal Your Call?" PDF + 60-sec **AI Visibility Score** web tool (Astro form → Apps Script → Sheets/Kit → 5-email nurture → $2,500 audit). 5-step build order + 5 distribution placements.
 
 **PENDING (next):** execute the builds — AI Visibility Score tool, lead-magnet PDF, Kit funnel, Vapi voice agent, distribution launch.
+
+---
+
+## 🚧 DEPLOY-BLOCKED UNTIL CREDITS RESET (2026-08-12)
+
+**Netlify credits exhausted — `netlify deploy --prod` blocked until ~2026-08-13.** Both sites have FRESH builds staged, ready to deploy in one session tomorrow:
+
+| Site | Deploy source | Staged in | Contains |
+|------|--------------|-----------|----------|
+| **theonegroup.info** | `theonegroup-v2/` (Astro) | `dist/` (built 08-10) | AI Visibility Score tool, real-estate-market-report landing w/ Kit embed, 13 pages |
+| **pitrowmiami.com** | `pitrowmiami-v2/` (Astro) | `dist/` (built 08-09) | 4 SEO blog posts (racing-sim-rental, corporate-team-building, f1-watch-party) |
+
+**TOMORROW DEPLOY SEQUENCE (after credits reset):**
+1. `theonegroup-v2`: fresh `npm run build` → temp-dir deploy method (see MEMORY.md) → `netlify deploy --prod`
+2. `pitrowmiami-v2`: temp-dir deploy → `netlify deploy --prod`
+3. Verify both live URLs + verify `/ai-visibility-score/` renders.
+4. THEN unpause distribution (Distribution Kit flags: nothing links the tool until URL verified live).
+
+## ✅ FUNNEL BUILD WORK DONE (non-deploy, 2026-08-12)
+
+- **AI Visibility Score tool** — page (`.astro`) + Apps Script backend (`.gs`) built & QA'd. Scoring rubric verified consistent frontend↔backend (buckets AI-Ready/At Risk/Invisible match). Deploy-ready.
+- **Lead-magnet PDFs** — 3 built (default/real-estate/HVAC) → `out/lead-magnet/` + Drive.
+- **Benchmark reports** — 4 built → `out/benchmarks/` + Drive.
+- **Kit setup guide + 5-email nurture sequence** — `KIT_SETUP_GUIDE.md`, `NURTURE_SEQUENCE.md` (full ready-to-paste email copy).
+- **Distribution Launch Kit** — `out/distribution-launch/DISTRIBUTION-LAUNCH-KIT.md` (FB groups x2, Nextdoor, Reddit value-thread, guest pitch, X pin + 3 tweets, launch sequence).
+- **Vapi voice agent config** — `out/vapi-agent/` (system prompt + setup + test script).
+- **Git**: funnel deliverables committed (`e495d89`, 19 files).
+
+## 🔜 QUEUED FOR TOMORROW (beyond deploy)
+
+- **Alec actions (not Netlify):** deploy the Apps Script web app → paste URL into `ai-visibility-score.astro`; create Kit account + form → swap `FORM_ID`; book audit CTA link.
+- **Vapi setup** — follow `out/vapi-agent/VAPI-AGENT-CONFIG.md` (~10-20 min).
+- **Distribution launch** — start after tool URL verified live (follow launch sequence).
+- **Pit Row**: site is deploy-ready; GBP listings (`GBP-LISTINGS-DRAFT.md`) still need Google Business Profile execution.
