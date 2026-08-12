@@ -1,0 +1,311 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const { title, description, image = '/assets/images/og-default.png' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" /></noscript>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url).toString()} />
+    <meta property="og:site_name" content="The One Group" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={Astro.url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, Astro.url).toString()} />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href={Astro.url} />
+    
+    <!-- Preconnect for third-party origins -->
+    <link rel="preconnect" href="https://plausible.io" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    
+    <!-- GA4 + Plausible are consent-gated: they only load after explicit opt-in.
+         See initAnalytics() below. Nothing tracks until the visitor accepts. -->
+    
+    <title>{title}</title>
+    <!-- Consent-gated analytics loader -->
+    <script>
+      // Consent state: localStorage 'tog_cookie_consent' = 'accepted' | 'declined' | null
+      window.togConsent = (function () {
+        try { return localStorage.getItem('tog_cookie_consent'); } catch (e) { return null; }
+      })();
+
+      function loadAnalytics() {
+        if (window.togConsent !== 'accepted') return;
+        // GA4
+        if (!window.gtag && !document.getElementById('gtag-script')) {
+          var gs = document.createElement('script');
+          gs.id = 'gtag-script';
+          gs.async = true;
+          gs.src = 'https://www.googletagmanager.com/gtag/js?id=G-KPKG2ZG2HR';
+          gs.onload = function () {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-KPKG2ZG2HR');
+          };
+          document.head.appendChild(gs);
+        }
+        // Plausible
+        if (!window.plausible && !document.getElementById('plausible-script')) {
+          var ps = document.createElement('script');
+          ps.id = 'plausible-script';
+          ps.defer = true;
+          ps.setAttribute('data-domain', 'theonegroup.info');
+          ps.src = 'https://plausible.io/js/plausible.js';
+          document.head.appendChild(ps);
+        }
+      }
+
+      function trackEvent(eventName, props) {
+        if (window.togConsent !== 'accepted') return; // no tracking before consent
+        var eventProps = props || {};
+        if (window.plausible) { window.plausible(eventName, { props: eventProps }); }
+        if (window.gtag) { window.gtag("event", eventName, eventProps); }
+      }
+      window.trackEvent = trackEvent;
+
+      // Returning visitor who already accepted: load analytics on idle
+      if (window.togConsent === 'accepted') {
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', loadAnalytics);
+        } else {
+          loadAnalytics();
+        }
+      }
+    </script>
+
+    <!-- Structured Data: Organization + LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "The One Group",
+      "description": "AI automation for SMBs — agent swarm system for lead generation, content, sales outreach, and operations in South Florida.",
+      "url": "https://theonegroup.info/",
+      "logo": "https://theonegroup.info/favicon.png",
+      "image": "https://theonegroup.info/assets/images/og-default.png",
+      "email": "akennedy@theonegroup.info",
+      "telephone": "+15024037201",
+      "areaServed": "South Florida, Miami, United States",
+      "priceRange": "$$",
+      "sameAs": []
+    }
+    </script>
+  </head>
+  <body>
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-lg">Skip to main content</a>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="/" class="flex items-center gap-2">
+            <span class="font-display font-bold text-xl gradient-text">The One Group</span>
+          </a>
+          
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex items-center gap-8">
+            <a href="/" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors" aria-label="Home">Home</a>
+            <a href="/services" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors" aria-label="Services">Services</a>
+            <a href="/case-studies" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors" aria-label="Case Studies">Case Studies</a>
+            <a href="/system-proof" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors" aria-label="System Proof">System Proof</a>
+            <a href="/ai-visibility-score" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-500 transition-colors" aria-label="Free AI Score">Free AI Score</a>
+            <a href="/blog" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors" aria-label="Blog">Blog</a>
+            <a href="/about" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors" aria-label="About">About</a>
+            <a href="/contact" class="btn-primary text-sm px-5 py-2.5">Get Started</a>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 dark:text-gray-400 hover:text-brand-500" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden pb-6">
+          <div class="flex flex-col gap-2">
+            <a href="/" class="px-4 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Home</a>
+            <a href="/services" class="px-4 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Services</a>
+            <a href="/case-studies" class="px-4 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Case Studies</a>
+            <a href="/system-proof" class="px-4 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">System Proof</a>
+            <a href="/ai-visibility-score" class="px-4 py-2.5 rounded-lg font-semibold text-brand-600 dark:text-brand-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Free AI Score</a>
+            <a href="/blog" class="px-4 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Blog</a>
+            <a href="/about" class="px-4 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">About</a>
+            <a href="/contact" class="btn-primary text-sm px-5 py-2.5 text-center mt-2">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <main id="main-content">
+      <slot />
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <span class="font-display font-bold text-xl gradient-text">The One Group</span>
+            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 max-w-md">
+              Practical AI automation for South Florida businesses. We build agent swarms that research leads, create content, and drive sales — so you can focus on what matters.
+            </p>
+          </div>
+          <div>
+            <h2 class="font-semibold text-sm text-gray-900 dark:text-gray-100 mb-4">Services</h2>
+            <div class="flex flex-col gap-2">
+              <a href="/services#audit" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">AI Audit</a>
+              <a href="/services#implementation" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">AI Implementation</a>
+              <a href="/services#intelligence" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">Competitor Intel</a>
+              <a href="/services#coaching" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">AI Coaching</a>
+              <a href="/ai-visibility-score" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">Free AI Visibility Score</a>
+              <a href="/real-estate-market-report" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">Real Estate Market Report</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-semibold text-sm text-gray-900 dark:text-gray-100 mb-4">Company</h2>
+            <div class="flex flex-col gap-2">
+              <a href="/about" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">About</a>
+              <a href="/case-studies" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">Case Studies</a>
+              <a href="/system-proof" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">System Proof</a>
+              <a href="/blog" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">Blog</a>
+              <a href="/contact" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">Contact</a>
+              <a href="/privacy" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">Privacy</a>
+              <a href="/terms" class="text-sm text-gray-600 dark:text-gray-400 hover:text-brand-500 transition-colors">Terms</a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+          <p class="text-sm text-gray-700 dark:text-gray-400 text-center">
+            &copy; {new Date().getFullYear()} The One Group. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Mobile menu toggle -->
+    <script>
+      document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+        document.getElementById('mobile-menu')?.classList.toggle('hidden');
+      });
+    </script>
+    <!-- Calendly floating widget -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Track CTA interactions
+        var bookButtons = document.querySelectorAll('a[href*="#book"], a[href*="calendly.com"], a[href*="/ai-agent-workshop"]');
+        bookButtons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var href = btn.getAttribute("href") || "";
+            if (window.trackEvent) {
+              window.trackEvent("cta_click", {
+                button: btn.textContent.trim(),
+                page: window.location.pathname,
+                href: href
+              });
+              if (href.indexOf("calendly.com") !== -1) {
+                window.trackEvent("calendly_booked", {
+                  page: window.location.pathname,
+                  source: "calendly_click"
+                });
+              }
+            }
+          });
+        });
+
+        // Track Calendly booking confirmations
+        window.addEventListener("message", function (e) {
+          if (!e || !e.data || e.data.event !== "calendly.event_scheduled") return;
+          if (window.trackEvent) {
+            window.trackEvent("calendly_booked", {
+              page: window.location.pathname,
+              source: "calendly_postmessage"
+            });
+          }
+        });
+      });
+    </script>
+    <!-- Cookie consent banner -->
+    <div id="cookie-banner" role="dialog" aria-modal="false" aria-label="Cookie consent" class="fixed bottom-0 inset-x-0 z-[100] hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="flex-1">
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              We use cookies and analytics to improve your experience and understand how our site is used. We never sell your data.
+              <a href="/privacy" class="text-brand-600 dark:text-brand-400 underline underline-offset-2 hover:no-underline">Privacy Policy</a>
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <button id="cookie-decline" class="px-4 py-2 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Decline</button>
+            <button id="cookie-accept" class="px-5 py-2 rounded-xl text-sm font-semibold text-white bg-brand-600 hover:bg-brand-500 transition-colors">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var banner = document.getElementById('cookie-banner');
+        var acceptBtn = document.getElementById('cookie-accept');
+        var declineBtn = document.getElementById('cookie-decline');
+        if (!banner) return;
+
+        function setConsent(value) {
+          try { localStorage.setItem('tog_cookie_consent', value); } catch (e) {}
+          window.togConsent = value;
+          banner.classList.add('hidden');
+          if (value === 'accepted') {
+            if (window.loadAnalytics) window.loadAnalytics();
+          }
+        }
+
+        if (acceptBtn) acceptBtn.addEventListener('click', function () { setConsent('accepted'); });
+        if (declineBtn) declineBtn.addEventListener('click', function () { setConsent('declined'); });
+
+        // Show banner only if no stored choice
+        if (window.togConsent === null) {
+          banner.classList.remove('hidden');
+        }
+      })();
+    </script>
+
+  </body>
+</html>

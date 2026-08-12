@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Free AI Visibility Score — Are You Showing Up in AI Search? | The One Group"
+  description="Take the free 60-second AI Visibility Score. See if your business shows up when customers ask AI for the best service near you — before they call your competitor."
+>
+
+  <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-brand-50/30 dark:from-gray-950 dark:via-gray-950 dark:to-brand-950/20">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Free 60-Second Check</span>
+      <h1 class="text-4xl sm:text-5xl font-display font-bold mt-4 mb-4">
+        Does AI Send Customers to You —<br class="hidden sm:block" /> or Your Competitor?
+      </h1>
+      <p class="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+        More people are asking ChatGPT, Gemini, and Google AI for the "best service near me" every day.
+        Take the 60-second score to see if your business shows up — or if you're invisible to the customers AI is now sending elsewhere.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-2xl mx-auto">
+
+      <!-- Form -->
+      <form id="score-form" class="space-y-6">
+        <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8">
+
+          <!-- Step 0: contact -->
+          <div class="space-y-4 mb-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your name</label>
+              <input type="text" name="name" required placeholder="Jane Smith"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Business email *</label>
+              <input type="email" name="email" required placeholder="you@yourbusiness.com"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none" />
+              <p class="text-xs text-gray-400 mt-1">Your score is sent here — and we'll share the full breakdown.</p>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200 dark:border-gray-800 pt-6 space-y-5">
+            <!-- Q1 -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">1. What industry are you in?</label>
+              <select name="industry" required
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none">
+                <option value="">Select...</option>
+                <option value="HVAC">HVAC / Heating & Cooling</option>
+                <option value="Plumbing">Plumbing</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Medical">Medical / Dental</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Home Services">Home Services</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Q2 -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">2. What city / service area?</label>
+              <input type="text" name="city" required placeholder="e.g. Fort Lauderdale"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none" />
+            </div>
+
+            <!-- Q2b: website -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your website URL</label>
+              <input type="url" name="website" placeholder="https://yourbusiness.com"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none" />
+              <p class="text-xs text-gray-400 mt-1">Optional — we use it to actually check your AI visibility.</p>
+            </div>
+
+            <!-- Q3 -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">3. When someone asks AI for the "best [your service] near you," do you show up?</label>
+              <div class="grid gap-2">
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_visibility" value="yes" class="accent-brand-600" /> <span>Yes, I show up</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_visibility" value="unsure" class="accent-brand-600" /> <span>Not sure</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_visibility" value="no" class="accent-brand-600" /> <span>No</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">4. Do you know what ChatGPT actually says about your business right now?</label>
+              <div class="grid gap-2">
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_reputation" value="yes" class="accent-brand-600" /> <span>Yes</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_reputation" value="no" class="accent-brand-600" /> <span>No</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Q5 -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">5. Does your website have details AI can quote (pricing, hours, reviews, service area)?</label>
+              <div class="grid gap-2">
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_quotable" value="yes" class="accent-brand-600" /> <span>Yes</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_quotable" value="partial" class="accent-brand-600" /> <span>Partially</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_quotable" value="no" class="accent-brand-600" /> <span>No</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Q6 -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">6. Have you lost a customer because they couldn't find you online?</label>
+              <div class="grid gap-2">
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_pain" value="yes" class="accent-brand-600" /> <span>Yes</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_pain" value="unsure" class="accent-brand-600" /> <span>Not sure</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 cursor-pointer">
+                  <input type="radio" name="q_pain" value="no" class="accent-brand-600" /> <span>No</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit"
+            class="w-full mt-8 inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+            Get My AI Visibility Score
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <!-- Result (hidden until scored) -->
+      <div id="result" class="hidden">
+        <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8 text-center">
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Your AI Visibility Score</p>
+          <div id="score-number" class="text-6xl sm:text-7xl font-display font-bold text-brand-600 dark:text-brand-400 my-4">0</div>
+          <div id="score-label" class="text-xl font-semibold text-gray-900 dark:text-white mb-2">...</div>
+          <p id="score-blurb" class="text-gray-500 dark:text-gray-400 max-w-md mx-auto mb-6">...</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+              Get the Full Paid Audit
+            </a>
+            <a href="/services" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-brand-600 dark:text-brand-400 border border-brand-200 dark:border-brand-800 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition-colors">
+              See How We Fix It
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-xs text-gray-400 mt-6">
+        We'll send your score to your inbox. No spam, ever — unsubscribe anytime.
+      </p>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  // Scoring rubric (0-100) — mirrors the lead-magnet research recommendation.
+  function computeScore(form) {
+    const vis = form.q_visibility?.value || '';
+    const rep = form.q_reputation?.value || '';
+    const quo = form.q_quotable?.value || '';
+    const pain = form.q_pain?.value || '';
+    const hasSite = !!form.website?.value?.trim();
+
+    let s = 0;
+    // Q3 visibility
+    if (vis === 'yes') s += 20;
+    else if (vis === 'unsure') s += 10;
+    else s += 0;
+    // Q4 reputation
+    if (rep === 'yes') s += 15;
+    // Q5 quotable content
+    if (quo === 'yes') s += 20;
+    else if (quo === 'partial') s += 10;
+    // Q6 pain (urgency)
+    if (pain === 'yes') s += 25;
+    else if (pain === 'unsure') s += 10;
+    // website bonus
+    if (hasSite) s += 20;
+    return Math.min(100, s);
+  }
+
+  function scoreBucket(s) {
+    if (s >= 80) return { label: 'AI-Ready', blurb: 'You show up well in AI search. A full audit can verify you stay ahead as AI answers keep evolving.' };
+    if (s >= 50) return { label: 'At Risk', blurb: 'AI may be sending some of your customers elsewhere. The full audit shows exactly where you lose them.' };
+    return { label: 'Invisible', blurb: 'You are likely losing calls to competitors right now. The full audit shows the fix, step by step.' };
+  }
+
+  const form = document.getElementById('score-form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const s = computeScore(form);
+    const b = scoreBucket(s);
+
+    // Show the score immediately (no wait for backend).
+    document.getElementById('score-number').textContent = s;
+    document.getElementById('score-label').textContent = b.label;
+    document.getElementById('score-blurb').textContent = b.blurb;
+    form.classList.add('hidden');
+    document.getElementById('result').classList.remove('hidden');
+
+    // Log + send the lead to the Apps Script backend (email capture). The URL is
+    // the deployed Google Apps Script web app — set when Alec deploys it.
+    const SCRIPT_URL = 'https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec';
+    if (!SCRIPT_URL.includes('REPLACE')) {
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: fd.get('name'),
+          email: fd.get('email'),
+          industry: fd.get('industry'),
+          city: fd.get('city'),
+          score: s,
+          bucket: b.label,
+          ts: new Date().toISOString()
+        })
+      }).catch(function () { /* best-effort logging */ });
+    }
+  });
+</script>
