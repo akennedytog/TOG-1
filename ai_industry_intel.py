@@ -103,9 +103,10 @@ class AIIndustryIntel:
         
         # Query 2: Funding/valuation news (mainstream + cutting edge)
         result = search(
-            "AI startup funding raised valuation 2026",
+            "AI startup funding round raised this week million",
             api_key=self.api_key, max_results=5,
             topic="news",
+            search_depth="advanced",
             include_domains=self.MAINSTREAM_DOMAINS
         )
         self.credits_used += 1
