@@ -56,7 +56,9 @@ class TwitterSupercharged:
         # Load posted history for dedup
         posted_log = self._load_posted_log()
         
-        # Morning post: Breaking news + insight
+        # --- 4 posts per day: 09:00, 11:00, 13:00, 20:00 ---
+        
+        # 1. Morning post (09:00): Breaking news + insight
         if pulse.get("breaking"):
             top_story = pulse["breaking"][0]
             content = self._craft_news_insight(top_story)
@@ -69,7 +71,20 @@ class TwitterSupercharged:
                     "engagement_tactic": "question_hook"
                 })
         
-        # Midday post: Contrarian take on trending topic
+        # 2. Late-morning post (11:00): Funding news reaction
+        if pulse.get("funding_news"):
+            funding = pulse["funding_news"][0]
+            content = self._craft_funding_reaction(funding)
+            if not self._is_duplicate(content, funding.get("url", ""), posted_log):
+                posts.append({
+                    "time": "11:00",
+                    "type": "funding_reaction",
+                    "content": content,
+                    "source": funding["url"],
+                    "engagement_tactic": "pattern_recognition"
+                })
+        
+        # 3. Midday post (13:00): Contrarian take on trending topic
         if pulse.get("trending_topics"):
             trend = pulse["trending_topics"][0]
             content = self._craft_contrarian_take(trend)
@@ -82,7 +97,7 @@ class TwitterSupercharged:
                     "engagement_tactic": "polarizing_question"
                 })
         
-        # Evening post: Framework/practical advice
+        # 4. Evening post (20:00): Framework/practical advice
         framework_content = self._craft_framework_post()
         if not self._is_duplicate(framework_content, "evergreen", posted_log):
             posts.append({
@@ -93,20 +108,69 @@ class TwitterSupercharged:
                 "engagement_tactic": "self_identification"
             })
         
-        # Optional: Funding news reaction
-        if pulse.get("funding_news"):
-            funding = pulse["funding_news"][0]
-            if any(word in funding["title"].lower() for word in ['million', 'billion', 'raised']):
-                content = self._craft_funding_reaction(funding)
-                if not self._is_duplicate(content, funding.get("url", ""), posted_log):
-                    posts.insert(1, {
-                        "time": "11:00",
-                        "type": "funding_reaction",
-                        "content": content,
-                        "source": funding["url"],
-                        "engagement_tactic": "pattern_recognition"
-                    })
+        # If any slot was deduped and we have fewer than 4, backfill with a second
+        # story from the same category so we always hit 4 posts/day.
+        if len(posts) < 4:
+            posts = self._backfill_to_four(posts, pulse, posted_log)
         
+        return posts
+    
+    def _backfill_to_four(self, posts: List[Dict], pulse: Dict, posted_log: List[Dict]) -> List[Dict]:
+        """Backfill any deduped slots so we always produce 4 posts/day."""
+        used_times = {p["time"] for p in posts}
+        used_urls = {p.get("source", "") for p in posts}
+        
+        # Try to fill missing slots from remaining breaking/trending/funding stories
+        candidates = []
+        for story in pulse.get("breaking", [])[1:]:
+            candidates.append(("09:00", "insight", self._craft_news_insight(story), story.get("url", "")))
+        for story in pulse.get("trending_topics", [])[1:]:
+            candidates.append(("13:00", "contrarian", self._craft_contrarian_take(story), story.get("url", "")))
+        for story in pulse.get("funding_news", [])[1:]:
+            candidates.append(("11:00", "funding_reaction", self._craft_funding_reaction(story), story.get("url", "")))
+        
+        for time_slot, ptype, content, url in candidates:
+            if len(posts) >= 4:
+                break
+            if time_slot in used_times:
+                continue
+            if url in used_urls:
+                continue
+            if self._is_duplicate(content, url, posted_log):
+                continue
+            posts.append({
+                "time": time_slot,
+                "type": ptype,
+                "content": content,
+                "source": url,
+                "engagement_tactic": "question_hook" if ptype == "insight" else ("pattern_recognition" if ptype == "funding_reaction" else "polarizing_question")
+            })
+            used_times.add(time_slot)
+            used_urls.add(url)
+        
+        # If still short (e.g. all news deduped), add a second evergreen framework post
+        if len(posts) < 4:
+            evergreen_templates = [
+                "The 3-question AI readiness test for your business:\n\n1. Do you repeat this task weekly?\n2. Does it follow a clear set of rules?\n3. Would automating it save you 2+ hours?\n\nAnswer yes to all three? That's your first automation.",
+                "Most SMBs don't need a $50k AI overhaul.\n\nThey need ONE repetitive task automated this week.\n\nWhat's the single task eating 5+ hours of your week?",
+                "The AI adoption trap:\n\nBuying 5 tools and using none consistently.\n\nThe fix: pick ONE task, automate it, measure the hours saved. Repeat.\n\nConsistency beats tool count every time.",
+            ]
+            for tpl in evergreen_templates:
+                if len(posts) >= 4:
+                    break
+                if self._is_duplicate(tpl, "evergreen", posted_log):
+                    continue
+                posts.append({
+                    "time": "20:00" if "20:00" not in used_times else "13:00",
+                    "type": "framework",
+                    "content": tpl,
+                    "source": "evergreen",
+                    "engagement_tactic": "self_identification"
+                })
+                used_times.add(posts[-1]["time"])
+        
+        # Sort by time for a clean daily schedule
+        posts.sort(key=lambda p: p["time"])
         return posts
     
     def _load_posted_log(self) -> List[Dict]:

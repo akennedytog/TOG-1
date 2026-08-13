@@ -163,6 +163,14 @@ class AIIndustryIntel:
         # Reject obvious press-release URL patterns
         if '/press-release' in url_lower or '/globenewswire' in url_lower or '/newswire' in url_lower:
             return False
+        # Reject listing/archive/index pages (not real articles)
+        bad_paths = [
+            '/list/', '/recent', '/abs/', '/search', '/index', '/archive',
+            '/category/', '/tag/', '/topic/', '/page', '/latest', '/news',
+        ]
+        for p in bad_paths:
+            if p in url_lower:
+                return False
         return True
     
     def _extract_content_angles(self, intel: Dict) -> List[Dict]:
