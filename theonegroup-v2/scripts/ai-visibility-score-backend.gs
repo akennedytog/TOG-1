@@ -23,8 +23,11 @@
 var SHEET_NAME = 'Leads';           // sheet tab name inside the bound spreadsheet
 var SENDER_NAME = 'The One Group';
 var SENDER_EMAIL = 'akennedy@theonegroup.info'; // must match your Gmail
-var KIT_API_KEY = '';               // optional: ConvertKit/Kit API key for list capture
+var KIT_API_KEY = '';               // optional: Kit API key (Settings -> Advanced -> API)
 var KIT_FORM_ID = '';               // optional: Kit form id (get from Kit dashboard)
+// NOTE: For the Kit push to work, create these custom fields in Kit first
+// (Settings -> Custom Fields): industry, city, ai_score. The v4 API ignores
+// unknown field keys, so the push still succeeds but the fields won't populate.
 
 // ---- Main entry point (called by the web form) -----------------------------
 function doPost(e) {
@@ -111,21 +114,53 @@ function bucketBlurb_(s) {
 }
 
 // ---- Optional Kit (ConvertKit) push -----------------------------------------
+// Kit API v4 (current as of 2026). Two-step flow:
+//   1. POST /v4/subscribers  -> create/upsert the subscriber (with custom fields)
+//   2. POST /v4/forms/{id}/subscribers -> add them to the form (triggers the automation)
+// Auth is the X-Kit-Api-Key header (NOT the old v3 api_key body param).
 function pushToKit_(b) {
-  // Uses the Kit Forms API. Replace with the correct endpoint for your plan.
-  var url = 'https://api.convertkit.com/v3/forms/' + KIT_FORM_ID + '/subscribe';
-  var payload = {
-    api_key: KIT_API_KEY,
-    email: b.email,
+  if (!KIT_API_KEY) return;
+  var headers = { 'X-Kit-Api-Key': KIT_API_KEY, 'Content-Type': 'application/json' };
+
+  // Step 1: create/upsert the subscriber with custom fields.
+  // Custom field KEYS must exist on the Kit account (create them in Kit first):
+  //   industry, city, ai_score
+  var subPayload = {
+    email_address: b.email,
     first_name: b.name || '',
-    fields: { industry: b.industry || '', city: b.city || '', ai_score: String(b.score) }
+    state: 'active',
+    fields: {
+      industry: b.industry || '',
+      city: b.city || '',
+      ai_score: String(b.score)
+    }
   };
-  UrlFetchApp.fetch(url, {
+  var subRes = UrlFetchApp.fetch('https://api.kit.com/v4/subscribers', {
     method: 'post',
-    contentType: 'application/json',
-    payload: JSON.stringify(payload),
+    headers: headers,
+    payload: JSON.stringify(subPayload),
     muteHttpExceptions: true
   });
+  var subCode = subRes.getResponseCode();
+  if (subCode >= 400) {
+    Logger.log('Kit create-subscriber failed (' + subCode + '): ' + subRes.getContentText());
+    return;
+  }
+
+  // Step 2: add to the form (only if a form id is set) -> drops them into the automation.
+  if (KIT_FORM_ID) {
+    var formPayload = { email_address: b.email };
+    var formRes = UrlFetchApp.fetch('https://api.kit.com/v4/forms/' + KIT_FORM_ID + '/subscribers', {
+      method: 'post',
+      headers: headers,
+      payload: JSON.stringify(formPayload),
+      muteHttpExceptions: true
+    });
+    var formCode = formRes.getResponseCode();
+    if (formCode >= 400) {
+      Logger.log('Kit add-to-form failed (' + formCode + '): ' + formRes.getContentText());
+    }
+  }
 }
 
 // ---- One-time setup: authorize + create header (run manually in editor) -----
