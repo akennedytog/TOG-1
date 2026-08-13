@@ -1,0 +1,487 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="AI Automation for SMBs | The One Group" 
+  description="Practical AI automation for South Florida businesses. Agent swarm system for lead research, content creation, and sales outreach. Real results, no hype."
+>
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-brand-50/30 dark:from-gray-950 dark:via-gray-950 dark:to-brand-950/20">
+    <!-- Ambient background effects -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-brand-200/20 dark:bg-brand-900/10 blur-[120px]" />
+      <div class="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-accent-200/20 dark:bg-accent-900/10 blur-[120px]" />
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-brand-100/10 to-accent-100/10 dark:from-brand-900/5 dark:to-accent-900/5 blur-[150px]" />
+    </div>
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-800 text-brand-700 dark:text-brand-300 text-sm font-medium mb-8 animate-fade-in">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75" />
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500" />
+          </span>
+          8-Agent Swarm — Running 24/7
+        </div>
+        
+        <!-- Headline -->
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-[1.05] mb-6">
+          AI Automation That<br />
+          <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-accent-500 bg-clip-text text-transparent">Actually Works</span>
+          <br />for SMBs
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+          We build custom AI agent swarms that research leads, create content, 
+          and drive sales — so you can focus on growing your business.
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="group inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:shadow-xl hover:shadow-brand-500/30 hover:-translate-y-0.5 text-lg">
+            Get Your Free AI Audit
+            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a href="/case-studies" class="group inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-700 hover:border-brand-500 dark:hover:border-brand-500 transition-all duration-200 hover:-translate-y-0.5 text-lg">
+            See Case Studies
+            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Social Proof -->
+        <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800">
+          <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gray-900 dark:text-gray-100">50+</div>
+              <div class="text-sm text-gray-500 dark:text-gray-500 mt-1">Clients Served</div>
+            </div>
+            <div class="hidden sm:block w-px h-10 bg-gray-200 dark:bg-gray-800" />
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gray-900 dark:text-gray-100">10k+</div>
+              <div class="text-sm text-gray-500 dark:text-gray-500 mt-1">Leads Generated</div>
+            </div>
+            <div class="hidden sm:block w-px h-10 bg-gray-200 dark:bg-gray-800" />
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gray-900 dark:text-gray-100">98%</div>
+              <div class="text-sm text-gray-500 dark:text-gray-500 mt-1">Client Retention</div>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <a href="/system-proof" class="inline-flex items-center gap-2 text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-500 underline underline-offset-2 hover:no-underline">
+              See the live proof — our own AI system runs this business
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- AI News Ticker -->
+  <section class="py-12 bg-gray-100 dark:bg-gray-900 border-y-2 border-brand-500/20 dark:border-brand-400/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center gap-3">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75" />
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500" />
+          </span>
+          <span class="text-lg font-bold text-gray-700 dark:text-gray-300 uppercase tracking-widest">AI News Today</span>
+          <span class="w-px h-5 bg-gray-300 dark:bg-gray-700" />
+          <span class="text-sm text-gray-500 font-medium" id="ticker-date" />
+        </div>
+        <p class="mt-2 text-xs text-gray-500 dark:text-gray-400" id="ticker-updated"></p>
+      </div>
+      <div id="ai-news-ticker" class="space-y-3 max-w-2xl mx-auto">
+        <div class="flex items-center justify-center gap-3 text-sm text-gray-500 dark:text-gray-400 py-8">
+          <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+          </svg>
+          Loading latest AI news...
+        </div>
+      </div>
+      <div class="mt-5 text-center">
+        <a href="/blog" class="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-brand-600 dark:text-gray-400 dark:hover:text-brand-400 transition-colors">
+          Read our analysis
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <span class="mx-3 text-gray-300 dark:text-gray-700">|</span>
+        <a href="/ai-visibility-score" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+          Want this intel for your industry? Get your free AI Visibility Score
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Overview -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">What We Do</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-4 mb-4">Full-Spectrum AI Automation</h2>
+        <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-lg">
+          From audit to implementation to ongoing optimization — we handle the entire AI lifecycle for your business.
+        </p>
+      </div>
+      
+      <!-- Service Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Service 1: Audit -->
+        <div class="group relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-lg hover:border-brand-200 dark:hover:border-brand-800 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">AI Audit &amp; Assessment</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+            We analyze your workflows, identify automation opportunities, and build a prioritized roadmap.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-gray-100">$2,500</span>
+            <a href="/services#audit" class="inline-flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-400 underline underline-offset-2 hover:text-brand-700 transition-colors" aria-label="Learn more about AI Visibility Audit">
+              Learn more about AI Audit
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Service 2: Implementation -->
+        <div class="group relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-lg hover:border-accent-200 dark:hover:border-accent-800 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-accent-50 dark:bg-accent-900/30 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 text-accent-600 dark:text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">AI Implementation</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+            Custom agent swarms for lead research, content creation, and sales outreach — running 24/7.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-gray-100">$2,500&ndash;$10,000</span>
+            <a href="/services#implementation" class="inline-flex items-center gap-1 text-sm font-medium text-accent-600 dark:text-accent-400 hover:text-accent-700 transition-colors" aria-label="Learn more about AI Agent Implementation">
+              Learn more about Implementation
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Service 3: Intel -->
+        <div class="group relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-lg hover:border-emerald-200 dark:hover:border-emerald-800 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Competitor Intelligence</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+            Ongoing monitoring of competitors, market shifts, and opportunities — delivered weekly.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-gray-100">$297/mo</span>
+            <a href="/services#intelligence" class="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 transition-colors" aria-label="Learn more about Competitor Intelligence">
+              Learn more about Competitor Intel
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- How It Works -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Process</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-4 mb-4">How It Works</h2>
+        <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-lg">
+          Three steps to fully automated operations.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-2xl bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-brand-600 dark:text-brand-400">01</span>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Audit</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+            We analyze your workflows and identify every automation opportunity with clear ROI projections.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-2xl bg-accent-100 dark:bg-accent-900/40 flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-accent-600 dark:text-accent-400">02</span>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Build</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+            We build custom AI agents tailored to your business, integrated with your existing tools.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">03</span>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Optimize</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+            We monitor, refine, and improve your agents continuously. You get better results every month.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Testimonials</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-4 mb-4">Trusted by South Florida Businesses</h2>
+        <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-lg">
+          Real results from real companies.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Testimonial 1 -->
+        <div class="relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+          <svg class="absolute top-6 right-6 w-8 h-8 text-brand-100 dark:text-brand-900/50" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
+          </svg>
+          <blockquote class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 relative z-10">
+            "The AI agent system handles our lead research and initial outreach. We went from 5 calls a week to 25 qualified meetings a month. Game changer."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 flex items-center justify-center text-white font-semibold text-sm shrink-0">MS</div>
+            <div>
+              <cite class="not-italic font-semibold text-sm text-gray-900 dark:text-gray-100">Maria Santos</cite>
+              <p class="text-xs text-gray-600 dark:text-gray-300">Owner, Coastal Law Partners</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+          <svg class="absolute top-6 right-6 w-8 h-8 text-brand-100 dark:text-brand-900/50" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
+          </svg>
+          <blockquote class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 relative z-10">
+            "We were skeptical about AI in healthcare admin. The One Group automated our appointment reminders, intake forms, and follow-ups. Saved us 40 hours a month."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 flex items-center justify-center text-white font-semibold text-sm shrink-0">JC</div>
+            <div>
+              <cite class="not-italic font-semibold text-sm text-gray-900 dark:text-gray-100">James Chen</cite>
+              <p class="text-xs text-gray-600 dark:text-gray-300">CEO, West Palm Family Medicine</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+          <svg class="absolute top-6 right-6 w-8 h-8 text-brand-100 dark:text-brand-900/50" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
+          </svg>
+          <blockquote class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 relative z-10">
+            "Missed calls were costing us $2,000+ a month. The AI lead response system catches every call, qualifies them, and books appointments. ROI in week one."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 flex items-center justify-center text-white font-semibold text-sm shrink-0">DR</div>
+            <div>
+              <cite class="not-italic font-semibold text-sm text-gray-900 dark:text-gray-100">David Rodriguez</cite>
+              <p class="text-xs text-gray-600 dark:text-gray-300">Operations Director, Premier HVAC Services</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-brand-900 text-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="text-sm font-semibold text-brand-300 uppercase tracking-widest">Get Started</span>
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mt-4 mb-4">
+        Ready to Automate Your Business?
+      </h2>
+      <p class="text-lg text-gray-300 max-w-xl mx-auto mb-10">
+        Get a free AI audit — we'll identify $5,000+ in annual savings in under an hour. No commitment required.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="group inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-gray-900 bg-white hover:bg-gray-100 transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 text-lg">
+          Book Your Free Audit
+          <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a href="tel:+15024037201" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white border-2 border-white/20 hover:border-white/40 transition-all duration-200 text-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          (502) 403-7201
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- AI News Ticker Script -->
+  <script>
+    document.getElementById('ticker-date').textContent = new Date().toLocaleDateString('en-US', { 
+      weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' 
+    });
+    
+    // Category badge colors
+    const CATEGORY_STYLES = {
+      'Funding': 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300',
+      'Product': 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
+      'Policy': 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300',
+      'Research': 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300',
+      'Partnership': 'bg-pink-100 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300',
+      'Industry': 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300'
+    };
+    
+    // Relative time helper
+    function timeAgo(iso) {
+      if (!iso) return 'Today';
+      const then = new Date(iso);
+      const now = new Date();
+      const mins = Math.floor((now - then) / 60000);
+      if (mins < 1) return 'Just now';
+      if (mins < 60) return mins + 'm ago';
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 24) return hrs + 'h ago';
+      const days = Math.floor(hrs / 24);
+      if (days === 1) return 'Yesterday';
+      return days + 'd ago';
+    }
+    
+    fetch('/ai-news.json')
+      .then(r => r.json())
+      .then(data => {
+        const container = document.getElementById('ai-news-ticker');
+        
+        // Last-updated line
+        if (data.updated) {
+          const upd = document.getElementById('ticker-updated');
+          upd.textContent = 'Updated ' + timeAgo(data.updated) + ' · refreshed daily at 7 AM ET';
+        }
+        
+        if (!data.articles || data.articles.length === 0) {
+          container.innerHTML = '<div class="text-sm text-gray-400 text-center py-8">No news today. Check back tomorrow.</div>';
+          return;
+        }
+        
+        const articles = data.articles;
+        container.innerHTML = articles.map((article, i) => `
+          <a href="${article.url}" target="_blank" rel="noopener noreferrer" 
+             class="block p-4 rounded-xl bg-gray-200/80 dark:bg-gray-700/80 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 border border-gray-300 dark:border-gray-600 group">
+            <div class="flex items-start gap-4">
+              <span class="text-xs font-mono text-gray-600 dark:text-gray-300 mt-0.5 shrink-0 font-bold">${String(i+1).padStart(2,'0')}</span>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-2 mb-1.5">
+                  ${article.category ? `<span class="inline-block text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${CATEGORY_STYLES[article.category] || CATEGORY_STYLES['Industry']}">${article.category}</span>` : ''}
+                  <span class="text-xs text-gray-500 dark:text-gray-400">${timeAgo(article.published_at)}</span>
+                </div>
+                <div class="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors line-clamp-2">${article.title}</div>
+                ${article.summary ? `<div class="text-xs text-gray-600 dark:text-gray-300 mt-1.5 line-clamp-2 italic">${article.summary}</div>` : ''}
+                <div class="text-xs text-gray-700 dark:text-gray-300 mt-1.5 line-clamp-1 flex items-center gap-2">
+                  <span class="inline-flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
+                    ${article.source}
+                  </span>
+                </div>
+              </div>
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-brand-500 transition-colors shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </div>
+          </a>
+        `).join('');
+        
+        // Auto-rotate: highlight each story in turn (subtle pulse on the active card)
+        const cards = container.querySelectorAll('a');
+        let active = 0;
+        if (cards.length > 1) {
+          cards[0].classList.add('ring-2', 'ring-brand-500/40');
+          setInterval(() => {
+            cards[active].classList.remove('ring-2', 'ring-brand-500/40');
+            active = (active + 1) % cards.length;
+            cards[active].classList.add('ring-2', 'ring-brand-500/40');
+          }, 4000);
+        }
+      })
+      .catch(() => {
+        document.getElementById('ai-news-ticker').innerHTML = '<div class="text-sm text-gray-400 text-center py-8">Unable to load news. Refresh to try again.</div>';
+      });
+  </script>
+  
+  <!-- Newsletter Section -->
+  <section class="py-20 px-4 bg-gradient-to-br from-brand-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider">Stay in the Loop</span>
+      <h2 class="text-3xl md:text-4xl font-display font-bold mt-3 mb-4">Get AI Insights Delivered</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
+        Weekly AI news, automation tips, and tools for SMBs. No spam, unsubscribe anytime.
+      </p>
+      <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="hidden" name="form_type" value="newsletter" />
+        <input type="email" name="email" placeholder="you@company.com" required
+          aria-required="true" aria-label="Email address for newsletter" autocomplete="email"
+          class="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition" />
+        <button type="submit"
+          class="px-6 py-3 gradient-bg text-white font-medium rounded-lg hover:opacity-90 transition whitespace-nowrap">
+          Subscribe
+        </button>
+      </form>
+      <p id="newsletter-status" class="text-sm mt-4 text-gray-500 dark:text-gray-400"></p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('newsletter-form')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const status = document.getElementById('newsletter-status');
+      const email = this.querySelector('[name="email"]').value;
+      status.textContent = 'Subscribing...';
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, form_type: 'newsletter' })
+        });
+        const data = await res.json();
+        if (data.success) {
+          status.textContent = "✅ You are subscribed! Check your inbox.";
+          this.querySelector('[name="email"]').value = '';
+        } else {
+          status.textContent = '❌ ' + (data.message || 'Something went wrong. Try again.');
+        }
+      } catch {
+        status.textContent = '❌ Network error. Please try again.';
+      }
+    });
+  </script>
+
+</BaseLayout>

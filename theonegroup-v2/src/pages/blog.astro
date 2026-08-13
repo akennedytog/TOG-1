@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="AI Blog | The One Group" 
+  description="Practical AI insights for South Florida businesses. Automation tips, case studies, and industry analysis from the front lines."
+>
+  
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-brand-50/30 dark:from-gray-950 dark:via-gray-950 dark:to-brand-950/20">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Blog</span>
+      <h1 class="text-4xl sm:text-5xl font-display font-bold mt-4 mb-4">AI Insights for SMBs</h1>
+      <p class="text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+        Practical automation tips, industry analysis, and case studies from the front lines of AI implementation.
+      </p>
+    </div>
+  </section>
+  
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <!-- Featured Articles -->
+      <div class="mb-16">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-display font-bold mb-2">Latest Articles</h2>
+          <p class="text-gray-500 dark:text-gray-400">In-depth guides from the front lines of AI implementation for SMBs.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <a href="/blog/ai-automation-for-small-business-in-miami" class="group bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-md hover:border-brand-200 dark:hover:border-brand-800 transition-all duration-200 block">
+            <span class="inline-block text-xs font-semibold text-brand-600 dark:text-brand-400 mb-3">Miami AI Automation</span>
+            <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">AI Automation for Small Business in Miami: Stop Wasting Your Team's Time</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Real use cases for restaurants, medical offices, law firms & more — with a simple ROI math any owner can run.</p>
+            <span class="inline-flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-400">
+              Read article
+              <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </span>
+          </a>
+          <a href="/blog/how-much-does-ai-automation-cost" class="group bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-md hover:border-brand-200 dark:hover:border-brand-800 transition-all duration-200 block">
+            <span class="inline-block text-xs font-semibold text-brand-600 dark:text-brand-400 mb-3">Pricing Guide</span>
+            <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">How Much Does AI Automation Cost? The Honest Pricing Breakdown</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Real 2026 pricing for audits, implementation, coaching & retainers — plus an ROI calculator to decide what's worth it.</p>
+            <span class="inline-flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-400">
+              Read article
+              <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-display font-bold mb-2">Today's AI Headlines</h2>
+        <p class="text-gray-500 dark:text-gray-400">Curated AI news with practical takeaways for business owners.</p>
+      </div>
+      
+      <div id="blog-news-list" class="space-y-4 max-w-3xl mx-auto">
+        <div class="flex items-center justify-center gap-3 text-sm text-gray-500 dark:text-gray-400 py-12">
+          <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+          </svg>
+          Loading articles...
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          Full analysis and deep dives coming soon. 
+          <a href="/contact" class="text-brand-600 dark:text-brand-400 underline underline-offset-2 hover:no-underline font-medium">Subscribe to our newsletter</a> for updates.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    const CATEGORY_STYLES = {
+      'Funding': 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300',
+      'Product': 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
+      'Policy': 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300',
+      'Research': 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300',
+      'Partnership': 'bg-pink-100 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300',
+      'Industry': 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300'
+    };
+    function timeAgo(iso) {
+      if (!iso) return 'Today';
+      const mins = Math.floor((new Date() - new Date(iso)) / 60000);
+      if (mins < 1) return 'Just now';
+      if (mins < 60) return mins + 'm ago';
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 24) return hrs + 'h ago';
+      const days = Math.floor(hrs / 24);
+      return days === 1 ? 'Yesterday' : days + 'd ago';
+    }
+    fetch('/ai-news.json')
+      .then(r => r.json())
+      .then(data => {
+        const container = document.getElementById('blog-news-list');
+        if (!data.articles || data.articles.length === 0) {
+          container.innerHTML = '<p class="text-sm text-gray-400 text-center py-12">No articles today. Check back tomorrow.</p>';
+          return;
+        }
+        container.innerHTML = data.articles.map((article, i) => `
+          <article class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-md hover:border-brand-200 dark:hover:border-brand-800 transition-all duration-200">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl font-bold text-brand-500 dark:text-brand-400 leading-none mt-1">${String(i+1).padStart(2,'0')}</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-2">
+                  ${article.category ? `<span class="inline-block text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${CATEGORY_STYLES[article.category] || CATEGORY_STYLES['Industry']}">${article.category}</span>` : ''}
+                  <span class="text-xs text-gray-500 dark:text-gray-400">${timeAgo(article.published_at)}</span>
+                </div>
+                <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">${article.title}</h3>
+                ${article.summary ? `<p class="text-sm text-gray-600 dark:text-gray-300 mb-3 italic">${article.summary}</p>` : ''}
+                <div class="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400 mb-3">
+                  <span class="inline-flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
+                    ${article.source}
+                  </span>
+                </div>
+                <a href="${article.url}" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 transition-colors">
+                  Read full article
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      })
+      .catch(() => {
+        document.getElementById('blog-news-list').innerHTML = '<p class="text-sm text-gray-400 text-center py-12">Unable to load articles. Refresh to try again.</p>';
+      });
+  </script>
+</BaseLayout>
