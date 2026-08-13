@@ -36,6 +36,30 @@ class AIIndustryIntel:
             'Series A', 'Series B', 'venture capital'
         ]
     }
+
+    # Cutting-edge AI sources (ahead of the curve, not just mainstream tech press)
+    CUTTING_EDGE_DOMAINS = [
+        # Frontier lab blogs / announcements (first to publish)
+        'openai.com', 'anthropic.com', 'deepmind.google', 'ai.googleblog.com',
+        'research.google', 'ai.meta.com', 'x.ai', 'mistral.ai', 'huggingface.co',
+        # AI-native publications (fast, technical, ahead of curve)
+        'theinformation.com', 'semiengineering.com', 'syncedreview.com',
+        'venturebeat.com', 'techcrunch.com', 'theverge.com', 'arstechnica.com',
+        'wired.com', 'zdnet.com', 'forbes.com', 'bloomberg.com', 'reuters.com',
+        # Research / technical
+        'arxiv.org', 'github.blog', 'simonwillison.net', 'lilianweng.github.io',
+        'sebastianraschka.com', 'latent.space', 'interconnects.ai',
+        # AI newsletters / analysis
+        'therundown.ai', 'bensbites.co', 'tlrd.ai', 'importai.substack.com',
+        'aibreakfast.com', 'lastweekin.ai',
+    ]
+
+    # Mainstream sources to blend in (broader reach, still credible)
+    MAINSTREAM_DOMAINS = [
+        'techcrunch.com', 'theverge.com', 'venturebeat.com', 'arstechnica.com',
+        'wired.com', 'zdnet.com', 'forbes.com', 'bloomberg.com', 'reuters.com',
+        'cnbc.com', 'ft.com', 'wsj.com', 'nytimes.com', 'theguardian.com',
+    ]
     
     def __init__(self):
         self.api_key = os.getenv('TAVILY_API_KEY')
@@ -56,12 +80,13 @@ class AIIndustryIntel:
             "content_opportunities": []
         }
         
-        # Query 1: Breaking AI news
+        # Query 1: Breaking AI news (cutting-edge sources first)
         result = search(
             "AI artificial intelligence breaking news today",
             api_key=self.api_key, max_results=5,
             topic="news",
-            search_depth="advanced"
+            search_depth="advanced",
+            include_domains=self.CUTTING_EDGE_DOMAINS
         )
         self.credits_used += 1
         
@@ -76,11 +101,12 @@ class AIIndustryIntel:
                     "score": item.get("score", 0)
                 })
         
-        # Query 2: Funding/valuation news
+        # Query 2: Funding/valuation news (mainstream + cutting edge)
         result = search(
             "AI startup funding raised valuation 2026",
             api_key=self.api_key, max_results=5,
-            topic="news"
+            topic="news",
+            include_domains=self.MAINSTREAM_DOMAINS
         )
         self.credits_used += 1
         
@@ -94,11 +120,12 @@ class AIIndustryIntel:
                     "content": item["content"][:200]
                 })
         
-        # Query 3: Enterprise AI adoption trends
+        # Query 3: Enterprise AI adoption trends (mainstream + cutting edge)
         result = search(
             "enterprise AI adoption ROI implementation SMB 2026",
             api_key=self.api_key, max_results=5,
-            topic="news"
+            topic="news",
+            include_domains=self.MAINSTREAM_DOMAINS
         )
         self.credits_used += 1
         
