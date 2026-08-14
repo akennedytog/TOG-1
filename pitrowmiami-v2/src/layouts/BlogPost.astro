@@ -13,7 +13,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://pitrowmiami
 ---
 
 <BaseLayout title={title} description={description}>
-  <main class="bg-black text-white pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+  <div class="bg-black text-white pt-28 pb-20 px-4 sm:px-6 lg:px-8">
     <article class="max-w-3xl mx-auto">
       <!-- Breadcrumb -->
       <nav class="text-sm text-carbon-400 mb-6" aria-label="Breadcrumb">
@@ -77,7 +77,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://pitrowmiami
         </div>
       </div>
     </article>
-  </main>
+  </div>
 
   <!-- Structured Data: BlogPosting -->
   <script type="application/ld+json" set:html={JSON.stringify({

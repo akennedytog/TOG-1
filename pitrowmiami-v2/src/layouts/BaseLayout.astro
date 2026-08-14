@@ -138,7 +138,7 @@ const GA_ID = 'G-B5NV9GJ810';
           </div>
           
           <!-- Mobile menu button -->
-          <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-300 hover:text-brand-500" aria-label="Open menu">
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-300 hover:text-brand-500" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -146,7 +146,7 @@ const GA_ID = 'G-B5NV9GJ810';
         </div>
         
         <!-- Mobile Nav -->
-        <div id="mobile-menu" class="hidden md:hidden pb-6">
+        <div id="mobile-menu" class="hidden md:hidden pb-6" aria-label="Primary navigation">
           <div class="flex flex-col gap-2">
             <a href="/#details" class="px-4 py-2.5 rounded-lg text-gray-300 hover:bg-carbon-800 transition-colors">The Experience</a>
             <a href="/#pricing" class="px-4 py-2.5 rounded-lg text-gray-300 hover:bg-carbon-800 transition-colors">Pricing</a>
@@ -192,9 +192,34 @@ const GA_ID = 'G-B5NV9GJ810';
     
     <!-- Mobile menu toggle -->
     <script>
-      document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-        document.getElementById('mobile-menu')?.classList.toggle('hidden');
-      });
+      (function () {
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        if (!btn || !menu) return;
+        function setMenu(open) {
+          menu.classList.toggle('hidden', !open);
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+          if (open) {
+            var firstLink = menu.querySelector('a');
+            if (firstLink) firstLink.focus();
+          } else {
+            btn.focus();
+          }
+        }
+        btn.addEventListener('click', function () {
+          var open = menu.classList.contains('hidden');
+          setMenu(open);
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+            setMenu(false);
+          }
+        });
+        window.addEventListener('resize', function () {
+          if (window.innerWidth >= 768) setMenu(false);
+        });
+      })();
     </script>
     
     <!-- Cookie consent banner -->
