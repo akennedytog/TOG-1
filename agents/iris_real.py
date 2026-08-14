@@ -85,6 +85,81 @@ def pick_ps(industry):
             return note
     return PS_DEFAULT
 
+# ── Industry-aware pitch buckets (2026-08-14) ───────────────────────────────
+# The old single prompt led EVERY email with "missed calls". But that problem
+# only genuinely fits trades/solo ops. For pro services (real estate, accounting,
+# dental, medical) the real pain is lead-response speed, follow-up consistency,
+# and busywork — not unanswered rings. This picks the angle that matches the
+# lead's industry so we pitch their ACTUAL problem.
+#
+# bucket: 'trades' -> missed-calls angle (fits solo service operators)
+#         'pro'   -> speed/follow-up/automation angle (fits high-consideration)
+#         'generic'-> speed angle without the missed-call assumption
+TRADE_KEYWORDS = ("hvac", "plumb", "roof", "electr", "landscap", "home service",
+                  "handyman", "pest", "cleaning", "pool", "garage", "lawn",
+                  "remodel", "contractor", "exterior", "window", "solar")
+PRO_KEYWORDS = ("real estate", "realty", "account", "bookkeep", "tax", "legal",
+                "law", "attorney", "dent", "medical", "clinic", "health",
+                "insur", "finance", "financial", "mortgage", "consult",
+                "agency", "firm", "therapy", "counsel", "chiropract", "wellness")
+
+def pitch_bucket(industry):
+    """Return the pitch bucket for a lead's industry string."""
+    if not industry:
+        return "generic"
+    key = industry.strip().lower()
+    if any(k in key for k in TRADE_KEYWORDS):
+        return "trades"
+    if any(k in key for k in PRO_KEYWORDS):
+        return "pro"
+    return "generic"
+
+# Per-bucket angle instructions fed to the model. Each states the pain to lead with.
+PITCH_ANGLES = {
+    "trades": (
+        "Alec's angle: these owners lose money to missed calls and slow response while "
+        "they're out on jobs — a call they can't answer goes to a competitor. The One Group "
+        "installs AI that answers/texts missed calls back within seconds and responds to every "
+        "lead in under 60 seconds, so no job goes to the guy who picked up first."
+    ),
+    "pro": (
+        "Alec's angle: these businesses don't lose leads to missed calls — they lose them to "
+        "slow or inconsistent follow-up. Every inquiry that sits unanswered while they're "
+        "busy (showing a property, in a meeting, on a closing) goes to whoever replies first. "
+        "The One Group installs AI that responds to every lead in under 60 seconds, on every "
+        "channel, 24/7, and logs it to their CRM — so no opportunity goes cold because someone "
+        "didn't get back to it fast enough."
+    ),
+    "generic": (
+        "Alec's angle: the real cost isn't missed calls, it's slow lead response. The first "
+        "business to reply wins the job, and most don't get back to people for hours or days. "
+        "The One Group installs AI that responds to every lead in under 60 seconds, on every "
+        "channel, around the clock, and logs it to their CRM — so they stop losing work to "
+        "competitors who answered first."
+    ),
+}
+
+def email_prompt(lead):
+    bucket = pitch_bucket(lead.get("industry"))
+    angle = PITCH_ANGLES[bucket]
+    return f"""Write a short cold outreach email from Alec Kennedy, founder of The One Group (theonegroup.info), to the owner of {lead['name']}, an {lead['industry']} business in {lead['city']}, Florida.
+
+{angle}
+
+Rules:
+- 90-120 words, human and direct, no buzzwords, no \"I hope this finds you well\"
+- Reference their business name and city naturally
+- Lead with the ONE pain that fits them, not generic filler. Do NOT force the missed-call angle unless it genuinely fits their situation — if they're a service/trade shop that can't answer the phone on jobs, use the missed-call stat; otherwise lead with speed-to-lead / follow-up consistency.
+- One specific stat: businesses that respond to a lead within 5 minutes are ~100x more likely to connect than those who wait even an hour.
+- Soft CTA: \"Worth a 10-minute call this week?\"
+- End with this exact signature block (including the -- line):
+--
+Alec Kennedy | The One Group.AI
+Founder | CEO | (c) 502.403.7201 | akennedy@theonegroup.info
+- Do NOT add a P.S. — the P.S. is appended automatically after the signature.
+- Also output a subject line on the FIRST line formatted exactly: SUBJECT: <subject>
+Then a blank line, then the body. Plain text only."""
+
 import base64 as _b64
 
 def _decode_mime_b64(text):
@@ -341,25 +416,6 @@ def schedule_call_event(lead, start_dt):
     except Exception as e:
         print(f"    ⚠️ calendar request error for {lead['name']}: {e}")
         return None
-
-def email_prompt(lead):
-    return f"""Write a short cold outreach email from Alec Kennedy, founder of The One Group (theonegroup.info), to the owner of {lead['name']}, an {lead['industry']} business in {lead['city']}, Florida.
-
-Alec's angle: local service businesses lose thousands monthly to missed calls and slow lead response. The One Group installs AI systems that text back missed calls instantly and respond to every lead in under 60 seconds.
-
-Rules:
-- 90-120 words, human and direct, no buzzwords, no "I hope this finds you well"
-- Reference their business name and city naturally
-- One specific stat: businesses miss ~27% of calls, and texting back within 5 minutes makes you 100x more likely to connect
-- Soft CTA: "Worth a 10-minute call this week?"
-- End with this exact signature block (including the -- line):
---
-Alec Kennedy | The One Group.AI
-Founder | CEO | (c) 502.403.7201 | akennedy@theonegroup.info
-- Do NOT add a P.S. — the P.S. is appended automatically after the signature.
-- Also output a subject line on the FIRST line formatted exactly: SUBJECT: <subject>
-Then a blank line, then the body. Plain text only."""
-
 
 def record_reply(lead, outcome, detail=""):
     """Record an outreach outcome into the feedback loop (reply/booking/audit/etc).
