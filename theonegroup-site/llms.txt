@@ -1,0 +1,30 @@
+# The One Group
+
+> AI consulting and implementation agency for small and mid-sized businesses, based in South Florida. We build practical AI automation systems that respond to leads in under 5 minutes, monitor competitors 24/7, and produce compliant content for regulated industries. No hype, just results.
+
+## Services
+
+- [AI Visibility Audit](https://theonegroup.info/ai-audit.html): Comprehensive audit of your AI presence and opportunities. 30-page report, competitor comparison, action roadmap. $2,500.
+- [AI Implementation](https://theonegroup.info/ai-optimization.html): Full AI system setup and integration for your business. $2,500-$10,000.
+- [Lead Response Automation](https://theonegroup.info/lead-response.html): Every inbound lead answered in under 5 minutes - enriched, researched, personalized. $297/month + setup.
+- [Competitor Intelligence](https://theonegroup.info/competitor-intelligence.html): 24/7 competitor monitoring with alerts within 1 hour of changes. $297/month.
+- [Multi-Platform Content](https://theonegroup.info/social-media.html): Daily content across Twitter, LinkedIn, Reddit, newsletter, and YouTube Shorts. $997/month.
+- [Compliance Content](https://theonegroup.info/compliance-content.html): HIPAA, SOC2, FINRA-compliant AI content packs for regulated industries. $497 one-time.
+
+## Free Resources
+
+- [Free AI Audit](https://theonegroup.info/free-ai-audit.html): Free snapshot of where AI can save your business time and money.
+- [Missed Call Calculator](https://theonegroup.info/missed-call-calculator.html): Calculate the revenue lost to slow lead response.
+- [Blog](https://theonegroup.info/blog.html): Practical AI guides for SMBs, case studies, and building-in-public updates.
+
+## About
+
+- [About The One Group](https://theonegroup.info/about.html)
+- [Case Studies](https://theonegroup.info/case-studies.html)
+- [Pricing](https://theonegroup.info/pricing.html)
+- [Contact](https://theonegroup.info/contact.html)
+
+## Contact
+
+- Email: akennedy@theonegroup.info
+- Location: South Florida, USA

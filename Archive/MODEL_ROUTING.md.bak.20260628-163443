@@ -1,0 +1,173 @@
+# Model Routing & Efficiency Rules
+
+**Last Updated:** 2026-05-19
+**Purpose:** Cost-efficient model routing with 3-tier escalation: Ollama → Haiku → Codex
+
+---
+
+## The Golden Rule
+
+> **Always start with Ollama. Escalate only when necessary. Never skip directly to Codex unless explicitly instructed or failure threshold is reached.**
+
+---
+
+## Model Selection Matrix
+
+| Tier | Alias | Full Path | Use For | Cost |
+|------|-------|-----------|---------|------|
+| **1. Default** | `ollama` | `ollama/kimi-k2.5:cloud` | Intent classification, simple edits, file nav, summarization, boilerplate, linting explanations, low-risk/repetitive tasks | FREE |
+| **2. Escalate** | `haiku` | `anthropic/claude-3-haiku-20240307` | Ollama uncertain/low-confidence, API integrations, multi-file moderate logic, better reasoning needed (cost/speed still matters) | $0.25/1M |
+| **3. Max** | `gpt` / `GPT` | `openai/gpt-5.4` / `openai/gpt-5.1-codex` | Haiku fails or is uncertain, debugging requires multiple attempts, architecture/system reasoning, large refactors, unclear test failures, terminal/tool execution, explicit "use Codex" or "max intelligence" | ~$3/1M |
+
+**⚠️ IMPORTANT:** Aliases (`gpt`, `haiku`) work in main session but **FAIL in subagents**. Use **full model paths** in `sessions_spawn()`. See Subagent Model Paths section below.
+
+**Key Update:** Kimi-K2.5 is competitive with paid models for most tasks. Haiku fills the gap between free Ollama and expensive Codex for moderate complexity coding.
+
+---
+
+## Cost Hierarchy (per 1M tokens)
+
+```
+Tier 1: Ollama/Kimi-K2.5:cloud  →  $0.00   (DEFAULT ROUTER)
+Tier 2: Claude Haiku            →  $0.25   (MODERATE ESCALATION)  
+Tier 3: OpenAI Codex/GPT-5.5   →  $3.00   (MAX INTELLIGENCE)
+
+Deprecated/Avoid:
+GPT-4o-mini              →  $0.15 / $0.60
+GPT-4o                   →  $2.50 / $10.00
+Claude 3.5 Sonnet        →  $3.00 / $15.00  (UNAVAILABLE)
+Claude 3 Opus            →  $15.00 / $75.00  (UNAVAILABLE)
+```
+
+---
+
+## When to Escalate (Checklist)
+
+Before escalating to a paid model, confirm:
+
+- [ ] Ollama was given a fair attempt (1–2 tries, not a quick give-up)
+- [ ] Task truly exceeds Ollama's capabilities
+- [ ] User hasn't explicitly forbidden paid models
+- [ ] The cost is justified by the task value
+- [ ] **Summarized task, listed files, included errors/logs**
+
+**Escalation message template:**
+> "Ollama struggled with [specific issue] after 2 attempts.
+> Files touched: [list]
+> Errors: [summary]
+> Escalating to Haiku/Codex for [reason]."
+
+## Escalation Path
+
+**Limit retries per layer to 1–2 attempts before escalation**
+
+```
+Ollama (FREE) → Haiku ($0.25/1M) → Codex/GPT-5.5 ($3/1M)
+     ↓                ↓                      ↓
+  Default        Uncertain           Max intelligence
+  Router         Multi-file          Architecture
+                 API work            Debug failures
+```
+
+### Tier 1: Ollama (Default Router)
+- Intent classification
+- Simple code edits
+- File navigation
+- Summarization
+- Boilerplate generation
+- Linting explanations
+- Low-risk or repetitive tasks
+
+### Tier 2: Haiku (Escalation)
+- Ollama is uncertain or produces low-confidence output
+- API integrations or external libraries involved
+- Multiple files but logic is still moderate
+- Better reasoning needed but cost/speed still matters
+
+### Tier 3: Codex/GPT-5.5 (Max Intelligence)
+- Haiku fails or is uncertain
+- Debugging requires multiple attempts
+- Architecture or system-level reasoning needed
+- Refactors span many files or entire repo
+- Tests failing with unclear root cause
+- Terminal/tool execution required
+- Explicit: "use Codex" or "max intelligence"
+
+---
+
+## April 2026 Model Updates
+
+### Recent Releases
+- **GPT-5.5** (Apr 26, 2026) - OpenAI's latest reasoning model, now integrated
+- **OpenAI Agents SDK** (Apr 15, 2026) - Major shift toward agentic workflows
+- **Anthropic Computer Use** - AI that can operate your computer
+- **Google Gemma 4** - Local/edge deployment focus
+- **Kimi-K2.5** - Highly ranked on Artificial Analysis benchmarks
+
+**Before escalating, always:**
+1. Summarize the task
+2. List files touched
+3. Include errors/logs
+4. Explain why escalation is needed
+
+**Execution rules:**
+- Prefer minimal diffs over full rewrites
+- Run tests after changes when possible
+- Preserve existing architecture unless instructed otherwise
+- Never expose secrets, API keys, or sensitive data in prompts
+
+---
+
+## Efficiency Rules
+
+### 1. Batch Operations
+- Chain shell commands: `cmd1 && cmd2 && cmd3`
+- Read multiple files in parallel when independent
+- Avoid tight poll loops
+
+### 2. Avoid Redundant Work
+- Check memory_search before guessing about prior work
+- Don't re-read files already in context
+- Cache expensive computations
+
+### 3. Be Concise
+- Skip pleasantries for routine tasks
+- Use bullet points over paragraphs
+- One thoughtful response > three fragments
+
+### 4. Smart Tool Use
+- Use `memory_search` before asking "what were we working on?"
+- Prefer `read` over `exec cat` for files
+- Use `image` tool only when image analysis is required
+
+---
+
+## Context Management Rules
+
+### File Reading Discipline
+- Read SKILLS.md only when task matches (not speculatively)
+- Don't load large files unless necessary
+- Use offset/limit for large files
+- Prefer `memory_search` over scanning daily files
+
+### Session Hygiene
+- Don't repeat system instructions back to user
+- Avoid copying large JSON unless needed
+- Use `NO_REPLY` when appropriate
+
+---
+
+## User Preferences
+
+- **Default:** Ollama/Kimi-K2.5:cloud (free)
+- **Escalation 1:** Claude Haiku ($0.25/1M) - moderate complexity
+- **Escalation 2:** OpenAI Codex/GPT-5.5 ($3/1M) - max intelligence
+- **Vision tasks:** Ask user (currently no vision model configured)
+- **Escalation:** Ask permission unless clearly justified or failure threshold reached
+
+---
+
+## Violations Log
+
+*(Add entries here if I violate these rules)*
+

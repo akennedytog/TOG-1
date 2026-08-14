@@ -1,0 +1,36 @@
+{
+  "topic": "AI automation for small businesses",
+  "generated_at": "2026-08-07T07:00:00.433679",
+  "platforms": {
+    "twitter": {
+      "content": "\u26a1 This changed how I think about AI automation for small businesses.\n\nBusinesses save 10+ hours/week\n\n\n\n#AI #SmallBusiness #Automation",
+      "format": "single",
+      "character_count": 134,
+      "scheduled_time": "9:00 AM"
+    },
+    "linkedin": {
+      "content": "Before/after: \n\nBefore: \n\nAfter: \n\nHow: \n\nResult:",
+      "format": "article",
+      "character_count": 49,
+      "scheduled_time": "8:00 AM"
+    },
+    "reddit": {
+      "content": "I automated  for my business. Here's how:",
+      "format": "text_post",
+      "character_count": 41,
+      "scheduled_time": "12:00 PM"
+    },
+    "newsletter": {
+      "content": "# The Automation Playbook: AI automation for small businesses\n\n\n\n## Manual Process\n\n\n## Automated Solution\n\n\n## ROI",
+      "format": "article",
+      "character_count": 115,
+      "scheduled_time": "Sunday 9:00 AM"
+    },
+    "youtube_shorts": {
+      "content": "[Before state] [Pain point] [Solution reveal] [Result]",
+      "format": "video_script",
+      "character_count": 54,
+      "scheduled_time": "6:00 PM"
+    }
+  }
+}

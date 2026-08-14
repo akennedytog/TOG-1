@@ -1,0 +1,54 @@
+2026-08-04 08:54:48 -04:00: □ Initializing Langflow...
+2026-08-04 08:54:48 -04:00: 
+2026-08-04 08:54:48 -04:00: ✓ Initializing Langflow
+2026-08-04 08:54:48 -04:00: ▢ Checking Environment...
+2026-08-04 08:54:49 -04:00: 
+2026-08-04 08:54:49 -04:00: ✓ Checking Environment
+2026-08-04 08:54:49 -04:00: [2m2026-08-04T12:54:49.179374Z[0m [[33m[1mwarning  [0m] [1mCORS: Using permissive defaults (all origins + credentials). Set LANGFLOW_CORS_ORIGINS for production. Stricter defaults in v2.0.[0m [36mservice[0m=[35mlangflow[0m
+2026-08-04 08:54:49 -04:00: [2m2026-08-04T12:54:49.179729Z[0m [[33m[1mwarning  [0m] [1mCORS: wildcard origin ('*') is configured together with LANGFLOW_CORS_ALLOW_CREDENTIALS=true; disabling credentials because a wildcard origin with credentials enables cross-site credentialed requests (CSRF / token theft) and is invalid per the CORS spec. Set LANGFLOW_CORS_ORIGINS to explicit origins to keep credentials enabled.[0m [36mservice[0m=[35mlangflow[0m
+2026-08-04 08:54:49 -04:00: 
+2026-08-04 08:54:49 -04:00: ■ Starting Core Services...
+2026-08-04 08:54:49 -04:00: 
+2026-08-04 08:54:49 -04:00: □ Starting Core Services...
+2026-08-04 08:54:49 -04:00: ▢ Starting Core Services...
+2026-08-04 08:54:49 -04:00: ▣ Starting Core Services...
+2026-08-04 08:54:50 -04:00: ■ Starting Core Services...
+2026-08-04 08:54:50 -04:00: 
+2026-08-04 08:54:50 -04:00: □ Starting Core Services...
+2026-08-04 08:54:50 -04:00: 
+2026-08-04 08:54:50 -04:00: ▢ Starting Core Services...
+2026-08-04 08:54:50 -04:00: ▣ Starting Core Services...
+2026-08-04 08:54:51 -04:00: ■ Starting Core Services...
+2026-08-04 08:54:51 -04:00: 
+2026-08-04 08:54:51 -04:00: □ Starting Core Services...
+2026-08-04 08:54:51 -04:00: ▢ Starting Core Services...
+2026-08-04 08:54:51 -04:00: ▣ Starting Core Services...
+2026-08-04 08:54:51 -04:00: 
+2026-08-04 08:54:51 -04:00: ✓ Starting Core Services
+2026-08-04 08:54:52 -04:00: 
+2026-08-04 08:54:52 -04:00: ✓ Connecting Database
+2026-08-04 08:54:52 -04:00: 
+2026-08-04 08:54:52 -04:00: ✓ Loading Components
+2026-08-04 08:54:52 -04:00: 
+2026-08-04 08:54:52 -04:00: ✓ Adding Starter Projects
+2026-08-04 08:54:52 -04:00: ■ Launching Langflow...
+2026-08-04 08:54:52 -04:00: 
+2026-08-04 08:54:52 -04:00: ╭─────────────────────────────────────────────────────────────────────────╮
+2026-08-04 08:54:52 -04:00: │                                                                         │
+2026-08-04 08:54:52 -04:00: │  Welcome to Langflow                                                    │
+2026-08-04 08:54:52 -04:00: │                                                                         │
+2026-08-04 08:54:52 -04:00: │  🌟 GitHub: Star for updates → https://github.com/langflow-ai/langflow  │
+2026-08-04 08:54:52 -04:00: │  💬 Discord: Join for support → https://discord.com/invite/EqksyE2EX9   │
+2026-08-04 08:54:52 -04:00: │                                                                         │
+2026-08-04 08:54:52 -04:00: │  We collect anonymous usage data to improve Langflow.                   │
+2026-08-04 08:54:52 -04:00: │  To opt out, set: DO_NOT_TRACK=true in your environment.                │
+2026-08-04 08:54:52 -04:00: │                                                                         │
+2026-08-04 08:54:52 -04:00: │  🟢 Open Langflow → http://localhost:7870                               │
+2026-08-04 08:54:52 -04:00: │                                                                         │
+2026-08-04 08:54:52 -04:00: ╰─────────────────────────────────────────────────────────────────────────╯
+2026-08-04 08:54:52 -04:00: ✓ Launching Langflow
+2026-08-04 08:54:53 -04:00: [2m2026-08-04T12:54:53.618217Z[0m [[32m[1minfo     [0m] [1mtelemetry_writer: skipping cross-host orphan outbox pid=1060 (host='Alecs-MacBook-Pro.local' boot='1785542296')[0m [36mservice[0m=[35mlangflow[0m
+2026-08-04 08:54:53 -04:00: [2m2026-08-04T12:54:53.618404Z[0m [[32m[1minfo     [0m] [1mtelemetry_writer: skipping cross-host orphan outbox pid=6119 (host='Alecs-MacBook-Pro.local' boot='1780628698')[0m [36mservice[0m=[35mlangflow[0m
+2026-08-04 08:54:53 -04:00: [2m2026-08-04T12:54:53.618718Z[0m [[32m[1minfo     [0m] [1mtelemetry_writer started (outbox=/Users/aleckennedy/.openclaw/tmp/langflow_telemetry_outbox/1162, tx_pending=0, vb_pending=0)[0m [36mservice[0m=[35mlangflow[0m
+2026-08-04 13:44:35 -04:00: [2m2026-08-04T17:44:35.288295Z[0m [[32m[1minfo     [0m] [1mtelemetry_writer: pruning stale cross-host outbox /Users/aleckennedy/.openclaw/tmp/langflow_telemetry_outbox/1060 (host='Alecs-MacBook-Pro.local', age=17563s)[0m [36mservice[0m=[35mlangflow[0m
+2026-08-04 13:44:35 -04:00: [2m2026-08-04T17:44:35.290982Z[0m [[32m[1minfo     [0m] [1mtelemetry_writer: pruning stale cross-host outbox /Users/aleckennedy/.openclaw/tmp/langflow_telemetry_outbox/6119 (host='Alecs-MacBook-Pro.local', age=327596s)[0m [36mservice[0m=[35mlangflow[0m

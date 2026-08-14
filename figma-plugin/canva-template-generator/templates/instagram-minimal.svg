@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="#FFFFFF"/>
+  
+  <!-- Header accent bar -->
+  <rect x="0" y="0" width="1080" height="300" fill="#FAFAFA"/>
+  
+  <!-- Decorative line -->
+  <rect x="80" y="260" width="200" height="4" fill="#333333"/>
+  
+  <!-- Main headline text placeholder -->
+  <text x="100" y="480" font-family="Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="bold" fill="#212121">
+    Your Headline
+  </text>
+  
+  <!-- Subtitle text placeholder -->
+  <text x="100" y="560" font-family="Helvetica Neue, Arial, sans-serif" font-size="36" font-weight="300" fill="#616161">
+    Add your subtitle here
+  </text>
+  
+  <!-- Footer accent -->
+  <rect x="80" y="900" width="920" height="2" fill="#E0E0E0"/>
+  
+  <!-- Brand placeholder -->
+  <text x="100" y="960" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" fill="#9E9E9E">
+    @yourbrand
+  </text>
+</svg>

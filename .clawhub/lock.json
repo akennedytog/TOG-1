@@ -140,6 +140,110 @@
     "pdf": {
       "version": "0.1.0",
       "installedAt": 1774068902355
+    },
+    "sonos": {
+      "version": "1.0.0",
+      "installedAt": 1785556734310,
+      "registry": "https://clawhub.ai",
+      "artifact": {
+        "kind": "archive",
+        "sha256": "4d3341a7cec3351e2e81720b83e5eeacb74a25a06b0191db434e3dc921bbe4c1",
+        "integrity": "sha256-TTNBp87DNR4ugXILg+XurLdKJaBrAZHbQ049ySG75ME="
+      },
+      "skillFile": {
+        "path": "SKILL.md",
+        "sha256": "0b9cf84b375cd2269aa7c295a776129c3c630b916ea66f9fd0b49feb76ba7499"
+      },
+      "verification": {
+        "schema": "clawhub.skill.verify.v1",
+        "ok": true,
+        "decision": "pass",
+        "reasons": [],
+        "card": {
+          "available": true,
+          "path": "skill-card.md",
+          "url": "https://wry-manatee-359.convex.site/api/v1/skills/sonos/card?ownerHandle=maddydci45-svg&version=1.0.0",
+          "sha256": "d64ac35a7049b417fa25b9c03ce7c222e515d02159806ce8e022325aad7a3487",
+          "size": 2122,
+          "contentType": "text/markdown; charset=utf-8"
+        },
+        "artifact": {
+          "sourceFingerprint": "af14ebb0e68210468f3eb1852efccf7d07c7f051183d516c8189d59d2f625391",
+          "bundleFingerprints": [
+            "f6c90ba2a924e97f81ccbf317c8943d755973982a3a23ab238ac5c21d385ec27",
+            "96314c36aa3ea18446bfe04a9422fb5ffb65d6ee072ea45d7a39f057c9050134"
+          ],
+          "files": [
+            {
+              "path": "SKILL.md",
+              "size": 940,
+              "sha256": "0b9cf84b375cd2269aa7c295a776129c3c630b916ea66f9fd0b49feb76ba7499",
+              "contentType": null
+            },
+            {
+              "path": ".clawhub/origin.json",
+              "size": 140,
+              "sha256": "4add7899ef516d264bbfd88f774ff705a4ee2afa8de1b8af97708c80862eb7c9",
+              "contentType": "application/json"
+            }
+          ]
+        },
+        "provenance": {
+          "source": "unavailable",
+          "reason": "No server-resolved GitHub import provenance is stored for this version."
+        },
+        "security": {
+          "status": "clean",
+          "passed": true,
+          "rawStatus": "clean",
+          "verdict": "benign",
+          "confidence": "high",
+          "summary": "The skill transparently documents and installs a Sonos command-line tool for user-directed speaker control, with no evidence of hidden or unrelated behavior.",
+          "model": "gpt-5.5",
+          "checkedAt": 1783653177597,
+          "signals": {
+            "staticScan": {
+              "status": "clean",
+              "rawStatus": "clean",
+              "reasonCodes": [],
+              "summary": "No suspicious patterns detected.",
+              "engineVersion": "v2.4.5",
+              "checkedAt": 1777524958981
+            },
+            "virusTotal": {
+              "status": "clean",
+              "rawStatus": "clean",
+              "verdict": "benign",
+              "analysis": "Type: OpenClaw Skill\nName: sonos\nVersion: 1.0.0\n\nThe skill bundle is classified as benign. The `SKILL.md` file clearly defines the purpose of controlling Sonos speakers and uses a standard `go install` command to fetch and compile the `sonoscli` tool from a public GitHub repository (`github.com/steipete/sonoscli`). While this involves fetching remote code, it is a common and transparent installation method for Go applications, not indicative of malicious intent within the skill bundle itself. The mention of `SPOTIFY_CLIENT_ID/SECRET` is for an optional feature of the `sonoscli` tool, explicitly documented as a requirement for that specific functionality, and not for unauthorized credential exfiltration. There is no evidence of prompt injection attempts against the agent, obfuscation, or other malicious behaviors.",
+              "source": "palm",
+              "scanner": "code_insight",
+              "engineStats": {
+                "harmless": 0,
+                "malicious": 0,
+                "suspicious": 0,
+                "undetected": 50
+              },
+              "checkedAt": 1779160829931
+            },
+            "skillSpector": {
+              "status": "clean",
+              "rawStatus": "clean",
+              "score": 0,
+              "severity": "LOW",
+              "recommendation": "SAFE",
+              "issueCount": 0,
+              "scannerVersion": "2.3.5",
+              "summary": null,
+              "error": null,
+              "checkedAt": 1783653163230
+            },
+            "dependencyRegistry": null
+          }
+        },
+        "signature": {
+          "status": "unsigned"
+        }
+      }
     }
   }
 }

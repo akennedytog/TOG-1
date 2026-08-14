@@ -1,0 +1,17 @@
+[
+  {
+    "time": "09:00",
+    "type": "insight",
+    "text": "The Airbus/Mistral deal shows something important: even aerospace giants want AI they can actually see and control.\n\nSMBs don't need sovereign-grade systems, but the principle applies.\n\nIf you can't explain what your AI agent did last Tuesday, you shouldn't have it running customer-facing workflows.\n\nObservability isn't enterprise jargon. It's 'can I trust this thing when I'm on vacation?'\n\nWhat's your current 'trust but verify' setup?"
+  },
+  {
+    "time": "15:00",
+    "type": "poll",
+    "text": "Poll for SMB operators:\n\nWhen you hear about 'AI governance failures' and big orgs losing control of their agents...\n\nA) That sounds terrifying and I'm checking my setups right now\nB) Feels like enterprise problems, not my reality\nC) Actually happened to me (small scale) - here's what I learned\nD) I'm still figuring out what 'AI agent' even means in my context\n\nThe Pope called to 'disarm AI.' Tech CEOs have 'AI psychosis.' Meanwhile you're just trying to make your invoice bot not hallucate prices.\n\nWhat's your actual experience?"
+  },
+  {
+    "time": "20:00",
+    "type": "reflection",
+    "text": "Reflection: The same week we learn OpenAI and Anthropic are worried about keeping customers as open models improve...\n\nA CEO somewhere is paying $200/month for a tool their dev could've built with an open model in a weekend.\n\nThat's not a criticism. It's just reality catching up.\n\nThe practical takeaway: If you're paying premium prices for AI tools, have a 6-month audit plan. What's worth paying for? Integration. Reliability. Support when it breaks.\n\nWhat's NOT worth it anymore? Basic chat. Simple automation. Generic content generation.\n\nWhat AI spend are you questioning lately?"
+  }
+]

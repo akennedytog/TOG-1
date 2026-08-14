@@ -52,7 +52,7 @@ An AI-powered automation system that:
 
 - Twitter: [@TheOneGroupAI](https://x.com/TheOneGroupAI)
 - Content Calendar: `content-calendar.json`
-- Automation Code: `twitter-automation.js`
+- Automation Code: `post_tweet.py` (canonical) + `twitter-automation.js` (scheduler wrapper)
 - Analytics: `twitter-analytics.json` (auto-generated)
 
 ---

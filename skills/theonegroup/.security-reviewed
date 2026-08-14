@@ -1,0 +1,10 @@
+# Security Review — 2026-07-18
+# Reviewer: Alec Kennedy
+# Status: APPROVED
+# 
+# child_process usage is legitimate for this skill:
+# - spawn() used to delegate to sub-scripts (node processes)
+# - execSync() used only for 'gog auth list' check
+# 
+# This is custom code for The One Group business operations.
+# Risk: Low (own code, isolated to workspace)

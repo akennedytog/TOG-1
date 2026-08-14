@@ -1,0 +1,33 @@
+{
+  "name": "Instagram Feed - Minimal Clean",
+  "template": "instagram",
+  "theme": "minimal",
+  "dimensions": {
+    "width": 1080,
+    "height": 1080
+  },
+  "colors": [
+    "#FFFFFF",
+    "#FAFAFA",
+    "#E0E0E0",
+    "#9E9E9E",
+    "#616161",
+    "#212121",
+    "#000000"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Helvetica Neue",
+      "style": "Light"
+    },
+    "body": {
+      "family": "Helvetica Neue",
+      "style": "UltraLight"
+    },
+    "accent": {
+      "family": "Helvetica Neue",
+      "style": "Medium"
+    }
+  },
+  "createdAt": "2026-05-22T14:06:49.645Z"
+}

@@ -1,0 +1,47 @@
+import { TwitterApi } from 'twitter-api-v2';
+
+const requiredEnv = [
+  'TWITTER_API_KEY',
+  'TWITTER_API_SECRET',
+  'TWITTER_ACCESS_TOKEN',
+  'TWITTER_ACCESS_SECRET',
+];
+
+const missingEnv = requiredEnv.filter((key) => !process.env[key]);
+if (missingEnv.length > 0) {
+  console.error(`❌ Missing Twitter credentials: ${missingEnv.join(', ')}`);
+  process.exit(1);
+}
+
+const client = new TwitterApi({
+  appKey: process.env.TWITTER_API_KEY,
+  appSecret: process.env.TWITTER_API_SECRET,
+  accessToken: process.env.TWITTER_ACCESS_TOKEN,
+  accessSecret: process.env.TWITTER_ACCESS_SECRET,
+});
+
+const rwClient = client.readWrite;
+
+const tweet = `AI SEO is about to be the biggest arbitrage opportunity of the decade.
+
+Right now:
+• 90% of businesses still optimize for Google
+• AI search (ChatGPT, Perplexity, Claude) uses different signals
+• First-movers are capturing featured answers worth $10K-100K/mo in traffic
+
+The window: 12-18 months before everyone catches on.
+
+Positioning your content for AI discovery = free leads while competitors sleep.`;
+
+async function postTweet() {
+  try {
+    const response = await rwClient.v2.tweet(tweet);
+    console.log('✅ Tweet posted successfully!');
+    console.log('Tweet ID:', response.data.id);
+    console.log('Text:', tweet);
+  } catch (error) {
+    console.error('❌ Error posting tweet:', error);
+  }
+}
+
+postTweet();

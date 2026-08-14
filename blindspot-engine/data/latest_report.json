@@ -1,0 +1,570 @@
+{
+  "domain": "\n        I run an AI consulting agency called The One Group. We help SMBs with AI automation.\n      ",
+  "timestamp": "2026-08-03T23:03:32.510240",
+  "knowledge_graph": {
+    "entities": {
+      "the_one_group": {
+        "id": "the_one_group",
+        "name": "The One Group",
+        "type": "concept",
+        "description": "",
+        "confidence": 0.3,
+        "sources": [],
+        "metadata": {}
+      }
+    },
+    "edges": []
+  },
+  "anti_queries": [
+    {
+      "id": "cross_biology_the_one_group",
+      "question": "How does this domain handle The One Group compared to how ecosystems handle equivalent concept?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from biology applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_biology_the_one_group",
+      "question": "What would a predator-prey dynamic look like in this space?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from biology applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_military_the_one_group",
+      "question": "What's the equivalent of asymmetric warfare in this domain?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from military applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_military_the_one_group",
+      "question": "Where is the 'high ground' that everyone's ignoring?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from military applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_sports_the_one_group",
+      "question": "What's the 'moneyball' inefficiency in this space?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from sports applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_sports_the_one_group",
+      "question": "Where is everyone playing defense when they should be playing offense?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from sports applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_finance_the_one_group",
+      "question": "What's being undervalued here?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from finance applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_finance_the_one_group",
+      "question": "Where is there an arbitrage opportunity?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from finance applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_engineering_the_one_group",
+      "question": "What's the single point of failure?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from engineering applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_engineering_the_one_group",
+      "question": "Where is there over-engineering vs under-engineering?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from engineering applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_gaming_the_one_group",
+      "question": "What's the 'boss level' everyone's avoiding?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from gaming applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_gaming_the_one_group",
+      "question": "What would a speedrunner exploit in this system?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from gaming applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_psychology_the_one_group",
+      "question": "What cognitive biases are most dangerous in this domain?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from psychology applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_psychology_the_one_group",
+      "question": "What would a 'nudge' strategy look like?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from psychology applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_evolution_the_one_group",
+      "question": "What's the equivalent of natural selection here?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from evolution applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "cross_evolution_the_one_group",
+      "question": "What traits are being selected for/against?",
+      "category": "cross_domain",
+      "source_gap": "Pattern from evolution applied to this domain",
+      "surprise_score": 0.9,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "peripheral_the_one_group",
+      "question": "Everyone's focused on the center of this domain. What if 'The One Group' on the periphery is actually the most important thing? What would change?",
+      "category": "contrarian",
+      "source_gap": "'The One Group' is peripheral but potentially critical",
+      "surprise_score": 0.85,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "contrarian_the_one_group",
+      "question": "Everyone agrees 'The One Group' is important. What if it's actually a distraction? What if the real leverage is elsewhere?",
+      "category": "contrarian",
+      "source_gap": "Conventional wisdom about 'The One Group'",
+      "surprise_score": 0.85,
+      "relevance_score": 0.7999999999999999,
+      "context": "",
+      "related_entities": [
+        "the_one_group"
+      ]
+    },
+    {
+      "id": "assumption_default_1",
+      "question": "What's the one thing everyone in this domain agrees on that's probably wrong?",
+      "category": "assumption",
+      "source_gap": "Unquestioned consensus beliefs",
+      "surprise_score": 0.7999999999999999,
+      "relevance_score": 0.6,
+      "context": "",
+      "related_entities": []
+    },
+    {
+      "id": "assumption_default_2",
+      "question": "What would a newcomer from outside this industry find most confusing? That confusion is a blind spot.",
+      "category": "assumption",
+      "source_gap": "Industry-specific assumptions that seem 'obvious' to insiders",
+      "surprise_score": 0.7999999999999999,
+      "relevance_score": 0.6,
+      "context": "",
+      "related_entities": []
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "cat_temporal",
+      "statement": "No explicit timeline is mentioned, suggesting an assumption about the pace of change.",
+      "category": "temporal",
+      "confidence": 0.4,
+      "impact_if_wrong": "Timing assumptions could be completely wrong",
+      "evidence": "",
+      "related_entities": []
+    }
+  ],
+  "mental_model": {
+    "core_beliefs": [
+      "I run an AI consulting agency called The One Group",
+      "We help SMBs with AI automation",
+      "We focus on custom GPTs, workflow automation, and AI training",
+      "Our clients are mostly in professional services - law firms, medical practices, accounting firms",
+      "We charge $2,500 for audits, $2,500-$10,000 for implementation, and $1,500-$7,500 for coaching"
+    ],
+    "assumed_boundaries": [],
+    "causal_links": [],
+    "priorities": [],
+    "blind_spots": [
+      {
+        "id": "cat_temporal",
+        "statement": "No explicit timeline is mentioned, suggesting an assumption about the pace of change.",
+        "category": "temporal",
+        "confidence": 0.4,
+        "impact_if_wrong": "Timing assumptions could be completely wrong",
+        "evidence": "",
+        "related_entities": []
+      }
+    ]
+  },
+  "cross_domain_matches": [
+    {
+      "pattern": {
+        "id": "psy_dunning_kruger",
+        "name": "Dunning-Kruger Effect",
+        "source_domain": "psychology",
+        "description": "People with low competence overestimate their ability, while experts underestimate theirs.",
+        "mechanism": "The less you know, the more confident you are. The more you know, the more you see what you don't know.",
+        "conditions": [
+          "New field or technology",
+          "Rapidly changing domain",
+          "Cross-industry moves"
+        ],
+        "signals": [
+          "Overconfidence in predictions",
+          "Dismissal of complexity",
+          "Simple solutions to complex problems"
+        ],
+        "examples": [
+          "AI capability predictions",
+          "Market entry assumptions"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "Where might the Dunning-Kruger effect be strongest in The One Group? What are people overconfident about?",
+      "confidence": 0.6666666666666666,
+      "reasoning": "Condition match: 0.33, Signal match: 1.00"
+    },
+    {
+      "pattern": {
+        "id": "fin_arbitrage",
+        "name": "Information Arbitrage",
+        "source_domain": "finance",
+        "description": "Profiting from price differences of the same asset in different markets. In knowledge, profiting from knowing something others don't.",
+        "mechanism": "Find where information is unevenly distributed and exploit the gap.",
+        "conditions": [
+          "Information asymmetry",
+          "New technology or regulation",
+          "Geographic or industry gap"
+        ],
+        "signals": [
+          "Same concept priced differently in different contexts",
+          "Knowledge that doesn't cross industry boundaries"
+        ],
+        "examples": [
+          "Cross-industry application of AI",
+          "Regulatory arbitrage"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "What information arbitrage exists in The One Group? What do you know that others don't?",
+      "confidence": 0.5833333333333333,
+      "reasoning": "Condition match: 0.67, Signal match: 0.50"
+    },
+    {
+      "pattern": {
+        "id": "game_meta",
+        "name": "Meta Shift",
+        "source_domain": "gaming",
+        "description": "The 'meta' (most effective tactics available) shifts when someone discovers a new strategy that beats the current best.",
+        "mechanism": "The optimal strategy changes when someone innovates, making old strategies obsolete.",
+        "conditions": [
+          "Competitive equilibrium",
+          "Stable best practices",
+          "Copycat behavior"
+        ],
+        "signals": [
+          "Everyone doing the same thing",
+          "Diminishing returns on current approach",
+          "New tool enabling different approach"
+        ],
+        "examples": [
+          "SEO algorithm changes",
+          "Social media platform shifts"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "What if the meta in The One Group is about to shift? What new strategy would make current best practices obsolete?",
+      "confidence": 0.5,
+      "reasoning": "Condition match: 0.33, Signal match: 0.67"
+    },
+    {
+      "pattern": {
+        "id": "bio_red_queen",
+        "name": "Red Queen Effect",
+        "source_domain": "biology",
+        "description": "In evolutionary systems, you must keep running just to stay in place. Competitors co-evolve, so advantages are temporary.",
+        "mechanism": "Continuous adaptation is required just to maintain position, not to gain ground.",
+        "conditions": [
+          "Competitive landscape",
+          "Fast-moving industry",
+          "Technology-driven market"
+        ],
+        "signals": [
+          "Competitors copying features quickly",
+          "Diminishing returns on innovation",
+          "Arms race dynamics"
+        ],
+        "examples": [
+          "AI model capabilities converging",
+          "SaaS feature parity"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "In The One Group, you're running just to stay in place. What if your competitors are adapting faster than you're innovating?",
+      "confidence": 0.3333333333333333,
+      "reasoning": "Condition match: 0.00, Signal match: 0.67"
+    },
+    {
+      "pattern": {
+        "id": "bio_niche_spec",
+        "name": "Niche Specialization",
+        "source_domain": "biology",
+        "description": "Species that occupy narrow niches face less competition but are vulnerable to niche destruction.",
+        "mechanism": "Specialization reduces competition but increases extinction risk.",
+        "conditions": [
+          "Niche market",
+          "B2B specialized service",
+          "Single-customer dependency"
+        ],
+        "signals": [
+          "Very specific target market",
+          "Few competitors",
+          "High expertise barrier"
+        ],
+        "examples": [
+          "Enterprise software for one industry",
+          "Boutique consulting"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "Is The One Group too specialized? What happens if the niche shrinks or disappears?",
+      "confidence": 0.3333333333333333,
+      "reasoning": "Condition match: 0.33, Signal match: 0.33"
+    },
+    {
+      "pattern": {
+        "id": "mil_asymmetric",
+        "name": "Asymmetric Warfare",
+        "source_domain": "military",
+        "description": "A weaker opponent can defeat a stronger one by avoiding their strengths and attacking their weaknesses.",
+        "mechanism": "Don't play the game the leader wants you to play. Change the battlefield.",
+        "conditions": [
+          "Market leader with clear strength",
+          "Resource disadvantage",
+          "Regulatory moat"
+        ],
+        "signals": [
+          "Leader investing in defending their strength",
+          "New entrants avoiding direct competition",
+          "Unserved segments"
+        ],
+        "examples": [
+          "Netflix vs Blockbuster",
+          "Uber vs Taxi"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "What would asymmetric warfare look like against the leaders in The One Group? Where are they weakest?",
+      "confidence": 0.3333333333333333,
+      "reasoning": "Condition match: 0.33, Signal match: 0.33"
+    },
+    {
+      "pattern": {
+        "id": "mil_flanking",
+        "name": "Flanking Maneuver",
+        "source_domain": "military",
+        "description": "Instead of attacking the strongest point, go around it and attack from an unexpected direction.",
+        "mechanism": "Find the angle the opponent isn't defending and attack there.",
+        "conditions": [
+          "Strong incumbent",
+          "High barriers to head-on competition",
+          "Adjacent opportunity"
+        ],
+        "signals": [
+          "Incumbent ignoring a segment",
+          "Regulatory blind spot",
+          "Technology enabling new approach"
+        ],
+        "examples": [
+          "Amazon vs traditional retail",
+          "Zoom vs Cisco"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "What flanking maneuver would catch everyone in The One Group off guard?",
+      "confidence": 0.3333333333333333,
+      "reasoning": "Condition match: 0.33, Signal match: 0.33"
+    },
+    {
+      "pattern": {
+        "id": "mil_supply_lines",
+        "name": "Supply Line Vulnerability",
+        "source_domain": "military",
+        "description": "An army's greatest vulnerability is its supply line. Cut it and the army collapses regardless of its strength.",
+        "mechanism": "Identify what the opponent needs to function and target that.",
+        "conditions": [
+          "Dependency on specific resource",
+          "Concentrated supply chain",
+          "Single point of failure"
+        ],
+        "signals": [
+          "Single supplier",
+          "Proprietary technology dependency",
+          "Key person dependency"
+        ],
+        "examples": [
+          "Chip shortage in auto industry",
+          "API dependency"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "What's the supply line vulnerability in The One Group? What single point of failure would collapse the system?",
+      "confidence": 0.3333333333333333,
+      "reasoning": "Condition match: 0.67, Signal match: 0.00"
+    },
+    {
+      "pattern": {
+        "id": "fin_long_tail",
+        "name": "Long Tail Risk",
+        "source_domain": "finance",
+        "description": "Rare, high-impact events that models underestimate because they haven't happened recently.",
+        "mechanism": "The most important risks are the ones that haven't materialized yet.",
+        "conditions": [
+          "Stable period without disruption",
+          "Models based on recent data",
+          "Complacency"
+        ],
+        "signals": [
+          "'This time is different' thinking",
+          "Risk models showing low probability",
+          "Everyone comfortable"
+        ],
+        "examples": [
+          "2008 financial crisis",
+          "COVID-19 pandemic"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "What long-tail risk is everyone in The One Group ignoring because it hasn't happened recently?",
+      "confidence": 0.3333333333333333,
+      "reasoning": "Condition match: 0.33, Signal match: 0.33"
+    },
+    {
+      "pattern": {
+        "id": "fin_compound",
+        "name": "Compound Effects",
+        "source_domain": "finance",
+        "description": "Small advantages compound over time into massive differences. The key is consistency and time horizon.",
+        "mechanism": "Small, consistent edges become insurmountable advantages given enough time.",
+        "conditions": [
+          "Long-term play",
+          "Repeatable small advantages",
+          "Patient capital"
+        ],
+        "signals": [
+          "Focus on short-term metrics",
+          "Underinvestment in compounding activities",
+          "Quarterly thinking"
+        ],
+        "examples": [
+          "Content marketing compounding",
+          "SEO investment"
+        ]
+      },
+      "target_analog": "The One Group",
+      "question": "What small, consistent advantage could compound into dominance in The One Group over 5 years?",
+      "confidence": 0.3333333333333333,
+      "reasoning": "Condition match: 0.00, Signal match: 0.67"
+    }
+  ],
+  "summary": "Analysis identified **20 blind spot questions**, **1 hidden assumptions**, and **10 cross-domain patterns**.\n\n**Most surprising findings:**\n- \ud83e\udd14 How does this domain handle The One Group compared to how ecosystems handle equivalent concept?\n- \ud83e\udd14 What would a predator-prey dynamic look like in this space?\n- \ud83e\udd14 What's the equivalent of asymmetric warfare in this domain?\n- \ud83e\udde0 Hidden assumption: No explicit timeline is mentioned, suggesting an assumption about the pace of change.",
+  "top_insights": [
+    "\ud83e\udd14 How does this domain handle The One Group compared to how ecosystems handle equivalent concept?",
+    "\ud83e\udd14 What would a predator-prey dynamic look like in this space?",
+    "\ud83e\udd14 What's the equivalent of asymmetric warfare in this domain?",
+    "\ud83e\udde0 You assume: No explicit timeline is mentioned, suggesting an assumption about the pace of change.",
+    "\ud83d\udd04 Psychology pattern: Where might the Dunning-Kruger effect be strongest in The One Group? What are people overconfident about?",
+    "\ud83d\udd04 Finance pattern: What information arbitrage exists in The One Group? What do you know that others don't?"
+  ]
+}

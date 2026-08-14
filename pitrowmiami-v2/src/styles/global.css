@@ -1,0 +1,108 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  
+  /* F1 Red brand palette */
+  --color-brand-50: #fff1f0;
+  --color-brand-100: #ffdfde;
+  --color-brand-200: #ffc5c3;
+  --color-brand-300: #ff9b98;
+  --color-brand-400: #ff5f5a;
+  --color-brand-500: #ff2a20;
+  --color-brand-600: #e10600;
+  --color-brand-700: #bd0500;
+  --color-brand-800: #9c0804;
+  --color-brand-900: #810d08;
+  
+  /* Racing accent (carbon/graphite) */
+  --color-carbon-50: #f6f6f6;
+  --color-carbon-100: #e7e7e7;
+  --color-carbon-200: #d1d1d1;
+  --color-carbon-300: #b0b0b0;
+  --color-carbon-400: #888888;
+  --color-carbon-500: #6d6d6d;
+  --color-carbon-600: #5d5d5d;
+  --color-carbon-700: #4f4f4f;
+  --color-carbon-800: #2b2b2b;
+  --color-carbon-900: #181818;
+  --color-carbon-950: #0d0d0d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background-image: linear-gradient(to right, var(--color-brand-500), var(--color-brand-600));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .f1-gradient {
+    background: linear-gradient(135deg, #e10600 0%, #1e1e1e 50%, #e10600 100%);
+  }
+  
+  .speed-lines {
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(225,6,0,0.03) 10px, rgba(225,6,0,0.03) 20px);
+  }
+  
+  .card {
+    background-color: var(--color-carbon-900);
+    border-radius: 1rem;
+    border: 1px solid var(--color-carbon-800);
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    border-color: var(--color-brand-600);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+  
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--color-brand-600);
+    transition: background-color 0.2s;
+  }
+  .btn-primary:hover {
+    background-color: #b91c1c;
+  }
+  
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    border: 2px solid var(--color-carbon-600);
+    color: white;
+    transition: border-color 0.2s;
+  }
+  .btn-secondary:hover {
+    border-color: white;
+  }
+  
+  .container {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+}

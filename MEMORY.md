@@ -428,6 +428,7 @@ netlify deploy --prod --dir .
 **Site Root:** `~/.openclaw/workspace/pitrowmiami/`
 **Production URL:** https://pitrowmiami.com
 **Email:** info@pitrowmiami.com (Cloudflare Email Routing → akennedy@theonegroup.info)
+**📞 Pit Row PUBLIC phone (2026-08-14):** **(954) 800-2162** (Twilio, forwards to Alec's cell 502-403-7201). This is the number on ALL Pit Row assets. Personal cell is NOT shown on Pit Row materials. Forward target stays +15024037201 in forward.xml (intentional). TOG corporate assets keep (502) 403-7201 as the TOG business number — separate brand.
 
 ### ⚠️ Deploy Gotcha
 The site was originally created for a Next.js project (babynest). The Netlify CLI auto-detects Next.js runtime even though pitrowmiami is a plain static site. **Do NOT run `netlify deploy --prod` from the pitrowmiami directory** — it will fail with Next.js plugin errors.
@@ -498,6 +499,19 @@ cd /tmp/pitrowmiami-deploy && netlify deploy --prod --dir .
 - If a key is exposed, rotate it immediately
 
 ---
+
+## 🎨 Brand — The One Group Logo (2026-08-13) ✅
+
+**Canonical logo:** `assets/brand/theonegroup-logo.png` (workspace) + Google Drive `OpenClaw-Deliverables/Brand/theonegroup-logo.png`
+- **Design:** Stylized metallic "1" in a diamond (blue/purple gradient, neon glow), "THE ONE GROUP" below (ONE in blue gradient), subtext "AI AUTOMATION AGENCY". Black background. Square 1254×1254.
+- **Source file:** `~/.openclaw/media/inbound/ChatGPT_Image_Aug_9_2026_06_28_16_PM---dc4e4de4-b3d1-4ee5-ba18-ecb8401a823d.png`
+
+**Integrated into theonegroup.info (deployed `6a7e0904`):**
+- Header nav + footer now use `/logo.png` (was text-only "The One Group")
+- Favicon (`/favicon.png` 32px), apple-touch-icon (`/apple-touch-icon.png` 180px) regenerated from logo
+- OG default banner (`/assets/images/og-default.png` 1200×630) rebuilt with logo + brand text
+
+**RULE for all future materials:** Use `assets/brand/theonegroup-logo.png` as the canonical The One Group logo. Do NOT use the Pit Row Miami logo (different brand — pitrowmiami-v2 has its own logo).
 
 ## Iris Lead Emails — Standing Rules (2026-08-10) ✅
 - **PS note is mandatory & deterministic:** Every lead-outreach email draft Iris creates MUST include the industry-matched PS note (PS_NOTES dict + pick_ps() in `agents/iris_real.py`). NEVER regress to model-generated P.S. Full notes in `LEAD-EMAIL-PS-NOTES.md`.

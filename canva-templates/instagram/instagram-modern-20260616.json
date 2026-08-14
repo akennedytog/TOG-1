@@ -1,0 +1,49 @@
+{
+  "name": "Instagram Modern Template",
+  "template": "instagram",
+  "theme": "modern",
+  "dimensions": {
+    "width": 1080,
+    "height": 1080
+  },
+  "colors": [
+    "#FFFFFF",
+    "#F5F5F5",
+    "#333333",
+    "#007BFF",
+    "#28A745",
+    "#FFC107",
+    "#DC3545"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "style": "Bold"
+    },
+    "body": {
+      "family": "Inter",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "Poppins",
+      "style": "SemiBold"
+    }
+  },
+  "createdAt": "2026-06-16T14:25:59.195Z",
+  "id": "ig-modern-20260616",
+  "canvaCompatible": true,
+  "exportFormats": [
+    "json",
+    "svg",
+    "png-ready"
+  ],
+  "inventory": {
+    "platform": "instagram",
+    "generatedBy": "figma-plugin-cli",
+    "cronDate": "2026-06-16"
+  },
+  "files": {
+    "json": "instagram-modern-20260616.json",
+    "svg": "instagram-modern-20260616.svg"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "supercharged-daily-intel",
+  "name": "Supercharged Daily Intelligence",
+  "schedule": "cron 0 8 * * * America/New_York",
+  "command": "python3 /Users/aleckennedy/.openclaw/workspace/daily_supercharged_run.py",
+  "workingDirectory": "/Users/aleckennedy/.openclaw/workspace",
+  "environment": {
+    "TAVILY_API_KEY": "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",
+    "HOME": "/Users/aleckennedy",
+    "OPENCLAW_WORKSPACE": "/Users/aleckennedy/.openclaw/workspace"
+  },
+  "target": "main",
+  "description": "AI Industry Intel + Scout Web + Twitter Supercharged"
+}

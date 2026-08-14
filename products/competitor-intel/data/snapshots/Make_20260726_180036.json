@@ -1,0 +1,18 @@
+{
+  "competitor": "Make",
+  "url": "https://www.make.com",
+  "timestamp": "2026-07-26 18:00:36.719946",
+  "content_hash": "c05a1226d956bf54",
+  "key_data": {
+    "word_count": 1244,
+    "pricing_mentions": 5,
+    "feature_keywords": [
+      "ai",
+      "automation",
+      "workflow",
+      "integration"
+    ],
+    "has_careers_page": true,
+    "has_blog": true
+  }
+}

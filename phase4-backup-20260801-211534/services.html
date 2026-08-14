@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="AI Automation Services | The One Group">
+  <meta name="description" content="AI automation services: visibility audits, implementation, competitor monitoring, social media, and web design. ROI-focused solutions for SMBs.">
+  <meta name="keywords" content="AI services, automation services, AI audit, competitor monitoring, web design, South Florida">
+  <meta name="author" content="The One Group">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theonegroup.info/services">
+  <meta property="og:title" content="AI Automation Services | The One Group">
+  <meta property="og:description" content="AI automation services: visibility audits, implementation, competitor monitoring, social media, and web design. ROI-focused solutions for SMBs.">
+  <meta property="og:image" content="https://theonegroup.info/assets/TOG-Logo-New.png">
+  <meta property="og:site_name" content="The One Group">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://theonegroup.info/services">
+  <meta property="twitter:title" content="AI Automation Services | The One Group">
+  <meta property="twitter:description" content="AI automation services: visibility audits, implementation, competitor monitoring, social media, and web design. ROI-focused solutions for SMBs.">
+  <meta property="twitter:image" content="https://theonegroup.info/assets/TOG-Logo-New.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://theonegroup.info/services">
+  <title>Services | The One Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['IBM Plex Mono', 'monospace'],
+          },
+          colors: {
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+            accent: { 400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9' },
+            dark: { bg: '#0f172a', surface: '#1e293b', elevated: '#334155' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/sophisticated-ui.css">
+  <style>
+    .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #3b82f6 100%); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradient-shift 8s ease infinite; }
+    @keyframes gradient-shift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+    .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); }
+    .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    .dark .glass { background: rgba(17, 24, 39, 0.8); }
+    
+    /* Navigation scroll effect */
+    .nav-scrolled { background: rgba(255, 255, 255, 0.9) !important; backdrop-filter: blur(20px) saturate(180%) !important; border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important; }
+    .dark .nav-scrolled { background: rgba(15, 23, 42, 0.9) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
+    
+    /* Service card enhancements */
+    .service-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .dark .service-card {
+      background: linear-gradient(145deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    
+    /* Popular service card */
+    .service-card.popular {
+      border: 2px solid transparent;
+      background: linear-gradient(145deg, rgba(30, 41, 59, 0.98) 0%, rgba(15, 23, 42, 0.98) 100%),
+                  linear-gradient(135deg, #3b82f6, #8b5cf6);
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
+    }
+    
+    .service-card.popular::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 1.5rem;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      filter: blur(20px);
+    }
+    
+    .service-card.popular:hover::after {
+      opacity: 0.4;
+    }
+    
+    /* Service icon styling */
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Enhanced buttons */
+    .btn-enhanced {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-enhanced:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5);
+    }
+    
+    .btn-enhanced::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .btn-enhanced:hover::before {
+      left: 100%;
+    }
+    
+    /* Feature list icons */
+    .feature-check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #10b981, #059669);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .feature-check svg {
+      width: 14px;
+      height: 14px;
+      color: white;
+    }
+  </style>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/TOG-Logo-New.png">
+</head>
+<body class="text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors duration-300">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <a href="/" class="flex items-center gap-2"> <span class="font-bold text-xl bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+The One Group
+</span> </a> <!-- Desktop Nav --> <div class="hidden md:flex items-center space-x-6"> <a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/about'> About </a><div class="relative group"> <button class="text-gray-600 dark:text-gray-300 hover:text-blue-600 flex items-center gap-1 py-2"> Services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2"> <a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/ai-audit'> AI Audit &amp; Assessment </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/ai-optimization'> AI Implementation </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/competitor-intelligence'> Competitor Intelligence </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/compliance-content'> Compliance Content </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/lead-response'> Lead Response Automation </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/social-media'> Social Media </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/web-design'> Web Design </a> </div> </div><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/case-studies'> Case Studies </a><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/pricing'> Pricing </a><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/contact'> Contact </a> <a class='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90' href='/free-ai-audit'>
+Free Audit
+</a> </div> <!-- Mobile menu button --> <button class="md:hidden p-2" id="mobile-menu-btn"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> <!-- Mobile Nav --> <div class="hidden md:hidden pb-4" id="mobile-menu"> <div class="flex flex-col space-y-2"> <a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/about'> About </a><div class="space-y-1"> <span class="text-gray-500 text-sm font-medium px-2">Services</span> <a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/ai-audit'> AI Audit &amp; Assessment </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/ai-optimization'> AI Implementation </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/competitor-intelligence'> Competitor Intelligence </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/compliance-content'> Compliance Content </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/lead-response'> Lead Response Automation </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/social-media'> Social Media </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/web-design'> Web Design </a> </div><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/case-studies'> Case Studies </a><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/pricing'> Pricing </a><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/contact'> Contact </a> </div> </div> </div> </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-12 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-display font-bold mb-4">Our <span class="gradient-text">Services</span></h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">AI automation, competitor intelligence, social media, and web design for South Florida businesses.</p>
+      <a href="#services" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg inline-block">View All Services</a>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services" class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="service-card p-6">
+          <div class="service-icon bg-gradient-to-br from-blue-400 to-blue-600">📊</div>
+          <h3 class="text-xl font-display font-bold mb-2">AI Visibility Audit</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Discover where your business appears in ChatGPT, Claude, and Perplexity.</p>
+          <div class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">$250</div>
+          <a href="#ai-audit" class="btn-enhanced block text-center border-2 border-blue-500 text-blue-500 py-3 rounded-xl font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">Learn More →</a>
+        </div>
+
+        <!-- Card 2 (Popular) -->
+        <div class="service-card popular p-6 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">MOST POPULAR</div>
+          <div class="service-icon bg-gradient-to-br from-purple-500 to-pink-500 mt-4">⚡</div>
+          <h3 class="text-xl font-display font-bold mb-2">AI Implementation</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Full AI automation deployment. Agents work 24/7 to capture and qualify leads.</p>
+          <div class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">$1,500+</div>
+          <a href="#ai-optimization" class="btn-enhanced block text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold">Learn More →</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card p-6">
+          <div class="service-icon bg-gradient-to-br from-emerald-400 to-emerald-600">🎯</div>
+          <h3 class="text-xl font-display font-bold mb-2">Premium Lead Lists</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">100 fresh, qualified South Florida leads delivered weekly. Pre-verified contact info.</p>
+          <div class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">$497/month</div>
+          <a href="#lead-lists" class="btn-enhanced block text-center border-2 border-emerald-500 text-emerald-600 py-3 rounded-xl font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition">Learn More →</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card p-6">
+          <div class="service-icon bg-gradient-to-br from-orange-400 to-orange-600">👁️</div>
+          <h3 class="text-xl font-display font-bold mb-2">Competitor Intelligence</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Monthly reports tracking competitors' AI visibility and market moves.</p>
+          <div class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">$297/month</div>
+          <a href="#competitor-intel" class="btn-enhanced block text-center border-2 border-orange-500 text-orange-600 py-3 rounded-xl font-semibold hover:bg-orange-50 dark:hover:bg-orange-900/20 transition">Learn More →</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card p-6">
+          <div class="service-icon bg-gradient-to-br from-pink-400 to-pink-600">📱</div>
+          <h3 class="text-xl font-display font-bold mb-2">Social Media Management</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">AI-powered content + daily posting. Twitter, LinkedIn, TikTok handled for you.</p>
+          <div class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">$497/month</div>
+          <a href="#social-media" class="btn-enhanced block text-center border-2 border-pink-500 text-pink-600 py-3 rounded-xl font-semibold hover:bg-pink-50 dark:hover:bg-pink-900/20 transition">Learn More →</a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card p-6">
+          <div class="service-icon bg-gradient-to-br from-teal-400 to-teal-600">💻</div>
+          <h3 class="text-xl font-display font-bold mb-2">Web Design</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Websites that convert visitors to leads. Built in 2-4 weeks with AI integration.</p>
+          <div class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Custom</div>
+          <p class="text-sm text-gray-500 mb-4">Starting at $500. Tell us what you need.</p>
+          <a href="#web-design" class="btn-enhanced block text-center border-2 border-teal-500 text-teal-600 py-3 rounded-xl font-semibold hover:bg-teal-50 dark:hover:bg-teal-900/20 transition">Learn More →</a>
+        </div>
+
+        <!-- Card 7 (Free Audit) -->
+        <div class="service-card p-6 bg-gradient-to-br from-blue-500 to-purple-600 border-0">
+          <div class="service-icon bg-white/20">🎯</div>
+          <h3 class="text-xl font-display font-bold mb-2 text-white">Not Sure Where to Start?</h3>
+          <p class="text-white/90 mb-4">Start with the 5-day sprint, then scale into implementation with a ranked action plan.</p>
+          <div class="text-3xl font-bold mb-4 text-white">FREE</div>
+          <a class='btn-enhanced block text-center bg-white text-blue-600 py-3 rounded-xl font-semibold' href='/ai-audit'>See 5-Day Offer →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Sections -->
+  
+  <section id="ai-audit" class="py-12 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-4">Service 1</span>
+          <h2 class="text-3xl font-display font-bold mb-4">AI Visibility Audit</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">The future of search isn't Google — it's AI assistants. When prospects ask ChatGPT for recommendations, will your business show up?</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center gap-3">
+              <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+              <span class="text-gray-700 dark:text-gray-300">50+ AI search queries tested</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+              <span class="text-gray-700 dark:text-gray-300">ChatGPT, Claude & Perplexity analysis</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+              <span class="text-gray-700 dark:text-gray-300">Competitor benchmarking</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+              <span class="text-gray-700 dark:text-gray-300">30-page detailed report</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+              <span class="text-gray-700 dark:text-gray-300">1-hour strategy call</span>
+            </li>
+          </ul>
+          <a class='btn-enhanced bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg inline-block' href='/ai-audit'>Get Started — $250</a>
+        </div>
+        
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="font-bold mb-4">What's Included</h3>
+          <div class="space-y-4">
+            <div class="flex"><span class="bg-gradient-to-br from-blue-400 to-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">1</span><div><p class="font-medium">Query Analysis</p><p class="text-sm text-gray-500">Test visibility across 50+ industry queries</p></div></div>
+            <div class="flex"><span class="bg-gradient-to-br from-blue-400 to-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">2</span><div><p class="font-medium">Competitor Comparison</p><p class="text-sm text-gray-500">See where you stand vs. competitors</p></div></div>
+            <div class="flex"><span class="bg-gradient-to-br from-blue-400 to-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">3</span><div><p class="font-medium">Action Plan</p><p class="text-sm text-gray-500">Specific recommendations to improve</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai-optimization" class="py-12 bg-gray-50 dark:bg-gray-800 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl order-2 md:order-1">
+          <h3 class="font-bold mb-4">What's Included</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">AI phone & chat receptionist</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Automated lead qualification</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Calendar booking integration</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Follow-up sequences</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">CRM integration</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">60-day support & training</span></li>
+          </ul>
+        </div>
+        
+        <div class="order-1 md:order-2">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium mb-4">Service 2</span>
+          <h2 class="text-3xl font-display font-bold mb-4">AI Implementation</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">Stop missing calls and leads. Deploy AI agents that work 24/7 to answer inquiries, qualify prospects, book appointments, and follow up automatically.</p>
+          <div class="space-y-4 mb-6">
+            <div class="flex"><span class="bg-gradient-to-br from-purple-400 to-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">1</span><div><p class="font-medium">Discovery & Setup</p></div></div>
+            <div class="flex"><span class="bg-gradient-to-br from-purple-400 to-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">2</span><div><p class="font-medium">Build & Test</p></div></div>
+            <div class="flex"><span class="bg-gradient-to-br from-purple-400 to-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">3</span><div><p class="font-medium">Launch & Optimize</p></div></div>
+          </div>
+          <a class='btn-enhanced bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg inline-block' href='/ai-optimization'>Get Started — $1,500+</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="competitor-intel" class="py-12 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-sm font-medium mb-4">Service 3</span>
+          <h2 class="text-3xl font-display font-bold mb-4">Competitor Intelligence</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">Know what your competitors are doing before they do. Monthly intelligence reports tracking their AI visibility, content strategy, and market moves.</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">3-5 competitor tracking</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Weekly intelligence briefs</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">AI visibility scores</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Real-time alerts</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Cancel anytime</span></li>
+          </ul>
+          <a class='btn-enhanced bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg inline-block' href='/competitor-intelligence'>Start Monitoring — $297/mo</a>
+        </div>
+        
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="font-bold mb-4">How It Works</h3>
+          <div class="space-y-4">
+            <div class="flex"><span class="bg-gradient-to-br from-orange-400 to-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">1</span><div><p class="font-medium">Track</p><p class="text-sm text-gray-500">Monitor 3-5 competitors continuously</p></div></div>
+            <div class="flex"><span class="bg-gradient-to-br from-orange-400 to-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">2</span><div><p class="font-medium">Report</p><p class="text-sm text-gray-500">Weekly briefings with findings</p></div></div>
+            <div class="flex"><span class="bg-gradient-to-br from-orange-400 to-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">3</span><div><p class="font-medium">Alert</p><p class="text-sm text-gray-500">Real-time notifications of major moves</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="social-media" class="py-12 bg-gray-50 dark:bg-gray-800 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl order-2 md:order-1">
+          <h3 class="font-bold mb-4">What's Included</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Daily AI-generated content</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Posting to Twitter, LinkedIn, TikTok</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Hashtag optimization</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Engagement monitoring</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Monthly analytics report</span></li>
+          </ul>
+        </div>
+        
+        <div class="order-1 md:order-2">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 text-sm font-medium mb-4">Service 4</span>
+          <h2 class="text-3xl font-display font-bold mb-4">Social Media Management</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">Stay visible without spending hours on content creation. AI generates engaging posts daily while you focus on running your business.</p>
+          <a class='btn-enhanced bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg inline-block' href='/social-media'>Start Posting — $497/mo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lead-lists" class="py-12 bg-gray-50 dark:bg-gray-800 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl order-2 md:order-1">
+          <h3 class="font-bold mb-4">What's Included</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">100 verified leads weekly</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Name, email, phone, website</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Industry & city filtering</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Delivered via CSV or API</span></li>
+            <li class="flex items-center gap-3"><div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700 dark:text-gray-300">Cancel anytime</span></li>
+          </ul>
+        </div>
+        
+        <div class="order-1 md:order-2">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-medium mb-4">Service 5</span>
+          <h2 class="text-3xl font-display font-bold mb-4">Premium Lead Lists</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">Skip the research. Get 100 fresh, qualified South Florida business leads delivered to your inbox every week. Pre-verified contact information ready for outreach.</p>
+          <div class="space-y-4 mb-6">
+            <div class="flex"><span class="bg-gradient-to-br from-emerald-400 to-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">1</span><div><p class="font-medium">Discovery</p><p class="text-sm text-gray-500">Tell us your target industries & cities</p></div></div>
+            <div class="flex"><span class="bg-gradient-to-br from-emerald-400 to-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">2</span><div><p class="font-medium">Research</p><p class="text-sm text-gray-500">AI agents find & verify each lead</p></div></div>
+            <div class="flex"><span class="bg-gradient-to-br from-emerald-400 to-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 shadow-lg">3</span><div><p class="font-medium">Delivery</p><p class="text-sm text-gray-500">Fresh list every Monday morning</p></div></div>
+          </div>
+          <a class='btn-enhanced bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg inline-block' href='/lead-lists'>Start Receiving — $497/mo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="web-design" class="py-12 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 text-sm font-medium mb-4">Service 6</span>
+          <h2 class="text-3xl font-display font-bold mb-4">Web Design</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">Websites that turn visitors into leads. Built in 2-4 weeks with conversion-focused design and AI lead capture integrated from day one.</p>
+          <a class='btn-enhanced bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg inline-block' href='/web-design'>Get Started — $2,500+</a>
+        </div>
+        
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="font-bold mb-4">Pricing Tiers</h3>
+          <div class="space-y-4">
+            <div class="p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+              <div class="flex justify-between"><span class="font-bold">Starter</span><span class="font-bold">$2,500</span></div>
+              <p class="text-sm text-gray-500">5 pages, basic SEO, AI lead capture</p>
+            </div>
+            <div class="p-4 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg border-2 border-blue-500">
+              <div class="flex justify-between"><span class="font-bold">Growth</span><span class="font-bold">$5,000</span></div>
+              <p class="text-sm text-gray-500">10 pages, advanced SEO, integrations</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+              <div class="flex justify-between"><span class="font-bold">Enterprise</span><span class="font-bold">$10,000</span></div>
+              <p class="text-sm text-gray-500">Custom, e-commerce, full automation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 bg-gradient-to-r from-blue-500 to-purple-600">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-display font-bold text-white mb-4">Ready to get started?</h2>
+      <p class="text-xl text-white/90 mb-6">See hard proof, start with the 5-day sprint, then qualify for a strategy call.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a class='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold' href='/proof-hvac-case-study'>See Hard Proof</a>
+        <a class='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold' href='/qualify?source=services'>Qualify for Strategy Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-gray-200 dark:border-gray-800"> <div class="max-w-6xl mx-auto px-4"> <div class="flex flex-col md:flex-row justify-between items-center"> <div class="mb-4 md:mb-0"> <span class="font-bold text-xl">The One Group</span> <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">AI Automation for South Florida SMBs</p> </div> <div class="flex gap-6 text-sm text-gray-600 dark:text-gray-400"> <a class='hover:text-blue-600' href='/about'>About</a> <a class='hover:text-blue-600' href='/pricing'>Pricing</a> <a class='hover:text-blue-600' href='/contact'>Contact</a> <a class='hover:text-blue-600' href='/privacy'>Privacy</a> </div> </div> <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500">
+© 2026 The One Group. All rights reserved.
+</div> </div> </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    
+    // Desktop Services dropdown (click instead of hover)
+    const servicesBtn = document.querySelector('.services-dropdown-btn');
+    const servicesDropdown = document.querySelector('.services-dropdown');
+    const dropdownArrow = document.querySelector('.dropdown-arrow');
+    
+    if (servicesBtn && servicesDropdown) {
+      servicesBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        servicesDropdown.classList.toggle('hidden');
+        if (dropdownArrow) {
+          dropdownArrow.style.transform = servicesDropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+      });
+      
+      // Close when clicking outside
+      document.addEventListener('click', () => {
+        servicesDropdown.classList.add('hidden');
+        if (dropdownArrow) dropdownArrow.style.transform = 'rotate(0deg)';
+      });
+    }
+    
+    // Mobile Services dropdown
+    const mobileServicesBtn = document.querySelector('.mobile-services-btn');
+    const mobileServicesDropdown = document.querySelector('.mobile-services-dropdown');
+    const mobileDropdownArrow = document.querySelector('.mobile-dropdown-arrow');
+    
+    if (mobileServicesBtn && mobileServicesDropdown) {
+      mobileServicesBtn.addEventListener('click', () => {
+        mobileServicesDropdown.classList.toggle('hidden');
+        if (mobileDropdownArrow) {
+          mobileDropdownArrow.style.transform = mobileServicesDropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+      });
+    }
+    
+    // Navigation scroll effect
+    const mainNav = document.getElementById('main-nav');
+    if (mainNav) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          mainNav.classList.add('nav-scrolled');
+        } else {
+          mainNav.classList.remove('nav-scrolled');
+        }
+      });
+    }
+  </script>
+
+<script src="/analytics.js"></script>
+</body>
+</html>

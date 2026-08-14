@@ -11,25 +11,24 @@ import fs from 'fs';
 const LEADS_FILE = '/Users/aleckennedy/.openclaw/workspace/data/arlo_findings.json';
 const TRACKER_FILE = '/Users/aleckennedy/.openclaw/workspace/email_tracker.json';
 
-// Email template for HVAC
-const testEmail = (lead) => `Subject: Quick question about ${lead.name}
+// Industry-aware AI visibility email template
+const testEmail = (lead) => `Subject: Would ${lead.name} come up in ChatGPT?
 
 Hi there,
 
-I came across ${lead.name} while researching HVAC companies in ${lead.city}.
+If someone asked ChatGPT for the best ${lead.industry || 'business'} company in South Florida, would ${lead.name} come up?
 
-Quick question: How do you handle the summer surge when call volume spikes?
+Most local businesses have no idea how they appear in AI search—or which competitors ChatGPT recommends instead.
 
-I ask because I've been experimenting with AI tools for handling overflow calls/scheduling, and I'm curious if this is even on your radar or if you've got it handled.
+The One Group helps businesses improve their AI visibility and turn that visibility into more qualified leads. We also provide AI automation, coaching, and ongoing competitor intelligence.
 
-Not a sales pitch - genuinely trying to understand how established companies like yours think about this.
-
-Either way, thanks for your time.
+Would a 15-minute conversation be worthwhile to see where your brand stands?
 
 Best,
 Alec Kennedy
-The One Group
-(502) 403-7201`;
+The One Group.AI
+Founder | CEO | (c) 502.403.7201 | akennedy@theonegroup.info
+https://theonegroup.info`;
 
 function loadLeads() {
   const data = JSON.parse(fs.readFileSync(LEADS_FILE, 'utf8'));

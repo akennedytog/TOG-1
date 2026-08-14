@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Ai Coaching | The One Group">
+  <meta name="description" content="Personal AI coaching and implementation. Get OpenClaw installed, configured, and optimized for your specific needs. 1-on-1 guidance from an AI automation expert.">
+  <meta name="keywords" content="AI automation, SMB automation, South Florida">
+  <meta name="author" content="The One Group">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theonegroup.info/ai-coaching">
+  <meta property="og:title" content="Ai Coaching | The One Group">
+  <meta property="og:description" content="Practical AI automation for South Florida businesses. 8-agent system delivering real results.">
+  <meta property="og:image" content="https://theonegroup.info/assets/TOG-Logo-New.png">
+  <meta property="og:site_name" content="The One Group">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://theonegroup.info/ai-coaching">
+  <meta property="twitter:title" content="Ai Coaching | The One Group">
+  <meta property="twitter:description" content="Practical AI automation for South Florida businesses. 8-agent system delivering real results.">
+  <meta property="twitter:image" content="https://theonegroup.info/assets/TOG-Logo-New.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://theonegroup.info/ai-coaching">
+  <title>1-on-1 AI Coaching | Personal AI Implementation with The One Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+          colors: { primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }, accent: { 500: '#8b5cf6', 600: '#7c3aed' } }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/sophisticated-ui.css">
+  <style>
+    .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); }
+    .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    .dark .glass { background: rgba(17, 24, 39, 0.8); }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
+    
+    /* Navigation scroll effect */
+    .nav-scrolled { background: rgba(255, 255, 255, 0.9) !important; backdrop-filter: blur(20px) saturate(180%) !important; border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important; }
+    .dark .nav-scrolled { background: rgba(15, 23, 42, 0.9) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
+    
+    /* Enhanced buttons */
+    .btn-enhanced { position: relative; background: linear-gradient(135deg, #3b82f6, #7c3aed); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 0.75rem; border: none; overflow: hidden; transition: all 0.25s ease; transform: translateY(0); box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4); }
+    .btn-enhanced:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5); }
+    .btn-enhanced::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.5s ease; }
+    .btn-enhanced:hover::before { left: 100%; }
+  </style>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/TOG-Logo-New.png">
+</head>
+<body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors duration-300">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <a href="/" class="flex items-center gap-2"> <span class="font-bold text-xl bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+The One Group
+</span> </a> <!-- Desktop Nav --> <div class="hidden md:flex items-center space-x-6"> <a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/about'> About </a><div class="relative group"> <button class="text-gray-600 dark:text-gray-300 hover:text-blue-600 flex items-center gap-1 py-2"> Services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2"> <a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/ai-audit'> AI Audit &amp; Assessment </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/ai-optimization'> AI Implementation </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/competitor-intelligence'> Competitor Intelligence </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/compliance-content'> Compliance Content </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/lead-response'> Lead Response Automation </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/social-media'> Social Media </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/web-design'> Web Design </a> </div> </div><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/case-studies'> Case Studies </a><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/blog'> Blog </a><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/pricing'> Pricing </a><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/contact'> Contact </a> <a class='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90' href='/free-ai-audit'>
+Free Audit
+</a> </div> <!-- Mobile menu button --> <button class="md:hidden p-2" id="mobile-menu-btn"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> <!-- Mobile Nav --> <div class="hidden md:hidden pb-4" id="mobile-menu"> <div class="flex flex-col space-y-2"> <a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/about'> About </a><div class="space-y-1"> <span class="text-gray-500 text-sm font-medium px-2">Services</span> <a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/ai-audit'> AI Audit &amp; Assessment </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/ai-optimization'> AI Implementation </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/competitor-intelligence'> Competitor Intelligence </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/compliance-content'> Compliance Content </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/lead-response'> Lead Response Automation </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/social-media'> Social Media </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/web-design'> Web Design </a> </div><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/case-studies'> Case Studies </a><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/blog'> Blog </a><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/pricing'> Pricing </a><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/contact'> Contact </a> </div> </div> </div> </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <div class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium mb-6">
+            <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+            Now accepting coaching clients
+          </div>
+          
+          <h1 class="font-display text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Your personal
+            <span class="gradient-text">AI coach</span>
+          </h1>
+          
+          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Get OpenClaw installed, configured, and optimized for your specific needs. 
+            1-on-1 guidance from an AI automation expert who's been in the trenches.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#book" class="inline-flex items-center justify-center px-6 py-3 gradient-bg text-white font-semibold rounded-lg hover:opacity-90 transition shadow-lg shadow-primary-500/25">
+              Book Free Discovery Call
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+            <a href="#what-you-get" class="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition">
+              See What's Included
+            </a>
+          </div>
+        </div>
+        
+        <div data-aos="fade-left" class="relative">
+          <div class="absolute inset-0 gradient-bg opacity-20 blur-3xl rounded-full"></div>
+          <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 border border-gray-200 dark:border-gray-700">
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-white font-bold">AK</div>
+                <div>
+                  <div class="font-semibold">Alec Kennedy</div>
+                  <div class="text-sm text-gray-500">AI Automation Coach</div>
+                </div>
+              </div>
+              <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm rounded-full">Online</span>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-3 flex-shrink-0">👤</div>
+                <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 text-sm">
+                  I'm overwhelmed by all the AI tools. Where do I even start?
+                </div>
+              </div>
+              
+              <div class="flex items-start flex-row-reverse">
+                <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white mr-3 flex-shrink-0 text-xs font-bold">AK</div>
+                <div class="bg-primary-100 dark:bg-primary-900/30 text-primary-900 dark:text-primary-300 rounded-lg p-3 text-sm">
+                  Let's start with your highest-impact task. What's eating up your time every week?
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center mr-3 flex-shrink-0">👤</div>
+                <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 text-sm">
+                  Following up with leads takes 2 hours every day...
+                </div>
+              </div>
+              
+              <div class="flex items-start flex-row-reverse">
+                <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white mr-3 flex-shrink-0 text-xs font-bold">AK</div>
+                <div class="bg-primary-100 dark:bg-primary-900/30 text-primary-900 dark:text-primary-300 rounded-lg p-3 text-sm">
+                  Perfect! That's exactly what OpenClaw can automate. Let's build you a system that responds in under 60 seconds.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section id="what-you-get" class="py-20 bg-gray-50 dark:bg-gray-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <h2 class="font-display text-3xl lg:text-4xl font-bold mb-4">What You Get</h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300">Personal AI coaching that goes beyond generic advice. I install, configure, and optimize OpenClaw specifically for your workflow.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700" data-aos="fade-up">
+          <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-3">OpenClaw Installation</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">Complete setup on your machine. I handle the technical complexity so you don't have to.</p>
+          <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Gateway configuration</li>
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Model setup (Ollama, Claude, etc.)</li>
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Skill installation</li>
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Security hardening</li>
+          </ul>
+        </div>
+        
+        <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-3">Custom Automation</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">I build automations tailored to your specific workflow, not generic templates.</p>
+          <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Workflow analysis</li>
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Custom skill development</li>
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integration with your tools</li>
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Testing & refinement</li>
+          </ul>
+        </div>
+        
+        <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-3">1-on-1 Training</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">Learn how to use, modify, and extend your AI systems. Become self-sufficient.</p>
+          <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personalized tutorials</li>
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Best practices</li>
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Troubleshooting guides</li>
+            <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Ongoing support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who This Is For -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h2 class="font-display text-3xl lg:text-4xl font-bold mb-6">Who This Is For</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center mr-4 flex-shrink-0">✓</div>
+              <div>
+                <h3 class="font-semibold mb-1">Busy Professionals</h3>
+                <p class="text-gray-600 dark:text-gray-400">You know AI could help, but you don't have time to figure it out. You want someone to just make it work.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center mr-4 flex-shrink-0">✓</div>
+              <div>
+                <h3 class="font-semibold mb-1">Non-Technical Founders</h3>
+                <p class="text-gray-600 dark:text-gray-400">You want AI automation but don't want to learn to code. You need a translator between you and the technology.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center mr-4 flex-shrink-0">✓</div>
+              <div>
+                <h3 class="font-semibold mb-1">Teams Ready to Scale</h3>
+                <p class="text-gray-600 dark:text-gray-400">You've hit a ceiling with manual processes. You need systems that scale without adding headcount.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center mr-4 flex-shrink-0">✓</div>
+              <div>
+                <h3 class="font-semibold mb-1">AI-Curious Executives</h3>
+                <p class="text-gray-600 dark:text-gray-400">You want to understand AI deeply enough to make strategic decisions, not just follow trends.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div data-aos="fade-left" class="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-8">
+          <h3 class="font-display text-2xl font-bold mb-6">Not For Everyone</h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 flex items-center justify-center mr-4 flex-shrink-0">✗</div>
+              <div>
+                <p class="text-gray-600 dark:text-gray-400">You want a magic button that solves everything without effort</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 flex items-center justify-center mr-4 flex-shrink-0">✗</div>
+              <div>
+                <p class="text-gray-600 dark:text-gray-400">You're looking for the cheapest option, not the best results</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 flex items-center justify-center mr-4 flex-shrink-0">✗</div>
+              <div>
+                <p class="text-gray-600 dark:text-gray-400">You want to learn to code, not get results</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-gray-50 dark:bg-gray-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <h2 class="font-display text-3xl lg:text-4xl font-bold mb-4">Coaching Packages</h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300">Choose the level of support that fits your needs. All packages include OpenClaw installation.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Starter -->
+        <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700" data-aos="fade-up">
+          <div class="text-center mb-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Starter</h3>
+            <div class="text-4xl font-bold mb-2">$1,500</div>
+            <div class="text-gray-500">One-time + $300/month support</div>
+          </div>
+          
+          <p class="text-gray-600 dark:text-gray-400 mb-6 text-center">Perfect for individuals who want OpenClaw set up with 1-2 automations.</p>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>OpenClaw installation</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 custom automation</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>2 hours of 1-on-1 training</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Email support</li>
+            <li class="flex items-center text-gray-400"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Weekly check-ins</li>
+          </ul>
+          
+          <a href="#book" class="block w-full py-3 text-center border-2 border-gray-300 dark:border-gray-600 rounded-lg font-semibold hover:border-primary-500 hover:text-primary-600 transition">Get Started</a>
+        </div>
+        
+        <!-- Professional -->
+        <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 border-2 border-primary-500 relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+            <span class="bg-primary-500 text-white text-sm font-semibold px-4 py-1 rounded-full">Most Popular</span>
+          </div>
+          
+          <div class="text-center mb-6 pt-4">
+            <h3 class="font-display text-xl font-semibold mb-2">Professional</h3>
+            <div class="text-4xl font-bold mb-2">$3,500</div>
+            <div class="text-gray-500">One-time + $500/month support</div>
+          </div>
+          
+          <p class="text-gray-600 dark:text-gray-400 mb-6 text-center">For professionals who want comprehensive automation and ongoing optimization.</p>
+          
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Everything in Starter</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>3 custom automations</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>5 hours of 1-on-1 training</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Weekly check-ins</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Priority support</li>
+          </ul>
+          
+          <a href="#book" class="block w-full py-3 text-center gradient-bg text-white font-semibold rounded-lg hover:opacity-90 transition">Get Started</a>
+        </div>
+        
+        <!-- Executive -->
+        <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center mb-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Executive</h3>
+            <div class="text-4xl font-bold mb-2">$7,500</div>
+            <div class="text-gray-500">One-time + $1,000/month support</div>
+          </div>
+          
+          <p class="text-gray-600 dark:text-gray-400 mb-6 text-center">For executives who want comprehensive AI transformation with dedicated support.</p>
+          
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Everything in Professional</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited automations</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>10 hours of 1-on-1 training</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Dedicated Slack channel</li>
+            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Quarterly strategy reviews</li>
+          </ul>
+          
+          <a href="#book" class="block w-full py-3 text-center border-2 border-gray-300 dark:border-gray-600 rounded-lg font-semibold hover:border-primary-500 hover:text-primary-600 transition">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="book" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-primary-900 to-accent-600 rounded-2xl shadow-2xl p-8 md:p-12 text-center text-white" data-aos="fade-up">
+        <h2 class="font-display text-3xl lg:text-4xl font-bold mb-4">Ready to get your AI systems running?</h2>
+        
+        <p class="text-xl text-primary-100 mb-8">
+          Book a free 30-minute discovery call. We'll discuss your workflow, identify automation opportunities, and determine if we're a good fit.
+        </p>
+        
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/akennedy-theonegroup/30min?month=2026-08" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+        
+        <p class="mt-6 text-sm text-primary-200">
+          No commitment required. If we're not a good fit, I'll point you to resources that can help.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-800/50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+          <h3 class="font-semibold mb-2">What's the difference between coaching and your done-for-you services?</h3>
+          <p class="text-gray-600 dark:text-gray-400">Coaching is hands-on and educational. I install OpenClaw on YOUR machine, teach you how to use it, and build automations with you. Done-for-you means I handle everything remotely and you just see the results.</p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+          <h3 class="font-semibold mb-2">Do I need technical skills?</h3>
+          <p class="text-gray-600 dark:text-gray-400">No. I handle all the technical setup. You just need to be able to use your computer and follow instructions. If you can use email and browse the web, you're qualified.</p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+          <h3 class="font-semibold mb-2">How long does setup take?</h3>
+          <p class="text-gray-600 dark:text-gray-400">Initial OpenClaw installation takes 2-3 hours. Building your first automation takes another 2-3 hours. Most clients are fully operational within a week.</p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+          <h3 class="font-semibold mb-2">What if I want to cancel monthly support?</h3>
+          <p class="text-gray-600 dark:text-gray-400">You can cancel anytime. Your OpenClaw installation and automations remain yours. You'll just lose access to updates, new features, and my support.</p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+          <h3 class="font-semibold mb-2">Can you work with my existing tools?</h3>
+          <p class="text-gray-600 dark:text-gray-400">Absolutely. I integrate with Gmail, Slack, Notion, Airtable, Google Sheets, and 100+ other tools. If it has an API, we can probably connect it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-gray-200 dark:border-gray-800"> <div class="max-w-6xl mx-auto px-4"> <div class="flex flex-col md:flex-row justify-between items-center"> <div class="mb-4 md:mb-0"> <span class="font-bold text-xl">The One Group</span> <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">AI Automation for South Florida SMBs</p> </div> <div class="flex gap-6 text-sm text-gray-600 dark:text-gray-400"> <a class='hover:text-blue-600' href='/about'>About</a> <a class='hover:text-blue-600' href='/pricing'>Pricing</a> <a class='hover:text-blue-600' href='/contact'>Contact</a> <a class='hover:text-blue-600' href='/privacy'>Privacy</a> </div> </div> <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500">
+© 2026 The One Group. All rights reserved.
+</div> </div> </footer>
+
+  <script src="/analytics.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    
+    // Navigation scroll effect
+    const mainNav = document.getElementById('main-nav');
+    if (mainNav) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          mainNav.classList.add('nav-scrolled');
+        } else {
+          mainNav.classList.remove('nav-scrolled');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

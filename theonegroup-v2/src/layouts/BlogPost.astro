@@ -1,0 +1,84 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+}
+
+const { title, description, date, readTime } = Astro.props;
+const slug = Astro.url.pathname;
+const canonical = new URL(slug, Astro.site ?? 'https://theonegroup.info').toString();
+const ogImage = 'https://theonegroup.info/assets/images/og-default.png';
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-gray-500 dark:text-gray-400 mb-6">
+        <a href="/" class="hover:text-brand-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-brand-600">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-700 dark:text-gray-300">Article</span>
+      </nav>
+
+      <!-- Title block -->
+      <header class="mb-10">
+        <h1 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 dark:text-white mb-4">{title}</h1>
+        <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+            {date}
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            {readTime} min read
+          </span>
+          <span class="text-brand-600 dark:text-brand-400 font-medium">The One Group</span>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <div class="prose prose-lg prose-gray dark:prose-invert max-w-none">
+        <slot />
+      </div>
+
+      <!-- Author CTA -->
+      <div class="mt-14 p-6 rounded-xl bg-brand-50 dark:bg-brand-950/40 border border-brand-100 dark:border-brand-800">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="flex-1">
+            <p class="font-semibold text-gray-900 dark:text-white mb-1">Ready to put this into practice?</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Get a free AI audit — we'll map your workflows and show you exactly what's worth automating.
+            </p>
+          </div>
+          <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm whitespace-nowrap transition-colors">
+            Get a Free AI Audit
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer meta -->
+      <footer class="mt-8 text-xs text-gray-400 dark:text-gray-500">
+        <a href={canonical} class="hover:underline break-all">Canonical: {canonical}</a>
+      </footer>
+    </div>
+  </article>
+
+  <!-- OG / structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": date,
+    "author": { "@type": "Person", "name": "Alec Kennedy" },
+    "publisher": { "@type": "Organization", "name": "The One Group" },
+    "mainEntityOfPage": canonical,
+    "image": ogImage
+  })} />
+</BaseLayout>

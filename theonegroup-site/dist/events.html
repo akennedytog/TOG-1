@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="title" content="Events | The One Group">
   <meta name="description" content="Community-powered event guides curated by AI. Miami Music Week, Art Basel, F1, and more.">
   <meta name="keywords" content="AI automation, SMB automation, South Florida">
@@ -11,25 +13,25 @@
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://theonegroup.info/events.html">
+  <meta property="og:url" content="https://theonegroup.info/events">
   <meta property="og:title" content="Events | The One Group">
-  <meta property="og:description" content="Practical AI automation for South Florida businesses. 8-agent system delivering real results.">
-  <meta property="og:image" content="https://theonegroup.info/assets/TOG-Logo-New.png">
+  <meta property="og:description" content="AI events and workshops in South Florida. Learn practical AI automation for your business.">
+  <meta property="og:image" content="https://theonegroup.info/assets/TOG-Social-Card.png">
   <meta property="og:site_name" content="The One Group">
   <meta property="og:locale" content="en_US">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://theonegroup.info/events.html">
+  <meta property="twitter:url" content="https://theonegroup.info/events">
   <meta property="twitter:title" content="Events | The One Group">
-  <meta property="twitter:description" content="Practical AI automation for South Florida businesses. 8-agent system delivering real results.">
-  <meta property="twitter:image" content="https://theonegroup.info/assets/TOG-Logo-New.png">
+  <meta property="twitter:description" content="AI events and workshops in South Florida. Learn practical AI automation for your business.">
+  <meta property="twitter:image" content="https://theonegroup.info/assets/TOG-Social-Card.png">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://theonegroup.info/events.html">
+  <link rel="canonical" href="https://theonegroup.info/events">
   <title>Events | The One Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -77,35 +79,23 @@
   </style>
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/TOG-Logo-New.png">
-</head>
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPKG2ZG2HR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-KPKG2ZG2HR");
+    </script>
+  </head>
 <body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors duration-300">
 
   <!-- Navigation -->
-  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex items-center">
-          <a href="/" class="flex items-center gap-2"><span class="font-display font-bold text-xl gradient-text">The One Group</span></a>
-        </div>
-        <div class="hidden md:flex items-center space-x-8">
-          <div class="relative group">
-            <a href="/services.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Services</a>
-          <a href="/case-studies.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Case Studies</a>
-          <a href="/ai-agent-workshop.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition font-medium text-primary-600">Free Workshop</a>
-          <a href="/blog.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">Blog</a>
-          <a href="/about.html" class="text-primary-600 font-medium"
-          u003ca href="/services.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 transition">About</a>
-        </div>
-        <div class="flex items-center space-x-4">
-          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-          </button>
-          <a href="/ai-coaching.html#book" class="hidden sm:inline-flex items-center px-4 py-2 gradient-bg text-white font-medium rounded-lg hover:opacity-90 transition">Book Coaching</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <a href="/" class="flex items-center gap-2"> <span class="font-bold text-xl bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+The One Group
+</span> </a> <!-- Desktop Nav --> <div class="hidden md:flex items-center space-x-6"> <a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/about'> About </a><div class="relative group"> <button aria-haspopup="true" aria-expanded="false" aria-label="Open Services menu" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 flex items-center gap-1 py-2"> Services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2"> <a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/ai-audit'> AI Audit &amp; Assessment </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/ai-optimization'> AI Implementation </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/competitor-intelligence'> Competitor Intelligence </a><a class='block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg' href='/compliance-content'> Compliance Content </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/ai-coaching'> AI Coaching </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/workflow-automation'> Workflow Automation </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/fractional-ai-ops'> Fractional AI Ops </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/lead-response'> Lead Response Automation </a> </div> </div><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/case-studies'> Case Studies </a><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/pricing'> Pricing </a><a class='text-gray-600 dark:text-gray-300 hover:text-blue-600 transition' href='/contact'> Contact </a> <a class='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90' href='/free-ai-audit'>
+Free Audit
+</a> </div> <!-- Mobile menu button --> <button aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2" id="mobile-menu-btn"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> <!-- Mobile Nav --> <div class="hidden md:hidden pb-4" id="mobile-menu"> <div class="flex flex-col space-y-2"> <a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/about'> About </a><div class="space-y-1"> <span class="text-gray-500 text-sm font-medium px-4 py-1">Services</span> <a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/ai-audit'> AI Audit &amp; Assessment </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/ai-optimization'> AI Implementation </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/competitor-intelligence'> Competitor Intelligence </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/compliance-content'> Compliance Content </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/ai-coaching'> AI Coaching </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/workflow-automation'> Workflow Automation </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/fractional-ai-ops'> Fractional AI Ops </a><a class='block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg' href='/lead-response'> Lead Response Automation </a> </div><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/case-studies'> Case Studies </a><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/pricing'> Pricing </a><a class='text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg' href='/contact'> Contact </a> </div> </div> </div> </nav>
 
   <!-- Hero Section -->
   <section class="pt-32 pb-20">
@@ -148,7 +138,7 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         <!-- Miami Music Week -->
-        <a href="/mmw-2026.html" class="event-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 block">
+        <a class='event-card card-hover bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 block' href='/archive/mmw-2026'>
           <div class="flex items-center justify-between mb-4">
             <span class="px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium">LIVE NOW</span>
             <span class="text-sm text-gray-500">Mar 24-29</span>
@@ -241,7 +231,7 @@
         </p>
         
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="inline-flex items-center px-8 py-4 bg-white text-primary-700 font-semibold rounded-lg hover:bg-gray-100 transition">
+          <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-primary-700 font-semibold rounded-lg hover:bg-gray-100 transition">
             <span>➕</span><span class="ml-2">Submit an Event</span>
           </a>
         </div>
@@ -267,25 +257,30 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-4 md:mb-0">
-          <a href="/" class="flex items-center gap-2"><span class="font-display font-bold text-xl gradient-text">The One Group</span></a>
-          <p class="text-gray-400 mt-1">Community-powered event guides</p>
-        </div>
-        
-        <div class="flex space-x-6">
-          <a href="https://x.com/TheOneGroupAI" target="_blank" class="text-gray-400 hover:text-white transition">X/Twitter</a>
-          <a href="/ai-coaching.html#book" class="text-gray-400 hover:text-white transition">Contact</a>
-        </div>
-      </div>
-      
-      <div class="mt-8 text-center text-gray-500 text-sm">
-        <p>Curated by <span class="gradient-text font-medium">@TheOneGroupAI</span> using automated event aggregation</p>
-      </div>
+  <footer class="py-12 border-t border-gray-200 dark:border-gray-800"> <div class="max-w-6xl mx-auto px-4"> <div class="flex flex-col md:flex-row justify-between items-center"> <div class="mb-4 md:mb-0"> <span class="font-bold text-xl">The One Group</span> <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">AI Automation for South Florida SMBs</p> </div>   <div class="flex gap-4 text-sm text-gray-600 dark:text-gray-400">
+    <a class='hover:text-blue-600' href='/about'>About</a>
+    <a class='hover:text-blue-600' href='/pricing'>Pricing</a>
+    <a class='hover:text-blue-600' href='/contact'>Contact</a>
+    <a class='hover:text-blue-600' href='/privacy'>Privacy</a>
+  </div>
+  <div class="mt-4 md:mt-0">
+    <a href="https://x.com/TheOneGroupAI" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-blue-500 transition text-sm">
+      @TheOneGroupAI <span class="text-xs">↗</span>
+    </a>
+  </div> </div>   <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
+    <div class="max-w-md mx-auto text-center">
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Get AI tips for your business — no spam, just practical stuff.</p>
+      <form action="/api/leads" method="POST" class="flex gap-2 max-w-sm mx-auto">
+        <input type="email" name="email" placeholder="your@email.com" required class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="form_type" value="newsletter">
+        <button type="submit" class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:opacity-90 transition">Subscribe</button>
+      </form>
     </div>
-  </footer>
+  </div>
+<div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500">
+© 2026 The One Group. All rights reserved.
+</div> </div> </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

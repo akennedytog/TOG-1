@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-04-06T14:02:00Z",
-  "totalTemplates": 6,
+  "lastUpdated": "2026-06-22T14:03:00Z",
+  "totalTemplates": 15,
   "byPlatform": {
     "instagram": {
-      "count": 2,
+      "count": 5,
       "templates": [
         {
           "name": "quote-template",
@@ -18,11 +18,35 @@
           "size": "1080x1920",
           "type": "reels",
           "lastModified": "2026-03-31"
+        },
+        {
+          "platform": "instagram",
+          "name": "instagram-modern-20260526",
+          "file": "instagram-modern-20260526.json",
+          "size": "1080x1080",
+          "type": "modern",
+          "lastModified": "2026-05-26"
+        },
+        {
+          "name": "instagram-modern-20260616",
+          "file": "instagram-modern-20260616.json",
+          "size": "1080x1080",
+          "type": "modern",
+          "lastModified": "2026-06-16",
+          "svg": "instagram-modern-20260616.svg"
+        },
+        {
+          "name": "instagram-modern-20260622",
+          "file": "instagram-modern-20260622.json",
+          "size": "1080x1080",
+          "type": "modern",
+          "lastModified": "2026-06-22",
+          "svg": "instagram-modern-20260622.svg"
         }
       ]
     },
     "linkedin": {
-      "count": 2,
+      "count": 5,
       "templates": [
         {
           "name": "carousel-stats",
@@ -37,11 +61,35 @@
           "size": "1200x627",
           "type": "data-visualization",
           "lastModified": "2026-03-30"
+        },
+        {
+          "platform": "linkedin",
+          "name": "linkedin-corporate-20260526",
+          "file": "linkedin-corporate-20260526.json",
+          "size": "1200x627",
+          "type": "corporate",
+          "lastModified": "2026-05-26"
+        },
+        {
+          "name": "linkedin-corporate-20260616",
+          "file": "linkedin-corporate-20260616.json",
+          "size": "1200x627",
+          "type": "corporate",
+          "lastModified": "2026-06-16",
+          "svg": "linkedin-corporate-20260616.svg"
+        },
+        {
+          "name": "linkedin-corporate-20260622",
+          "file": "linkedin-corporate-20260622.json",
+          "size": "1200x627",
+          "type": "corporate",
+          "lastModified": "2026-06-22",
+          "svg": "linkedin-corporate-20260622.svg"
         }
       ]
     },
     "pinterest": {
-      "count": 2,
+      "count": 5,
       "templates": [
         {
           "name": "infographic-5-steps",
@@ -56,11 +104,35 @@
           "size": "1000x1500",
           "type": "tip-card",
           "lastModified": "2026-03-30"
+        },
+        {
+          "platform": "pinterest",
+          "name": "pinterest-bold-20260526",
+          "file": "pinterest-bold-20260526.json",
+          "size": "1000x1500",
+          "type": "bold",
+          "lastModified": "2026-05-26"
+        },
+        {
+          "name": "pinterest-bold-20260616",
+          "file": "pinterest-bold-20260616.json",
+          "size": "1000x1500",
+          "type": "bold",
+          "lastModified": "2026-06-16",
+          "svg": "pinterest-bold-20260616.svg"
+        },
+        {
+          "name": "pinterest-bold-20260622",
+          "file": "pinterest-bold-20260622.json",
+          "size": "1000x1500",
+          "type": "bold",
+          "lastModified": "2026-06-22",
+          "svg": "pinterest-bold-20260622.svg"
         }
       ]
     }
   },
-  "todayGenerated": 0,
-  "nextGeneration": "2026-04-07T10:00:00Z",
-  "notes": "Manual template generation required - Figma CLI not configured for automated builds"
+  "todayGenerated": 3,
+  "nextGeneration": "2026-06-23T14:00:00Z",
+  "notes": "Automated Figma plugin CLI generation completed; direct Canva API export still requires Canva Pro/API access."
 }

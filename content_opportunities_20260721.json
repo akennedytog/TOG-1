@@ -1,0 +1,32 @@
+[
+  {
+    "type": "product_reaction",
+    "angle": "IBM sends AI warning, Jamie Dimon urges calm over workforce ",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.foxnews.com/tech/ai-newsletter-ibm-ai-warning-sends-shockwave"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "Inside the world of robot fight clubs - NBC News",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.nbcnews.com/video/inside-the-world-of-robot-fight-clubs-266991685979"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "HalluSquatting AI attack could hijack your computer - Fox Ne",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.foxnews.com/tech/hallusquatting-ai-attack-could-hijack-your-computer"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "Google to work on new AI chip to run models more efficiently",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.cnbc.com/video/2026/07/20/google-to-work-on-new-ai-chip-to-run-models-more-efficiently-report.html"
+  },
+  {
+    "type": "evergreen",
+    "angle": "AI adoption reality check",
+    "tweet_idea": "The SMBs winning with AI aren't the ones with the fanciest tools. They're the ones who picked ONE repetitive task and automated 80% of it.",
+    "source": "evergreen"
+  }
+]

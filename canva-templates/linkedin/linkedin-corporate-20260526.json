@@ -1,0 +1,33 @@
+{
+  "name": "LinkedIn Corporate Template 2026-05-26",
+  "template": "linkedin",
+  "theme": "corporate",
+  "dimensions": {
+    "width": 1200,
+    "height": 627
+  },
+  "colors": [
+    "#F8F9FA",
+    "#E9ECEF",
+    "#DEE2E6",
+    "#495057",
+    "#212529",
+    "#0066CC",
+    "#0056B3"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Segoe UI",
+      "style": "SemiBold"
+    },
+    "body": {
+      "family": "Segoe UI",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "Arial",
+      "style": "Bold"
+    }
+  },
+  "createdAt": "2026-05-26T14:01:50.443Z"
+}

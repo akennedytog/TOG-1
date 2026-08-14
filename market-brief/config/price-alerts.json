@@ -1,0 +1,14 @@
+{
+  "ASTS": {
+    "resistance": [30.00, 32.00, 35.00],
+    "support": [26.00, 24.00, 22.00],
+    "current_price": 28.50,
+    "last_alert": null
+  },
+  "TE": {
+    "resistance": [9.00, 9.45, 10.00],
+    "support": [8.20, 8.00, 7.50],
+    "current_price": 8.50,
+    "last_alert": null
+  }
+}

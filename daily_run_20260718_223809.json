@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-18",
+  "started": "2026-07-18T22:37:58.166102",
+  "modules": {
+    "scout": {
+      "status": "success",
+      "deals_researched": 0,
+      "intelligence_items": 0
+    },
+    "ai_industry": {
+      "status": "success",
+      "breaking_news": 5,
+      "funding_news": 5,
+      "content_opportunities": 4,
+      "credits_used": 3
+    },
+    "twitter": {
+      "status": "error",
+      "error": "name 'List' is not defined"
+    },
+    "content_refresh": {
+      "status": "success",
+      "output": "port=443): Max retries exceeded with url: /frontpage?points=100 (Caused by ConnectTimeoutError(<HTTPSConnection(host='hnrss.org', port=443) at 0x10870b490>, 'Connection to hnrss.org timed out. (connect timeout=10)'))\n    \u2705 0 fresh stories (last 3 days)\n  \u26a0\ufe0f No valid insight post generated\n  \u26a0\ufe0f Skipping duplicate: End-of-day note: the best AI workflow is the one y...\n\n\u2705 Added 1 posts (skipped 1 duplicates, 0 failed audit)\n\n\u2728 Complete in 10.1s\n\ud83d\udcca Fetched 0 fresh stories\n\ud83d\udcdd Generated 2 quality posts\n"
+    }
+  },
+  "finished": "2026-07-18T22:38:09.067641",
+  "total_credits": 3
+}

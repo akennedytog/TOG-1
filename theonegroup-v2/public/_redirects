@@ -1,0 +1,7 @@
+# Dead URL redirects (consolidate Google index authority)
+/pricing            /services/  301
+/pricing/           /services/  301
+/web-design         /services/  301
+/web-design/        /services/  301
+/webdesign          /services/  301
+/webdesign/         /services/  301

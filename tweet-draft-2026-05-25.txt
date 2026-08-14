@@ -1,0 +1,27 @@
+Twitter Content Draft - 2026-05-25
+==================================================
+
+Post 1: insight
+Text: Google Gemma 4 now runs on iPhone offline.
+
+This matters:
+• No API calls = no ongoing costs
+• No latency = instant responses
+• Privacy = data stays on device
+
+The shift: AI moving from cloud-dependent to edge-native.
+
+Expect more local-first AI tools this year.
+
+Post 2: insight
+Text: Amazon is acquiring Globalstar to build a satellite network.
+
+Why this matters for AI:
+• Rural/offline areas get connectivity
+• Edge AI becomes truly everywhere
+• The 'always connected' assumption breaks down
+
+We're moving toward a world where AI works whether you're in a data center or in the middle of nowhere.
+
+Infrastructure enabling intelligence.
+

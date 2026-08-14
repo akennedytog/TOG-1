@@ -4,43 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🚀 Mission Control - The One Group</title>
-  <script src="https://cdn.tailwindcss.com">
-    }
-
-    // Add Task functions
-    function toggleAddTaskForm() {
-      const form = document.getElementById('add-task-form');
-      if (form) form.classList.toggle('hidden');
-    }
-
-    function addTask() {
-      const textInput = document.getElementById('new-task-text');
-      const categorySelect = document.getElementById('new-task-category');
-      const statusSelect = document.getElementById('new-task-status');
-      
-      if (!textInput || !textInput.value.trim()) {
-        showToast('Please enter a task description');
-        return;
-      }
-      
-      const newTask = {
-        id: Date.now(),
-        text: textInput.value.trim(),
-        category: categorySelect ? categorySelect.value : 'Other',
-        status: statusSelect ? statusSelect.value : 'progress'
-      };
-      
-      todos.push(newTask);
-      
-      // Clear form
-      if (textInput) textInput.value = '';
-      
-      // Re-render
-      renderTodos();
-      toggleAddTaskForm();
-      showToast('✓ Task added successfully');
-    }
-</script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -105,8 +69,11 @@
         <button onclick="showSection('agents')" id="tab-agents" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium">
           🤖 AI Agents
         </button>
+        <button onclick="showSection('market')" id="tab-market" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium">
+          📈 Market Brief
+        </button>
         <button onclick="showSection('leads')" id="tab-leads" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium">
-          🔥 Leads (90)
+          🔥 Leads (934)
         </button>
         <button onclick="showSection('content')" id="tab-content" class="nav-tab px-4 py-2 rounded-lg border border-slate-600 text-sm font-medium">
           📝 Content
@@ -136,13 +103,13 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #3b82f6;">
           <p class="text-slate-400 text-xs uppercase">AI Agents</p>
-          <p class="text-3xl font-bold text-blue-400">90</p>
+          <p class="text-3xl font-bold text-blue-400">934</p>
           <p class="text-xs text-green-400">6 active • 2 idle</p>
         </div>
         
         <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #8b5cf6;">
           <p class="text-slate-400 text-xs uppercase">Leads</p>
-          <p class="text-3xl font-bold text-purple-400" id="leads-count">90</p>
+          <p class="text-3xl font-bold text-purple-400" id="leads-count">934</p>
           <p class="text-xs text-slate-400">15 high score • 20 new today</p>
         </div>
         
@@ -154,7 +121,7 @@
         
         <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #f59e0b;">
           <p class="text-slate-400 text-xs uppercase">Content Pipeline</p>
-          <p class="text-3xl font-bold text-amber-400">171</p>
+          <p class="text-3xl font-bold text-amber-400">321</p>
           <p class="text-xs text-slate-400">6 blogs • 3 newsletters</p>
         </div>
         
@@ -222,10 +189,115 @@
 
     <!-- AGENTS SECTION -->
     <section id="section-agents" class="hidden space-y-4">
-      <h2 class="text-xl font-bold mb-4">🤖 My 8 AI Agents</h2>
+      <h2 class="text-xl font-bold mb-4">🤖 My 9 AI Agents</h2>
       
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="agents-grid">
         <!-- Agents rendered by JavaScript -->
+      </div>
+    </section>
+
+    <!-- MARKET BRIEF SECTION -->
+    <section id="section-market" class="hidden space-y-4">
+      <div class="glass-panel rounded-xl p-6 border-emerald-500/30">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h2 class="text-2xl font-bold flex items-center gap-2">
+              📈 Morning Market Brief
+            </h2>
+            <p class="text-slate-400 text-sm mt-1">Pre-market analysis powered by Morpheus • Watchlist: $ASTS, $TE</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <div id="market-status" class="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/50">
+              <span class="w-2 h-2 bg-emerald-400 rounded-full pulse-green"></span>
+              <span class="text-sm text-emerald-300">Active</span>
+            </div>
+            <button onclick="refreshMarketBrief()" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 rounded-lg text-sm">
+              🔄 Refresh
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Brief Frame -->
+        <div class="mb-4">
+          <iframe src="market-brief/output/latest-brief.html" 
+                  style="width: 100%; height: 600px; border: none; border-radius: 12px;"
+                  title="Market Brief"></iframe>
+        </div>
+
+        <!-- Alerts Panel -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div class="glass-panel rounded-xl p-4 border-amber-500/30">
+            <h4 class="font-semibold mb-3 flex items-center gap-2">
+              📊 Options Flow Alerts
+              <span class="px-2 py-0.5 bg-red-500 text-white text-xs rounded-full">2 NEW</span>
+            </h4>
+            <div class="space-y-2">
+              <div class="p-3 bg-amber-900/20 rounded-lg border-l-2 border-amber-500">
+                <p class="font-medium text-sm">ASTS - Whale Call Activity</p>
+                <p class="text-xs text-slate-400">Unusual call volume: 340% of average. \$30 strikes most active.</p>
+                <span class="text-xs text-amber-400">Just now</span>
+              </div>
+              <div class="p-3 bg-red-900/20 rounded-lg border-l-2 border-red-500">
+                <p class="font-medium text-sm">TE - Earnings Put Hedge</p>
+                <p class="text-xs text-slate-400">Heavy put buying ahead of earnings. \$8 puts volume spike.</p>
+                <span class="text-xs text-amber-400">Just now</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-panel rounded-xl p-4 border-emerald-500/30">
+            <h4 class="font-semibold mb-3">🤖 AI Brief</h4>
+            <div class="p-3 bg-slate-800/50 rounded-lg max-h-48 overflow-y-auto">
+              <p class="text-sm mb-2"><strong class="text-emerald-400">ASTS:</strong> Bullish breakout confirmed. Call volume surge suggests institutional accumulation.</p>
+              <p class="text-sm mb-2"><strong class="text-amber-400">TE:</strong> Consolidating pre-earnings. Put hedging detected.</p>
+              <p class="text-sm text-slate-400">Risk-on sentiment continues. Watch for VIX expansion.</p>
+            </div>
+            <a href="market-brief/output/ai-brief.txt" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 mt-2 inline-block">View full brief →</a>
+          </div>
+        </div>
+
+        <!-- Price Alert Config -->
+        <div class="glass-panel rounded-xl p-4 mb-4 border-slate-700/50">
+          <h4 class="font-semibold mb-3">🔔 Price Alert Levels</h4>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <p class="text-sm font-medium mb-2">ASTS</p>
+              <div class="flex gap-2 text-xs">
+                <span class="px-2 py-1 bg-red-900/30 text-red-400 rounded">R: \$30</span>
+                <span class="px-2 py-1 bg-emerald-900/30 text-emerald-400 rounded">S: \$26</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Current: \$28.85 (near resistance)</p>
+            </div>
+            <div>
+              <p class="text-sm font-medium mb-2">TE</p>
+              <div class="flex gap-2 text-xs">
+                <span class="px-2 py-1 bg-red-900/30 text-red-400 rounded">R: \$9.45</span>
+                <span class="px-2 py-1 bg-emerald-900/30 text-emerald-400 rounded">S: \$8.20</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Current: \$8.35 (sideways)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Automation Status -->
+        <div class="glass-panel rounded-xl p-4 border-slate-700/50">
+          <div class="flex justify-between items-center">
+            <div>
+              <h4 class="font-semibold mb-1">⚙️ Automation Status</h4>
+              <p class="text-sm text-slate-400">Daily scraper runs at 7:00 AM EST • Sources: Finviz, Yahoo Finance, TradingView</p>
+            </div>
+            <div class="flex flex-col gap-2 text-right">
+              <span class="px-2 py-1 bg-emerald-900/50 text-emerald-400 text-xs rounded">✓ Cron Active (M-F 7AM)</span>
+              <span class="text-xs text-slate-500">Manual: run ~/.openclaw/workspace/market-brief/scripts/run-now.sh</span>
+            </div>
+          </div>
+          <div class="mt-4 p-3 bg-slate-800/50 rounded-lg">
+            <p class="text-sm text-slate-400 mb-2"><strong>To refresh data now:</strong></p>
+            <code class="text-xs text-emerald-400">
+              ~/.openclaw/workspace/market-brief/scripts/run-now.sh
+            </code>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -245,7 +317,7 @@
         </div>
         <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #f59e0b; cursor: pointer;" onclick="showLeadStatsModal('medium')">
           <p class="text-slate-400 text-xs uppercase">Medium (6-7)</p>
-          <p class="text-3xl font-bold text-amber-400">171</p>
+          <p class="text-3xl font-bold text-amber-400">321</p>
           <p class="text-xs text-slate-400">Qualified</p>
         </div>
         <div class="glass-panel rounded-xl p-4 metric-card" style="border-left-color: #ef4444; cursor: pointer;" onclick="showLeadStatsModal('low')">
@@ -261,7 +333,7 @@
       </div>
 
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-xl font-bold">🔥 Active Leads (<span id="active-leads-count">90</span>)</h2>
+        <h2 class="text-xl font-bold">🔥 Active Leads (<span id="active-leads-count">934</span>)</h2>
         <div class="flex gap-2">
           <button onclick="showAllLeadsModal()" class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-lg text-sm transition">👁️ View All</button>
           <select id="leads-industry-filter" class="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-sm" onchange="filterLeadsByIndustry()">
@@ -796,7 +868,7 @@
     // Navigation
     function showSection(sectionName) {
       // Hide all sections
-      ['overview', 'agents', 'leads', 'content', 'competitors', 'skills', 'todo'].forEach(s => {
+      ['overview', 'agents', 'market', 'leads', 'content', 'competitors', 'skills', 'todo', 'scout'].forEach(s => {
         const section = document.getElementById('section-' + s);
         const tab = document.getElementById('tab-' + s);
         if (section) section.classList.add('hidden');
@@ -810,6 +882,15 @@
       if (selectedTab) selectedTab.classList.add('active', 'bg-blue-500/30', 'border-blue-500');
     }
 
+    // Market Brief refresh (reload iframe)
+    function refreshMarketBrief() {
+      const iframe = document.querySelector('#section-market iframe');
+      if (iframe) {
+        iframe.src = 'market-brief/output/latest-brief.html?t=' + Date.now();
+        showToast('🔄 Brief reloaded!');
+      }
+    }
+
     // Agent data
     const agents = [
       { id: "jerry", name: "Jerry", role: "CEO", status: "active", current_task: "Evaluating South Florida expansion", tasks_today: 3, efficiency: 94, color: "#8B5CF6", emoji: "👔" },
@@ -817,9 +898,10 @@
       { id: "iris", name: "Iris", role: "Sales & Marketing", status: "active", current_task: "Creating cold email sequences", tasks_today: 8, efficiency: 91, color: "#EC4899", emoji: "💼" },
       { id: "rico", name: "Rico", role: "Operations", status: "active", current_task: "Setting up automated outreach", tasks_today: 6, efficiency: 95, color: "#F97316", emoji: "⚙️" },
       { id: "dev", name: "Dev", role: "Engineering", status: "active", current_task: "Building lead tracking dashboard", tasks_today: 4, efficiency: 88, color: "#6366F1", emoji: "💻" },
-      { id: "dante", name: "Dante", role: "Creative", status: "active", current_task: "Producing Twitter content", tasks_today: 3, efficiency: 92, color: "#EF4444", emoji: "🎨" },
+      { id: "dante", name: "Dante", role: "Creative", status: "active", current_task: "Daily $ASTS & $TE stock tweets", tasks_today: 2, efficiency: 92, color: "#EF4444", emoji: "🎨" },
       { id: "opal", name: "Opal", role: "Organization", status: "idle", current_task: "Monitoring organizational coherence", tasks_today: 2, efficiency: 100, color: "#14B8A6", emoji: "📋" },
-      { id: "abby", name: "Abby", role: "Quality Control", status: "idle", current_task: "Reviewing outputs", tasks_today: 1, efficiency: 99, color: "#06B6D4", emoji: "✅" }
+      { id: "abby", name: "Abby", role: "Quality Control", status: "idle", current_task: "Reviewing outputs", tasks_today: 1, efficiency: 99, color: "#06B6D4", emoji: "✅" },
+      { id: "morpheus", name: "Morpheus", role: "Morning Market Brief", status: "active", current_task: "Pre-market analysis for $ASTS & $TE", tasks_today: 1, efficiency: 96, color: "#22c55e", emoji: "📈" }
     ];
 
     // Leads data - will be loaded from arlo_findings.json
@@ -1352,9 +1434,10 @@ The One Group`
       iris: { name: "Iris", role: "Sales & Marketing", emoji: "💼", color: "#EC4899", description: "Cold outreach and nurturing", responsibilities: ["Sends personalized cold emails", "Manages follow-up sequences", "Tracks email engagement", "Books sales calls"], currentTask: "Cold email outreach to GitHub prospects", efficiency: 91, status: "active" },
       rico: { name: "Rico", role: "Operations", emoji: "⚙️", color: "#F97316", description: "Systems and infrastructure", responsibilities: ["Manages Mission Control dashboard", "Optimizes workflows", "Fixes technical issues", "Maintains integrations"], currentTask: "Website mobile navigation fixes deployed", efficiency: 95, status: "active" },
       dev: { name: "Dev", role: "Engineering", emoji: "💻", color: "#6366F1", description: "Code and development", responsibilities: ["Builds new features", "Writes automation scripts", "Maintains codebase", "Deploys updates"], currentTask: "Mission Control dashboard restored + Skills tab", efficiency: 88, status: "active" },
-      dante: { name: "Dante", role: "Creative", emoji: "🎨", color: "#EF4444", description: "Content creation", responsibilities: ["Creates Twitter threads", "Writes blog content", "Generates video scripts", "Designs graphics"], currentTask: "Twitter threads + blog content", efficiency: 92, status: "active" },
+      dante: { name: "Dante", role: "Creative", emoji: "🎨", color: "#EF4444", description: "Content creation", responsibilities: ["Creates Twitter threads", "Writes blog content", "Generates video scripts", "Designs graphics", "Daily ASTS & TE stock tweets (8:30 AM)"], currentTask: "Daily stock tweets for $ASTS & $TE", efficiency: 92, status: "active" },
       opal: { name: "Opal", role: "Organization", emoji: "📋", color: "#14B8A6", description: "Task coordination", responsibilities: ["Tracks project progress", "Manages deadlines", "Coordinates between agents", "Maintains documentation"], currentTask: "Monitoring organizational coherence", efficiency: 100, status: "idle" },
-      abby: { name: "Abby", role: "Quality Control", emoji: "✅", color: "#06B6D4", description: "Review and validation", responsibilities: ["Reviews all outputs", "Checks for errors", "Validates data accuracy", "Ensures quality standards"], currentTask: "Reviewing outputs", efficiency: 99, status: "idle" }
+      abby: { name: "Abby", role: "Quality Control", emoji: "✅", color: "#06B6D4", description: "Review and validation", responsibilities: ["Reviews all outputs", "Checks for errors", "Validates data accuracy", "Ensures quality standards"], currentTask: "Reviewing outputs", efficiency: 99, status: "idle" },
+      morpheus: { name: "Morpheus", role: "Morning Market Brief", emoji: "📈", color: "#22c55e", description: "Pre-market stock analysis and intelligence", responsibilities: ["Scans watchlist ($ASTS, $TE)", "Summarizes overnight catalysts", "Identifies support/resistance levels", "Checks unusual volume/options flow", "Flags earnings and news events", "Generates bullish/bearish cases", "Calculates risk scores"], currentTask: "Pre-market analysis for $ASTS & $TE", efficiency: 96, status: "active", watchlist: ["$ASTS - AST SpaceMobile", "$TE - Tecpetrol/Tetra Technologies"] }
     };
 
     function showAgentModal(agentId) {
@@ -1482,8 +1565,8 @@ The One Group`
       if (modal) modal.classList.remove('hidden');
     }
 
-    // Todo Detail Modal
-    const todos = [
+    // Todo Detail Modal - Load from localStorage or use defaults
+    const defaultTodos = [
       { id: 1, text: "Build Reddit karma on r/HVACadvice", status: "progress", category: "Reddit" },
       { id: 2, text: "Create HVAC-Talk.com account", status: "progress", category: "Forum" },
       { id: 3, text: "Send LinkedIn voice messages", status: "progress", category: "LinkedIn" },
@@ -1494,6 +1577,14 @@ The One Group`
       { id: 8, text: "Mission Control skills tab", status: "completed", category: "Dev" },
       { id: 9, text: "OpenClaw Setup page", status: "completed", category: "Dev" }
     ];
+    
+    // Load todos from localStorage or use defaults
+    let todos = JSON.parse(localStorage.getItem('missionControlTodos')) || [...defaultTodos];
+    
+    // Save todos to localStorage
+    function saveTodos() {
+      localStorage.setItem('missionControlTodos', JSON.stringify(todos));
+    }
 
     function renderTodos() {
       const progressList = document.getElementById('todo-progress-list');
@@ -1548,6 +1639,7 @@ The One Group`
       const todo = todos.find(t => t.id === id);
       if (todo) {
         todo.status = todo.status === 'completed' ? 'progress' : 'completed';
+        saveTodos();
         renderTodos();
       }
     }
@@ -2332,6 +2424,7 @@ The One Group`
       };
       
       todos.push(newTask);
+      saveTodos();
       
       // Clear form
       if (textInput) textInput.value = '';

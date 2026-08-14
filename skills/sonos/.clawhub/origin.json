@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "registry": "https://clawhub.ai",
+  "slug": "sonos",
+  "installedVersion": "1.0.0",
+  "installedAt": 1785556734310,
+  "artifact": {
+    "kind": "archive",
+    "sha256": "4d3341a7cec3351e2e81720b83e5eeacb74a25a06b0191db434e3dc921bbe4c1",
+    "integrity": "sha256-TTNBp87DNR4ugXILg+XurLdKJaBrAZHbQ049ySG75ME="
+  },
+  "skillFile": {
+    "path": "SKILL.md",
+    "sha256": "0b9cf84b375cd2269aa7c295a776129c3c630b916ea66f9fd0b49feb76ba7499"
+  }
+}

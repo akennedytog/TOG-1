@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    href: '/blog/racing-simulator-party-rental-miami',
+    tag: 'Events',
+    title: "Racing Simulator Party Rental in Miami: The Ultimate Event Upgrade",
+    excerpt: "Bachelor parties, birthdays & corporate celebrations. Everything you need to know about making a racing sim the centerpiece of your next event.",
+    readTime: '6 min',
+    date: 'Aug 9, 2026',
+  },
+  {
+    href: '/blog/corporate-team-building-events-miami',
+    tag: 'Corporate',
+    title: "Corporate Team Building Events in Miami: Why F1 Sim Racing Wins",
+    excerpt: "Team building, client appreciation & product launches. Why F1 sim racing is the standout option — and the formats that work.",
+    readTime: '6 min',
+    date: 'Aug 9, 2026',
+  },
+  {
+    href: '/blog/f1-race-watch-party-miami',
+    tag: 'Race Day',
+    title: "F1 Race Watch Party Miami: Race Between Sessions, Watch the Grand Prix",
+    excerpt: "Turn the Miami Grand Prix into a full race-day experience — big-screen drama plus pro sim rigs for your guests to drive.",
+    readTime: '5 min',
+    date: 'Aug 9, 2026',
+  },
+  {
+    href: '/blog/racing-simulator-bachelor-party-miami',
+    tag: 'Bachelor Party',
+    title: "Racing Simulator for Bachelor Party Miami: Pro-Level Rigs & How It Works",
+    excerpt: "The groom's ultimate send-off. Pro-grade force-feedback rigs, head-to-head racing, and the experience that beats the arcade.",
+    readTime: '5 min',
+    date: 'Aug 9, 2026',
+  },
+];
+---
+
+<BaseLayout title="Blog | Pit Row Miami" description="Tips, ideas and inspiration for racing simulator rentals in Miami — party ideas, corporate events, F1 watch parties and more from Pit Row Miami.">
+  <main class="bg-black text-white pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-sm font-bold text-brand-500 uppercase tracking-widest">Pit Row Miami</span>
+        <h1 class="text-4xl sm:text-5xl font-display font-black mt-3 mb-4">The Pit Row Blog</h1>
+        <p class="text-lg text-carbon-400 max-w-xl mx-auto">
+          Ideas and inspiration for making your next Miami event unforgettable — from racing sim parties to F1 watch days.
+        </p>
+      </div>
+
+      <div class="grid gap-6">
+        {
+          posts.map((post, i) => (
+            <a href={post.href} class="card p-6 sm:p-8 block hover:border-brand-500/50 transition-all duration-200 group">
+              <div class="flex items-start gap-5">
+                <span class="hidden sm:flex text-3xl font-black text-carbon-600 group-hover:text-brand-500 transition-colors leading-none mt-1">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">{post.tag}</span>
+                    <span class="text-xs text-carbon-500">·</span>
+                    <span class="text-xs text-carbon-500">{post.date}</span>
+                    <span class="text-xs text-carbon-500">·</span>
+                    <span class="text-xs text-carbon-500">{post.readTime} read</span>
+                  </div>
+                  <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2 group-hover:text-brand-400 transition-colors leading-snug">{post.title}</h2>
+                  <p class="text-carbon-400 text-sm sm:text-base mb-4">{post.excerpt}</p>
+                  <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+                    Read article
+                    <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+
+      <div class="mt-14 p-6 sm:p-8 rounded-2xl f1-gradient border border-carbon-800 text-center">
+        <p class="font-display font-bold text-white text-xl mb-2">Ready to bring the rigs to your event?</p>
+        <p class="text-carbon-200 text-sm mb-5">Tell us your date, venue, and guest count for a custom quote.</p>
+        <a href="mailto:info@pitrowmiami.com" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm whitespace-nowrap transition-colors">
+          Email info@pitrowmiami.com
+        </a>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

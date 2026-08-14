@@ -1,0 +1,32 @@
+{
+  "competitors": [
+    {
+      "name": "HubSpot",
+      "url": "https://www.hubspot.com",
+      "added_at": "2026-07-26T17:04:33.694468",
+      "last_check": "2026-08-13T22:00:02.220510",
+      "check_count": 94,
+      "alert_count": 61,
+      "metadata": {}
+    },
+    {
+      "name": "Zapier",
+      "url": "https://zapier.com",
+      "added_at": "2026-07-26T17:04:37.266084",
+      "last_check": "2026-08-13T20:00:29.767975",
+      "check_count": 98,
+      "alert_count": 31,
+      "metadata": {}
+    },
+    {
+      "name": "Make",
+      "url": "https://www.make.com",
+      "added_at": "2026-07-26T17:04:40.591519",
+      "last_check": "2026-08-13T22:00:39.251933",
+      "check_count": 99,
+      "alert_count": 2,
+      "metadata": {}
+    }
+  ],
+  "check_interval_minutes": 60
+}

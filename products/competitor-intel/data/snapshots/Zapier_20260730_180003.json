@@ -1,0 +1,19 @@
+{
+  "competitor": "Zapier",
+  "url": "https://zapier.com",
+  "timestamp": "2026-07-30 18:00:03.833795",
+  "content_hash": "82549f05fefd11ba",
+  "key_data": {
+    "word_count": 2617,
+    "pricing_mentions": 3,
+    "feature_keywords": [
+      "ai",
+      "automation",
+      "workflow",
+      "integration",
+      "api"
+    ],
+    "has_careers_page": true,
+    "has_blog": true
+  }
+}

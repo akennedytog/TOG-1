@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+  <rect width="1000" height="1500" fill="#1A1A2E"/>
+  <rect x="0" y="0" width="1000" height="420" fill="#16213E"/>
+  <rect x="60" y="180" width="180" height="18" fill="#E94560"/>
+  <text x="60" y="720" font-family="Oswald, Arial, sans-serif" font-size="65" font-weight="700" fill="#FFFFFF">Pin Title Here</text>
+  <text x="60" y="840" font-family="Arial, sans-serif" font-size="32" fill="#FFFFFF" opacity="0.82">Save this idea</text>
+  <circle cx="820" cy="1170" r="120" fill="#E94560" opacity="0.18"/>
+  <rect x="60" y="1260" width="320" height="75" rx="18" fill="#E94560"/>
+</svg>

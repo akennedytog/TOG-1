@@ -1,159 +1,163 @@
 {
   "pending": [],
-  "completed": [],
-  "today": [
+  "completed": [
     {
-      "id": "task_1774205576530_7ycet",
+      "id": "task_1782219994804_vfz7y",
       "agent": "jerry",
       "name": "Review daily metrics",
       "time": "09:00",
-      "status": "pending",
+      "status": "completed",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z",
+      "completed_at": "2026-06-23T13:06:44.337Z"
     },
     {
-      "id": "task_1774205576530_eebq7",
+      "id": "task_1782219994804_0ww8t",
+      "agent": "arlo",
+      "name": "Research South Florida market",
+      "time": "08:00",
+      "status": "completed",
+      "priority": "medium",
+      "created": "2026-06-23T13:06:34.804Z",
+      "completed_at": "2026-06-23T13:06:44.338Z"
+    },
+    {
+      "id": "task_1782219994804_y9vgp",
+      "agent": "rico",
+      "name": "Check system health",
+      "time": "08:00",
+      "status": "completed",
+      "priority": "medium",
+      "created": "2026-06-23T13:06:34.804Z",
+      "completed_at": "2026-06-23T13:06:44.338Z"
+    }
+  ],
+  "today": [
+    {
+      "id": "task_1782219994804_fu53e",
       "agent": "jerry",
       "name": "Evaluate new opportunities",
       "time": "10:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_twbis",
-      "agent": "arlo",
-      "name": "Research South Florida market",
-      "time": "08:00",
-      "status": "pending",
-      "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
-    },
-    {
-      "id": "task_1774205576530_ke7i1",
+      "id": "task_1782219994804_fls7e",
       "agent": "arlo",
       "name": "Monitor competitor activity",
       "time": "12:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_tdh19",
+      "id": "task_1782219994804_5gfps",
       "agent": "iris",
       "name": "Send cold emails (10)",
       "time": "09:30",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_69ghu",
+      "id": "task_1782219994804_1e9ii",
       "agent": "iris",
       "name": "Follow up on leads",
       "time": "14:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_1so7x",
+      "id": "task_1782219994804_o6s3c",
       "agent": "iris",
       "name": "Create Twitter content",
       "time": "11:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_4xpnr",
+      "id": "task_1782219994804_v5zh4",
       "agent": "opal",
       "name": "Update documentation",
       "time": "17:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_mfg6e",
+      "id": "task_1782219994804_fgomx",
       "agent": "opal",
       "name": "Review agent logs",
       "time": "16:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_7geng",
+      "id": "task_1782219994804_959ch",
       "agent": "dev",
       "name": "Build scheduled features",
       "time": "10:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_ltpmj",
+      "id": "task_1782219994804_4iheb",
       "agent": "dev",
       "name": "Fix bugs",
       "time": "15:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_a60wt",
-      "agent": "rico",
-      "name": "Check system health",
-      "time": "08:00",
-      "status": "pending",
-      "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
-    },
-    {
-      "id": "task_1774205576530_yysdf",
+      "id": "task_1782219994804_unfgb",
       "agent": "rico",
       "name": "Optimize automation",
       "time": "14:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_sadsa",
+      "id": "task_1782219994804_vjko9",
       "agent": "dante",
       "name": "Create blog content",
       "time": "10:30",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_bbcyq",
+      "id": "task_1782219994804_0nkc3",
       "agent": "dante",
       "name": "Design visual assets",
       "time": "13:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_w14hn",
+      "id": "task_1782219994804_47q1z",
       "agent": "abby",
       "name": "Review agent outputs",
       "time": "11:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     },
     {
-      "id": "task_1774205576530_ed2lz",
+      "id": "task_1782219994804_qsj5e",
       "agent": "abby",
       "name": "Quality check",
       "time": "16:00",
       "status": "pending",
       "priority": "medium",
-      "created": "2026-03-22T18:52:56.530Z"
+      "created": "2026-06-23T13:06:34.804Z"
     }
   ]
 }

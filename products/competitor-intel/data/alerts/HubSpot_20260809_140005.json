@@ -1,0 +1,18 @@
+{
+  "competitor": "HubSpot",
+  "detected_at": "2026-08-09T14:00:05.749688",
+  "changes": [
+    {
+      "type": "pricing",
+      "severity": "high",
+      "message": "Pricing page content changed significantly",
+      "timestamp": "2026-08-09 14:00:05.738658"
+    },
+    {
+      "type": "feature",
+      "severity": "medium",
+      "message": "New features detected: automation, ai, api, integration",
+      "timestamp": "2026-08-09 14:00:05.738658"
+    }
+  ]
+}

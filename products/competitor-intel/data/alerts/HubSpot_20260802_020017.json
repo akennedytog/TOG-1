@@ -1,0 +1,12 @@
+{
+  "competitor": "HubSpot",
+  "detected_at": "2026-08-02T02:00:17.570899",
+  "changes": [
+    {
+      "type": "content",
+      "severity": "low",
+      "message": "Website content updated",
+      "timestamp": "2026-08-02 02:00:17.559929"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-05-21-0735",
+  "date": "May 21, 2026",
+  "tickers": [
+    {
+      "symbol": "ASTS",
+      "name": "AST SpaceMobile",
+      "change": "+8.3%",
+      "sentiment": "bullish",
+      "catalyst": "BlueWalker 3 test completion"
+    },
+    {
+      "symbol": "TE", 
+      "name": "Tecpetrol",
+      "change": "-1.4%",
+      "sentiment": "neutral",
+      "catalyst": "Earnings today - high IV"
+    }
+  ],
+  "market_context": {
+    "spy": "+0.4%",
+    "qqq": "+0.6%",
+    "vix": "14.2"
+  }
+}

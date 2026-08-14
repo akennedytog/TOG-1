@@ -1,0 +1,487 @@
+{
+  "leads": [
+    {
+      "id": "assessment_20260608_2001",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-08T14:00:01.244842",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260610_5138",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-10T14:00:01.134289",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260611_17",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-11T14:00:01.196897",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260612_5079",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-12T14:00:00.477468",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260615_3550",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-15T14:00:00.327357",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260616_4655",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-16T14:00:00.690681",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260617_1077",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-17T14:01:42.651755",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260618_2015",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-18T14:00:00.799425",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260620_2447",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-20T14:00:00.754306",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260621_484",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-21T14:02:54.603018",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260622_5884",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-22T14:01:10.433715",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260629_8546",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-06-29T14:00:00.514676",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260701_7788",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-01T14:00:00.313201",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260705_7257",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-05T14:00:00.507703",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260706_8087",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-06T14:03:00.426595",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260709_9460",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-09T14:00:00.716809",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260710_9354",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-10T14:00:00.763591",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260712_4140",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-12T14:00:00.548944",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260714_5176",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-14T14:00:00.436432",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260719_6333",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-19T14:01:02.209700",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260720_6935",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-20T14:05:35.364726",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260721_3903",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-21T14:00:00.758925",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260722_3792",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-22T14:00:01.107617",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    },
+    {
+      "id": "assessment_20260724_9249",
+      "email": "test@example.com",
+      "first_name": "John",
+      "company_name": "Test Business",
+      "business_type": "HVAC Company",
+      "city": "Boca Raton",
+      "source": "ai_assessment",
+      "status": "active",
+      "created_at": "2026-07-24T14:00:00.569216",
+      "sequence_started": true,
+      "current_step": 0,
+      "emails_sent": []
+    }
+  ],
+  "sequences": {
+    "assessment_20260608_2001": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-08T14:00:01.244850",
+      "next_send": "2026-06-08T14:00:01.244851",
+      "emails_remaining": 3
+    },
+    "assessment_20260610_5138": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-10T14:00:01.134297",
+      "next_send": "2026-06-10T14:00:01.134299",
+      "emails_remaining": 3
+    },
+    "assessment_20260611_17": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-11T14:00:01.196902",
+      "next_send": "2026-06-11T14:00:01.196904",
+      "emails_remaining": 3
+    },
+    "assessment_20260612_5079": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-12T14:00:00.477473",
+      "next_send": "2026-06-12T14:00:00.477475",
+      "emails_remaining": 3
+    },
+    "assessment_20260615_3550": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-15T14:00:00.327366",
+      "next_send": "2026-06-15T14:00:00.327368",
+      "emails_remaining": 3
+    },
+    "assessment_20260616_4655": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-16T14:00:00.690687",
+      "next_send": "2026-06-16T14:00:00.690688",
+      "emails_remaining": 3
+    },
+    "assessment_20260617_1077": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-17T14:01:42.651761",
+      "next_send": "2026-06-17T14:01:42.651762",
+      "emails_remaining": 3
+    },
+    "assessment_20260618_2015": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-18T14:00:00.799432",
+      "next_send": "2026-06-18T14:00:00.799434",
+      "emails_remaining": 3
+    },
+    "assessment_20260620_2447": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-20T14:00:00.754314",
+      "next_send": "2026-06-20T14:00:00.754316",
+      "emails_remaining": 3
+    },
+    "assessment_20260621_484": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-21T14:02:54.603023",
+      "next_send": "2026-06-21T14:02:54.603025",
+      "emails_remaining": 3
+    },
+    "assessment_20260622_5884": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-22T14:01:10.433721",
+      "next_send": "2026-06-22T14:01:10.433723",
+      "emails_remaining": 3
+    },
+    "assessment_20260629_8546": {
+      "type": "assessment_nurture",
+      "started_at": "2026-06-29T14:00:00.514681",
+      "next_send": "2026-06-29T14:00:00.514683",
+      "emails_remaining": 3
+    },
+    "assessment_20260701_7788": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-01T14:00:00.313209",
+      "next_send": "2026-07-01T14:00:00.313211",
+      "emails_remaining": 3
+    },
+    "assessment_20260705_7257": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-05T14:00:00.507708",
+      "next_send": "2026-07-05T14:00:00.507710",
+      "emails_remaining": 3
+    },
+    "assessment_20260706_8087": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-06T14:03:00.426600",
+      "next_send": "2026-07-06T14:03:00.426602",
+      "emails_remaining": 3
+    },
+    "assessment_20260709_9460": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-09T14:00:00.716816",
+      "next_send": "2026-07-09T14:00:00.716817",
+      "emails_remaining": 3
+    },
+    "assessment_20260710_9354": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-10T14:00:00.763597",
+      "next_send": "2026-07-10T14:00:00.763599",
+      "emails_remaining": 3
+    },
+    "assessment_20260712_4140": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-12T14:00:00.548949",
+      "next_send": "2026-07-12T14:00:00.548950",
+      "emails_remaining": 3
+    },
+    "assessment_20260714_5176": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-14T14:00:00.436439",
+      "next_send": "2026-07-14T14:00:00.436440",
+      "emails_remaining": 3
+    },
+    "assessment_20260719_6333": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-19T14:01:02.209715",
+      "next_send": "2026-07-19T14:01:02.209717",
+      "emails_remaining": 3
+    },
+    "assessment_20260720_6935": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-20T14:05:35.364733",
+      "next_send": "2026-07-20T14:05:35.364735",
+      "emails_remaining": 3
+    },
+    "assessment_20260721_3903": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-21T14:00:00.758931",
+      "next_send": "2026-07-21T14:00:00.758933",
+      "emails_remaining": 3
+    },
+    "assessment_20260722_3792": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-22T14:00:01.107627",
+      "next_send": "2026-07-22T14:00:01.107629",
+      "emails_remaining": 3
+    },
+    "assessment_20260724_9249": {
+      "type": "assessment_nurture",
+      "started_at": "2026-07-24T14:00:00.569223",
+      "next_send": "2026-07-24T14:00:00.569225",
+      "emails_remaining": 3
+    }
+  },
+  "last_run": null
+}

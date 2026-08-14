@@ -38,3 +38,20 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+### Google Drive
+
+- Account mount: `/Users/aleckennedy/Library/CloudStorage/GoogleDrive-akennedy@theonegroup.info`
+- Default deliverables folder: `/Users/aleckennedy/Library/CloudStorage/GoogleDrive-akennedy@theonegroup.info/My Drive/OpenClaw-Deliverables`
+- Working rule: copy user-facing output files to the default deliverables folder unless Alec requests a different Drive folder.
+
+### Alec's Email Signature (canonical — always use exactly this)
+
+```
+--
+Alec Kennedy | The One Group.AI
+Founder | CEO | (c) 502.403.7201 | akennedy@theonegroup.info
+```
+
+### ⚠️ LESSON (2026-07-31): Never bulk-delete Gmail drafts
+list_drafts returns null subjects at top level — subject/to live nested in `message`. A delete filter on subject silently matched everything and wiped drafts, including 2 of Alec's pre-existing personal drafts. Rule: only delete draft IDs we captured at creation time; store created draft IDs in findings/state. Never delete by list-scan.

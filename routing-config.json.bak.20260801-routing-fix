@@ -1,0 +1,60 @@
+{
+  "version": "5.0",
+  "updated": "2026-07-31",
+  "description": "Ollama-Cloud-first routing. OpenRouter = emergency fallback + manual Kimi k3 pin only.",
+  "stack": {
+    "primary": {
+      "model": "ollama/gpt-oss:120b-cloud",
+      "cost": "$0 (Ollama Pro prepaid)",
+      "context": 512000,
+      "use": "all interactive sessions, crons, heartbeats"
+    },
+    "fallback1": {
+      "model": "ollama/gpt-oss:20b-cloud",
+      "cost": "$0 (Ollama Pro prepaid)",
+      "context": 131000,
+      "use": "auto-fallback if 120b is unavailable"
+    },
+    "fallback2": {
+      "model": "openrouter/openai/gpt-5.6-luna",
+      "cost": "$1/$6 per 1M",
+      "use": "emergency only if Ollama Cloud is down"
+    },
+    "premium_manual_only": {
+      "model": "openrouter/moonshotai/kimi-k3",
+      "cost": "$3/$15 per 1M",
+      "use": "MANUAL PIN ONLY for heavy builds \u2014 never auto-routed"
+    },
+    "local_batch": {
+      "models": [
+        "ollama/llama3.1:latest",
+        "ollama/qwen3-coder:latest"
+      ],
+      "cost": "$0",
+      "use": "direct API calls from scripts (arlo, iris) \u2014 small prompts only, NOT gateway sessions"
+    }
+  },
+  "retired_2026_07_31": [
+    "ollama/kimi-k2.5:cloud",
+    "ollama/qwen3-coder:480b-cloud",
+    "ollama/glm-4.6:cloud",
+    "ollama/minimax-m2:cloud"
+  ],
+  "notes": [
+    "Kimi is GONE from Ollama Cloud (k2.5 retired today). Kimi k3 only exists on OpenRouter \u2014 keep for deliberate premium sessions.",
+    "llama3.1/qwen3-coder local: too slow for gateway sessions (>6min on 20k ctx, gateway times out at ~2min). Fine for script-direct batch calls.",
+    "openai/* fallbacks removed \u2014 no OPENAI_API_KEY configured."
+  ],
+  "health_checks": {
+    "check_models": [
+      "ollama/gpt-oss:120b-cloud",
+      "ollama/gpt-oss:20b-cloud"
+    ],
+    "cloud_api_models": [
+      "openrouter/openai/gpt-5.6-luna"
+    ],
+    "manual_pin_only": [
+      "openrouter/moonshotai/kimi-k3"
+    ]
+  }
+}

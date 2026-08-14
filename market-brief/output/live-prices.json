@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-05-21T19:12:25Z",
+  "source": "polygon.io LIVE",
+  "marketOpen": true,
+  "fetchTime": "15:12",
+  "asts": {
+    "ticker": "ASTS",
+    "price": 89.58
+  },
+  "te": {
+    "ticker": "TE",
+    "price": 8.7
+  }
+}

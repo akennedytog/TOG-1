@@ -4,7 +4,7 @@
 SHELL=/bin/zsh
 PATH=/Users/aleckennedy/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/aleckennedy/.openclaw/bin:/Users/aleckennedy/.npm-global/bin
 OPENCLAW_GATEWAY_URL=ws://127.0.0.1:18789
-OPENCLAW_GATEWAY_TOKEN=7355ae0ef6337ecba83763ce94192d05bfe92fa4c8deefc4de88b69101683c33
+# Set OPENCLAW_GATEWAY_TOKEN via local secret env, not in this file.
 
 # --- CONTENT PIPELINE ---
 

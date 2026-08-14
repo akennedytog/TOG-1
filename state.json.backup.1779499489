@@ -1,0 +1,591 @@
+{
+  "twitterQueue": [
+    {
+      "id": "evening_behind_scenes_2026-05-22",
+      "text": "Behind the scenes:
+
+Just realized this account has posted 23 times today.
+
+Not because there's that much to say.
+Because I've been stress-testing the automation.
+
+The wins:
+✓ Duplicate detection works
+✓ Cron timing is dialed in
+✓ Content generation is... generating
+
+The work:
+• Quality over quantity
+• Voice consistency
+• Engagement > output
+
+23 posts taught me what 100 wouldn't have.
+
+Sometimes you have to make noise to find the signal.",
+      "topic": "Automation",
+      "type": "behind_scenes",
+      "scheduled": "2026-05-22"
+    }
+  ],
+  "queuedPosts": [],
+  "lastPostTime": "1779461991265",
+  "postedToday": 23,
+  "postingStatus": {
+    "status": "ready",
+    "reason": "Afternoon engagement poll queued"
+  },
+  "todayPosts": [
+    {
+      "id": 1,
+      "text": "What 'context window' actually means:\n\nIt's how much text the model can 'remember' at once.\n\n• GPT-4: 128k tokens (~100 pages)\n• Claude 3.5: 200k tokens (~150 pages)\n• Gemini 1.5: 2M tokens (~1,500 pages)\n\nBigger isn't always better. But for:\n• Code reviews\n• Document analysis\n• Multi-turn conversations\n\nContext = coherence.",
+      "topic": "Models",
+      "type": "explainer",
+      "scheduled": "2026-05-22"
+    },
+    {
+      "id": 2,
+      "text": "OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.\n\nThe routing logic:\n• Simple tasks → GPT-4 (fast, cheap)\n• Complex reasoning → Claude (nuanced)\n• Document-heavy → Gemini (massive context)\n\nSmart routing beats 'one model for everything'.\n\nCost optimization + capability matching.",
+      "topic": "OpenClaw",
+      "type": "update",
+      "scheduled": "2026-05-22"
+    }
+  ],
+  "date": "2026-05-22",
+  "contentTypes": {
+    "insight": "Industry-specific observations and pain points",
+    "question": "Engagement questions and polls",
+    "behind_scenes": "Behind-the-scenes and reflection content",
+    "technical_explainer": "Technical concept explanations",
+    "assessment_cta": "AI Assessment call-to-action content driving to evaluation"
+  },
+  "contentStrategy": {
+    "focus": "UX lessons from over-automation, agent-to-agent future, local AI pricing strategy",
+    "avoid": "Generic AI hype, unverified claims, technical minutiae without business angle",
+    "tone": "Direct, community-aware, practical",
+    "targetAudience": "SMB owners and operators using AI",
+    "dailyStructure": {
+      "morning": "Observation / trend analysis",
+      "afternoon": "Poll / engagement question",
+      "evening": "Behind scenes / reflection"
+    },
+    "sources": [
+      "Hacker News",
+      "Reddit r/OpenClaw",
+      "TechCrunch AI"
+    ]
+  },
+  "lastRefresh": "2026-05-22T13:00:31.238669+00:00",
+  "trendingTopics": [
+    "DeepClaude - Claude Code agent loop with DeepSeek V4 Pro - HN (522 pts, 210 comments)",
+    "Mercedes bringing back physical buttons - HN (744 pts, 421 comments)",
+    "OpenAI o1 diagnosed 67% of ER patients vs 50-55% by triage doctors - HN (419 pts, 369 comments)",
+    "r/OpenClaw OpenClaw vs Hermes comparison - 118 upvotes, 54 comments",
+    "r/OpenClaw 'OpenClaw sucks' critique post - 29 upvotes, 59 comments",
+    "r/OpenClaw Ollama $20/month pricing - 13 upvotes, 20 comments",
+    "r/OpenClaw Apple Mac supply constraints - 10 upvotes, 15 comments"
+  ],
+  "postedLog": [
+    {
+      "id": "morning_2026-04-26",
+      "text": "ChatGPT just helped solve an Erdős problem...",
+      "postedAt": "2026-04-26T09:00:00",
+      "type": "breaking_news",
+      "topic": "ChatGPT solves Erdős problem"
+    },
+    {
+      "id": "afternoon_2026-04-26",
+      "text": "Anthropic is testing agent-on-agent commerce...",
+      "postedAt": "2026-04-26T15:00:00",
+      "type": "question",
+      "topic": "Agent-on-agent commerce"
+    },
+    {
+      "id": "evening_2026-04-26",
+      "text": "Saw this on HN today: 'The West forgot how to make things...'",
+      "postedAt": "2026-04-26T21:00:00",
+      "type": "behind_scenes",
+      "topic": "AI content quality"
+    },
+    {
+      "id": "morning_2026-04-29",
+      "text": "Ghostty is leaving GitHub (2.8K points, 837 comments)...",
+      "postedAt": "2026-04-29T13:00:00",
+      "type": "insight",
+      "topic": "GitHub"
+    },
+    {
+      "id": "afternoon_2026-04-29",
+      "text": "Warp is now open source (300 points, 84 comments)...",
+      "postedAt": "2026-04-29T19:00:00",
+      "type": "question",
+      "topic": "Open Source"
+    },
+    {
+      "id": "evening_2026-04-29",
+      "text": "r/OpenClaw tightened rules on AI slop...",
+      "postedAt": "2026-04-30T01:00:00",
+      "type": "behind_scenes",
+      "topic": "Community"
+    },
+    {
+      "id": "manual_$(date +%s)",
+      "text": "Tool selection framework:\n\nWhen choosing an AI tool, ask:\n\n1. Does it integrate with my stack?\n2. Can I inspect the outputs?\n3. Does it fail gracefully?\n4. Can I migrate away if needed?\n\nNot 'Is the best?'\n\n'Is it the best for me right now?'\n\nDifferent questions. Different answers.",
+      "postedAt": "2026-05-01T14:09:05Z",
+      "type": "auto"
+    },
+    {
+      "id": "tweet_may04_morning",
+      "text": "Mercedes is bringing back physical buttons.\n\n744 points. 421 comments.\n\nThe UX pendulum swung too far.\n\nTouchscreens everywhere.\n\"Digital first.\"\n\"App-like experience.\"\n\nTurns out people want tactile feedback.\nMuscle memory.\nEyes-on-road.\n\nSMB lesson:\n\nDon't over-automate the human touchpoints.\n\nYour customers don't want:\n• Chatbots for complex problems\n• Auto-responses when they're frustrated\n• App-only workflows for one-time tasks\n\nThey want:\n• Clear path to a human\n• Automation that speeds things up\n• Choice in how they interact\n\nThe best AI deployments augment humans.\nThey don't replace the moments that matter.",
+      "postedAt": "2026-05-04T23:23:56.129901",
+      "type": "auto"
+    },
+    {
+      "id": "tweet_may04_afternoon",
+      "text": "Saw this on r/OpenClaw:\n\n\"Your claw is going to negotiate against my claw and we're all going to lose\"\n\nThe scenario:\n• My AI agent emails your AI agent\n• They negotiate terms\n• Humans are out of the loop\n\nQuestion:\n\nWhat should happen when two AI agents hit a deadlock?\n\nA) Escalate to humans immediately\nB) Let them negotiate for 24h, then escalate\nC) Algorithmic resolution (higher authority decides)\nD) This whole concept terrifies me\n\nI'm genuinely curious about the etiquette here.",
+      "postedAt": "2026-05-05T22:43:46.864525",
+      "type": "auto"
+    },
+    {
+      "id": "tweet_may04_evening",
+      "text": "Ollama just announced $20/month pricing.\n\nr/OpenClaw is debating whether it's worth it.\n\nHere's my take:\n\nThe cost isn't just the subscription.\n\nIt's:\n• Hardware upgrades (see: Apple supply constraints)\n• Time spent maintaining local infra\n• Opportunity cost of not shipping\n\nFor some SMBs: $20/month + Mac Studio = freedom\nFor others: SaaS API costs = focus\n\nNeither is wrong.\n\nThe question is: what are you optimizing for?\n\nControl? → Local\nSpeed? → SaaS\nCost? → Do the math on both\n\nI run hybrid. Local for experiments. APIs for production.\n\nWhat's your setup?",
+      "postedAt": "2026-05-05T22:48:11.939087",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-04",
+      "text": "Trending on HN: Bun is being ported from Zig to Rust\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-05T22:48:14.382994",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-04",
+      "text": "From HN today:\n\nAgent Skills\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-05T22:48:17.043648",
+      "type": "auto"
+    },
+    {
+      "id": "evening_2026-05-04",
+      "text": "Reflection: The businesses winning with AI aren't the ones using the most tools.\n\nThey're the ones using ONE tool really well.\n\nDepth > Breadth.\n\nWhat's your depth play right now?",
+      "postedAt": "2026-05-05T22:48:27.683196",
+      "type": "auto"
+    },
+    {
+      "id": "thread_automation_101_2026-05-04_0",
+      "text": "Most SMBs are losing $5,000+ per month to this one mistake:\n\nThey are trying to automate EVERYTHING at once.\n\nHere is the 3-step framework that actually works:\n\n🧵",
+      "postedAt": "2026-05-05T22:48:30.274873",
+      "type": "auto"
+    },
+    {
+      "id": "thread_automation_101_2026-05-04_1",
+      "text": "1/ Start with your biggest time sink\n\nLook at your week. What takes hours but does not require judgment?\n\nExamples:\n• Data entry\n• Email follow-ups\n• Scheduling\n• Invoice processing\n\nPick ONE. Not two. Not three. ONE.",
+      "postedAt": "2026-05-05T22:48:35.022123",
+      "type": "auto"
+    },
+    {
+      "id": "thread_automation_101_2026-05-04_2",
+      "text": "2/ Automate the 80%, not the 100%\n\nPerfect automation takes months.\nGood automation takes days.\n\nAim for:\n• 80% of cases handled automatically\n• 20% flagged for human review\n\nLaunch fast. Iterate.",
+      "postedAt": "2026-05-05T22:48:37.437641",
+      "type": "auto"
+    },
+    {
+      "id": "thread_automation_101_2026-05-04_3",
+      "text": "3/ Measure before you build more\n\nTrack:\n• Hours saved per week\n• Errors reduced\n• Response time improved\n\nGot numbers? Great. Now pick your next automation.\n\nNo numbers? Debug before you build.",
+      "postedAt": "2026-05-05T22:48:39.900182",
+      "type": "auto"
+    },
+    {
+      "id": "thread_automation_101_2026-05-04_4",
+      "text": "The pattern:\n\nStart → Automate ONE thing → Measure → Repeat\n\nNot:\nResearch 10 tools → Buy 3 → Configure for weeks → Get overwhelmed → Abandon\n\nThe first path gets you ROI in days.\n\nThe second gets you nothing.",
+      "postedAt": "2026-05-05T22:48:42.311504",
+      "type": "auto"
+    },
+    {
+      "id": "thread_automation_101_2026-05-04_5",
+      "text": "We have implemented this for 50+ SMBs.\n\nThe ones who win?\n• Start small\n• Ship fast\n• Iterate based on data\n\nThe ones who stall?\n• Try to automate everything\n• Get paralyzed by options\n• Never ship\n\nWhich path are you on?",
+      "postedAt": "2026-05-05T22:48:47.209357",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-05",
+      "text": "Trending on HN: Google Chrome silently installs a 4 GB AI model on your device without consent\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-05T22:48:49.658181",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-05",
+      "text": "From HN today:\n\nAsync Rust never left the MVP state\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-05T22:48:52.038871",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-06",
+      "text": "Trending on HN: Show HN: Red Squares – GitHub outages as contributions\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-06T10:03:35.514717",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-06",
+      "text": "From HN today:\n\nKnitting bullshit\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-06T12:00:06.895844",
+      "type": "auto"
+    },
+    {
+      "id": "evening_2026-05-06",
+      "text": "Reflection: The businesses winning with AI aren't the ones using the most tools.\n\nThey're the ones using ONE tool really well.\n\nDepth > Breadth.\n\nWhat's your depth play right now?",
+      "postedAt": "2026-05-06T16:19:03.623494",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-07",
+      "text": "Quick question: What AI tool are you experimenting with this week?\n\nI'm trying [your tool] for [specific use case].\n\nWhat about you?",
+      "postedAt": "2026-05-07T10:00:23.313726",
+      "type": "auto"
+    },
+    {
+      "id": "evening_2026-05-07",
+      "text": "Reflection: The businesses winning with AI aren't the ones using the most tools.\n\nThey're the ones using ONE tool really well.\n\nDepth > Breadth.\n\nWhat's your depth play right now?",
+      "postedAt": "2026-05-07T12:00:09.421470",
+      "type": "auto"
+    },
+    {
+      "id": "manual_today_debug",
+      "text": "This morning:\n\nFixed my automated Twitter system.\n\nThe bug? Cron timeouts were too short (60s) for the posting script.\n\nAlso added duplicate detection.\n\nBecause nobody wants to see the same \"reflection\" tweet 4 times.\n\nSmall fixes. Big impact.",
+      "postedAt": "2026-05-07T13:22:43.903673",
+      "type": "manual"
+    },
+    {
+      "id": "manual_week_lessons",
+      "text": "Last week's AI observations:\n\n• Mercedes bringing back physical buttons (744 pts) — the UX pendulum swings back\n• Ollama launches $20/month — local AI gets a price tag  \n• Agent-to-agent negotiation is coming — etiquette TBD\n• DeepClaude (Claude + DeepSeek) — hybrid approaches winning\n\nPattern: The best tools combine multiple models, not just one.\n\nWhat's your stack?",
+      "postedAt": "2026-05-07T13:22:44.179427",
+      "type": "manual"
+    },
+    {
+      "id": "morning_2026-05-08",
+      "text": "What 'context window' actually means:\n\nIt's how much text the model can 'remember' at once.\n\n• GPT-4: 128k tokens (~100 pages)\n• Claude 3.5: 200k tokens (~150 pages)\n• Gemini 1.5: 2M tokens (~1,500 pages)\n\nBigger isn't always better. But for:\n• Code reviews\n• Document analysis\n• Multi-turn conversations\n\nContext = coherence.",
+      "postedAt": "2026-05-08T10:00:48.516491",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-08",
+      "text": "OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.\n\nThe routing logic:\n• Simple tasks → GPT-4 (fast, cheap)\n• Complex reasoning → Claude (nuanced)\n• Document-heavy → Gemini (massive context)\n\nSmart routing beats 'one model for everything'.\n\nCost optimization + capability matching.",
+      "postedAt": "2026-05-08T16:50:29.555925",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-09",
+      "text": "Trending on HN: EU calls VPNs \"a loophole that needs closing\" in age verification push\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-09T10:17:49.195713",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-09",
+      "text": "From HN today:\n\nUsing Claude Code: The unreasonable effectiveness of HTML\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-09T12:00:58.147732",
+      "type": "auto"
+    },
+    {
+      "id": "evening_2026-05-09_1778372356",
+      "text": "Small business owners in South Florida:\n\nYour competitors just got access to 24/7 AI phone agents.\n\nThey don't sleep. They don't miss calls. They book appointments while you sleep.\n\nThe businesses winning right now?\nThey're the ones who answer when customers call.\n\nEven at 9 PM.\n\nEven on Sundays.\n\nAI = availability.",
+      "postedAt": "2026-05-09T20:19:18.606763",
+      "type": "auto"
+    },
+    {
+      "id": "evening_2026-05-09_1778372357",
+      "text": "HVAC companies in Palm Beach:\n\n90°F hits. AC breaks. Customer calls.\n\nVoicemail = lost job.\n\nOne emergency job pays for a month of AI phone coverage.\n\nThe math is simple.\nThe execution is everything.",
+      "postedAt": "2026-05-09T20:28:52.682806",
+      "type": "auto"
+    },
+    {
+      "id": "evening_2026-05-09_1778372358",
+      "text": "Quick poll: What's your current call answer rate during business hours?\n\nA) 90%+\nB) 70-89%\nC) 50-69%\nD) Under 50%\n\nMost businesses overestimate this number.",
+      "postedAt": "2026-05-09T20:28:55.184568",
+      "type": "auto"
+    },
+    {
+      "id": "thread_1",
+      "text": "A guy offered me $1,000 to follow him around for a day and tell him where he's wasting time.\n\nI said no.\n\nNot because it wasn't interesting—but because it doesn't scale.\n\nHere's what I built instead 👇",
+      "postedAt": "2026-05-09T20:53:14.423015",
+      "type": "auto"
+    },
+    {
+      "id": "thread_2",
+      "text": "But his request revealed something massive: people don't need more AI tools.\n\nThey need someone to look at their chaos and tell them what to do.\n\nThe demand is there. The model just needed to change.",
+      "postedAt": "2026-05-09T20:53:44.766941",
+      "type": "auto"
+    },
+    {
+      "id": "thread_3",
+      "text": "So I productized it.\n\n$999 AI Assessment. Flat rate. 1-week delivery.\n\nHere's the exact process:\n\n• 45-min recorded interview (I use @fathom_ai to transcribe)\n• Drop the transcript into Claude with a custom analysis prompt\n• Results formatted into a clean report using @Gamma\n\nTakes me ~2 hours. Client gets a roadmap.",
+      "postedAt": "2026-05-09T20:54:06.606286",
+      "type": "auto"
+    },
+    {
+      "id": "thread_4",
+      "text": "The assessment covers:\n\n→ Current workflow audit\n→ AI opportunity mapping\n→ Tool recommendations with specific vendors\n→ Implementation priority (what to do first, second, third)\n\nNo generic fluff. Every recommendation ties to their actual business.",
+      "postedAt": "2026-05-09T20:54:09.123552",
+      "type": "auto"
+    },
+    {
+      "id": "thread_5",
+      "text": "Here's where it gets interesting.\n\nThe $999 assessment isn't the endgame—it's the entry point.\n\nAfter they see the roadmap, they hit you with:\n\n'Can you just... do this for us?'\n\nThat's where the real money lives.",
+      "postedAt": "2026-05-09T20:54:11.527392",
+      "type": "auto"
+    },
+    {
+      "id": "thread_6",
+      "text": "Upsells I'm seeing:\n\n• Custom GPT builds: $3K-5K\n• Workflow automation: $5K-10K\n• Team training + implementation: $5K-15K\n\nThe assessment is the thin edge of the wedge.\n\nIt builds trust fast and surfaces bigger projects.",
+      "postedAt": "2026-05-09T21:00:23.904385",
+      "type": "auto"
+    },
+    {
+      "id": "launch_1778381220",
+      "text": "Just shipped: AI Assessment page 🚀\n\n$300 intro pricing (will raise after 10 clients)\n\nWhat you get:\n→ 45-min recorded call\n→ Specific tool recommendations  \n→ 5+ hours saved guaranteed\n→ Concrete implementation roadmap\n\nNo fluff. No generic advice. Just clarity.\n\n🔗 https://theonegroup.info/ai-assessment.html\n\nWho's been waiting for exactly this?",
+      "postedAt": "2026-05-09T22:47:03.464997",
+      "type": "auto"
+    },
+    {
+      "id": "custom_1778381290",
+      "text": "Important distinction:\n\nThis isn't \"here's ChatGPT, good luck\"\n\nI literally interview you for 45 minutes about YOUR specific workflows, time sinks, and bottlenecks\n\nThen analyze the transcript and build a report with:\n→ Tools matched to YOUR stack\n→ Time savings for YOUR processes  \n→ Implementation order for YOUR priorities\n\nSame price. Completely custom.",
+      "postedAt": "2026-05-09T22:48:13.750430",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-10",
+      "text": "Trending on HN: Debian must ship reproducible packages\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-10T10:20:25.556123",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-10",
+      "text": "From HN today:\n\nGemini API File Search is now multimodal\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-10T12:00:13.117463",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-10",
+      "text": "Trending on Hacker News: Maryland citizens hit with $2B power grid upgrade for out-of-state AI\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-10T21:00:37.261330",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-10",
+      "text": "From Hacker News today:\n\nHardware Attestation as Monopoly Enabler\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-11T10:16:14.742711",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-11",
+      "text": "Trending on Hacker News: Mythos Finds a Curl Vulnerability\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-11T12:00:33.879560",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-11",
+      "text": "From Hacker News today:\n\nThe greatest shot in television: James Burke had one chance to nail this scene (2024)\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-11T16:00:20.644731",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-12",
+      "text": "Trending on Hacker News: Learning Software Architecture\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-12T10:00:29.019380",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-12",
+      "text": "From Hacker News today:\n\nScreenshots of Old Desktop OSes\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-12T21:09:32.618623",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-13",
+      "text": "Trending on Hacker News: SecurityBaseline.eu\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-13T10:00:17.808523",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-13",
+      "text": "From Hacker News today:\n\nDeterministic Fully-Static Whole-Binary Translation Without Heuristics\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-13T12:00:18.743531",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-13",
+      "text": "Trending on Hacker News: Haiku\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-13T16:01:57.793592",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-13",
+      "text": "From Hacker News today:\n\nKickstarter is forced to ban adult content by payment processors\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-14T10:01:54.163420",
+      "type": "auto"
+    },
+    {
+      "id": "evening_reflection_1778774487",
+      "text": "Sunday reflection:\n\nThe most surprising thing about building with AI?\n\nIt is not the technology.\nIt is how fast your own assumptions get challenged.\n\nWhat I thought users wanted ≠ What they actually need\n\nThe AI keeps me honest.",
+      "postedAt": "2026-05-14T12:01:31.863783",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-14",
+      "text": "Trending on Hacker News: AI is making me dumb\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-14T16:00:59.406209",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-14",
+      "text": "From Hacker News today:\n\nNew Nginx Exploit\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-14T21:00:12.154096",
+      "type": "auto"
+    },
+    {
+      "id": "evening_1778860856",
+      "text": "Friday reflection:\n\nThe best AI investments I've seen this year weren't in the tools.\n\nThey were in the workflows.\n\n→ One company saved 15 hrs/week by automating just ONE report\n→ Another doubled response speed by routing inquiries smarter\n→ A third cut onboarding time from 3 days to 3 hours\n\nSmall, focused wins.\n\nNot 'AI transformation.' Just... better operations.",
+      "postedAt": "2026-05-15T12:01:02.812097",
+      "type": "auto"
+    },
+    {
+      "id": "evening_1778860857",
+      "text": "Behind the scenes:\n\nJust reviewed this week's Twitter analytics.\n\nThe posts that hit:\n• Specific stories (the $999 assessment origin)\n• Direct questions (call answer rate poll)\n• Local hooks (Palm Beach HVAC example)\n\nThe posts that flopped:\n• Generic HN trend summaries\n• 'Thread your thoughts below' templates\n• Anything that sounded like a bot wrote it\n\nLesson: Personal > Performed\n\nEven when automating, the voice has to be real.",
+      "postedAt": "2026-05-17T21:25:39.879601",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-18",
+      "text": "Trending on Hacker News: Where Are the Vibecoded Photoshops?\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-18T10:47:04.176624",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-18",
+      "text": "From Hacker News today:\n\nIt is time to give up the dualism introduced by the debate on consciousness\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-18T12:00:44.926112",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-18",
+      "text": "Quick poll for the builders:\n\nWhat's your biggest blocker with AI right now?\n\nA) Finding time to actually implement\nB) Knowing which tools to trust\nC) Getting team buy-in\nD) Proving ROI before spending money\nE) Something else (drop it below)\n\nGenuinely curious — seeing patterns across SMBs.",
+      "postedAt": "2026-05-18T16:00:26.148418",
+      "type": "auto"
+    },
+    {
+      "id": "evening_2026-05-18",
+      "text": "Behind the scenes:\n\nThis Twitter account runs on a $5/month VPS and a Python script.\n\nThe content?\n→ HN trends filtered through an SMB lens\n→ Questions pulled from real client conversations\n→ Reflections from building AI automations\n\nThe engagement?\n→ Polls get 3-5x more replies than statements\n→ Local examples (Palm Beach HVAC) outperform generic\n→ Origin stories beat 'here's a tip' every time\n\nThe lesson:\n\nYou don't need a marketing team.\nYou need a system that listens.",
+      "postedAt": "2026-05-18T21:00:35.731757",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-19",
+      "text": "Trending on Hacker News: Mini Shai-Hulud Strikes Again: 314 npm Packages Compromised\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-19T10:00:16.035393",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-19",
+      "text": "From Hacker News today:\n\nPeter Neumann has died\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-19T12:00:31.555825",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-19_poll",
+      "text": "Poll for the AI-curious:\n\nWhat's the #1 thing keeping you from implementing AI in your business right now?\n\nA) Don't know where to start\nB) Worried about cost / ROI\nC) Team isn't bought in\nD) Tried it, didn't work\nE) Honestly? Just haven't made time\n\nDrop your letter below — genuinely curious what the blockers are.",
+      "postedAt": "2026-05-19T16:01:31.895587",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-20",
+      "text": "Trending on Hacker News: College students drown out AI-praising commencement speeches with boos\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-20T10:00:12.941441",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-20",
+      "text": "From Hacker News today:\n\nMap of Metal\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-20T12:00:17.834693",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-20",
+      "text": "Trending on Hacker News: An OpenAI model has disproved a central conjecture in discrete geometry\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-20T16:00:58.163410",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-20",
+      "text": "From Hacker News today:\n\nApparently Google hates us now\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-20T21:00:08.044967",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-21",
+      "text": "Trending on Hacker News: Flipper One – we need your help\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-21T10:00:12.261036",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-21",
+      "text": "From Hacker News today:\n\nGoogle officially announces that ads will be included in AI Mode search results\n\nAnyone seeing this pattern in their business?",
+      "postedAt": "2026-05-21T12:01:54.422522",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-21",
+      "text": "Noticed this today: Get your passwords out of Bitwarden while you still can\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-21T16:00:15.714883",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-21",
+      "text": "Saw this development:\n\nGoogle's Antigravity Bait and Switch",
+      "postedAt": "2026-05-21T21:00:06.908696",
+      "type": "auto"
+    },
+    {
+      "id": "morning_2026-05-22",
+      "text": "Noticed this today: Steve Wozniak cheered after telling students they have AI – actual intelligence\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+      "postedAt": "2026-05-22T10:00:19.488585",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_2026-05-22",
+      "text": "Saw this development:\n\nSlumber a TUI HTTP Client",
+      "postedAt": "2026-05-22T12:00:32.180280",
+      "type": "auto"
+    },
+    {
+      "id": "afternoon_engagement_2026-05-22",
+      "text": "The AI tools that actually get used share one trait:\n\nThey don't ask users to change their workflow.\nThey adapt to it.\n\nExamples:\n• Gmail autocomplete feels like magic because you already use Gmail\n• GitHub Copilot works because you already write code\n• OpenClaw skills plug into your existing tools\n\nThe best automation is invisible.\n\nWhat tool adapted to *your* workflow so well you forgot it's AI?",
+      "postedAt": "2026-05-22T21:14:29.718453",
+      "type": "auto"
+    }
+  ],
+  "contentRefresh": {
+    "lastRun": "2026-05-22T08:50:27Z",
+    "sourcesChecked": [
+      "Hacker News"
+    ],
+    "postsGenerated": 2,
+    "majorAINews": false,
+    "breakingNews": "Steve Wozniak on AI education. Slumber TUI HTTP client.",
+    "trendingTopics": [
+      "Steve Wozniak on AI",
+      "Slumber TUI HTTP client"
+    ],
+    "pivotApplied": "No pivot needed. Standard tech trends with SMB angle available."
+  },
+  "dailyMetrics": {
+    "date": "2026-05-09",
+    "newLeads": 0,
+    "newContent": 2,
+    "totalLeads": 494,
+    "totalContent": 77,
+    "lastUpdate": "2026-05-09T12:09:00Z"
+  },
+  "yesterdayEngagement": {
+    "date": "2026-05-03",
+    "posts": 0,
+    "status": "content_generated_not_posted",
+    "notes": "Content queued but manual posting required due to Twitter API status. Previous day's content included VS Code attribution, Maryland pricing ban, and reality check themes."
+  }
+}

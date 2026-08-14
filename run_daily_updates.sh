@@ -19,10 +19,10 @@ echo ""
 echo "🎨 Running Dante (Creative Agent)..."
 python3 agents/dante.py
 
-# Generate Twitter content from calendar
+# Generate fresh Twitter content from trends
 echo ""
 echo "🐦 Generating Twitter content..."
-python3 twitter_content_generator.py
+python3 content_refresh_v2.py
 
 # Update Mission Control with new stats
 echo ""

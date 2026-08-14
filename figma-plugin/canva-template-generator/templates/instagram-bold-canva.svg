@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1080" height="1080" fill="url(#bgGradient)"/>
+  
+  <!-- Accent shape top right -->
+  <circle cx="900" cy="180" r="120" fill="#E94560" opacity="0.8"/>
+  
+  <!-- Accent shape bottom left -->
+  <rect x="80" y="750" width="200" height="200" fill="#F39422" opacity="0.6" transform="rotate(15 180 850)"/>
+  
+  <!-- Decorative line -->
+  <rect x="80" y="380" width="100" height="8" fill="#E94560"/>
+  
+  <!-- Main headline text placeholder -->
+  <text x="80" y="480" font-family="Oswald, Impact, sans-serif" font-size="96" font-weight="bold" fill="#FFFFFF">
+    BOLD HEADLINE
+  </text>
+  
+  <!-- Subtitle text placeholder -->
+  <text x="80" y="580" font-family="Roboto, Arial, sans-serif" font-size="40" fill="#FFFFFF" opacity="0.9">
+    Make a statement with vibrant colors
+  </text>
+  
+  <!-- CTA Button placeholder -->
+  <rect x="80" y="680" width="280" height="60" rx="8" fill="#E94560"/>
+  <text x="220" y="720" font-family="Roboto, Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    LEARN MORE
+  </text>
+  
+  <!-- Footer accent line -->
+  <rect x="80" y="980" width="920" height="3" fill="#0F3460"/>
+  
+  <!-- Brand placeholder -->
+  <text x="540" y="1020" font-family="Roboto, Arial, sans-serif" font-size="28" fill="#FFFFFF" opacity="0.7" text-anchor="middle">
+    @yourbrand
+  </text>
+</svg>

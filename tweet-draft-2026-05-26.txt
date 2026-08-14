@@ -1,0 +1,29 @@
+Twitter Content Draft - 2026-05-26
+==================================================
+
+Post 1: insight
+Text: Anthropic's Claude Code Routines just dropped.
+
+Think of it as: 'save this entire workflow and run it again with one command'
+
+Not just prompt templates. Full agentic sequences:
+• Multi-step reasoning
+• File operations
+• Tool calls
+• Error handling
+
+This is the bridge between 'AI helps' and 'AI does'.
+
+Post 2: comparison
+Text: Model comparison worth watching:
+
+Claude 3.5 Sonnet vs GPT-4o vs Gemini 1.5 Pro
+
+Claude: Best at complex reasoning, longer context
+GPT-4o: Fastest, best tool ecosystem
+Gemini: Massive context (2M tokens), best for documents
+
+The winner? Depends on your task.
+
+Smart builders use all three.
+

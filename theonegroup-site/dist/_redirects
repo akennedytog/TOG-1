@@ -1,7 +1,62 @@
 # Redirect duplicate service pages
 /ai-assessment.html /ai-audit.html 301
 /competitor-monitoring.html /competitor-intelligence.html 301
-/workshop.html /ai-agent-workshop.html 301
 
-# Old blog slugs (if any exist)
-/blog/ai-automation /blog/invisible-automation.html 301
+# Legacy blog article URLs: preserve links while Blog is being retained
+
+# Legacy event archive URL
+/archive/mmw-2026 /events.html 301
+# Blog and workshop retired; preserve legacy URLs
+/blog / 301
+/blog/* / 301
+/workshop /services 301
+/workshop.html /services 301
+/ai-agent-workshop /services 301
+/ai-agent-workshop.html /services 301
+/ai-growth-sprint /services 301
+/ai-growth-sprint.html /services 301
+
+# Clean URLs for new pages
+/privacy.html /privacy 301
+/contact.html /contact 301
+/404.html /404 301
+/thank-you.html /thank-you 301
+
+# Orphan pages - redirect to bookkeeping
+/receipt-automation /services 301
+/receipt-automation.html /services 301
+/ai-invoicing /services 301
+/ai-invoicing.html /services 301
+
+# Orphan pages - redirect to services
+/ai-bookkeeping /services 301
+/ai-bookkeeping.html /services 301
+/ai-coaching /services 301
+/ai-coaching.html /services 301
+/boca-raton-ai-bookkeeping /services 301
+/boca-raton-ai-bookkeeping.html /services 301
+/events /services 301
+/events.html /services 301
+/fort-lauderdale-ai-bookkeeping /services 301
+/fort-lauderdale-ai-bookkeeping.html /services 301
+/miami-ai-bookkeeping /services 301
+/miami-ai-bookkeeping.html /services 301
+/openclaw-setup /services 301
+/openclaw-setup.html /services 301
+/palm-beach-gardens-ai-bookkeeping /services 301
+/palm-beach-gardens-ai-bookkeeping.html /services 301
+/terms /services 301
+/terms.html /services 301
+/truerep /services 301
+/truerep.html /services 301
+/west-palm-beach-ai-bookkeeping /services 301
+/west-palm-beach-ai-bookkeeping.html /services 301
+
+# Old services - redirected to relevant pages
+/web-design /services 301
+/web-design.html /services 301
+/lead-lists /lead-response 301
+/lead-lists.html /lead-response 301
+
+/social-media /services 301
+/social-media.html /services 301

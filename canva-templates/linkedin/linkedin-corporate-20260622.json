@@ -1,0 +1,49 @@
+{
+  "name": "LinkedIn Corporate Template",
+  "template": "linkedin",
+  "theme": "corporate",
+  "dimensions": {
+    "width": 1200,
+    "height": 627
+  },
+  "colors": [
+    "#F8F9FA",
+    "#E9ECEF",
+    "#DEE2E6",
+    "#495057",
+    "#212529",
+    "#0066CC",
+    "#0056B3"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Segoe UI",
+      "style": "SemiBold"
+    },
+    "body": {
+      "family": "Segoe UI",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "Arial",
+      "style": "Bold"
+    }
+  },
+  "createdAt": "2026-06-22T14:10:37.442Z",
+  "id": "li-corporate-20260622",
+  "canvaCompatible": true,
+  "exportFormats": [
+    "json",
+    "svg",
+    "png-ready"
+  ],
+  "inventory": {
+    "platform": "linkedin",
+    "generatedBy": "figma-plugin-cli",
+    "cronDate": "2026-06-22"
+  },
+  "files": {
+    "json": "linkedin-corporate-20260622.json",
+    "svg": "linkedin-corporate-20260622.svg"
+  }
+}

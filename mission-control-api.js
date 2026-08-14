@@ -2,7 +2,8 @@
 // Serves the dashboard and provides endpoints to execute scripts
 
 import express from 'express';
-import { exec } from 'child_process';
+import fs from 'fs';
+import { exec, execFile } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
@@ -30,11 +31,35 @@ app.get('/api/health', (req, res) => {
 // POST to Twitter
 app.post('/api/post-tweet', (req, res) => {
   const { text, id } = req.body;
-  
-  // Run the post-today.js script
-  const scriptPath = path.join(__dirname, 'post-today.js');
-  
-  exec(`cd ${__dirname} && node post-today.js`, { timeout: 30000 }, (error, stdout, stderr) => {
+
+  const statePath = path.join(__dirname, 'state.json');
+
+  if (typeof text === 'string' && text.trim()) {
+    let state = { twitterQueue: [], queuedPosts: [], lastPostTime: null };
+    try {
+      state = JSON.parse(fs.readFileSync(statePath, 'utf-8'));
+    } catch (e) {}
+
+    const queue = Array.isArray(state.twitterQueue)
+      ? state.twitterQueue
+      : Array.isArray(state.queuedPosts)
+        ? state.queuedPosts
+        : [];
+
+    queue.unshift({
+      id: id || `manual_${Date.now()}`,
+      text: text.trim(),
+      status: 'queued',
+      source: 'mission-control',
+      createdAt: new Date().toISOString(),
+    });
+
+    state.twitterQueue = queue;
+    state.queuedPosts = queue;
+    fs.writeFileSync(statePath, JSON.stringify(state, null, 2));
+  }
+
+  execFile('python3', ['post_tweet.py'], { cwd: __dirname, timeout: 30000 }, (error, stdout, stderr) => {
     if (error) {
       console.error(`Twitter post error: ${error}`);
       res.status(500).json({ 
@@ -60,7 +85,7 @@ app.post('/api/queue-tweet', (req, res) => {
   
   // Read current state
   const statePath = path.join(__dirname, 'state.json');
-  let state = { queuedPosts: [], lastPostTime: null };
+  let state = { twitterQueue: [], queuedPosts: [], lastPostTime: null };
   
   try {
     state = JSON.parse(fs.readFileSync(statePath, 'utf-8'));
@@ -69,35 +94,48 @@ app.post('/api/queue-tweet', (req, res) => {
   }
   
   // Add to queue
-  state.queuedPosts.push({
+  const queue = Array.isArray(state.twitterQueue)
+    ? state.twitterQueue
+    : Array.isArray(state.queuedPosts)
+      ? state.queuedPosts
+      : [];
+  queue.push({
     id: Date.now(),
     text,
     scheduledTime: scheduledTime || new Date().toISOString(),
     status: 'queued'
   });
+  state.twitterQueue = queue;
+  state.queuedPosts = queue;
   
   fs.writeFileSync(statePath, JSON.stringify(state, null, 2));
   
   res.json({ 
     success: true, 
     message: 'Tweet queued successfully',
-    queuePosition: state.queuedPosts.length 
+    queuePosition: state.twitterQueue.length 
   });
 });
 
 // Get Twitter queue status
 app.get('/api/twitter-queue', (req, res) => {
   const statePath = path.join(__dirname, 'state.json');
-  let state = { queuedPosts: [], lastPostTime: null };
+  let state = { twitterQueue: [], queuedPosts: [], lastPostTime: null };
   
   try {
     state = JSON.parse(fs.readFileSync(statePath, 'utf-8'));
   } catch (e) {}
+
+  const queue = Array.isArray(state.twitterQueue)
+    ? state.twitterQueue
+    : Array.isArray(state.queuedPosts)
+      ? state.queuedPosts
+      : [];
   
   res.json({
-    queued: state.queuedPosts.length,
+    queued: queue.length,
     lastPost: state.lastPostTime,
-    posts: state.queuedPosts
+    posts: queue
   });
 });
 

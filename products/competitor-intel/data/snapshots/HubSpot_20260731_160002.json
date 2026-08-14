@@ -1,0 +1,18 @@
+{
+  "competitor": "HubSpot",
+  "url": "https://www.hubspot.com",
+  "timestamp": "2026-07-31 16:00:02.345941",
+  "content_hash": "fa643f317e7eab85",
+  "key_data": {
+    "word_count": 3060,
+    "pricing_mentions": 3,
+    "feature_keywords": [
+      "ai",
+      "automation",
+      "integration",
+      "api"
+    ],
+    "has_careers_page": true,
+    "has_blog": true
+  }
+}

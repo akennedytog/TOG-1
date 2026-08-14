@@ -1,11 +1,11 @@
 # Active Tasks
 
-## [scout-dashboard-tabs] Build tabbed Scout dashboard views by report type
-- **Status**: ✅ 完成
-- **Requested**: 2026-04-26 22:46
-- **Updated**: 2026-04-26 22:47
-- **Notes**: Created agents/scout_dashboard_tabs.html with client-side tabs, program selector, and per-report rollups for overview, POD, volume, accounts, inventory, and incentives using briefing_latest.json.
-- **Result**: New dashboard file loads the latest Scout briefing automatically and renders report-type-specific KPIs and tables in the existing dark glass style.
+## [job-search-2026-06-16] Scheduled job search run
+- **Status**: 🔄 进行中
+- **Requested**: 2026-06-16 09:15 EDT
+- **Updated**: 2026-06-16 09:15 EDT
+- **Notes**: Cron reminder `run-job-search`; inspecting existing job-search script/tracker and running quietly.
 
 # Completed (recent)
+- [calendar-refresh-2026-06-05] Daily calendar refresh ran at 2026-06-05 08:40 EDT; script completed, set `content-calendar-30day.json.lastRefresh` to `2026-06-05`, found 0 posts for 2026-06-05, and left `state.json.queuedPosts` empty. Note: reminder said tomorrow's posts, but script queues TODAY's posts and current calendar has no June 5 entry.
 - [scout-universal-parser] Universal Scout parser built and briefing_latest.json refreshed (2026-04-26 22:30)

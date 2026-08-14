@@ -58,20 +58,25 @@ Alec said "do all of these now" — all 5 proactive-power initiatives.
 
 ---
 
-## 🚧 DEPLOY-BLOCKED UNTIL CREDITS RESET (2026-08-12)
+## ✅ DEPLOYS DONE (2026-08-13 13:40)
 
-**Netlify credits exhausted — `netlify deploy --prod` blocked until ~2026-08-13.** Both sites have FRESH builds staged, ready to deploy in one session tomorrow:
+**Netlify credits reset — both sites deployed + verified live:**
 
-| Site | Deploy source | Staged in | Contains |
-|------|--------------|-----------|----------|
-| **theonegroup.info** | `theonegroup-v2/` (Astro) | `dist/` (built 08-10) | AI Visibility Score tool, real-estate-market-report landing w/ Kit embed, 13 pages |
-| **pitrowmiami.com** | `pitrowmiami-v2/` (Astro) | `dist/` (built 08-09) | 4 SEO blog posts (racing-sim-rental, corporate-team-building, f1-watch-party) |
+| Site | Deploy | Verified |
+|------|--------|----------|
+| **theonegroup.info** | ✅ `6a7e00f80a0359094ed17e4c` | /ai-visibility-score/ 200, /real-estate-market-report/ 200, homepage 200 |
+| **pitrowmiami.com** | ✅ `6a7e012aef00ba93dc31d9f8` | 4 blog posts 200, homepage 200 |
 
-**TOMORROW DEPLOY SEQUENCE (after credits reset):**
-1. `theonegroup-v2`: fresh `npm run build` → temp-dir deploy method (see MEMORY.md) → `netlify deploy --prod`
-2. `pitrowmiami-v2`: temp-dir deploy → `netlify deploy --prod`
-3. Verify both live URLs + verify `/ai-visibility-score/` renders.
-4. THEN unpause distribution (Distribution Kit flags: nothing links the tool until URL verified live).
+## ✅ BACKEND FIXED (2026-08-13 13:50)
+- `ai-visibility-score-backend.gs` Kit push updated to **Kit API v4** (old v3 endpoint deprecated). Two-step: POST /v4/subscribers (upsert + custom fields) → POST /v4/forms/{id}/subscribers (triggers automation). Auth = X-Kit-Api-Key header. Committed `4f5cda4`.
+- Verified score form fields (name/email/industry/city/website/score/bucket) match backend.
+- **LAUNCH-HANDOFF.md** created (workspace + Google Drive) — consolidated minimal manual sequence for Alec.
+
+**NEXT (Alec hands-on, per LAUNCH-HANDOFF.md):**
+1. Deploy Apps Script backend → send me the /exec URL → I paste into ai-visibility-score.astro L236 → rebuild + redeploy.
+2. Kit account + form + custom fields (industry/city/ai_score) + 5-email nurture → send me API key + form ID → I drop into backend config.
+3. Vapi voice agent (out/vapi-agent/VAPI-AGENT-CONFIG.md) — Twilio number first.
+4. THEN unpause distribution (Distribution Kit).
 
 ## ✅ FUNNEL BUILD WORK DONE (non-deploy, 2026-08-12)
 

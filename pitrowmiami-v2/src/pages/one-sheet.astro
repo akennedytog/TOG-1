@@ -1,0 +1,114 @@
+---
+import '../styles/global.css';
+const title = "Pit Row Miami — Corporate One-Sheet";
+const description = "Pit Row Miami — Premium F1 simulator rentals for corporate events, parties, and team building in South Florida.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{title}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content={description} />
+  <link rel="canonical" href="https://pitrowmiami.com/one-sheet/" />
+
+  <!-- Open Graph / Social Share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{title}" />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content="https://pitrowmiami.com/one-sheet/" />
+  <meta property="og:image" content="https://pitrowmiami.com/og-image.jpg" />
+  <meta property="og:site_name" content="Pit Row Miami" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{title}" />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://pitrowmiami.com/og-image.jpg" />
+  <style>
+    @page { margin: 0.5in; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #1a1a1a; line-height: 1.5; }
+    .page { max-width: 8.5in; margin: 0 auto; padding: 0.5in; }
+    h1 { font-size: 36px; font-weight: 900; letter-spacing: -1px; }
+    h1 span { color: #e10600; }
+    h2 { font-size: 20px; margin-top: 24px; margin-bottom: 8px; border-bottom: 2px solid #e10600; padding-bottom: 4px; }
+    .subtitle { font-size: 18px; color: #666; margin-top: 4px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 12px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 12px; }
+    .card { background: #f5f5f5; padding: 16px; border-radius: 8px; }
+    .card h3 { font-size: 14px; color: #e10600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .card .price { font-size: 28px; font-weight: 900; }
+    .card .price span { font-size: 14px; font-weight: 400; color: #666; }
+    ul { list-style: none; margin-top: 8px; }
+    ul li { padding: 2px 0; font-size: 13px; }
+    ul li::before { content: "✓ "; color: #e10600; font-weight: bold; }
+    .specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+    .specs div { background: #f5f5f5; padding: 8px 12px; border-radius: 6px; font-size: 13px; }
+    .specs strong { display: block; font-size: 11px; color: #e10600; text-transform: uppercase; }
+    .contact { margin-top: 24px; padding: 16px; background: #1a1a1a; color: white; border-radius: 8px; text-align: center; }
+    .contact a { color: #e10600; text-decoration: none; }
+    .footer { margin-top: 16px; font-size: 11px; color: #999; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>PIT ROW <span>MIAMI</span></h1>
+    <div class="subtitle">Premium F1 Simulator Rentals — South Florida</div>
+    <p style="margin-top:12px;">Two professional Fanatec F1 simulator rigs delivered to your event. Head-to-head racing, corporate team building, and unforgettable guest experiences.</p>
+
+    <h2>Packages</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Half Day</h3>
+        <div class="price">$1,200<span> / 4 hrs</span></div>
+        <ul>
+          <li>2 simulators</li>
+          <li>Delivery & setup</li>
+          <li>Staffed operation</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Full Day</h3>
+        <div class="price">$1,800<span> / 8 hrs</span></div>
+        <ul>
+          <li>2 simulators</li>
+          <li>Custom branding</li>
+          <li>Leaderboard system</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>F1 GP Week</h3>
+        <div class="price">$3,000<span> / premium</span></div>
+        <ul>
+          <li>Extended hours</li>
+          <li>Custom leaderboard</li>
+          <li>Branded photo ops</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Equipment</h2>
+    <div class="specs">
+      <div><strong>Simulators</strong>2× Fanatec Pro Rigs</div>
+      <div><strong>Screens</strong>48" Widescreen</div>
+      <div><strong>Game</strong>Formula 1 2026 (PS5)</div>
+      <div><strong>Setup</strong>$0 — Included</div>
+    </div>
+
+    <h2>Why Choose Us</h2>
+    <div class="grid-2">
+      <div class="card"><strong>Fully Insured</strong><br />$2M general liability</div>
+      <div class="card"><strong>Professional Staff</strong><br />We handle everything</div>
+      <div class="card"><strong>Brand New Gear</strong><br />$8K per setup</div>
+      <div class="card"><strong>We Come to You</strong><br />Miami-Dade, Broward, Palm Beach</div>
+    </div>
+
+    <div class="contact">
+      <strong>Book Your Event</strong><br />
+      <a href="mailto:info@pitrowmiami.com">info@pitrowmiami.com</a> · <a href="tel:+19548002162">(954) 800-2162</a> · <a href="https://pitrowmiami.com">pitrowmiami.com</a>
+    </div>
+    <div class="footer">&copy; 2026 Pit Row Miami. All rights reserved.</div>
+  </div>
+</body>
+</html>

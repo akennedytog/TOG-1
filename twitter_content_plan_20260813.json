@@ -1,0 +1,35 @@
+{
+  "date": "2026-08-13",
+  "posts": [
+    {
+      "time": "09:00",
+      "type": "insight",
+      "content": "What just happened: OpenAI hires new CRO as executive shake-up continues\n\nWhy it matters: Tim Fernholz\n\nOpenAI has replaced chief revenue officer Denise Dresser after just nine months on the job, tapping Wiz president and chief op\n\nThe takeaway for SMBs: OpenAI moves shape the AI tools you'll be using in 6-12 months. Staying current is how you spot the opportunity before competitors do.\n\nhttps://techcrunch.com/2026/08/13/openai-hires-new-cro-as-executive-shake-up-continues",
+      "source": "https://techcrunch.com/2026/08/13/openai-hires-new-cro-as-executive-shake-up-continues",
+      "engagement_tactic": "question_hook"
+    },
+    {
+      "time": "11:00",
+      "type": "funding_reaction",
+      "content": "What just happened: 400 Million AI raise announced.\n\nWhy it matters: Situational Awareness Bets $400 Million on Stealth Chip ...\n\nThe pattern I'm seeing: Infrastructure > Applications. Pick-and-shovel plays > gold rush bets. Boring automation > fancy demos.\n\nWhere are you seeing ROI?\n\nhttps://www.wsj.com/tech/ai/situational-awareness-bets-400-million-on-stealth-chip-startup-after-crash-02c7374e",
+      "source": "https://www.wsj.com/tech/ai/situational-awareness-bets-400-million-on-stealth-chip-startup-after-crash-02c7374e",
+      "engagement_tactic": "pattern_recognition"
+    },
+    {
+      "time": "13:00",
+      "type": "contrarian",
+      "content": "The AI story everyone's watching: 10 AI Agents Every Small Business Should Use Now\n\nWhat's actually happening: Small businesses' adoption of artificial intelligence (AI) for their specific needs has transitioned from being hyped to actually useful.\n\nThe contrarian take: the tools getting all the hype aren't the ones creating value. Fancy features \u2260 adoption. Cool demos \u2260 ROI.\n\nhttps://www.forbes.com/sites/terdawn-deboe/2026/03/27/10-ai-agents-for-small-business-that-give-immediate-relief",
+      "source": "https://www.forbes.com/sites/terdawn-deboe/2026/03/27/10-ai-agents-for-small-business-that-give-immediate-relief",
+      "engagement_tactic": "polarizing_question"
+    },
+    {
+      "time": "20:00",
+      "type": "framework",
+      "content": "The AI adoption trap:\n\nBuying 5 tools and using none consistently.\n\nThe fix: pick ONE task, automate it, measure the hours saved. Repeat.\n\nConsistency beats tool count every time.",
+      "source": "evergreen",
+      "engagement_tactic": "self_identification"
+    }
+  ],
+  "credits_used": 3,
+  "generated_at": "2026-08-13T17:36:19.353095"
+}

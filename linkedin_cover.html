@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>The One Group LinkedIn Cover</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      min-height: 100vh; 
+      background: #1a1a2e;
+    }
+    .cover {
+      width: 1128px;
+      height: 191px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #3b82f6 100%);
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 0%, rgba(139, 92, 246, 0.3) 100%);
+    }
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      z-index: 1;
+    }
+    .logo-box {
+      width: 100px;
+      height: 100px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+    .logo-box img {
+      max-width: 80px;
+      max-height: 80px;
+      object-fit: contain;
+    }
+    .text-section {
+      margin-left: auto;
+      text-align: right;
+      z-index: 1;
+    }
+    .tagline {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      color: white;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .tagline .highlight {
+      color: #8b5cf6;
+    }
+    .subtext {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: rgba(255,255,255,0.8);
+      margin-top: 8px;
+    }
+    .url {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: #60a5fa;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="logo-section">
+      <div class="logo-box">
+        <img src="theonegroup-site/assets/TOG-Logo-New.png" alt="The One Group" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:white; font-weight:800; font-size:28px;\'>TOG</span\>'">
+      </div>
+    </div>
+    <div class="text-section">
+      <div class="tagline">
+        AUTOMATE THE <span class="highlight">BORING</span>.
+        <br>
+        SCALE THE <span class="highlight">IMPORTANT</span>.
+      </div>
+      <div class="subtext">AI Automation for SMBs</div>
+      <div class="url">theonegroup.info</div>
+    </div>
+  </div>
+</body>
+</html>

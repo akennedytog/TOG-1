@@ -1,0 +1,19 @@
+# Redirect duplicate service pages
+/ai-assessment.html /ai-audit.html 301
+/competitor-monitoring.html /competitor-intelligence.html 301
+
+# Old blog slugs (if any exist)
+
+# Legacy blog article URLs: preserve links while Blog is being retained
+
+# Legacy event archive URL
+/archive/mmw-2026 /events.html 301
+# Blog and workshop retired; preserve legacy URLs
+/blog / 301
+/blog/* / 301
+/workshop /services 301
+/workshop.html /services 301
+/ai-agent-workshop /services 301
+/ai-agent-workshop.html /services 301
+/ai-growth-sprint /services 301
+/ai-growth-sprint.html /services 301

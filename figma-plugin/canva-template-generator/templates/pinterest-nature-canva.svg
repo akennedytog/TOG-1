@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="natureGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C8E6C9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1000" height="1500" fill="url(#natureGradient)"/>
+  
+  <!-- Image area placeholder (top 2/3) -->
+  <rect x="50" y="50" width="900" height="900" rx="16" fill="#A5D6A7"/>
+  <text x="500" y="500" font-family="Montserrat, Arial, sans-serif" font-size="32" fill="#1B5E20" text-anchor="middle" opacity="0.6">
+    [Nature Image Placeholder]
+  </text>
+  <text x="500" y="550" font-family="Source Sans Pro, Arial, sans-serif" font-size="20" fill="#2E7D32" text-anchor="middle" opacity="0.5">
+    Upload your nature photo here
+  </text>
+  
+  <!-- Leaf decoration -->
+  <circle cx="850" cy="150" r="60" fill="#66BB6A" opacity="0.3"/>
+  <circle cx="150" cy="850" r="40" fill="#43A047" opacity="0.2"/>
+  
+  <!-- Content area (bottom 1/3) -->
+  <rect x="0" y="1000" width="1000" height="500" fill="#FFFFFF"/>
+  
+  <!-- Pin title -->
+  <text x="50" y="1100" font-family="Montserrat, Arial, sans-serif" font-size="56" font-weight="bold" fill="#1B5E20">
+    Pin Title Goes Here
+  </text>
+  
+  <!-- Decorative line -->
+  <rect x="50" y="1130" width="120" height="4" fill="#43A047"/>
+  
+  <!-- Description text -->
+  <text x="50" y="1200" font-family="Source Sans Pro, Arial, sans-serif" font-size="28" fill="#2E7D32">
+    <tspan x="50" dy="0">Your description text goes here.</tspan>
+    <tspan x="50" dy="42">This is optimized for Pinterest engagement</tspan>
+    <tspan x="50" dy="42">with the perfect 2:3 ratio format.</tspan>
+  </text>
+  
+  <!-- Tags or keywords -->
+  <rect x="50" y="1380" width="120" height="40" rx="20" fill="#E8F5E9"/>
+  <text x="110" y="1407" font-family="Source Sans Pro, Arial, sans-serif" font-size="16" fill="#1B5E20" text-anchor="middle">#nature</text>
+  
+  <rect x="190" y="1380" width="140" height="40" rx="20" fill="#E8F5E9"/>
+  <text x="260" y="1407" font-family="Source Sans Pro, Arial, sans-serif" font-size="16" fill="#1B5E20" text-anchor="middle">#wellness</text>
+  
+  <rect x="350" y="1380" width="120" height="40" rx="20" fill="#E8F5E9"/>
+  <text x="410" y="1407" font-family="Source Sans Pro, Arial, sans-serif" font-size="16" fill="#1B5E20" text-anchor="middle">#green</text>
+  
+  <!-- Footer with brand -->
+  <text x="500" y="1470" font-family="Montserrat, Arial, sans-serif" font-size="24" fill="#43A047" opacity="0.8" text-anchor="middle">
+    @yourbrand • Save for later
+  </text>
+</svg>

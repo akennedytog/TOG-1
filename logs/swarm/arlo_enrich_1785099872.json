@@ -1,0 +1,23 @@
+{
+  "task_id": "arlo_enrich_1785099872",
+  "timestamp": "2026-07-26T17:04:32.061853",
+  "agent": "arlo_enrich",
+  "trigger": "new_lead",
+  "priority": 8,
+  "payload": {
+    "lead": {
+      "company": "TestCorp Industries",
+      "email": "test@testcorp.com"
+    }
+  },
+  "result": {
+    "action": "enrich_lead",
+    "company": "TestCorp Industries",
+    "research_queue": [
+      "firecrawl search 'TestCorp Industries funding news' --limit 5",
+      "firecrawl search 'TestCorp Industries competitors' --limit 5",
+      "firecrawl search 'TestCorp Industries AI automation' --limit 3"
+    ],
+    "output_file": "/Users/aleckennedy/.openclaw/workspace/leads/enriched_testcorp_industries.json"
+  }
+}

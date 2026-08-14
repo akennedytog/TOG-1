@@ -400,7 +400,7 @@ Structure:
 #### Step 8: Scheduling (5 min)
 ```bash
 # Add to posting queue
-# twitter-automation.js handles scheduling
+# post_tweet.py handles canonical posting (scheduler wrappers may call it)
 
 Timing:
 - Morning post: 9-10 AM EST

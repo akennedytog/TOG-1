@@ -1,42 +1,11 @@
-import dotenv from 'dotenv';
-import { TwitterApi } from 'twitter-api-v2';
-import fs from 'fs';
+#!/usr/bin/env node
+import { spawnSync } from 'child_process';
 
-dotenv.config({ path: new URL('./.env', import.meta.url).pathname });
-
-const client = new TwitterApi({
-  appKey: process.env.TWITTER_API_KEY,
-  appSecret: process.env.TWITTER_API_SECRET,
-  accessToken: process.env.TWITTER_ACCESS_TOKEN,
-  accessSecret: process.env.TWITTER_ACCESS_SECRET,
+const WORKSPACE = '/Users/aleckennedy/.openclaw/workspace';
+console.log('⚠️ post-evening-job.js is deprecated. Using post_tweet.py.');
+const result = spawnSync('python3', ['post_tweet.py'], {
+  cwd: WORKSPACE,
+  stdio: 'inherit',
+  env: process.env,
 });
-
-const text = `Qodo raised $70M because AI writes code faster than humans can verify it.
-
-The SMB lesson?
-
-Automation creates a NEW bottleneck: quality control.
-
-Whether it's AI-generated content, code, or customer emails—you still need a human in the loop.
-
-Build your process like this:
-AI generates → Human verifies → System deploys
-
-Speed without accuracy is just faster mistakes.`;
-
-console.log('Posting evening tweet...');
-
-try {
-  const result = await client.readWrite.v2.tweet(text);
-  console.log('✅ Posted! ID:', result.data.id);
-  
-  // Update state.json
-  const state = JSON.parse(fs.readFileSync('state.json', 'utf8'));
-  state.queuedPosts.shift();
-  state.lastPostTime = Date.now().toString();
-  state.postedToday = (state.postedToday || 0) + 1;
-  fs.writeFileSync('state.json', JSON.stringify(state, null, 2));
-  console.log('Queue updated');
-} catch (err) {
-  console.error('❌ Failed:', err.message);
-}
+process.exit(result.status ?? 1);

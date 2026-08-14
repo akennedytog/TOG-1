@@ -1,0 +1,249 @@
+{
+  "date": "Monday, June 29, 2026",
+  "program": "Road to Cinco - B-F FY26 Q4 H&R",
+  "summary": {
+    "total_reps": 144,
+    "total_new_pod": 264.0,
+    "total_goal": 366.0,
+    "team_pct_goal": 0.7213114754098361,
+    "total_payout": 2010.0,
+    "exceeding": 0,
+    "on_track": 0,
+    "at_risk": 0,
+    "behind": 21
+  },
+  "top_performers": [
+    {
+      "rep_name": "APARICIO VANESSA",
+      "level": "FSM",
+      "prior_pod": 138.0,
+      "new_pod": 12.0,
+      "goal": 21.0,
+      "variance": -9.0,
+      "pct_goal": 0.5714285714285714,
+      "status": "behind",
+      "alert": "Behind goal (57%)"
+    },
+    {
+      "rep_name": "GAVIN LAWRENCE",
+      "level": "FSM",
+      "prior_pod": 100.0,
+      "new_pod": 10.0,
+      "goal": 15.0,
+      "variance": -5.0,
+      "pct_goal": 0.6666666666666666,
+      "status": "behind",
+      "alert": "Behind goal (67%)"
+    },
+    {
+      "rep_name": "VON UNGERN STERNBERG THEO",
+      "level": "FSM",
+      "prior_pod": 96.0,
+      "new_pod": 10.0,
+      "goal": 15.0,
+      "variance": -5.0,
+      "pct_goal": 0.6666666666666666,
+      "status": "behind",
+      "alert": "Behind goal (67%)"
+    },
+    {
+      "rep_name": "FETTERMAN GILLIAN",
+      "level": "FSM",
+      "prior_pod": 114.0,
+      "new_pod": 10.0,
+      "goal": 18.0,
+      "variance": -8.0,
+      "pct_goal": 0.5555555555555556,
+      "status": "behind",
+      "alert": "Behind goal (56%)"
+    },
+    {
+      "rep_name": "BRAY JAMES",
+      "level": "Rep",
+      "new_pod": 9.0,
+      "dist_payout": 135.0,
+      "print_payout": 0.0,
+      "total_payout": 135.0,
+      "menus_features": 5.0,
+      "cases_4plus": 2.0,
+      "menu_payout": 0.0,
+      "pct_goal": 0,
+      "variance": 0,
+      "status": "unknown",
+      "alert": "No data available"
+    },
+    {
+      "rep_name": "CARTWRIGHT MEGAN",
+      "level": "FSM",
+      "prior_pod": 142.0,
+      "new_pod": 8.0,
+      "goal": 22.0,
+      "variance": -14.0,
+      "pct_goal": 0.36363636363636365,
+      "status": "behind",
+      "alert": "Behind goal (36%)"
+    },
+    {
+      "rep_name": "GAGNELIUS WESLEY",
+      "level": "FSM",
+      "prior_pod": 119.0,
+      "new_pod": 8.0,
+      "goal": 18.0,
+      "variance": -10.0,
+      "pct_goal": 0.4444444444444444,
+      "status": "behind",
+      "alert": "Behind goal (44%)"
+    },
+    {
+      "rep_name": "TAPPAN CHARLES",
+      "level": "FSM",
+      "prior_pod": 101.0,
+      "new_pod": 8.0,
+      "goal": 16.0,
+      "variance": -8.0,
+      "pct_goal": 0.5,
+      "status": "behind",
+      "alert": "Behind goal (50%)"
+    },
+    {
+      "rep_name": "HARTMANN CHRISTIAN",
+      "level": "FSM",
+      "prior_pod": 92.0,
+      "new_pod": 7.0,
+      "goal": 15.0,
+      "variance": -8.0,
+      "pct_goal": 0.4666666666666667,
+      "status": "behind",
+      "alert": "Behind goal (47%)"
+    },
+    {
+      "rep_name": "DRUASH KENDALL",
+      "level": "FSM",
+      "prior_pod": 77.0,
+      "new_pod": 7.0,
+      "goal": 15.0,
+      "variance": -8.0,
+      "pct_goal": 0.4666666666666667,
+      "status": "behind",
+      "alert": "Behind goal (47%)"
+    }
+  ],
+  "needs_help": [
+    {
+      "rep_name": "KETCHUM PETER",
+      "level": "FSM",
+      "prior_pod": 80.0,
+      "new_pod": 1.0,
+      "goal": 15.0,
+      "variance": -14.0,
+      "pct_goal": 0.06666666666666667,
+      "status": "behind",
+      "alert": "Behind goal (7%)"
+    },
+    {
+      "rep_name": "MCCULLOUGH CORI",
+      "level": "FSM",
+      "prior_pod": 109.0,
+      "new_pod": 2.0,
+      "goal": 17.0,
+      "variance": -15.0,
+      "pct_goal": 0.11764705882352941,
+      "status": "behind",
+      "alert": "Behind goal (12%)"
+    },
+    {
+      "rep_name": "WILLIAMS GERALD",
+      "level": "FSM",
+      "prior_pod": 110.0,
+      "new_pod": 3.0,
+      "goal": 17.0,
+      "variance": -14.0,
+      "pct_goal": 0.17647058823529413,
+      "status": "behind",
+      "alert": "Behind goal (18%)"
+    },
+    {
+      "rep_name": "GWIDT JACKIE",
+      "level": "FSM",
+      "prior_pod": 110.0,
+      "new_pod": 4.0,
+      "goal": 17.0,
+      "variance": -13.0,
+      "pct_goal": 0.23529411764705882,
+      "status": "behind",
+      "alert": "Behind goal (24%)"
+    },
+    {
+      "rep_name": "DIETRICH MICHAEL",
+      "level": "FSM",
+      "prior_pod": 109.0,
+      "new_pod": 4.0,
+      "goal": 17.0,
+      "variance": -13.0,
+      "pct_goal": 0.23529411764705882,
+      "status": "behind",
+      "alert": "Behind goal (24%)"
+    },
+    {
+      "rep_name": "VAN LANDINGHAM GLYNN",
+      "level": "FSM",
+      "prior_pod": 130.0,
+      "new_pod": 5.0,
+      "goal": 20.0,
+      "variance": -15.0,
+      "pct_goal": 0.25,
+      "status": "behind",
+      "alert": "Behind goal (25%)"
+    },
+    {
+      "rep_name": "GOLDBERG KEVIN",
+      "level": "FSM",
+      "prior_pod": 53.0,
+      "new_pod": 4.0,
+      "goal": 15.0,
+      "variance": -11.0,
+      "pct_goal": 0.26666666666666666,
+      "status": "behind",
+      "alert": "Behind goal (27%)"
+    },
+    {
+      "rep_name": "PALAZZO KRISTEN",
+      "level": "FSM",
+      "prior_pod": 43.0,
+      "new_pod": 4.0,
+      "goal": 15.0,
+      "variance": -11.0,
+      "pct_goal": 0.26666666666666666,
+      "status": "behind",
+      "alert": "Behind goal (27%)"
+    },
+    {
+      "rep_name": "BOWAN BIANCA",
+      "level": "FSM",
+      "prior_pod": 112.0,
+      "new_pod": 5.0,
+      "goal": 17.0,
+      "variance": -12.0,
+      "pct_goal": 0.29411764705882354,
+      "status": "behind",
+      "alert": "Behind goal (29%)"
+    },
+    {
+      "rep_name": "CARTWRIGHT MEGAN",
+      "level": "FSM",
+      "prior_pod": 142.0,
+      "new_pod": 8.0,
+      "goal": 22.0,
+      "variance": -14.0,
+      "pct_goal": 0.36363636363636365,
+      "status": "behind",
+      "alert": "Behind goal (36%)"
+    }
+  ],
+  "insights": [
+    "\ud83d\udea8 Team behind: 72% - urgent action needed",
+    "\u2757 21 reps significantly behind - need coaching",
+    "\ud83d\udcb0 Team earned $2,010 in payouts"
+  ],
+  "generated_at": "2026-06-29T08:00:04.878357"
+}

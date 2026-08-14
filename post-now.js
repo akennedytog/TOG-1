@@ -1,52 +1,34 @@
-// One-off tweet poster - bypasses rate limits
-import dotenv from 'dotenv';
-import { TwitterApi } from 'twitter-api-v2';
 import fs from 'fs';
+import { spawnSync } from 'child_process';
 
-dotenv.config();
+const WORKSPACE = '/Users/aleckennedy/.openclaw/workspace';
+const STATE_FILE = `${WORKSPACE}/state.json`;
+const injectedText = process.argv.slice(2).join(' ').trim();
 
-const client = new TwitterApi({
-  appKey: process.env.TWITTER_API_KEY,
-  appSecret: process.env.TWITTER_API_SECRET,
-  accessToken: process.env.TWITTER_ACCESS_TOKEN,
-  accessSecret: process.env.TWITTER_ACCESS_SECRET,
-});
-const rwClient = client.readWrite;
-
-const state = JSON.parse(fs.readFileSync('state.json', 'utf-8'));
-const post = state.queuedPosts[0];
-
-if (!post) {
-  console.log('No posts in queue');
-  process.exit(0);
-}
-
-const postText = typeof post === 'string' ? post : post.text;
-console.log(`Posting: ${postText.substring(0, 80)}...`);
-
-try {
-  const result = await rwClient.v2.tweet(postText);
-  console.log(`✅ Posted! ID: ${result.data.id}`);
-  
-  // Update state
-  state.queuedPosts.shift();
-  state.lastPostTime = Date.now().toString();
-  fs.writeFileSync('state.json', JSON.stringify(state, null, 2));
-  
-  // Update analytics
-  const analytics = JSON.parse(fs.readFileSync('twitter-analytics.json', 'utf-8'));
-  const today = new Date().toISOString().split('T')[0];
-  if (!analytics.dailyStats[today]) analytics.dailyStats[today] = { tweets: 0 };
-  analytics.dailyStats[today].tweets++;
-  analytics.totalTweets++;
-  analytics.engagementLog.push({
-    type: 'tweet',
-    text: postText.substring(0, 100),
-    tweetId: result.data.id,
-    timestamp: new Date().toISOString(),
+if (injectedText) {
+  const state = JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8'));
+  const queue = Array.isArray(state.twitterQueue)
+    ? state.twitterQueue
+    : Array.isArray(state.queuedPosts)
+      ? state.queuedPosts
+      : [];
+  queue.unshift({
+    id: `manual_${Date.now()}`,
+    status: 'queued',
+    text: injectedText,
+    source: 'manual',
+    createdAt: new Date().toISOString(),
   });
-  fs.writeFileSync('twitter-analytics.json', JSON.stringify(analytics, null, 2));
-  
-} catch (err) {
-  console.error(`❌ Failed: ${err.message}`);
+  state.twitterQueue = queue;
+  state.queuedPosts = queue;
+  fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
+  console.log('📝 Injected manual tweet into queue head');
 }
+
+console.log('↪ Delegating to canonical poster: post_tweet.py');
+const result = spawnSync('python3', ['post_tweet.py'], {
+  cwd: WORKSPACE,
+  stdio: 'inherit',
+  env: process.env,
+});
+process.exit(result.status ?? 1);

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+  <!-- Background -->
+  <rect width="1200" height="627" fill="#F8F9FA"/>
+  
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="627" fill="#0066CC"/>
+  
+  <!-- Header section -->
+  <rect x="80" y="0" width="1120" height="120" fill="#FFFFFF"/>
+  
+  <!-- Article title -->
+  <text x="80" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="600" fill="#212529">
+    Article Title Goes Here
+  </text>
+  
+  <!-- Decorative line -->
+  <rect x="80" y="240" width="80" height="4" fill="#0066CC"/>
+  
+  <!-- Author info -->
+  <text x="80" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#495057">
+    Author Name • Professional Title • Company Name
+  </text>
+  
+  <!-- Summary text -->
+  <text x="80" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#495057">
+    <tspan x="80" dy="0">Key insight or summary of the article content goes here.</tspan>
+    <tspan x="80" dy="36">This is where you highlight the main value proposition.</tspan>
+  </text>
+  
+  <!-- Stats or metrics section -->
+  <rect x="80" y="480" width="200" height="80" rx="4" fill="#E9ECEF"/>
+  <text x="180" y="515" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#0066CC" text-anchor="middle">10K+</text>
+  <text x="180" y="545" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle">Readers</text>
+  
+  <rect x="320" y="480" width="200" height="80" rx="4" fill="#E9ECEF"/>
+  <text x="420" y="515" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#0066CC" text-anchor="middle">500+</text>
+  <text x="420" y="545" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle">Engagements</text>
+  
+  <!-- Right side image placeholder -->
+  <rect x="750" y="80" width="370" height="467" rx="8" fill="#E9ECEF"/>
+  <text x="935" y="312" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#6C757D" text-anchor="middle">
+    [Image Placeholder]
+  </text>
+  
+  <!-- Footer -->
+  <rect x="0" y="600" width="1200" height="27" fill="#0066CC"/>
+</svg>

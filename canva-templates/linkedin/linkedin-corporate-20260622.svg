@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+  <rect width="1200" height="627" fill="#F8F9FA"/>
+  <rect x="790" y="0" width="410" height="627" fill="#DEE2E6"/>
+  <rect x="80" y="92" width="94" height="8" fill="#0066CC"/>
+  <text x="80" y="238" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="700" fill="#212529">Article Title</text>
+  <text x="80" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="25" fill="#495057">Your name • Professional title</text>
+  <rect x="820" y="115" width="310" height="250" rx="12" fill="#F8F9FA" opacity="0.72"/>
+  <circle cx="975" cy="240" r="82" fill="#0066CC" opacity="0.18"/>
+  <rect x="80" y="470" width="250" height="44" rx="6" fill="#0066CC"/>
+</svg>

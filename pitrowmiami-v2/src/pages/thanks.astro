@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = "Thank You — Pit Row Miami";
+const description = "Thank you for booking with Pit Row Miami. We will confirm your F1 simulator rental shortly.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="min-h-screen flex items-center justify-center pt-16">
+    <div class="text-center max-w-lg mx-auto px-4">
+      <h1 class="text-5xl font-black mb-4">Thank You!</h1>
+      <p class="text-xl text-gray-300 mb-8">We've received your booking inquiry and will get back to you within 24 hours.</p>
+      <a href="/" class="inline-block bg-brand-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all">&larr; Back to Pit Row Miami</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,141 @@
+{
+  "model_routing": {
+    "rule": "Always start free/local unless the task clearly requires escalation. Never use aliases. Always use full model paths.",
+
+    "tier_1_free_default": {
+      "primary": "ollama/kimi-k2.5:cloud",
+      "secondary": "ollama/qwen3-coder",
+      "purpose": "Default routing, planning, lightweight coding, long reasoning, local-first work.",
+      "use_kimi_for": [
+        "task planning",
+        "long reasoning",
+        "reading large files",
+        "summarizing codebase context",
+        "explaining architecture",
+        "breaking large tasks into steps",
+        "requirements analysis",
+        "non-code reasoning"
+      ],
+      "use_qwen_for": [
+        "writing code",
+        "editing code",
+        "small bug fixes",
+        "single-file changes",
+        "boilerplate generation",
+        "utility functions",
+        "TypeScript/JavaScript/Python implementation",
+        "unit test generation",
+        "simple refactors"
+      ],
+      "stay_in_tier_1_when": [
+        "task affects 1-2 files",
+        "change is reversible",
+        "no production risk",
+        "no auth/payment/security logic",
+        "no database migration",
+        "no failing tests after first fix",
+        "requirements are clear"
+      ]
+    },
+
+    "tier_2_haiku_escalation": {
+      "model": "anthropic/claude-3-haiku-20240307",
+      "purpose": "Cheap cloud escalation for moderate reasoning and API/library knowledge.",
+      "use_when": [
+        "Tier 1 is uncertain",
+        "Tier 1 gives conflicting answers",
+        "task involves external APIs",
+        "task involves unfamiliar libraries",
+        "task touches 3-5 files",
+        "debugging requires reasoning across files",
+        "integration code is needed",
+        "local model output looks incomplete",
+        "need a second opinion before Codex"
+      ],
+      "do_not_use_for": [
+        "repo-wide rewrites",
+        "major architecture decisions",
+        "complex debugging after repeated failures",
+        "security-critical code",
+        "payment flows",
+        "database migrations"
+      ]
+    },
+
+    "tier_3_codex_max_intelligence": {
+      "primary": "openai/gpt-5.4",
+      "fallback": "anthropic/claude-3-haiku-20240307",
+      "purpose": "Maximum coding intelligence for hard debugging, repo-wide reasoning, and high-risk changes.",
+      "use_when": [
+        "Haiku fails",
+        "same error happens twice",
+        "tests still fail after attempted fix",
+        "task affects more than 5 files",
+        "architecture decision is required",
+        "large refactor is required",
+        "production bug is unclear",
+        "database schema changes are needed",
+        "auth/security code is involved",
+        "payments/billing code is involved",
+        "performance-critical code is involved",
+        "user explicitly says use Codex",
+        "user says max intelligence"
+      ],
+      "prefer": "openai/gpt-5.4",
+      "fallback": "openai/gpt-5.1-codex"
+    },
+
+    "escalation_protocol": {
+      "before_escalating": [
+        "summarize the task",
+        "list files inspected",
+        "list files changed",
+        "include exact error messages",
+        "explain what was tried",
+        "explain why escalation is needed"
+      ],
+      "max_attempts": {
+        "tier_1": 2,
+        "tier_2": 1,
+        "tier_3": 3
+      }
+    },
+
+    "task_breakdown_rules": {
+      "step_1_kimi_plan": [
+        "understand the request",
+        "identify affected files",
+        "split work into small tasks",
+        "decide whether Qwen can implement locally"
+      ],
+      "step_2_qwen_implement": [
+        "make minimal code changes",
+        "avoid full rewrites",
+        "preserve existing patterns",
+        "add or update tests when obvious"
+      ],
+      "step_3_haiku_review": [
+        "review API usage",
+        "check integration logic",
+        "catch obvious mistakes",
+        "suggest corrections"
+      ],
+      "step_4_codex_solve": [
+        "perform deep debugging",
+        "reason across the repo",
+        "fix failing tests",
+        "handle architecture-level changes"
+      ]
+    },
+
+    "global_rules": [
+      "never use model aliases like gpt, haiku, or ollama",
+      "always use full model paths",
+      "prefer minimal diffs",
+      "run tests after changes when possible",
+      "do not expose secrets to cloud models",
+      "do not rewrite working code unless necessary",
+      "ask for Codex only when cheaper tiers are insufficient"
+    ]
+  }
+}

@@ -1,0 +1,499 @@
+[
+  {
+    "name": "LeBron James",
+    "slug": "lebron-james",
+    "famous_for": "NBA GOAT, 4x MVP, all-time scoring leader",
+    "current_profession": "NBA Player / Business Mogul",
+    "high_school": "St. Vincent-St. Mary",
+    "hometown": "Akron, Ohio",
+    "sports": ["football", "basketball"],
+    "primary_sport": "basketball",
+    "position": "Wide Receiver / Point Guard",
+    "stats": {
+      "basketball_ppg": "28.0",
+      "basketball_rpg": "8.9",
+      "football_receptions": "57",
+      "football_yards": "1164",
+      "football_touchdowns": "16"
+    },
+    "notable_achievements": [
+      "3x Ohio Mr. Basketball",
+      "First team All-American (football)",
+      "State champion (basketball)"
+    ],
+    "what_if_analysis": "LeBron was an All-State wide receiver. Ohio State wanted him for football. He chose basketball.",
+    "viral_angle": "LeBron was so dominant in HS football that OSU's football coach begged him to play. He averaged 28 PPG in basketball WHILE being an All-State receiver."
+  },
+  {
+    "name": "Tom Brady",
+    "slug": "tom-brady",
+    "famous_for": "NFL GOAT, 7x Super Bowl Champ",
+    "current_profession": "NFL Player / Media",
+    "high_school": "Junípero Serra",
+    "hometown": "San Mateo, California",
+    "sports": ["football", "baseball"],
+    "primary_sport": "baseball",
+    "position": "Catcher / Quarterback",
+    "stats": {
+      "baseball_draft_round": "18",
+      "baseball_draft_year": "1995",
+      "football_passing_yards": "3328",
+      "football_touchdowns": "33",
+      "football_interceptions": "8"
+    },
+    "notable_achievements": [
+      "Drafted by Montreal Expos (MLB)",
+      "All-State in football",
+      "Led team to 10-1 record senior year"
+    ],
+    "what_if_analysis": "Brady was drafted by the Expos in the 18th round. He chose Michigan football over pro baseball.",
+    "viral_angle": "Tom Brady was drafted by MLB's Montreal Expos before he even started at Michigan. He was a lefty-hitting catcher with power."
+  },
+  {
+    "name": "Dwayne Johnson",
+    "slug": "dwayne-johnson",
+    "famous_for": "The Rock, highest-paid actor",
+    "current_profession": "Actor / Entrepreneur",
+    "high_school": "Freedom",
+    "hometown": "Bethlehem, Pennsylvania",
+    "sports": ["football", "wrestling", "track"],
+    "primary_sport": "football",
+    "position": "Defensive Tackle",
+    "stats": {
+      "tackles": "77",
+      "sacks": "9"
+    },
+    "notable_achievements": [
+      "State championship team",
+      "All-State selection",
+      "Miami Hurricane scholarship"
+    ],
+    "what_if_analysis": "The Rock had 9 sacks as a HS senior. A knee injury ended his NFL dreams.",
+    "viral_angle": "The Rock had 9 sacks in high school and went to Miami on scholarship. A knee injury ended his NFL dream before he became the highest-paid actor ever."
+  },
+  {
+    "name": "Kyler Murray",
+    "slug": "kyler-murray",
+    "famous_for": "NFL QB, Heisman Winner, 1st overall pick",
+    "current_profession": "NFL Quarterback",
+    "high_school": "Allen",
+    "hometown": "Allen, Texas",
+    "sports": ["football", "baseball"],
+    "primary_sport": "football",
+    "position": "Quarterback",
+    "stats": {
+      "football_passing_yards": "10583",
+      "football_touchdowns": "128",
+      "baseball_batting_avg": ".442",
+      "baseball_stolen_bases": "42"
+    },
+    "notable_achievements": [
+      "3x State champion",
+      "43-0 record as starter",
+      "No. 1 dual-threat QB in nation"
+    ],
+    "what_if_analysis": "Murray went 43-0 in high school. He was drafted 9th overall by the Oakland A's before choosing football at Oklahoma.",
+    "viral_angle": "Kyler Murray never lost a high school game. 43-0 as a starter. He was also a 9th-round MLB pick before winning the Heisman."
+  },
+  {
+    "name": "Terry Crews",
+    "slug": "terry-crews",
+    "famous_for": "Actor, Old Spice Guy, Brooklyn Nine-Nine",
+    "current_profession": "Actor / TV Host",
+    "high_school": "Western Michigan Christian",
+    "hometown": "Flint, Michigan",
+    "sports": ["football"],
+    "primary_sport": "football",
+    "position": "Linebacker / Defensive End",
+    "stats": {},
+    "notable_achievements": [
+      "All-Conference selection",
+      "Walk-on at Western Michigan",
+      "NFL Draft pick (Rams)",
+      "Played 6 NFL seasons"
+    ],
+    "what_if_analysis": "Crews walked on at Western Michigan, got drafted, played 6 NFL seasons. Art was his backup plan.",
+    "viral_angle": "Terry Crews played 6 NFL seasons before he could focus on his art. He painted his teammates' portraits to make extra money."
+  },
+  {
+    "name": "Jamie Foxx",
+    "slug": "jamie-foxx",
+    "famous_for": "Actor, Musician, Oscar Winner",
+    "current_profession": "Actor / Musician",
+    "high_school": "Terrell",
+    "hometown": "Terrell, Texas",
+    "sports": ["football", "basketball"],
+    "primary_sport": "football",
+    "position": "Quarterback",
+    "stats": {
+      "passing_yards": "1000+",
+      "touchdowns": "12"
+    },
+    "notable_achievements": [
+      "First player to pass 1,000 yards in school history",
+      "All-District selection",
+      "Scholarship offer to US International"
+    ],
+    "what_if_analysis": "Foxx was the first QB in school history to throw for 1000 yards. He chose music over football.",
+    "viral_angle": "Jamie Foxx was the first QB in his high school's history to throw for 1,000 yards. He was All-District. He chose music instead."
+  },
+  {
+    "name": "Master P",
+    "slug": "master-p",
+    "famous_for": "Rapper, No Limit Records Founder",
+    "current_profession": "Rapper / Entrepreneur",
+    "high_school": "Warren Easton",
+    "hometown": "New Orleans, Louisiana",
+    "sports": ["basketball"],
+    "primary_sport": "basketball",
+    "position": "Point Guard",
+    "stats": {},
+    "notable_achievements": [
+      "Brief NBA contracts with Hornets and Raptors",
+      "Played in preseason games",
+      "ABA All-Star"
+    ],
+    "what_if_analysis": "Master P made NBA preseason rosters twice. He actually played in NBA games before becoming a rap mogul.",
+    "viral_angle": "Master P made the Charlotte Hornets preseason roster in 1998. He got into a real NBA game before becoming a $250M rap mogul."
+  },
+  {
+    "name": "Carl Weathers",
+    "slug": "carl-weathers",
+    "famous_for": "Apollo Creed, Action Star",
+    "current_profession": "Actor",
+    "high_school": "St. Augustine",
+    "hometown": "New Orleans, Louisiana",
+    "sports": ["football"],
+    "primary_sport": "football",
+    "position": "Linebacker",
+    "stats": {},
+    "notable_achievements": [
+      "All-American in high school",
+      "San Diego State linebacker",
+      "Played for Raiders and BC Lions",
+      "4-year pro career"
+    ],
+    "what_if_analysis": "Weathers was an All-American linebacker who played pro football for 4 years before acting.",
+    "viral_angle": "Carl Weathers (Apollo Creed) played 4 years of pro football. He played for the Raiders. Then he became Rocky Balboa's greatest rival."
+  },
+  {
+    "name": "Ed O'Neill",
+    "slug": "ed-oneill",
+    "famous_for": "Al Bundy, Jay Pritchett (Modern Family)",
+    "current_profession": "Actor",
+    "high_school": "Ursuline",
+    "hometown": "Youngstown, Ohio",
+    "sports": ["football"],
+    "primary_sport": "football",
+    "position": "Linebacker",
+    "stats": {},
+    "notable_achievements": [
+      "Youngstown State scholarship",
+      "Brief Pittsburgh Steelers training camp",
+      "Cut in training camp 1969"
+    ],
+    "what_if_analysis": "O'Neill was signed by the Steelers in 1969. Chuck Noll cut him in training camp. He became an actor instead.",
+    "viral_angle": "Ed O'Neill (Al Bundy) was signed by the Pittsburgh Steelers. Chuck Noll cut him. He walked into acting instead of walking back to football."
+  },
+  {
+    "name": "Michael Jordan",
+    "slug": "michael-jordan",
+    "famous_for": "NBA Legend, 6x Champion",
+    "current_profession": "Business Owner / NBA Owner",
+    "high_school": "Laney",
+    "hometown": "Wilmington, North Carolina",
+    "sports": ["basketball", "baseball"],
+    "primary_sport": "basketball",
+    "position": "Shooting Guard",
+    "stats": {
+      "ppg": "25.0",
+      "rpg": "12.0",
+      "apg": "5.0"
+    },
+    "notable_achievements": [
+      "McDonald's All-American",
+      "Cut from varsity as sophomore",
+      "Grew 4 inches between sophomore and junior year"
+    ],
+    "what_if_analysis": "Jordan was cut from varsity as a sophomore. He played JV, grew 4 inches, and became the greatest ever.",
+    "viral_angle": "Michael Jordan was CUT from his high school varsity team as a sophomore. He used that as motivation to become the GOAT."
+  },
+  {
+    "name": "Patrick Mahomes",
+    "slug": "patrick-mahomes",
+    "famous_for": "NFL Superstar, 3x Super Bowl Champ",
+    "current_profession": "NFL Quarterback",
+    "high_school": "Whitehouse",
+    "hometown": "Whitehouse, Texas",
+    "sports": ["football", "baseball"],
+    "primary_sport": "baseball",
+    "position": "Pitcher / Quarterback",
+    "stats": {
+      "baseball_no_hitter": "1",
+      "football_passing_yards": "4649",
+      "football_touchdowns": "50",
+      "fastball_mph": "95"
+    },
+    "notable_achievements": [
+      "Threw 95 mph fastball",
+      "Threw no-hitter in baseball",
+      "50 TD passes senior year",
+      "Texas Tech scholarship"
+    ],
+    "what_if_analysis": "Mahomes threw 95 mph and had MLB interest. His dad was an MLB pitcher. He chose football instead.",
+    "viral_angle": "Patrick Mahomes threw a 95 mph fastball in high school. He threw a no-hitter. His dad was an MLB pitcher. He chose football."
+  },
+  {
+    "name": "Jeff Saturday",
+    "slug": "jeff-saturday",
+    "famous_for": "NFL Center, Super Bowl Champ, ESPN Analyst",
+    "current_profession": "ESPN Analyst / Former NFL Player",
+    "high_school": "Shamrock",
+    "hometown": "Atlanta, Georgia",
+    "sports": ["football", "basketball"],
+    "primary_sport": "football",
+    "position": "Center",
+    "stats": {},
+    "notable_achievements": [
+      "Walk-on at UNC",
+      "Undrafted to NFL Hall of Fame consideration",
+      "6x Pro Bowl"
+    ],
+    "what_if_analysis": "Saturday was a walk-on at UNC, went undrafted, and became a 6-time Pro Bowler. The ultimate underdog.",
+    "viral_angle": "Jeff Saturday walked on at UNC. Went undrafted. Became Peyton Manning's center and a 6-time Pro Bowler."
+  },
+  {
+    "name": "Mahershala Ali",
+    "slug": "mahershala-ali",
+    "famous_for": "2x Oscar Winner, Actor",
+    "current_profession": "Actor",
+    "high_school": "Saint Mary's",
+    "hometown": "Hayward, California",
+    "sports": ["basketball"],
+    "primary_sport": "basketball",
+    "position": "Guard / Forward",
+    "stats": {},
+    "notable_achievements": [
+      "Division I scholarship to St. Mary's",
+      "Played 4 years of college basketball",
+      "Walked on to acting after basketball"
+    ],
+    "what_if_analysis": "Ali played D1 basketball at St. Mary's for 4 years before switching to acting. He was an athlete first.",
+    "viral_angle": "Mahershala Ali played Division I basketball for 4 years before he became a 2-time Oscar winner. He was an athlete first."
+  },
+  {
+    "name": "Mark Harmon",
+    "slug": "mark-harmon",
+    "famous_for": "NCIS Star",
+    "current_profession": "Actor",
+    "high_school": "Harvard School",
+    "hometown": "Los Angeles, California",
+    "sports": ["football"],
+    "primary_sport": "football",
+    "position": "Quarterback",
+    "stats": {
+      "passing_yards": "",
+      "touchdowns": ""
+    },
+    "notable_achievements": [
+      "Junior College All-American",
+      "UCLA starting QB",
+      "National Champion at UCLA",
+      "Heisman Trophy candidate"
+    ],
+    "what_if_analysis": "Harmon was a starting QB at UCLA and a Heisman candidate. His dad was a Heisman winner.",
+    "viral_angle": "Mark Harmon was a starting QB at UCLA and a Heisman candidate. His dad (Tom Harmon) WON the Heisman. Football runs in the family."
+  },
+  {
+    "name": "Chadwick Boseman",
+    "slug": "chadwick-boseman",
+    "famous_for": "Black Panther, Actor",
+    "current_profession": "Actor (deceased)",
+    "high_school": "T.L. Hanna",
+    "hometown": "Anderson, South Carolina",
+    "sports": ["basketball"],
+    "primary_sport": "basketball",
+    "position": "Forward",
+    "stats": {},
+    "notable_achievements": [
+      "Lettered in basketball",
+      "Started in junior year",
+      "Team went to state playoffs"
+    ],
+    "what_if_analysis": "Boseman played basketball and wrote his first play after a teammate was shot. Sports led him to art.",
+    "viral_angle": "Chadwick Boseman wrote his first play in high school after a teammate was shot. Basketball led him to acting."
+  },
+  {
+    "name": "Jon Hamm",
+    "slug": "jon-hamm",
+    "famous_for": "Mad Men, Actor",
+    "current_profession": "Actor",
+    "high_school": "John Burroughs",
+    "hometown": "St. Louis, Missouri",
+    "sports": ["football"],
+    "primary_sport": "football",
+    "position": "Linebacker / Tight End",
+    "stats": {},
+    "notable_achievements": [
+      "Led team to state championship game",
+      "All-Conference selection",
+      "Played at Texas State"
+    ],
+    "what_if_analysis": "Hamm led his team to the state championship game. He played TE and linebacker at Texas State.",
+    "viral_angle": "Jon Hamm led his high school football team to the state championship game. He played TE and linebacker at Texas State before Don Draper."
+  },
+  {
+    "name": "Paul Rudd",
+    "slug": "paul-rudd",
+    "famous_for": "Actor, Ant-Man",
+    "current_profession": "Actor",
+    "high_school": "Shawnee Mission West",
+    "hometown": "Overland Park, Kansas",
+    "sports": ["football", "soccer", "wrestling"],
+    "primary_sport": "wrestling",
+    "position": "",
+    "stats": {},
+    "notable_achievements": [
+      "Varsity wrestler",
+      "Played football and soccer",
+      "Prom King"
+    ],
+    "what_if_analysis": "Rudd was a varsity wrestler who also played football and soccer. He was prom king before becoming an Avenger.",
+    "viral_angle": "Paul Rudd was a varsity wrestler and Prom King before he became Ant-Man. He also played football and soccer."
+  },
+  {
+    "name": "Jason Segel",
+    "slug": "jason-segel",
+    "famous_for": "How I Met Your Mother, Actor",
+    "current_profession": "Actor",
+    "high_school": "Harvard-Westlake",
+    "hometown": "Los Angeles, California",
+    "sports": ["basketball"],
+    "primary_sport": "basketball",
+    "position": "Center",
+    "stats": {
+      "height": "6'4"
+    },
+    "notable_achievements": [
+      "Varsity basketball player",
+      "6'4 in high school",
+      "Won state championship"
+    ],
+    "what_if_analysis": "Segel was 6'4 and played center on a state championship basketball team before Marshall Eriksen.",
+    "viral_angle": "Jason Segel was 6'4 and won a state championship in basketball before he played Marshall in How I Met Your Mother."
+  },
+  {
+    "name": "Hilary Swank",
+    "slug": "hilary-swank",
+    "famous_for": "2x Oscar Winner, Actress",
+    "current_profession": "Actress",
+    "high_school": "Sehome",
+    "hometown": "Bellingham, Washington",
+    "sports": ["track", "swimming", "gymnastics"],
+    "primary_sport": "gymnastics",
+    "position": "",
+    "stats": {},
+    "notable_achievements": [
+      "State finalist in gymnastics",
+      "Junior Olympics qualifier",
+      "Ranked top 5 in Washington state"
+    ],
+    "what_if_analysis": "Swank was a Junior Olympics qualifier in gymnastics. She was top 5 in Washington state before acting.",
+    "viral_angle": "Hilary Swank was a Junior Olympics qualifier in gymnastics. Top 5 in Washington state. Then she became a 2-time Oscar winner."
+  },
+  {
+    "name": "Natalie Portman",
+    "slug": "natalie-portman",
+    "famous_for": "Oscar Winner, Actress",
+    "current_profession": "Actress",
+    "high_school": "Syosset",
+    "hometown": "Syosset, New York",
+    "sports": ["track"],
+    "primary_sport": "track",
+    "position": "",
+    "stats": {},
+    "notable_achievements": [
+      "Varsity track team",
+      "Academic All-American",
+      "Intel Science Talent Search semi-finalist"
+    ],
+    "what_if_analysis": "Portman was on varsity track while being an Intel Science semi-finalist. Brains and athletics.",
+    "viral_angle": "Natalie Portman ran varsity track while being an Intel Science Talent Search semi-finalist. She also starred in Star Wars."
+  },
+  {
+    "name": "Kate Hudson",
+    "slug": "kate-hudson",
+       "famous_for": "Actress, Almost Famous",
+    "current_profession": "Actress",
+    "high_school": "Crossroads",
+    "hometown": "Santa Monica, California",
+    "sports": ["soccer", "tennis", "dance"],
+    "primary_sport": "dance",
+    "position": "",
+    "stats": {},
+    "notable_achievements": [
+      "Varsity soccer",
+      "Dance team",
+      "Tennis player"
+    ],
+    "what_if_analysis": "Hudson played soccer, tennis, and was on the dance team. Athletic family (mom was Goldie Hawn).",
+    "viral_angle": "Kate Hudson played soccer, tennis, and was on the dance team. Athletic talent runs in the family."
+  },
+  {
+    "name": "Joel McHale",
+    "slug": "joel-mchale",
+    "famous_for": "Community, The Soup",
+    "current_profession": "Actor / Comedian",
+    "high_school": "Mercer Island",
+    "hometown": "Mercer Island, Washington",
+    "sports": ["football"],
+    "primary_sport": "football",
+    "position": "Tight End",
+    "stats": {},
+    "notable_achievements": [
+      "Captain of football team",
+      "Recruited by University of Washington",
+      "Redshirt freshman"
+    ],
+    "what_if_analysis": "McHale was captain of his football team and recruited to UW. He walked away from football for acting.",
+    "viral_angle": "Joel McHale was captain of his football team and recruited to University of Washington. He chose comedy instead."
+  },
+  {
+    "name": "Tommy Lee Jones",
+    "slug": "tommy-lee-jones",
+    "famous_for": "Actor, No Country For Old Men",
+    "current_profession": "Actor",
+    "high_school": "St. Mark's",
+    "hometown": "Dallas, Texas",
+    "sports": ["football"],
+    "primary_sport": "football",
+    "position": "Guard",
+    "stats": {},
+    "notable_achievements": [
+      "All-State selection",
+      "Harvard scholarship",
+      "Roommate of Al Gore"
+    ],
+    "what_if_analysis": "Jones was All-State in football, went to Harvard on scholarship, and roomed with Al Gore.",
+    "viral_angle": "Tommy Lee Jones was All-State in football, went to Harvard on scholarship, and was roommates with Al Gore."
+  },
+  {
+    "name": "John Goodman",
+    "slug": "john-goodman",
+    "famous_for": "Roseanne, The Big Lebowski",
+    "current_profession": "Actor",
+    "high_school": "Affton",
+    "hometown": "Affton, Missouri",
+    "sports": ["football"],
+    "primary_sport": "football",
+    "position": "Tight End / Defensive End",
+    "stats": {},
+    "notable_achievements": [
+      "All-Conference selection",
+      "Southwest Missouri State scholarship",
+      "Knee injury ended football career"
+    ],
+    "what_if_analysis": "Goodman was All-Conference and got a scholarship. A knee injury ended his football dreams, led to acting.",
+    "viral_angle": "John Goodman was All-Conference in football and had a scholarship. A knee injury ended his career. Then he became The Dude."
+  }
+]

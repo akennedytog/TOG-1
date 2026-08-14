@@ -173,7 +173,7 @@ Dante creates all content for The One Group, from Twitter threads to blog posts 
    └── Data-backed claims
    
 5. OUTPUT DELIVERY
-   └── Twitter content → twitter-automation.js
+   └── Twitter content → post_tweet.py (canonical)
    └── Blog content → theonegroup-site/blog/
    └── Visual assets → Image files in workspace
 ```
@@ -300,7 +300,7 @@ Dev creates the tools, integrations, and technical infrastructure that power the
 |------|---------|----------|--------|
 | **Lead Manager** | Lead database operations | `data/` | ✅ Live |
 | **Content Engine** | Content generation | `content-pipeline/` | ✅ Live |
-| **Twitter Automation** | Social media posting | `twitter-automation.js` | ✅ Live |
+| **Twitter Automation** | Social media posting | `post_tweet.py` (+ scheduler wrapper) | ✅ Live |
 | **Weekly Report** | Business intelligence | `weekly-recap.js` | ✅ Live |
 | **Scraping System** | Data collection | Firecrawl skills | ✅ Live |
 | **Website** | Public presence | `theonegroup-site/` | ✅ Live |

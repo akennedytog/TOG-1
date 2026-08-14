@@ -1,0 +1,106 @@
+{
+  "project": {
+    "name": "Canva Template Project",
+    "version": "1.0.0",
+    "description": "Generated template configuration"
+  },
+  "defaults": {
+    "template": "instagram",
+    "theme": "modern"
+  },
+  "generatedAt": "2026-05-22T14:05:00Z",
+  "generatedBy": "cron-job",
+  "templates": [
+    {
+      "id": "instagram-minimal-20260522",
+      "name": "Instagram Feed - Minimal Clean",
+      "platform": "instagram",
+      "type": "post",
+      "theme": "minimal",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080
+      },
+      "formats": ["svg", "json"],
+      "files": {
+        "svg": "templates/instagram-minimal.svg",
+        "config": "templates/instagram-minimal.json"
+      },
+      "colors": {
+        "primary": "#212121",
+        "secondary": "#616161",
+        "accent": "#9E9E9E",
+        "background": "#FFFFFF"
+      },
+      "fonts": {
+        "heading": "Helvetica Neue",
+        "body": "Helvetica Neue"
+      },
+      "canvaImport": true,
+      "canvaFormat": "svg",
+      "createdAt": "2026-05-22T14:05:00Z"
+    },
+    {
+      "id": "linkedin-elegant-20260522",
+      "name": "LinkedIn Post - Elegant Professional",
+      "platform": "linkedin",
+      "type": "post",
+      "theme": "elegant",
+      "dimensions": {
+        "width": 1200,
+        "height": 627
+      },
+      "formats": ["svg", "json"],
+      "files": {
+        "svg": "templates/linkedin-elegant.svg",
+        "config": "templates/linkedin-elegant.json"
+      },
+      "colors": {
+        "primary": "#D4AF37",
+        "secondary": "#C0C0C0",
+        "accent": "#E8E4E1",
+        "background": "#FAF9F6"
+      },
+      "fonts": {
+        "heading": "Playfair Display",
+        "body": "Lato"
+      },
+      "canvaImport": true,
+      "canvaFormat": "svg",
+      "createdAt": "2026-05-22T14:05:00Z"
+    },
+    {
+      "id": "pinterest-nature-20260522",
+      "name": "Pinterest Pin - Nature Inspired",
+      "platform": "pinterest",
+      "type": "pin",
+      "theme": "nature",
+      "dimensions": {
+        "width": 1000,
+        "height": 1500
+      },
+      "formats": ["svg", "json"],
+      "files": {
+        "svg": "templates/pinterest-nature.svg",
+        "config": "templates/pinterest-nature.json"
+      },
+      "colors": {
+        "primary": "#43A047",
+        "secondary": "#66BB6A",
+        "accent": "#A5D6A7",
+        "background": "#E8F5E9"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Source Sans Pro"
+      },
+      "canvaImport": true,
+      "canvaFormat": "svg",
+      "createdAt": "2026-05-22T14:05:00Z"
+    }
+  ],
+  "totalTemplates": 3,
+  "previousInventory": "template-inventory-2026-05-21.json",
+  "nextGenerationDue": "2026-05-23T10:00:00Z",
+  "notes": "Templates generated via Figma plugin CLI for Canva import. SVG format ensures full editability in Canva."
+}

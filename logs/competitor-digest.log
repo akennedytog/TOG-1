@@ -1,0 +1,28 @@
+{
+  "monitored_competitors": 3,
+  "competitors": [
+    {
+      "name": "HubSpot",
+      "url": "https://www.hubspot.com",
+      "last_check": "2026-08-13T08:00:02.947850",
+      "total_checks": 90,
+      "alerts_triggered": 58
+    },
+    {
+      "name": "Zapier",
+      "url": "https://zapier.com",
+      "last_check": "2026-08-13T08:00:22.503348",
+      "total_checks": 94,
+      "alerts_triggered": 30
+    },
+    {
+      "name": "Make",
+      "url": "https://www.make.com",
+      "last_check": "2026-08-13T08:00:30.165078",
+      "total_checks": 94,
+      "alerts_triggered": 2
+    }
+  ],
+  "total_snapshots": 278,
+  "total_alerts": 90
+}

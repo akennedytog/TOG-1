@@ -1,75 +1,18 @@
 #!/bin/bash
-# Twitter posting script
-# Reads next post from state.json and posts via API
-# Only posts if scheduled date matches today
+# Deprecated compatibility shim.
+# Canonical poster: post_tweet.py
 
-STATE_FILE="/Users/aleckennedy/.openclaw/workspace/state.json"
-LOG_FILE="/Users/aleckennedy/.openclaw/workspace/logs/twitter_post.log"
-TODAY=$(date +%Y-%m-%d)
-TODAY_FULL=$(date "+%Y-%m-%d %H:%M:%S")
+set -euo pipefail
 
-mkdir -p "$(dirname "$LOG_FILE")"
+WORKSPACE="/Users/aleckennedy/.openclaw/workspace"
 
-echo "$(date): Starting Twitter post job" >> "$LOG_FILE"
-echo "$(date): Today is $TODAY" >> "$LOG_FILE"
-
-# Check if there are queued posts
-QUEUED=$(jq -r '.queuedPosts | length' "$STATE_FILE")
-
-if [ "$QUEUED" -eq 0 ]; then
-    echo "$(date): No posts in queue" >> "$LOG_FILE"
-    exit 0
+if [[ -f "$WORKSPACE/.env" ]]; then
+  set -a
+  # shellcheck disable=SC1090
+  source "$WORKSPACE/.env"
+  set +a
 fi
 
-# Get next post
-NEXT_POST=$(jq -r '.queuedPosts[0]' "$STATE_FILE")
-POST_TEXT=$(echo "$NEXT_POST" | jq -r '.text')
-POST_DAY=$(echo "$NEXT_POST" | jq -r '.scheduledDay // empty')
-
-# Check if post has day name mismatch (e.g., "Monday" in text but it's Sunday)
-CURRENT_DAY_NAME=$(date +%A)
-if [ -n "$POST_DAY" ] && [ "$POST_DAY" != "$CURRENT_DAY_NAME" ]; then
-    echo "$(date): ❌ DAY MISMATCH - Post scheduled for $POST_DAY but today is $CURRENT_DAY_NAME" >> "$LOG_FILE"
-    echo "$(date): ❌ SKIPPING: ${POST_TEXT:0:50}..." >> "$LOG_FILE"
-    
-    # Remove from queue but don't post
-    jq '.queuedPosts = .queuedPosts[1:]' "$STATE_FILE" > "${STATE_FILE}.tmp" && mv "${STATE_FILE}.tmp" "$STATE_FILE"
-    
-    echo "$(date): Post removed from queue without posting" >> "$LOG_FILE"
-    exit 1
-fi
-
-# Also check for hardcoded day names in text that don't match today
-TEXT_LOWER=$(echo "$POST_TEXT" | tr '[:upper:]' '[:lower:]')
-CURRENT_DAY_LOWER=$(echo "$CURRENT_DAY_NAME" | tr '[:upper:]' '[:lower:]')
-
-# Check if text contains a day name that ISN'T today
-for DAY in monday tuesday wednesday thursday friday saturday sunday; do
-    if echo "$TEXT_LOWER" | grep -q "\b$DAY\b"; then
-        if [ "$DAY" != "$CURRENT_DAY_LOWER" ]; then
-            echo "$(date): ❌ DAY NAME MISMATCH - Post contains '$DAY' but today is $CURRENT_DAY_NAME" >> "$LOG_FILE"
-            echo "$(date): ❌ SKIPPING: ${POST_TEXT:0:50}..." >> "$LOG_FILE"
-            
-            # Remove from queue but don't post
-            jq '.queuedPosts = .queuedPosts[1:]' "$STATE_FILE" > "${STATE_FILE}.tmp" && mv "${STATE_FILE}.tmp" "$STATE_FILE"
-            
-            echo "$(date): Post removed from queue without posting" >> "$LOG_FILE"
-            exit 1
-        fi
-    fi
-done
-
-echo "$(date): ✅ Posting: ${POST_TEXT:0:50}..." >> "$LOG_FILE"
-
-# TODO: Implement actual Twitter API posting
-# For now, log what would be posted
-echo "$(date): WOULD POST: $POST_TEXT" >> "$LOG_FILE"
-
-# Remove from queue and add to posted log
-jq --arg post "$POST_TEXT" --arg date "$(date -u +%Y-%m-%dT%H:%M:%SZ)" '
-    .postedLog += [{"id": "manual_$(date +%s)", "text": $post, "postedAt": $date, "type": "auto"}] |
-    .queuedPosts = .queuedPosts[1:] |
-    .postedToday += 1
-' "$STATE_FILE" > "${STATE_FILE}.tmp" && mv "${STATE_FILE}.tmp" "$STATE_FILE"
-
-echo "$(date): Post complete" >> "$LOG_FILE"
+cd "$WORKSPACE"
+echo "[deprecated] post_twitter.sh -> post_tweet.py"
+python3 post_tweet.py

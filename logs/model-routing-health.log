@@ -1,0 +1,11 @@
+Model routing health check
+Config: /Users/aleckennedy/.openclaw/workspace/routing-config.json
+Time: 2026-08-13T11:15:01Z
+PASS  ollama/deepseek-v4-flash:cloud  0s
+PASS  ollama/gpt-oss:20b-cloud  2s
+ENV   OPENAI_API_KEY=SET
+ENV   ANTHROPIC_API_KEY=SET
+ENV   OPENROUTER_API_KEY=SET
+PASS  openrouter/moonshotai/kimi-k3  cloud
+PASS  openrouter/openai/gpt-5.6-sol  cloud
+PASS  openrouter/openai/gpt-5.6-luna  cloud

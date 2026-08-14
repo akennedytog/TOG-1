@@ -1,0 +1,167 @@
+#!/usr/bin/env node
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+
+const workspace = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const canonicalPath = path.join(workspace, 'routing-config.json');
+const openclawPath = path.join(os.homedir(), '.openclaw', 'openclaw.json');
+const legacyPath = path.join(os.homedir(), '.openclaw', 'config.json');
+
+const readJson = (file) => JSON.parse(fs.readFileSync(file, 'utf8'));
+const writeJson = (file, data) => fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`);
+const uniq = (items) => Array.from(new Set(items.filter(Boolean)));
+
+const canonical = readJson(canonicalPath);
+const primary = canonical.agents.defaults.model.primary;
+const fallbacks = canonical.agents.defaults.model.fallback;
+const activeModels = uniq([primary, ...fallbacks]);
+const excluded = new Set(canonical.safety.exclude_models || []);
+
+function upsertModel(list, model) {
+  const index = list.findIndex((entry) => entry?.id === model.id);
+  if (index >= 0) list[index] = { ...list[index], ...model };
+  else list.push(model);
+}
+
+const openclaw = readJson(openclawPath);
+openclaw.auth = openclaw.auth || {};
+openclaw.auth.profiles = openclaw.auth.profiles || {};
+openclaw.auth.profiles['openrouter:default'] = { provider: 'openrouter', mode: 'api_key' };
+openclaw.auth.order = openclaw.auth.order || {};
+openclaw.auth.order.openrouter = ['openrouter:default'];
+
+openclaw.models = openclaw.models || {};
+openclaw.models.providers = openclaw.models.providers || {};
+
+openclaw.models.providers.ollama = openclaw.models.providers.ollama || {
+  baseUrl: 'http://127.0.0.1:11434',
+  api: 'ollama',
+  models: []
+};
+openclaw.models.providers.ollama.models = openclaw.models.providers.ollama.models || [];
+upsertModel(openclaw.models.providers.ollama.models, {
+  id: 'qwen3-coder:latest',
+  name: 'qwen3-coder:latest',
+  input: ['text'],
+  cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+  contextWindow: 131072,
+  params: { num_ctx: 131072 }
+});
+upsertModel(openclaw.models.providers.ollama.models, {
+  id: 'llama3.1:latest',
+  name: 'llama3.1:latest',
+  input: ['text'],
+  cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+  contextWindow: 131072,
+  params: { num_ctx: 131072 }
+});
+openclaw.models.providers.ollama.models = openclaw.models.providers.ollama.models.filter((model) => !excluded.has(`ollama/${model.id}`));
+
+openclaw.models.providers.openrouter = {
+  baseUrl: 'https://openrouter.ai/api/v1',
+  api: 'openai-completions',
+  models: [
+    {
+      id: 'openai/gpt-5.6-luna',
+      name: 'GPT-5.6 Luna via OpenRouter',
+      api: 'openai-completions',
+      reasoning: false,
+      input: ['text'],
+      cost: { input: 1, output: 6, cacheRead: 0, cacheWrite: 0 },
+      contextWindow: 200000,
+      maxTokens: 8192
+    },
+    {
+      id: 'moonshotai/kimi-k3',
+      name: 'Kimi K3 via OpenRouter',
+      api: 'openai-completions',
+      reasoning: true,
+      input: ['text'],
+      cost: { input: 3, output: 15, cacheRead: 0, cacheWrite: 0 },
+      contextWindow: 200000,
+      maxTokens: 8192
+    }
+  ]
+};
+
+openclaw.models.providers.openai = openclaw.models.providers.openai || {
+  baseUrl: 'https://api.openai.com/v1',
+  api: 'openai-completions',
+  models: []
+};
+openclaw.models.providers.openai.models = openclaw.models.providers.openai.models || [];
+upsertModel(openclaw.models.providers.openai.models, {
+  id: 'gpt-4o-mini',
+  name: 'GPT-4o Mini',
+  api: 'openai-responses',
+  reasoning: false,
+  input: ['text', 'image'],
+  cost: { input: 0.15, output: 0.6, cacheRead: 0, cacheWrite: 0 },
+  contextWindow: 128000,
+  maxTokens: 16384
+});
+upsertModel(openclaw.models.providers.openai.models, {
+  id: 'gpt-4o',
+  name: 'GPT-4o',
+  api: 'openai-responses',
+  reasoning: false,
+  input: ['text', 'image'],
+  cost: { input: 2.5, output: 10, cacheRead: 0, cacheWrite: 0 },
+  contextWindow: 128000,
+  maxTokens: 16384
+});
+openclaw.models.providers.openai.models = openclaw.models.providers.openai.models.filter((model) => !excluded.has(`openai/${model.id}`));
+
+openclaw.agents = openclaw.agents || {};
+openclaw.agents.defaults = openclaw.agents.defaults || {};
+openclaw.agents.defaults.model = { primary, fallbacks };
+openclaw.agents.defaults.models = openclaw.agents.defaults.models || {};
+for (const model of Object.keys(openclaw.agents.defaults.models)) {
+  if (excluded.has(model) || model.startsWith('anthropic/')) delete openclaw.agents.defaults.models[model];
+}
+for (const model of activeModels) openclaw.agents.defaults.models[model] = openclaw.agents.defaults.models[model] || {};
+if (Array.isArray(openclaw.agents.list)) {
+  for (const agent of openclaw.agents.list) {
+    if (agent.id === 'main') agent.model = { primary, fallbacks };
+  }
+}
+writeJson(openclawPath, openclaw);
+
+const legacy = readJson(legacyPath);
+legacy.providers = uniq(['ollama', 'openrouter', 'openai', 'anthropic']);
+legacy.openrouter = {
+  api_key_env: 'OPENROUTER_API_KEY',
+  base_url: 'https://openrouter.ai/api/v1',
+  models: {
+    'openai/gpt-5.6-luna': 'openai/gpt-5.6-luna',
+    'moonshotai/kimi-k3': 'moonshotai/kimi-k3'
+  }
+};
+legacy.models = legacy.models || {};
+Object.assign(legacy.models, {
+  default: primary,
+  fallback: fallbacks[0],
+  reasoning: canonical.routing.task_classes.architecture.primary,
+  coding: canonical.routing.task_classes.standard.primary,
+  openai_default: 'openai/gpt-4o-mini',
+  large_tasks: canonical.routing.task_classes.heavy_coding.primary,
+  emergency: 'openai/gpt-4o'
+});
+legacy.routing_rules = legacy.routing_rules || {};
+legacy.routing_rules.task_types = legacy.routing_rules.task_types || {};
+Object.assign(legacy.routing_rules.task_types, {
+  coding: canonical.routing.task_classes.standard.primary,
+  content: canonical.routing.task_classes.quick.primary,
+  complex_reasoning: canonical.routing.task_classes.architecture.primary,
+  emergency: 'openai/gpt-4o',
+  subagent: primary,
+  claude_max: canonical.routing.task_classes.architecture.primary
+});
+legacy.error_handling = legacy.error_handling || {};
+legacy.error_handling.on_token_limit_exceeded = canonical.routing.task_classes.heavy_coding.primary;
+writeJson(legacyPath, legacy);
+
+console.log(`Synced runtime configs from ${canonicalPath}`);
+console.log(`- ${openclawPath}`);
+console.log(`- ${legacyPath}`);

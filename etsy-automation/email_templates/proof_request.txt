@@ -1,0 +1,19 @@
+Subject: Please approve your personalization for order #{order_id}
+
+Hi {customer_name},
+
+Thank you for your order!
+
+Before we create your personalized item, please review:
+
+YOUR PERSONALIZATION:
+{personalization_text}
+
+REPLY:
+✓ "APPROVED" - proceed as shown
+✗ "REVISION: [changes]" - one free revision
+
+Need it faster? Reply "RUSH" for 48-hour processing.
+
+Best,
+Alec

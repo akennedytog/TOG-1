@@ -39,7 +39,7 @@ generate.js (create blog/newsletter)
         ↓
 gog (queue in Gmail drafts)
         ↓
-twitter-automation.js (post to X)
+post_tweet.py (canonical X posting)
 ```
 
 ### 2. Lead Generation Pipeline (Daily)
@@ -76,7 +76,7 @@ content-pipeline (create content)
         ↓
 gog (email to list)
         ↓
-twitter-automation.js (promote)
+post_tweet.py (canonical X posting)
 ```
 
 ---
@@ -171,4 +171,3 @@ Skills to install next:
 - ✅ Newsletter generated
 - ✅ Blog posts auto-created from Twitter threads
 - 🔄 Next: Set up cron jobs for automation
-

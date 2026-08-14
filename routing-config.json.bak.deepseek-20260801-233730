@@ -1,0 +1,67 @@
+{
+  "version": "5.2",
+  "updated": "2026-08-01",
+  "description": "Always‑on routing with layered paid fallbacks.",
+  "stack": {
+    "primary": {
+      "model": "ollama/gpt-oss:120b-cloud",
+      "cost": "$0 (Ollama Pro prepaid)",
+      "context": 512000,
+      "use": "all interactive sessions, crons, heartbeats"
+    },
+    "fallback1": {
+      "model": "ollama/gpt-oss:20b-cloud",
+      "cost": "$0 (Ollama Pro prepaid)",
+      "context": 131000,
+      "use": "auto‑fallback if primary is down"
+    },
+    "fallback2": {
+      "model": "openrouter/moonshotai/kimi-k3",
+      "cost": "$3/$15 per 1M",
+      "use": "auto‑fallback when both Ollama models fail"
+    },
+    "fallback3": {
+      "model": "openrouter/openai/gpt-5.6-sol",
+      "cost": "$1/$6 per 1M",
+      "use": "second paid fallback"
+    },
+    "utility": {
+      "model": "openrouter/openai/gpt-5.6-luna",
+      "cost": "$1/$6 per 1M",
+      "use": "last‑resort emergency fallback"
+    },
+    "local_batch": {
+      "models": [
+        "ollama/llama3.1:latest",
+        "ollama/qwen3-coder:latest"
+      ],
+      "cost": "$0",
+      "use": "direct API calls from scripts (Arlo, Iris) — small prompts only"
+    }
+  },
+  "retired_2026_07_31": [
+    "ollama/kimi-k2.5:cloud",
+    "ollama/qwen3-coder:480b-cloud",
+    "ollama/glm-4.6:cloud",
+    "ollama/minimax-m2:cloud"
+  ],
+  "notes": [
+    "Kimi‑k3 is now an automatic fallback (still premium).",
+    "gpt‑5.6‑sol added as a cheaper paid backup before Luna.",
+    "All free Ollama models stay first in the chain to keep costs at $0 whenever possible."
+  ],
+  "health_checks": {
+    "check_models": [
+      "ollama/gpt-oss:120b-cloud",
+      "ollama/gpt-oss:20b-cloud"
+    ],
+    "cloud_api_models": [
+      "openrouter/moonshotai/kimi-k3",
+      "openrouter/openai/gpt-5.6-sol",
+      "openrouter/openai/gpt-5.6-luna"
+    ],
+    "enabled": true,
+    "frequency": "daily",
+    "track_file": "memory/heartbeat-state.json"
+  }
+}

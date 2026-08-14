@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}Blind Spot Engine - Find What You're Missing{% endblock %}
+{% block content %}
+<div class="text-center py-16 fade-in">
+    <div class="text-6xl mb-6">🔍</div>
+    <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+        Find Your Blind Spots
+    </h1>
+    <p class="text-xl text-white/60 max-w-2xl mx-auto mb-12">
+        Most tools answer your questions. This one finds the questions you didn't know to ask.
+        Feed it a problem, a business, or a domain — it will surface what everyone's missing.
+    </p>
+    
+    <div class="max-w-2xl mx-auto glass rounded-2xl p-8 glow">
+        <div>
+            <label class="block text-sm text-white/60 mb-2 text-left">Describe your domain, business, or problem:</label>
+            <textarea id="domain-input" rows="4" 
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-indigo-500 transition"
+                placeholder="e.g., I run an AI consulting agency helping SMBs with automation. We focus on workflow optimization, custom GPTs, and AI training. Our clients are mostly in professional services..."
+                required></textarea>
+        </div>
+        <button onclick="analyze()" 
+            class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl transition-all glow">
+            Find My Blind Spots
+        </button>
+        
+        <div id="loading" class="hidden mt-6">
+            <div class="flex items-center justify-center gap-2 text-white/60">
+                <span>Analyzing</span>
+                <span class="typing-dot w-2 h-2 bg-indigo-400 rounded-full inline-block"></span>
+                <span class="typing-dot w-2 h-2 bg-indigo-400 rounded-full inline-block"></span>
+                <span class="typing-dot w-2 h-2 bg-indigo-400 rounded-full inline-block"></span>
+            </div>
+            <p class="text-xs text-white/30 mt-2">Mapping knowledge graph, detecting assumptions, finding patterns...</p>
+        </div>
+    </div>
+    
+    <div id="results" class="mt-12"></div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 fade-in">
+    <div class="glass rounded-xl p-6 insight-card">
+        <div class="text-3xl mb-3">🧠</div>
+        <h3 class="font-semibold mb-2">Hidden Assumptions</h3>
+        <p class="text-sm text-white/50">We reverse-engineer your mental model and surface the beliefs you didn't know you had.</p>
+    </div>
+    <div class="glass rounded-xl p-6 insight-card">
+        <div class="text-3xl mb-3">🤔</div>
+        <h3 class="font-semibold mb-2">Questions You're Not Asking</h3>
+        <p class="text-sm text-white/50">Anti-queries generated from the negative space of your knowledge graph.</p>
+    </div>
+    <div class="glass rounded-xl p-6 insight-card">
+        <div class="text-3xl mb-3">🔄</div>
+        <h3 class="font-semibold mb-2">Cross-Domain Patterns</h3>
+        <p class="text-sm text-white/50">Patterns from biology, military, finance, and gaming applied to your domain.</p>
+    </div>
+</div>
+
+<script>
+    async function analyze() {
+        const domain = document.getElementById('domain-input').value;
+        if (!domain || domain.length < 10) {
+            alert('Please describe your domain, business, or problem (at least 10 characters).');
+            return;
+        }
+        
+        document.getElementById('loading').classList.remove('hidden');
+        document.getElementById('results').innerHTML = '';
+        
+        try {
+            const resp = await fetch('/api/quick', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ domain: domain })
+            });
+            
+            if (!resp.ok) {
+                throw new Error('Server error: ' + resp.status);
+            }
+            
+            const data = await resp.json();
+            displayResults(data);
+        } catch (e) {
+            document.getElementById('results').innerHTML = 
+                '<div class="glass rounded-xl p-6 text-center"><p class="text-red-400">Error: ' + e.message + '</p></div>';
+        } finally {
+            document.getElementById('loading').classList.add('hidden');
+        }
+    }
+    
+    function displayResults(data) {
+        let html = '<div class="glass rounded-xl p-8 fade-in">';
+        html += '<h2 class="text-2xl font-bold mb-4">Blind Spot Report</h2>';
+        html += '<p class="text-white/60 mb-6">' + (data.summary || 'Analysis complete.') + '</p>';
+        
+        html += '<div class="grid grid-cols-3 gap-4 mb-6">';
+        html += '<div class="bg-white/5 rounded-lg p-4 text-center"><div class="text-2xl font-bold text-indigo-400">' + data.n_queries + '</div><div class="text-sm text-white/50">Anti-Queries</div></div>';
+        html += '<div class="bg-white/5 rounded-lg p-4 text-center"><div class="text-2xl font-bold text-purple-400">' + data.n_assumptions + '</div><div class="text-sm text-white/50">Assumptions</div></div>';
+        html += '<div class="bg-white/5 rounded-lg p-4 text-center"><div class="text-2xl font-bold text-pink-400">' + data.n_patterns + '</div><div class="text-sm text-white/50">Patterns</div></div>';
+        html += '</div>';
+        
+        if (data.top_insights && data.top_insights.length > 0) {
+            html += '<h3 class="text-lg font-semibold mb-3">Top Insights</h3>';
+            html += '<div class="space-y-3">';
+            data.top_insights.forEach(function(insight) {
+                html += '<div class="bg-white/5 rounded-lg p-4 insight-card">';
+                html += '<p class="text-white/80">' + insight + '</p>';
+                html += '</div>';
+            });
+            html += '</div>';
+        }
+        
+        html += '</div>';
+        document.getElementById('results').innerHTML = html;
+    }
+</script>
+{% endblock %}

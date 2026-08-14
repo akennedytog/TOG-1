@@ -8,8 +8,8 @@
     "dev": "ts-node-dev src/index.ts"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "node-cron": "^3.0.2",
+    "express": "^4.22.2",
+    "node-cron": "^4.6.0",
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {

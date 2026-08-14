@@ -1,0 +1,11 @@
+=== The One Group Agent Swarm ===
+Starting at Tue Aug  4 08:53:38 EDT 2026
+Starting webhook server on port 8765...
+Webhook server started (PID: 578)
+Starting file trigger poller...
+File poller started (PID: 586)
+
+Swarm system active!
+Webhook: http://localhost:8765
+Trigger files: /Users/aleckennedy/.openclaw/workspace/triggers/pending/
+Logs: /Users/aleckennedy/.openclaw/workspace/logs/swarm/

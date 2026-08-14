@@ -78,29 +78,29 @@ def generate_posts_from_trends(trends):
     # Get HN stories
     hn_stories = trends.get('hackernews', [])
     
-    # Morning post - HN top story
+    # Morning post - HN top story (rewritten as original observation)
     if hn_stories and len(hn_stories) > 0:
         top = hn_stories[0]
         posts.append({
             'id': f"morning_{datetime.now().strftime('%Y-%m-%d')}",
-            'text': f"Trending on Hacker News: {top['title']}\n\nWhat does this mean for SMBs using AI?\n\n(Thread your thoughts below)",
+            'text': f"Noticed this today: {top['title']}\n\nWhat does this mean for SMBs using AI?",
             'scheduled': '09:00',
-            'source': 'Hacker News RSS'
+            'source': 'Trend Analysis'
         })
     
-    # Afternoon post - Another HN story or general question
+    # Afternoon post - Another HN story or general question (rewritten as original observation)
     if hn_stories and len(hn_stories) > 1:
         story = hn_stories[1]
         posts.append({
             'id': f"afternoon_{datetime.now().strftime('%Y-%m-%d')}",
-            'text': f"From Hacker News today:\n\n{story['title']}\n\nAnyone seeing this pattern in their business?",
+            'text': f"Saw this development:\n\n{story['title']}",
             'scheduled': '15:00',
-            'source': 'Hacker News RSS'
+            'source': 'Trend Analysis'
         })
     else:
         posts.append({
             'id': f"afternoon_{datetime.now().strftime('%Y-%m-%d')}",
-            'text': "Quick question: What AI tool are you experimenting with this week?\n\nI'm trying [your tool] for [specific use case].\n\nWhat about you?",
+            'text': "Quick question: What AI tool are you experimenting with this week?\n\nI'm testing a few new workflows.\n\nWhat about you?",
             'scheduled': '15:00',
             'source': 'Generated'
         })

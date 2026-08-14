@@ -157,8 +157,8 @@ Trending: Monitor ai-news-oracle for daily trending hashtags
 
 ## Tools Activated
 
-✅ twitter-automation.js (running every 15 min)
-✅ post-now.js (manual posting)
+✅ post_tweet.py (canonical poster)
+✅ content_refresh_v2.py (fresh-content queueing)
 ✅ ai-news-oracle (trending topics)
 ✅ blogwatcher (content monitoring)
 ✅ biz-reporter (analytics)
@@ -175,4 +175,3 @@ Trending: Monitor ai-news-oracle for daily trending hashtags
 5. [ ] Schedule first week's posts
 
 **Goal: 1,000 followers by end of April 2026**
-

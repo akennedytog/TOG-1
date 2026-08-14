@@ -1,0 +1,823 @@
+{
+  "project": {
+    "name": "Canva Template Project",
+    "version": "1.0.0",
+    "description": "Generated template configuration"
+  },
+  "defaults": {
+    "template": "instagram",
+    "theme": "bold"
+  },
+  "templates": {
+    "instagram": {
+      "name": "Instagram Post",
+      "width": 1080,
+      "height": 1080,
+      "description": "Square format - perfect for Instagram feed posts",
+      "backgroundStyle": "solid",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 100,
+            "y": 400
+          },
+          "content": "Your Headline",
+          "fontSize": 72,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {
+            "x": 100,
+            "y": 500
+          },
+          "content": "Add your subtitle here",
+          "fontSize": 36,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1080,
+            "height": 300
+          },
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": [
+        "Inter",
+        "Poppins",
+        "Montserrat"
+      ]
+    },
+    "instagramStory": {
+      "name": "Instagram Story",
+      "width": 1080,
+      "height": 1920,
+      "description": "Vertical format for Instagram Stories and Reels",
+      "backgroundStyle": "gradient",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 100,
+            "y": 800
+          },
+          "content": "Swipe Up",
+          "fontSize": 96,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 440,
+            "y": 1600
+          },
+          "size": {
+            "width": 200,
+            "height": 200
+          },
+          "shapeType": "ELLIPSE",
+          "zIndex": 3
+        }
+      ],
+      "recommendedFonts": [
+        "SF Pro Display",
+        "Poppins",
+        "Bebas Neue"
+      ]
+    },
+    "linkedin": {
+      "name": "LinkedIn Post",
+      "width": 1200,
+      "height": 627,
+      "description": "LinkedIn article and post image format",
+      "backgroundStyle": "solid",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 80,
+            "y": 200
+          },
+          "content": "Article Title",
+          "fontSize": 56,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {
+            "x": 80,
+            "y": 300
+          },
+          "content": "Your name • Professional title",
+          "fontSize": 24,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 800,
+            "y": 100
+          },
+          "size": {
+            "width": 400,
+            "height": 427
+          },
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": [
+        "Inter",
+        "Roboto",
+        "Source Sans Pro"
+      ]
+    },
+    "twitter": {
+      "name": "Twitter/X Post",
+      "width": 1200,
+      "height": 675,
+      "description": "16:9 format for Twitter/X posts",
+      "backgroundStyle": "solid",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 60,
+            "y": 250
+          },
+          "content": "Your Tweet Text",
+          "fontSize": 48,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 1000,
+            "y": 0
+          },
+          "size": {
+            "width": 200,
+            "height": 675
+          },
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": [
+        "Inter",
+        "Helvetica Neue",
+        "Segoe UI"
+      ]
+    },
+    "facebook": {
+      "name": "Facebook Post",
+      "width": 1200,
+      "height": 630,
+      "description": "Optimized for Facebook feed visibility",
+      "backgroundStyle": "solid",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 100,
+            "y": 220
+          },
+          "content": "Post Title",
+          "fontSize": 60,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {
+            "x": 100,
+            "y": 320
+          },
+          "content": "Description text here",
+          "fontSize": 28,
+          "zIndex": 2
+        }
+      ],
+      "recommendedFonts": [
+        "Helvetica",
+        "Arial",
+        "Georgia"
+      ]
+    },
+    "pinterest": {
+      "name": "Pinterest Pin",
+      "width": 1000,
+      "height": 1500,
+      "description": "2:3 ratio - optimal for Pinterest engagement",
+      "backgroundStyle": "gradient",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 50,
+            "y": 1300
+          },
+          "content": "Pin Title Here",
+          "fontSize": 64,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1000,
+            "height": 1200
+          },
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": [
+        "Playfair Display",
+        "Montserrat",
+        "Lato"
+      ]
+    },
+    "youtubeThumbnail": {
+      "name": "YouTube Thumbnail",
+      "width": 1280,
+      "height": 720,
+      "description": "16:9 format optimized for YouTube thumbnails",
+      "backgroundStyle": "gradient",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 60,
+            "y": 500
+          },
+          "content": "VIDEO TITLE",
+          "fontSize": 90,
+          "zIndex": 3
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1280,
+            "height": 720
+          },
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 60,
+            "y": 620
+          },
+          "size": {
+            "width": 200,
+            "height": 10
+          },
+          "shapeType": "RECTANGLE",
+          "zIndex": 2
+        }
+      ],
+      "recommendedFonts": [
+        "Oswald",
+        "Bebas Neue",
+        "Impact"
+      ]
+    },
+    "presentation": {
+      "name": "Presentation Slide",
+      "width": 1920,
+      "height": 1080,
+      "description": "16:9 HD presentation slide format",
+      "backgroundStyle": "solid",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 100,
+            "y": 400
+          },
+          "content": "Slide Title",
+          "fontSize": 96,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {
+            "x": 100,
+            "y": 540
+          },
+          "content": "Subtitle or bullet points go here",
+          "fontSize": 40,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 1500,
+            "y": 200
+          },
+          "size": {
+            "width": 300,
+            "height": 600
+          },
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": [
+        "Arial",
+        "Calibri",
+        "Segoe UI"
+      ]
+    },
+    "flyer": {
+      "name": "Print Flyer",
+      "width": 612,
+      "height": 792,
+      "description": "US Letter size flyer (8.5\" x 11\") at 72 DPI",
+      "backgroundStyle": "solid",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 60,
+            "y": 120
+          },
+          "content": "EVENT TITLE",
+          "fontSize": 48,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {
+            "x": 60,
+            "y": 200
+          },
+          "content": "Date & Time\nLocation\nDetails",
+          "fontSize": 24,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 600
+          },
+          "size": {
+            "width": 612,
+            "height": 192
+          },
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": [
+        "Helvetica",
+        "Futura",
+        "Gotham"
+      ]
+    },
+    "poster": {
+      "name": "Poster",
+      "width": 1584,
+      "height": 2448,
+      "description": "Standard poster size (22\" x 34\") at 72 DPI",
+      "backgroundStyle": "gradient",
+      "elements": [
+        {
+          "type": "text",
+          "position": {
+            "x": 100,
+            "y": 300
+          },
+          "content": "POSTER\nHEADLINE",
+          "fontSize": 120,
+          "zIndex": 2
+        },
+        {
+          "type": "text",
+          "position": {
+            "x": 100,
+            "y": 600
+          },
+          "content": "Supporting text and details",
+          "fontSize": 48,
+          "zIndex": 2
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 2000
+          },
+          "size": {
+            "width": 1584,
+            "height": 448
+          },
+          "shapeType": "RECTANGLE",
+          "zIndex": 1
+        }
+      ],
+      "recommendedFonts": [
+        "Impact",
+        "Bebas Neue",
+        "Avenir"
+      ]
+    }
+  },
+  "colors": {
+    "modern": {
+      "name": "Modern",
+      "colors": [
+        "#FFFFFF",
+        "#F5F5F5",
+        "#333333",
+        "#007BFF",
+        "#28A745",
+        "#FFC107",
+        "#DC3545"
+      ],
+      "primary": "#007BFF",
+      "secondary": "#28A745",
+      "accent": "#FFC107",
+      "background": "#FFFFFF",
+      "text": "#333333"
+    },
+    "minimal": {
+      "name": "Minimal",
+      "colors": [
+        "#FFFFFF",
+        "#FAFAFA",
+        "#E0E0E0",
+        "#9E9E9E",
+        "#616161",
+        "#212121",
+        "#000000"
+      ],
+      "primary": "#212121",
+      "secondary": "#616161",
+      "accent": "#9E9E9E",
+      "background": "#FFFFFF",
+      "text": "#212121"
+    },
+    "bold": {
+      "name": "Bold",
+      "colors": [
+        "#1A1A2E",
+        "#16213E",
+        "#0F3460",
+        "#E94560",
+        "#F39422",
+        "#FFFFFF",
+        "#000000"
+      ],
+      "primary": "#E94560",
+      "secondary": "#F39422",
+      "accent": "#0F3460",
+      "background": "#1A1A2E",
+      "text": "#FFFFFF"
+    },
+    "corporate": {
+      "name": "Corporate",
+      "colors": [
+        "#F8F9FA",
+        "#E9ECEF",
+        "#DEE2E6",
+        "#495057",
+        "#212529",
+        "#0066CC",
+        "#0056B3"
+      ],
+      "primary": "#0066CC",
+      "secondary": "#495057",
+      "accent": "#0056B3",
+      "background": "#F8F9FA",
+      "text": "#212529"
+    },
+    "creative": {
+      "name": "Creative",
+      "colors": [
+        "#FF6B6B",
+        "#4ECDC4",
+        "#45B7D1",
+        "#96CEB4",
+        "#FFEAA7",
+        "#DDA0DD",
+        "#FF8B94"
+      ],
+      "primary": "#FF6B6B",
+      "secondary": "#4ECDC4",
+      "accent": "#FFEAA7",
+      "background": "#FF8B94",
+      "text": "#2D3436"
+    },
+    "elegant": {
+      "name": "Elegant",
+      "colors": [
+        "#FAF9F6",
+        "#E8E4E1",
+        "#D4AF37",
+        "#C0C0C0",
+        "#4A4A4A",
+        "#2C2C2C",
+        "#000000"
+      ],
+      "primary": "#D4AF37",
+      "secondary": "#C0C0C0",
+      "accent": "#E8E4E1",
+      "background": "#FAF9F6",
+      "text": "#2C2C2C"
+    },
+    "playful": {
+      "name": "Playful",
+      "colors": [
+        "#FF9FF3",
+        "#FECA57",
+        "#FF6B6B",
+        "#48DBFB",
+        "#1DD1A1",
+        "#5F27CD",
+        "#FFFFFF"
+      ],
+      "primary": "#FF6B6B",
+      "secondary": "#48DBFB",
+      "accent": "#FECA57",
+      "background": "#FF9FF3",
+      "text": "#5F27CD"
+    },
+    "nature": {
+      "name": "Nature",
+      "colors": [
+        "#E8F5E9",
+        "#C8E6C9",
+        "#A5D6A7",
+        "#66BB6A",
+        "#43A047",
+        "#2E7D32",
+        "#1B5E20"
+      ],
+      "primary": "#43A047",
+      "secondary": "#66BB6A",
+      "accent": "#A5D6A7",
+      "background": "#E8F5E9",
+      "text": "#1B5E20"
+    },
+    "sunset": {
+      "name": "Sunset",
+      "colors": [
+        "#FFF3E0",
+        "#FFE0B2",
+        "#FFCC80",
+        "#FFB74D",
+        "#FFA726",
+        "#FB8C00",
+        "#F57C00"
+      ],
+      "primary": "#FB8C00",
+      "secondary": "#FFA726",
+      "accent": "#FFB74D",
+      "background": "#FFF3E0",
+      "text": "#E65100"
+    },
+    "ocean": {
+      "name": "Ocean",
+      "colors": [
+        "#E3F2FD",
+        "#BBDEFB",
+        "#90CAF9",
+        "#64B5F6",
+        "#42A5F5",
+        "#2196F3",
+        "#1976D2"
+      ],
+      "primary": "#2196F3",
+      "secondary": "#64B5F6",
+      "accent": "#BBDEFB",
+      "background": "#E3F2FD",
+      "text": "#0D47A1"
+    }
+  },
+  "fonts": {
+    "modern": {
+      "heading": {
+        "family": "Inter",
+        "style": "Bold"
+      },
+      "body": {
+        "family": "Inter",
+        "style": "Regular"
+      },
+      "accent": {
+        "family": "Poppins",
+        "style": "SemiBold"
+      }
+    },
+    "minimal": {
+      "heading": {
+        "family": "Helvetica Neue",
+        "style": "Light"
+      },
+      "body": {
+        "family": "Helvetica Neue",
+        "style": "UltraLight"
+      },
+      "accent": {
+        "family": "Helvetica Neue",
+        "style": "Medium"
+      }
+    },
+    "bold": {
+      "heading": {
+        "family": "Oswald",
+        "style": "Bold"
+      },
+      "body": {
+        "family": "Roboto",
+        "style": "Regular"
+      },
+      "accent": {
+        "family": "Bebas Neue",
+        "style": "Regular"
+      }
+    },
+    "corporate": {
+      "heading": {
+        "family": "Segoe UI",
+        "style": "SemiBold"
+      },
+      "body": {
+        "family": "Segoe UI",
+        "style": "Regular"
+      },
+      "accent": {
+        "family": "Arial",
+        "style": "Bold"
+      }
+    },
+    "creative": {
+      "heading": {
+        "family": "Poppins",
+        "style": "ExtraBold"
+      },
+      "body": {
+        "family": "Open Sans",
+        "style": "Regular"
+      },
+      "accent": {
+        "family": "Pacifico",
+        "style": "Regular"
+      }
+    },
+    "elegant": {
+      "heading": {
+        "family": "Playfair Display",
+        "style": "Bold"
+      },
+      "body": {
+        "family": "Lato",
+        "style": "Regular"
+      },
+      "accent": {
+        "family": "Cormorant Garamond",
+        "style": "Italic"
+      }
+    },
+    "playful": {
+      "heading": {
+        "family": "Fredoka One",
+        "style": "Regular"
+      },
+      "body": {
+        "family": "Nunito",
+        "style": "Regular"
+      },
+      "accent": {
+        "family": "Lobster",
+        "style": "Regular"
+      }
+    },
+    "nature": {
+      "heading": {
+        "family": "Montserrat",
+        "style": "SemiBold"
+      },
+      "body": {
+        "family": "Source Sans Pro",
+        "style": "Regular"
+      },
+      "accent": {
+        "family": "Crimson Text",
+        "style": "Regular"
+      }
+    },
+    "sunset": {
+      "heading": {
+        "family": "Raleway",
+        "style": "Bold"
+      },
+      "body": {
+        "family": "Lato",
+        "style": "Regular"
+      },
+      "accent": {
+        "family": "Dancing Script",
+        "style": "Regular"
+      }
+    },
+    "ocean": {
+      "heading": {
+        "family": "Roboto Slab",
+        "style": "Bold"
+      },
+      "body": {
+        "family": "Roboto",
+        "style": "Regular"
+      },
+      "accent": {
+        "family": "Merriweather",
+        "style": "Italic"
+      }
+    }
+  },
+  "layouts": [
+    {
+      "name": "Standard Grid",
+      "description": "12-column grid system",
+      "grid": {
+        "columns": 12,
+        "rows": 8,
+        "gap": 16,
+        "margin": 48
+      },
+      "zones": []
+    }
+  ],
+  "exportSettings": {
+    "defaultFormat": "png",
+    "defaultScale": 2,
+    "includeMetadata": true
+  },
+  "generatedAt": "2026-05-29T14:03:10.790Z",
+  "cronRun": {
+    "date": "2026-05-29",
+    "templatesGenerated": [
+      {
+        "id": "instagram-bold-20260529",
+        "type": "instagram",
+        "theme": "bold",
+        "dimensions": { "width": 1080, "height": 1080 },
+        "files": [
+          "templates/instagram-bold.json",
+          "templates/instagram-bold-canva.svg"
+        ],
+        "canvaImportReady": true,
+        "format": "svg",
+        "description": "Bold theme Instagram post with gradient background"
+      },
+      {
+        "id": "linkedin-corporate-20260529",
+        "type": "linkedin",
+        "theme": "corporate",
+        "dimensions": { "width": 1200, "height": 627 },
+        "files": [
+          "templates/linkedin-corporate.json",
+          "templates/linkedin-corporate-canva.svg"
+        ],
+        "canvaImportReady": true,
+        "format": "svg",
+        "description": "Corporate theme LinkedIn post with metrics section"
+      },
+      {
+        "id": "pinterest-nature-20260529",
+        "type": "pinterest",
+        "theme": "nature",
+        "dimensions": { "width": 1000, "height": 1500 },
+        "files": [
+          "templates/pinterest-nature.json",
+          "templates/pinterest-nature-canva.svg"
+        ],
+        "canvaImportReady": true,
+        "format": "svg",
+        "description": "Nature theme Pinterest pin with 2:3 ratio"
+      }
+    ],
+    "totalTemplates": 3,
+    "exportedFormats": ["json", "svg"],
+    "canvaCompatible": true
+  }
+}

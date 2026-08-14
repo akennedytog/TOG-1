@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1080" height="302" fill="#F5F5F5"/>
+  <rect x="65" y="130" width="194" height="13" fill="#007BFF"/>
+  <text x="65" y="518" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="700" fill="#333333">Your Headline</text>
+  <text x="65" y="605" font-family="Arial, sans-serif" font-size="35" fill="#333333" opacity="0.82">Add your subtitle here</text>
+  <circle cx="886" cy="842" r="130" fill="#007BFF" opacity="0.18"/>
+  <rect x="65" y="907" width="346" height="54" rx="13" fill="#007BFF"/>
+</svg>

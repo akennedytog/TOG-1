@@ -7,6 +7,9 @@ echo ""
 
 cd ~/.openclaw/workspace/theonegroup-site
 
+# Always publish the clean build output, never the repository root.
+./build.sh
+
 # Check if netlify CLI is installed
 if ! command -v netlify &> /dev/null; then
     echo "📦 Installing Netlify CLI..."
@@ -24,10 +27,10 @@ MODE=${1:-preview}
 
 if [ "$MODE" == "prod" ]; then
     echo "📤 Deploying to PRODUCTION..."
-    netlify deploy --prod --dir=.
+    netlify deploy --prod --dir=dist
 else
     echo "🔍 Deploying PREVIEW (use 'bash deploy.sh prod' for production)..."
-    netlify deploy --dir=.
+    netlify deploy --dir=dist
 fi
 
 echo ""

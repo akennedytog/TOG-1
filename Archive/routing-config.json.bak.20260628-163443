@@ -1,0 +1,84 @@
+{
+  "plugins": {
+    "entries": {
+      "codex": {
+        "enabled": true
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/qwen3-coder",
+        "fallback": [
+          "ollama/kimi",
+          "anthropic/claude-haiku",
+          "openai/gpt-5.5"
+        ]
+      }
+    }
+  },
+  "routing": {
+    "strategy": "escalation",
+    "order": [
+      {
+        "model": "ollama/qwen3-coder",
+        "use_for": [
+          "default coding",
+          "simple edits",
+          "boilerplate",
+          "local file reasoning",
+          "bug fixes",
+          "small refactors"
+        ]
+      },
+      {
+        "model": "ollama/kimi",
+        "use_for": [
+          "long reasoning",
+          "large context review",
+          "planning",
+          "document-heavy analysis",
+          "complex explanations"
+        ]
+      },
+      {
+        "model": "anthropic/claude-haiku",
+        "use_for": [
+          "cloud fallback",
+          "API/library reasoning",
+          "moderate multi-file work",
+          "when local models are uncertain"
+        ]
+      },
+      {
+        "model": "openai/gpt-5.4",
+        "use_for": [
+          "hard debugging",
+          "repo-wide reasoning",
+          "architecture",
+          "major refactors",
+          "test failures",
+          "when prior models fail"
+        ]
+      }
+    ],
+    "escalation_rules": {
+      "max_attempts_per_model": 2,
+      "escalate_when": [
+        "model_uncertain",
+        "same_error_twice",
+        "tests_fail_after_fix",
+        "multi_file_complexity_increases",
+        "security_or_auth_code",
+        "database_or_payment_code"
+      ]
+    }
+  },
+  "safety": {
+    "prefer_minimal_diffs": true,
+    "run_tests_after_changes": true,
+    "never_send_secrets_to_cloud_models": true,
+    "summarize_before_escalation": true
+  }
+}

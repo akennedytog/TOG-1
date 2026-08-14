@@ -1,2 +1,0 @@
-{"timestamp":"2026-03-23T02:56:37.767Z","level":"info","message":"Running one-off generation","templateId":null}
-{"timestamp":"2026-03-23T02:56:37.791Z","level":"info","message":"Template \"instagram_carousel\" has been generated and is ready for export.","templateId":"instagram_carousel","outputPath":"/Users/aleckennedy/.openclaw/workspace/outputs/templates/instagram_carousel","type":"template_complete"}

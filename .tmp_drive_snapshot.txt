@@ -1,0 +1,11 @@
+- heading "Sign in" [level=1, ref=e2]
+- textbox "Email or phone" [ref=e11]
+- button "Forgot email?" [ref=e10]
+- link "Learn more about using Guest mode (external, opens in a new window)" [ref=e6]
+- button "Next" [ref=e7]
+- button "Create account" [expanded=false, ref=e9]
+- combobox "Change language English (United States)" [expanded=false, ref=e8]: English (United States)
+- link "Open Google Account Help Center (external, opens in a new window)" [ref=e3]
+- link "Privacy Policy (external, opens in a new window)" [ref=e4]
+- link "Google Terms of Service (external, opens in a new window)" [ref=e5]
+- Iframe [ref=e1]

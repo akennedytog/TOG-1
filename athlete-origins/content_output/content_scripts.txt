@@ -1,0 +1,441 @@
+============================================================
+ATHLETE ORIGINS - CONTENT SCRIPT LIBRARY
+============================================================
+
+📱 TIKTOK/REELS HOOK SCRIPTS
+----------------------------------------
+
+【HOOK SCRIPT: Terry Crews】
+
+[0-3 SECONDS] HOOK:
+Text: "Before Terry Crews was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were football at Western Michigan Christian"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: "Multi-sport athlete"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "Crews walked on at Western Michigan, got drafted, played 6 NFL seasons. Art was ..."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Football #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: Terry Crews played 6 NFL seasons before he could focus on his art. He painted his teammates' portraits to make extra money.
+
+
+【HOOK SCRIPT: Paul Rudd】
+
+[0-3 SECONDS] HOOK:
+Text: "Before Paul Rudd was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were wrestling at Shawnee Mission West"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: "Multi-sport athlete"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "Rudd was a varsity wrestler who also played football and soccer. He was prom kin..."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Wrestling #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: Paul Rudd was a varsity wrestler and Prom King before he became Ant-Man. He also played football and soccer.
+
+
+【HOOK SCRIPT: Ed O'Neill】
+
+[0-3 SECONDS] HOOK:
+Text: "Before Ed O'Neill was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were football at Ursuline"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: "Multi-sport athlete"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "O'Neill was signed by the Steelers in 1969. Chuck Noll cut him in training camp...."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Football #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: Ed O'Neill (Al Bundy) was signed by the Pittsburgh Steelers. Chuck Noll cut him. He walked into acting instead of walking back to football.
+
+
+【HOOK SCRIPT: Joel McHale】
+
+[0-3 SECONDS] HOOK:
+Text: "Before Joel McHale was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were football at Mercer Island"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: "Multi-sport athlete"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "McHale was captain of his football team and recruited to UW. He walked away from..."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Football #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: Joel McHale was captain of his football team and recruited to University of Washington. He chose comedy instead.
+
+
+【HOOK SCRIPT: Tommy Lee Jones】
+
+[0-3 SECONDS] HOOK:
+Text: "Before Tommy Lee Jones was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were football at St. Mark's"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: "Multi-sport athlete"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "Jones was All-State in football, went to Harvard on scholarship, and roomed with..."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Football #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: Tommy Lee Jones was All-State in football, went to Harvard on scholarship, and was roommates with Al Gore.
+
+
+【HOOK SCRIPT: Master P】
+
+[0-3 SECONDS] HOOK:
+Text: "Before Master P was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were basketball at Warren Easton"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: "Multi-sport athlete"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "Master P made NBA preseason rosters twice. He actually played in NBA games befor..."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Basketball #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: Master P made the Charlotte Hornets preseason roster in 1998. He got into a real NBA game before becoming a $250M rap mogul.
+
+
+【HOOK SCRIPT: LeBron James】
+
+[0-3 SECONDS] HOOK:
+Text: "Before LeBron James was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were basketball at St. Vincent-St. Mary"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: "28.0 basketball ppg"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "LeBron was an All-State wide receiver. Ohio State wanted him for football. He ch..."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Basketball #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: LeBron was so dominant in HS football that OSU's football coach begged him to play. He averaged 28 PPG in basketball WHILE being an All-State receiver.
+
+
+【HOOK SCRIPT: Jon Hamm】
+
+[0-3 SECONDS] HOOK:
+Text: "Before Jon Hamm was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were football at John Burroughs"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: "Multi-sport athlete"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "Hamm led his team to the state championship game. He played TE and linebacker at..."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Football #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: Jon Hamm led his high school football team to the state championship game. He played TE and linebacker at Texas State before Don Draper.
+
+
+【HOOK SCRIPT: Mark Harmon】
+
+[0-3 SECONDS] HOOK:
+Text: "Before Mark Harmon was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were football at Harvard School"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: " passing yards"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "Harmon was a starting QB at UCLA and a Heisman candidate. His dad was a Heisman ..."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Football #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: Mark Harmon was a starting QB at UCLA and a Heisman candidate. His dad (Tom Harmon) WON the Heisman. Football runs in the family.
+
+
+【HOOK SCRIPT: Dwayne Johnson】
+
+[0-3 SECONDS] HOOK:
+Text: "Before Dwayne Johnson was famous..."
+Visual: Yearbook photo / B&W
+
+[3-6 SECONDS] REVEAL:
+Text: "They were football at Freedom"
+Visual: Sports photo
+
+[6-10 SECONDS] STAT DROP:
+Text: "9 sacks"
+Visual: Highlight reel / Stat graphic
+
+[10-15 SECONDS] TWIST:
+Text: "The Rock had 9 sacks as a HS senior. A knee injury ended his NFL dreams...."
+Visual: Then vs Now split
+
+[15-17 SECONDS] CTA:
+Text: "What other celebs played sports?"
++ Follow button animation
+
+---
+HASHTAGS: #BeforeTheyWereFamous #Football #HighSchoolSports #AthleteOrigins
+
+VIRAL ANGLE: The Rock had 9 sacks in high school and went to Miami on scholarship. A knee injury ended his NFL dream before he became the highest-paid actor ever.
+
+
+🔄 COMPARISON CONTENT
+----------------------------------------
+
+【COMPARISON: LeBron James】
+
+Text Overlay:
+"LeBron James"
+"Football Stats: 28.0 basketball ppg"
+"Basketball Stats: Also starred"
+
+Hook: "Most people know LeBron James from NBA GOAT..."
+
+Twist: "But they almost went pro in basketball!"
+
+What If: LeBron was an All-State wide receiver. Ohio State wanted him for football. He chose basketball.
+
+
+【COMPARISON: Tom Brady】
+
+Text Overlay:
+"Tom Brady"
+"Football Stats: 3328 football passing yards"
+"Baseball Stats: Also starred"
+
+Hook: "Most people know Tom Brady from NFL GOAT..."
+
+Twist: "But they almost went pro in baseball!"
+
+What If: Brady was drafted by the Expos in the 18th round. He chose Michigan football over pro baseball.
+
+
+【COMPARISON: Dwayne Johnson】
+
+Text Overlay:
+"Dwayne Johnson"
+"Football Stats: 9 sacks"
+"Wrestling Stats: Also starred"
+
+Hook: "Most people know Dwayne Johnson from The Rock..."
+
+Twist: "But they almost went pro in wrestling!"
+
+What If: The Rock had 9 sacks as a HS senior. A knee injury ended his NFL dreams.
+
+
+【COMPARISON: Kyler Murray】
+
+Text Overlay:
+"Kyler Murray"
+"Football Stats: 10583 football passing yards"
+"Baseball Stats: Also starred"
+
+Hook: "Most people know Kyler Murray from NFL QB..."
+
+Twist: "But they almost went pro in baseball!"
+
+What If: Murray went 43-0 in high school. He was drafted 9th overall by the Oakland A's before choosing football at Oklahoma.
+
+
+【COMPARISON: Jamie Foxx】
+
+Text Overlay:
+"Jamie Foxx"
+"Football Stats: 1000+ passing yards"
+"Basketball Stats: Also starred"
+
+Hook: "Most people know Jamie Foxx from Actor..."
+
+Twist: "But they almost went pro in basketball!"
+
+What If: Foxx was the first QB in school history to throw for 1000 yards. He chose music over football.
+
+
+❓ TRIVIA QUESTIONS
+----------------------------------------
+1. Q: What sport did Jamie Foxx play at Terrell?
+   A: football, basketball
+   💡 Jamie Foxx was the first QB in his high school's history to throw for 1,000 yards. He was All-District. He chose music instead.
+
+2. Q: What sport did Jeff Saturday play at Shamrock?
+   A: football, basketball
+   💡 Jeff Saturday walked on at UNC. Went undrafted. Became Peyton Manning's center and a 6-time Pro Bowler.
+
+3. Q: What sport did Michael Jordan play at Laney?
+   A: basketball, baseball
+   💡 Michael Jordan was CUT from his high school varsity team as a sophomore. He used that as motivation to become the GOAT.
+
+4. Q: What sport did Dwayne Johnson play at Freedom?
+   A: football, wrestling, track
+   💡 The Rock had 9 sacks in high school and went to Miami on scholarship. A knee injury ended his NFL dream before he became the highest-paid actor ever.
+
+5. Q: What sport did Patrick Mahomes play at Whitehouse?
+   A: football, baseball
+   💡 Patrick Mahomes threw a 95 mph fastball in high school. He threw a no-hitter. His dad was an MLB pitcher. He chose football.
+
+6. Q: What sport did Kate Hudson play at Crossroads?
+   A: soccer, tennis, dance
+   💡 Kate Hudson played soccer, tennis, and was on the dance team. Athletic talent runs in the family.
+
+7. Q: What sport did John Goodman play at Affton?
+   A: football
+   💡 John Goodman was All-Conference in football and had a scholarship. A knee injury ended his career. Then he became The Dude.
+
+8. Q: What sport did Mark Harmon play at Harvard School?
+   A: football
+   💡 Mark Harmon was a starting QB at UCLA and a Heisman candidate. His dad (Tom Harmon) WON the Heisman. Football runs in the family.
+
+9. Q: What sport did Hilary Swank play at Sehome?
+   A: track, swimming, gymnastics
+   💡 Hilary Swank was a Junior Olympics qualifier in gymnastics. Top 5 in Washington state. Then she became a 2-time Oscar winner.
+
+10. Q: What sport did Tom Brady play at Junípero Serra?
+   A: football, baseball
+   💡 Tom Brady was drafted by MLB's Montreal Expos before he even started at Michigan. He was a lefty-hitting catcher with power.
+
+11. Q: What sport did Master P play at Warren Easton?
+   A: basketball
+   💡 Master P made the Charlotte Hornets preseason roster in 1998. He got into a real NBA game before becoming a $250M rap mogul.
+
+12. Q: What sport did Paul Rudd play at Shawnee Mission West?
+   A: football, soccer, wrestling
+   💡 Paul Rudd was a varsity wrestler and Prom King before he became Ant-Man. He also played football and soccer.
+
+13. Q: What sport did Tommy Lee Jones play at St. Mark's?
+   A: football
+   💡 Tommy Lee Jones was All-State in football, went to Harvard on scholarship, and was roommates with Al Gore.
+
+14. Q: What sport did Chadwick Boseman play at T.L. Hanna?
+   A: basketball
+   💡 Chadwick Boseman wrote his first play in high school after a teammate was shot. Basketball led him to acting.
+
+15. Q: What sport did Mahershala Ali play at Saint Mary's?
+   A: basketball
+   💡 Mahershala Ali played Division I basketball for 4 years before he became a 2-time Oscar winner. He was an athlete first.
+
+16. Q: What sport did Natalie Portman play at Syosset?
+   A: track
+   💡 Natalie Portman ran varsity track while being an Intel Science Talent Search semi-finalist. She also starred in Star Wars.
+
+17. Q: What sport did Kyler Murray play at Allen?
+   A: football, baseball
+   💡 Kyler Murray never lost a high school game. 43-0 as a starter. He was also a 9th-round MLB pick before winning the Heisman.
+
+18. Q: What sport did Ed O'Neill play at Ursuline?
+   A: football
+   💡 Ed O'Neill (Al Bundy) was signed by the Pittsburgh Steelers. Chuck Noll cut him. He walked into acting instead of walking back to football.
+
+19. Q: What sport did Terry Crews play at Western Michigan Christian?
+   A: football
+   💡 Terry Crews played 6 NFL seasons before he could focus on his art. He painted his teammates' portraits to make extra money.
+
+20. Q: What sport did Carl Weathers play at St. Augustine?
+   A: football
+   💡 Carl Weathers (Apollo Creed) played 4 years of pro football. He played for the Raiders. Then he became Rocky Balboa's greatest rival.

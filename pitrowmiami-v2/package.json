@@ -1,0 +1,23 @@
+{
+  "name": "pitrowmiami-v2",
+  "version": "2.0.0",
+  "description": "Pit Row Miami - Premium F1 Simulator Rentals",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "Pit Row Miami",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.1.6",
+    "postcss": "^8.5.25",
+    "tailwindcss": "^4.3.3"
+  }
+}

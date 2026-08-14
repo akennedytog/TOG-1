@@ -1,0 +1,26 @@
+[
+  {
+    "type": "product_reaction",
+    "angle": "IBM sends AI warning, Jamie Dimon urges calm over workforce ",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.foxnews.com/tech/ai-newsletter-ibm-ai-warning-sends-shockwave"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "As China advances in AI, Trump faces a new test in the techn",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.washingtonpost.com/technology/2026/07/22/china-advances-ai-trump-faces-new-test-technology-race/"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "Inside the world of robot fight clubs - NBC News",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.nbcnews.com/video/inside-the-world-of-robot-fight-clubs-266991685979"
+  },
+  {
+    "type": "evergreen",
+    "angle": "AI adoption reality check",
+    "tweet_idea": "The SMBs winning with AI aren't the ones with the fanciest tools. They're the ones who picked ONE repetitive task and automated 80% of it.",
+    "source": "evergreen"
+  }
+]

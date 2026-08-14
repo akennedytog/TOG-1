@@ -1,0 +1,5 @@
+Date,Flight,Airline,Route,Departure Time,Departure Airport,Arrival Time,Arrival Airport,Duration,Traveler(s),Notes
+2026-09-13,TP 0244,TAP,Chicago to Lisbon,18:00,ORD,08:10+1,LIS,8h 10m,Alec Kennedy; Allison Kennedy,Baby equipment allowed (stroller + car seat free)
+2026-09-17,FR3664,Ryanair,Lisbon to Seville,15:00,LIS,17:05,Seville,1h 5m,Alec Kennedy + Baby,
+2026-09-25,TP 1139,TAP,Malaga to Lisbon,07:00,AGP,07:20,LIS,1h 20m,,"PLUS fare - includes bags, priority, seat selection"
+2026-09-25,TP 0223,TAP,Lisbon to Miami,10:20,LIS,14:35,MIA,9h 15m,,"CLASSIC fare"

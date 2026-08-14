@@ -1,15 +1,22 @@
 [build]
-  publish = "."
+  publish = "dist"
+
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/leads"
+  to = "/.netlify/functions/leads"
+  status = 200
 
 # Specific page redirects (clean URLs)
 [[redirects]]
-  from = "/pricing"
-  to = "/pricing.html"
+  from = "/thank-you"
+  to = "/thank-you.html"
   status = 200
 
 [[redirects]]
-  from = "/ai-agent-workshop"
-  to = "/ai-agent-workshop.html"
+  from = "/pricing"
+  to = "/pricing.html"
   status = 200
 
 [[redirects]]
@@ -23,9 +30,14 @@
   status = 200
 
 [[redirects]]
+  from = "/ai-assessment"
+  to = "/ai-audit"
+  status = 301
+
+[[redirects]]
   from = "/competitor-monitoring"
-  to = "/competitor-monitoring.html"
-  status = 200
+  to = "/competitor-intelligence"
+  status = 301
 
 [[redirects]]
   from = "/social-media"
@@ -63,11 +75,6 @@
   status = 200
 
 [[redirects]]
-  from = "/blog"
-  to = "/blog.html"
-  status = 200
-
-[[redirects]]
   from = "/"
   to = "/index.html"
   status = 200
@@ -78,3 +85,40 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
+
+# Consolidated duplicate content (2026-07-31 audit)
+
+# Form page must not retain stale submission JavaScript in browser/CDN caches.
+[[headers]]
+  for = "/free-ai-audit"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
+    Pragma = "no-cache"
+
+[[headers]]
+  for = "/free-ai-audit.html"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
+    Pragma = "no-cache"
+
+# Missing pages
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 200
+
+# Custom 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

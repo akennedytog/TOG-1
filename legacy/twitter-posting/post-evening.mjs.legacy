@@ -1,0 +1,43 @@
+import { TwitterApi } from 'twitter-api-v2';
+
+const requiredEnv = [
+  'TWITTER_API_KEY',
+  'TWITTER_API_SECRET',
+  'TWITTER_ACCESS_TOKEN',
+  'TWITTER_ACCESS_SECRET',
+];
+
+const missingEnv = requiredEnv.filter((key) => !process.env[key]);
+if (missingEnv.length > 0) {
+  console.error(`❌ Missing Twitter credentials: ${missingEnv.join(', ')}`);
+  process.exit(1);
+}
+
+const client = new TwitterApi({
+  appKey: process.env.TWITTER_API_KEY,
+  appSecret: process.env.TWITTER_API_SECRET,
+  accessToken: process.env.TWITTER_ACCESS_TOKEN,
+  accessSecret: process.env.TWITTER_ACCESS_SECRET,
+});
+
+const rwClient = client.readWrite;
+
+const tweet = `Realized today I've been running this 8-agent setup for 3 weeks.
+
+The thing that surprised me most?
+
+Not what they CAN do. It's how little I have to think about the stuff they handle.
+
+The mental space is the real ROI.`;
+
+async function postTweet() {
+  try {
+    const response = await rwClient.v2.tweet(tweet);
+    console.log('✅ Tweet posted successfully!');
+    console.log('Tweet ID:', response.data.id);
+  } catch (error) {
+    console.error('❌ Error:', error);
+  }
+}
+
+postTweet();

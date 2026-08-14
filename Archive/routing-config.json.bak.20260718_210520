@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "canonical": true,
+    "version": "2026-07-11.v3",
+    "source_of_truth": "routing-config.json",
+    "last_updated": "2026-07-11"
+  },
+  "plugins": {
+    "entries": {
+      "codex": {
+        "enabled": true
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/qwen3-coder:latest",
+        "fallback": [
+          "ollama/kimi-k2.5:cloud",
+          "ollama/llama3.1:latest",
+          "openai/gpt-5.3-codex",
+          "anthropic/claude-3-5-sonnet-20241022",
+          "openai/gpt-5.1-codex"
+        ]
+      }
+    }
+  },
+  "routing": {
+    "strategy": "cost_first_quality_guarded",
+    "task_classes": {
+      "quick": {
+        "primary": "ollama/kimi-k2.5:cloud",
+        "fallback": [
+          "ollama/qwen3-coder:latest"
+        ],
+        "use_for": [
+          "chat",
+          "summaries",
+          "drafting",
+          "triage"
+        ]
+      },
+      "standard": {
+        "primary": "ollama/qwen3-coder:latest",
+        "fallback": [
+          "ollama/llama3.1:latest",
+          "ollama/kimi-k2.5:cloud"
+        ],
+        "use_for": [
+          "routine coding edits",
+          "scripts",
+          "single-file implementation",
+          "terminal tasks"
+        ]
+      },
+      "heavy_coding": {
+        "primary": "openai/gpt-5.3-codex",
+        "fallback": [
+          "anthropic/claude-3-5-sonnet-20241022",
+          "openai/gpt-5.1-codex",
+          "ollama/qwen3-coder:latest"
+        ],
+        "use_for": [
+          "multi-file refactor",
+          "complex debugging",
+          "migration",
+          "performance or security sensitive code"
+        ]
+      },
+      "architecture": {
+        "primary": "anthropic/claude-3-5-sonnet-20241022",
+        "fallback": [
+          "openai/gpt-5.3-codex",
+          "openai/gpt-5.1-codex"
+        ],
+        "use_for": [
+          "design tradeoffs",
+          "system architecture",
+          "nuanced reasoning",
+          "edge-case analysis"
+        ]
+      }
+    },
+    "order": [
+      {
+        "model": "ollama/qwen3-coder:latest",
+        "role": "default_local_coding"
+      },
+      {
+        "model": "ollama/kimi-k2.5:cloud",
+        "role": "default_quick_low_stakes"
+      },
+      {
+        "model": "ollama/llama3.1:latest",
+        "role": "local_fallback"
+      },
+      {
+        "model": "openai/gpt-5.3-codex",
+        "role": "premium_heavy_coding"
+      },
+      {
+        "model": "anthropic/claude-3-5-sonnet-20241022",
+        "role": "premium_architecture_reasoning"
+      },
+      {
+        "model": "openai/gpt-5.1-codex",
+        "role": "premium_backup"
+      }
+    ],
+    "escalation_rules": {
+      "max_attempts_per_model": 1,
+      "escalate_when": [
+        "multi_file_refactor",
+        "heavy_coding_needed",
+        "repeated_local_failures",
+        "production_bug_unclear_root_cause",
+        "performance_or_security_sensitive_changes",
+        "user_requests_premium_quality"
+      ],
+      "deescalate_after": [
+        "root_cause_identified",
+        "complexity_reduced",
+        "premium_step_completed"
+      ]
+    },
+    "provider_failover": {
+      "paid_chain": [
+        "openai/gpt-5.3-codex",
+        "anthropic/claude-3-5-sonnet-20241022",
+        "openai/gpt-5.1-codex"
+      ],
+      "openrouter": {
+        "enabled": false,
+        "requires_env": "OPENROUTER_API_KEY",
+        "optional_candidates": [
+          "openrouter/anthropic/claude-3.5-sonnet",
+          "openrouter/openai/gpt-4o-mini"
+        ]
+      }
+    }
+  },
+  "safety": {
+    "prefer_minimal_diffs": true,
+    "run_tests_after_changes": true,
+    "never_send_secrets_to_cloud_models": true,
+    "summarize_before_escalation": true,
+    "high_cost_mode_enabled": false,
+    "exclude_models": [
+      "ollama/llama3.1:70b"
+    ]
+  },
+  "health_checks": {
+    "enabled": true,
+    "frequency": "daily",
+    "check_models": [
+      "ollama/qwen3-coder:latest",
+      "ollama/kimi-k2.5:cloud",
+      "ollama/llama3.1:latest"
+    ],
+    "track_file": "memory/heartbeat-state.json"
+  }
+}

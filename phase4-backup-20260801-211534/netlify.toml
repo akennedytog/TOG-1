@@ -1,0 +1,77 @@
+[build]
+  publish = "dist"
+
+# Specific page redirects (clean URLs)
+[[redirects]]
+  from = "/pricing"
+  to = "/pricing.html"
+  status = 200
+
+[[redirects]]
+  from = "/ai-audit"
+  to = "/ai-audit.html"
+  status = 200
+
+[[redirects]]
+  from = "/ai-optimization"
+  to = "/ai-optimization.html"
+  status = 200
+
+[[redirects]]
+  from = "/ai-assessment"
+  to = "/ai-audit"
+  status = 301
+
+[[redirects]]
+  from = "/competitor-monitoring"
+  to = "/competitor-intelligence"
+  status = 301
+
+[[redirects]]
+  from = "/social-media"
+  to = "/social-media.html"
+  status = 200
+
+[[redirects]]
+  from = "/web-design"
+  to = "/web-design.html"
+  status = 200
+
+[[redirects]]
+  from = "/openclaw-setup"
+  to = "/openclaw-setup.html"
+  status = 200
+
+[[redirects]]
+  from = "/lead-lists"
+  to = "/lead-lists.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/case-studies"
+  to = "/case-studies.html"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+
+# Consolidated duplicate content (2026-07-31 audit)

@@ -1290,10 +1290,14 @@
       "email": null,
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "call_listed",
       "source": "arlo_real_tavily",
       "notes": "Real Real Estate business found via web research in Boca Raton.",
-      "discovered_at": "2026-08-08T21:33:49.881343"
+      "discovered_at": "2026-08-08T21:33:49.881343",
+      "listed_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_id": "339942632174",
+      "calendar_event_at": "2026-08-14T09:00:00-04:00"
     },
     {
       "name": "The Matt & Nick Team | Boca Raton, Florida Real Estate",
@@ -1305,10 +1309,14 @@
       "email": null,
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "call_listed",
       "source": "arlo_real_tavily",
       "notes": "Real Real Estate business found via web research in Boca Raton.",
-      "discovered_at": "2026-08-08T21:33:49.881347"
+      "discovered_at": "2026-08-08T21:33:49.881347",
+      "listed_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_id": "339979813578",
+      "calendar_event_at": "2026-08-14T09:15:00-04:00"
     },
     {
       "name": "Avison Young",
@@ -1808,10 +1816,14 @@
       "email": null,
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "call_listed",
       "source": "arlo_real_tavily",
       "notes": "Real Real Estate business found via web research in Palm Beach Gardens.",
-      "discovered_at": "2026-08-10T08:59:04.204908"
+      "discovered_at": "2026-08-10T08:59:04.204908",
+      "listed_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_id": "339974417126",
+      "calendar_event_at": "2026-08-14T09:30:00-04:00"
     },
     {
       "name": "Coldwell Banker Realty Palm Beaches",
@@ -1823,10 +1835,15 @@
       "email": "sherry.snider@coldwellbankerhomes.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Real Estate business found via web research in Palm Beach Gardens. Email found via website scrape: sherry.snider@coldwellbankerhomes.com",
-      "discovered_at": "2026-08-10T08:59:04.204939"
+      "discovered_at": "2026-08-10T08:59:04.204939",
+      "drafted_at": "2026-08-13T09:45:06.556472",
+      "hubspot_company_at": "2026-08-13T09:45:06.556472",
+      "hubspot_company_id": "339946229490",
+      "hubspot_contact_at": "2026-08-13T09:45:06.556472",
+      "hubspot_contact_id": "535193260751"
     },
     {
       "name": "Samantha Curry - Palm Beach Luxury Real Estate Expert",
@@ -1838,10 +1855,14 @@
       "email": null,
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "call_listed",
       "source": "arlo_real_tavily",
       "notes": "Real Real Estate business found via web research in Palm Beach Gardens.",
-      "discovered_at": "2026-08-10T08:59:04.204944"
+      "discovered_at": "2026-08-10T08:59:04.204944",
+      "listed_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_id": "340048162498",
+      "calendar_event_at": "2026-08-14T09:45:00-04:00"
     },
     {
       "name": "Avenir Development, LLC",
@@ -1853,10 +1874,15 @@
       "email": "info@atlispm.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Real Estate business found via web research in Palm Beach Gardens. Email found via targeted search: info@atlispm.com",
-      "discovered_at": "2026-08-10T08:59:04.204951"
+      "discovered_at": "2026-08-10T08:59:04.204951",
+      "drafted_at": "2026-08-13T09:45:14.148017",
+      "hubspot_company_at": "2026-08-13T09:45:14.148017",
+      "hubspot_company_id": "339937231590",
+      "hubspot_contact_at": "2026-08-13T09:45:14.148017",
+      "hubspot_contact_id": "535141420768"
     },
     {
       "name": "Sina Companies",
@@ -2000,10 +2026,15 @@
       "email": "homes@seanunderwood.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Real Estate business found via web research in Jupiter.",
-      "discovered_at": "2026-08-10T08:59:37.650046"
+      "discovered_at": "2026-08-10T08:59:37.650046",
+      "drafted_at": "2026-08-13T09:45:20.392694",
+      "hubspot_company_at": "2026-08-13T09:45:20.392694",
+      "hubspot_company_id": "339949831876",
+      "hubspot_contact_at": "2026-08-13T09:45:20.392694",
+      "hubspot_contact_id": "535155898077"
     },
     {
       "name": "Jupiter Real Estate Agents | Sean Underwood Team",
@@ -2033,10 +2064,15 @@
       "email": "info@wolfeofrealestate.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Real Estate business found via web research in Jupiter. Email found via website scrape: info@wolfeofrealestate.com",
-      "discovered_at": "2026-08-10T08:59:37.650765"
+      "discovered_at": "2026-08-10T08:59:37.650765",
+      "drafted_at": "2026-08-13T09:45:25.742315",
+      "hubspot_company_at": "2026-08-13T09:45:25.742315",
+      "hubspot_company_id": "339974417120",
+      "hubspot_contact_at": "2026-08-13T09:45:25.742315",
+      "hubspot_contact_id": "535150454499"
     },
     {
       "name": "Meyer Lucas Team | Real Estate Agents Serving South Florida",
@@ -2135,10 +2171,13 @@
       "email": "info@wolfeofrealestate.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Real Estate business found via web research in Jupiter. Email found via website scrape: info@wolfeofrealestate.com",
-      "discovered_at": "2026-08-10T08:59:52.043795"
+      "discovered_at": "2026-08-10T08:59:52.043795",
+      "drafted_at": "2026-08-13T09:45:31.131417",
+      "hubspot_company_at": "2026-08-13T09:45:31.131417",
+      "hubspot_company_id": "340046362359"
     },
     {
       "name": "Palm Beach Institute of Dentistry",
@@ -2150,10 +2189,15 @@
       "email": "info@palmbeachinstituteofdentistry.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach.",
-      "discovered_at": "2026-08-11T08:32:52.581566"
+      "discovered_at": "2026-08-11T08:32:52.581566",
+      "drafted_at": "2026-08-13T09:50:06.773891",
+      "hubspot_company_at": "2026-08-13T09:50:06.773891",
+      "hubspot_company_id": "339999620831",
+      "hubspot_contact_at": "2026-08-13T09:50:06.773891",
+      "hubspot_contact_id": "535110765260"
     },
     {
       "name": "Waterview Dental",
@@ -2165,10 +2209,15 @@
       "email": "info@waterviewdentalgroup.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach.",
-      "discovered_at": "2026-08-11T08:32:52.581628"
+      "discovered_at": "2026-08-11T08:32:52.581628",
+      "drafted_at": "2026-08-13T09:50:13.494175",
+      "hubspot_company_at": "2026-08-13T09:50:13.494175",
+      "hubspot_company_id": "339946231542",
+      "hubspot_contact_at": "2026-08-13T09:50:13.494175",
+      "hubspot_contact_id": "535112562403"
     },
     {
       "name": "Dr. Damanjeet Singh, DDS - Singh Dental, P.A.",
@@ -2180,10 +2229,15 @@
       "email": "frontdesk@drsinghdds.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach.",
-      "discovered_at": "2026-08-11T08:32:52.581640"
+      "discovered_at": "2026-08-11T08:32:52.581640",
+      "drafted_at": "2026-08-13T09:50:18.875368",
+      "hubspot_company_at": "2026-08-13T09:50:18.875368",
+      "hubspot_company_id": "340051754691",
+      "hubspot_contact_at": "2026-08-13T09:50:18.875368",
+      "hubspot_contact_id": "535148721908"
     },
     {
       "name": "Premiere Dental Care PC",
@@ -2195,10 +2249,15 @@
       "email": "PREMIEREDENTALCARE@GMAIL.COM",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach.",
-      "discovered_at": "2026-08-11T08:32:52.581651"
+      "discovered_at": "2026-08-11T08:32:52.581651",
+      "drafted_at": "2026-08-13T09:50:24.723685",
+      "hubspot_company_at": "2026-08-13T09:50:24.723685",
+      "hubspot_company_id": "339978018523",
+      "hubspot_contact_at": "2026-08-13T09:50:24.723685",
+      "hubspot_contact_id": "535143274230"
     },
     {
       "name": "Juno Beach Eyesmile",
@@ -2210,10 +2269,15 @@
       "email": "INFO@JUNOBEACHEYESMILE.COM",
       "score": 8,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach.",
-      "discovered_at": "2026-08-11T08:32:52.581661"
+      "discovered_at": "2026-08-11T08:32:52.581661",
+      "drafted_at": "2026-08-13T09:50:31.543601",
+      "hubspot_company_at": "2026-08-13T09:50:31.543601",
+      "hubspot_company_id": "340046364379",
+      "hubspot_contact_at": "2026-08-13T09:50:31.543601",
+      "hubspot_contact_id": "535193276146"
     },
     {
       "name": "Curtis Oral Surgery",
@@ -2225,10 +2289,15 @@
       "email": "CURTISORALSURGERY@OUTLOOK.COM",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach.",
-      "discovered_at": "2026-08-11T08:32:52.581671"
+      "discovered_at": "2026-08-11T08:32:52.581671",
+      "drafted_at": "2026-08-13T09:55:10.693394",
+      "hubspot_company_at": "2026-08-13T09:55:10.693394",
+      "hubspot_company_id": "340048164586",
+      "hubspot_contact_at": "2026-08-13T09:55:10.693394",
+      "hubspot_contact_id": "535116168918"
     },
     {
       "name": "Brion Weinberg DDS PA",
@@ -2240,10 +2309,15 @@
       "email": "info@junobeachsmile.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach. Email found via targeted search: info@junobeachsmile.com",
-      "discovered_at": "2026-08-11T08:32:52.581681"
+      "discovered_at": "2026-08-11T08:32:52.581681",
+      "drafted_at": "2026-08-13T09:55:21.825678",
+      "hubspot_company_at": "2026-08-13T09:55:21.825678",
+      "hubspot_company_id": "339944432373",
+      "hubspot_contact_at": "2026-08-13T09:55:21.825678",
+      "hubspot_contact_id": "535164870362"
     },
     {
       "name": "Alexei Elperin",
@@ -2255,10 +2329,13 @@
       "email": "PREMIEREDENTALCARE@GMAIL.COM",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach. Email found via targeted search: PREMIEREDENTALCARE@GMAIL.COM",
-      "discovered_at": "2026-08-11T08:32:52.581691"
+      "discovered_at": "2026-08-11T08:32:52.581691",
+      "drafted_at": "2026-08-13T09:55:31.673978",
+      "hubspot_company_at": "2026-08-13T09:55:31.673978",
+      "hubspot_company_id": "339953436377"
     },
     {
       "name": "Dental Team of West Palm Beach",
@@ -2289,10 +2366,15 @@
       "email": "adc@americandentalcareinc.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach. Email found via website scrape: adc@americandentalcareinc.com",
-      "discovered_at": "2026-08-11T08:33:09.041396"
+      "discovered_at": "2026-08-11T08:33:09.041396",
+      "drafted_at": "2026-08-13T09:55:40.976992",
+      "hubspot_company_at": "2026-08-13T09:55:40.976992",
+      "hubspot_company_id": "339979815649",
+      "hubspot_contact_at": "2026-08-13T09:55:40.976992",
+      "hubspot_contact_id": "535155925711"
     },
     {
       "name": "Cross County Dental",
@@ -2304,10 +2386,15 @@
       "email": "info@mallscenters.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Dental business found via web research in West Palm Beach. Email found via website scrape: info@mallscenters.com",
-      "discovered_at": "2026-08-11T08:33:09.041409"
+      "discovered_at": "2026-08-11T08:33:09.041409",
+      "drafted_at": "2026-08-13T09:55:50.355109",
+      "hubspot_company_at": "2026-08-13T09:55:50.355109",
+      "hubspot_company_id": "340048164591",
+      "hubspot_contact_at": "2026-08-13T09:55:50.355109",
+      "hubspot_contact_id": "535155925727"
     },
     {
       "name": "CareMedica Florida",
@@ -2319,10 +2406,14 @@
       "email": null,
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "call_listed",
       "source": "arlo_real_tavily",
       "notes": "Real Medical business found via web research in Palm Beach Gardens.",
-      "discovered_at": "2026-08-11T08:33:30.719708"
+      "discovered_at": "2026-08-11T08:33:30.719708",
+      "listed_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_id": "340048162501",
+      "calendar_event_at": "2026-08-14T10:00:00-04:00"
     },
     {
       "name": "Campazzi Concierge Medicine",
@@ -2417,10 +2508,15 @@
       "email": "development@mayoclinic.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Medical business found via web research in Palm Beach Gardens. Email found via website scrape: development@mayoclinic.com",
-      "discovered_at": "2026-08-11T08:33:45.230287"
+      "discovered_at": "2026-08-11T08:33:45.230287",
+      "drafted_at": "2026-08-13T13:10:14.250914",
+      "hubspot_company_at": "2026-08-13T13:10:14.250914",
+      "hubspot_company_id": "339979933400",
+      "hubspot_contact_at": "2026-08-13T13:10:14.250914",
+      "hubspot_contact_id": "535226492613"
     },
     {
       "name": "One Medical",
@@ -2432,10 +2528,13 @@
       "email": "support@onemedical.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Medical business found via web research in Palm Beach Gardens. Email found via website scrape: support@onemedical.com",
-      "discovered_at": "2026-08-11T08:33:45.230334"
+      "discovered_at": "2026-08-11T08:33:45.230334",
+      "drafted_at": "2026-08-13T13:10:31.754243",
+      "hubspot_company_at": "2026-08-13T13:10:31.754243",
+      "hubspot_company_id": "340066272973"
     },
     {
       "name": "All Time Air Conditioning",
@@ -2447,10 +2546,13 @@
       "email": "alltimeairconditioning@gmail.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real HVAC business found via web research in Boynton Beach. Email found via website scrape: alltimeairconditioning@gmail.com",
-      "discovered_at": "2026-08-11T08:34:04.710047"
+      "discovered_at": "2026-08-11T08:34:04.710047",
+      "drafted_at": "2026-08-13T13:10:55.626020",
+      "hubspot_company_at": "2026-08-13T13:10:55.626020",
+      "hubspot_company_id": "340111690452"
     },
     {
       "name": "James B Air Conditioning LLC",
@@ -2655,10 +2757,13 @@
       "email": "mrecords@mdnow.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Medical business found via web research in Lake Worth. Email found via website scrape: mrecords@mdnow.com",
-      "discovered_at": "2026-08-12T17:34:01.757221"
+      "discovered_at": "2026-08-12T17:34:01.757221",
+      "drafted_at": "2026-08-13T13:11:08.065675",
+      "hubspot_company_at": "2026-08-13T13:11:08.065675",
+      "hubspot_company_id": "340106299085"
     },
     {
       "name": "Delray Medical Center",
@@ -2670,10 +2775,15 @@
       "email": "info@palmbeachhealthnetwork.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Medical business found via web research in Lake Worth. Email found via website scrape: info@palmbeachhealthnetwork.com",
-      "discovered_at": "2026-08-12T17:34:01.757242"
+      "discovered_at": "2026-08-12T17:34:01.757242",
+      "drafted_at": "2026-08-13T13:09:44.256464",
+      "hubspot_company_at": "2026-08-13T13:09:44.256464",
+      "hubspot_company_id": "339926586099",
+      "hubspot_contact_at": "2026-08-13T13:09:44.256464",
+      "hubspot_contact_id": "535195655893"
     },
     {
       "name": "Guadalupe Medical Center",
@@ -2790,10 +2900,14 @@
       "email": null,
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "call_listed",
       "source": "arlo_real_tavily",
       "notes": "Real Home Services business found via web research in Boca Raton.",
-      "discovered_at": "2026-08-12T17:34:25.380689"
+      "discovered_at": "2026-08-12T17:34:25.380689",
+      "listed_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_at": "2026-08-13T09:45:34.020441",
+      "hubspot_company_id": "340048162503",
+      "calendar_event_at": "2026-08-14T10:15:00-04:00"
     },
     {
       "name": "West Boca Medical Center",
@@ -2805,10 +2919,15 @@
       "email": "tenetwestboca@datavant.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Medical business found via web research in Boca Raton. Email found via targeted search: tenetwestboca@datavant.com",
-      "discovered_at": "2026-08-13T08:30:56.323699"
+      "discovered_at": "2026-08-13T08:30:56.323699",
+      "drafted_at": "2026-08-13T13:11:21.561304",
+      "hubspot_company_at": "2026-08-13T13:11:21.561304",
+      "hubspot_company_id": "340048302828",
+      "hubspot_contact_at": "2026-08-13T13:11:21.561304",
+      "hubspot_contact_id": "535085653732"
     },
     {
       "name": "Atlantic Healthcare Products",
@@ -2820,10 +2939,15 @@
       "email": "Hello@AtlanticHP.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Medical business found via web research in Boca Raton. Email found via website scrape: Hello@AtlanticHP.com",
-      "discovered_at": "2026-08-13T08:30:56.323793"
+      "discovered_at": "2026-08-13T08:30:56.323793",
+      "drafted_at": "2026-08-13T13:15:10.977079",
+      "hubspot_company_at": "2026-08-13T13:15:10.977079",
+      "hubspot_company_id": "340020397793",
+      "hubspot_contact_at": "2026-08-13T13:15:10.977079",
+      "hubspot_contact_id": "535226502843"
     },
     {
       "name": "UHealth Boca Raton",
@@ -2871,10 +2995,15 @@
       "email": "BRRHGutin@baptisthealth.net",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Medical business found via web research in Boca Raton. Email found via website scrape: BRRHGutin@baptisthealth.net",
-      "discovered_at": "2026-08-13T08:30:56.323826"
+      "discovered_at": "2026-08-13T08:30:56.323826",
+      "drafted_at": "2026-08-13T13:15:22.817583",
+      "hubspot_company_at": "2026-08-13T13:15:22.817583",
+      "hubspot_company_id": "340022198996",
+      "hubspot_contact_at": "2026-08-13T13:15:22.817583",
+      "hubspot_contact_id": "535187567303"
     },
     {
       "name": "West Boca Medical Center Emergency Care at Coconut Creek",
@@ -2937,10 +3066,15 @@
       "email": "mail@coolairservices.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Home Services business found via web research in Boynton Beach. Email found via website scrape: mail@coolairservices.com",
-      "discovered_at": "2026-08-13T08:31:11.601801"
+      "discovered_at": "2026-08-13T08:31:11.601801",
+      "drafted_at": "2026-08-13T13:15:34.315634",
+      "hubspot_company_at": "2026-08-13T13:15:34.315634",
+      "hubspot_company_id": "339979934432",
+      "hubspot_contact_at": "2026-08-13T13:15:34.315634",
+      "hubspot_contact_id": "535200633580"
     },
     {
       "name": "Professional Services",
@@ -2985,10 +3119,15 @@
       "email": "info@homedepot.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Home Services business found via web research in Boynton Beach. Email found via website scrape: info@homedepot.com",
-      "discovered_at": "2026-08-13T08:31:25.921206"
+      "discovered_at": "2026-08-13T08:31:25.921206",
+      "drafted_at": "2026-08-13T13:15:46.835840",
+      "hubspot_company_at": "2026-08-13T13:15:46.835840",
+      "hubspot_company_id": "340106300150",
+      "hubspot_contact_at": "2026-08-13T13:15:46.835840",
+      "hubspot_contact_id": "535202844357"
     },
     {
       "name": "Cinch Home Services",
@@ -3033,10 +3172,15 @@
       "email": "privacy@my-ccs.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Home Services business found via web research in Boynton Beach. Email found via website scrape: privacy@my-ccs.com",
-      "discovered_at": "2026-08-13T08:31:25.921239"
+      "discovered_at": "2026-08-13T08:31:25.921239",
+      "drafted_at": "2026-08-13T13:15:59.636426",
+      "hubspot_company_at": "2026-08-13T13:15:59.636426",
+      "hubspot_company_id": "340104505029",
+      "hubspot_contact_at": "2026-08-13T13:15:59.636426",
+      "hubspot_contact_id": "535083897586"
     },
     {
       "name": "Mr. Handyman",
@@ -3063,10 +3207,15 @@
       "email": "info@forevergreenlandscaper.com",
       "score": 10,
       "priority": "high",
-      "status": "new",
+      "status": "drafted",
       "source": "arlo_real_tavily",
       "notes": "Real Landscaping business found via web research in Lake Worth.",
-      "discovered_at": "2026-08-13T08:31:39.587126"
+      "discovered_at": "2026-08-13T08:31:39.587126",
+      "drafted_at": "2026-08-13T13:20:14.566713",
+      "hubspot_company_at": "2026-08-13T13:20:14.566713",
+      "hubspot_company_id": "339970959080",
+      "hubspot_contact_at": "2026-08-13T13:20:14.566713",
+      "hubspot_contact_id": "535202850505"
     },
     {
       "name": "Next Level Landscaping and Maintenance",
@@ -3123,6 +3272,6 @@
       "hubspot_company_id": "339840058066"
     }
   ],
-  "last_run": "2026-08-13T09:40:02.212909",
+  "last_run": "2026-08-13T22:25:02.640965",
   "total_discovered": 180
 }

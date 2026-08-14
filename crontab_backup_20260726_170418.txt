@@ -1,0 +1,86 @@
+# Enhanced Business Automation Cron Jobs
+# Includes Firecrawl competitor monitoring
+
+SHELL=/bin/zsh
+PATH=/Users/aleckennedy/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/aleckennedy/.openclaw/bin:/Users/aleckennedy/.npm-global/bin
+OPENCLAW_GATEWAY_URL=ws://127.0.0.1:18789
+
+# === SUPERCHARGED DAILY INTELLIGENCE (NEW - Replaces old content pipeline) ===
+
+# Daily 8am ET: Supercharged - AI Industry Intel + Scout Web + Twitter
+0 8 * * * cd ~/.openclaw/workspace && bash cron_supercharged_wrapper.sh >> logs/supercharged_cron.log 2>&1
+
+# === CONTENT PIPELINE (DEPRECATED - superseded by Supercharged) ===
+
+# DISABLED: Old content pipeline replaced by Supercharged Daily Intelligence
+# 0 8 * * * cd ~/.openclaw/workspace && node content-pipeline/generate.js >> content-pipeline/cron.log 2>&1
+# 0 9 * * * cd ~/.openclaw/workspace && openclaw skills run ai-news-oracle >> content-pipeline/cron.log 2>&1
+# 0 10 * * * cd ~/.openclaw/workspace && openclaw skills run blogwatcher >> content-pipeline/cron.log 2>&1
+
+# === COMPETITOR MONITORING (Firecrawl) ===
+
+# Monday 8am: Weekly competitor research (NEW)
+0 8 * * 1 cd ~/.openclaw/workspace && ./scripts/monitor-competitors.sh >> logs/competitor-monitor.log 2>&1
+
+# Tuesday/Thursday 3pm: Content research for Twitter (NEW)
+0 15 * * 2,4 cd ~/.openclaw/workspace && firecrawl search "AI automation small business" --tbs qdr:w --limit 5 -o .firecrawl/content-ideas-$(date +\%Y\%m\%d).json >> logs/firecrawl.log 2>&1
+
+# === WEEKLY OPERATIONS ===
+
+# Sunday 9am: Newsletter sending
+0 9 * * 0 cd ~/.openclaw/workspace && node content-pipeline/send-newsletter.js 2>&1 | openclaw skills run gog --stdin
+
+# Monday 10am: Business intelligence report
+0 10 * * 1 cd ~/.openclaw/workspace && openclaw skills run biz-reporter >> content-pipeline/cron.log 2>&1
+
+# === WEBSITE & INFRASTRUCTURE ===
+
+# Every 4 hours: Check for website updates
+0 */4 * * * cd ~/.openclaw/workspace/theonegroup-site && git status --short >> content-pipeline/cron.log 2>&1
+
+# Daily 6am: Security health check
+0 6 * * * cd ~/.openclaw/workspace && openclaw skills run healthcheck >> content-pipeline/cron.log 2>&1
+
+# === MONETIZATION ===
+
+# Daily 2pm: Affiliate opportunity scan
+0 14 * * * cd ~/.openclaw/workspace && openclaw skills run affiliate-master >> content-pipeline/cron.log 2>&1
+
+# DISABLED: Task tracker skill no longer available
+# 0 * * * * cd ~/.openclaw/workspace && openclaw skills run task-tracker --check-overdue >> content-pipeline/cron.log 2>&1
+
+# === AGENT AUTOMATION (8-Agent System) ===
+
+# Daily 8am: Dante - Content creation
+0 8 * * * cd ~/.openclaw/workspace && ./run_dante_daily.sh >> logs/dante.log 2>&1
+
+# Daily 9am: Arlo - Lead research
+0 9 * * * cd ~/.openclaw/workspace && ./run_arlo_daily.sh >> logs/arlo.log 2>&1
+
+# Daily 2pm: Iris - Sales outreach
+0 14 * * * cd ~/.openclaw/workspace && ./run_iris_daily.sh >> logs/iris.log 2>&1
+
+# Daily 8am: Scout - Sales intelligence
+0 8 * * * cd ~/.openclaw/workspace && ./run_scout.sh >> logs/scout.log 2>&1
+
+# === TWITTER AUTOMATION (PM2 manages this - not cron) ===
+# PM2 runs: node twitter-automation.js
+# Check status: pm2 list
+
+# NeighborAD Daily Reminders
+0 9 * * * cd /Users/aleckennedy/.openclaw/workspace/neighborad && npx ts-node scripts/reminders.ts >> logs/cron.log 2>&1
+
+# NeighborAD Weekly Payments
+0 17 * * 5 cd /Users/aleckennedy/.openclaw/workspace/neighborad && npx ts-node scripts/payments.ts >> logs/cron.log 2>&1
+
+# Daily 7:15am: Model routing healthcheck
+15 7 * * * cd /Users/aleckennedy/.openclaw/workspace && bash scripts/model_routing_healthcheck.sh >> logs/model-routing-health.log 2>&1
+
+# Daily 8:20am: Update website sales outreach tracker
+20 8 * * * cd /Users/aleckennedy/.openclaw/workspace && node scripts/update_outreach_tracker.js leads/website-sales-tracker-33309.csv >> logs/website-sales-tracker.log 2>&1
+
+# Daily 8:22am: Prepare top 5 mockups
+22 8 * * * cd /Users/aleckennedy/.openclaw/workspace && node scripts/prepare_top5_mockups_33309.js >> logs/website-sales-tracker.log 2>&1
+
+# Daily 8:25am: Sync sales pack to Google Drive
+25 8 * * * cd /Users/aleckennedy/.openclaw/workspace && bash scripts/sync_33309_sales_pack_to_drive.sh >> logs/website-sales-tracker.log 2>&1

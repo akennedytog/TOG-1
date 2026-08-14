@@ -1,0 +1,31 @@
+🚀 Arlo → Iris Pipeline
+Started: 2026-08-13 22:25:00
+==================================================
+🔍 Arlo starting...
+🔍 Arlo REAL v3 starting 2026-08-13 22:25
+   Strategy: Two-phase email hunting
+
+📋 PHASE 1: Industry/city search (email-prioritized)
+  🔎 Landscaping / Delray Beach (email search)
+  🔎 Landscaping / Delray Beach (general search)
+  🔎 Plumbing / Delray Beach (email search)
+  🔎 Plumbing / Delray Beach (general search)
+  🔎 HVAC / Lake Worth (email search)
+  🔎 HVAC / Lake Worth (general search)
+
+✅ 0 REAL leads added (total: 180)
+   📧 With email: 0
+   📞 Phone only: 0
+
+
+✉️ Iris starting...
+email-ready: 0 | phone-only: 0
+✅ Iris done: 0 email drafts + call list
+
+
+==================================================
+📊 PIPELINE SUMMARY
+   New leads found: 0
+   Email drafts created: 0
+   Phone leads call-listed: 0
+   Finished: 2026-08-13 22:25:02

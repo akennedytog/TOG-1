@@ -1,0 +1,732 @@
+{
+  "source": "FLHSMV Licensed Franchise & Service Facility Dealers",
+  "counties": [
+    "MIAMI-DADE",
+    "BROWARD",
+    "PALM BEACH"
+  ],
+  "generated": "2026-08-13",
+  "count": 120,
+  "dealerships": [
+    {
+      "county": "PALM BEACH",
+      "name": "ABC JS AUTO IMPORTS II, LLC",
+      "phone": "(561)265-0000",
+      "email": "corporate@superstoreauto.com"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "ABC JS AUTO IMPORTS III, LLC",
+      "phone": "(702)839-6109",
+      "email": "corporate@superstore.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "ABRAHAM CHEVROLET MIAMI INC",
+      "phone": "(786)552-6685",
+      "email": "sabanosa@autonation.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "ADVANTAGE GOLF CARS SEFL LLC",
+      "phone": "(786)233-8633",
+      "email": "dennis@advantagegolfcars.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "ADVANTAGE GOLF CARS SEFL LLC",
+      "phone": "(786)233-8633",
+      "email": "rick@advantagegolfcars.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "ALL ROADS KENWORTH LLC",
+      "phone": "(954)635-5651",
+      "email": "RNADEAU@ALLROADS.COM"
+    },
+    {
+      "county": "BROWARD",
+      "name": "AN IMPORTS OF FT LAUDERDALE INC",
+      "phone": "(954)784-4400",
+      "email": "musengoj@autonation.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "AN IMPORTS ON WESTON ROAD INC",
+      "phone": "(954)659-1800",
+      "email": "perezm1@autonation.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "AN LUXURY IMPORTS OF COCONUT CREEK INC",
+      "phone": "(954)590-3100",
+      "email": "colantinok@autonation.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "AN LUXURY IMPORTS OF PEMBROKE PINES INC",
+      "phone": "(954)517-8603",
+      "email": "leroset@autonation.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "AN MOTORS OF PEMBROKE LLC",
+      "phone": "(954)433-3300",
+      "email": "munizr1@autonation.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "AUTO SWEDEN, LLC",
+      "phone": "(305)651-2436",
+      "email": "bherrera@volvocarsnorthmiami.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "AUTOMOTIVE GROUP ENTERPRISES INC",
+      "phone": "(954)733-7555",
+      "email": "CARRIOMOTORCARS@GMAIL.COM"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "AVANTI MOTORSPORTS, LLC",
+      "phone": "(305)625-2453",
+      "email": "omar@ducatimiami.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "B O O INC",
+      "phone": "(954)967-4110",
+      "email": "ajockers@czag.net"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "BACHRODT FT LLC",
+      "phone": "(954)545-1000",
+      "email": "DKUBIAK@VTPGO.COM"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "BCG IMPORTS, LLC",
+      "phone": "(305)476-4019",
+      "email": "isabel.vicioso@thecollection.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "BCSS LTD",
+      "phone": "(954)971-3000",
+      "email": "kharty@loubachrodt.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "BCSS LTD",
+      "phone": "(954)971-4022",
+      "email": "lbachrodt@loubachrodt.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "BELLA AUTOMOTIVE GROUP LTD",
+      "phone": "(305)423-4482",
+      "email": "exec@headquarterauto.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "BIJ MOTORS CORAL GABLES LLC",
+      "phone": "(305)445-8593",
+      "email": "sjackson@dreammotorgroup.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "BIKEPASS MOTORSPORTS, INC.",
+      "phone": "(954)327-9014",
+      "email": "bikepassmotorsports@gmail.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "BINTELLI GC LLC",
+      "phone": "(803)405-8366",
+      "email": "John@BintelliGolfCarts.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "BMS PARTNERS LLC",
+      "phone": "(954)436-9905",
+      "email": "sam@browardmotorsports.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "BOMNIN AUTOMOTIVE LLC",
+      "phone": "(305)235-8200",
+      "email": "licenses@bomnin.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "BOMNIN AUTOMOTIVE-M LLC",
+      "phone": "(305)235-8200",
+      "email": "corporate@bomninauto.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "BOMNIN DORAL -S, LLC",
+      "phone": null,
+      "email": "corporate@bomnin.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "BOOM FLORIDA CORP",
+      "phone": "(954)361-4288",
+      "email": "attackmotors@gmail.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "BRAMAN CADILLAC MIAMI",
+      "phone": "(305)571-1200",
+      "email": "bshack@bramanmanagement.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "BRICKELL KEY ESTATES LLC",
+      "phone": "(786)329-0590",
+      "email": "info@bksdiscountsem.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "WARREN HENRY AUTO",
+      "phone": "(754)296-7602",
+      "email": "EDAY@WARRENHENRYAUTO.COM"
+    },
+    {
+      "county": "BROWARD",
+      "name": "B AUTOMOTIVE MANAGEMENT",
+      "phone": "(813)434-1992",
+      "email": "Official@morganautogroup.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "LOGISTICAL CONSULTANTS INC",
+      "phone": "(954)854-7395",
+      "email": "bmkgolfcarts@gmail.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MOTOR GROUP LLC",
+      "phone": "(954)543-6849",
+      "email": "dsvcs@aol.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MOTORSPORTS OF MIAMI, LLC",
+      "phone": "(305)557-1311",
+      "email": "carlosc@browardmotorsports.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MOTORSPORTS OF TEQUESTA",
+      "phone": "(561)748-9424",
+      "email": "monicat@browardmotorsports.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "CAR AUTO HOLDINGS LLC",
+      "phone": "(305)342-8500",
+      "email": "ealayeto@palmettoalfaromeofiat.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "CCG AUTOMOTIVE LLC",
+      "phone": "(954)574-4644",
+      "email": "NORM.ROHAN@KINGMAIL.US"
+    },
+    {
+      "county": "BROWARD",
+      "name": "CHOPPER ZOO, INC.",
+      "phone": "(954)467-9909",
+      "email": "liz@chopperzoo.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "COPANS MOTORS INC",
+      "phone": "(954)876-2227",
+      "email": "amy@champion-porsche.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "CORAL SPRINGS KGB",
+      "phone": "(954)656-6211",
+      "email": "jcomer@pageautos.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "CORAL SPRINGS NISSAN INC",
+      "phone": "(954)656-6211",
+      "email": "ddelgaudio@csamauto.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "CORAL SPRINGS-A, LLC",
+      "phone": "(954)509-8960",
+      "email": "dealerservices@lithia.com"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "CREEL TRACTOR FORT MYERS",
+      "phone": "(239)694-2185",
+      "email": "mark@creeltractor.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "DADELAND DODGE INC",
+      "phone": "(305)278-9994",
+      "email": "vivianl@dadelanddcj.com"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "DBBH MOTORS LLC",
+      "phone": "(561)404-5617",
+      "email": "LICENSING@BERKSHIREHATHAWAYAUTOMOTIVE.COM"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "DEALER SERVICES REMARKETING, INC.",
+      "phone": "(561)489-5999",
+      "email": "ben@dealerservices.net"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "DEEL SALES LLC",
+      "phone": "(305)444-2222",
+      "email": "rlinares@deelsales.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "US1 SCOOTERS FORT LAUDERDALE",
+      "phone": "(954)554-2725",
+      "email": "us1scooters@gmail.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "DORAL LINCOLN LLC",
+      "phone": "(786)845-0900",
+      "email": "kristina@doralautogroup.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "DORAL-HY, LLC",
+      "phone": "(786)610-7900",
+      "email": "emilypallans@lithia.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "DORAL-VW, LLC",
+      "phone": "(786)610-7750",
+      "email": "melbapasquier@lithia.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "EM SIL ENTERPRISES INC",
+      "phone": "(954)979-9422",
+      "email": "dlaber@trileasing.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "EMNOVA MOTORCYCLE CORP",
+      "phone": "(786)390-5634",
+      "email": "emnovacorp@yahoo.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "EUROPEAN CAR SALES OF AMERICA INC",
+      "phone": "(305)448-2989",
+      "email": "pk@imcmia.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "EVINMOTORS MIAMI, LLC",
+      "phone": "(305)651-4999",
+      "email": "chris@evinmotors.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "EXCLUSIVE AUTO GALLERY INC.",
+      "phone": "(305)471-5188",
+      "email": "EXCLUSIVEAUTOG@GMAIL.COM"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "EXPRESSWAY MOTORCARS INC",
+      "phone": "(305)261-2181",
+      "email": "sandi5941@yahoo.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "FACHE SCOOTER SHOP INC",
+      "phone": "(305)519-7904",
+      "email": "juanfache@Gmail.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "FAPOO LLC",
+      "phone": "(305)493-5100",
+      "email": "MPEREZ@HONDAOFAVENTURA.COM"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "FORD OF KENDALL LLC",
+      "phone": "(305)238-9211",
+      "email": "nabreu@doralautogroup.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "FRL AUTOMOTIVE LLC",
+      "phone": "(305)652-6500",
+      "email": "carlos.torres@TOYOTAOFNORTHMIAMI.COM"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "G F B ENTERPRISES LLC",
+      "phone": "(305)728-6819",
+      "email": "george.wiltz@kendalltoyota.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "G F B ENTERPRISES LLC",
+      "phone": "(305)728-6802",
+      "email": "george.wiltz@beanauto.com"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "GARBER DELRAY, INC.",
+      "phone": "(904)458-1372",
+      "email": "WMENTEL@GARBERAUTOMALL.COM"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "GATOR GOLF CARTS LLC",
+      "phone": "(561)328-1600",
+      "email": "info@gatorgolfcarts.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "GG CARTS LLC",
+      "phone": "(954)727-3003",
+      "email": "ggulahmad@ggcart.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "GOLD SCOOTERS INC",
+      "phone": "(786)736-5557",
+      "email": "goldscootersinc@gmail.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "GOLF CAR DEPOT HOLDINGS, LLC",
+      "phone": "(954)900-9900",
+      "email": "CULLAN@GOLFCARDEPOT.COM"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "GPI FL-A LLC",
+      "phone": "(305)952-5900",
+      "email": "speace@group1auto.com"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "GRIECO CHEVROLET DELRAY LLC",
+      "phone": "(561)265-6800",
+      "email": "droberts@griecocars.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "GRIECO CHEVROLET FORT LAUDERDALE LLC",
+      "phone": "(954)567-7000",
+      "email": "slee@griecocars.com"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "GRIECO FORD DELRAY LLC",
+      "phone": "(561)265-6800",
+      "email": "droberts@greicocars.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "GT OF FORT LAUDERDALE INC",
+      "phone": "(954)870-4375",
+      "email": "GT@drivetaverna.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "GUNTHER MOTOR CO",
+      "phone": "(954)590-3750",
+      "email": "GIRLEY@GUNTHERCREEK.NET"
+    },
+    {
+      "county": "BROWARD",
+      "name": "GUNTHER MOTOR COMPANY NEW VENTURES V, LLC",
+      "phone": "(954)453-6319",
+      "email": "JULIE@GUNTHERMOTORS.COM"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "GUNTHER MOTOR COMPANY NEW VENTURES, LLC",
+      "phone": "(561)266-2725",
+      "email": "cats@guntherdelray.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "HANANIA MIAMI, LLP",
+      "phone": "(786)882-5853",
+      "email": "controllers@HANANIAAUTOS.COM"
+    },
+    {
+      "county": "BROWARD",
+      "name": "HOLMAN AUTOMOTIVE INC",
+      "phone": "(954)779-2009",
+      "email": "wrichards@holmanauto.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "HOLMAN AUTOMOTIVE INC",
+      "phone": "(954)527-3841",
+      "email": "Carolyn.Markwell@AJG.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "HOLMAN AUTOMOTIVE INC",
+      "phone": "(954)764-1100",
+      "email": "william.richards@holman.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "HOLMAN AUTOMOTIVE INC",
+      "phone": "(954)335-0202",
+      "email": "335-0202SF1153066-1carolyn.markwell@holman.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "HOLMAN AUTOMOTIVE INC",
+      "phone": "(954)620-5050",
+      "email": "ACCOUNTING@holman.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "HOLMAN AUTOMOTIVE INC",
+      "phone": "(954)335-2040",
+      "email": "accounting@holmanauto.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "HOLMAN NORTH MIAMI LLC",
+      "phone": "(954)335-0202",
+      "email": "carolyn.markwell@holman.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "HOOLEY FAMILY MANAGEMENT INC",
+      "phone": "(954)584-2400",
+      "email": "MC@PLANTATIONFORD.COM"
+    },
+    {
+      "county": "BROWARD",
+      "name": "HOT SCOOTERS LLC",
+      "phone": "(954)923-3155",
+      "email": "INFO@SALENTOSCOOTERS.COM"
+    },
+    {
+      "county": "BROWARD",
+      "name": "JEFFREY-ALLEN INC",
+      "phone": "(800)282-6556",
+      "email": "ADMIN@JEFFREYALLENINC.COM"
+    },
+    {
+      "county": "BROWARD",
+      "name": "JM AUTO INC",
+      "phone": "(954)969-3211",
+      "email": "Juan.Morillo@jmlexus.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "JM MOTORSPORTS, LLC",
+      "phone": "(786)716-0328",
+      "email": "admin@jmhondamiami.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "KENDALL IMPORTS LLC",
+      "phone": "(305)728-6802",
+      "email": "george.wiltz@beanautomotive.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "LAMBRETTA SOUTH INC",
+      "phone": "(954)785-4820",
+      "email": "leslief@rivamotorsports.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "LAUDERHILL AUTO VENTURES LLC",
+      "phone": "(954)567-7000",
+      "email": "cuttal@griecocars.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "LEXIE SCOOTERS INC",
+      "phone": "(786)325-8236",
+      "email": "lexie.scooters@outlook.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "LIGHTHOUSE POINT AUTO INVESTORS I LLC",
+      "phone": "(954)545-7200",
+      "email": "CHARLIEM@PHILSMITHMANAGE.COM"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "LONG'S MOTORCYCLE SALES INC",
+      "phone": "(305)325-0775",
+      "email": "motomecca@comcast.net"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "LORENZO ENTERPRISES CORP",
+      "phone": "(305)247-5112",
+      "email": "johnh@lorenzoford.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "LORENZO ENTERPRISES FL, CORP",
+      "phone": "(954)648-7155",
+      "email": "tammyb@lorenzonissan.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "LORENZO L ENTERPRISES, LLC",
+      "phone": "(305)436-8400",
+      "email": "lorenzollerena@gmail.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "LUCID GROUP USA, INC.",
+      "phone": "(650)802-8181",
+      "email": "licensing@lucidmotors.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MALO AUTOMOTIVE GROUP INC",
+      "phone": "(954)433-7000",
+      "email": "jmalo@pinesford.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MAR-OCEAN, LLC",
+      "phone": "(305)864-2271",
+      "email": "alex@andreus.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MAROUN INVESTMENT, INC",
+      "phone": "(954)820-9920",
+      "email": "CHARLIE@TXTCHARLIE.COM"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MASTER MOTOSPORT LLC",
+      "phone": "(305)965-4844",
+      "email": "info@mastermotosport.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "METRO FORD INC",
+      "phone": "(305)751-9711",
+      "email": "barby@metroford.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MIAMI AUTOMOTIVE RETAIL INC",
+      "phone": "(305)777-2957",
+      "email": "jorge.azcue@brickellmotors.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MIAMI CAR CREDIT LLC",
+      "phone": "(305)705-3593",
+      "email": "dcomella@autoservicesunlimited.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MIAMI GARDENS-BG, LLC",
+      "phone": "(786)701-7900",
+      "email": "nataliarojas@lithia.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MIAMI SHORES AUTOMOTIVE, LLC",
+      "phone": "(305)754-7551",
+      "email": "vickih@tropicalchevrolet.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MIMASE, INC",
+      "phone": "(786)585-3807",
+      "email": "SMAUROUSA@GMAIL.COM"
+    },
+    {
+      "county": "PALM BEACH",
+      "name": "MJM BACHRODT LLC",
+      "phone": "(561)840-9800",
+      "email": "mjm@mjtrucknation.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MODEL",
+      "phone": "(463)242-8361",
+      "email": "compliance@model1.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MORSE OPERATIONS INC",
+      "phone": "(954)563-6331",
+      "email": "robertjohnson@edmorse.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MORSE OPERATIONS INC",
+      "phone": "(954)835-6900",
+      "email": "dennismacinnes@edmorse.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MOTOPORT US CORPORATION",
+      "phone": "(305)264-4433",
+      "email": "info@MOTOPORTUSA.COM"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MOTOR SHOP CENTER LLC",
+      "phone": "(305)381-5449",
+      "email": "motorshopcenter15@hotmail.com"
+    },
+    {
+      "county": "MIAMI-DADE",
+      "name": "MOTORCYCLES OF MIAMI INC",
+      "phone": "(786)845-0052",
+      "email": "windyg@motorcyclesofmiami.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MOTORS MARKET CORP",
+      "phone": "(786)854-9799",
+      "email": "MOTORSMARKETCORP@OUTLOOK.COM"
+    },
+    {
+      "county": "BROWARD",
+      "name": "MX MUD CLEANER USA INC",
+      "phone": "(954)781-7676",
+      "email": "mxmudcleaner@hotmail.com"
+    },
+    {
+      "county": "BROWARD",
+      "name": "NEXTRAN CORPORATION",
+      "phone": "(954)984-9494",
+      "email": "nsaiz@nextranusa.com"
+    }
+  ]
+}

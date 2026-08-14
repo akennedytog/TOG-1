@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Graph Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body { margin: 0; background: #0a0a1a; color: #e0e0ff; font-family: system-ui, sans-serif; }
+        #graph { width: 100vw; height: 100vh; }
+        .node circle { stroke: #fff; stroke-width: 1.5px; cursor: pointer; }
+        .node text { fill: #e0e0ff; font-size: 10px; pointer-events: none; }
+        .link { stroke: #555; stroke-opacity: 0.6; }
+        .link-label { fill: #888; font-size: 8px; }
+        .controls { position: fixed; top: 20px; left: 20px; z-index: 10; }
+        .controls input { background: #1a1a3a; border: 1px solid #444; color: #e0e0ff; padding: 8px 12px; border-radius: 6px; width: 300px; }
+        .controls button { background: #6c5ce7; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; margin-left: 8px; }
+        .info { position: fixed; bottom: 20px; left: 20px; background: rgba(10,10,26,0.9); padding: 12px 20px; border-radius: 8px; border: 1px solid #333; max-width: 400px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <input id="domainInput" type="text" placeholder="Enter domain description..." value="AI consulting for SMBs">
+        <button onclick="loadGraph()">Analyze</button>
+    </div>
+    <div id="graph"></div>
+    <div id="info" class="info"></div>
+    <script>
+        let svg, simulation, width, height;
+        
+        function init() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            svg = d3.select("#graph").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .style("background", "#0a0a1a");
+            
+            svg.append("defs").append("marker")
+                .attr("id", "arrowhead")
+                .attr("viewBox", "0 -5 10 10")
+                .attr("refX", 20)
+                .attr("refY", 0)
+                .attr("markerWidth", 6)
+                .attr("markerHeight", 6)
+                .attr("orient", "auto")
+                .append("path")
+                .attr("d", "M0,-5L10,0L0,5")
+                .attr("fill", "#555");
+        }
+        
+        async function loadGraph() {
+            const domain = document.getElementById("domainInput").value;
+            document.getElementById("info").style.display = "none";
+            
+            try {
+                const resp = await fetch("/api/quick", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({domain: domain})
+                });
+                const data = await resp.json();
+                
+                // Build graph data from knowledge graph
+                const kg = data.knowledge_graph || {};
+                const entities = kg.entities || [];
+                const relationships = kg.relationships || [];
+                
+                const nodes = entities.map(e => ({id: e.name, group: e.type || "entity"}));
+                const links = relationships.map(r => ({
+                    source: r.source,
+                    target: r.target,
+                    label: r.type || "related"
+                }));
+                
+                renderGraph(nodes, links, data);
+            } catch(e) {
+                console.error("Error:", e);
+            }
+        }
+        
+        function renderGraph(nodes, links, data) {
+            svg.selectAll("*").remove();
+            
+            const g = svg.append("g");
+            
+            const zoom = d3.zoom()
+                .scaleExtent([0.1, 4])
+                .on("zoom", (event) => g.attr("transform", event.transform));
+            svg.call(zoom);
+            
+            simulation = d3.forceSimulation(nodes)
+                .force("link", d3.forceLink(links).id(d => d.id).distance(100))
+                .force("charge", d3.forceManyBody().strength(-200))
+                .force("center", d3.forceCenter(width/2, height/2))
+                .force("collision", d3.forceCollide().radius(30));
+            
+            const link = g.append("g")
+                .selectAll("line")
+                .data(links)
+                .join("line")
+                .attr("class", "link")
+                .attr("marker-end", "url(#arrowhead)")
+                .attr("stroke-width", 1.5);
+            
+            const linkLabel = g.append("g")
+                .selectAll("text")
+                .data(links)
+                .join("text")
+                .attr("class", "link-label")
+                .text(d => d.label);
+            
+            const node = g.append("g")
+                .selectAll("g")
+                .data(nodes)
+                .join("g")
+                .attr("class", "node")
+                .call(d3.drag()
+                    .on("start", (event, d) => { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+                    .on("drag", (event, d) => { d.fx = event.x; d.fy = event.y; })
+                    .on("end", (event, d) => { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+            
+            const colors = {"entity": "#6c5ce7", "concept": "#00b894", "person": "#e17055", "company": "#0984e3", "technology": "#fdcb6e"};
+            
+            node.append("circle")
+                .attr("r", 12)
+                .attr("fill", d => colors[d.group] || "#6c5ce7");
+            
+            node.append("text")
+                .text(d => d.id)
+                .attr("x", 16)
+                .attr("y", 4);
+            
+            node.on("click", (event, d) => {
+                const info = document.getElementById("info");
+                info.style.display = "block";
+                info.innerHTML = `<strong>${d.id}</strong><br>Type: ${d.group}`;
+            });
+            
+            simulation.on("tick", () => {
+                link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+                linkLabel.attr("x", d => (d.source.x + d.target.x)/2)
+                    .attr("y", d => (d.source.y + d.target.y)/2);
+                node.attr("transform", d => `translate(${d.x},${d.y})`);
+            });
+            
+            // Show insights
+            if (data.top_insights && data.top_insights.length > 0) {
+                const info = document.getElementById("info");
+                info.style.display = "block";
+                info.innerHTML = "<strong>Top Insights</strong><br>" + data.top_insights.slice(0,3).map((ins, i) => `${i+1}. ${ins}`).join("<br>");
+            }
+        }
+        
+        init();
+        loadGraph();
+        window.addEventListener("resize", () => { width = window.innerWidth; height = window.innerHeight; svg.attr("width", width).attr("height", height); });
+    </script>
+</body>
+</html>

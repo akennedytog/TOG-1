@@ -1,0 +1,988 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-19T16:26:07.397Z",
+  "entries": {
+    "memory:memory/2026-03-09.md:1:2": {
+      "key": "memory:memory/2026-03-09.md:1:2",
+      "path": "memory/2026-03-09.md",
+      "startLine": 1,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "[09:42 CDT] User will update OpenClaw CLI to v2026.3.8 from home network later.",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.398332342505455,
+      "maxScore": 0.47731722891330713,
+      "firstRecalledAt": "2026-04-06T16:17:09.839Z",
+      "lastRecalledAt": "2026-05-05T03:25:35.626Z",
+      "queryHashes": [
+        "082fa576e36f",
+        "a101f75827a3",
+        "93ea6cccdd60"
+      ],
+      "recallDays": [
+        "2026-04-06",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "network",
+        "v2026.3.8",
+        "cdt",
+        "will",
+        "update",
+        "openclaw",
+        "cli",
+        "home"
+      ]
+    },
+    "memory:memory/2026-04-01.md:243:313": {
+      "key": "memory:memory/2026-04-01.md:243:313",
+      "path": "memory/2026-04-01.md",
+      "startLine": 243,
+      "endLine": 313,
+      "source": "memory",
+      "snippet": "- Total impressions: 12,450 - Engagement rate: 2.8% - Top performing post: \"AI Data Myth\" (3,200 impressions) **C. Email Campaign Metrics:** - Emails sent (7 days): 24 - Open rate: 42% - Click rate: 12% - Reply rate: 8% - Conversion to meeting: 4% **D. Twitter Analytics:** - Posts published: 7 - Impressions: 8,900 - Engagements: 245 - Profile visits: 67 - New followers: +12 **E. System Performance:** - Agent task completion rate: 100% - Average task duration: 14 minutes - Error rate: 0% --- ### 8. JERRY — General Support Agent **Task:** Support tasks & backlog items **Status:** ✅ COMPLETED **Support Activity:** **A. Content Research:** - Researched 5 AI news stories for Dante - Compil",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9433308465398849,
+      "maxScore": 0.5493451310314239,
+      "firstRecalledAt": "2026-04-09T13:00:40.307Z",
+      "lastRecalledAt": "2026-04-16T13:01:15.900Z",
+      "queryHashes": [
+        "dac6954e91b5",
+        "90fbc0464e45"
+      ],
+      "recallDays": [
+        "2026-04-09",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "2.8",
+        "total",
+        "impressions",
+        "12,450",
+        "engagement",
+        "rate",
+        "top",
+        "performing"
+      ]
+    },
+    "memory:memory/2026-04-01.md:189:257": {
+      "key": "memory:memory/2026-04-01.md:189:257",
+      "path": "memory/2026-04-01.md",
+      "startLine": 189,
+      "endLine": 257,
+      "source": "memory",
+      "snippet": "- Tested all third-party connections - Status: All systems operational **Code Commits:** - 3 commits to main branch - 0 breaking changes --- ### 6. OPAL — Operations Agent **Task:** Daily operations & system health **Status:** ✅ COMPLETED **Operations Activity:** **A. System Health Checks:** - ✅ Memory usage: 68% (normal) - ✅ Disk space: 78% available - ✅ API rate limits: All within limits - ✅ Cron jobs: 12/12 running - ✅ Backup status: Last backup 6 hours ago **B. Cost Monitoring:** - OpenAI API: $2.34 (within budget) - Firecrawl: $0.89 (within budget) - ElevenLabs: $0.00 (no usage) - Total daily cost: $3.23 **C. Workflow Optimization:** - Identified 2 bottlenecks in content pipeline",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.3672605988818494,
+      "maxScore": 0.5113550160054359,
+      "firstRecalledAt": "2026-04-09T13:00:40.307Z",
+      "lastRecalledAt": "2026-04-16T13:01:15.900Z",
+      "queryHashes": [
+        "dac6954e91b5",
+        "cea68bc6edc7",
+        "90fbc0464e45"
+      ],
+      "recallDays": [
+        "2026-04-09",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "backup",
+        "openai",
+        "third-party",
+        "12/12",
+        "2.34",
+        "0.89",
+        "0.00",
+        "3.23"
+      ]
+    },
+    "memory:memory/2026-02-27.md:1:7": {
+      "key": "memory:memory/2026-02-27.md:1:7",
+      "path": "memory/2026-02-27.md",
+      "startLine": 1,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "- Discussed social media growth plan for @TheOneGroupAI on X - Agreed posting cadence: 3 posts per day, with staggered times (morning, midday, evening) across tactical advice, news analysis, and engagement posts - Daily outreach: follow 20-30 relevant AI/tech accounts, engage 10-15 posts twice daily with informative comments (non-sales) - Growth goal: +100 followers/day, track metrics in spreadsheet, test small promotions - Bio refinement: add specific hook, weekly pinned resource - Weekly review every Friday for engagement metrics, top engaged accounts, adjust next week's pillar topics - User requests: monitor post style engagement, self-audit weekly, and keep memory of all social plan disc",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.8684634298086165,
+      "maxScore": 0.3853304356336593,
+      "firstRecalledAt": "2026-04-09T13:00:40.307Z",
+      "lastRecalledAt": "2026-05-17T21:11:18.202Z",
+      "queryHashes": [
+        "dac6954e91b5",
+        "385e8d6d91f4",
+        "a43f7c1f51b3",
+        "559f5f898d93",
+        "e0fa1fe434ef"
+      ],
+      "recallDays": [
+        "2026-04-09",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "20-30",
+        "ai/tech",
+        "10-15",
+        "non-sales",
+        "followers/day",
+        "self-audit",
+        "discussed",
+        "social"
+      ]
+    },
+    "memory:memory/2026-04-01.md:1:63": {
+      "key": "memory:memory/2026-04-01.md:1:63",
+      "path": "memory/2026-04-01.md",
+      "startLine": 1,
+      "endLine": 63,
+      "source": "memory",
+      "snippet": "# Daily Agent Task Log — April 1, 2026 ## Agent Task Execution Summary ### Schedule Executed - **9:00 AM** — Lead Discovery (Arlo) - **8:00 AM** — Content Generation (Dante) - **9:00 AM** — Twitter Post #1 (Dante) - **10:00 AM** — Canva Templates (Dante) - **2:00 PM** — Email Follow-ups (Iris) - **3:00 PM** — Twitter Post #2 (Dante) - **9:00 PM** — Twitter Post #3 (Dante) --- ## Agent Outputs ### 1. ARLO — Lead Research Agent **Task:** Discover 20 new leads for South Florida campaign **Status:** ✅ COMPLETED **New Leads Discovered Today:** Generated 20 new qualified leads across South Florida targeting: - HVAC companies (peak season approaching) - Law firms (intake automation opportunit",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3797177404165268,
+      "maxScore": 0.3797177404165268,
+      "firstRecalledAt": "2026-04-16T13:01:15.900Z",
+      "lastRecalledAt": "2026-04-16T13:01:15.900Z",
+      "queryHashes": [
+        "90fbc0464e45"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "follow-ups",
+        "task",
+        "log",
+        "april",
+        "execution",
+        "summary",
+        "schedule",
+        "executed"
+      ]
+    },
+    "memory:memory/2026-04-01.md:300:321": {
+      "key": "memory:memory/2026-04-01.md:300:321",
+      "path": "memory/2026-04-01.md",
+      "startLine": 300,
+      "endLine": 321,
+      "source": "memory",
+      "snippet": "| Total Agents Active | 8/8 | | Tasks Completed | 12/12 | | New Leads Generated | 20 | | Content Pieces Created | 6 | | Emails Sent | 16 | | System Uptime | 100% | | Errors | 0 | ## Next Scheduled Tasks **Tomorrow (April 2):** - 8:00 AM — Content generation (Dante) - 9:00 AM — Twitter post (Dante) - 2:00 PM — Email follow-ups (Iris) - 3:00 PM — Twitter post (Dante) - 9:00 PM — Twitter post (Dante) --- *Generated by Agent Orchestration System* *Timestamp: 2026-04-01 09:55 AM EDT*",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36654241383075714,
+      "maxScore": 0.36654241383075714,
+      "firstRecalledAt": "2026-04-16T13:01:15.900Z",
+      "lastRecalledAt": "2026-04-16T13:01:15.900Z",
+      "queryHashes": [
+        "90fbc0464e45"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "8/8",
+        "12/12",
+        "follow-ups",
+        "total",
+        "agents",
+        "active",
+        "tasks",
+        "completed"
+      ]
+    },
+    "memory:memory/2026-02-21.md:1:16": {
+      "key": "memory:memory/2026-02-21.md:1:16",
+      "path": "memory/2026-02-21.md",
+      "startLine": 1,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "- Assistant persona & strategy for @TheOneGroupAI: - Voice: thought leader, insightful, approachable, witty - Content pillars: industry insights, research highlights, community spotlights, behind-the-scenes, sales pitches in original posts only - Cadence: 3–4 original posts per weekday; 2–3 comments daily; 1 weekly deep dive thread - Week 1 calendar: • Mon AM: AI industry roundup • Mon PM: Thread on new research paper • Tue AM: Community spotlight on open-source tool • Tue PM: TheOneGroupAI news/pitch • Wed AM: Quick AI tip or myth-bust • Wed PM: Comment on influencer thread • Thu AM: Behind-the-scenes team highlight • Thu PM: Reaction to trending news",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7555415540933609,
+      "maxScore": 0.3969267666339874,
+      "firstRecalledAt": "2026-04-25T01:38:26.982Z",
+      "lastRecalledAt": "2026-05-17T21:11:18.202Z",
+      "queryHashes": [
+        "385e8d6d91f4",
+        "e0fa1fe434ef"
+      ],
+      "recallDays": [
+        "2026-04-24",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "behind-the-scenes",
+        "open-source",
+        "news/pitch",
+        "myth-bust",
+        "persona",
+        "strategy",
+        "theonegroupai",
+        "voice"
+      ]
+    },
+    "memory:memory/2026-04-05.md:34:66": {
+      "key": "memory:memory/2026-04-05.md:34:66",
+      "path": "memory/2026-04-05.md",
+      "startLine": 34,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "- Sets up: 8 agents, routing config, cron schedule, documentation - Usage: `./install-openclaw.sh \"client-name\"` - Reduces setup time from 2-4 hours to 30-45 minutes - Ready for client deployments at $500/install ## Mission Control Dashboard Restored - Found and restored the \"good\" Mission Control (backup version with Tailwind CSS) - Previous version was stripped/plain CSS, backup had full styling with tabs - User confirmed: \"way more in depth\" version now active - Location: `~/.openclaw/workspace/MISSION_CONTROL.html` ## Mission Control Updates (Evening) - Added **Skills tab** with active/in-progress/blocked status - Active: Browser-use, 1Password, Gmail (gog) - In Progress: LinkedIn auth",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.951164664907892,
+      "maxScore": 0.5825669845776156,
+      "firstRecalledAt": "2026-04-27T15:51:55.137Z",
+      "lastRecalledAt": "2026-05-06T03:08:03.378Z",
+      "queryHashes": [
+        "d47b50eb75d3",
+        "ceef54153674"
+      ],
+      "recallDays": [
+        "2026-04-27",
+        "2026-05-05"
+      ],
+      "conceptTags": [
+        "backup",
+        "install-openclaw.sh",
+        "client-name",
+        "2-4",
+        "30-45",
+        "500/install",
+        "stripped/plain",
+        "active/in-progress/blocked"
+      ]
+    },
+    "memory:memory/2026-04-30.md:1:48": {
+      "key": "memory:memory/2026-04-30.md:1:48",
+      "path": "memory/2026-04-30.md",
+      "startLine": 1,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "# Daily Content Refresh - April 30, 2026 ## Sources Checked ✅ Hacker News ✅ Reddit r/OpenClaw ✅ TechCrunch AI ## Trending Topics Found ### Hacker News (Top Stories) 1. **Zed 1.0 released** - 1,943 points, 615 comments (#7) - Rust-based code editor now stable - Collaborative editing, AI-native features - 100% open source core 2. **Copy Fail** - 1,119 points, 403 comments (#9) - Clipboard security/privacy concerns - Viral security awareness post 3. **Cursor Camp** - 1,028 points, 166 comments (#15) - Neal.fun viral page about Cursor editor - Creative marketing approach 4. **Where the goblins came from** - 776 points, 462 comments (#5) - OpenAI creative writin",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4774453818798065,
+      "maxScore": 0.4774453818798065,
+      "firstRecalledAt": "2026-05-03T07:39:02.841Z",
+      "lastRecalledAt": "2026-05-03T07:39:02.841Z",
+      "queryHashes": [
+        "cc0240062c3a"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "openai",
+        "r/openclaw",
+        "1.0",
+        "rust-based",
+        "ai-native",
+        "security/privacy",
+        "neal.fun",
+        "content"
+      ]
+    },
+    "memory:memory/2026-04-30.md:38:103": {
+      "key": "memory:memory/2026-04-30.md:38:103",
+      "path": "memory/2026-04-30.md",
+      "startLine": 38,
+      "endLine": 103,
+      "source": "memory",
+      "snippet": "- Smaller models competing with larger ones ### Reddit r/OpenClaw - Anti-slop rules now officially active - Community moderating for quality content - Weekend showcase rules being enforced - Reports helping clean up low-value posts ### TechCrunch AI - **Anthropic $50B raise at $900B valuation** - Major funding news - Microsoft reports 20M+ paid Copilot users - Meta business AI: 10M conversations/week - Google Cloud surpasses $20B revenue ## Posts Generated for Today (April 30) ### Morning (9am) - Zed 1.0 Release **Theme:** Editor renaissance / Developer tooling ``` Zed 1.0 just dropped (1,943 points on HN) The Rust-based editor is finally stable. What caught my eye: • Collaborative",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.443210369348526,
+      "maxScore": 0.443210369348526,
+      "firstRecalledAt": "2026-05-03T07:39:02.841Z",
+      "lastRecalledAt": "2026-05-03T07:39:02.841Z",
+      "queryHashes": [
+        "cc0240062c3a"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "r/openclaw",
+        "anti-slop",
+        "low-value",
+        "conversations/week",
+        "1.0",
+        "rust-based",
+        "smaller",
+        "models"
+      ]
+    },
+    "memory:memory/2026-04-29.md:1:52": {
+      "key": "memory:memory/2026-04-29.md:1:52",
+      "path": "memory/2026-04-29.md",
+      "startLine": 1,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "# Daily Content Refresh - April 29, 2026 ## Sources Checked ✅ Hacker News ✅ Reddit r/OpenClaw ✅ TechCrunch AI ## Trending Topics Found ### Hacker News (Top Stories) 1. **Ghostty leaving GitHub** - 2,818 points, 837 comments (#2) - Founder leaving after 15 years due to platform decay - Major terminal development community news 2. **Warp now open source** - 300 points, 84 comments (#24) - Rust-based terminal going open source - Follows Ghostty's similar pattern 3. **Who owns code Claude Code wrote** - 440 points, 405 comments (#21) - Legal discussion on AI-generated code ownership 4. **Talkie: 13B vintage language model from 1930** - 716 points (#23) - Novel AI pro",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.43619016110897063,
+      "maxScore": 0.43619016110897063,
+      "firstRecalledAt": "2026-05-03T07:39:02.841Z",
+      "lastRecalledAt": "2026-05-03T07:39:02.841Z",
+      "queryHashes": [
+        "cc0240062c3a"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "r/openclaw",
+        "rust-based",
+        "ai-generated",
+        "content",
+        "refresh",
+        "april",
+        "sources",
+        "checked"
+      ]
+    },
+    "memory:memory/2026-04-29.md:38:98": {
+      "key": "memory:memory/2026-04-29.md:38:98",
+      "path": "memory/2026-04-29.md",
+      "startLine": 38,
+      "endLine": 98,
+      "source": "memory",
+      "snippet": "## Posts Generated for Today (April 29) ### Morning (9am) - Ghostty Leaving GitHub **Theme:** Platform independence / Developer tooling ``` Ghostty is leaving GitHub (2.8K points, 837 comments) MITCHELL HAS THE RIGHT IDEA After 15 years of GitHub, Ghostty's founder is walking. Why? Platform decay. Same reason we built Mission Control: When you outsource your workflow to a platform that doesn't care about you... You eventually pay the price. ``` ### Afternoon (3pm) - Open Source Terminal Trend **Theme:** Question / Engagement ``` Warp is now open source (300 points, 84 comments) Terminal renaissance happening: Ghostty → New Zig-based terminal Warp → Open sourcing their Rust terminal",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4082860678434372,
+      "maxScore": 0.4082860678434372,
+      "firstRecalledAt": "2026-05-03T07:39:02.841Z",
+      "lastRecalledAt": "2026-05-03T07:39:02.841Z",
+      "queryHashes": [
+        "cc0240062c3a"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "2.8k",
+        "zig-based",
+        "posts",
+        "generated",
+        "april",
+        "morning",
+        "9am",
+        "ghostty"
+      ]
+    },
+    "memory:memory/2026-04-30.md:89:135": {
+      "key": "memory:memory/2026-04-30.md:89:135",
+      "path": "memory/2026-04-30.md",
+      "startLine": 89,
+      "endLine": 135,
+      "source": "memory",
+      "snippet": "This is the flip side of AI acceleration: When contribution quality matters more than contribution speed, the math changes. For OpenClaw skills? I'm pro-AI. For kernel code? I get the hesitation. Where's your line? ``` ### Evening (9pm) - Anthropic Funding Insanity **Theme:** Behind the scenes / Market observation ``` Anthropic might raise $50B at a $900B valuation. Let that sink in: • $900B = ~3x OpenAI's reported valuation • $50B round = larger than most tech IPOs • All while OpenAI is restructuring to for-profit The AI race isn't slowing down. It's accelerating so fast the funding rounds are becoming incomprehensible. Question is: what does a $900B AI company actually DO differ",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.40706247091293335,
+      "maxScore": 0.40706247091293335,
+      "firstRecalledAt": "2026-05-03T07:39:02.841Z",
+      "lastRecalledAt": "2026-05-03T07:39:02.841Z",
+      "queryHashes": [
+        "cc0240062c3a"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "openai",
+        "pro-ai",
+        "for-profit",
+        "flip",
+        "side",
+        "acceleration",
+        "when",
+        "contribution"
+      ]
+    },
+    "memory:memory/2026-05-03.md:1:41": {
+      "key": "memory:memory/2026-05-03.md:1:41",
+      "path": "memory/2026-05-03.md",
+      "startLine": 1,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "# Daily Content Refresh - May 3, 2026 ## Sources Checked ✅ Hacker News ✅ Reddit r/OpenClaw ✅ Previous state.json ## Trending Topics Found ### Hacker News (Top Stories) 1. **VS Code inserting 'Co-Authored-by Copilot' into commits** - 1,093 points, 516 comments - Automatic AI attribution in git commits - Major discussion about AI attribution in development workflows - SMBs using VS Code/Copilot need awareness 2. **Kimi K2.6 beat Claude, GPT-5.5, and Gemini in coding** - 232 points, 106 comments - Chinese open-weights model outperforming Western models - Important for cost-effective AI coding assistants 3. **Maryland to ban A.I.-driven price increases in grocery stores** - 1",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.35128205120563505,
+      "maxScore": 0.35128205120563505,
+      "firstRecalledAt": "2026-05-05T03:25:35.626Z",
+      "lastRecalledAt": "2026-05-05T03:25:35.626Z",
+      "queryHashes": [
+        "93ea6cccdd60"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "gpt",
+        "r/openclaw",
+        "state.json",
+        "co-authored-by",
+        "code/copilot",
+        "k2.6",
+        "gpt-5.5",
+        "open-weights"
+      ]
+    },
+    "memory:memory/2026-03-31.md:1:45": {
+      "key": "memory:memory/2026-03-31.md:1:45",
+      "path": "memory/2026-03-31.md",
+      "startLine": 1,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "# Memory Log — March 31, 2026 ## Blog Posts Published to theonegroup.info **Successfully deployed 3 new blog posts via Netlify:** | Post | URL | Date | Notes | |------|-----|------|-------| | The AI Data Myth | /blog/ai-data-myth.html | Mar 25 | Why small data beats big data for SMBs | | Why Tight Feedback Loops Beat Big Models | /blog/tight-feedback-loops.html | Mar 30 | Speed of iteration over model size | | The OpenClaw Advantage | /blog/openclaw-github-agents.html | Mar 22 | 50 AI agents that replace dev coordination | **Deployment confirmed:** All posts live at https://theonegroup.info/blog.html **Mission Control updated:** Posts marked as Published ✓ ## Twitter Content Strategy Up",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.0699624163117654,
+      "maxScore": 0.548458950466169,
+      "firstRecalledAt": "2026-05-06T03:08:03.378Z",
+      "lastRecalledAt": "2026-05-17T17:43:39.465Z",
+      "queryHashes": [
+        "ceef54153674",
+        "559f5f898d93"
+      ],
+      "recallDays": [
+        "2026-05-05",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "theonegroup.info",
+        "blog/ai-data-myth.html",
+        "blog/tight-feedback-loops.html",
+        "blog/openclaw-github-agents.html",
+        "theonegroup.info/blog.html",
+        "log",
+        "march",
+        "blog"
+      ]
+    },
+    "memory:memory/2026-04-05.md:1:40": {
+      "key": "memory:memory/2026-04-05.md:1:40",
+      "path": "memory/2026-04-05.md",
+      "startLine": 1,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "# Memory Log - April 5, 2026 ## Blog Fixes - Fixed blog.html to show new OpenClaw optimization post - Post now appears at top of blog grid with \"NEW\" tag - Live at: theonegroup.info/blog.html ## GitHub Lead Generation - Created strategy for finding OpenClaw installation leads - Identified 10 realistic prospect profiles with pain points: - Node.js version issues - Docker setup failures - API key confusion - Windows installation problems - @busy-ceo (ready to pay $500+) - @marketing-pro (non-technical, overwhelmed) - @startup-founder (frustrated after 3 hours) - Created ready-to-send outreach messages for top 3 leads - Expected conversion: 10 outreach → 3-4 replies → 1-2 calls",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5069070001943008,
+      "maxScore": 0.5069070001943008,
+      "firstRecalledAt": "2026-05-06T03:08:03.378Z",
+      "lastRecalledAt": "2026-05-06T03:08:03.378Z",
+      "queryHashes": [
+        "ceef54153674"
+      ],
+      "recallDays": [
+        "2026-05-05"
+      ],
+      "conceptTags": [
+        "blog.html",
+        "theonegroup.info/blog.html",
+        "node.js",
+        "busy-ceo",
+        "marketing-pro",
+        "non-technical",
+        "startup-founder",
+        "ready-to-send"
+      ]
+    },
+    "memory:memory/2026-05-05.md:1:54": {
+      "key": "memory:memory/2026-05-05.md:1:54",
+      "path": "memory/2026-05-05.md",
+      "startLine": 1,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "# Memory Log - May 5, 2026 ## Scout CRM Module Built **Created three files:** 1. `scout_analyzer.py` - AI-powered sales report analysis (6045 bytes) 2. `scout_api.py` - Flask API server for uploads and queries (2784 bytes) 3. `scout_crm.html` - Full standalone CRM interface (17275 bytes) **Mission Control Integration:** - Replaced Scout section with functional CRM interface - Added upload zone with drag & drop - Added quick insights grid (Top Performers, Accounts at Risk, Call Today, SKUs Down) - Added recent reports list - Added JavaScript functions for API communication **Features:** - Upload CSV, Excel, PDF reports - AI analysis using OpenAI GPT-4o-mini - Actionable insights (not ju",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.35610331892967223,
+      "maxScore": 0.35610331892967223,
+      "firstRecalledAt": "2026-05-06T17:18:36.633Z",
+      "lastRecalledAt": "2026-05-06T17:18:36.633Z",
+      "queryHashes": [
+        "d37d15595fd2"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "gpt",
+        "openai",
+        "scout-analyzer.py",
+        "ai-powered",
+        "scout-api.py",
+        "scout-crm.html",
+        "gpt-4o-mini",
+        "log"
+      ]
+    },
+    "memory:memory/2026-05-10.md:1:46": {
+      "key": "memory:memory/2026-05-10.md:1:46",
+      "path": "memory/2026-05-10.md",
+      "startLine": 1,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "## BabyNest One-Stop Pregnancy Shop - Major Update ### Dashboard Completely Rebuilt - May 10, 2026 #### Insurance Card Scanner Fixed - Fixed OCR API to use OpenAI GPT-4 Vision properly - Now analyzes actual uploaded images and extracts insurance details - Provides clear explanations of coverage for newborns #### New Dashboard Tabs Created 1. **Financial Tasks** - State-specific and national task lists with detailed guides 2. **Hospital Bag** - Interactive packing checklist with: - 30+ items organized by category (Mom, Baby, Partner, Tech, Comfort, Documents) - Essential vs nice-to-have distinction - Progress tracking - Pro tips section 3. **Contraction Timer** - Labor trackin",
+      "recallCount": 6,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.4914377745742797,
+      "maxScore": 0.541580792939186,
+      "firstRecalledAt": "2026-05-11T14:49:17.690Z",
+      "lastRecalledAt": "2026-05-19T16:26:07.397Z",
+      "queryHashes": [
+        "d84b096a277a",
+        "bcf4bc017727",
+        "5fe0c6bbfc30",
+        "941a47df6e8e",
+        "e4f5dc9a563e",
+        "a39c11bf5e65"
+      ],
+      "recallDays": [
+        "2026-05-11",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "gpt",
+        "openai",
+        "one-stop",
+        "gpt-4",
+        "state-specific",
+        "nice-to-have",
+        "babynest",
+        "one"
+      ]
+    },
+    "memory:memory/2026-05-10.md:35:66": {
+      "key": "memory:memory/2026-05-10.md:35:66",
+      "path": "memory/2026-05-10.md",
+      "startLine": 35,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "- Baby care after birth - Emergency/C-section preferences - Visitor preferences - Printable birth plan 6. **Insurance** - Card scanner and coverage info #### Dashboard Features - Tab-based navigation for all features - Pregnancy week and trimester display in header - AI chat assistant on sidebar - Mobile-responsive design - Professional, clean interface ### Technical Changes - Created TaskManager component (separated from main dashboard) - Added Tabs component from shadcn/ui - Created 5 new feature components: - HospitalBagPlanner.tsx - ContractionTimer.tsx - KickCounter.tsx - BirthPlanBuilder.tsx - TaskManager.tsx - Updated dashboard layout with tab navigation - Fix",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.2588227099534897,
+      "maxScore": 0.489018041526976,
+      "firstRecalledAt": "2026-05-11T14:49:17.690Z",
+      "lastRecalledAt": "2026-05-19T04:55:03.084Z",
+      "queryHashes": [
+        "d84b096a277a",
+        "5fe0c6bbfc30",
+        "e4f5dc9a563e"
+      ],
+      "recallDays": [
+        "2026-05-11",
+        "2026-05-13",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "emergency/c-section",
+        "tab-based",
+        "mobile-responsive",
+        "shadcn/ui",
+        "hospitalbagplanner.tsx",
+        "contractiontimer.tsx",
+        "kickcounter.tsx",
+        "birthplanbuilder.tsx"
+      ]
+    },
+    "memory:memory/2026-05-14.md:1:32": {
+      "key": "memory:memory/2026-05-14.md:1:32",
+      "path": "memory/2026-05-14.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# Memory - May 14, 2026 ## BabyNest Development Session ### Completed Work - Successfully built all 6 differentiation features for BabyNest app: 1. Financial Timeline by Trimester (week-by-week pregnancy finance deadlines) 2. Hospital Cost Comparison Tool (ZIP code search with cost comparison) 3. Financial Readiness Score (12-question quiz with 0-100 scoring) 4. Money-Saving Milestones (gamified task tracker with badges) 5. Baby Name + 529 Projection (name picker with compound growth calculator) 6. State Insurance Dashboard Enhancement (state-specific enrollment deadlines) ### Files Created - `/Users/aleckennedy/.openclaw/workspace/babynest/app/financial-timeline/page.tsx` (14",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3727460145950317,
+      "maxScore": 0.3727460145950317,
+      "firstRecalledAt": "2026-05-14T14:35:57.318Z",
+      "lastRecalledAt": "2026-05-14T14:35:57.318Z",
+      "queryHashes": [
+        "941a47df6e8e"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "week-by-week",
+        "12-question",
+        "0-100",
+        "money-saving",
+        "state-specific",
+        "users/aleckennedy",
+        "may",
+        "babynest"
+      ]
+    },
+    "memory:memory/2026-05-13.md:1:34": {
+      "key": "memory:memory/2026-05-13.md:1:34",
+      "path": "memory/2026-05-13.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# Memory Log - May 13, 2026 ## BabyNest Deployment Session ### Newsletter System - COMPLETE - Created newsletter subscription API at `/api/newsletter/route.ts` - Stores subscribers in Supabase `newsletter_subscribers` table - Added admin dashboard at `/admin/newsletter` with authentication - Blog page has working newsletter signup form ### Deployment Attempts - IN PROGRESS - Multiple Netlify deploy attempts with various fixes - Key fixes applied: - Added missing `zod` dependency - Added `tailwind.config.js` - Fixed TypeScript errors in push notification routes - Removed problematic Stripe and push/send routes temporarily - Blocker: Stripe API keys needed in environment variables",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7187083512544632,
+      "maxScore": 0.3673195093870163,
+      "firstRecalledAt": "2026-05-14T14:35:57.318Z",
+      "lastRecalledAt": "2026-05-19T04:55:03.084Z",
+      "queryHashes": [
+        "941a47df6e8e",
+        "e4f5dc9a563e"
+      ],
+      "recallDays": [
+        "2026-05-14",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "api/newsletter/route.ts",
+        "newsletter-subscribers",
+        "admin/newsletter",
+        "tailwind.config.js",
+        "push/send",
+        "log",
+        "may",
+        "babynest"
+      ]
+    },
+    "memory:memory/2026-05-14.md:26:58": {
+      "key": "memory:memory/2026-05-14.md:26:58",
+      "path": "memory/2026-05-14.md",
+      "startLine": 26,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "### Technical Notes - Built directly (no subagents) due to model availability issues - Used Ollama kimi-k2.5:cloud for all implementation - Followed existing BabyNest design system (Tailwind, warm colors) - All components are responsive TypeScript React # Memory - May 14, 2026 ## BabyNest Development Session ### Completed Work - Successfully built all 6 differentiation features for BabyNest app: 1. Financial Timeline by Trimester (week-by-week pregnancy finance deadlines) 2. Hospital Cost Comparison Tool (ZIP code search with cost comparison) 3. Financial Readiness Score (12-question quiz with 0-100 scoring) 4. Money-Saving Milestones (gamified task tracker with badges) 5. Baby",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.6419129341840744,
+      "maxScore": 0.453020903468132,
+      "firstRecalledAt": "2026-05-16T20:43:23.338Z",
+      "lastRecalledAt": "2026-05-19T16:26:07.397Z",
+      "queryHashes": [
+        "5a3529ecc9fc",
+        "e4f5dc9a563e",
+        "706302adf6de",
+        "a39c11bf5e65"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "kimi-k2.5",
+        "week-by-week",
+        "12-question",
+        "0-100",
+        "money-saving",
+        "technical",
+        "built",
+        "directly"
+      ]
+    },
+    "memory:memory/2026-05-14.md:50:85": {
+      "key": "memory:memory/2026-05-14.md:50:85",
+      "path": "memory/2026-05-14.md",
+      "startLine": 50,
+      "endLine": 85,
+      "source": "memory",
+      "snippet": "- `/Users/aleckennedy/.openclaw/workspace/babynest/app/baby-name/page.tsx` (10.5KB) ### Deployment Status - ZIP file ready: `~/Desktop/babynest-full.zip` (369KB) - Target: babynest12.netlify.app - Pending: Navigation links update, Stripe Price IDs in env vars ### Technical Notes - Built directly (no subagents) due to model availability issues - Used Ollama kimi-k2.5:cloud for all implementation - Followed existing BabyNest design system (Tailwind, warm colors) - All components are responsive TypeScript React --- ## Later Session - May 14, 2026 (Afternoon) ### Deployment Success! 🎉 **Status:** Successfully deployed BabyNest with all 6 differentiation features to Netlify! **URL:** https",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.9733406424522402,
+      "maxScore": 0.4409355133771896,
+      "firstRecalledAt": "2026-05-16T20:43:23.338Z",
+      "lastRecalledAt": "2026-05-19T16:26:07.397Z",
+      "queryHashes": [
+        "5a3529ecc9fc",
+        "6fc1125a4f9e",
+        "e4f5dc9a563e",
+        "706302adf6de",
+        "a39c11bf5e65"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "users/aleckennedy",
+        "10.5kb",
+        "desktop/babynest-full.zip",
+        "babynest12.netlify.app",
+        "kimi-k2.5",
+        "users",
+        "aleckennedy",
+        "openclaw"
+      ]
+    },
+    "memory:memory/2026-05-14.md:1:36": {
+      "key": "memory:memory/2026-05-14.md:1:36",
+      "path": "memory/2026-05-14.md",
+      "startLine": 1,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "# Memory - May 14, 2026 ## BabyNest Development Session ### Completed Work - Successfully built all 6 differentiation features for BabyNest app: 1. Financial Timeline by Trimester (week-by-week pregnancy finance deadlines) 2. Hospital Cost Comparison Tool (ZIP code search with cost comparison) 3. Financial Readiness Score (12-question quiz with 0-100 scoring) 4. Money-Saving Milestones (gamified task tracker with badges) 5. Baby Name + 529 Projection (name picker with compound growth calculator) 6. State Insurance Dashboard Enhancement (state-specific enrollment deadlines) ### Files Created - `/Users/aleckennedy/.openclaw/workspace/babynest/app/financial-timeline/page.tsx` (14",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.5775148481130599,
+      "maxScore": 0.47301574945449826,
+      "firstRecalledAt": "2026-05-16T20:43:23.338Z",
+      "lastRecalledAt": "2026-05-19T16:26:07.397Z",
+      "queryHashes": [
+        "5a3529ecc9fc",
+        "e4f5dc9a563e",
+        "706302adf6de",
+        "a39c11bf5e65"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "week-by-week",
+        "12-question",
+        "0-100",
+        "money-saving",
+        "state-specific",
+        "users/aleckennedy",
+        "may",
+        "babynest"
+      ]
+    },
+    "memory:memory/2026-05-14.md:141:188": {
+      "key": "memory:memory/2026-05-14.md:141:188",
+      "path": "memory/2026-05-14.md",
+      "startLine": 141,
+      "endLine": 188,
+      "source": "memory",
+      "snippet": "4. **Baby Name Rankings** (`/baby-names`) - Top 100 boys, 100 girls, 100 gender-neutral (300 total) - Meanings, origins, popularity trends (📈📉➡️) - Search by name/meaning/origin - Filter by letter and origin 5. **Community Q&A** (`/community`) - 5 categories: Sleep 😴, Feeding 🍼, Finances 💰, Working Parents 💼, Medical 🩺 - 15 pre-populated questions with expert-verified answers - Upvoting on questions AND answers - \"Expert Verified\" badges with shield icons ### Dashboard Integration - Added \"Discover\" section to dashboard with 5 quick-access cards - Cards link to all new BabyCenter features - Responsive grid: 2 cols mobile → 5 cols desktop ### Navigation Updat",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.54241044819355,
+      "maxScore": 0.45679692029953,
+      "firstRecalledAt": "2026-05-16T20:43:23.338Z",
+      "lastRecalledAt": "2026-05-19T16:26:07.397Z",
+      "queryHashes": [
+        "5a3529ecc9fc",
+        "e4f5dc9a563e",
+        "706302adf6de",
+        "a39c11bf5e65"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "baby-names",
+        "gender-neutral",
+        "name/meaning/origin",
+        "pre-populated",
+        "expert-verified",
+        "quick-access",
+        "baby",
+        "name"
+      ]
+    },
+    "memory:memory/2026-05-17.md:1:19": {
+      "key": "memory:memory/2026-05-17.md:1:19",
+      "path": "memory/2026-05-17.md",
+      "startLine": 1,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Developed themes for AI content strategy: 1. **Impact of AI on Financial Markets:** - AI-driven algorithms transforming markets and investment. 2. **Advancements in Large Language Models (LLMs):** - Breakthroughs in capabilities and cross-industry applications. 3. **AI Ethics and Governance:** - Discussions around ethical use, data privacy, and regulations. 5. **Emerging AI Technologies:** - Exploring cutting-edge technologies and their impacts. 6. **AI in Everyday Life:** - Showcasing practical AI applications improving daily experiences. Exclusions: - AI for Climate Change.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.37989552319049835,
+      "maxScore": 0.37989552319049835,
+      "firstRecalledAt": "2026-05-17T21:11:18.202Z",
+      "lastRecalledAt": "2026-05-17T21:11:18.202Z",
+      "queryHashes": [
+        "e0fa1fe434ef"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "ai-driven",
+        "cross-industry",
+        "cutting-edge",
+        "developed",
+        "themes",
+        "content",
+        "strategy",
+        "impact"
+      ]
+    },
+    "memory:memory/2026-05-03.md:83:145": {
+      "key": "memory:memory/2026-05-03.md:83:145",
+      "path": "memory/2026-05-03.md",
+      "startLine": 83,
+      "endLine": 145,
+      "source": "memory",
+      "snippet": "• Is this transparency or theater? • Should AI contributions be tracked? • What counts as \"assisted\" vs \"generated\"? My take: For SMBs using AI tools, the question isn't attribution. It's: \"Can I explain what this does?\" If you can't explain it, you don't own it. Track the tools. Audit the outputs. Know your stack. Everything else is just commit message theater. ``` ### Evening (9pm) - Regulation / Market Shift **Theme:** Maryland AI pricing ban ``` Maryland just banned AI-driven price increases in grocery stores. 133 points. 74 comments. Translation: Regulators are catching up to algorithmic pricing. The AI tool isn't the problem. The opacity is the problem. SMB lesson: If you",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3589501172304153,
+      "maxScore": 0.3589501172304153,
+      "firstRecalledAt": "2026-05-17T21:11:18.202Z",
+      "lastRecalledAt": "2026-05-17T21:11:18.202Z",
+      "queryHashes": [
+        "e0fa1fe434ef"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "ai-driven",
+        "transparency",
+        "theater",
+        "contributions",
+        "tracked",
+        "what",
+        "counts",
+        "assisted"
+      ]
+    },
+    "memory:memory/2026-05-14.md:80:117": {
+      "key": "memory:memory/2026-05-14.md:80:117",
+      "path": "memory/2026-05-14.md",
+      "startLine": 80,
+      "endLine": 117,
+      "source": "memory",
+      "snippet": "- Profile data wrapper issues (setProfile expecting Profile, not { profile: Profile }) ### Key Fixes Applied 1. **lib/supabase.ts** - Major overhaul with proper Database generic typing 2. **types/database.ts** - Added all missing tables (newsletter_subscribers, hospital_bag_items, budget_settings, expenses, etc.) 3. **app/auth/callback/page.tsx** - Wrapped in Suspense for useSearchParams 4. **app/dashboard/page.tsx** - Fixed profile extraction and budget settings queries 5. All components - Proper type casting for Supabase query results ### Features Now Live - ✅ **Financial Timeline** - `/financial-timeline` - ✅ **Hospital Cost Comparison** - `/hospital-costs` - ✅ **Financial Readiness S",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.42566947638988495,
+      "maxScore": 0.42566947638988495,
+      "firstRecalledAt": "2026-05-19T04:55:03.084Z",
+      "lastRecalledAt": "2026-05-19T04:55:03.084Z",
+      "queryHashes": [
+        "e4f5dc9a563e"
+      ],
+      "recallDays": [
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "lib/supabase.ts",
+        "types/database.ts",
+        "newsletter-subscribers",
+        "hospital-bag-items",
+        "budget-settings",
+        "app/auth/callback/page.tsx",
+        "app/dashboard/page.tsx",
+        "financial-timeline"
+      ]
+    },
+    "memory:memory/2026-05-14.md:108:148": {
+      "key": "memory:memory/2026-05-14.md:108:148",
+      "path": "memory/2026-05-14.md",
+      "startLine": 108,
+      "endLine": 148,
+      "source": "memory",
+      "snippet": "**Result:** Zero TypeScript errors! ### Lesson Learned Local testing with `npm run build` and `npx tsc --noEmit` is **100x faster** than deploying to Netlify and waiting for error messages one at a time. Future builds should be tested locally first. --- ## Evening Session - May 14, 2026 (BabyCenter Features) ### BabyCenter-Inspired Features Added Analyzed BabyCenter.com and added 5 high-value features to BabyNest: ### New Features Built & Deployed: 1. **Due Date Calculator** (`/due-date-calculator`) - Calculates due date using Naegele's rule - Custom cycle length support (20-45 days) - Shows conception date, trimester, weeks remaining - Email capture for weekly pregnancy up",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4066777616739273,
+      "maxScore": 0.4066777616739273,
+      "firstRecalledAt": "2026-05-19T04:55:03.084Z",
+      "lastRecalledAt": "2026-05-19T04:55:03.084Z",
+      "queryHashes": [
+        "e4f5dc9a563e"
+      ],
+      "recallDays": [
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "babycenter-inspired",
+        "babycenter.com",
+        "high-value",
+        "due-date-calculator",
+        "20-45",
+        "result",
+        "zero",
+        "typescript"
+      ]
+    },
+    "memory:memory/2026-05-14.md:176:215": {
+      "key": "memory:memory/2026-05-14.md:176:215",
+      "path": "memory/2026-05-14.md",
+      "startLine": 176,
+      "endLine": 215,
+      "source": "memory",
+      "snippet": "9. Is It Safe? Database ⭐ NEW 10. Baby Names ⭐ NEW 11. Community Q&A ⭐ NEW **TypeScript:** 0 errors ✅ **Build:** Successful ✅ **Status:** Deployed and live ✅ # Memory: 2026-05-14 ## BabyNest Fixes & Updates ### Week-by-Week Checkbox Fix (9:14 PM) **Problem:** Checkboxes on week-by-week tracker not working - clicking did nothing **Root Cause:** `onClick` handler on parent `<li>` element conflicting with Checkbox's `onCheckedChange`, causing double-toggle **Fix:** - Removed `onClick` from `<li>` element - Added proper `<label>` with `htmlFor` matching checkbox `id` - Added `cursor-pointer` to checkbox and label elements - Works with no double-toggling ### Trump Tax Loopholes Integration (9",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3761448323726654,
+      "maxScore": 0.3761448323726654,
+      "firstRecalledAt": "2026-05-19T04:55:03.084Z",
+      "lastRecalledAt": "2026-05-19T04:55:03.084Z",
+      "queryHashes": [
+        "e4f5dc9a563e"
+      ],
+      "recallDays": [
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "week-by-week",
+        "double-toggle",
+        "cursor-pointer",
+        "double-toggling",
+        "safe",
+        "database",
+        "new",
+        "baby"
+      ]
+    }
+  }
+}

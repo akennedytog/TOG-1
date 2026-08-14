@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+  <!-- Background -->
+  <rect width="1200" height="627" fill="#FAF9F6"/>
+  
+  <!-- Accent shape on right -->
+  <rect x="800" y="0" width="400" height="627" fill="#E8E4E1"/>
+  
+  <!-- Gold accent line -->
+  <rect x="80" y="180" width="60" height="4" fill="#D4AF37"/>
+  
+  <!-- Article title placeholder -->
+  <text x="80" y="250" font-family="Playfair Display, Georgia, serif" font-size="56" font-weight="bold" fill="#2C2C2C">
+    Article Title Here
+  </text>
+  
+  <!-- Subtitle/author -->
+  <text x="80" y="320" font-family="Lato, Arial, sans-serif" font-size="24" fill="#616161">
+    Your Name • Professional Title
+  </text>
+  
+  <!-- Read time indicator -->
+  <text x="80" y="570" font-family="Lato, Arial, sans-serif" font-size="18" fill="#9E9E9E">
+    5 min read
+  </text>
+</svg>

@@ -1,0 +1,33 @@
+{
+  "name": "LinkedIn Post - Elegant Professional",
+  "template": "linkedin",
+  "theme": "elegant",
+  "dimensions": {
+    "width": 1200,
+    "height": 627
+  },
+  "colors": [
+    "#FAF9F6",
+    "#E8E4E1",
+    "#D4AF37",
+    "#C0C0C0",
+    "#4A4A4A",
+    "#2C2C2C",
+    "#000000"
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Playfair Display",
+      "style": "Bold"
+    },
+    "body": {
+      "family": "Lato",
+      "style": "Regular"
+    },
+    "accent": {
+      "family": "Cormorant Garamond",
+      "style": "Italic"
+    }
+  },
+  "createdAt": "2026-05-22T14:06:49.645Z"
+}

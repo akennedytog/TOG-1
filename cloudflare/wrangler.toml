@@ -1,0 +1,12 @@
+name = "brandvault-api"
+main = "src/index.js"
+compatibility_date = "2026-08-06"
+
+# Free tier: 100k requests/day, 1GB R2 storage
+[[r2_buckets]]
+  binding = "BRANDVAULT_ASSETS"
+  bucket_name = "brandvault-assets"
+
+[[kv_namespaces]]
+  binding = "BRANDVAULT_DB"
+  id = ""  # Will be created on first deploy

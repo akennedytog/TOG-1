@@ -1,0 +1,7 @@
+# Redirect duplicate service pages
+/ai-assessment.html /ai-audit.html 301
+/competitor-monitoring.html /competitor-intelligence.html 301
+/workshop.html /ai-agent-workshop.html 301
+
+# Old blog slugs (if any exist)
+/blog/ai-automation /blog/invisible-automation.html 301

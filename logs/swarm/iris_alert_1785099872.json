@@ -1,0 +1,23 @@
+{
+  "task_id": "iris_alert_1785099872",
+  "timestamp": "2026-07-26T17:04:32.062153",
+  "agent": "iris_alert",
+  "trigger": "new_lead",
+  "priority": 8,
+  "payload": {
+    "lead": {
+      "company": "TestCorp Industries",
+      "email": "test@testcorp.com"
+    }
+  },
+  "result": {
+    "action": "send_alert",
+    "type": "unknown",
+    "message": "No message",
+    "channels": [
+      "slack",
+      "email"
+    ],
+    "urgency": "high"
+  }
+}

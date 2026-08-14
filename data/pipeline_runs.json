@@ -1,0 +1,842 @@
+[
+  {
+    "date": "2026-08-03",
+    "timestamp": "2026-08-03T09:21:29.456313",
+    "new_leads": 20,
+    "email_drafts": 0,
+    "call_listed": 19
+  },
+  {
+    "date": "2026-08-04",
+    "timestamp": "2026-08-04T08:30:33.268664",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-05",
+    "timestamp": "2026-08-05T08:30:18.254223",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-07",
+    "timestamp": "2026-08-07T08:34:33.601670",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-08",
+    "timestamp": "2026-08-08T21:58:17.052120",
+    "new_leads": 20,
+    "email_drafts": 5,
+    "call_listed": 15
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T09:35:57.934161",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T09:40:50.103446",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T09:45:43.112953",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 6
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T09:50:34.127933",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T09:55:52.576892",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T10:17:19.017106",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T10:21:31.056877",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T10:26:58.670055",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T10:32:02.190647",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T10:37:15.136042",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T10:41:57.281242",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T10:46:35.043517",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T10:52:27.534049",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T10:57:13.976435",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T11:02:17.915885",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T11:56:57.505922",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T12:21:55.282336",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T12:41:37.602280",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T12:47:04.281583",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:09:53.425040",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:10:56.555885",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:11:24.951154",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:16:03.612666",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:20:19.416810",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:25:02.709361",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:30:03.207239",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:35:02.292528",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:40:02.572024",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:45:03.379525",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:50:02.539790",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T13:55:02.902381",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T14:00:02.680875",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T14:05:02.822831",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T14:10:02.156732",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T14:15:02.418908",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T15:52:20.585453",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T15:55:02.928574",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:00:02.528908",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:05:02.165781",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:10:02.561966",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:15:02.799121",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:20:01.941511",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:25:03.810723",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:30:02.710858",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:35:02.652601",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:40:02.865412",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:45:02.144970",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:50:02.160249",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T16:55:02.411566",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:00:02.795079",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:05:02.181412",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:10:02.726242",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:15:02.330263",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:20:03.082089",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:25:02.347627",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:30:02.633601",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:35:03.975396",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:40:01.856013",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:45:02.266129",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:50:02.634376",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T17:55:02.855063",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:00:03.894088",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:05:03.202128",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:10:03.146968",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:15:02.298459",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:20:02.683068",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:25:02.915464",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:30:02.234741",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:35:02.565666",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:40:02.808392",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:45:01.924190",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:50:02.073523",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T18:55:02.442799",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:00:03.298725",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:05:03.004485",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:10:02.295236",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:15:03.051547",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:20:02.544409",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:25:01.806980",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:30:02.216122",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:35:02.682939",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:40:02.294494",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:45:03.106794",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:50:02.717492",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T19:55:02.423875",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:00:03.130774",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:05:02.838180",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:10:02.227209",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:15:02.804358",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:20:02.592947",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:25:01.972728",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:30:02.715808",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:35:02.553147",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:40:02.542729",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:45:02.260939",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:50:02.702072",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T20:55:01.940253",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:00:02.396485",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:05:03.122383",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:10:02.582227",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:15:02.770877",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:20:02.164570",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:25:02.963117",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:30:02.259090",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:35:02.751372",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:40:02.569292",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:45:02.881370",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:50:02.228280",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T21:55:02.997174",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T22:00:02.974858",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T22:05:03.099974",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T22:10:02.946495",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T22:15:02.527417",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T22:20:02.606760",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  },
+  {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T22:25:02.789925",
+    "new_leads": 0,
+    "email_drafts": 0,
+    "call_listed": 0
+  }
+]

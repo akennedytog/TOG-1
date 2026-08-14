@@ -1,0 +1,72 @@
+[
+  {
+    "domain": "A dental practice in South Florida with 3 locations. They do",
+    "anti_queries": 20,
+    "assumptions": 2,
+    "patterns": 10,
+    "insights": 7
+  },
+  {
+    "domain": "A SaaS company selling project management software for const",
+    "anti_queries": 20,
+    "assumptions": 2,
+    "patterns": 10,
+    "insights": 7
+  },
+  {
+    "domain": "A boutique law firm specializing in intellectual property fo",
+    "anti_queries": 20,
+    "assumptions": 2,
+    "patterns": 8,
+    "insights": 7
+  },
+  {
+    "domain": "A meal prep delivery service in Austin, TX. 200 weekly subsc",
+    "anti_queries": 20,
+    "assumptions": 2,
+    "patterns": 10,
+    "insights": 7
+  },
+  {
+    "domain": "A real estate investment firm buying single-family rentals i",
+    "anti_queries": 20,
+    "assumptions": 3,
+    "patterns": 10,
+    "insights": 7
+  },
+  {
+    "domain": "An AI-powered recruiting platform for healthcare staffing. C",
+    "anti_queries": 20,
+    "assumptions": 2,
+    "patterns": 8,
+    "insights": 7
+  },
+  {
+    "domain": "A mobile car detailing business in Miami. 5 trucks, 15 emplo",
+    "anti_queries": 20,
+    "assumptions": 2,
+    "patterns": 10,
+    "insights": 7
+  },
+  {
+    "domain": "A B2B content marketing agency serving cybersecurity compani",
+    "anti_queries": 20,
+    "assumptions": 2,
+    "patterns": 10,
+    "insights": 7
+  },
+  {
+    "domain": "A boutique fitness studio chain in Chicago. 3 locations, 1,2",
+    "anti_queries": 20,
+    "assumptions": 2,
+    "patterns": 10,
+    "insights": 7
+  },
+  {
+    "domain": "A commercial cleaning company serving office buildings in do",
+    "anti_queries": 20,
+    "assumptions": 3,
+    "patterns": 10,
+    "insights": 7
+  }
+]

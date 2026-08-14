@@ -128,11 +128,86 @@
     },
     "2026-05-13": {
       "tweets": 2
+    },
+    "2026-05-18": {
+      "tweets": 2
+    },
+    "2026-05-19": {
+      "tweets": 3
+    },
+    "2026-05-21": {
+      "tweets": 2
+    },
+    "2026-05-22": {
+      "tweets": 2
+    },
+    "2026-05-23": {
+      "tweets": 2
+    },
+    "2026-05-25": {
+      "tweets": 2
+    },
+    "2026-05-26": {
+      "tweets": 2
+    },
+    "2026-05-27": {
+      "tweets": 2
+    },
+    "2026-05-28": {
+      "tweets": 2
+    },
+    "2026-05-29": {
+      "tweets": 2
+    },
+    "2026-05-30": {
+      "tweets": 2
+    },
+    "2026-06-22": {
+      "tweets": 2
+    },
+    "2026-06-23": {
+      "tweets": 2
+    },
+    "2026-07-06": {
+      "tweets": 15
+    },
+    "2026-07-07": {
+      "tweets": 9
+    },
+    "2026-07-08": {
+      "tweets": 3
+    },
+    "2026-07-09": {
+      "tweets": 2
+    },
+    "2026-07-10": {
+      "tweets": 3
+    },
+    "2026-07-11": {
+      "tweets": 2
+    },
+    "2026-07-12": {
+      "tweets": 3
+    },
+    "2026-07-13": {
+      "tweets": 3
+    },
+    "2026-07-14": {
+      "tweets": 3
+    },
+    "2026-07-15": {
+      "tweets": 1
+    },
+    "2026-07-16": {
+      "tweets": 1
+    },
+    "2026-07-17": {
+      "tweets": 5
     }
   },
   "totalLikes": 0,
   "totalReplies": 0,
-  "totalTweets": 152,
+  "totalTweets": 229,
   "totalFollows": 0,
   "engagementLog": [
     {
@@ -1053,6 +1128,468 @@
       "text": "OpenClaw's 'skills' system is underrated.\n\nInstead of one giant prompt, you package knowledge into r",
       "tweetId": "2054557676579770786",
       "timestamp": "2026-05-13T13:41:36.696Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Google Gemma 4 now runs on iPhone offline.\n\nThis matters:\n• No API calls = no ongoing costs\n• No lat",
+      "tweetId": "2056355368146440211",
+      "timestamp": "2026-05-18T12:44:59.772Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Amazon is acquiring Globalstar to build a satellite network.\n\nWhy this matters for AI:\n• Rural/offli",
+      "tweetId": "2056370723833209028",
+      "timestamp": "2026-05-18T13:46:00.878Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's Claude Code Routines just dropped.\n\nThink of it as: 'save this entire workflow and run i",
+      "tweetId": "2056721046682620042",
+      "timestamp": "2026-05-19T12:58:04.328Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's Claude Code Routines just dropped.\n\nThink of it as: 'save this entire workflow and run i",
+      "tweetId": "2056736146223153404",
+      "timestamp": "2026-05-19T13:58:04.383Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Model comparison worth watching:\n\nClaude 3.5 Sonnet vs GPT-4o vs Gemini 1.5 Pro\n\nClaude: Best at com",
+      "tweetId": "2056766345409159468",
+      "timestamp": "2026-05-19T15:58:04.478Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's new Computer Use feature in Claude:\n\nThe model can now:\n• See your screen\n• Move your mo",
+      "tweetId": "2057455501475016860",
+      "timestamp": "2026-05-21T13:36:31.990Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenAI's dev day announcements:\n\n• Realtime API for voice apps\n• Vision fine-tuning\n• Structured out",
+      "tweetId": "2057470601116123587",
+      "timestamp": "2026-05-21T14:36:32.024Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What 'context window' actually means:\n\nIt's how much text the model can 'remember' at once.\n\n• GPT-4",
+      "tweetId": "2057823761739477289",
+      "timestamp": "2026-05-22T13:59:52.092Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.\n\nThe routing logic:",
+      "tweetId": "2057838858931196318",
+      "timestamp": "2026-05-22T14:59:51.515Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What model are you using most right now?\n\nA) GPT-4 (OpenAI)\nB) Claude (Anthropic)\nC) Gemini (Google)",
+      "tweetId": "2058175605170978941",
+      "timestamp": "2026-05-23T13:17:58.097Z"
+    },
+    {
+      "type": "tweet",
+      "text": "This week's theme: AI is getting *local*.\n\n• Google Gemma runs on phones\n• Mistral drops open weight",
+      "tweetId": "2058190956709417138",
+      "timestamp": "2026-05-23T14:18:58.176Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Google Gemma 4 now runs on iPhone offline.\n\nThis matters:\n• No API calls = no ongoing costs\n• No lat",
+      "tweetId": "2058890984230899860",
+      "timestamp": "2026-05-25T12:40:37.748Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Amazon is acquiring Globalstar to build a satellite network.\n\nWhy this matters for AI:\n• Rural/offli",
+      "tweetId": "2058906435275149720",
+      "timestamp": "2026-05-25T13:42:01.618Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's Claude Code Routines just dropped.\n\nThink of it as: 'save this entire workflow and run i",
+      "tweetId": "2059269601427366073",
+      "timestamp": "2026-05-26T13:45:07.141Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Model comparison worth watching:\n\nClaude 3.5 Sonnet vs GPT-4o vs Gemini 1.5 Pro\n\nClaude: Best at com",
+      "tweetId": "2059284701043445864",
+      "timestamp": "2026-05-26T14:45:07.163Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Claude just dropped 'Code Routines' - basically saved prompt chains for devs.\n\nThis is the pattern:\n",
+      "tweetId": "2059612489998876770",
+      "timestamp": "2026-05-27T12:27:38.135Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw's 'skills' system is underrated.\n\nInstead of one giant prompt, you package knowledge into r",
+      "tweetId": "2059627587115061597",
+      "timestamp": "2026-05-27T13:27:37.705Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's new Computer Use feature in Claude:\n\nThe model can now:\n• See your screen\n• Move your mo",
+      "tweetId": "2059976380356468995",
+      "timestamp": "2026-05-28T12:33:36.367Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenAI's dev day announcements:\n\n• Realtime API for voice apps\n• Vision fine-tuning\n• Structured out",
+      "tweetId": "2059991479737606386",
+      "timestamp": "2026-05-28T13:33:36.332Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What 'context window' actually means:\n\nIt's how much text the model can 'remember' at once.\n\n• GPT-4",
+      "tweetId": "2060354065058390329",
+      "timestamp": "2026-05-29T13:34:23.397Z"
+    },
+    {
+      "type": "tweet",
+      "text": "OpenClaw update: You can now use GPT-4, Claude, and Gemini in the same workflow.\n\nThe routing logic:",
+      "tweetId": "2060369162287878542",
+      "timestamp": "2026-05-29T14:34:22.892Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What model are you using most right now?\n\nA) GPT-4 (OpenAI)\nB) Claude (Anthropic)\nC) Gemini (Google)",
+      "tweetId": "2060703635600765159",
+      "timestamp": "2026-05-30T12:43:27.518Z"
+    },
+    {
+      "type": "tweet",
+      "text": "This week's theme: AI is getting *local*.\n\n• Google Gemma runs on phones\n• Mistral drops open weight",
+      "tweetId": "2060719666750763057",
+      "timestamp": "2026-05-30T13:47:09.632Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Google Gemma 4 now runs on iPhone offline.\n\nThis matters:\n• No API calls = no ongoing costs\n• No lat",
+      "tweetId": "2069042224386494824",
+      "timestamp": "2026-06-22T12:58:02.099Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Amazon is acquiring Globalstar to build a satellite network.\n\nWhy this matters for AI:\n• Rural/offli",
+      "tweetId": "2069072423941439909",
+      "timestamp": "2026-06-22T14:58:02.253Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Anthropic's Claude Code Routines just dropped.\n\nThink of it as: 'save this entire workflow and run i",
+      "tweetId": "2069421400440418469",
+      "timestamp": "2026-06-23T14:04:44.635Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Model comparison worth watching:\n\nClaude 3.5 Sonnet vs GPT-4o vs Gemini 1.5 Pro\n\nClaude: Best at com",
+      "tweetId": "2069436500463268123",
+      "timestamp": "2026-06-23T15:04:44.833Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Execution note for SMB teams watching OpenPrinter:\n\nIgnore the shiny feature list for a second.\nAsk ",
+      "tweetId": "2073962777610228149",
+      "timestamp": "2026-07-06T02:50:33.335Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Quick field question for SMB builders:\n\nWhat is blocking AI rollout in your company today?\n\nTool ove",
+      "tweetId": "2073981287036015053",
+      "timestamp": "2026-07-06T04:04:06.317Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Quick reflection after reviewing workflow data:\n\nTeams get ROI fastest when they automate one painfu",
+      "tweetId": "2073999146432835630",
+      "timestamp": "2026-07-06T05:15:04.329Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What this week means for SMB operators: New AI tutor achieves 0.71-1.30 SD effect size in Da\n\nEveryo",
+      "tweetId": "2074015134733742344",
+      "timestamp": "2026-07-06T06:18:36.237Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Would love a candid answer here:\n\nWhat is your biggest workflow drag this quarter?\n\nManual updates /",
+      "tweetId": "2074030930277044300",
+      "timestamp": "2026-07-06T07:21:22.174Z"
+    },
+    {
+      "type": "tweet",
+      "text": "End-of-day note from the operator seat:\n\nAdoption rises when the workflow is simpler after AI, not j",
+      "tweetId": "2074047707304415543",
+      "timestamp": "2026-07-06T08:28:02.144Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What this week means for SMB operators: The future of Flipper Zero development\n\nIgnore the shiny fea",
+      "tweetId": "2074064803392299293",
+      "timestamp": "2026-07-06T09:35:58.187Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhere does AI actually save your team time right now?\n\nNowhere yet / Ops hand",
+      "tweetId": "2074081248159420584",
+      "timestamp": "2026-07-06T10:41:18.912Z"
+    },
+    {
+      "type": "tweet",
+      "text": "One pattern from this week:\n\nTeams get ROI fastest when they automate one painful loop, not ten shin",
+      "tweetId": "2074097150066090085",
+      "timestamp": "2026-07-06T11:44:30.254Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Execution note for SMB teams watching OpenPrinter:\n\nIgnore the shiny feature list for a second.\nAsk ",
+      "tweetId": "2074113528907137440",
+      "timestamp": "2026-07-06T12:49:35.269Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Quick reflection after reviewing workflow data:\n\nTeams get ROI fastest when they automate one painfu",
+      "tweetId": "2074194261193502916",
+      "timestamp": "2026-07-06T18:10:23.303Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What this week means for SMB operators: New AI tutor achieves 0.71-1.30 SD effect size in Da\n\nEveryo",
+      "tweetId": "2074211004980850882",
+      "timestamp": "2026-07-06T19:16:55.344Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Would love a candid answer here:\n\nWhat is your biggest workflow drag this quarter?\n\nManual updates /",
+      "tweetId": "2074241706795401407",
+      "timestamp": "2026-07-06T21:18:55.264Z"
+    },
+    {
+      "type": "tweet",
+      "text": "End-of-day note from the operator seat:\n\nAdoption rises when the workflow is simpler after AI, not j",
+      "tweetId": "2074256853777686602",
+      "timestamp": "2026-07-06T22:19:06.588Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What this week means for SMB operators: The future of Flipper Zero development\n\nIgnore the shiny fea",
+      "tweetId": "2074272203474981235",
+      "timestamp": "2026-07-06T23:20:06.238Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhere does AI actually save your team time right now?\n\nNowhere yet / Ops hand",
+      "tweetId": "2074287554841419828",
+      "timestamp": "2026-07-07T00:21:06.267Z"
+    },
+    {
+      "type": "tweet",
+      "text": "One pattern from this week:\n\nTeams get ROI fastest when they automate one painful loop, not ten shin",
+      "tweetId": "2074302889850196058",
+      "timestamp": "2026-07-07T01:22:02.397Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhat repetitive workflow are you still doing manually every single week?\n\nRep",
+      "tweetId": "2074333591874482674",
+      "timestamp": "2026-07-07T03:24:02.345Z"
+    },
+    {
+      "type": "tweet",
+      "text": "End-of-day note: the best AI workflow is the one your team keeps using after the novelty wears off. ",
+      "tweetId": "2074348699887546452",
+      "timestamp": "2026-07-07T04:24:04.341Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhat repetitive workflow are you still doing manually every single week?\n\nRep",
+      "tweetId": "2074516154387669207",
+      "timestamp": "2026-07-07T15:29:28.772Z"
+    },
+    {
+      "type": "tweet",
+      "text": "End-of-day note: the best AI workflow is the one your team keeps using after the novelty wears off. ",
+      "tweetId": "2074533275108786579",
+      "timestamp": "2026-07-07T16:37:30.524Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Practical takeaway from Microsoft Can Track Users via a Windows Device ID:\n\nIgnore the shiny feature",
+      "tweetId": "2074551306119770353",
+      "timestamp": "2026-07-07T17:49:10.474Z"
+    },
+    {
+      "type": "tweet",
+      "text": "End-of-day note from the operator seat:\n\nMost wins came from reducing rework, not from generating mo",
+      "tweetId": "2074566603052556437",
+      "timestamp": "2026-07-07T18:49:56.534Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Practical takeaway from Microsoft Can Track Users via a Windows Device ID:\n\nIgnore the shiny feature",
+      "tweetId": "2074616665711542606",
+      "timestamp": "2026-07-07T22:08:52.483Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator brief on Decoding the obfuscated bash script on a Uniqlo t-sh:\n\nIgnore the shiny feature li",
+      "tweetId": "2074849118178951201",
+      "timestamp": "2026-07-08T13:32:33.476Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nHow are you deciding what AI tools stay in your stack?\n\nTeam feedback / Still",
+      "tweetId": "2074879300340244563",
+      "timestamp": "2026-07-08T15:32:29.370Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Quick reflection after reviewing workflow data:\n\nTeams get ROI fastest when they automate one painfu",
+      "tweetId": "2074942146826678735",
+      "timestamp": "2026-07-08T19:42:13.109Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhich finance workflow would you automate next?\n\nForecast updates / Invoice f",
+      "tweetId": "2075200159831470185",
+      "timestamp": "2026-07-09T12:47:28.232Z"
+    },
+    {
+      "type": "tweet",
+      "text": "One pattern from this week:\n\nTeams get ROI fastest when they automate one painful loop, not ten shin",
+      "tweetId": "2075215259384545712",
+      "timestamp": "2026-07-09T13:47:28.249Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Execution read for lean teams on AI-generated videos to maximally drive a target brai:\n\nIgnore the s",
+      "tweetId": "2075578607808729184",
+      "timestamp": "2026-07-10T13:51:17.267Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhere does AI actually save your team time right now?\n\nReporting / Ops handof",
+      "tweetId": "2075608806684275073",
+      "timestamp": "2026-07-10T15:51:17.252Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Quick reflection after reviewing workflow data:\n\nFinance visibility improves the moment weekly repor",
+      "tweetId": "2075623906120008030",
+      "timestamp": "2026-07-10T16:51:17.218Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Execution read for lean teams on The vintage beauty of Soviet control rooms (2018):\n\nIgnore the shin",
+      "tweetId": "2075941223194296621",
+      "timestamp": "2026-07-11T13:52:11.484Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhat is your biggest workflow drag this quarter?\n\nRework / Approvals / Contex",
+      "tweetId": "2075956573780730162",
+      "timestamp": "2026-07-11T14:53:11.352Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Practical takeaway from Under federal rule, colleges must leave grads better:\n\nTreat forecasting lik",
+      "tweetId": "2076289886814945300",
+      "timestamp": "2026-07-12T12:57:39.398Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhat is blocking AI rollout in your company today?\n\nTool overload / Trust/com",
+      "tweetId": "2076305211123978733",
+      "timestamp": "2026-07-12T13:58:32.989Z"
+    },
+    {
+      "type": "tweet",
+      "text": "One pattern from this week:\n\nThe failure mode is not bad tools. It is unclear ownership and no measu",
+      "tweetId": "2076355422684893399",
+      "timestamp": "2026-07-12T17:18:04.358Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator brief on Zig Creator Calls Spade a Spade, Anthropic Blows Smo:\n\nIgnore the shiny feature li",
+      "tweetId": "2076649024870883706",
+      "timestamp": "2026-07-13T12:44:44.588Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nHow are you deciding what AI tools stay in your stack?\n\nTeam feedback / ROI o",
+      "tweetId": "2076664375943757966",
+      "timestamp": "2026-07-13T13:45:44.546Z"
+    },
+    {
+      "type": "tweet",
+      "text": "One pattern from this week:\n\nAdoption rises when the workflow is simpler after AI, not just differen",
+      "tweetId": "2076710044372975651",
+      "timestamp": "2026-07-13T16:47:12.843Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Execution read for lean teams on Codex starts encrypting sub-agent prompts:\n\nIgnore the shiny featur",
+      "tweetId": "2077013978287333617",
+      "timestamp": "2026-07-14T12:54:56.438Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhere does AI actually save your team time right now?\n\nInbox triage / Reporti",
+      "tweetId": "2077029328227901657",
+      "timestamp": "2026-07-14T13:55:55.980Z"
+    },
+    {
+      "type": "tweet",
+      "text": "One pattern from this week:\n\nThe failure mode is not bad tools. It is unclear ownership and no measu",
+      "tweetId": "2077075385359950199",
+      "timestamp": "2026-07-14T16:58:56.843Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Practical takeaway from Jurassic Park computers in excruciating detail:\n\nIgnore the shiny feature li",
+      "tweetId": "2077390867405365429",
+      "timestamp": "2026-07-15T13:52:33.819Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What this week means for SMB operators: Where are YC founders now? OpenAI and Anthropic, mos\n\nIgnore",
+      "tweetId": "2077746924002656709",
+      "timestamp": "2026-07-16T13:27:24.165Z"
+    },
+    {
+      "type": "tweet",
+      "text": "What this week means for SMB operators: Apple targets dozens of OpenAI employees with legal \nThey're",
+      "tweetId": "2078150911428350180",
+      "timestamp": "2026-07-17T16:12:42.250Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Operator pulse check:\n\nWhat repetitive workflow are you still doing manually every single week?\n\nRep",
+      "tweetId": "2078167051407896692",
+      "timestamp": "2026-07-17T17:16:50.369Z"
+    },
+    {
+      "type": "tweet",
+      "text": "End-of-day note: the best AI workflow is the one your team keeps using after the novelty wears off. ",
+      "tweetId": "2078185879290421706",
+      "timestamp": "2026-07-17T18:31:39.206Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Execution read for lean teams on Mozilla:\n\nIgnore the shiny feature list for a second.\nAsk what chan",
+      "tweetId": "2078202220454035529",
+      "timestamp": "2026-07-17T19:36:35.311Z"
+    },
+    {
+      "type": "tweet",
+      "text": "Execution read for lean teams on Mozilla:\n\nIgnore the shiny feature list for a second.\nAsk what chan",
+      "tweetId": "2078217319885451717",
+      "timestamp": "2026-07-17T20:36:35.280Z"
     }
   ],
   "startDate": "2026-03-19T00:34:52.171Z",

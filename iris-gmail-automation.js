@@ -26,24 +26,22 @@ const TEMPLATES = {
     subject: (lead) => `Quick question about ${lead.businessName || 'your business'}`,
     body: (lead) => `Hi ${lead.contactName || 'there'},
 
-I came across ${lead.businessName || 'your business'} while researching ${lead.industry || 'local businesses'} in South Florida.
+If someone asked ChatGPT for the best ${lead.industry || 'business'} in South Florida, would your brand come up?
 
-Quick question: Are you still handling lead follow-up manually?
+Most ${lead.industry || 'businesses'} I work with are missing out because they aren't showing up in AI-driven searches.
 
-Most ${lead.industry || 'businesses'} I work with are losing 20-30% of potential revenue because they can't respond fast enough.
+I help businesses improve their visibility in AI search and turn that visibility into more qualified leads. Our services include:
+• AI visibility audits and optimization
+• AI-powered workflow and lead-response automation
+• AI coaching and team training
+• Competitor intelligence and ongoing monitoring
 
-I help small businesses set up AI automation that:
-• Responds to leads in 60 seconds (not 4 hours)
-• Follows up automatically until they reply
-• Books meetings while you sleep
-
-Takes about a week to set up. No tech skills needed.
-
-Worth a 15-minute call to see if it fits your workflow?
+Would a 15-minute conversation be worthwhile to see how ${lead.businessName || 'your business'} appears today and where there may be opportunities?
 
 Best,
 Alec Kennedy
-The One Group
+The One Group.AI
+Founder | CEO | (c) 502.403.7201 | akennedy@theonegroup.info
 https://theonegroup.info
 
 P.S. Not interested? Just reply "no thanks" and I'll remove you from my list.`

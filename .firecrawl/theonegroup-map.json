@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "data": {
+    "links": [
+      {
+        "url": "https://theonegroup.info",
+        "title": "The One Group: About",
+        "description": "Practical AI automation for South Florida businesses. 8-agent system for lead research, content creation, and sales outreach. Real results, no hype."
+      },
+      {
+        "url": "https://theonegroup.info/services",
+        "title": "Services | The One Group",
+        "description": "AI automation services: visibility audits, implementation, competitor monitoring, social media, and web design. ROI-focused solutions for SMBs."
+      },
+      {
+        "url": "https://theonegroup.info/pricing",
+        "title": "Pricing | The One Group",
+        "description": "Transparent pricing for AI automation services. AI Visibility Audit $250, AI Agent System $1997, Competitor Intel $297/month."
+      },
+      {
+        "url": "https://theonegroup.info/about",
+        "title": "About | The One Group",
+        "description": "The One Group started with a frustrating pattern: business owners drowning in AI tools they'd never use. They'd buy ChatGPT. Watch tutorials. Build nothing."
+      },
+      {
+        "url": "https://theonegroup.info/web-design",
+        "title": "Web Design | The One Group",
+        "description": "Websites That Convert Visitors. Built in 2-4 weeks with AI lead capture, conversion-focused design, and integrated automation from day one."
+      },
+      {
+        "url": "https://theonegroup.info/case-studies.html",
+        "title": "Case Studies | The One Group",
+        "description": "Real results from AI automation implementations. See how businesses save 20+ hours weekly with our 8-agent system."
+      }
+    ]
+  }
+}

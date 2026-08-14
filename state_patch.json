@@ -1,0 +1,21 @@
+{
+  "twitterQueue": [],
+  "queuedPosts": [
+    {
+      "scheduled_time": "20:00",
+      "content": "Decision framework for AI tool evaluation:\n\n1. Map the manual process (be specific)\n2. Automate 80%, keep the edge cases human\n3. Measure adoption, not enthusiasm\n\nSkip any step and you're guessing.",
+      "type": "framework",
+      "tactic": "self_identification",
+      "source": "evergreen",
+      "added_at": "2026-07-25T08:15:41.033956"
+    }
+  ],
+  "lastPostTime": "1784901752214",
+  "postedToday": 1,
+  "postingStatus": {
+    "status": "ready"
+  },
+  "todayPosts": [],
+  "date": "2026-07-25",
+  "postedLog": []
+}

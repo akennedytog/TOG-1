@@ -1,0 +1,32 @@
+[
+  {
+    "type": "product_reaction",
+    "angle": "The latest AI news we announced in June 2026",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "Rogue AI Model Leads a Strange and Scary Week in AI | U.S. N",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.usnews.com/news/u-s-news-decision-points/articles/2026-07-23/rogue-ai-model-leads-a-strange-and-scary-week-in-ai"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "Breaking news, and how the end might begin",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://garymarcus.substack.com/p/breaking-news-and-how-the-end-might"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "EY launches AI oversight unit as firms grapple with rising a",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.storyboard18.com/amp/digital/ey-launches-ai-oversight-unit-as-firms-grapple-with-rising-artificial-intelligence-costs-ws-l-107328.htm"
+  },
+  {
+    "type": "evergreen",
+    "angle": "AI adoption reality check",
+    "tweet_idea": "The SMBs winning with AI aren't the ones with the fanciest tools. They're the ones who picked ONE repetitive task and automated 80% of it.",
+    "source": "evergreen"
+  }
+]

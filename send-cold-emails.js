@@ -19,63 +19,72 @@ const SENDER = {
   phone: '(305) 555-0142'
 };
 
-// Industry-specific email templates
+// Industry-aware AI visibility email templates
 const TEMPLATES = {
   hvac: {
-    subject: (company) => `${company} — ready for the busy season rush?`,
+    subject: (company) => `Would ${company} come up in ChatGPT?`,
     body: (company, firstName) => `Hi ${firstName},
 
-I was looking at ${company}'s reviews and noticed you're doing solid work in Miami.
+If someone asked ChatGPT for the best HVAC company in South Florida, would ${company} come up?
 
-Quick question: when the AC units start failing this summer and your phones start ringing non-stop, who's catching the calls when your techs are elbow-deep in a compressor?
+Most local businesses have no idea how they appear in AI search—or which competitors ChatGPT recommends instead.
 
-We've helped Summit Air Services in Aventura handle their overflow during last year's heat wave — they captured 23 emergency calls they'd have otherwise missed.
+The One Group helps businesses improve their AI visibility and turn that visibility into more qualified leads. We also provide:
+• AI visibility audits and optimization
+• AI-powered workflow and lead-response automation
+• AI coaching and team training
+• Competitor intelligence and ongoing monitoring
 
-Worth a 10-minute conversation?
+Would a 15-minute conversation be worthwhile to see where ${company} stands?
 
 ${SENDER.name}
-${SENDER.company}
-${SENDER.phone} | ${SENDER.email}`
+The One Group.AI
+Founder | CEO | (c) 502.403.7201 | akennedy@theonegroup.info
+https://theonegroup.info`
   },
   
   legal: {
-    subject: (company) => `Following up with every ${company} lead?`,
+    subject: (company) => `Would ${company} come up in ChatGPT?`,
     body: (company, firstName) => `Hi ${firstName},
 
-Saw ${company} recently expanded — congrats.
+If someone asked ChatGPT for the best law firm in South Florida for their situation, would ${company} come up?
 
-Quick thought: with more attorneys comes more leads... but also more complexity in making sure every potential client gets the right response.
+AI search is becoming part of how people choose professional services, but most firms do not know whether they are visible—or which competitors are being recommended instead.
 
-Most firms I talk to in Miami tell me they're losing 15-20% of intake calls to voicemail or slow follow-up. For a firm your size, that's potentially six figures in annual revenue.
+The One Group helps businesses improve their AI visibility and turn that visibility into more qualified leads. We also provide:
+• AI visibility audits and optimization
+• AI-powered workflow and lead-response automation
+• AI coaching and team training
+• Competitor intelligence and ongoing monitoring
 
-We built a system that routes calls by practice area, qualifies leads in real-time, and ensures 24/7 coverage. Their consultation bookings jumped 34% in the first quarter.
-
-Worth 15 minutes to see if it makes sense for ${company}?
+Would a 15-minute conversation be worthwhile to see where ${company} stands?
 
 ${SENDER.name}
-${SENDER.company}
-${SENDER.phone} | ${SENDER.email}
-
-P.S. — No upfront costs. We only get paid when you're capturing calls you used to miss.`
+The One Group.AI
+Founder | CEO | (c) 502.403.7201 | akennedy@theonegroup.info
+https://theonegroup.info`
   },
   
   accounting: {
-    subject: (company) => `Tax season automation for ${company}?`,
+    subject: (company) => `Would ${company} come up in ChatGPT?`,
     body: (company, firstName) => `Hi ${firstName},
 
-Tax season's winding down — hope you survived Miami's filing frenzy.
+If someone asked ChatGPT for the best accounting firm in South Florida, would ${company} come up?
 
-How many calls went to voicemail in March? How many clients couldn't reach you during crunch time?
+AI search is changing how people discover professional services, yet most firms have no clear view of how they appear or which competitors ChatGPT recommends instead.
 
-We work with firms like Martinez & Associates to handle the overflow during peak season. Their team focused on returns while we handled the phones, appointment scheduling, and urgent client questions.
+The One Group helps businesses improve their AI visibility and turn that visibility into more qualified leads. We also provide:
+• AI visibility audits and optimization
+• AI-powered workflow and lead-response automation
+• AI coaching and team training
+• Competitor intelligence and ongoing monitoring
 
-Next year doesn't have to mean 70-hour weeks and missed family dinners.
-
-Want to see how it works? Happy to share what we set up for them.
+Would a 15-minute conversation be worthwhile to see where ${company} stands?
 
 ${SENDER.name}
-${SENDER.company}
-${SENDER.phone} | ${SENDER.email}`
+The One Group.AI
+Founder | CEO | (c) 502.403.7201 | akennedy@theonegroup.info
+https://theonegroup.info`
   }
 };
 

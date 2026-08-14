@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - Cipriani Grand Opening</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            color: #333;
+        }
+        
+        .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #1a1a1a;
+        }
+        
+        .invoice-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+        }
+        
+        .invoice-meta {
+            text-align: right;
+        }
+        
+        .invoice-meta p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .invoice-meta .label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .client-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .client-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        
+        .event-details {
+            background: #f8f8f8;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-left: 4px solid #c9a227;
+        }
+        
+        .event-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        
+        .event-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .event-info-item {
+            font-size: 14px;
+        }
+        
+        .event-info-item strong {
+            display: block;
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 3px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .line-items {
+            margin-bottom: 40px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead th {
+            text-align: left;
+            padding: 15px 10px;
+            border-bottom: 2px solid #1a1a1a;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        tbody td {
+            padding: 20px 10px;
+            border-bottom: 1px solid #e5e5e5;
+            vertical-align: top;
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: 2px solid #1a1a1a;
+        }
+        
+        .item-description {
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        
+        .item-details {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .text-right {
+            text-align: right;
+        }
+        
+        .totals-section {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+        }
+        
+        .totals-table {
+            width: 300px;
+        }
+        
+        .totals-table td {
+            padding: 10px 0;
+            border: none;
+        }
+        
+        .totals-table .label {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .totals-table .amount {
+            text-align: right;
+            font-size: 14px;
+        }
+        
+        .grand-total {
+            border-top: 2px solid #1a1a1a !important;
+            padding-top: 15px !important;
+        }
+        
+        .grand-total .label,
+        .grand-total .amount {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        .sponsor-brands {
+            background: #f8f8f8;
+            padding: 25px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .sponsor-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .brand-names {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .brand-names span {
+            margin: 0 15px;
+        }
+        
+        .woodford {
+            color: #8B4513;
+        }
+        
+        .herradura {
+            color: #C9A227;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .invoice-container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="header">
+            <div>
+                <div class="invoice-title">INVOICE</div>
+            </div>
+            <div class="invoice-meta">
+                <p><span class="label">Invoice #:</span> INV-2025-001</p>
+                <p><span class="label">Date:</span> July 9, 2025</p>
+            </div>
+        </div>
+        
+        <div class="client-section">
+            <div class="section-label">Bill To</div>
+            <div class="client-name">Alec Kennedy</div>
+            <p>Brown-Forman</p>
+        </div>
+        
+        <div class="sponsor-brands">
+            <div class="sponsor-title">Premium Sponsorship Package</div>
+            <div class="brand-names">
+                <span class="woodford">Woodford Reserve</span> & 
+                <span class="herradura">Herradura Tequila</span>
+                <br><span style="font-size: 14px; font-weight: 400; color: #666; margin-top: 8px; display: inline-block;">Drink Package Sponsorship</span>
+            </div>
+        </div>
+        
+        <div class="event-details">
+            <div class="event-title">Cipriani Grand Opening</div>
+            <div class="event-info">
+                <div class="event-info-item">
+                    <strong>Event Type</strong>
+                    Grand Opening Celebration
+                </div>
+                <div class="event-info-item">
+                    <strong>Service Date</strong>
+                    July 2025
+                </div>
+                <div class="event-info-item">
+                    <strong>Location</strong>
+                    Cipriani
+                </div>
+            </div>
+        </div>
+        
+        <div class="line-items">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Description</th>
+                        <th style="width: 15%;">Quantity</th>
+                        <th style="width: 15%;">Rate</th>
+                        <th style="width: 20%;" class="text-right">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="item-description">Woodford Reserve & Herradura Tequila Drink Package</div>
+                            <div class="item-details">
+                                Premium open bar sponsorship featuring Woodford Reserve bourbon and Herradura Tequila selections. 
+                                Full cocktail service including signature drinks, well-crafted classics, and premium pours for all guests.
+                                Complete bar setup, professional bartending staff, premium glassware, and garnishes included.
+                            </div>
+                        </td>
+                        <td>110 guests</td>
+                        <td>$70.00</td>
+                        <td class="text-right">$7,700.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="totals-section">
+            <table class="totals-table">
+                <tr class="grand-total">
+                    <td class="label">Total</td>
+                    <td class="amount">$7,700.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

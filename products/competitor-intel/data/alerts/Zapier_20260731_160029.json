@@ -1,0 +1,12 @@
+{
+  "competitor": "Zapier",
+  "detected_at": "2026-07-31T16:00:29.581590",
+  "changes": [
+    {
+      "type": "pricing",
+      "severity": "high",
+      "message": "Pricing page content changed significantly",
+      "timestamp": "2026-07-31 16:00:29.578256"
+    }
+  ]
+}

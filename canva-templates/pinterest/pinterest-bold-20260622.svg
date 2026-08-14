@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+  <rect width="1000" height="1500" fill="#1A1A2E"/>
+  <rect x="0" y="0" width="1000" height="1135" fill="#16213E"/>
+  <path d="M0 0 H1000 V380 C780 310 650 410 500 350 C310 275 160 340 0 260 Z" fill="#0F3460"/>
+  <circle cx="780" cy="260" r="150" fill="#E94560" opacity="0.28"/>
+  <rect x="70" y="1188" width="150" height="12" fill="#F39422"/>
+  <text x="70" y="1320" font-family="Oswald, Arial, sans-serif" font-size="66" font-weight="700" fill="#FFFFFF">Pin Title Here</text>
+  <text x="70" y="1392" font-family="Roboto, Arial, sans-serif" font-size="31" fill="#FFFFFF" opacity="0.78">Add a quick supporting line</text>
+</svg>

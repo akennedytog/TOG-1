@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+CONFIG="$ROOT_DIR/routing-config.json"
+
+if ! command -v jq >/dev/null 2>&1; then
+  echo "jq is required for model_routing_healthcheck.sh" >&2
+  exit 1
+fi
+
+if ! command -v ollama >/dev/null 2>&1; then
+  echo "ollama not found" >&2
+  exit 1
+fi
+
+jq empty "$CONFIG" >/dev/null
+
+echo "Model routing health check"
+echo "Config: $CONFIG"
+echo "Time: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+
+overall=0
+while IFS= read -r model; do
+  short="${model#ollama/}"
+  start=$(date +%s)
+  if output=$(OLLAMA_HOST="${OLLAMA_HOST:-http://127.0.0.1:11434}" ollama run "$short" "Reply with exactly: OK" </dev/null 2>&1); then
+    elapsed=$(( $(date +%s) - start ))
+    if [[ "$output" == *"OK"* ]]; then
+      echo "PASS  $model  ${elapsed}s"
+    else
+      echo "WARN  $model  ${elapsed}s  unexpected output"
+      overall=1
+    fi
+  else
+    echo "FAIL  $model  run error"
+    overall=1
+  fi
+done < <(jq -r '.health_checks.check_models[]' "$CONFIG")
+
+for key in OPENAI_API_KEY ANTHROPIC_API_KEY OPENROUTER_API_KEY; do
+  if [[ -n "${!key:-}" ]]; then
+    echo "ENV   $key=SET"
+  else
+    echo "ENV   $key=MISSING"
+  fi
+done
+
+exit $overall

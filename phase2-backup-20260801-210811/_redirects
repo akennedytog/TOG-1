@@ -1,0 +1,24 @@
+# Redirect duplicate service pages
+/ai-assessment.html /ai-audit.html 301
+/competitor-monitoring.html /competitor-intelligence.html 301
+/workshop.html /ai-agent-workshop.html 301
+
+# Old blog slugs (if any exist)
+/blog/ai-automation /blog/invisible-automation.html 301
+
+# Legacy blog article URLs: preserve links while Blog is being retained
+/blog/3-question-test /blog.html 301
+/blog/ai-autonomous-decision /blog.html 301
+/blog/ai-data-myth /blog.html 301
+/blog/building-in-public-complete /blog.html 301
+/blog/building-in-public-week1 /blog.html 301
+/blog/building-in-public-week2 /blog.html 301
+/blog/building-in-public-week3 /blog.html 301
+/blog/hvac-case-study /blog.html 301
+/blog/invisible-automation /blog.html 301
+/blog/openclaw-github-agents /blog.html 301
+/blog/openclaw-optimization-without-claude-max /blog.html 301
+/blog/tight-feedback-loops /blog.html 301
+
+# Legacy event archive URL
+/archive/mmw-2026 /events.html 301

@@ -26,11 +26,45 @@ if (todayPosts.length > 0) {
 # Post it
 if [ -f /tmp/tweet-to-post.txt ]; then
   TWEET_TEXT=$(cat /tmp/tweet-to-post.txt)
-  echo "Posting: $TWEET_TEXT"
-  node post-now.js "$TWEET_TEXT"
+  echo "Queueing + posting via canonical flow: $TWEET_TEXT"
+  python3 - <<'PY'
+import json
+from datetime import datetime
+from pathlib import Path
+
+state_path = Path('/Users/aleckennedy/.openclaw/workspace/state.json')
+text_path = Path('/tmp/tweet-to-post.txt')
+text = text_path.read_text().strip()
+
+if state_path.exists():
+    state = json.loads(state_path.read_text())
+else:
+    state = {}
+
+queue = state.get('twitterQueue')
+if queue is None:
+    queue = state.get('queuedPosts', [])
+if not isinstance(queue, list):
+    queue = []
+
+queue.insert(0, {
+    'id': f"jumpstart_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
+    'status': 'queued',
+    'text': text,
+    'scheduledFor': 'now',
+    'source': 'Jumpstart-Manual',
+    'createdAt': datetime.now().isoformat(),
+    'audited': True
+})
+
+state['twitterQueue'] = queue
+state['queuedPosts'] = queue
+state_path.write_text(json.dumps(state, indent=2))
+PY
+  python3 post_tweet.py
   rm /tmp/tweet-to-post.txt
 fi
 
 echo ""
 echo "✅ Posted! Automation now running in background."
-echo "Check: tail -f twitter-automation.log"
+echo "Check: tail -f logs/twitter_post.log"

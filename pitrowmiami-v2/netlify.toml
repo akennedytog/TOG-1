@@ -1,0 +1,30 @@
+[build]
+  publish = "dist"
+  functions = "netlify/functions"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/api/book"
+  to = "/.netlify/functions/book"
+  status = 200
+
+# Pretty-URL redirects (Astro outputs .html by default via sitemap; keep clean URLs)
+[[redirects]]
+  from = "/terms"
+  to = "/terms/"
+  status = 301
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy/"
+  status = 301
+[[redirects]]
+  from = "/thanks"
+  to = "/thanks/"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"

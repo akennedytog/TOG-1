@@ -17,84 +17,84 @@
       "date": "2026-04-03",
       "agent": "Dante",
       "action": "Posted 3 tweets (week recap)",
-      "icon": "🐦",
+      "icon": "\ud83d\udc26",
       "color": "blue"
     },
     {
       "date": "2026-04-03",
       "agent": "Clawd",
       "action": "Published blog: Invisible Automation",
-      "icon": "📝",
+      "icon": "\ud83d\udcdd",
       "color": "purple"
     },
     {
       "date": "2026-04-03",
       "agent": "Dante",
       "action": "Posted 7-tweet thread on invisible AI",
-      "icon": "🧵",
+      "icon": "\ud83e\uddf5",
       "color": "blue"
     },
     {
       "date": "2026-04-03",
       "agent": "Dev",
       "action": "Deployed Mission Control v2 (PM2)",
-      "icon": "🚀",
+      "icon": "\ud83d\ude80",
       "color": "orange"
     },
     {
       "date": "2026-04-03",
       "agent": "Arlo",
       "action": "Researched 20 new South Florida leads",
-      "icon": "🔍",
+      "icon": "\ud83d\udd0d",
       "color": "green"
     },
     {
       "date": "2026-04-03",
       "agent": "Iris",
       "action": "Emailed 11 Apollo leads (9 AM batch)",
-      "icon": "📧",
+      "icon": "\ud83d\udce7",
       "color": "purple"
     },
     {
       "date": "2026-04-02",
       "agent": "Abby",
       "action": "Completed QC review (5 PM)",
-      "icon": "✅",
+      "icon": "\u2705",
       "color": "green"
     },
     {
       "date": "2026-04-02",
       "agent": "Dante",
       "action": "Posted 4 tweets + HyperAgent demo",
-      "icon": "🐦",
+      "icon": "\ud83d\udc26",
       "color": "blue"
     },
     {
       "date": "2026-04-02",
       "agent": "Iris",
       "action": "Emailed 11 leads (first batch)",
-      "icon": "📧",
+      "icon": "\ud83d\udce7",
       "color": "purple"
     },
     {
       "date": "2026-04-01",
       "agent": "Arlo",
       "action": "Found 15 qualified leads",
-      "icon": "🔍",
+      "icon": "\ud83d\udd0d",
       "color": "green"
     },
     {
       "date": "2026-03-31",
       "agent": "Dante",
       "action": "Posted 3 scheduled tweets",
-      "icon": "🐦",
+      "icon": "\ud83d\udc26",
       "color": "blue"
     },
     {
       "date": "2026-03-30",
       "agent": "Clawd",
       "action": "Set up 8-agent system",
-      "icon": "🤖",
+      "icon": "\ud83e\udd16",
       "color": "purple"
     }
   ],
@@ -215,5 +215,39 @@
       "Electrical": 4,
       "Other": 31
     }
+  },
+  "jobSearch": {
+    "history": [
+      {
+        "date": "2026-05-22T23:26:26.711004",
+        "newJobs": 4,
+        "totalJobs": 14,
+        "searchTerms": [
+          "AI Engineer South Florida",
+          "AI Engineer Miami",
+          "AI Engineer Remote",
+          "Machine Learning Engineer Remote",
+          "AI Product Manager Remote",
+          "Applied AI Engineer Remote",
+          "AI Automation Engineer Remote",
+          "Founding Engineer AI Remote"
+        ]
+      },
+      {
+        "date": "2026-06-21T09:04:00-04:00",
+        "newJobs": 6,
+        "totalJobs": 20,
+        "searchTerms": [
+          "Applied AI Engineer Remote",
+          "Founding AI Engineer Remote",
+          "AI Automation Engineer Remote",
+          "Agentic Workflows Engineer",
+          "Software Engineer Applied AI"
+        ],
+        "note": "Live web search; added only verified non-duplicate roles and skipped placeholder/demo listings."
+      }
+    ],
+    "totalJobsFound": 20,
+    "totalJobsApplied": 0
   }
 }

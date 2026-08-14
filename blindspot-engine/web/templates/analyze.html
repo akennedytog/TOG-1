@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block title %}Deep Analysis - Blind Spot Engine{% endblock %}
+{% block content %}
+<div class="fade-in">
+    <h1 class="text-3xl font-bold mb-2">Deep Analysis</h1>
+    <p class="text-white/60 mb-8">Full blind spot analysis with knowledge graph, assumptions, and cross-domain patterns.</p>
+    
+    <div class="glass rounded-2xl p-8 mb-8">
+        <form id="analyze-form" class="space-y-4">
+            <div>
+                <label class="block text-sm text-white/60 mb-2">Describe your domain in detail:</label>
+                <textarea id="domain-input" rows="6" 
+                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-indigo-500 transition"
+                    placeholder="Describe your business, problem, or domain in as much detail as possible. Include competitors, customers, technologies, trends, and anything else relevant..."></textarea>
+            </div>
+            <button type="submit" 
+                class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl transition-all">
+                Run Deep Analysis
+            </button>
+        </form>
+    </div>
+    
+    <div id="loading" class="hidden text-center py-12">
+        <div class="text-4xl mb-4 animate-pulse">🔍</div>
+        <p class="text-white/60">Running deep analysis...</p>
+        <p class="text-sm text-white/30 mt-2">Phase 1: Mapping knowledge graph</p>
+        <div class="w-64 h-2 bg-white/5 rounded-full mx-auto mt-4 overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-pulse" style="width: 30%"></div>
+        </div>
+    </div>
+    
+    <div id="results" class="space-y-8"></div>
+</div>
+
+<script>
+document.getElementById('analyze-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const domain = document.getElementById('domain-input').value;
+    if (!domain || domain.length < 10) {
+        alert('Please enter at least 10 characters describing your domain.');
+        return;
+    }
+    
+    document.getElementById('loading').classList.remove('hidden');
+    document.getElementById('results').innerHTML = '';
+    
+    try {
+        const response = await fetch('/api/analyze', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ domain })
+        });
+        
+        if (!response.ok) throw new Error('Analysis failed');
+        
+        const data = await response.json();
+        renderResults(data);
+    } catch (err) {
+        document.getElementById('results').innerHTML = `
+            <div class="glass rounded-xl p-6 text-center">
+                <div class="text-4xl mb-3">⚠️</div>
+                <p class="text-red-400">Analysis failed: ${err.message}</p>
+                <p class="text-sm text-white/40 mt-2">Make sure Ollama is running locally.</p>
+            </div>
+        `;
+    } finally {
+        document.getElementById('loading').classList.add('hidden');
+    }
+});
+
+function renderResults(data) {
+    const results = document.getElementById('results');
+    let html = '';
+    
+    // Summary
+    html += `
+        <div class="glass rounded-2xl p-8 fade-in">
+            <h2 class="text-2xl font-bold mb-4">📊 Analysis Summary</h2>
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="bg-white/5 rounded-xl p-4 text-center">
+                    <div class="text-3xl font-bold text-indigo-400">${data.anti_queries?.length || 0}</div>
+                    <div class="text-sm text-white/50">Blind Spot Questions</div>
+                </div>
+                <div class="bg-white/5 rounded-xl p-4 text-center">
+                    <div class="text-3xl font-bold text-purple-400">${data.assumptions?.length || 0}</div>
+                    <div class="text-sm text-white/50">Hidden Assumptions</div>
+                </div>
+                <div class="bg-white/5 rounded-xl p-4 text-center">
+                    <div class="text-3xl font-bold text-pink-400">${data.cross_domain_matches?.length || 0}</div>
+                    <div class="text-sm text-white/50">Cross-Domain Patterns</div>
+                </div>
+            </div>
+            <div class="text-white/70 text-sm">${data.summary || 'Analysis complete.'}</div>
+        </div>
+    `;
+    
+    // Top Insights
+    if (data.top_insights && data.top_insights.length) {
+        html += `<div class="glass rounded-2xl p-8 fade-in"><h2 class="text-2xl font-bold mb-4">🔥 Top Insights</h2><div class="space-y-3">`;
+        data.top_insights.forEach((insight, i) => {
+            html += `<div class="bg-white/5 rounded-xl p-4 insight-card">${insight}</div>`;
+        });
+        html += `</div></div>`;
+    }
+    
+    // Anti-Queries
+    if (data.anti_queries && data.anti_queries.length) {
+        html += `<div class="glass rounded-2xl p-8 fade-in"><h2 class="text-2xl font-bold mb-4">🤔 Questions You're Not Asking</h2><div class="space-y-4">`;
+        data.anti_queries.slice(0, 10).forEach((q, i) => {
+            const catColors = {contrarian: 'from-red-500/20 to-red-500/5', cross_domain: 'from-blue-500/20 to-blue-500/5', assumption: 'from-yellow-500/20 to-yellow-500/5', edge_case: 'from-green-500/20 to-green-500/5', second_order: 'from-purple-500/20 to-purple-500/5'};
+            const color = catColors[q.category] || 'from-gray-500/20 to-gray-500/5';
+            html += `
+                <div class="bg-gradient-to-r ${color} rounded-xl p-5 insight-card">
+                    <div class="flex items-start gap-3">
+                        <span class="text-lg font-bold text-indigo-400 mt-0.5">${i + 1}.</span>
+                        <div>
+                            <p class="font-medium">${q.question}</p>
+                            <div class="flex gap-3 mt-2 text-xs text-white/40">
+                                <span class="bg-white/5 px-2 py-1 rounded">${q.category}</span>
+                                <span>Surprise: ${(q.surprise_score * 100).toFixed(0)}%</span>
+                                <span>Relevance: ${(q.relevance_score * 100).toFixed(0)}%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+        });
+        html += `</div></div>`;
+    }
+    
+    // Assumptions
+    if (data.assumptions && data.assumptions.length) {
+        html += `<div class="glass rounded-2xl p-8 fade-in"><h2 class="text-2xl font-bold mb-4">🧠 Hidden Assumptions</h2><div class="space-y-4">`;
+        data.assumptions.slice(0, 8).forEach((a, i) => {
+            html += `
+                <div class="bg-white/5 rounded-xl p-5 insight-card">
+                    <div class="flex items-start gap-3">
+                        <span class="text-lg font-bold text-purple-400 mt-0.5">${i + 1}.</span>
+                        <div>
+                            <p class="font-medium">${a.statement}</p>
+                            <div class="flex gap-3 mt-2 text-xs text-white/40">
+                                <span class="bg-white/5 px-2 py-1 rounded">${a.category}</span>
+                                <span>Confidence: ${(a.confidence * 100).toFixed(0)}%</span>
+                            </div>
+                            ${a.impact_if_wrong ? `<p class="text-sm text-yellow-400/70 mt-2">⚠️ ${a.impact_if_wrong}</p>` : ''}
+                        </div>
+                    </div>
+                </div>`;
+        });
+        html += `</div></div>`;
+    }
+    
+    // Cross-Domain Patterns
+    if (data.cross_domain_matches && data.cross_domain_matches.length) {
+        html += `<div class="glass rounded-2xl p-8 fade-in"><h2 class="text-2xl font-bold mb-4">🔄 Cross-Domain Patterns</h2><div class="space-y-4">`;
+        data.cross_domain_matches.slice(0, 5).forEach((m, i) => {
+            const p = m.pattern || {};
+            html += `
+                <div class="bg-white/5 rounded-xl p-5 insight-card">
+                    <div class="flex items-start gap-3">
+                        <span class="text-lg font-bold text-pink-400 mt-0.5">${i + 1}.</span>
+                        <div>
+                            <p class="font-semibold text-indigo-300">${p.name || 'Pattern'} <span class="text-xs text-white/40">from ${p.source_domain || 'unknown'}</span></p>
+                            <p class="mt-1">${m.question}</p>
+                            <p class="text-sm text-white/50 mt-1">${p.description || ''}</p>
+                            <div class="flex gap-3 mt-2 text-xs text-white/40">
+                                <span>Match: ${(m.confidence * 100).toFixed(0)}%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+        });
+        html += `</div></div>`;
+    }
+    
+    // Knowledge Graph
+    if (data.knowledge_graph) {
+        const kg = data.knowledge_graph;
+        const entities = Object.values(kg.entities || {});
+        const edges = kg.edges || [];
+        html += `
+            <div class="glass rounded-2xl p-8 fade-in">
+                <h2 class="text-2xl font-bold mb-4">📊 Knowledge Graph</h2>
+                <p class="text-sm text-white/50 mb-4">${entities.length} entities, ${edges.length} relationships</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    ${entities.slice(0, 20).map(e => `
+                        <div class="bg-white/5 rounded-lg p-2 text-xs">
+                            <span class="text-indigo-300">${e.name}</span>
+                            <span class="text-white/30"> (${e.type})</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`;
+    }
+    
+    results.innerHTML = html;
+}
+</script>
+{% endblock %}
