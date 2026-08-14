@@ -8,9 +8,42 @@ import json
 import os
 import sys
 import re
+import fcntl
+import tempfile
 from pathlib import Path
 from datetime import datetime
 from difflib import SequenceMatcher
+
+# ---------------------------------------------------------------------------
+# Cross-process lock: prevents two concurrent post_tweet.py runs (e.g. cron +
+# PM2 poller racing) from both reading the same queue and posting the SAME
+# tweet twice. This was the root cause of duplicate tweets on 2026-08-14.
+# ---------------------------------------------------------------------------
+_LOCK_FILE = '/tmp/post_tweet.lock'
+_lock_fd = None
+
+def acquire_lock():
+    """Take an exclusive flock. Exit immediately if another run holds it."""
+    global _lock_fd
+    _lock_fd = open(_LOCK_FILE, 'w')
+    try:
+        fcntl.flock(_lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        log(f"⏭️ Another post_tweet.py run is already in progress (lock held) - skipping")
+        sys.exit(0)
+    _lock_fd.write(str(os.getpid()))
+    _lock_fd.flush()
+
+def release_lock():
+    global _lock_fd
+    if _lock_fd is not None:
+        try:
+            fcntl.flock(_lock_fd, fcntl.LOCK_UN)
+        except OSError:
+            pass
+        _lock_fd.close()
+        _lock_fd = None
+
 
 # Load .env file
 def load_dotenv(filepath='.env'):
@@ -207,6 +240,11 @@ def post_to_twitter(text, posted_log=None):
 def main():
     log("=" * 50)
     log("🐦 Twitter Poster Started")
+
+    # Acquire cross-process lock FIRST so concurrent runs can't double-post.
+    acquire_lock()
+    import atexit
+    atexit.register(release_lock)
     
     # Load state
     state = normalize_state(load_state())
