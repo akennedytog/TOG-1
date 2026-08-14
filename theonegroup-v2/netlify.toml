@@ -12,6 +12,11 @@
   status = 200
 
 [[redirects]]
+  from = "/api/subscribe"
+  to = "/.netlify/functions/subscribe"
+  status = 200
+
+[[redirects]]
   from = "/ai-news.json"
   to = "/ai-news.json"
   status = 200

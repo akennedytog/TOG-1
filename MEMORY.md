@@ -161,6 +161,7 @@ netlify deploy --prod --dir .
 1. **Deploying a partial file set REPLACES the whole site** — always deploy the full `dist/` contents, never just new files.
 2. **`netlify link --id` may resolve to a wrong/accidental site** if the temp dir has stale `.netlify/state.json` — `rm -rf .netlify` first, then link.
 3. **Avoid the `netlify.toml` that triggers Next.js build** (`functions = "netlify/functions"` errors when dir missing). Deploying `dist/` contents directly (no netlify.toml) works.
+4. **⚠️ theonegroup-v2 has Netlify Functions (`netlify/functions/leads|subscribe|test`)** — the temp-dir dist-only method DROPS functions → `/api/leads` & `/api/subscribe` 404. For this site, deploy FROM PROJECT ROOT with `netlify deploy --prod --build` so functions get zipped. (Fixed 2026-08-13, deploy `6a7e8439`; added `/api/subscribe` redirect to netlify.toml.)
 
 **File Structure (theonegroup-v2):**
 - Project root: `~/.openclaw/workspace/theonegroup-v2/`
