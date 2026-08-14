@@ -30,13 +30,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- Step 0: contact -->
           <div class="space-y-4 mb-6">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your name</label>
-              <input type="text" name="name" required placeholder="Jane Smith"
+              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your name</label>
+              <input type="text" id="name" name="name" required placeholder="Jane Smith"
                 class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Business email *</label>
-              <input type="email" name="email" required placeholder="you@yourbusiness.com"
+              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Business email *</label>
+              <input type="email" id="email" name="email" required placeholder="you@yourbusiness.com"
                 class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none" />
               <p class="text-xs text-gray-400 mt-1">Your score is sent here — and we'll share the full breakdown.</p>
             </div>
@@ -45,8 +45,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="border-t border-gray-200 dark:border-gray-800 pt-6 space-y-5">
             <!-- Q1 -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">1. What industry are you in?</label>
-              <select name="industry" required
+              <label for="industry" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">1. What industry are you in?</label>
+              <select id="industry" name="industry" required
                 class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none">
                 <option value="">Select...</option>
                 <option value="HVAC">HVAC / Heating & Cooling</option>
@@ -63,15 +63,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             <!-- Q2 -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">2. What city / service area?</label>
-              <input type="text" name="city" required placeholder="e.g. Fort Lauderdale"
+              <label for="city" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">2. What city / service area?</label>
+              <input type="text" id="city" name="city" required placeholder="e.g. Fort Lauderdale"
                 class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none" />
             </div>
 
             <!-- Q2b: website -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your website URL</label>
-              <input type="url" name="website" placeholder="https://yourbusiness.com"
+              <label for="website" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your website URL</label>
+              <input type="url" id="website" name="website" placeholder="https://yourbusiness.com"
                 class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none" />
               <p class="text-xs text-gray-400 mt-1">Optional — we use it to actually check your AI visibility.</p>
             </div>

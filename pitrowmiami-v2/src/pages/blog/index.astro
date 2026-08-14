@@ -53,16 +53,16 @@ const posts = [
           posts.map((post, i) => (
             <a href={post.href} class="card p-6 sm:p-8 block hover:border-brand-500/50 transition-all duration-200 group">
               <div class="flex items-start gap-5">
-                <span class="hidden sm:flex text-3xl font-black text-carbon-600 group-hover:text-brand-500 transition-colors leading-none mt-1">
+                <span class="hidden sm:flex text-3xl font-black text-carbon-400 group-hover:text-brand-500 transition-colors leading-none mt-1">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div class="flex-1 min-w-0">
                   <div class="flex items-center gap-3 mb-2">
                     <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">{post.tag}</span>
-                    <span class="text-xs text-carbon-500">·</span>
-                    <span class="text-xs text-carbon-500">{post.date}</span>
-                    <span class="text-xs text-carbon-500">·</span>
-                    <span class="text-xs text-carbon-500">{post.readTime} read</span>
+                    <span class="text-xs text-carbon-300">·</span>
+                    <span class="text-xs text-carbon-300">{post.date}</span>
+                    <span class="text-xs text-carbon-300">·</span>
+                    <span class="text-xs text-carbon-300">{post.readTime} read</span>
                   </div>
                   <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2 group-hover:text-brand-400 transition-colors leading-snug">{post.title}</h2>
                   <p class="text-carbon-400 text-sm sm:text-base mb-4">{post.excerpt}</p>
