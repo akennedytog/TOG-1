@@ -142,19 +142,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <!-- Service Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         <!-- Service 1: Audit -->
-        <div class="group relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-lg hover:border-brand-200 dark:hover:border-brand-800 transition-all duration-300">
+        <div class="group relative flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-lg hover:border-brand-200 dark:hover:border-brand-800 transition-all duration-300">
           <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
             <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
             </svg>
           </div>
           <h3 class="text-xl font-bold mb-3">AI Audit &amp; Assessment</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">
             We analyze your workflows, identify automation opportunities, and build a prioritized roadmap.
           </p>
-          <div class="flex items-center justify-between">
-            <span class="text-lg font-bold text-gray-900 dark:text-gray-100">$2,500</span>
-            <a href="/services#audit" class="inline-flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-400 underline underline-offset-2 hover:text-brand-700 transition-colors" aria-label="Learn more about AI Visibility Audit">
+          <div class="pt-5 border-t border-gray-200 dark:border-gray-800 mt-auto">
+            <div class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">$2,500</div>
+            <a href="/services#audit" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 transition-colors" aria-label="Learn more about AI Visibility Audit">
               Learn more about AI Audit
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -164,19 +164,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         
         <!-- Service 2: Implementation -->
-        <div class="group relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-lg hover:border-accent-200 dark:hover:border-accent-800 transition-all duration-300">
+        <div class="group relative flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-lg hover:border-accent-200 dark:hover:border-accent-800 transition-all duration-300">
           <div class="w-12 h-12 rounded-xl bg-accent-50 dark:bg-accent-900/30 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
             <svg class="w-6 h-6 text-accent-600 dark:text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
           <h3 class="text-xl font-bold mb-3">AI Implementation</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">
             Custom agent swarms for lead research, content creation, and sales outreach — running 24/7.
           </p>
-          <div class="flex items-center justify-between">
-            <span class="text-lg font-bold text-gray-900 dark:text-gray-100">$2,500&ndash;$10,000</span>
-            <a href="/services#implementation" class="inline-flex items-center gap-1 text-sm font-medium text-accent-600 dark:text-accent-400 hover:text-accent-700 transition-colors" aria-label="Learn more about AI Agent Implementation">
+          <div class="pt-5 border-t border-gray-200 dark:border-gray-800 mt-auto">
+            <div class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">$2,500&ndash;$10,000</div>
+            <a href="/services#implementation" class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-600 dark:text-accent-400 hover:text-accent-700 transition-colors" aria-label="Learn more about AI Agent Implementation">
               Learn more about Implementation
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -186,19 +186,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         
         <!-- Service 3: Intel -->
-        <div class="group relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-lg hover:border-emerald-200 dark:hover:border-emerald-800 transition-all duration-300">
+        <div class="group relative flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-lg hover:border-emerald-200 dark:hover:border-emerald-800 transition-all duration-300">
           <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
             <svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <h3 class="text-xl font-bold mb-3">Competitor Intelligence</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">
             Ongoing monitoring of competitors, market shifts, and opportunities — delivered weekly.
           </p>
-          <div class="flex items-center justify-between">
-            <span class="text-lg font-bold text-gray-900 dark:text-gray-100">$297/mo</span>
-            <a href="/services#intelligence" class="inline-flex items-center gap-1 text-sm font-medium text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 transition-colors" aria-label="Learn more about Competitor Intelligence">
+          <div class="pt-5 border-t border-gray-200 dark:border-gray-800 mt-auto">
+            <div class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">$297/mo</div>
+            <a href="/services#intelligence" class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 transition-colors" aria-label="Learn more about Competitor Intelligence">
               Learn more about Competitor Intel
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -266,14 +266,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         <!-- Testimonial 1 -->
-        <div class="relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+        <div class="relative flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
           <svg class="absolute top-6 right-6 w-8 h-8 text-brand-100 dark:text-brand-900/50" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
           </svg>
           <blockquote class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 relative z-10">
             "The AI agent system handles our lead research and initial outreach. We went from 5 calls a week to 25 qualified meetings a month. Game changer."
           </blockquote>
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3 mt-auto">
             <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 flex items-center justify-center text-white font-semibold text-sm shrink-0">MS</div>
             <div>
               <cite class="not-italic font-semibold text-sm text-gray-900 dark:text-gray-100">Maria Santos</cite>
@@ -283,14 +283,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         
         <!-- Testimonial 2 -->
-        <div class="relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+        <div class="relative flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
           <svg class="absolute top-6 right-6 w-8 h-8 text-brand-100 dark:text-brand-900/50" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
           </svg>
           <blockquote class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 relative z-10">
             "We were skeptical about AI in healthcare admin. The One Group automated our appointment reminders, intake forms, and follow-ups. Saved us 40 hours a month."
           </blockquote>
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3 mt-auto">
             <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 flex items-center justify-center text-white font-semibold text-sm shrink-0">JC</div>
             <div>
               <cite class="not-italic font-semibold text-sm text-gray-900 dark:text-gray-100">James Chen</cite>
@@ -300,14 +300,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         
         <!-- Testimonial 3 -->
-        <div class="relative bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+        <div class="relative flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
           <svg class="absolute top-6 right-6 w-8 h-8 text-brand-100 dark:text-brand-900/50" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
           </svg>
           <blockquote class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 relative z-10">
             "Missed calls were costing us $2,000+ a month. The AI lead response system catches every call, qualifies them, and books appointments. ROI in week one."
           </blockquote>
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3 mt-auto">
             <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 flex items-center justify-center text-white font-semibold text-sm shrink-0">DR</div>
             <div>
               <cite class="not-italic font-semibold text-sm text-gray-900 dark:text-gray-100">David Rodriguez</cite>
