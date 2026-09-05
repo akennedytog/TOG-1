@@ -60,3 +60,7 @@ Thumbs.db
 .vscode/
 *.swp
 .netlify.tog-backup/
+forge/
+research/comp-ai-crm/
+brandvault/
+spikes/open-connector/
