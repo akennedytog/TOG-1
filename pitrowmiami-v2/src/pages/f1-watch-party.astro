@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "F1 Watch Party Miami | Miami Grand Prix Watch Party Rigs — Pit Row Miami";
+const description = "Host an epic F1 watch party in Miami. Big-screen racing plus pro sim rigs so guests can race between sessions. Perfect for the Miami Grand Prix. Delivered & staffed. From $1,200.";
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "F1 Watch Party Racing Simulators in Miami",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Pit Row Miami",
+      "email": "info@pitrowmiami.com",
+      "telephone": "+19548002162",
+      "areaServed": ["Miami", "Miami-Dade", "Broward", "Palm Beach"]
+    },
+    "serviceType": "F1 watch party & Miami Grand Prix simulator rentals",
+    "areaServed": ["Miami", "Miami-Dade", "Broward", "Palm Beach"],
+    "description": "Racing simulators for F1 watch parties and the Miami Grand Prix. Guests race the same track between sessions. Delivered, set up and staffed in South Florida."
+  })} />
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden pt-24 md:pt-16">
+    <div class="f1-gradient absolute inset-0 opacity-20"></div>
+    <div class="speed-lines absolute inset-0"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 py-10 md:py-16">
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="flex-1">
+          <div class="inline-block bg-brand-600/20 text-brand-500 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-brand-600/30">F1 Watch Parties · Miami, FL</div>
+          <h1 class="text-4xl md:text-6xl font-display font-black tracking-tight leading-tight mb-6">
+            F1 Watch Party<br />
+            <span class="text-brand-600">Miami</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-2xl">
+            Turn your Miami Grand Prix watch party into a full race-day experience. Watch the big race on screen, and let guests race the same track themselves between sessions.
+          </p>
+          <p class="text-gray-400 text-lg mb-8 max-w-2xl">
+            Two pro Fanatec rigs with 48" widescreens, running the same circuit the pros are about to drive. <span class="text-white font-semibold">From $1,200</span>.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/#book" class="btn-primary text-lg px-8 py-4">Book a Watch Party</a>
+            <a href="mailto:info@pitrowmiami.com" class="btn-secondary text-lg px-8 py-4">Get a Quote</a>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <picture>
+            <source srcset="/hero-image.webp" type="image/webp" />
+            <img src="/hero-image.jpg" alt="F1 watch party with racing simulators in Miami" width="600" height="749" class="w-full max-w-xs md:max-w-sm rounded-2xl shadow-2xl border border-gray-700" loading="eager" fetchpriority="high" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Why Combine -->
+  <section class="border-t border-gray-800 py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">Why Add Sim Racing to Your Watch Party?</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center max-w-2xl mx-auto">A Grand Prix is a three-hour event wrapped around a two-hour race. Sim rigs fill the gaps with the most fun part of the day.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">🏎️</div>
+          <h3 class="font-bold mb-2">Race Between Sessions</h3>
+          <p class="text-gray-300 text-sm">During qualifying or the build-up, guests take to the rigs on the same track the pros are about to drive.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">🏆</div>
+          <h3 class="font-bold mb-2">Settle the Debate</h3>
+          <p class="text-gray-300 text-sm">Half your guests think they could out-brake the front row on Turn 1. Let them prove it.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">⚡</div>
+          <h3 class="font-bold mb-2">No Dead Air</h3>
+          <p class="text-gray-300 text-sm">There's always someone racing, someone cheering, or someone trash-talking their way to the front row.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">🔴</div>
+          <h3 class="font-bold mb-2">A Crowd Magnet</h3>
+          <p class="text-gray-300 text-sm">Even casual guests get pulled in by the glowing rigs and the competitive chaos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Miami Grand Prix -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-black mb-8 text-center">The Miami Grand Prix Watch Party</h2>
+        <p class="text-gray-300 text-lg mb-8 text-center">The Miami GP is the home race for South Florida — the one weekend all year a racing theme feels most at home. A sim-racing watch party is the ultimate way to experience it.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card p-6">
+            <h3 class="font-bold mb-2">Run Your Own Mini Grand Prix</h3>
+            <p class="text-gray-300 text-sm">While the real grid is on screen, run a timed hot-lap challenge or head-to-head bracket among your guests. Announce the winner during the race build-up for an extra moment.</p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-bold mb-2">The Full Race-Day Experience</h3>
+            <p class="text-gray-300 text-sm">Big screen for the live race, sim rigs for your guests, themed drinks and bites, and a photo corner with a leaderboard. A full race day, delivered to your venue.</p>
+          </div>
+        </div>
+        <p class="text-center text-gray-400 mt-6">See our full guide to <a href="/blog/f1-race-watch-party-miami" class="text-brand-500 hover:underline">hosting an F1 race watch party in Miami</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">How It Works</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center">We deliver, set up, staff, and tear down — so you can host.</p>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">1</div>
+          <h3 class="font-bold mb-2">Deliver &amp; Set Up</h3>
+          <p class="text-gray-300 text-sm">We bring both rigs and place them where guests can watch the race and the racing.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">2</div>
+          <h3 class="font-bold mb-2">Run the Races</h3>
+          <p class="text-gray-300 text-sm">Our host runs hot laps and tournaments, keeping people cycling through all day.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">3</div>
+          <h3 class="font-bold mb-2">Teardown</h3>
+          <p class="text-gray-300 text-sm">We pack up cleanly after the race, leaving your venue spotless.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-8 text-center">Watch Party FAQ</h2>
+      <div class="space-y-4">
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Will the rigs fit with my big screen and seating?</h3>
+          <p class="text-gray-300">Yes. Each rig needs roughly a 6×6 ft footprint. We'll position them so guests can watch the race and the racing from the same space.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Which track do guests drive?</h3>
+          <p class="text-gray-300">We set up whatever you want — often the same track the pros are racing that day for maximum immersion.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Do guests need sim experience?</h3>
+          <p class="text-gray-300">No. F1 2026 is casual-friendly with assists, and our on-site host helps beginners get started.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">How many people can race at a watch party?</h3>
+          <p class="text-gray-300">Two rigs rotate drivers quickly, so a group of 20 to 100+ can all get laps over the course of race day.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">What's the cost?</h3>
+          <p class="text-gray-300">Half days start at $1,200 and full days at $1,800, all-inclusive. Ask about our Miami Grand Prix week package.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-black mb-4">Book Your F1 Watch Party</h2>
+      <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">Tell us your race weekend, venue, and guest count — we'll confirm availability and send a custom quote within 24 hours.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="mailto:info@pitrowmiami.com" class="btn-primary text-lg px-8 py-4">Email info@pitrowmiami.com</a>
+        <a href="tel:+19548002162" class="btn-secondary text-lg px-8 py-4">Call (954) 800-2162</a>
+        <a href="/#book" class="btn-primary text-lg px-8 py-4 bg-brand-600">Book Online</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

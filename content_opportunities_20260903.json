@@ -1,0 +1,32 @@
+[
+  {
+    "type": "power_demand",
+    "angle": "SpaceX seeks FCC nod for solar-powered satellite data center...",
+    "tweet_idea": "The AI trade is really a power trade. Every data center is a bet on electricity \u2014 who owns the capacity wins.",
+    "source": "https://www.reuters.com/business/aerospace-defense/spacex-seeks-fcc-nod-solar-powered-satellite-data-centers-ai-2026-01-31/"
+  },
+  {
+    "type": "space_signal",
+    "angle": "SpaceX seeks FCC nod for solar-powered satellite data center",
+    "tweet_idea": "Space is becoming an infrastructure play. Direct-to-cell and launch capacity are the picks-and-shovels of the next decade.",
+    "source": "https://www.reuters.com/business/aerospace-defense/spacex-seeks-fcc-nod-solar-powered-satellite-data-centers-ai-2026-01-31/"
+  },
+  {
+    "type": "power_demand",
+    "angle": "Inside SpaceX\u2019s Orbital Economy: AI Data Centers And Wireles...",
+    "tweet_idea": "The AI trade is really a power trade. Every data center is a bet on electricity \u2014 who owns the capacity wins.",
+    "source": "https://www.forbes.com/sites/jamiecartereurope/2026/06/11/inside-spacexs-orbital-economy-ai-data-centers-and-wireless-power/"
+  },
+  {
+    "type": "space_signal",
+    "angle": "Inside SpaceX\u2019s Orbital Economy: AI Data Centers And Wireles",
+    "tweet_idea": "Space is becoming an infrastructure play. Direct-to-cell and launch capacity are the picks-and-shovels of the next decade.",
+    "source": "https://www.forbes.com/sites/jamiecartereurope/2026/06/11/inside-spacexs-orbital-economy-ai-data-centers-and-wireless-power/"
+  },
+  {
+    "type": "power_demand",
+    "angle": "Battery storage firms eye AI demand but face grid, supply hu...",
+    "tweet_idea": "The AI trade is really a power trade. Every data center is a bet on electricity \u2014 who owns the capacity wins.",
+    "source": "https://www.reuters.com/business/energy/battery-storage-firms-eye-ai-demand-face-grid-supply-hurdles-2026-05-18/"
+  }
+]

@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Miami Grand Prix 2027 — The Complete Guide to Watching F1 in Miami | Pit Row Miami";
+const description = "Everything you need to watch the Miami Grand Prix in 2027: race weekend dates, where to watch, how to host your own F1 watch party, plus tickets, parking, hotels and first-timer tips for Hard Rock Stadium.";
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Miami Grand Prix 2027 — The Complete Guide to Watching F1 in Miami",
+    "description": "Everything you need to watch F1 in Miami: race weekend dates, where to watch, tickets, parking, transit, hotels, watch parties, and first-timer tips.",
+    "author": {
+      "@type": "Organization",
+      "name": "Pit Row Miami",
+      "email": "info@pitrowmiami.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pit Row Miami",
+      "url": "https://pitrowmiami.com/"
+    },
+    "datePublished": "2026-08-22",
+    "dateModified": "2026-08-22",
+    "mainEntityOfPage": "https://pitrowmiami.com/miami-f1-grand-prix-guide/",
+    "about": "Formula 1 Miami Grand Prix guide"
+  })} />
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden pt-24 md:pt-16">
+    <div class="f1-gradient absolute inset-0 opacity-20"></div>
+    <div class="speed-lines absolute inset-0"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 py-10 md:py-16">
+      <div class="flex flex-col items-center text-center">
+        <div class="inline-block bg-brand-600/20 text-brand-500 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-brand-600/30">F1 Guide · Miami, FL</div>
+        <h1 class="text-4xl md:text-6xl font-display font-black tracking-tight leading-tight mb-6 max-w-4xl">
+          Miami Grand Prix 2027 —<br />
+          <span class="text-brand-600">The Complete Guide to Watching F1 in Miami</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-3xl">
+          From Hard Rock Stadium to the best bars and watch parties in Miami, here's everything you need to make Formula 1 race weekend unforgettable — whether you're at the track or watching from home.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/f1-simulator-rental" class="btn-primary text-lg px-8 py-4">Rent Sim Rigs for Race Day</a>
+          <a href="/f1-watch-party" class="btn-secondary text-lg px-8 py-4">Plan a Watch Party</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick facts -->
+  <section class="border-t border-carbon-800 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">Race Weekend at a Glance</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center max-w-2xl mx-auto">The Formula 1 Miami Grand Prix is an annual stop on the F1 calendar hosted at Hard Rock Stadium in Miami Gardens. Use this snapshot to plan around race weekend — exact dates and times change each year, so confirm against the official schedule.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card p-6">
+          <div class="text-3xl mb-3">📅</div>
+          <h3 class="font-bold mb-1">Race Weekend</h3>
+          <p class="text-gray-300 text-sm">Typically held in early May. Check the official F1 calendar for exact 2027 dates.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-3xl mb-3">📍</div>
+          <h3 class="font-bold mb-1">Location</h3>
+          <p class="text-gray-300 text-sm">Hard Rock Stadium, Miami Gardens. The course runs through the stadium's parking areas and grounds.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-3xl mb-3">🏁</div>
+          <h3 class="font-bold mb-1">The Circuit</h3>
+          <p class="text-gray-300 text-sm">A night-race-style track that winds through the Hard Rock Stadium campus. Track length and corner count are published by F1 each year.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-3xl mb-3">🌴</div>
+          <h3 class="font-bold mb-1">The Vibe</h3>
+          <p class="text-gray-300 text-sm">High-energy, party-forward race weekend with concerts, celebrity sightings, and one of the most photogenic paddocks on the calendar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where to watch -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">Where to Watch F1 in Miami</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center max-w-2xl mx-auto">You have three main options: be at the track, join an official watch party, or host your own. Here's how to pick.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card p-6">
+          <div class="text-3xl mb-3">🏟️</div>
+          <h3 class="font-bold mb-2">The Official Race</h3>
+          <p class="text-gray-300 text-sm">The full weekend — practice, qualifying, and the Grand Prix at Hard Rock Stadium. Tickets go on sale months in advance and range from general admission to grandstands and paddock club. This is the full sensory experience: the roar of V6s, live concerts, and the most electric atmosphere in Florida.</p>
+          <p class="text-gray-400 text-sm mt-3">Best for: die-hard fans and first-timers who want the once-in-a-lifetime moment.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-3xl mb-3">📺</div>
+          <h3 class="font-bold mb-2">Official Watch Parties</h3>
+          <p class="text-gray-300 text-sm">Across Miami, bars, hotels, and F1 fan clubs host live watch parties with big screens, themed drinks, and racing trivia. Many are free to enter and give you the race-day energy without track tickets.</p>
+          <p class="text-gray-400 text-sm mt-4">Search local event calendars for Miami F1 watch parties in your neighborhood.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-3xl mb-3">🏠</div>
+          <h3 class="font-bold mb-2">Your Own Venue</h3>
+          <p class="text-gray-300 text-sm">The most flexible option. Rent a private space, a house, or a venue and bring the race to you. Add pro sim racing rigs and a big screen, and your place becomes the best F1 party in Miami.</p>
+          <p class="text-gray-400 text-sm mt-4"><a href="/f1-watch-party" class="text-brand-500 underline underline-offset-2 hover:no-underline">See how Pit Row runs F1 watch parties.</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Host your own -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="card p-8 md:p-12 bg-gradient-to-br from-carbon-900 to-carbon-950">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="inline-block bg-brand-600/20 text-brand-500 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-brand-600/30">Featured · Make It a Party</div>
+            <h2 class="text-3xl md:text-4xl font-black mb-4">Host Your Own F1 Watch Party</h2>
+            <p class="text-gray-300 text-lg mb-6">
+              A Grand Prix is a three-hour day wrapped around a two-hour race. The right watch party fills every minute. Book the rigs for your own race-day event and let guests race the same track the pros are about to drive.
+            </p>
+            <p class="text-gray-400 mb-8">
+              Pit Row Miami delivers two professional racing simulators — big screens, real wheel and pedal feel, and an on-site host running tournaments. Your guests trade the couch for the cockpit between sessions.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="/f1-watch-party" class="btn-primary text-lg px-8 py-4">Book an F1 Watch Party</a>
+              <a href="/f1-simulator-rental" class="btn-secondary text-lg px-8 py-4">Rent the Rigs</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4 text-brand-500">A Perfect Race-Day Timeline</h3>
+            <ul class="space-y-3 text-gray-300">
+              <li class="flex gap-3"><span class="text-brand-500 font-bold">Build-up:</span> Guests line up hot laps before lights out.</li>
+              <li class="flex gap-3"><span class="text-brand-500 font-bold">Race:</span> Everyone on the couch cheering the real grid.</li>
+              <li class="flex gap-3"><span class="text-brand-500 font-bold">Gaps:</span> Sim tournaments fill every moment between sessions.</li>
+              <li class="flex gap-3"><span class="text-brand-500 font-bold">Podium:</span> Crown the day's fastest and settle every argument.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- First-timer tips -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">Tips for First-Timers</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center max-w-2xl mx-auto">New to the Miami Grand Prix? Here's what experienced fans wish they'd known.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">🎫 Tickets</h3>
+          <p class="text-gray-300 text-sm">Buy early. Prices rise and grandstand views sell out as race weekend approaches. Compare general admission vs. grandstand and paddock options. Confirm any hotel or travel packages include transfers — getting to Miami Gardens is easier when it's handled for you.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">🅿️ Parking</h3>
+          <p class="text-gray-300 text-sm">Hard Rock Stadium has on-site lots, but space fills fast and weekend traffic is heavy. Pre-book parking when you can, and check shuttle and ride-share drop-off points. Give yourself far more time than you think you need.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">🚇 Getting There</h3>
+          <p class="text-gray-300 text-sm">Miami has event shuttles and rideshare-friendly pickup zones around the stadium. If you're staying near Miami Beach or downtown, plan your route to and from the venue in advance. Public transit beats sitting in lot traffic for some folks.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">🏨 Where to Stay</h3>
+          <p class="text-gray-300 text-sm">Hotels near Miami Gardens, Aventura, and Hollywood cut down race-day travel. Downtown Miami and Miami Beach are livelier but farther. Book early — the whole South Florida hotel market surges for race week.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">🎧 What to Know</h3>
+          <p class="text-gray-300 text-sm">Ear protection for the grid and paddock. Sunscreen and plenty of water — South Florida heat is no joke. Carry a backup charging bank for your phone. And know that your racing favorites are all worth it.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">📱 Plan the Whole Day</h3>
+          <p class="text-gray-300 text-sm">The race is the centerpiece, but the weekend is a full event — concerts, fan zones, food and merch. Map out what you want to catch between sessions so you don't spend the whole day in a line.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-8 text-center">Miami Grand Prix FAQ</h2>
+      <div class="space-y-4">
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">When is the Miami Grand Prix 2027?</h3>
+          <p class="text-gray-300">The Miami GP is an annual early-May stop on the F1 calendar. Exact 2027 dates are confirmed by Formula 1 closer to the season — check the official F1 schedule before locking in flights and hotels.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Where is the Miami Grand Prix held?</h3>
+          <p class="text-gray-300">At Hard Rock Stadium in Miami Gardens, Florida. The race track is built through the stadium's parking areas and surrounding grounds, wrapping around the stadium itself.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Is the Miami Grand Prix a night race?</h3>
+          <p class="text-gray-300">The Miami GP has featured evening/night race conditions in recent years. Schedule details for 2027 will be published with the official calendar — the after-dark start is part of the Miami race's appeal.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">How long is the Miami Grand Prix circuit?</h3>
+          <p class="text-gray-300">The course runs through Hard Rock Stadium's parking areas. The exact track length and corner count are updated each year with the official F1 race documentation, so check the circuit details on the official site for the exact figures.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Can I watch the race without attending the track?</h3>
+          <p class="text-gray-300">Yes. Watch parties across Miami, sports bars, and home setups are popular alternatives. You can also host the race at your own venue — <a href="/f1-watch-party" class="text-brand-500 underline underline-offset-2 hover:no-underline">Pit Row Miami runs professional watch parties</a> with sim racing rigs to make it a full event.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">How do I book sim racing for my race-weekend event?</h3>
+          <p class="text-gray-300">Head to our <a href="/f1-simulator-rental" class="text-brand-500 underline underline-offset-2 hover:no-underline">F1 simulator rental</a> page to see the rigs and pricing. Half days start at $1,200 and full days at $1,800, all-inclusive with delivery, staffing, and teardown.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-black mb-4">Make Race Weekend a Full Miami Experience</h2>
+      <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">Whether you're hosting the party or attending the race, we'll help you build the weekend's best setup. Tell us your plans and we'll confirm availability.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="mailto:info@pitrowmiami.com" class="btn-primary text-lg px-8 py-4">Email info@pitrowmiami.com</a>
+        <a href="tel:+19548002162" class="btn-secondary text-lg px-8 py-4">Call (954) 800-2162</a>
+        <a href="/f1-simulator-rental" class="btn-primary text-lg px-8 py-4 bg-brand-600">Rent the Rigs</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

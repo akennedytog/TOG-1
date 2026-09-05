@@ -1,9 +1,62 @@
+# ── Secrets & credentials (NEVER commit) ─────────────────────────
 .env
-node_modules
-.pm2
-**/state.json
-
-# Local Netlify folder
-.netlify
+.env.*
+!.env.example
 credentials.json
+google-credentials.json
 token.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+*.secret
+secrets/
+
+# ── Data & state (runtime artifacts, not code) ────────────────────
+data/
+*.db
+*.sqlite
+*.sqlite3
+scout_data.db
+*.log
+logs/
+*.state.json
+**/state.json
+.firecrawl/
+.content_cache.json
+.clawhub/
+token-usage.json
+
+# ── Personal memory (private) ─────────────────────────────────────
+memory/
+MEMORY.md
+USER.md
+SOUL.md
+IDENTITY.md
+*.md.bak
+
+# ── Virtualenvs & dependencies ───────────────────────────────────
+node_modules/
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.pyc
+.pm2/
+
+# ── Build & deploy ────────────────────────────────────────────────
+dist/
+build/
+.netlify/
+.next/
+*.tsbuildinfo
+
+# ── OS & editor ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+.netlify.tog-backup/

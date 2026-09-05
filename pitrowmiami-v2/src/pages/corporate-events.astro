@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Corporate Team Building Events Miami | Racing Simulator Corporate Events — Pit Row Miami";
+const description = "Book F1 sim racing for corporate team building events in Miami. Client appreciation nights, product launches & trade shows with pro Fanatec rigs delivered and staffed. From $1,200.";
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Corporate Racing Simulator Events in Miami",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Pit Row Miami",
+      "email": "info@pitrowmiami.com",
+      "telephone": "+19548002162",
+      "areaServed": ["Miami", "Miami-Dade", "Broward", "Palm Beach"]
+    },
+    "serviceType": "Corporate team building & event racing simulators",
+    "areaServed": ["Miami", "Miami-Dade", "Broward", "Palm Beach"],
+    "description": "Professional F1 simulator rentals for corporate team building, client appreciation, product launches, conferences and trade shows in South Florida."
+  })} />
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden pt-24 md:pt-16">
+    <div class="f1-gradient absolute inset-0 opacity-20"></div>
+    <div class="speed-lines absolute inset-0"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 py-10 md:py-16">
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="flex-1">
+          <div class="inline-block bg-brand-600/20 text-brand-500 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-brand-600/30">Corporate Events · Miami, FL</div>
+          <h1 class="text-4xl md:text-6xl font-display font-black tracking-tight leading-tight mb-6">
+            Corporate Team Building<br />
+            <span class="text-brand-600">Events in Miami</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-2xl">
+            Turn your next corporate event into something people actually talk about. F1 sim racing delivered, set up, and staffed for team building, client appreciation, and product launches.
+          </p>
+          <p class="text-gray-400 text-lg mb-8 max-w-2xl">
+            Two pro Fanatec rigs. Friendly head-to-head competition. A live leaderboard. <span class="text-white font-semibold">From $1,200</span> a half day.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/#book" class="btn-primary text-lg px-8 py-4">Book Corporate Event</a>
+            <a href="mailto:info@pitrowmiami.com" class="btn-secondary text-lg px-8 py-4">Get a Quote</a>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <picture>
+            <source srcset="/hero-image.webp" type="image/webp" />
+            <img src="/hero-image.jpg" alt="Racing simulator at a corporate team building event in Miami" width="600" height="749" class="w-full max-w-xs md:max-w-sm rounded-2xl shadow-2xl border border-gray-700" loading="eager" fetchpriority="high" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Event Types -->
+  <section class="border-t border-gray-800 py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">Racing Simulator Corporate Events</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center max-w-2xl mx-auto">A racing simulator is the most flexible, crowd-pleasing addition to any corporate event.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">🤝</div>
+          <h3 class="font-bold mb-2">Team Building</h3>
+          <p class="text-gray-300 text-sm">Relay endurance races, bracket tournaments, and hot-lap challenges that build real collaboration and friendly competition.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">🎁</div>
+          <h3 class="font-bold mb-2">Client Appreciation</h3>
+          <p class="text-gray-300 text-sm">Invite top clients to an evening of racing that makes them feel valued — not just entertained. Premium, memorable, and shareable.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">🚀</div>
+          <h3 class="font-bold mb-2">Product Launches</h3>
+          <p class="text-gray-300 text-sm">A natural crowd magnet and photo-worthy centerpiece that gives attendees a reason to linger and interact with your brand.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">📊</div>
+          <h3 class="font-bold mb-2">Trade Shows</h3>
+          <p class="text-gray-300 text-sm">In a sea of booths, a live racing simulator pulls foot traffic like nothing else. Built-in conversation starter for your team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competition Formats -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">Competition Formats That Work</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center">From loose and fun to fiercely competitive — we structure the racing to fit your goals.</p>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Team Relay Endurance</h3>
+          <p class="text-gray-300 text-sm">Split your group into teams and rotate drivers through a set number of laps. Fastest total time takes the podium. Pure teamwork.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Head-to-Head Brackets</h3>
+          <p class="text-gray-300 text-sm">Classic single-elimination racing that builds suspense and a clear winner — perfect for sales kickoffs and conferences.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Timed Hot-Lap Challenges</h3>
+          <p class="text-gray-300 text-sm">Everyone gets the same car and track; lowest lap time wins. Simple, fast, endlessly repeatable.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Constructors' Championship</h3>
+          <p class="text-gray-300 text-sm">Each team picks a "driver," then coaches and supports them across multiple races. Strategy, leadership, and support all come into play.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Sim Racing -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-black mb-8 text-center">Why Racing Beats the Standard Corporate Options</h2>
+        <div class="card p-8 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="text-carbon-300 border-b border-carbon-800">
+                  <th class="py-3 pr-4">Standard Option</th>
+                  <th class="py-3 pr-4">The Problem</th>
+                  <th class="py-3">Sim Racing Advantage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-carbon-800">
+                  <td class="py-3 pr-4 text-gray-300">Escape rooms</td>
+                  <td class="py-3 pr-4 text-gray-300">Long waits, limited group size</td>
+                  <td class="py-3 text-gray-300">Multiple rigs = whole group engaged</td>
+                </tr>
+                <tr class="border-b border-carbon-800">
+                  <td class="py-3 pr-4 text-gray-300">Trivia / game shows</td>
+                  <td class="py-3 pr-4 text-gray-300">Passive for non-participants</td>
+                  <td class="py-3 text-gray-300">Everyone races or roots for a teammate</td>
+                </tr>
+                <tr class="border-b border-carbon-800">
+                  <td class="py-3 pr-4 text-gray-300">Team dinners</td>
+                  <td class="py-3 pr-4 text-gray-300">Low interaction, hard to connect</td>
+                  <td class="py-3 text-gray-300">Active, competitive, built-in conversation</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-4 text-gray-300">Standard DJ / photo booth</td>
+                  <td class="py-3 pr-4 text-gray-300">Been there, done that</td>
+                  <td class="py-3 text-gray-300">A "wow" moment guests talk about</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="text-center text-gray-400 mt-6">Learn more about <a href="/blog/corporate-team-building-events-miami" class="text-brand-500 hover:underline">corporate team building with F1 sim racing</a> on our blog.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Pit Row -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-black mb-8 text-center">How Pit Row Miami Makes It Effortless</h2>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">Turnkey delivery</span> — we bring the rigs, set them up, and calibrate them to your space.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">Professional staffing</span> — an experienced on-site host runs the races and keeps guests engaged.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">Custom branding</span> — match the rigs and leaderboard to your company colors or event theme.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">Flexible formats</span> — we design the competition that fits your goals and timeline.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">Seamless logistics</span> — we arrive early and leave your venue spotless when it's over.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-8 text-center">Corporate Event FAQ</h2>
+      <div class="space-y-4">
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">How many people can participate?</h3>
+          <p class="text-gray-300">As many as you need. Rig rotate drivers quickly, so two rigs can comfortably move a group of 50, 100, or more through the event over a few hours.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">How long does a session take?</h3>
+          <p class="text-gray-300">Flexible — typically 60 to 180 minutes depending on your format and group size. We'll build a schedule that fits your event.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Is it appropriate for a formal corporate event?</h3>
+          <p class="text-gray-300">Absolutely. The rigs add energy without feeling juvenile, and the presentation can be dialed to match the formality of your event.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Do you handle venues we haven't chosen yet?</h3>
+          <p class="text-gray-300">We'll coordinate with whatever venue you choose, or advise on space requirements if you're still deciding.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">What's the cost?</h3>
+          <p class="text-gray-300">Rentals start at $1,200 for a half day and $1,800 for a full day, including delivery, staffing, and teardown. Custom corporate packages are available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-black mb-4">Get Your Corporate Event Quote</h2>
+      <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">Email your date, headcount, and goals — we'll build a racing event your team deserves. Podium spots are filling fast.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="mailto:info@pitrowmiami.com" class="btn-primary text-lg px-8 py-4">Email info@pitrowmiami.com</a>
+        <a href="tel:+19548002162" class="btn-secondary text-lg px-8 py-4">Call (954) 800-2162</a>
+        <a href="/#book" class="btn-primary text-lg px-8 py-4 bg-brand-600">Book Online</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

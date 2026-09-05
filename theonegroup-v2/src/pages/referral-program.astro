@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Refer a Business, Earn $250 | The One Group" description="Refer business owners to The One Group and earn $250 when they sign up for AI automation.">
+
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-brand-50/30 dark:from-gray-950 dark:via-gray-950 dark:to-brand-950/20">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Referral Program</span>
+      <h1 class="text-4xl sm:text-5xl font-display font-bold mt-4 mb-4">Refer a Business, Earn $250</h1>
+      <p class="text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+        Know a business owner who could benefit from AI automation? Send them our way. If they sign up, you get $250 as a thank you.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+        <!-- How It Works -->
+        <div class="space-y-6">
+          <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+            <h2 class="text-xl font-bold mb-6">How It Works</h2>
+            <ol class="space-y-4">
+              <li class="flex gap-3">
+                <span class="w-8 h-8 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold shrink-0">1</span>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Send us their contact info (or send them to us) using the form.</p>
+              </li>
+              <li class="flex gap-3">
+                <span class="w-8 h-8 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold shrink-0">2</span>
+                <p class="text-sm text-gray-600 dark:text-gray-300">We reach out and see if we're a good fit.</p>
+              </li>
+              <li class="flex gap-3">
+                <span class="w-8 h-8 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold shrink-0">3</span>
+                <p class="text-sm text-gray-600 dark:text-gray-300">If they sign up for any service, you get <strong>$250</strong>.</p>
+              </li>
+              <li class="flex gap-3">
+                <span class="w-8 h-8 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold shrink-0">4</span>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Payment within 48 hours via Giftbit, PayPal, or check.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+            <h2 class="text-xl font-bold mb-6">Who to Refer</h2>
+            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+              <li class="flex items-start gap-2"><span class="text-brand-600">•</span> Business owners overwhelmed by manual tasks</li>
+              <li class="flex items-start gap-2"><span class="text-brand-600">•</span> Companies struggling to respond to leads fast enough</li>
+              <li class="flex items-start gap-2"><span class="text-brand-600">•</span> Anyone spending 2+ hours/day on repetitive work</li>
+              <li class="flex items-start gap-2"><span class="text-brand-600">•</span> Businesses that want to scale without hiring</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Referral Form -->
+        <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 h-fit">
+          <h2 class="text-xl font-bold mb-6">Submit a Referral</h2>
+          <form id="referral-form" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
+              <input type="text" name="referrerName" required autocomplete="name" aria-required="true" aria-label="Your Name" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Email</label>
+              <input type="email" name="referrerEmail" required autocomplete="email" aria-required="true" aria-label="Your Email" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Referred Business Name</label>
+              <input type="text" name="referredBusiness" required aria-required="true" aria-label="Referred Business Name" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Their Email</label>
+              <input type="email" name="referredEmail" aria-label="Their Email" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Their Phone</label>
+              <input type="tel" name="referredPhone" autocomplete="tel" aria-label="Their Phone" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Why they might need AI automation</label>
+              <textarea name="notes" rows="3" aria-label="Why they might need AI automation" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition resize-none"></textarea>
+            </div>
+            <button type="submit" id="submit-btn" class="w-full px-6 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25">
+              Submit Referral
+            </button>
+          </form>
+          <div id="success" class="hidden text-center py-8">
+            <div class="text-4xl mb-3">🎉</div>
+            <h3 class="text-lg font-bold mb-2">Referral submitted!</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Thanks for the referral. We'll reach out to them and keep you posted.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      var form = document.getElementById('referral-form');
+      var success = document.getElementById('success');
+      if (!form) return;
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var button = document.getElementById('submit-btn');
+        if (button) { button.disabled = true; button.textContent = 'Submitting…'; }
+
+        var data = Object.fromEntries(new FormData(form));
+        data.form_type = 'referral';
+
+        try {
+          var response = await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          var result = await response.json();
+          if (!response.ok || !result.success) throw new Error(result.message || 'Submission failed');
+          form.classList.add('hidden');
+          success.classList.remove('hidden');
+        } catch (error) {
+          console.error('Referral submission failed:', error);
+          alert('We could not submit your referral right now. Please try again or email us directly at akennedy@theonegroup.info.');
+        } finally {
+          if (button) { button.disabled = false; button.textContent = 'Submit Referral'; }
+        }
+      });
+    })();
+  </script>
+</BaseLayout>

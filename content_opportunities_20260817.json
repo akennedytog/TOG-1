@@ -1,0 +1,26 @@
+[
+  {
+    "type": "product_reaction",
+    "angle": "Oh Lord, AI Reporters Are Actually Breaking Big News | WIRED",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.wired.com/story/ai-newsrooms-are-breaking-news-now-haha-im-in-danger"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "China's Z.ai says new model nears Anthropic's Mythos 5 in cy",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.reuters.com/technology/chinas-zai-says-new-model-nears-anthropics-mythos-5-cyber-defence-tests-2026-08-14"
+  },
+  {
+    "type": "product_reaction",
+    "angle": "Xi pitches China as leader of new global AI order, challengi",
+    "tweet_idea": "New AI tool drops. Three questions before you care: 1) What manual task dies? 2) What's the switching cost? 3) Will my team use it?",
+    "source": "https://www.reuters.com/world/asia-pacific/chinas-xi-promotes-chinas-commitment-ai-access-speech-shanghai-conference-2026-07-17"
+  },
+  {
+    "type": "evergreen",
+    "angle": "AI adoption reality check",
+    "tweet_idea": "The SMBs winning with AI aren't the ones with the fanciest tools. They're the ones who picked ONE repetitive task and automated 80% of it.",
+    "source": "evergreen"
+  }
+]

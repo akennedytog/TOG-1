@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-22",
+  "started": "2026-08-22T10:35:20.129652",
+  "modules": {
+    "scout": {
+      "status": "success",
+      "deals_researched": 0,
+      "intelligence_items": 0
+    },
+    "ai_industry": {
+      "status": "success",
+      "breaking_news": 0,
+      "funding_news": 0,
+      "content_opportunities": 1,
+      "credits_used": 3
+    },
+    "twitter": {
+      "status": "success",
+      "posts_generated": 0,
+      "credits_used": 3
+    }
+  },
+  "finished": "2026-08-22T10:35:23.224002",
+  "total_credits": 6
+}

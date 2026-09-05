@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="AI Coaching for Business | The One Group" 
+  description="Hands-on AI coaching for business owners and teams. Learn prompt engineering, AI strategy, and workflow automation. Sessions from $1,500. Free discovery call."
+>
+  <!-- JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Coaching for Business — The One Group",
+    "serviceType": "AI Coaching & Training",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "The One Group",
+      "url": "https://theonegroup.info/",
+      "telephone": "+17547998676",
+      "email": "akennedy@theonegroup.info",
+      "priceRange": "$$"
+    },
+    "description": "Hands-on AI coaching for business owners and teams: AI tools, prompt engineering, workflow automation, and AI strategy. Sessions from $1,500 to $7,500.",
+    "areaServed": "South Florida, Miami, United States",
+    "offers": {
+      "@type": "Offer",
+      "price": "1500",
+      "priceCurrency": "USD",
+      "description": "AI coaching session or package"
+    }
+  })} />
+  
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-brand-50/30 dark:from-gray-950 dark:via-gray-950 dark:to-brand-950/20 relative overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-accent-200/20 dark:bg-accent-900/10 blur-[120px] pointer-events-none" />
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Training &amp; Coaching</span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight leading-[1.08] mt-4 mb-6">
+          AI Coaching for <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-accent-500 bg-clip-text text-transparent">Your Business</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
+          You know AI can save you time — but where do you start? We coach you and your team on the 
+          tools, prompts, and workflows that actually move the needle for your business.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+            Book a Coaching Session
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+          <a href="tel:7547998676" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-700 hover:border-brand-500 transition-all duration-200">
+            Call (754) 799-8676
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- What coaching covers -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">What You'll Learn</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">From "Where Do I Start?" to Working Systems</h2>
+        <p class="text-gray-500 dark:text-gray-400 leading-relaxed">We meet you where you are and build real AI skills — not abstract theory. Every session leaves you with something you can use immediately.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">AI Tools</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">The right tools for your business, set up and configured. We cut through the hype and show you what actually earns its keep.</p>
+        </div>
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent-100 dark:bg-accent-900/40 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent-600 dark:text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Prompt Engineering</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Write prompts that get reliable, useful output — not generic AI nonsense. The difference between a toy and a productivity tool.</p>
+        </div>
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Workflow Automation</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Tie your tools together into automated workflows that run on their own — freeing your team from repetitive tasks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- How it works -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div>
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">How It Works</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-8">Coaching Built Around Your Business</h2>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-display font-bold shrink-0">1</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-gray-100">Assess</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">We start with a discovery session to understand your business, your team's skill level, and where AI can have the biggest impact.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-accent-600 text-white flex items-center justify-center font-display font-bold shrink-0">2</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-gray-100">Train</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Hands-on coaching for you and your team — customized to your industry, your tools, and your real day-to-day work.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-display font-bold shrink-0">3</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-gray-100">Support</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Ongoing Q&amp;A and check-ins after training so new skills stick and become real workflow changes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-brand-50 to-accent-50 dark:from-brand-900/20 dark:to-accent-900/20 rounded-2xl border border-brand-100 dark:border-brand-800 p-8 lg:p-10">
+        <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest text-center">Coaching Packages</p>
+        <p class="text-5xl font-bold mt-4 text-center bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent">$1,500&ndash;$7,500</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 text-center mt-2">Per session or package, depending on scope</p>
+        <div class="border-t border-brand-100 dark:border-brand-800 my-6" />
+        <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+          <li class="flex items-start gap-3">
+            <span class="text-brand-600 dark:text-brand-400 font-bold">✓</span> Custom sessions tailored to your industry and tools
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-600 dark:text-brand-400 font-bold">✓</span> Prompt engineering, workflow automation, and AI strategy
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-600 dark:text-brand-400 font-bold">✓</span> Ongoing support and Q&amp;A after training
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-600 dark:text-brand-400 font-bold">✓</span> Team discounts available for groups of 5+
+          </li>
+        </ul>
+        <div class="mt-8 space-y-3">
+          <a href="/contact" class="block w-full text-center px-6 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25">
+            Book a Session
+          </a>
+          <a href="tel:7547998676" class="block w-full text-center px-6 py-3.5 rounded-xl font-semibold text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-700 hover:border-brand-500 transition-all duration-200">
+            Call (754) 799-8676
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">AI Coaching — Questions</h2>
+      </div>
+      <div class="space-y-6">
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Who is AI coaching for?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Business owners, executives, and teams who want to use AI practically — whether you're starting from zero or already using tools and want to get more out of them.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Do I need technical skills?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">No. We meet you where you are and build skills step by step. You don't need to be a developer to get real value from AI in your business.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Is this a course or live coaching?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Live, hands-on coaching — tailored to your business. Not pre-recorded content. You get answers to your specific questions in real time.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Can I coach my whole team?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Yes. Team training is our specialty, and we offer discounts for groups of 5 or more. We'll design a package that fits your team's schedule and goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-display font-bold mb-4">Ready to Actually Use AI in Your Business?</h2>
+      <p class="text-gray-500 dark:text-gray-400 mb-8">
+        Book a free discovery call. We'll show you what's realistic for your business and map a coaching plan around it.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+        Book a Free Call
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+        Or call <a href="tel:7547998676" class="text-brand-600 dark:text-brand-400 font-medium underline underline-offset-2">(754) 799-8676</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

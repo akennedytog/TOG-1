@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="AI Automation Miami | The One Group" 
+  description="AI automation for Miami small businesses. We build custom AI agents that capture leads, stop no-shows, and follow up automatically. $2,500 audit. Get a free discovery call."
+>
+  <!-- JSON-LD: Service + LocalBusiness -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": ["Service", "LocalBusiness"],
+    "name": "AI Automation Miami — The One Group",
+    "serviceType": "AI Automation for Small Business",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "The One Group",
+      "url": "https://theonegroup.info/",
+      "telephone": "+17547998676",
+      "email": "akennedy@theonegroup.info",
+      "areaServed": "Miami, South Florida, United States",
+      "priceRange": "$$"
+    },
+    "description": "Custom AI automation for Miami small businesses: lead capture, scheduling and no-show prevention, email and SMS follow-up, and back-office workflows.",
+    "areaServed": {
+      "@type": "City",
+      "name": "Miami"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "2500",
+      "priceCurrency": "USD",
+      "description": "AI Automation Audit"
+    }
+  })} />
+  
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-brand-50/30 dark:from-gray-950 dark:via-gray-950 dark:to-brand-950/20 relative overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-brand-200/20 dark:bg-brand-900/10 blur-[120px] pointer-events-none" />
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Miami, FL</span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight leading-[1.08] mt-4 mb-6">
+          AI Automation for <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-accent-500 bg-clip-text text-transparent">Miami Businesses</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
+          Stop losing leads to slow follow-up. We build custom AI agents that capture every inquiry, 
+          protect your calendar, and nurture customers automatically — while you run your business.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+            Get Your Free AI Audit
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+          <a href="tel:7547998676" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-700 hover:border-brand-500 transition-all duration-200">
+            Call (754) 799-8676
+          </a>
+        </div>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-6">
+          Serving Miami, Miami Beach, Coral Gables, Brickell, and South Florida.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- What AI automation means for a Miami SMB -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">What It Means</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">AI Automation Isn't Sci-Fi — It's Your Next Hire</h2>
+        <p class="text-gray-500 dark:text-gray-400 leading-relaxed">
+          For a Miami small business, AI automation means software that handles the repetitive, time-sensitive 
+          work that currently eats your day: answering leads instantly, protecting booked appointments, 
+          following up on quotes, and chasing invoices. It runs 24/7 — including nights, weekends, and 
+          the tourist rush hours when your team is swamped.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Respond in Seconds</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">AI answers every lead the moment it arrives — before your competitors even open their inbox. Speed is everything in Miami's competitive markets.</p>
+        </div>
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent-100 dark:bg-accent-900/40 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-accent-600 dark:text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Never Drop a Ball</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Automated reminders, follow-ups, and escalations mean nothing slips through the cracks when your team is pulled in ten directions.</p>
+        </div>
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Measurable ROI</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Every automation ties to a dollar figure — recovered revenue, more booked jobs, and hours back in your week. We report on it monthly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Highest-ROI automations -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Highest ROI</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">Where AI Pays Off Fastest for Miami SMBs</h2>
+        <p class="text-gray-500 dark:text-gray-400">These four automations deliver the quickest, most measurable return for service businesses in South Florida.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">1. Lead Capture</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Every website form, missed call, and Facebook inquiry is captured, qualified, and routed instantly. An AI agent asks the right questions and books a call — even at 11 PM.</p>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Outcome: No lead goes cold. Ever.</p>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">2. Scheduling &amp; No-Show Prevention</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Automated booking confirmations, smart reminders, and waitlist fills. Recovers appointments that would otherwise be empty — a huge revenue leak in healthcare, HVAC, and home services.</p>
+          <p class="text-sm font-semibold text-emerald-600 dark:text-emerald-400">Outcome: fewer empty slots</p>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">3. Email &amp; SMS Follow-Up</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Quotes, estimates, and proposals get followed up automatically. A lead who doesn't respond in 48 hours gets a polite, personalized nudge — until they answer or opt out.</p>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Outcome: more quotes turn into jobs</p>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">4. Back-Office</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Invoices chased, receipts categorized, data entered, reports generated. The tedious administrative work gets handled by agents so your team focuses on customers.</p>
+          <p class="text-sm font-semibold text-accent-600 dark:text-accent-400">Outcome: hours back every week</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Industries served -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Industries</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">AI Automation for Your Industry</h2>
+        <p class="text-gray-500 dark:text-gray-400">We build industry-specific automations across the highest-demand sectors in South Florida.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="/ai-automation-for-law-firms" class="card p-6 group block">
+          <h3 class="text-lg font-display font-semibold text-gray-900 dark:text-gray-100 group-hover:text-brand-600 transition-colors">Law Firms</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Intake, case follow-up, client communication</p>
+        </a>
+        <a href="/ai-automation-for-healthcare" class="card p-6 group block">
+          <h3 class="text-lg font-display font-semibold text-gray-900 dark:text-gray-100 group-hover:text-brand-600 transition-colors">Healthcare</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Appointments, no-show reduction, recalls</p>
+        </a>
+        <a href="/ai-automation-for-hvac" class="card p-6 group block">
+          <h3 class="text-lg font-display font-semibold text-gray-900 dark:text-gray-100 group-hover:text-brand-600 transition-colors">HVAC</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Missed calls, dispatch, seasonal campaigns</p>
+        </a>
+        <a href="/ai-automation-for-accounting" class="card p-6 group block">
+          <h3 class="text-lg font-display font-semibold text-gray-900 dark:text-gray-100 group-hover:text-brand-600 transition-colors">Accounting</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Bookkeeping, invoicing, onboarding</p>
+        </a>
+        <a href="/ai-coaching" class="card p-6 group block">
+          <h3 class="text-lg font-display font-semibold text-gray-900 dark:text-gray-100 group-hover:text-brand-600 transition-colors">Coaching &amp; Consulting</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Train your team to use AI effectively</p>
+        </a>
+        <div class="card p-6 bg-brand-50 dark:bg-brand-900/20 border-brand-100 dark:border-brand-800">
+          <h3 class="text-lg font-display font-semibold text-gray-900 dark:text-gray-100">Not Listed?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">We build for any service business. <a href="/contact" class="text-brand-600 dark:text-brand-400 font-medium underline underline-offset-2">Tell us yours</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 3-step process + pricing -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div>
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Our Process</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-8">Audit → Build → Optimize</h2>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-display font-bold shrink-0">1</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-gray-100">Audit</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">We map your workflows and identify the highest-ROI automation opportunities. You get a prioritized roadmap before spending on implementation.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-accent-600 text-white flex items-center justify-center font-display font-bold shrink-0">2</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-gray-100">Build</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">We build your custom AI agents and integrate them with the tools you already use — with 30 days of post-launch support and optimization.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-display font-bold shrink-0">3</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-gray-100">Optimize</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">We monitor performance, report results monthly, and continuously refine the automations so ROI keeps climbing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-brand-50 to-accent-50 dark:from-brand-900/20 dark:to-accent-900/20 rounded-2xl border border-brand-100 dark:border-brand-800 p-8 lg:p-10">
+        <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest text-center">Pricing</p>
+        <p class="text-5xl font-bold mt-4 text-center bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent">$2,500</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 text-center mt-2">AI Automation Audit — full roadmap + review call</p>
+        <div class="border-t border-brand-100 dark:border-brand-800 my-6" />
+        <p class="text-4xl font-bold text-center bg-gradient-to-r from-accent-600 to-brand-600 bg-clip-text text-transparent">$2,500&ndash;$10,000</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 text-center mt-2">Custom implementation, depending on scope</p>
+        <div class="mt-8 space-y-3">
+          <a href="/contact" class="block w-full text-center px-6 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25">
+            Get Your Free AI Audit
+          </a>
+          <a href="tel:7547998676" class="block w-full text-center px-6 py-3.5 rounded-xl font-semibold text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-700 hover:border-brand-500 transition-all duration-200">
+            Call (754) 799-8676
+          </a>
+          <p class="text-xs text-gray-600 text-center">No commitment required. Free 15-minute discovery call first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">AI Automation for Miami — Questions</h2>
+      </div>
+      <div class="space-y-6">
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">How much does AI automation cost?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Our audit starts at $2,500, and custom implementation typically runs $2,500&ndash;$10,000 depending on the scope of the project. Most clients recoup the cost within the first quarter from recovered leads and no-shows.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">How fast will I see results?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Lead capture and appointment reminder automations typically produce measurable results within the first 2–4 weeks. We set clear KPIs upfront and report on them monthly.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Will this replace my team?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">No — it removes the repetitive, time-dependent busywork so your team can focus on customers. AI agents work alongside your people, not in place of them.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Do I need any technical skills?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">None. We handle the build and the integration. You get plain-English dashboards and a monthly report showing what the automations are doing for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-display font-bold mb-4">Ready to Automate Your Miami Business?</h2>
+      <p class="text-gray-500 dark:text-gray-400 mb-8">
+        Start with a free 15-minute discovery call. We'll show you exactly where AI automation can recover revenue in your business.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+        Book a Free Call
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+        Or call <a href="tel:7547998676" class="text-brand-600 dark:text-brand-400 font-medium underline underline-offset-2">(754) 799-8676</a>. Read more in our <a href="/blog/ai-automation-for-small-business-in-miami" class="text-brand-600 dark:text-brand-400 font-medium underline underline-offset-2">guide to AI automation for small business in Miami</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

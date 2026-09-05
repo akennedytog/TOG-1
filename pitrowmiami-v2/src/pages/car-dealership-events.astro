@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Car Dealership Event Ideas | Racing Simulator Dealership Events — Pit Row Miami";
+const description = "Book a racing simulator for your car dealership event in Miami. Launch events, customer appreciation, and test-drive activations with pro Fanatec rigs. Draw crowds & build buzz.";
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Car Dealership Event Racing Simulators",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Pit Row Miami",
+      "email": "info@pitrowmiami.com",
+      "telephone": "+19548002162",
+      "areaServed": ["Miami", "Miami-Dade", "Broward", "Palm Beach"]
+    },
+    "serviceType": "Car dealership launch & customer appreciation events",
+    "areaServed": ["Miami", "Miami-Dade", "Broward", "Palm Beach"],
+    "description": "Professional F1 simulator rentals for car dealership launch events, customer appreciation days and test drive events in South Florida."
+  })} />
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden pt-24 md:pt-16">
+    <div class="f1-gradient absolute inset-0 opacity-20"></div>
+    <div class="speed-lines absolute inset-0"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 py-10 md:py-16">
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="flex-1">
+          <div class="inline-block bg-brand-600/20 text-brand-500 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-brand-600/30">Car Dealership Events · Miami, FL</div>
+          <h1 class="text-4xl md:text-6xl font-display font-black tracking-tight leading-tight mb-6">
+            Car Dealership<br />
+            <span class="text-brand-600">Event Ideas</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-2xl">
+            Turn a dealership launch, customer appreciation night, or test drive event into a showroom full of energy. Racing simulators delivered, set up, and staffed at your lot.
+          </p>
+          <p class="text-gray-400 text-lg mb-8 max-w-2xl">
+            Two pro Fanatec rigs with 48" widescreens running F1 2026. A crowd magnet that keeps guests on your lot longer. <span class="text-white font-semibold">From $1,200</span>.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/#book" class="btn-primary text-lg px-8 py-4">Book Dealership Event</a>
+            <a href="mailto:info@pitrowmiami.com" class="btn-secondary text-lg px-8 py-4">Get a Quote</a>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <picture>
+            <source srcset="/hero-image.webp" type="image/webp" />
+            <img src="/hero-image.jpg" alt="Racing simulator at a car dealership launch event in Miami" width="600" height="749" class="w-full max-w-xs md:max-w-sm rounded-2xl shadow-2xl border border-gray-700" loading="eager" fetchpriority="high" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Event Ideas -->
+  <section class="border-t border-gray-800 py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">Racing Simulator Dealership Events</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center max-w-2xl mx-auto">The perfect centerpiece for the biggest days on a dealership's calendar.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">🚀</div>
+          <h3 class="font-bold mb-2">Launch Events</h3>
+          <p class="text-gray-300 text-sm">Pull in a crowd and hold their attention with head-to-head racing. Keep foot traffic and energy high all day around the new model reveal.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">🎉</div>
+          <h3 class="font-bold mb-2">Customer Appreciation</h3>
+          <p class="text-gray-300 text-sm">Give your best customers a premium, race-day experience that makes them feel valued and keeps them coming back.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl mb-3">🏎️</div>
+          <h3 class="font-bold mb-2">Test-Drive Events</h3>
+          <p class="text-gray-300 text-sm">Build excitement while customers wait for a test drive. Racing sims keep the line moving and the energy up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Works -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-black mb-8 text-center">Why Dealerships Love Sim Racing</h2>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">Keeps people on the lot longer.</span> The more time visitors spend, the more opportunity for sales conversations.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">A genuine crowd magnet.</span> Glowing rigs and racing draw attention from the street and around the showroom.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">Built-in conversation starter.</span> It bridges visitors and your sales team naturally — no awkward cold opens.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">Social shareability.</span> Winners post their fastest laps, spreading your event across social media.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 font-bold mt-0.5">✓</span>
+            <div><span class="font-semibold">Brand-ready.</span> Custom branding on the rigs and leaderboard matches your dealership's look.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">Simple, Turnkey Setup</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center">We handle everything so your team can focus on selling.</p>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">1</div>
+          <h3 class="font-bold mb-2">Deliver &amp; Set Up</h3>
+          <p class="text-gray-300 text-sm">We arrive early and position the rigs for maximum visibility and foot traffic.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">2</div>
+          <h3 class="font-bold mb-2">Staff &amp; Operate</h3>
+          <p class="text-gray-300 text-sm">Our host runs the races and leaderboard all day so your team is free to sell.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">3</div>
+          <h3 class="font-bold mb-2">Teardown</h3>
+          <p class="text-gray-300 text-sm">We pack up cleanly after the event, leaving your lot spotless.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-8 text-center">Dealership Event FAQ</h2>
+      <div class="space-y-4">
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Where do the rigs go?</h3>
+          <p class="text-gray-300">Anywhere there's a flat surface — the showroom floor, under a canopy on the lot, or inside a service bay. We'll help pick the highest-traffic spot.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Do you brand the rigs to our dealership?</h3>
+          <p class="text-gray-300">Yes. We can customize the leaderboard and setup with your dealership name, colors, and branding for a cohesive look.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">How many visitors can race in a day?</h3>
+          <p class="text-gray-300">Two rigs rotate drivers quickly, so hundreds of visitors can get laps over a full event day. We can also run bracket tournaments for bigger crowds.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Do guests need sim experience?</h3>
+          <p class="text-gray-300">No. Formula 1 2026 is casual-friendly, and our on-site host helps everyone get started.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">What does it cost?</h3>
+          <p class="text-gray-300">Half days start at $1,200 and full days at $1,800, all-inclusive. Multi-day launch events can be packaged — contact us for a quote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-black mb-4">Book Your Dealership Event</h2>
+      <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">Tell us your event date and goals — we'll confirm availability and send a custom quote within 24 hours.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="mailto:info@pitrowmiami.com" class="btn-primary text-lg px-8 py-4">Email info@pitrowmiami.com</a>
+        <a href="tel:+19548002162" class="btn-secondary text-lg px-8 py-4">Call (954) 800-2162</a>
+        <a href="/#book" class="btn-primary text-lg px-8 py-4 bg-brand-600">Book Online</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

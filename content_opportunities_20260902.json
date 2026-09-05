@@ -1,0 +1,26 @@
+[
+  {
+    "type": "power_demand",
+    "angle": "The 1-Megawatt Rack Debate...",
+    "tweet_idea": "The AI trade is really a power trade. Every data center is a bet on electricity \u2014 who owns the capacity wins.",
+    "source": "https://semiengineering.com/the-1-megawatt-rack-debate"
+  },
+  {
+    "type": "power_demand",
+    "angle": "[PDF] Nuclear fusion for AI: A pathway to power data centers...",
+    "tweet_idea": "The AI trade is really a power trade. Every data center is a bet on electricity \u2014 who owns the capacity wins.",
+    "source": "https://arxiv.org/pdf/2608.10454"
+  },
+  {
+    "type": "power_demand",
+    "angle": "800VDC Pushes AI Power Design From Grid To Gate...",
+    "tweet_idea": "The AI trade is really a power trade. Every data center is a bet on electricity \u2014 who owns the capacity wins.",
+    "source": "https://semiengineering.com/800vdc-pushes-ai-power-design-from-grid-to-gate"
+  },
+  {
+    "type": "evergreen",
+    "angle": "AI-infra reality check",
+    "tweet_idea": "The AI-infra winners aren't the ones with the flashiest models. They're the ones who own the power, the compute, and the capacity.",
+    "source": "evergreen"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "type": "power_demand",
+    "angle": "800VDC Pushes AI Power Design From Grid To Gate...",
+    "tweet_idea": "The AI trade is really a power trade. Every data center is a bet on electricity \u2014 who owns the capacity wins.",
+    "source": "https://semiengineering.com/800vdc-pushes-ai-power-design-from-grid-to-gate"
+  },
+  {
+    "type": "power_demand",
+    "angle": "Data centers become \"killer application\" for new power trans...",
+    "tweet_idea": "The AI trade is really a power trade. Every data center is a bet on electricity \u2014 who owns the capacity wins.",
+    "source": "https://arstechnica.com/gadgets/2026/08/energy-hungry-ai-data-centers-spur-new-power-transformer-technology"
+  },
+  {
+    "type": "space_signal",
+    "angle": "SpaceX's satellite ambitions squeeze out rivals reliant on i",
+    "tweet_idea": "Space is becoming an infrastructure play. Direct-to-cell and launch capacity are the picks-and-shovels of the next decade.",
+    "source": "https://www.reuters.com/business/aerospace-defense/spacexs-satellite-ambitions-squeeze-out-rivals-reliant-its-rockets-2026-08-04"
+  },
+  {
+    "type": "space_signal",
+    "angle": "SpaceX revenue jumps in debut results as satellite, AI ...",
+    "tweet_idea": "Space is becoming an infrastructure play. Direct-to-cell and launch capacity are the picks-and-shovels of the next decade.",
+    "source": "https://www.reuters.com/business/media-telecom/spacex-quarterly-revenue-surges-debut-results-strong-growth-its-starlink-2026-08-04"
+  },
+  {
+    "type": "evergreen",
+    "angle": "AI-infra reality check",
+    "tweet_idea": "The AI-infra winners aren't the ones with the flashiest models. They're the ones who own the power, the compute, and the capacity.",
+    "source": "evergreen"
+  }
+]

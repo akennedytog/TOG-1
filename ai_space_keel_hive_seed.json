@@ -1,0 +1,33 @@
+[
+  {
+    "id": "keel-hive-1-thesis",
+    "text": "Two AI plays I'm long that most people treat as unrelated:\n\n$HIVE \u2014 a Bitcoin miner turning its data centers into GPU/AI compute.\n\nAnd Keel (data infrastructure & analytics) \u2014 the foundation layer under the compute buildout.\n\nDifferent layers. Same trend. That's the whole thesis. \ud83e\uddf5",
+    "content": "Two AI plays I'm long that most people treat as unrelated:\n\n$HIVE \u2014 a Bitcoin miner turning its data centers into GPU/AI compute.\n\nAnd Keel (data infrastructure & analytics) \u2014 the layer under the compute.\n\nDifferent layers. Same trend. \ud83e\uddf5",
+    "type": "thread",
+    "tactic": "invested_in_both",
+    "source": "ai_space_pillar"
+  },
+  {
+    "id": "keel-hive-2-why-both",
+    "text": "Why own BOTH $HIVE and Keel instead of picking one?\n\nBecause the AI buildout is a stack, not a single company:\n- It repurposes power & data centers into GPU compute (compute layer)\n- Keel is the data infrastructure underneath (foundation layer)\n\nOwning the stack > betting on one layer.",
+    "content": "Why own BOTH $HIVE and Keel instead of picking one?\n\nBecause the AI buildout is a stack, not a single company:\n- It repurposes power & data centers into GPU compute\n- Keel is the data infrastructure underneath\n\nOwning the stack > betting on one layer.",
+    "type": "insight",
+    "tactic": "invested_in_both",
+    "source": "ai_space_pillar"
+  },
+  {
+    "id": "keel-hive-3-operator-lens",
+    "text": "The metrics I actually watch in $HIVE and Keel \u2014 not the chart:\n\n1. Power cost per GPU\n2. Utilization of repurposed data centers\n3. Data throughput the infra actually handles\n\nBusiness metrics beat price targets.",
+    "content": "The metrics I actually watch in $HIVE and Keel \u2014 not the chart:\n\n1. Power cost per GPU\n2. Utilization of repurposed data centers\n3. Data throughput the infra actually handles\n\nBusiness metrics beat price targets.",
+    "type": "insight",
+    "tactic": "invested_in_both",
+    "source": "ai_space_pillar"
+  },
+  {
+    "id": "keel-hive-4-risk-honest",
+    "text": "Honest take on $HIVE as one half of an AI-infra pair:\n\nBoth are small-cap, volatile, wide 52-week ranges. This is a LONG-TERM buildout, not a swing trade.\n\nIf you're long the 3-5 year AI compute buildout, volatility is the price of admission.\n\nPosition size accordingly.",
+    "type": "reflection",
+    "tactic": "risk_acknowledgement",
+    "source": "ai_space_pillar"
+  }
+]

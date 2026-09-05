@@ -1,0 +1,7 @@
+{
+  channels: {
+    sms: {
+      publicWebhookUrl: "https://enabled-human-butler-officers.trycloudflare.com/webhooks/sms",
+    },
+  },
+}

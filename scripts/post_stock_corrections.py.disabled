@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""
+Post one clean correction tweet per tracked ticker after the 2026-08-24
+morning tweets used stale Yahoo chartPreviousClose data (wrong % + direction).
+
+Uses live prices fetched fresh from Yahoo daily history (the same corrected
+logic as agents/stock_market_monitor.py). Posts via tweepy v2.
+
+RUN: python3 scripts/post_stock_corrections.py [--dry-run]
+"""
+import os
+import sys
+import json
+import urllib.request
+from datetime import datetime
+from pathlib import Path
+
+WS = Path("/Users/aleckennedy/.openclaw/workspace")
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+
+# Load .env
+for p in [WS / ".env", Path.home() / ".openclaw" / ".env"]:
+    if p.exists():
+        for line in open(p):
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k, v)
+
+TODAY = datetime.now().strftime("%Y-%m-%d")
+
+
+def fetch_live(symbol):
+    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+           f"?interval=1d&range=10d")
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    d = json.loads(urllib.request.urlopen(req, timeout=20).read().decode())
+    r = d["chart"]["result"][0]
+    m = r["meta"]
+    closes = r["indicators"]["quote"][0]["close"]
+    ts = r.get("timestamp", [])
+    hist = [(datetime.fromtimestamp(t).strftime("%Y-%m-%d"), c)
+            for t, c in zip(ts, closes) if c is not None]
+    price = m.get("regularMarketPrice")
+    if hist[-1][0] == TODAY:
+        prev = hist[-2][1]
+    else:
+        prev = hist[-1][1]
+    pct = (price - prev) / prev * 100.0
+    return {
+        "price": price, "prev": prev, "pct": pct,
+        "lo52": m.get("fiftyTwoWeekLow"), "hi52": m.get("fiftyTwoWeekHigh"),
+    }
+
+
+def build_correction(symbol, disp, thesis, d):
+    pct = d["pct"]
+    arrow = "▲" if pct >= 0 else "▼"
+    # NOTE: Twitter allows only ONE cashtag per post. The ticker appears once
+    # (in the price line); the opener uses the company name, not the cashtag.
+    return (f"Correction (earlier post had a bad data feed):\n\n"
+            f"{disp} {arrow}{abs(pct):.1f}% today to ${d['price']:.2f} "
+            f"(prev close ${d['prev']:.2f}).\n\n"
+            f"{thesis}. Tracking it live with clean data.")
+
+
+def main():
+    dry = "--dry-run" in sys.argv
+    TRACKED = {
+        "HIVE": ("$HIVE", "AI-compute pivot from a Bitcoin miner"),
+        "KEEL": ("$KEEL", "data-center/AI-infrastructure landlord pivot"),
+        "ASTS": ("$ASTS", "direct-to-cell satellite connectivity"),
+        "TE":   ("$TE",   "US solar manufacturing / T1 Energy"),
+    }
+
+    texts = {}
+    for sym, (disp, thesis) in TRACKED.items():
+        d = fetch_live(sym)
+        texts[sym] = build_correction(sym, disp, thesis, d)
+        print(f"--- {sym} ---")
+        print(texts[sym])
+        print()
+
+    if dry:
+        print("DRY RUN — not posting.")
+        return
+
+    import tweepy
+    client = tweepy.Client(
+        consumer_key=os.getenv("TWITTER_API_KEY"),
+        consumer_secret=os.getenv("TWITTER_API_SECRET"),
+        access_token=os.getenv("TWITTER_ACCESS_TOKEN"),
+        access_token_secret=os.getenv("TWITTER_ACCESS_SECRET"),
+    )
+    for sym, text in texts.items():
+        if len(text) > 280:
+            print(f"⚠️ {sym} correction too long ({len(text)} chars), skipping")
+            continue
+        resp = client.create_tweet(text=text)
+        print(f"✅ {sym} correction posted, id={resp.data['id']}")
+        # log to state.json postedLog so future dedup knows it's out
+        state = json.loads((WS / "state.json").read_text())
+        state.setdefault("postedLog", []).append({
+            "id": f"corr-{sym}-{TODAY}", "text": text,
+            "postedAt": datetime.now().isoformat(),
+            "storyTitle": f"{sym}-correction", "type": "correction",
+        })
+        (WS / "state.json").write_text(json.dumps(state, indent=2))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,13 @@
+{
+  channels: {
+    sms: {
+      enabled: true,
+      accountSid: "AC5346d637b6a8dca7a78a68db3e3c9da2",
+      authToken: { source: "env", provider: "default", id: "TWILIO_AUTH_TOKEN" },
+      fromNumber: "+17543509490",
+      publicWebhookUrl: "https://alecs-macbook-pro.tailf08147.ts.net/webhooks/sms",
+      dmPolicy: "allowlist",
+      allowFrom: ["+15024037201"],
+    },
+  },
+}

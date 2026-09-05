@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "F1 Simulator Rental Miami | Fanatec Rigs Delivered to You — Pit Row Miami";
+const description = "Rent a professional F1 simulator in Miami. Two Fanatec rigs with 48\" widescreens running Formula 1 2026, delivered, set up, and staffed anywhere in Miami-Dade, Broward & Palm Beach. From $1,200.";
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- JSON-LD: LocalBusiness + Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Pit Row Miami",
+    "description": "Premium F1 simulator rental service in South Florida. Professional Fanatec racing delivered, set up, and staffed at your event.",
+    "url": "https://pitrowmiami.com/f1-simulator-rental",
+    "email": "info@pitrowmiami.com",
+    "telephone": "+19548002162",
+    "priceRange": "$1,200-$3,000",
+    "areaServed": ["Miami", "Miami-Dade", "Broward", "Palm Beach"],
+    "image": "https://pitrowmiami.com/og-image.jpg",
+    "openingHours": "Mo-Su 08:00-22:00",
+    "makesOffer": [{
+      "@type": "Offer",
+      "name": "F1 Simulator Rental — Half Day",
+      "price": "1200",
+      "priceCurrency": "USD",
+      "description": "4 hours, two pro Fanatec rigs, delivered & staffed."
+    }, {
+      "@type": "Offer",
+      "name": "F1 Simulator Rental — Full Day",
+      "price": "1800",
+      "priceCurrency": "USD",
+      "description": "8 hours, two pro Fanatec rigs, custom branding available."
+    }, {
+      "@type": "Offer",
+      "name": "F1 Simulator Rental — F1 GP Week",
+      "price": "3000",
+      "priceCurrency": "USD",
+      "description": "Miami Grand Prix premium week rental."
+    }]
+  })} />
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden pt-24 md:pt-16">
+    <div class="f1-gradient absolute inset-0 opacity-20"></div>
+    <div class="speed-lines absolute inset-0"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 py-10 md:py-16">
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="flex-1">
+          <div class="inline-block bg-brand-600/20 text-brand-500 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-brand-600/30">F1 Simulator Rental · Miami, FL</div>
+          <h1 class="text-4xl md:text-6xl font-display font-black tracking-tight leading-tight mb-6">
+            F1 Simulator Rental<br />
+            <span class="text-brand-600">Miami</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-2xl">
+            Two professional Fanatec F1 rigs with 48" widescreens and the official F1 2026 game — delivered, set up, and staffed at your venue anywhere in South Florida.
+          </p>
+          <p class="text-gray-400 text-lg mb-8 max-w-2xl">
+            Corporate events, private parties, dealership launches, and watch parties. <span class="text-white font-semibold">From $1,200</span> for a half day.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/#book" class="btn-primary text-lg px-8 py-4">Book Your Rental</a>
+            <a href="mailto:info@pitrowmiami.com" class="btn-secondary text-lg px-8 py-4">Get a Quote</a>
+          </div>
+          <p class="text-sm text-gray-400 mt-6">Prefer to talk? Call or text <a href="tel:+19548002162" class="text-brand-500 underline hover:underline">(954) 800-2162</a></p>
+        </div>
+        <div class="flex-shrink-0">
+          <picture>
+            <source srcset="/hero-image.webp" type="image/webp" />
+            <img src="/hero-image.jpg" alt="F1 racing simulator rental setup in Miami" width="600" height="749" class="w-full max-w-xs md:max-w-sm rounded-2xl shadow-2xl border border-gray-700" loading="eager" fetchpriority="high" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats -->
+  <section class="border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-3xl font-black text-brand-600">2</div>
+        <div class="text-gray-300 text-sm mt-1">Pro Simulators</div>
+      </div>
+      <div>
+        <div class="text-3xl font-black text-brand-600">48"</div>
+        <div class="text-gray-300 text-sm mt-1">Widescreen Each</div>
+      </div>
+      <div>
+        <div class="text-3xl font-black text-brand-600">F1 2026</div>
+        <div class="text-gray-300 text-sm mt-1">Official Game on PS5</div>
+      </div>
+      <div>
+        <div class="text-3xl font-black text-brand-600">$0</div>
+        <div class="text-gray-300 text-sm mt-1">Setup Fee</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-black mb-4">What You Get</h2>
+      <p class="text-gray-300 text-lg mb-12 max-w-2xl">Everything you need for a turnkey, head-to-head racing experience — no sim experience required.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card p-8">
+          <div class="text-4xl mb-4">🏎️</div>
+          <h3 class="text-xl font-bold mb-3">Two Fanatec F1 Rigs</h3>
+          <p class="text-gray-300">Brand-new Fanatec systems with the official F1 wheel, pedals, and full cockpit. The same gear the pros use — roughly $8K per setup.</p>
+        </div>
+        <div class="card p-8">
+          <div class="text-4xl mb-4">🖥️</div>
+          <h3 class="text-xl font-bold mb-3">48" Widescreens</h3>
+          <p class="text-gray-300">Immersive ultrawide displays running Formula 1 2026 on PS5. Every turn, every straight — it feels like you're in the car.</p>
+        </div>
+        <div class="card p-8">
+          <div class="text-4xl mb-4">🏁</div>
+          <h3 class="text-xl font-bold mb-3">Head-to-Head Racing</h3>
+          <p class="text-gray-300">Two rigs side by side. Your guests compete for fastest lap on a live leaderboard that keeps the competition alive all night.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">How It Works</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center">We handle everything — you just enjoy the event.</p>
+      <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">1</div>
+          <h3 class="font-bold mb-2">Book</h3>
+          <p class="text-gray-300 text-sm">Send us your date, venue, and guest count via the form, email, or phone.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">2</div>
+          <h3 class="font-bold mb-2">We Deliver</h3>
+          <p class="text-gray-300 text-sm">We arrive early, set up both rigs, and calibrate them to your space.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">3</div>
+          <h3 class="font-bold mb-2">We Staff</h3>
+          <p class="text-gray-300 text-sm">An experienced operator runs the races, the leaderboard, and keeps guests engaged.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-3xl font-black text-brand-600 mb-2">4</div>
+          <h3 class="font-bold mb-2">We Teardown</h3>
+          <p class="text-gray-300 text-sm">When it's over, we pack up and leave your venue spotless.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-carbon-900/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-4 text-center">F1 Simulator Rental Pricing</h2>
+      <p class="text-gray-300 text-lg mb-12 text-center">Simple, all-inclusive pricing. Setup, operation, and teardown included.</p>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="card p-8 text-center">
+          <h3 class="text-lg font-semibold text-gray-300 mb-2">Half Day</h3>
+          <div class="text-4xl font-black mb-1">$1,200</div>
+          <div class="text-gray-300 text-sm mb-6">4 hours · 2 sims</div>
+          <ul class="text-left text-gray-300 space-y-3 mb-8">
+            <li class="flex items-start gap-2">✓ Delivery &amp; setup</li>
+            <li class="flex items-start gap-2">✓ Staffed operation</li>
+            <li class="flex items-start gap-2">✓ Teardown &amp; pack</li>
+            <li class="flex items-start gap-2">✓ Leaderboard system</li>
+          </ul>
+          <a href="/#book" class="block w-full border border-gray-600 hover:border-white text-white py-3 rounded-full font-semibold transition-all text-center">Book Half Day</a>
+        </div>
+        <div class="bg-brand-600/10 rounded-2xl p-8 border-2 border-brand-600 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>
+          <h3 class="text-lg font-semibold text-gray-300 mb-2">Full Day</h3>
+          <div class="text-4xl font-black mb-1">$1,800</div>
+          <div class="text-gray-300 text-sm mb-6">8 hours · 2 sims</div>
+          <ul class="text-left text-gray-300 space-y-3 mb-8">
+            <li class="flex items-start gap-2">✓ Delivery &amp; setup</li>
+            <li class="flex items-start gap-2">✓ Staffed operation</li>
+            <li class="flex items-start gap-2">✓ Teardown &amp; pack</li>
+            <li class="flex items-start gap-2">✓ Leaderboard system</li>
+            <li class="flex items-start gap-2">✓ Custom branding</li>
+          </ul>
+          <a href="/#book" class="block w-full bg-brand-600 hover:bg-red-700 text-white py-3 rounded-full font-bold transition-all text-center">Book Full Day</a>
+        </div>
+        <div class="card p-8 text-center">
+          <h3 class="text-lg font-semibold text-gray-300 mb-2">F1 GP Week</h3>
+          <div class="text-4xl font-black mb-1">$3,000</div>
+          <div class="text-gray-300 text-sm mb-6">Miami Grand Prix · Premium</div>
+          <ul class="text-left text-gray-300 space-y-3 mb-8">
+            <li class="flex items-start gap-2">✓ Full day + setup</li>
+            <li class="flex items-start gap-2">✓ Extended hours</li>
+            <li class="flex items-start gap-2">✓ Custom leaderboard</li>
+            <li class="flex items-start gap-2">✓ Branded photo ops</li>
+          </ul>
+          <a href="/#book" class="block w-full border border-gray-600 hover:border-white text-white py-3 rounded-full font-semibold transition-all text-center">Book GP Week</a>
+        </div>
+      </div>
+      <p class="text-center text-sm text-gray-400 mt-8">Looking for a quote on a specific event? <a href="mailto:info@pitrowmiami.com" class="text-brand-500 hover:underline">Email us</a> or <a href="tel:+19548002162" class="text-brand-500 hover:underline">call (954) 800-2162</a>.</p>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-black mb-4">Service Areas</h2>
+        <p class="text-gray-300 text-lg mb-8">We deliver and set up F1 simulator rentals throughout South Florida.</p>
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+          <span class="bg-brand-600/10 text-brand-500 font-semibold px-5 py-2 rounded-full border border-brand-600/30">Miami-Dade County</span>
+          <span class="bg-brand-600/10 text-brand-500 font-semibold px-5 py-2 rounded-full border border-brand-600/30">Broward County</span>
+          <span class="bg-brand-600/10 text-brand-500 font-semibold px-5 py-2 rounded-full border border-brand-600/30">Palm Beach County</span>
+        </div>
+        <p class="text-gray-400">Cities include Miami, Coral Gables, Fort Lauderdale, Hollywood, Boca Raton, West Palm Beach, and everywhere in between. Don't see your area? Ask — we'll try to accommodate.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-carbon-900/50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-black mb-8 text-center">F1 Simulator Rental FAQ</h2>
+      <div class="space-y-4">
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">How many people can race?</h3>
+          <p class="text-gray-300">With two rigs, drivers rotate quickly — a single rig can comfortably move 50+ guests through in a few hours. For larger groups, we help you design a tournament format so everyone gets laps.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Do guests need racing experience?</h3>
+          <p class="text-gray-300">Not at all. Formula 1 2026 is casual-friendly with assists, so anyone can race from their first lap. Our on-site host helps beginners get going.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">What space do you need?</h3>
+          <p class="text-gray-300">Each rig needs roughly a 6×6 ft footprint. Two rigs side by side fit comfortably in most venues, ballrooms, garages, and patios. We'll advise on the ideal layout for your space.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">What does the price include?</h3>
+          <p class="text-gray-300">Delivery, setup, staffing, the leaderboard system, and full teardown — all included. No hidden fees or setup charges.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Do you provide the F1 game and console?</h3>
+          <p class="text-gray-300">Yes. Formula 1 2026 on PS5 comes loaded on both rigs. We handle all the tech so it's ready the moment guests sit down.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">What areas do you cover?</h3>
+          <p class="text-gray-300">We service all of Miami-Dade, Broward, and Palm Beach counties. For events just outside these areas, contact us — we can often make it work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="book" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-black mb-4">Ready to Race?</h2>
+      <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">Tell us your date, venue, and guest count. We'll confirm availability and send a custom quote within 24 hours.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="mailto:info@pitrowmiami.com" class="btn-primary text-lg px-8 py-4">Email info@pitrowmiami.com</a>
+        <a href="tel:+19548002162" class="btn-secondary text-lg px-8 py-4">Call (954) 800-2162</a>
+        <a href="/#book" class="btn-primary text-lg px-8 py-4 bg-brand-600">Book Online</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

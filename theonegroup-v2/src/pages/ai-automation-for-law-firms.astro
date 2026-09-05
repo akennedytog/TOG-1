@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="AI Automation for Law Firms | The One Group" 
+  description="AI automation for law firms: intake automation, case follow-up, client communication, and billing. Capture more cases and free your paralegals. Free discovery call."
+>
+  <!-- JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Automation for Law Firms — The One Group",
+    "serviceType": "AI Automation for Legal",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "The One Group",
+      "url": "https://theonegroup.info/",
+      "telephone": "+17547998676",
+      "email": "akennedy@theonegroup.info",
+      "priceRange": "$$"
+    },
+    "description": "Custom AI automation for law firms: intake, case follow-up, client communication, and billing workflows.",
+    "areaServed": "South Florida, Miami, United States"
+  })} />
+  
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-brand-50/30 dark:from-gray-950 dark:via-gray-950 dark:to-brand-950/20 relative overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-brand-200/20 dark:bg-brand-900/10 blur-[120px] pointer-events-none" />
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">For Law Firms</span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight leading-[1.08] mt-4 mb-6">
+          AI Automation for <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-accent-500 bg-clip-text text-transparent">Law Firms</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
+          Capture every case inquiry, follow up automatically, and get paid faster. 
+          AI handles the intake and admin work so your attorneys and paralegals focus on practicing law.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+            Get a Free Intake Audit
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+          <a href="tel:7547998676" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-700 hover:border-brand-500 transition-all duration-200">
+            Call (754) 799-8676
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Pain points + solutions -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Pain Points → Solutions</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">The Admin Leak in Your Law Practice</h2>
+        <p class="text-gray-500 dark:text-gray-400 leading-relaxed">Every hour spent on intake, chasing clients, and billing is an hour not spent on billable work. Here's where automation wins back the most.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">Intake Automation</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Prospective clients submit a form or call after hours — the AI qualifies their matter, asks the right questions, and books a consultation instantly. No more lost leads or "I'll call them tomorrow."</p>
+          <p class="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-4">Outcome: more retained cases</p>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">Case Follow-Up</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Clients want status updates. An AI agent sends automated, personalized case progress updates and answers common questions — without bugging your paralegal for every detail.</p>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-4">Outcome: happier clients, fewer calls</p>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">Client Communication</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Document requests, signatures, and reminders handled automatically. Clients stay informed through email and SMS, with every touchpoint logged for your records.</p>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-4">Outcome: less chasing</p>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">Billing &amp; Collections</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Invoices sent on schedule, payment reminders nudged automatically, and receivables chased without awkward manual emails. Your cash flow improves without the admin burden.</p>
+          <p class="text-sm font-semibold text-accent-600 dark:text-accent-400 mt-4">Outcome: paid faster</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- What you get -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Measurable Outcomes</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">What Automation Delivers for Law Firms</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-8 text-center">
+          <p class="text-4xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent font-display">Faster</p>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-3 mb-2">Lead Response</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Every inquiry answered in seconds, not days. More consultations booked.</p>
+        </div>
+        <div class="card p-8 text-center">
+          <p class="text-4xl font-bold bg-gradient-to-r from-accent-600 to-brand-600 bg-clip-text text-transparent font-display">Fewer</p>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-3 mb-2">Admin Hours</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Paralegals reclaim hours each week from routine communication and follow-up.</p>
+        </div>
+        <div class="card p-8 text-center">
+          <p class="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-brand-600 bg-clip-text text-transparent font-display">Better</p>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-3 mb-2">Retention &amp; Cash Flow</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">More cases retained and invoices paid on time, month after month.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">AI for Law Firms — Questions</h2>
+      </div>
+      <div class="space-y-6">
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Is AI safe for legal client data?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Yes. We build automations that respect confidentiality, with role-based access and logging so you stay in control. We'll work within your firm's data-handling and security policies.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Will this replace my paralegal?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">No. It removes the repetitive intake, follow-up, and billing busywork so your paralegal can focus on higher-value case work. AI handles the routine; people handle the judgment.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">What does it cost?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Our audit starts at $2,500, and custom implementation typically runs $2,500&ndash;$10,000 depending on the scope of the intake and billing workflows you want automated.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">How fast is setup?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Most intake and follow-up automations are live within 2–4 weeks. We handle all the integration with the tools your firm already uses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-display font-bold mb-4">Stop Losing Cases to Slow Follow-Up</h2>
+      <p class="text-gray-500 dark:text-gray-400 mb-8">
+        Book a free discovery call. We'll map your intake and see exactly where automation can win back time and cases.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+        Book a Free Call
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+        Or call <a href="tel:7547998676" class="text-brand-600 dark:text-brand-400 font-medium underline underline-offset-2">(754) 799-8676</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

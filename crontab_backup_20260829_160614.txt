@@ -1,0 +1,93 @@
+# The One Group - MASTER CRON CONFIGURATION
+# Phase 2: Event-Driven Agent Swarm System
+# 
+# To install: crontab THEONEGROUP_CRON_MASTER.txt
+# To backup: crontab -l > crontab_backup_$(date +%Y%m%d).txt
+
+SHELL=/bin/zsh
+PATH=/Users/aleckennedy/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Users/aleckennedy/.openclaw/bin:/Users/aleckennedy/.npm-global/bin
+OPENCLAW_GATEWAY_URL=ws://127.0.0.1:18789
+
+# ============================================
+# PHASE 1: AGENT SWARM SYSTEM
+# ============================================
+
+# Start swarm system on boot (if not running)
+@reboot cd ~/.openclaw/workspace && bash scripts/run_swarm_system.sh > logs/swarm-boot.log 2>&1
+
+# Health check every 15 minutes
+*/15 * * * * cd ~/.openclaw/workspace && pgrep -f "webhook_server.py" > /dev/null || bash scripts/run_swarm_system.sh > logs/swarm-restart.log 2>&1
+
+# ============================================
+# PHASE 2: MULTI-PLATFORM CONTENT ENGINE
+# ============================================
+
+# Daily 7 AM: Generate multi-platform content from overnight intel
+0 7 * * * cd ~/.openclaw/workspace && bash scripts/generate_multiplatform.sh > logs/multiplatform.log 2>&1
+
+# Daily 8 AM: Post to Twitter (existing)
+
+# Daily 10 AM: Post to LinkedIn
+0 10 * * * cd ~/.openclaw/workspace && python3 scripts/post_to_linkedin.py > logs/linkedin.log 2>&1
+
+# Daily 12 PM: Check Reddit opportunities
+0 12 * * * cd ~/.openclaw/workspace && python3 scripts/post_to_reddit.py --dry-run > logs/reddit.log 2>&1
+
+# ============================================
+# PHASE 3: COMPLIANCE CONTENT (Weekly)
+# ============================================
+
+# Monday 6 AM: Generate compliance content for all industries
+0 6 * * 1 cd ~/.openclaw/workspace && bash scripts/generate_compliance_content.sh > logs/compliance-content.log 2>&1
+
+# Wednesday 9 AM: Review and approve compliance content
+0 9 * * 3 cd ~/.openclaw/workspace && ls -la compliance-content/generated/*.md 2>/dev/null | mail -s "Compliance content ready for review" akennedy@theonegroup.info
+
+# ============================================
+# PHASE 4: COMPETITOR INTELLIGENCE PRODUCT
+# ============================================
+
+# Every 2 hours: Check competitors (aggressive monitoring)
+0 */2 * * * cd ~/.openclaw/workspace && bash scripts/run_competitor_monitor.sh > logs/competitor-check.log 2>&1
+
+# Daily 9 AM: Send competitor intel digest
+0 9 * * * cd ~/.openclaw/workspace && python3 products/competitor-intel/monitor_service.py status > logs/competitor-digest.log 2>&1
+
+# ============================================
+# PHASE 5: LEAD RESPONSE AUTOMATION
+# ============================================
+
+# Every 5 minutes: Check for new leads and spawn Arlo
+*/5 * * * * cd ~/.openclaw/workspace && python3 agents/arlo_iris_pipeline.py > logs/lead-check.log 2>&1
+
+# ============================================
+# PHASE 6: SUPERCHARGED INTELLIGENCE (Enhanced)
+# ============================================
+
+# Daily 6:30 AM: Run enhanced supercharged with multi-platform triggers
+30 6 * * * cd ~/.openclaw/workspace && python3 daily_supercharged_run.py --multi-platform > logs/supercharged-enhanced.log 2>&1
+
+# ============================================
+# MAINTENANCE & HEALTH
+# ============================================
+
+# Daily 7:15 AM: Model routing health check
+15 7 * * * cd ~/.openclaw/workspace && bash scripts/model_routing_healthcheck.sh > logs/model-routing-health.log 2>&1
+
+# Weekly Sunday 11 PM: Clean old logs
+0 23 * * 0 cd ~/.openclaw/workspace/logs && find . -name "*.log" -mtime +7 -delete
+
+# Weekly Sunday 11:30 PM: Archive old triggers
+30 23 * * 0 cd ~/.openclaw/workspace/triggers && find processed -name "*.json" -mtime +30 -exec mv {} archive/ \;
+
+# Daily 7 AM: Update AI news ticker (theonegroup-v2 live site)
+0 7 * * * cd ~/.openclaw/workspace && bash theonegroup-v2/scripts/update-ai-news.sh > logs/ai-news-ticker.log 2>&1
+
+# ============================================
+# TWITTER: 4 POSTS PER DAY (09:00, 11:00, 13:00, 20:00)
+# Each run posts ONE tweet from the queue (filled by 6:30 AM supercharged)
+# ============================================
+0 9 * * * cd ~/.openclaw/workspace && python3 post_tweet.py > logs/twitter-9am.log 2>&1
+0 11 * * * cd ~/.openclaw/workspace && python3 post_tweet.py > logs/twitter-11am.log 2>&1
+0 13 * * * cd ~/.openclaw/workspace && python3 post_tweet.py > logs/twitter-1pm.log 2>&1
+0 20 * * * cd ~/.openclaw/workspace && python3 post_tweet.py > logs/twitter-8pm.log 2>&1

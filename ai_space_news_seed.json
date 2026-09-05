@@ -1,0 +1,39 @@
+[
+  {
+    "id": "hive-350m-deal",
+    "text": "Big week for $HIVE: a five-year, $350M GPU cloud contract with an investment-grade enterprise customer. Their AI cloud business just crossed $110M in annual recurring revenue, up 74% YoY.\n\nThis is the thesis playing out — repurposed data centers, real enterprise demand.",
+    "content": "Big week for $HIVE: a five-year, $350M GPU cloud contract with an investment-grade enterprise customer. Their AI cloud ARR just hit $110M, up 74% YoY.\n\nThe compute repurposing thesis is playing out.",
+    "type": "insight",
+    "tactic": "positive_news",
+    "source": "ai_space_pillar"
+  },
+  {
+    "id": "hive-revenue-momentum",
+    "text": "The $HIVE story keeps getting better.\n\nQ1 revenue up 74%, GPU cloud ARR at $110M and climbing, and a $200M annual revenue target in sight.\n\nAnalysts reaffirmed Buy this week.\n\nMomentum is compounding — that's what you want in a compute play.",
+    "content": "The $HIVE story keeps getting better.\n\nQ1 revenue up 74%, GPU cloud ARR at $110M, and a $200M annual revenue target in sight. Analysts reaffirmed Buy this week.\n\nMomentum is compounding.",
+    "type": "reflection",
+    "tactic": "positive_news",
+    "source": "ai_space_pillar"
+  },
+  {
+    "id": "keel-foundation-progress",
+    "text": "Quietly bullish on Keel infrastructure right now.\n\nEven with headline noise, the underlying signals are positive: real site progress, tenant talks advancing, and an $819M cash cushion to fund the AI-HPC buildout.\n\nIn a capital-heavy transition, liquidity wins. Positioned for the long build.",
+    "type": "insight",
+    "tactic": "positive_news",
+    "source": "ai_space_pillar"
+  },
+  {
+    "id": "keel-broker-buy",
+    "text": "Under-the-radar positive for Keel: brokerages now rate it a Moderate Buy.\n\nFor a company in the middle of a heavy AI-HPC transition, that's real institutional validation — and it's up on the week despite the noise.\n\nThe infrastructure layer of the build is quietly earning its keep.",
+    "type": "insight",
+    "tactic": "positive_news",
+    "source": "ai_space_pillar"
+  },
+  {
+    "id": "keel-hive-combo-progress",
+    "text": "The best part of being long both $HIVE and Keel? Both are moving the needle in the same week.\n\nHIVE books a $350M AI cloud deal. Keel advances site progress with strong liquidity behind it.\n\nTwo layers of the AI build, both making real progress. That's the thesis compounding.",
+    "type": "thread",
+    "tactic": "positive_news",
+    "source": "ai_space_pillar"
+  }
+]

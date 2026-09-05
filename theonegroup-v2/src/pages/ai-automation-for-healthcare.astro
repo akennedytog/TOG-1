@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="AI Automation for Healthcare | The One Group" 
+  description="AI automation for medical and dental practices: appointment reminders, no-show reduction, patient intake, and recall campaigns. Reduce no-shows and fill your calendar. Free discovery call."
+>
+  <!-- JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Automation for Healthcare — The One Group",
+    "serviceType": "AI Automation for Medical & Dental",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "The One Group",
+      "url": "https://theonegroup.info/",
+      "telephone": "+17547998676",
+      "email": "akennedy@theonegroup.info",
+      "priceRange": "$$"
+    },
+    "description": "Custom AI automation for medical and dental practices: appointment reminders, no-show reduction, patient intake, and recall campaigns.",
+    "areaServed": "South Florida, Miami, United States"
+  })} />
+  
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-brand-50/30 dark:from-gray-950 dark:via-gray-950 dark:to-brand-950/20 relative overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-accent-200/20 dark:bg-accent-900/10 blur-[120px] pointer-events-none" />
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Medical &amp; Dental</span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight leading-[1.08] mt-4 mb-6">
+          AI Automation for <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-accent-500 bg-clip-text text-transparent">Healthcare Practices</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
+          Empty chairs cost you thousands every month. AI automation fills your schedule — 
+          with smart reminders, no-show prevention, and recall campaigns that bring patients back.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+            Get a Free No-Show Audit
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+          <a href="tel:7547998676" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-700 hover:border-brand-500 transition-all duration-200">
+            Call (754) 799-8676
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Pain points + solutions -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Pain Points → Solutions</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">Every Empty Slot Is Lost Revenue</h2>
+        <p class="text-gray-500 dark:text-gray-400 leading-relaxed">For medical and dental practices, no-shows and slow patient recall are silent revenue leaks. Here's how AI plugs them.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">Appointment Reminders</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Automated email and SMS reminders before every appointment, with confirm/reschedule options built in. Patients stay booked, staff stop making reminder calls.</p>
+          <p class="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-4">Outcome: fewer no-shows</p>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">No-Show Reduction</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Smart re-engagement for patients who miss appointments, plus waitlist fill that pulls patients in when a slot opens up. Empty chairs get filled fast.</p>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-4">Outcome: fuller calendar</p>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">Patient Intake</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Digital intake forms collected, verified, and routed before the appointment. Less clipboard time, more accurate records, and a smoother front-desk flow.</p>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-4">Outcome: faster check-in</p>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-display font-bold text-gray-900 dark:text-gray-100 mb-3">Recall Campaigns</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Automated recall for checkups, cleanings, and follow-ups. Patients due for care get a personalized nudge at exactly the right time, so they come back.</p>
+          <p class="text-sm font-semibold text-accent-600 dark:text-accent-400 mt-4">Outcome: repeat patients</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- What you get -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Measurable Outcomes</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">Automation Results for Practices</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-8 text-center">
+          <p class="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-brand-600 bg-clip-text text-transparent font-display">Fewer</p>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-3 mb-2">No-Shows</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Smart reminders and re-engagement reduce missed appointments dramatically.</p>
+        </div>
+        <div class="card p-8 text-center">
+          <p class="text-4xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent font-display">More</p>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-3 mb-2">Filled Slots</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Waitlist fill and recall campaigns keep your schedule full month after month.</p>
+        </div>
+        <div class="card p-8 text-center">
+          <p class="text-4xl font-bold bg-gradient-to-r from-accent-600 to-brand-600 bg-clip-text text-transparent font-display">Less</p>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-3 mb-2">Admin Time</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Your front desk stops making reminder calls and organizing intake by hand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">Healthcare Automation — Questions</h2>
+      </div>
+      <div class="space-y-6">
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Is this HIPAA-compliant?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">We build automations that respect patient privacy and work within your practice's compliance framework. We'll align with your policies and the tools your practice already uses.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Will reminders feel impersonal?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">No. Reminders are personalized with the patient's name, appointment details, and your practice's voice. They read like a helpful front-desk message, not a robot.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Does this work with my practice software?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Almost always yes. We integrate with the scheduling and EHR/PM systems most practices already use. We'll confirm compatibility during your free audit.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">How fast will I see fewer no-shows?</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Reminder and no-show prevention automations typically show results within the first 2–4 weeks of go-live, with measurable improvement reported monthly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-display font-bold mb-4">Fill Your Schedule, Cut Your No-Shows</h2>
+      <p class="text-gray-500 dark:text-gray-400 mb-8">
+        Book a free discovery call. We'll show you exactly how much no-show revenue your practice can recover.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 transition-all duration-200 shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+        Book a Free Call
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+        Or call <a href="tel:7547998676" class="text-brand-600 dark:text-brand-400 font-medium underline underline-offset-2">(754) 799-8676</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

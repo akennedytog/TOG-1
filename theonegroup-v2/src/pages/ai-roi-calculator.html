@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="AI ROI Calculator — How Much Can AI Automation Save Your Business? | The One Group"
+  description="Free AI ROI calculator for small businesses. Estimate monthly and annual savings from automating manual work, see your breakeven on a $2,500 audit, and the hours you'd get back every month."
+>
+
+  <!-- JSON-LD: WebApplication -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI ROI Calculator for Small Business",
+    "url": "https://theonegroup.info/ai-roi-calculator/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "description": "Free interactive calculator that estimates monthly and annual savings from AI automation, breakeven on a $2,500 audit, and hours freed from manual work.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The One Group",
+      "url": "https://theonegroup.info/",
+      "telephone": "+17547998676"
+    }
+  })} />
+
+  <!-- Hero -->
+  <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-brand-50/30 dark:from-gray-950 dark:via-gray-950 dark:to-brand-950/20">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest">Free Tool · No Sign-Up</span>
+      <h1 class="text-4xl sm:text-5xl font-display font-bold mt-4 mb-4">
+        AI ROI Calculator —<br class="hidden sm:block" /> Is Automation Worth It?
+      </h1>
+      <p class="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+        Most small businesses don't know what their manual work actually costs. In 30 seconds, this calculator estimates how much you'd save each month and year by automating the repetitive tasks eating your team's hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Inputs -->
+      <div class="bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8 space-y-6">
+        <div class="space-y-4">
+          <div>
+            <label for="hours" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Hours per week your team wastes on manual, repeatable work</label>
+            <div class="flex items-center gap-3">
+              <input type="range" id="hours" min="0" max="80" step="1" value="15"
+                class="w-full accent-brand-600" />
+              <output for="hours" id="hours-val" class="text-lg font-bold text-brand-600 dark:text-brand-400 w-16 text-right">15</output>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Data entry, lead follow-up, scheduling, reporting, manual emails.</p>
+          </div>
+
+          <div>
+            <label for="rate" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Average hourly cost of that work (fully-loaded, incl. benefits)</label>
+            <div class="flex items-center gap-3">
+              <input type="range" id="rate" min="10" max="200" step="5" value="45"
+                class="w-full accent-brand-600" />
+              <span id="rate-val" class="text-lg font-bold text-brand-600 dark:text-brand-400 w-16 text-right">$45</span>
+            </div>
+          </div>
+
+          <div>
+            <label for="tasks" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">How many of these tasks can AI realistically automate? (%)</label>
+            <div class="flex items-center gap-3">
+              <input type="range" id="tasks" min="0" max="100" step="5" value="80"
+                class="w-full accent-brand-600" />
+              <span id="tasks-val" class="text-lg font-bold text-brand-600 dark:text-brand-400 w-16 text-right">80%</span>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Well-scoped automation routinely hits 70–90% on repetitive workflows.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4" id="results">
+        <div class="card p-6">
+          <p class="text-sm text-gray-500 dark:text-gray-400">Monthly Savings</p>
+          <p id="monthly" class="text-3xl font-display font-bold text-brand-600 dark:text-brand-400 mt-1">$0</p>
+        </div>
+        <div class="card p-6">
+          <p class="text-sm text-gray-500 dark:text-gray-400">Annual Savings</p>
+          <p id="annual" class="text-3xl font-display font-bold text-brand-600 dark:text-brand-400 mt-1">$0</p>
+        </div>
+        <div class="card p-6">
+          <p class="text-sm text-gray-500 dark:text-gray-400">Hours Freed Per Month</p>
+          <p id="hours-freed" class="text-3xl font-display font-bold text-brand-600 dark:text-brand-400 mt-1">0</p>
+        </div>
+        <div class="card p-6">
+          <p class="text-sm text-gray-500 dark:text-gray-400">Breakeven on a $2,500 Audit</p>
+          <p id="breakeven" class="text-3xl font-display font-bold text-brand-600 dark:text-brand-400 mt-1">—</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Weeks to pay back the initial automation assessment.</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-gray-400 dark:text-gray-500 mt-6 text-center">Estimates only. Real results depend on your workflows and the scope of automation — a proper assessment nails down the exact numbers.</p>
+    </div>
+  </section>
+
+  <!-- How the math works -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-display font-bold text-center mb-12">How the Math Works</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card p-6">
+          <div class="text-3xl mb-3">1️⃣</div>
+          <h3 class="font-bold mb-2">Time Value</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Hours wasted × your fully-loaded hourly rate = what those hours cost every month. That's the starting figure — before you automate anything.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-3xl mb-3">2️⃣</div>
+          <h3 class="font-bold mb-2">Automation Capture</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Not every task can (or should) be automated. The percentage slider only counts the workflows a good automation scope can realistically take off your team's plate.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-3xl mb-3">3️⃣</div>
+          <h3 class="font-bold mb-2">The Payback</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Monthly savings → annual savings → hours freed. Compare those to the cost of an assessment, and you get a breakeven in weeks — usually fast.</p>
+        </div>
+      </div>
+      <div class="card p-6 mt-8">
+        <p class="text-gray-600 dark:text-gray-300">
+          <strong class="text-gray-900 dark:text-white">The formula:</strong> Savings/mo = (hours × rate × automation%) × 4.33 weeks.
+          Annual = monthly × 12. Hours freed = hours × automation%. Breakeven = $2,500 ÷ monthly savings, in weeks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scenarios -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-display font-bold text-center mb-4">Typical SMB Automation Scenarios</h2>
+      <p class="text-gray-500 dark:text-gray-400 text-lg text-center mb-12 max-w-2xl mx-auto">Real workflows we see in Miami every day — and what they're worth on paper.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Lead Capture & Follow-up</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Forms, website chats, and inbound calls turned into clean CRM records with automatic follow-up. No more leads slipping through the cracks.</p>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-4">Commonly frees 10–20 hrs/mo</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Scheduling & Booking</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Appointment scheduling, confirmations, reminders, and reschedules handled automatically. Fewer no-shows, less admin.</p>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-4">Commonly frees 8–15 hrs/mo</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-bold mb-2">Back-Office & Reports</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm">Data entry, invoice follow-up, and weekly reports generated by software instead of staff. Less busywork, more accuracy.</p>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-4">Commonly frees 15–30 hrs/mo</p>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 dark:text-gray-400 mt-10">
+        Want to see these in action? Read how <a href="/blog/ai-automation-for-small-business-in-miami" class="text-brand-600 dark:text-brand-400 underline underline-offset-2 hover:no-underline">AI automation helps small businesses in Miami</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-display font-bold mb-4">Ready to Make the Numbers Real?</h2>
+      <p class="text-gray-500 dark:text-gray-400 text-lg mb-8">
+        Get a free, no-obligation assessment. We'll scope exactly what's automatable in your business and put a real price on it — the <span class="font-semibold text-gray-900 dark:text-white">$2,500 audit</span> this calculator uses.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/ai-automation-miami/" class="btn-primary text-lg px-8 py-4">See AI Automation in Miami</a>
+        <a href="/contact/" class="btn-secondary text-lg px-8 py-4">Talk to Us</a>
+        <a href="tel:+17547998676" class="btn-secondary text-lg px-8 py-4">Call (754) 799-8676</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  (function () {
+    // DOM references
+    var hours = document.getElementById('hours');
+    var rate = document.getElementById('rate');
+    var tasks = document.getElementById('tasks');
+    var hoursVal = document.getElementById('hours-val');
+    var rateVal = document.getElementById('rate-val');
+    var tasksVal = document.getElementById('tasks-val');
+    var monthlyEl = document.getElementById('monthly');
+    var annualEl = document.getElementById('annual');
+    var hoursFreedEl = document.getElementById('hours-freed');
+    var breakevenEl = document.getElementById('breakeven');
+
+    function money(n) {
+      return '$' + Math.round(n).toLocaleString('en-US');
+    }
+
+    function update() {
+      var h = parseFloat(hours.value) || 0;
+      var r = parseFloat(rate.value) || 0;
+      var t = (parseFloat(tasks.value) || 0) / 100;
+
+      hoursVal.textContent = String(Math.round(h));
+      rateVal.textContent = '$' + Math.round(r);
+      tasksVal.textContent = Math.round(t * 100) + '%';
+
+      var monthly = h * r * t * 4.33;
+      var annual = monthly * 12;
+      var hoursFreed = h * t; // per week
+      var hoursFreedMonthly = hoursFreed * 4.33;
+
+      monthlyEl.textContent = money(monthly);
+      annualEl.textContent = money(annual);
+      hoursFreedEl.textContent = Math.round(hoursFreedMonthly) + ' hrs';
+
+      if (monthly > 0) {
+        var weeks = 2500 / monthly;
+        breakevenEl.textContent = weeks < 1 ? '<1 wk' : Math.round(weeks) + ' wks';
+      } else {
+        breakevenEl.textContent = '—';
+      }
+    }
+
+    hours.addEventListener('input', update);
+    rate.addEventListener('input', update);
+    tasks.addEventListener('input', update);
+
+    update();
+  })();
+</script>
+</BaseLayout>

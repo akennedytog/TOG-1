@@ -1,0 +1,20 @@
+[
+  {
+    "type": "funding_insight",
+    "angle": "AI chip startup Etched doubles valuation to $21 billion in u...",
+    "tweet_idea": "Another [X]M AI raise. The pattern: infrastructure beats applications. Who's building the picks and shovels?",
+    "source": "https://www.reuters.com/technology/ai-chip-startup-etched-valued-21-billion-latest-funding-round-2026-08-18"
+  },
+  {
+    "type": "regulation_take",
+    "angle": "Anthropic plans to change enterprise data retention policy, ",
+    "tweet_idea": "AI regulation update: The winners will be the ones who built compliance in from day one, not the ones scrambling to catch up.",
+    "source": "https://www.reuters.com/business/anthropic-plans-change-enterprise-data-retention-policy-source-says-2026-08-20"
+  },
+  {
+    "type": "evergreen",
+    "angle": "AI adoption reality check",
+    "tweet_idea": "The SMBs winning with AI aren't the ones with the fanciest tools. They're the ones who picked ONE repetitive task and automated 80% of it.",
+    "source": "evergreen"
+  }
+]

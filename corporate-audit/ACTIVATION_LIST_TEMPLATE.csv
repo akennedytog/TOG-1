@@ -1,0 +1,14 @@
+# F26 / F27 Activation List — Template
+# A&P Audit Support | Consumer Promo · Buy the Barrel · Branded Samples
+# Period under scope: F26 and F27 (through July 2026)
+
+# INSTRUCTIONS: Fill one row per activation. This is the detailed list of activations
+# that took place in the period. Keep it factual from your real records.
+
+Fiscal Year,Activity Type,Activation Name,Description,Channel/Venue,Date,Spend (USD),MRM Recorded? (Yes/No),Invoice/PO Ref,Owner,Notes
+F26,Consumer Promo,<activation>,<description>,<channel>,<date>,<amount>,Yes,<ref>,<owner>,<notes>
+F26,Buy the Barrel,<activation>,<description>,<channel>,<date>,<amount>,Yes,<ref>,<owner>,<notes>
+F26,Branded Samples,<activation>,<description>,<channel>,<date>,<amount>,Yes,<ref>,<owner>,<notes>
+F27,Consumer Promo,<activation>,<description>,<channel>,<date>,<amount>,Yes,<ref>,<owner>,<notes>
+F27,Buy the Barrel,<activation>,<description>,<channel>,<date>,<amount>,Yes,<ref>,<owner>,<notes>
+F27,Branded Samples,<activation>,<description>,<channel>,<date>,<amount>,Yes,<ref>,<owner>,<notes>
