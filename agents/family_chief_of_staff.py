@@ -114,8 +114,23 @@ def fmt_event(ev):
         tstr = s
     return f"{ev.get('summary','')} {tstr}"
 
+def _dedupe(events):
+    """Remove duplicate events that appear in both family + Alec calendars
+    (same summary + start time), keeping the family-calendar copy."""
+    seen = {}
+    out = []
+    for cal, ev in events:
+        s = ev.get("start", {}).get("dateTime") or ev.get("start", {}).get("date", "")
+        key = (ev.get("summary", "").strip().lower(), s)
+        if key in seen:
+            continue  # already have this event
+        seen[key] = True
+        out.append((cal, ev))
+    return out
+
+
 def today_events():
-    """All events today across family + Alec calendars, sorted."""
+    """All events today across family + Alec calendars, sorted + deduped."""
     now = datetime.now()
     tmin = now.strftime("%Y-%m-%dT00:00:00-04:00")
     tmax = (now + timedelta(days=1)).strftime("%Y-%m-%dT00:00:00-04:00")
@@ -124,10 +139,10 @@ def today_events():
         for ev in get_events(cal, tmin, tmax):
             out.append((cal, ev))
     out.sort(key=lambda x: x[1].get("start", {}).get("dateTime", ""))
-    return out
+    return _dedupe(out)
 
 def week_events(days=7):
-    """All events over the next N days across family + Alec calendars."""
+    """All events over the next N days across family + Alec calendars, deduped."""
     now = datetime.now()
     tmin = now.strftime("%Y-%m-%dT00:00:00-04:00")
     tmax = (now + timedelta(days=days)).strftime("%Y-%m-%dT00:00:00-04:00")
@@ -136,7 +151,7 @@ def week_events(days=7):
         for ev in get_events(cal, tmin, tmax):
             out.append((cal, ev))
     out.sort(key=lambda x: x[1].get("start", {}).get("dateTime", ""))
-    return out
+    return _dedupe(out)
 
 def find_conflicts(events):
     """Return human-readable overlapping events."""
@@ -177,7 +192,7 @@ def get_shopping_list():
     return run_script("family_shopping_list.py", "show")
 
 def get_meal_plan():
-    return run_script("family_meal_plan.py", "--week")
+    return run_script("family_meal_plan.py", "--preview")
 
 def get_weather():
     # Lightweight: reuse family_reminders weather if present, else skip.
@@ -261,6 +276,7 @@ def build_evening(state):
         for ev in get_events(cal, tmin, tmax):
             tomorrow.append((cal, ev))
     tomorrow.sort(key=lambda x: x[1].get("start", {}).get("dateTime", ""))
+    tomorrow = _dedupe(tomorrow)
     if tomorrow:
         first = tomorrow[0][1]
         lines.append(f"\n⏰ Tomorrow starts with: {fmt_event(first)}")
@@ -304,6 +320,25 @@ def build_weekly(state):
     if low:
         names = ", ".join(s["name"] for s in low)
         lines.append(f"\n🛒 Restock: {names}")
+    # Meal plan (compact — only the dinner plan, not the grocery list)
+    meal = get_meal_plan()
+    if meal and "MEAL PLAN" in meal:
+        lines.append("\n🍽️ Dinners:")
+        days = r"(monday|tuesday|wednesday|thursday|friday|saturday|sunday)"
+        for l in meal.splitlines():
+            l = l.strip()
+            if re.match(days, l, re.I):
+                lines.append(f"  {l}")
+    # Spain trip status (if active)
+    spain = run_script("family_spain_trip.py", "--status")
+    if spain and "Spain Trip" in spain:
+        open_items = [l for l in spain.splitlines() if l.strip().startswith("•")]
+        if open_items:
+            lines.append(f"\n🇪🇸 Spain trip — {len(open_items)} open items:")
+            for l in open_items[:6]:
+                lines.append(f"  {l.strip()}")
+            if len(open_items) > 6:
+                lines.append(f"  …and {len(open_items)-6} more")
     # One family activity suggestion
     lines.append("\n💡 Suggested: pick one evening this week for a family movie or walk.")
     return "\n".join(lines)

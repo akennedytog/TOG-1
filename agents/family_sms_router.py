@@ -169,14 +169,13 @@ def handle_todo(body):
         return f"Error adding task: {e}"
 
 
-def handle_cancel(body):
-    """Cancel a calendar event by keyword. Lists matching upcoming events."""
-    # Extract the event keyword (therapy, dentist, meeting, etc.)
+def handle_cancel(body, state, sender):
+    """Cancel a calendar event by keyword. Lists matching upcoming events with
+    numbered options and stores a pending confirmation in state."""
     m = re.search(r"(therapy|dentist|doctor|meeting|appointment|appt|call|class|lesson|reservation|booking)", body, re.I)
     keyword = m.group(1).lower() if m else ""
     if not keyword:
         return "What event should I cancel? e.g. 'cancel therapy'"
-    # Search the family calendar for matching upcoming events.
     from datetime import datetime, timedelta, timezone as _tz
     now = datetime.now(_tz.utc)
     tmax = (now + timedelta(days=30)).isoformat()
@@ -190,18 +189,66 @@ def handle_cancel(body):
         if not items:
             return f"No upcoming '{keyword}' events found on the family calendar."
         lines = [f"Found {len(items)} upcoming '{keyword}' event(s):"]
-        for it in items[:5]:
+        # Store the candidates for confirmation.
+        state.setdefault("pending_cancel", {})[sender] = []
+        for i, it in enumerate(items[:5], 1):
             s = it.get("start", {}).get("dateTime") or it.get("start", {}).get("date", "")
             try:
                 dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
                 tstr = dt.strftime("%a %b %d %I:%M%p")
             except Exception:
                 tstr = s
-            lines.append(f"  • {it.get('summary','')} @ {tstr}")
-        lines.append("\nReply with the exact event to cancel (I'll confirm before deleting).")
+            lines.append(f"  {i}. {it.get('summary','')} @ {tstr}")
+            state["pending_cancel"][sender].append({
+                "id": it.get("id"), "summary": it.get("summary", ""),
+            })
+        lines.append("\nReply with the number to cancel, or 'no' to keep it.")
         return "\n".join(lines)
     except Exception as e:
         return f"Error searching calendar: {e}"
+
+
+def handle_cancel_confirm(body, state, sender):
+    """Handle a reply to a pending cancellation: a number confirms, 'no' cancels."""
+    pending = state.get("pending_cancel", {}).get(sender, [])
+    if not pending:
+        return None  # no pending cancellation for this sender
+    t = body.strip().lower()
+    # 'no' / 'nevermind' / 'keep' -> clear pending, keep event
+    if re.search(r"\b(no|nevermind|never mind|keep|dont|don't|cancel that)\b", t):
+        state["pending_cancel"].pop(sender, None)
+        return "👍 Keeping it — nothing cancelled."
+    # A number -> cancel that event
+    m = re.match(r"^\s*(\d+)\s*$", t)
+    if m:
+        idx = int(m.group(1)) - 1
+        if 0 <= idx < len(pending):
+            ev = pending[idx]
+            try:
+                res = call_action("googlecalendar.delete_event", {
+                    "calendarId": FAMILY_CALENDAR_ID, "eventId": ev["id"],
+                })
+                state["pending_cancel"].pop(sender, None)
+                if res.get("ok") or res.get("success"):
+                    return f"🗑️ Cancelled: {ev['summary']}"
+                return f"Couldn't cancel {ev['summary']}: {res.get('data', {}).get('error', 'unknown')}"
+            except Exception as e:
+                return f"Error cancelling: {e}"
+        return "That number isn't in the list. Reply with a number from the list, or 'no'."
+    # 'yes' / 'confirm' with a single pending event -> cancel it
+    if re.search(r"\b(yes|confirm|yep|yeah|go ahead)\b", t) and len(pending) == 1:
+        ev = pending[0]
+        try:
+            res = call_action("googlecalendar.delete_event", {
+                "calendarId": FAMILY_CALENDAR_ID, "eventId": ev["id"],
+            })
+            state["pending_cancel"].pop(sender, None)
+            if res.get("ok") or res.get("success"):
+                return f"🗑️ Cancelled: {ev['summary']}"
+            return f"Couldn't cancel {ev['summary']}: {res.get('data', {}).get('error', 'unknown')}"
+        except Exception as e:
+            return f"Error cancelling: {e}"
+    return None
 
 
 def handle_shopping(body):
@@ -298,27 +345,58 @@ def main():
             state["processed"][sid] = "blocked"
             continue
         body = msg["body"].strip()
-        intent = classify(body)
-        if intent == "shopping":
-            reply = handle_shopping(body)
-        elif intent == "todo":
-            reply = handle_todo(body)
-        elif intent == "cancel":
-            reply = handle_cancel(body)
-        elif intent == "calendar_add":
-            reply = handle_calendar_add(body)
-        elif intent == "week":
-            reply = handle_week()
-        elif intent == "conflicts":
-            reply = handle_conflicts()
-        elif intent == "due":
-            reply = handle_due()
-        elif intent == "meal":
-            reply = handle_meal()
-        elif intent == "help":
-            reply = HELP_TEXT
+        # If there's a pending cancellation for this sender, treat the reply as
+        # a confirmation (number / yes / no) rather than a new intent.
+        pending = state.get("pending_cancel", {}).get(frm)
+        if pending:
+            confirm_reply = handle_cancel_confirm(body, state, frm)
+            if confirm_reply is not None:
+                reply = confirm_reply
+                intent = "cancel_confirm"
+            else:
+                intent = classify(body)
+                if intent == "shopping":
+                    reply = handle_shopping(body)
+                elif intent == "todo":
+                    reply = handle_todo(body)
+                elif intent == "cancel":
+                    reply = handle_cancel(body, state, frm)
+                elif intent == "calendar_add":
+                    reply = handle_calendar_add(body)
+                elif intent == "week":
+                    reply = handle_week()
+                elif intent == "conflicts":
+                    reply = handle_conflicts()
+                elif intent == "due":
+                    reply = handle_due()
+                elif intent == "meal":
+                    reply = handle_meal()
+                elif intent == "help":
+                    reply = HELP_TEXT
+                else:
+                    reply = handle_fallback(body)
         else:
-            reply = handle_fallback(body)
+            intent = classify(body)
+            if intent == "shopping":
+                reply = handle_shopping(body)
+            elif intent == "todo":
+                reply = handle_todo(body)
+            elif intent == "cancel":
+                reply = handle_cancel(body, state, frm)
+            elif intent == "calendar_add":
+                reply = handle_calendar_add(body)
+            elif intent == "week":
+                reply = handle_week()
+            elif intent == "conflicts":
+                reply = handle_conflicts()
+            elif intent == "due":
+                reply = handle_due()
+            elif intent == "meal":
+                reply = handle_meal()
+            elif intent == "help":
+                reply = HELP_TEXT
+            else:
+                reply = handle_fallback(body)
 
         if dry_run:
             print(f"[dry-run] from={frm} intent={intent}\n  in: {body}\n  out: {reply}\n")
