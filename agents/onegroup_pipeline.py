@@ -67,7 +67,7 @@ def new_id():
     return f"og_{datetime.now().strftime('%Y%m%d%H%M%S')}_{len(load_pipeline()['leads'])}"
 
 
-def add_lead(company, industry="", city="", source="manual", website="", phone="", notes=""):
+def add_lead(company, industry="", city="", source="manual", website="", phone="", email="", notes=""):
     p = load_pipeline()
     lead = {
         "id": new_id(),
@@ -76,6 +76,7 @@ def add_lead(company, industry="", city="", source="manual", website="", phone="
         "city": city,
         "website": website,
         "phone": phone,
+        "email": email,
         "source": source,
         "stage": "new_lead",
         "score": None,
@@ -144,6 +145,11 @@ def score_lead(lead):
     if lead.get("phone") or lead.get("website"):
         score += 1
         signals.append("has contact info")
+
+    # Email present (primary outreach channel)
+    if lead.get("email"):
+        score += 1
+        signals.append("has email")
 
     # Existing score from Arlo (if present)
     if lead.get("score") is not None:
