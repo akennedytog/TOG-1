@@ -241,7 +241,11 @@ def bounded_prompt(prompt):
 
 def ollama(prompt, timeout=180):
     prompt = bounded_prompt(prompt)
+    # keep_alive keeps the 4.9GB local llama3.1 loaded across the 5 sequential
+    # drafts so it isn't evicted (by nomic-embed / memory jobs) and re-loaded
+    # per draft — repeated 4.9GB loads were blowing the cron budget (timeout 9/10).
     body = {"model": "llama3.1:latest", "prompt": prompt, "stream": False,
+            "keep_alive": "30m",
             "options": {"temperature": 0.7}}
     req = urllib.request.Request("http://localhost:11434/api/generate",
                                  data=json.dumps(body).encode(),
@@ -429,9 +433,86 @@ def record_reply(lead, outcome, detail=""):
         return False
 
 
+def _norm(s):
+    return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
+
+def _sheet_contacted():
+    """Return set of emails + normalized names already logged to the leads sheet
+    with a contacted status (drafted/sent/replied/call_listed). This is the
+    authoritative campaign history — Iris logs every draft here, so a business
+    re-found by Arlo is caught even if its findings-file status got reset."""
+    out = set()
+    try:
+        payload = {"input": {"spreadsheetId": SPREADSHEET_ID, "range": SHEET_RANGE}}
+        req = urllib.request.Request(
+            API + "googlesheets.values_get",
+            data=json.dumps(payload).encode(),
+            headers={"content-type": "application/json"})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            resp = json.load(r)
+        rows = ((resp.get("data") or {}).get("values") or [])
+        for row in rows:
+            if len(row) < 11:
+                continue
+            status = (row[8] or "").strip().lower()
+            if status not in ("drafted", "sent", "replied", "call_listed"):
+                continue
+            em = (row[10] or "").strip().lower()
+            nm = _norm(row[1])
+            if em:
+                out.add(em)
+            if nm:
+                out.add("name:" + nm)
+    except Exception as e:
+        print(f"⚠️ sheet-history dedup unavailable ({e}) — falling back to in-file only")
+    return out
+
+
 def main():
     d = json.load(open(FINDINGS))
-    email_leads = [l for l in d["leads"] if l.get("email") and l.get("status") in ("new", "enriched")]
+    leads = d["leads"]
+    # NORMALIZE (2026-09-09): some leads lack a `name` key entirely (Arlo writes
+    # business_name=None and no name). Downstream code uses hard l['name'] access,
+    # which crashed the whole run with KeyError. Derive a display name from the
+    # email domain so every lead has a name before any drafting/CRM/calendar step.
+    for l in leads:
+        if not l.get("name"):
+            em = (l.get("email") or "").strip()
+            domain = em.split("@")[-1] if "@" in em else ""
+            l["name"] = (domain or l.get("business_name") or "Unknown business").strip()
+    # DEDUP GUARD (2026-09-07, Alec caught dupe: "these are all leads we have already emailed")
+    # Iris used to draft any lead with status new/enriched WITHOUT checking whether that
+    # business was already emailed/drafted/call-listed (Arlo re-finds a business, its
+    # findings status is reset, and Iris drafts it again). Union the authoritative leads
+    # sheet history with the current file, then skip any lead that collides on email/name.
+    contacted = set()
+    for x in leads:
+        s = (x.get("status") or "").lower()
+        if s in ("drafted", "sent", "replied", "call_listed"):
+            em = (x.get("email") or "").strip().lower()
+            if em:
+                contacted.add(em)
+            nm = _norm(x.get("name"))
+            if nm:
+                contacted.add("name:" + nm)
+    contacted |= _sheet_contacted()
+
+    email_leads = [l for l in leads if l.get("email") and l.get("status") in ("new", "enriched")]
+    kept = []
+    skipped_dup = []
+    for l in email_leads:
+        em = (l.get("email") or "").strip().lower()
+        nm = "name:" + _norm(l.get("name"))
+        if em in contacted or nm in contacted:
+            skipped_dup.append(l)
+        else:
+            kept.append(l)
+    if skipped_dup:
+        print(f"⛔ DEDUP: skipping {len(skipped_dup)} lead(s) already contacted:")
+        for l in skipped_dup:
+            print(f"    - {l.get('name')} | {l.get('email')}")
+    email_leads = kept
     phone_leads = [l for l in d["leads"] if not l.get("email") and l.get("phone")
                    and l.get("source") == "arlo_real_tavily" and l.get("status") in ("new", "enriched")]
     print(f"email-ready: {len(email_leads)} | phone-only: {len(phone_leads)}")

@@ -98,7 +98,7 @@ def get_access_token(conn, cfg):
         return json.loads(resp.read().decode())["access_token"]
 
 
-def api(token, url, method="GET", payload=None):
+def api(token, url, method="GET", payload=None, conn=None, cfg=None):
     data = json.dumps(payload).encode() if payload is not None else None
     req = urllib.request.Request(
         url, data=data,
@@ -111,27 +111,51 @@ def api(token, url, method="GET", payload=None):
             return resp.status, (json.loads(raw) if raw else {})
     except urllib.error.HTTPError as e:
         raw = e.read()
+        # 401 = stale/expired access token. Refresh once and retry so a token
+        # that was invalidated server-side (or raced between two runs) doesn't
+        # kill the whole sync (seen 2026-09-10: manual run OK, scheduled run 401).
+        if e.code == 401 and conn and cfg:
+            try:
+                fresh = get_access_token(conn, cfg)
+            except Exception:
+                fresh = None
+            if fresh:
+                req2 = urllib.request.Request(
+                    url, data=data,
+                    headers={"Authorization": f"Bearer {fresh}", "Content-Type": "application/json"},
+                    method=method,
+                )
+                try:
+                    with urllib.request.urlopen(req2, timeout=30) as resp2:
+                        raw2 = resp2.read()
+                        return resp2.status, (json.loads(raw2) if raw2 else {})
+                except urllib.error.HTTPError as e2:
+                    raw2 = e2.read()
+                    try:
+                        return e2.code, json.loads(raw2)
+                    except Exception:
+                        return e2.code, {"raw": raw2.decode()[:300]}
         try:
             return e.code, json.loads(raw)
         except Exception:
             return e.code, {"raw": raw.decode()[:300]}
 
 
-def ensure_calendar(token):
+def ensure_calendar(token, conn=None, cfg=None):
     """Create the work calendar if it doesn't exist; return its id."""
-    s, d = api(token, "https://www.googleapis.com/calendar/v3/users/me/calendarList?maxResults=100")
+    s, d = api(token, "https://www.googleapis.com/calendar/v3/users/me/calendarList?maxResults=100", conn=conn, cfg=cfg)
     if s == 200:
         for item in d.get("items", []):
             if item.get("summary") == CAL_TITLE:
                 return item["id"]
     s, d = api(token, "https://www.googleapis.com/calendar/v3/calendars",
-               method="POST", payload={"summary": CAL_TITLE, "timeZone": "America/New_York"})
+               method="POST", payload={"summary": CAL_TITLE, "timeZone": "America/New_York"}, conn=conn, cfg=cfg)
     if s == 200:
         return d["id"]
     raise RuntimeError(f"Could not create calendar: {s} {d}")
 
 
-def batch_delete(token, cal_id, event_ids):
+def batch_delete(token, cal_id, event_ids, conn=None, cfg=None):
     """Delete many events via the Google Calendar batch endpoint.
 
     The batch endpoint accepts a multipart body of individual DELETE subrequests
@@ -172,11 +196,35 @@ def batch_delete(token, cal_id, event_ids):
             # subresponses carry per-request status codes in the body.
             deleted += len(chunk)
         except urllib.error.HTTPError as e:
+            # 401 on the batch wrapper: refresh once and retry the chunk.
+            if e.code == 401 and conn and cfg:
+                try:
+                    fresh = get_access_token(conn, cfg)
+                except Exception:
+                    fresh = None
+                if fresh:
+                    req2 = urllib.request.Request(
+                        "https://www.googleapis.com/batch/calendar/v3",
+                        data=payload,
+                        headers={
+                            "Authorization": f"Bearer {fresh}",
+                            "Content-Type": f"multipart/mixed; boundary={boundary}",
+                        },
+                        method="POST",
+                    )
+                    try:
+                        with urllib.request.urlopen(req2, timeout=60) as resp2:
+                            resp2.read()
+                        deleted += len(chunk)
+                        continue
+                    except urllib.error.HTTPError as e2:
+                        print(f"  WARN: batch delete retry failed: {e2.code} {e2.read().decode()[:200]}")
+                        continue
             print(f"  WARN: batch delete chunk failed: {e.code} {e.read().decode()[:200]}")
     return deleted
 
 
-def clear_calendar(token, cal_id):
+def clear_calendar(token, cal_id, conn=None, cfg=None):
     """Delete all existing events in the target calendar (idempotent reset)."""
     deleted = 0
     page_token = None
@@ -184,14 +232,14 @@ def clear_calendar(token, cal_id):
         url = f"https://www.googleapis.com/calendar/v3/calendars/{cal_id}/events?maxResults=2500"
         if page_token:
             url += f"&pageToken={page_token}"
-        s, d = api(token, url)
+        s, d = api(token, url, conn=conn, cfg=cfg)
         if s != 200:
             print(f"  WARN: could not list events to clear: {s} {d}")
             break
         items = d.get("items", [])
         ids = [it.get("id") for it in items if it.get("id")]
         if ids:
-            deleted += batch_delete(token, cal_id, ids)
+            deleted += batch_delete(token, cal_id, ids, conn=conn, cfg=cfg)
         page_token = d.get("nextPageToken")
         if not page_token:
             break
@@ -247,7 +295,7 @@ def to_google_event(ev):
     return payload
 
 
-def batch_import(token, cal_id, payloads):
+def batch_import(token, cal_id, payloads, conn=None, cfg=None):
     """Insert many events via the Google Calendar batch endpoint (chunked)."""
     imported = 0
     errors = 0
@@ -286,6 +334,29 @@ def batch_import(token, cal_id, payloads):
                 resp.read()
             imported += len(chunk)
         except urllib.error.HTTPError as e:
+            # 401 on the batch wrapper: refresh once and retry the chunk.
+            if e.code == 401 and conn and cfg:
+                try:
+                    fresh = get_access_token(conn, cfg)
+                except Exception:
+                    fresh = None
+                if fresh:
+                    req2 = urllib.request.Request(
+                        "https://www.googleapis.com/batch/calendar/v3",
+                        data=payload,
+                        headers={
+                            "Authorization": f"Bearer {fresh}",
+                            "Content-Type": f"multipart/mixed; boundary={boundary}",
+                        },
+                        method="POST",
+                    )
+                    try:
+                        with urllib.request.urlopen(req2, timeout=60) as resp2:
+                            resp2.read()
+                        imported += len(chunk)
+                        continue
+                    except urllib.error.HTTPError as e2:
+                        print(f"  WARN: batch import retry failed: {e2.code} {e2.read().decode()[:200]}")
             errors += len(chunk)
             print(f"  WARN: batch import chunk failed: {e.code} {e.read().decode()[:200]}")
     return imported, errors
@@ -294,11 +365,11 @@ def batch_import(token, cal_id, payloads):
 def main():
     conn, cfg = load_connection()
     token = get_access_token(conn, cfg)
-    cal_id = ensure_calendar(token)
+    cal_id = ensure_calendar(token, conn=conn, cfg=cfg)
     print(f"Using calendar: {cal_id} ({CAL_TITLE})")
 
     # Idempotent reset: clear existing events first (batched deletes)
-    cleared = clear_calendar(token, cal_id)
+    cleared = clear_calendar(token, cal_id, conn=conn, cfg=cfg)
     print(f"Cleared {cleared} existing events")
 
     events = parse_events()
@@ -313,7 +384,7 @@ def main():
             continue
         payloads.append(payload)
 
-    imported, errors = batch_import(token, cal_id, payloads)
+    imported, errors = batch_import(token, cal_id, payloads, conn=conn, cfg=cfg)
     print(f"\nDone: {imported} imported, {skipped} skipped, {errors} errors")
     print(f"Calendar ID: {cal_id}")
 
