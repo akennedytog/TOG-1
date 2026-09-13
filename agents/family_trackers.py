@@ -22,10 +22,17 @@ USAGE:
 import argparse
 import json
 import sys
+import time
+import urllib.error
 import urllib.request
 from datetime import datetime, timedelta
 
 CONNECTOR = "http://127.0.0.1:3000/v1/actions"
+
+# Transient provider 500s (Google Sheets/Calendar, Twilio) are common and
+# intermittent. Retry with backoff so a single blip doesn't crash the briefing.
+MAX_RETRIES = 3
+RETRY_BACKOFF = 1.5  # seconds, multiplied per attempt
 
 SHEETS = {
     "bills": {
@@ -48,14 +55,28 @@ SHEETS = {
 
 def call_action(action_id, payload):
     body = {"input": payload}
-    req = urllib.request.Request(
-        CONNECTOR + "/" + action_id,
-        data=json.dumps(body).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    last_err = None
+    for attempt in range(MAX_RETRIES):
+        req = urllib.request.Request(
+            CONNECTOR + "/" + action_id,
+            data=json.dumps(body).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            # Retry on transient 5xx (provider_error). Don't retry 4xx.
+            if e.code < 500 or attempt == MAX_RETRIES - 1:
+                raise
+            last_err = e
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            if attempt == MAX_RETRIES - 1:
+                raise
+            last_err = e
+        time.sleep(RETRY_BACKOFF * (attempt + 1))
+    raise last_err
 
 
 def read_sheet(key):
@@ -99,11 +120,23 @@ def add(key, text):
 
 
 def due_soon(days=14):
-    """Scan maintenance + gifts for items due within N days."""
+    """Scan maintenance + gifts for items due within N days.
+
+    Resilient: if a tracker sheet read fails (e.g. transient provider 500),
+    that slice is skipped rather than crashing the whole briefing.
+    """
     out = []
     today = datetime.now().date()
+
+    def safe_read_sheet(key):
+        try:
+            return read_sheet(key)[1:]
+        except Exception:
+            # Provider blip — skip this tracker instead of failing the briefing.
+            return []
+
     # Maintenance: check Next Due column (index 3)
-    for row in read_sheet("maintenance")[1:]:
+    for row in safe_read_sheet("maintenance"):
         if len(row) > 3 and row[3]:
             try:
                 due = datetime.strptime(str(row[3]), "%Y-%m-%d").date()
@@ -112,7 +145,7 @@ def due_soon(days=14):
             except ValueError:
                 pass
     # Gifts: check Date column (index 2)
-    for row in read_sheet("gifts")[1:]:
+    for row in safe_read_sheet("gifts"):
         if len(row) > 2 and row[2]:
             try:
                 d = datetime.strptime(str(row[2]), "%Y-%m-%d").date()
