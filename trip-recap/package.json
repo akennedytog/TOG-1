@@ -1,0 +1,9 @@
+{
+  "name": "trip-recap",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kennedy family Portugal & Spain trip journal (static site + sync function)",
+  "dependencies": {
+    "@netlify/blobs": "^8.0.0"
+  }
+}

@@ -108,6 +108,13 @@
   .placecard .pc-meta{color:var(--muted);font-size:.84rem}
   .placecard .pc-tag{margin-left:auto;flex:none}
 
+  /* per-day featured hero image */
+  .dayhero{margin:16px 0 4px;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 4px 16px rgba(0,0,0,.10);background:var(--card)}
+  .dayhero img{display:block;width:100%;height:340px;object-fit:cover;cursor:zoom-in;transition:.3s}
+  .dayhero img:hover{transform:scale(1.01)}
+  .dayhero figcaption{font-size:.8rem;font-style:italic;color:var(--muted);text-align:center;padding:8px;background:#fff8ec}
+  @media(max-width:520px){.dayhero img{height:220px}}
+
   footer{text-align:center;color:var(--muted);font-size:.8rem;padding:36px 0 56px;font-style:italic}
   .empty-note{color:var(--muted);font-style:italic;font-size:.9rem;padding:14px 0}
   @media(max-width:520px){header.hero h1{font-size:1.5rem}.chapter{padding:15px}}
@@ -181,14 +188,14 @@ const STOPS = [
   // ------ DAY 2 — 2026-09-14 ------
   {
     type:"food", date:"2026-09-14", day:"Day 2", place:"CORK Kitchen & Cocktail Club", city:"Lisbon",
-    ordered:"Monte Baixo red wine", rating:null, confirmed:true,
-    note:"Outdoor terrace café with happy-hour sign, cork-filled tables and wine. A casual drink in central Lisbon.",
+    ordered:"Monte Baixo red wine", rating:null, confirmed:false,
+    note:"Auto-identified from album: outdoor terrace café with happy-hour sign, cork-filled tables and wine.",
     notes:"", photos:[]
   },
   {
     type:"sight", date:"2026-09-14", day:"Day 2", place:"Praça Luís de Camões", city:"Lisbon",
-    saw:"The Luís de Camões monument in Chiado, classic Portuguese calçada pavement.", rating:null, confirmed:true,
-    note:"", notes:"", photos:[]
+    saw:"The Luís de Camões monument in Chiado, classic Portuguese calçada pavement.", rating:null, confirmed:false,
+    note:"Auto-identified from album.", notes:"", photos:[]
   },
   {
     type:"food", date:"2026-09-14", day:"Day 2", place:"Jamie Oliver's", city:"Lisbon",
@@ -197,15 +204,15 @@ const STOPS = [
   },
   {
     type:"food", date:"2026-09-14", day:"Day 2", place:"La Dolcerie Roma (Gelato)", city:"Lisbon",
-    ordered:"Gelato (cone + cup)", rating:null, confirmed:true,
-    note:"A branded gelato shop — 'Gelato, Caffè e Amore'.", notes:"", photos:[]
+    ordered:"Gelato (cone + cup)", rating:null, confirmed:false,
+    note:"Auto-identified from album: a branded gelato shop — 'Gelato, Caffè e Amore'.", notes:"", photos:[]
   },
 
   // ------ DAY 3 — 2026-09-15 ------
   {
     type:"sight", date:"2026-09-15", day:"Day 3", place:"Santa Justa Lift & São Jorge Castle", city:"Lisbon",
-    saw:"The Elevador de Santa Justa walkway and Castelo de São Jorge views from the downtown streets.", rating:null, confirmed:true,
-    note:"", notes:"", photos:[]
+    saw:"The Elevador de Santa Justa walkway and Castelo de São Jorge views from the downtown streets.", rating:null, confirmed:false,
+    note:"Auto-identified from album.", notes:"", photos:[]
   },
   {
     type:"shop", date:"2026-09-15", day:"Day 3", place:"Toy & Gift Store", city:"Lisbon",
@@ -362,6 +369,24 @@ function mediaHTML(s){
   ).join("")+`</div>`;
 }
 
+// Pick ONE strong, family-first image for a day's highlight banner (small uniform
+// thumbnails get one hero moment per day). Prefers curated/known-good, then the
+// day's stops' photos. Returns null if none available.
+function featuredForDay(dayKey){
+  const stops = STOPS.filter(s=> !isDismissed(s.place) && (isConfirmed(s.place)||s.confirmed) && (s.day+"|"+s.date).indexOf(dayKey)===0);
+  const cand = [];
+  stops.forEach(s=>{
+    if(s.photos && s.photos.length) s.photos.forEach(p=> cand.push({p, score: s.type==="family"?3: s.type==="food"?1:0}));
+    (STOP_PHOTO_PLACES[s.place]||[]).forEach(k=> photosForPlace(k).forEach(([p,kind])=>{
+      if(kind==="img") cand.push({p, score: s.type==="family"?3: s.type==="food"?1:0});
+    }));
+  });
+  if(!cand.length) return null;
+  cand.sort((a,b)=> b.score - a.score);
+  const best = cand[0].p;
+  return best.startsWith("assets/") ? best : "assets/"+best;
+}
+
 // ---- Today view ----
 function renderToday(){
   const box=document.getElementById("todayContent");
@@ -414,10 +439,10 @@ function renderToday(){
 function captureNote(){
   const inp=document.getElementById("qcInput");
   const v=inp.value.trim(); if(!v) return;
-  let list=JSON.parse(localStorage.getItem("kennedyQuickCapture")||"[]");
-  list.unshift({text:v, at:new Date().toISOString()});
-  localStorage.setItem("kennedyQuickCapture",JSON.stringify(list));
-  inp.value=""; renderCapturedNotes();
+  let list=getCaptures();
+  list.unshift({id:"c_"+Date.now().toString(36)+"_"+Math.random().toString(36).slice(2,8), text:v, at:new Date().toISOString(), deviceId:deviceId()});
+  setCaptures(list);
+  inp.value=""; renderCapturedNotes(); pushSync();
 }
 function renderCapturedNotes(){
   let list=JSON.parse(localStorage.getItem("kennedyQuickCapture")||"[]");
@@ -467,8 +492,14 @@ function buildChapters(){
   order.forEach(([,arr],gi)=>{
     const dayTag = arr[0].day, dateTxt = arr[0].date;
     const uncertain = dateTxt.includes("→");
+    // featured hero image for this day (skip catch-all days with no real photos)
+    const featured = (!uncertain && arr[0].date.includes("2026-09")) ? featuredForDay(arr[0].day+"|"+arr[0].date) : null;
     box.insertAdjacentHTML("beforeend",
       `<div class="dayhead"><h2>${dayTag}${uncertain?' <span style="font-size:.8rem;color:var(--muted)">(uncertain dates)</span>':''}</h2><div class="dsub">${dateTxt}</div></div>`);
+    if(featured){
+      box.insertAdjacentHTML("beforeend",
+        `<figure class="dayhero"><img src="${featured}" alt="${dayTag} highlight" onclick="openMedia(this,event)"><figcaption>${dayTag} — a favorite moment</figcaption></figure>`);
+    }
     arr.forEach(s=> box.insertAdjacentHTML("beforeend", chapterCard(s)));
   });
 
@@ -503,20 +534,61 @@ function buildChapters(){
 function slug(n){ return n.toLowerCase().replace(/[^a-z0-9]+/g,"-"); }
 function confirmPlace(id){
   const stop = STOPS.find(s=> slug(s.place)===id);
-  if(stop){ confirmedSet.add(stop.place); dismissedSet.delete(stop.place); persistDecisions(); }
+  if(stop){ confirmedSet.add(stop.place); dismissedSet.delete(stop.place); persistDecisions(); pushSync(); }
   buildChapters(); buildStats(); buildMap();
 }
 function skipPlace(id){
   const stop = STOPS.find(s=> slug(s.place)===id);
-  if(stop){ dismissedSet.add(stop.place); confirmedSet.delete(stop.place); persistDecisions(); }
+  if(stop){ dismissedSet.add(stop.place); confirmedSet.delete(stop.place); persistDecisions(); pushSync(); }
   buildChapters(); buildStats(); buildMap();
 }
 function undoPlace(id){
   const stop = STOPS.find(s=> slug(s.place)===id);
-  if(stop){ confirmedSet.delete(stop.place); dismissedSet.delete(stop.place); persistDecisions(); }
+  if(stop){ confirmedSet.delete(stop.place); dismissedSet.delete(stop.place); persistDecisions(); pushSync(); }
   buildChapters(); buildStats(); buildMap();
 }
 function persistDecisions(){ localStorage.setItem(CONFIRM_KEY, JSON.stringify([...confirmedSet])); localStorage.setItem(SKIP_KEY, JSON.stringify([...dismissedSet])); }
+
+// ---------- cross-device sync (Netlify Function + Blobs) ----------
+const SYNC_URL = "/.netlify/functions/sync";
+function deviceId(){
+  let id = localStorage.getItem("kennedyDeviceId");
+  if(!id){ id = "d_"+Math.random().toString(36).slice(2,10); localStorage.setItem("kennedyDeviceId", id); }
+  return id;
+}
+function getCaptures(){ try{ return JSON.parse(localStorage.getItem("kennedyQuickCapture")||"[]"); }catch(e){ return []; } }
+function setCaptures(list){ localStorage.setItem("kennedyQuickCapture", JSON.stringify(list)); }
+
+// Push local state to the shared store (fire-and-forget, non-blocking).
+async function pushSync(){
+  try{
+    await fetch(SYNC_URL, {
+      method:"POST", headers:{"content-type":"application/json"},
+      body: JSON.stringify({ confirmed:[...confirmedSet], dismissed:[...dismissedSet], captures:getCaptures(), deviceId:deviceId() })
+    });
+  }catch(e){ /* offline — local state still preserved */ }
+}
+
+// Pull remote state and merge into local sets + captures, then re-render.
+// Server values win for items that exist there; local-only items are kept.
+async function loadSharedState(){
+  try{
+    const res = await fetch(SYNC_URL);
+    if(!res.ok) return;
+    const s = await res.json();
+    let changed = false;
+    (s.confirmed||[]).forEach(p=>{ if(p && !confirmedSet.has(p)){ confirmedSet.add(p); changed=true; } });
+    (s.dismissed||[]).forEach(p=>{ if(p && !dismissedSet.has(p)){ dismissedSet.add(p); changed=true; } });
+    if(Array.isArray(s.captures) && s.captures.length){
+      const local = getCaptures();
+      const map = new Map(local.map(c=>[c.id,c]));
+      s.captures.forEach(c=>{ if(c&&c.id) map.set(c.id,c); });
+      setCaptures([...map.values()].sort((a,b)=>(b.at||"").localeCompare(a.at||"")));
+      changed = true;
+    }
+    if(changed){ persistDecisions(); renderToday(); buildChapters(); buildStats(); buildMap(); }
+  }catch(e){ /* offline */ }
+}
 
 // ---- Stats (real counts per category) ----
 function buildStats(){
@@ -627,10 +699,19 @@ document.getElementById("lightbox").addEventListener("click",()=>document.getEle
 
 // ---- Init ----
 confirmedSet = new Set(getConfirmed());
+dismissedSet = new Set(getDismissed());
 renderToday();
 buildChapters(); buildStats(); buildMap();
 
 loadAlbumMap().then(()=>{ buildChapters(); buildStats(); buildMap(); });
+
+// Cross-device sync: pull the shared state once at startup, then poll so
+// changes on one phone (confirmations, captures) reach the other family device
+// and show up in the daily recap. Local edits push back through pushSync().
+if(window.fetch){
+  loadSharedState();
+  setInterval(loadSharedState, 15000); // every 15s
+}
 </script>
 </body>
 </html>
