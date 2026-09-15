@@ -173,7 +173,7 @@ const STOPS = [
   // ------ DAY 1 — 2026-09-13 (arrival) ------
   {
     type:"family", date:"2026-09-13", day:"Day 1", place:"Arrival & First Night", city:"Lisbon",
-    moment:"Flying in with an 8-month-old, the rental apartment, first naps jet-lagged and homey.",
+    moment:"Flying in with a 4-month-old, the rental apartment, first naps jet-lagged and homey.",
     ordered:null, rating:null, confirmed:true,
     note:"", notes:"", photos:[]
   },
@@ -250,7 +250,8 @@ const STOPS = [
 ];
 
 // ---- Planned cities / saved ideas for the TODAY + MAP views ----
-const TODAY = {
+// TODAY is derived from the live journal + static options; date follows trip day.
+const TODAY_OPTIONS = {
   date:"2026-09-15",
   confirmedToday:[
     {t:"Pão Santo Brunch Café", sub:"Empanadas + espresso (feed Enzo) · confirmed"},
@@ -320,9 +321,13 @@ function photosForPlace(placeKey){
 
 // ---- persisted confirmations (review queue) ----
 const CONFIRM_KEY = "kennedyTripConfirmed";
+const SKIP_KEY = "kennedyTripDismissed";
 let confirmedSet = new Set();
+let dismissedSet = new Set();
 function getConfirmed(){ try{ return JSON.parse(localStorage.getItem(CONFIRM_KEY)||"[]"); }catch(e){ return []; } }
+function getDismissed(){ try{ return JSON.parse(localStorage.getItem(SKIP_KEY)||"[]"); }catch(e){ return []; } }
 function isConfirmed(place){ return confirmedSet.has(place); }
+function isDismissed(place){ return dismissedSet.has(place); }
 
 // ---- Rendering helpers ----
 function stars(n){
@@ -346,7 +351,8 @@ function typeTitle(s){
 }
 
 function mediaHTML(s){
-  let photos=(s.photos||[]).map(p=>["assets/"+p,"img"]);
+  // p may already include the "assets/" prefix; normalize so it never double-prefixes
+  let photos=(s.photos||[]).map(p=>[p.startsWith("assets/")?p:"assets/"+p,"img"]);
   (STOP_PHOTO_PLACES[s.place]||[]).forEach(k=>photos=photos.concat(photosForPlace(k)));
   if(!photos.length) return "";
   return `<div class="photos">`+photos.map(([p,kind])=>
@@ -359,28 +365,35 @@ function mediaHTML(s){
 // ---- Today view ----
 function renderToday(){
   const box=document.getElementById("todayContent");
-  let h=`<div class="today-block"><h3>🌅 ${formatDayHeading(TODAY.date)}</h3>`;
-  h+=`<div class="empty-note">Confirmed plans, useful nearby options, and a place to jot quick notes for the trip.</div>`;
+  const tday = currentTripDay();
+  const heading = tday.iso ? formatDayHeading(tday.iso) : (tday.off ? "Trip complete 🎉" : tday.label);
+  let h=`<div class="today-block"><h3>🌅 ${heading}</h3>`;
+  if(tday.off){
+    h+=`<div class="empty-note">The trip is over — thank you for following along! Check <b>Our Story</b> and <b>The Map</b> for the full recap.</div>`;
+  } else {
+    h+=`<div class="empty-note">Confirmed plans, useful nearby options, and a place to jot quick notes for the trip.</div>`;
+  }
 
-  // Confirmed today
-  h+=`<h3 style="margin-top:16px">✔ Confirmed · ${TODAY.date}</h3>`;
-  if(TODAY.confirmedToday.length){
-    TODAY.confirmedToday.forEach(c=>{
-      h+=`<div class="today-item"><div><span class="t-title">${c.t}</span><span class="tag new">visited</span></div><div class="t-sub">${c.sub}</div></div>`;
+  // Confirmed today (from the live journal for this trip day)
+  h+=`<h3 style="margin-top:16px">✔ Confirmed${tday.iso?" · "+tday.iso:""}</h3>`;
+  const todayStops = todayStopsFor(tday.iso);
+  if(todayStops.length){
+    todayStops.forEach(s=>{
+      h+=`<div class="today-item"><div><span class="t-title">${s.place}</span><span class="tag new">visited</span></div><div class="t-sub">${s.type==="food"?(s.ordered||"."):(s.saw||s.moment||"")}</div></div>`;
     });
-  }else{
+  }else if(tday.iso){
     h+=`<div class="empty-note">Nothing confirmed yet today.</div>`;
   }
 
   // Nearby useful options
   h+=`<h3 style="margin-top:16px">🧭 Useful nearby</h3>`;
-  TODAY.nearbyOptions.forEach(c=>{
+  TODAY_OPTIONS.nearbyOptions.forEach(c=>{
     h+=`<div class="today-item"><div><span class="t-title">${c.t}</span><span class="tag ${c.tag}">${c.tag}</span></div><div class="t-sub">${c.sub}</div></div>`;
   });
 
   // Saved ideas
   h+=`<h3 style="margin-top:16px">💡 Saved ideas</h3>`;
-  TODAY.savedIdeas.forEach(c=>{
+  TODAY_OPTIONS.savedIdeas.forEach(c=>{
     h+=`<div class="today-item saved"><div><span class="t-title">${c.t}</span></div><div class="t-sub">${c.sub}</div></div>`;
   });
   h+=`</div>`;
@@ -419,6 +432,8 @@ function chapterCard(s){
   const badge = s.rating!=null ? `<span class="rating-badge">${s.rating}/10</span>` : "";
   const pending = (!isConfirmed(s.place) && !s.confirmed) ? `<span class="pending-chip">pending confirm</span>` : "";
   const ph = mediaHTML(s);
+  const wasConfirmed = isConfirmed(s.place); // user-confirmed via queue (not inherent)
+  const undo = (wasConfirmed && !s.confirmed) ? `<div style="margin-top:8px"><button class="btn" onclick="undoPlace('${slug(s.place)}')">↩ Undo confirm</button></div>` : "";
   return `<article class="chapter">
     <div class="daytag">${s.day} · ${s.date}</div>
     <h3>${s.place}${typeChip(s.type)}${badge}${pending}</h3>
@@ -427,15 +442,16 @@ function chapterCard(s){
     ${fieldFor(s)}
     <div class="star-row">${stars(s.rating)}${s.rating!=null?`<span style="font-size:.82rem;color:var(--muted)">${s.rating}/10</span>`:""}</div>
     ${s.note?`<div class="note quote">${s.note}</div>`:""}
+    ${undo}
   </article>`;
 }
 
 function buildChapters(){
   const box=document.getElementById("chapters"); box.innerHTML="";
 
-  // Confirmed stops, grouped chronologically by day (keeping uncertain grouped at the end, flagged)
-  const confirmed = STOPS.filter(s=> isConfirmed(s.place) || s.confirmed);
-  const pending  = STOPS.filter(s=> !(isConfirmed(s.place) || s.confirmed));
+  // Confirmed stops (not dismissed), grouped chronologically by day
+  const confirmed = STOPS.filter(s=> !isDismissed(s.place) && (isConfirmed(s.place) || s.confirmed));
+  const pending  = STOPS.filter(s=> !isDismissed(s.place) && !(isConfirmed(s.place) || s.confirmed));
 
   const groups={};
   confirmed.forEach(s=>{ (groups[s.day+"|"+s.date] = groups[s.day+"|"+s.date]||[]).push(s); });
@@ -467,9 +483,9 @@ function buildChapters(){
   const rq=document.getElementById("reviewQueue");
   if(pending.length){
     let h=`<div class="rq"><h3>🔍 Confirm this place</h3>
-      <p>These were auto-identified from the album. Confirm the ones you actually visited so they join your story — otherwise they stay unlabeled for now.</p>`;
+      <p>These were auto-identified from the album. Confirm the ones you actually visited so they join your story — otherwise they stay unlabeled for now. Decisions are saved on this device and can be undone.</p>`;
     pending.forEach(s=>{
-      h+=`<div class="rq-item" id="rq-${slug(s.place)}">
+      h+=`<div class="rq-item" id="rq-${slug(s.place)}" data-place="${slug(s.place)}">
         <div class="rq-info"><div class="rq-name">${s.place}</div>
         <div class="rq-meta">${s.day} · ${s.city} · ${typeTitle(s)} · ${s.type==="sight"?("suggested: "+s.saw):""}</div></div>
         <div class="rq-actions">
@@ -486,23 +502,26 @@ function buildChapters(){
 }
 function slug(n){ return n.toLowerCase().replace(/[^a-z0-9]+/g,"-"); }
 function confirmPlace(id){
-  // find by slug among pending stops
   const stop = STOPS.find(s=> slug(s.place)===id);
-  if(stop){ confirmedSet.add(stop.place); persistConfirmed(); }
+  if(stop){ confirmedSet.add(stop.place); dismissedSet.delete(stop.place); persistDecisions(); }
   buildChapters(); buildStats(); buildMap();
 }
 function skipPlace(id){
   const stop = STOPS.find(s=> slug(s.place)===id);
-  if(stop){ stop.confirmed=false; stop.hidden=true; }
-  // visually mark skipped
-  const el=document.getElementById("rq-"+id); if(el) el.style.opacity=.4;
+  if(stop){ dismissedSet.add(stop.place); confirmedSet.delete(stop.place); persistDecisions(); }
+  buildChapters(); buildStats(); buildMap();
 }
-function persistConfirmed(){ localStorage.setItem(CONFIRM_KEY, JSON.stringify([...confirmedSet])); }
+function undoPlace(id){
+  const stop = STOPS.find(s=> slug(s.place)===id);
+  if(stop){ confirmedSet.delete(stop.place); dismissedSet.delete(stop.place); persistDecisions(); }
+  buildChapters(); buildStats(); buildMap();
+}
+function persistDecisions(){ localStorage.setItem(CONFIRM_KEY, JSON.stringify([...confirmedSet])); localStorage.setItem(SKIP_KEY, JSON.stringify([...dismissedSet])); }
 
 // ---- Stats (real counts per category) ----
 function buildStats(){
   const box=document.getElementById("statGrid");
-  const active = STOPS.filter(s=> (s.confirmed || isConfirmed(s.place)) && !s.hidden);
+  const active = STOPS.filter(s=> !isDismissed(s.place) && (s.confirmed || isConfirmed(s.place)));
   const meals = active.filter(s=> s.type==="food");
   const sights = active.filter(s=> s.type==="sight");
   const fam = active.filter(s=> s.type==="family");
@@ -532,7 +551,7 @@ function buildStats(){
 // ---- Map ----
 function buildMap(){
   const svg=document.getElementById("recapMap");
-  const active = STOPS.filter(s=> (s.confirmed || isConfirmed(s.place)) && !s.hidden);
+  const active = STOPS.filter(s=> !isDismissed(s.place) && (s.confirmed || isConfirmed(s.place)));
   let dots="";
   // Planned cities (outline, not yet visited) vs visited (filled)
   const visitedCities = new Set(active.filter(s=>!s.date.includes("→")).map(s=>s.city));
@@ -546,11 +565,11 @@ function buildMap(){
   const pts=[CITY_POS["Lisbon"][0],CITY_POS["Lisbon"][1],CITY_POS.Seville[0],CITY_POS.Seville[1],CITY_POS.Marbella[0],CITY_POS.Marbella[1]];
   dots+=`<polyline points="${pts.join(",")}" fill="none" stroke="#c1440e" stroke-width="2.5" stroke-dasharray="6 5" opacity=".6"/>`;
 
-  // confirmed stops → verified-ish coords (tappable), numbered
+  // confirmed stops → verified coords (tappable), numbered; skip any with no coords
   let idx=0;
-  active.filter(s=>s.city!=="Lisbon"||s.date.includes("→")===false).forEach(s=>{
-    if(s.date.includes("→")) return; // skip the catch-all for the numbered pins
-    const c = PLACE_COORDS[s.place] || PLACE_COORDS["Lisbon"];
+  active.filter(s=>!s.date.includes("→")).forEach(s=>{
+    const c = PLACE_COORDS[s.place] || PLACE_COORDS[s.city]; // fall back to city centroid if known
+    if(!c) return; // no coordinates → skip the pin rather than error
     const [x,y] = coordToMap(c[0],c[1]);
     idx++;
     dots+=`<circle cx="${x}" cy="${y}" r="8" fill="${s.rating&&s.rating>=8?'#2e7d5b':'#c1440e'}" stroke="#fff" stroke-width="2" class="pin" data-name="${s.place}"/>`;
