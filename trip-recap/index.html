@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portugal &amp; Spain · Our First European Adventure With Enzo</title>
+<style>
+  :root{
+    --paper:#f7f2e9; --ink:#2b2118; --muted:#7a6a58; --accent:#c1440e; --accent2:#2e7d5b;
+    --card:#fffdf8; --line:#e5dccb; --gold:#c9a227;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
+  header.hero{background:linear-gradient(135deg,#2b2118,#4a3420 55%,var(--accent));color:#fdf6ea;padding:60px 0 44px;text-align:center}
+  header.hero h1{font-size:2.1rem;font-weight:700;letter-spacing:.4px;line-height:1.2}
+  header.hero .sub{font-style:italic;color:#e8d9c0;margin-top:10px;font-size:1.05rem}
+  header.hero .meta{margin-top:18px;font-size:.88rem;color:#cdbb9d}
+  .nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:18px 0 6px}
+  .nav button{font-family:inherit;font-size:.9rem;background:transparent;border:1px solid var(--line);border-radius:999px;padding:8px 18px;color:var(--muted);cursor:pointer;transition:.2s}
+  .nav button .np{display:block;font-size:.72rem;color:var(--muted);opacity:.8;margin-top:2px}
+  .nav button.active,.nav button:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+  .nav button.active .np,.nav button:hover .np{color:#ffe6d6}
+  section.panel{display:none;animation:fade .4s}
+  section.panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  /* ------- day grouping ------- */
+  .dayhead{border-bottom:2px solid var(--accent);margin:26px 0 4px;padding-bottom:6px;display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px}
+  .dayhead h2{font-size:1.4rem;color:var(--accent);letter-spacing:.3px}
+  .dayhead .dsub{font-size:.85rem;color:var(--muted);font-style:italic}
+  .chapter{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:10px;padding:20px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .chapter .daytag{font-size:.74rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .chapter h3{font-size:1.35rem;margin:3px 0 4px}
+  .chapter .city{color:var(--muted);font-style:italic;font-size:.92rem}
+  .type-chip{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:1px;border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:middle;border:1px solid}
+  .type-chip.food{color:var(--accent);border-color:var(--accent)}
+  .type-chip.sight{color:#7a5aa6;border-color:#7a5aa6}
+  .type-chip.family{color:var(--accent2);border-color:var(--accent2)}
+  .type-chip.shop{color:var(--gold);border-color:var(--gold)}
+  .photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:12px}
+  .photos img,.photos video{width:100%;height:130px;object-fit:cover;border-radius:8px;cursor:pointer;border:1px solid var(--line);transition:.2s;background:#efe7d8}
+  .photos img:hover,.photos video:hover{transform:scale(1.03);box-shadow:0 4px 14px rgba(0,0,0,.15)}
+  .noPhoto{display:flex;align-items:center;justify-content:center;height:130px;background:#efe7d8;border-radius:8px;color:var(--muted);font-style:italic;font-size:.85rem;border:1px dashed var(--line)}
+  .field{margin-top:10px;font-size:.95rem}
+  .field b{color:var(--ink)}
+  .field .k{font-weight:700;color:var(--accent)}
+  .star-row{margin-top:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .stars{color:var(--gold);font-size:1.05rem;letter-spacing:2px}
+  .stars .empty{color:#d8cebe}
+  .note{font-style:italic;color:var(--muted);margin-top:10px;font-size:.9rem}
+  .note.quote{border-left:3px solid var(--line);padding-left:10px}
+  .note .gen{display:inline-block;font-size:.68rem;text-transform:uppercase;letter-spacing:1px;background:#eee6d8;color:var(--muted);border-radius:4px;padding:1px 6px;margin-right:6px;vertical-align:middle}
+  .rating-badge{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:2px 9px;font-weight:700;font-size:.82rem;margin-left:6px;vertical-align:middle}
+  .pending-chip{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:1px;background:var(--gold);color:#3a2c10;border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:middle}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+  .lightbox.open{display:flex}
+  .lightbox img,.lightbox video{max-width:92vw;max-height:90vh;border-radius:6px}
+
+  /* ------- stats ------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:20px 0}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;text-align:center}
+  .stat .num{font-size:1.7rem;font-weight:700;color:var(--accent)}
+  .stat .lbl{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+  .stat-break{grid-column:1/-1;text-align:left;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.4px;margin-top:6px}
+  .bestcard{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:10px;padding:16px 20px;margin:14px 0}
+  .bestcard h4{color:var(--accent);margin-bottom:4px}
+
+  /* ------- review queue ------- */
+  .rq{background:#fff7e6;border:1px solid var(--gold);border-radius:10px;padding:18px;margin:18px 0}
+  .rq h3{color:#8a6d1a;margin-bottom:6px}
+  .rq p{font-size:.88rem;color:var(--muted)}
+  .rq-item{border-top:1px solid #eadfa8;padding:12px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .rq-info{flex:1;min-width:220px}
+  .rq-info .rq-name{font-weight:700}
+  .rq-info .rq-meta{font-size:.82rem;color:var(--muted)}
+  .rq-actions{display:flex;gap:8px}
+  .btn{font-family:inherit;font-size:.84rem;border-radius:999px;padding:6px 14px;cursor:pointer;border:1px solid var(--line);background:#fff;color:var(--muted);transition:.15s}
+  .btn.confirm{background:var(--accent2);border-color:var(--accent2);color:#fff}
+  .btn:hover{filter:brightness(1.05)}
+
+  /* ------- today ------- */
+  .today-block{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin:16px 0}
+  .today-block h3{border-left:4px solid var(--accent);padding-left:10px;margin-bottom:10px;color:var(--accent)}
+  .today-item{padding:9px 0;border-top:1px solid var(--line);font-size:.95rem}
+  .today-item:first-of-type{border-top:none}
+  .today-item .t-title{font-weight:700}
+  .today-item .t-sub{color:var(--muted);font-size:.86rem}
+  .today-item.saved .t-title{color:var(--muted)}
+  .tag{display:inline-block;font-size:.68rem;text-transform:uppercase;letter-spacing:1px;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle}
+  .tag.new{background:var(--accent2);color:#fff}
+  .tag.planned{background:#cdbb9d;color:#3a2c10}
+  .tag.saved{background:#e6ded0;color:var(--muted)}
+  .quick-capture{background:#fff7e6;border:1px solid var(--gold);border-radius:10px;padding:14px;margin:16px 0}
+  .quick-capture h3{color:#8a6d1a;margin-bottom:8px}
+
+  /* ------- map ------- */
+  .mapbox{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:18px 0;background:#eae2d3}
+  #recapMap{display:block;width:100%;height:440px;background:#eae2d3}
+  .map-legend{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;padding:10px;font-size:.8rem;color:var(--muted)}
+  .map-legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend-dot{width:12px;height:12px;border-radius:50%;display:inline-block;border:1px solid #fff}
+  .placecard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:10px 0;cursor:pointer;display:flex;align-items:center;gap:12px;transition:.15s}
+  .placecard:hover{border-color:var(--accent);box-shadow:0 3px 10px rgba(0,0,0,.08)}
+  .placecard .pc-num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex:none}
+  .placecard.planned .pc-num{background:#cdbb9d;color:#3a2c10}
+  .placecard .pc-name{font-weight:700;font-size:1rem}
+  .placecard .pc-meta{color:var(--muted);font-size:.84rem}
+  .placecard .pc-tag{margin-left:auto;flex:none}
+
+  footer{text-align:center;color:var(--muted);font-size:.8rem;padding:36px 0 56px;font-style:italic}
+  .empty-note{color:var(--muted);font-style:italic;font-size:.9rem;padding:14px 0}
+  @media(max-width:520px){header.hero h1{font-size:1.5rem}.chapter{padding:15px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>🇵🇹 🇪🇸 Portugal &amp; Spain</h1>
+    <div class="sub">Our First European Adventure With Enzo</div>
+    <div class="meta">Lisbon → Seville → Marbella · Sept 13–25, 2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="nav">
+    <button data-panel="today" class="active">🌅 Today<span class="np">Plans, options, quick capture</span></button>
+    <button data-panel="story">📖 Our Story<span class="np">Photos, chapters, memories</span></button>
+    <button data-panel="map">🗺️ The Map<span class="np">Places &amp; ideas</span></button>
+  </div>
+
+  <!-- TODAY -->
+  <section class="panel active" id="panel-today">
+    <div id="todayContent"></div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="panel" id="panel-story">
+    <div id="confirmedNote" style="display:none"></div>
+    <div id="chapters"></div>
+    <div id="reviewQueue"></div>
+  </section>
+
+  <!-- MAP -->
+  <section class="panel" id="panel-map">
+    <div class="mapbox">
+      <svg id="recapMap" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div class="map-legend">
+      <span><span class="legend-dot" style="background:#2e7d5b"></span>Visited</span>
+      <span><span class="legend-dot" style="background:#c1440e"></span>Planned city</span>
+      <span><span class="legend-dot" style="background:#c9a227"></span>Saved idea</span>
+    </div>
+    <div id="placeCards"></div>
+  </section>
+</div>
+
+<footer>Made with love by the Kennedy family · our first European adventure with Enzo</footer>
+
+<div class="lightbox" id="lightbox"><img id="lightboxImg" alt=""></div>
+
+<script>
+// =====================================================================
+// DATA — source: PLACES_WE_GO.md + photo-map.json
+// Each stop: { type:'food'|'sight'|'family'|'shop', confirmed:true|false, ... }
+//   food   → ordered (what we ate), rating
+//   sight  → saw (what we saw)
+//   family → moment
+//   shop   → detail
+// =====================================================================
+const STOPS = [
+  // ------ DAY 1 — 2026-09-13 (arrival) ------
+  {
+    type:"family", date:"2026-09-13", day:"Day 1", place:"Arrival & First Night", city:"Lisbon",
+    moment:"Flying in with an 8-month-old, the rental apartment, first naps jet-lagged and homey.",
+    ordered:null, rating:null, confirmed:true,
+    note:"", notes:"", photos:[]
+  },
+
+  // ------ DAY 2 — 2026-09-14 ------
+  {
+    type:"food", date:"2026-09-14", day:"Day 2", place:"CORK Kitchen & Cocktail Club", city:"Lisbon",
+    ordered:"Monte Baixo red wine", rating:null, confirmed:true,
+    note:"Outdoor terrace café with happy-hour sign, cork-filled tables and wine. A casual drink in central Lisbon.",
+    notes:"", photos:[]
+  },
+  {
+    type:"sight", date:"2026-09-14", day:"Day 2", place:"Praça Luís de Camões", city:"Lisbon",
+    saw:"The Luís de Camões monument in Chiado, classic Portuguese calçada pavement.", rating:null, confirmed:true,
+    note:"", notes:"", photos:[]
+  },
+  {
+    type:"food", date:"2026-09-14", day:"Day 2", place:"Jamie Oliver's", city:"Lisbon",
+    ordered:"Pepperoni pizza + calamari", rating:7, confirmed:true,
+    note:"", notes:"", photos:[]
+  },
+  {
+    type:"food", date:"2026-09-14", day:"Day 2", place:"La Dolcerie Roma (Gelato)", city:"Lisbon",
+    ordered:"Gelato (cone + cup)", rating:null, confirmed:true,
+    note:"A branded gelato shop — 'Gelato, Caffè e Amore'.", notes:"", photos:[]
+  },
+
+  // ------ DAY 3 — 2026-09-15 ------
+  {
+    type:"sight", date:"2026-09-15", day:"Day 3", place:"Santa Justa Lift & São Jorge Castle", city:"Lisbon",
+    saw:"The Elevador de Santa Justa walkway and Castelo de São Jorge views from the downtown streets.", rating:null, confirmed:true,
+    note:"", notes:"", photos:[]
+  },
+  {
+    type:"shop", date:"2026-09-15", day:"Day 3", place:"Toy & Gift Store", city:"Lisbon",
+    detail:"Playful spot right next to Pão Santo — aisles of plush toys, cute merch, greeting cards, cow-print glass door.", rating:null, confirmed:true,
+    note:"", notes:"", photos:[]
+  },
+  {
+    type:"food", date:"2026-09-15", day:"Day 3", place:"Pão Santo Brunch Café", city:"Lisbon",
+    ordered:"Empanadas + espresso (quick stop to feed baby Enzo)", rating:null, confirmed:true,
+    note:"Cozy 'Santo Menu' brunch café — pastry case, espresso machine, Allison with the stroller and the diaper bag.",
+    notes:"", photos:["assets/pao-santo-photo-1.jpg","assets/pao-santo-photo-2.jpg","assets/pao-santo-photo-3.jpg","assets/pao-santo-brunch.png","assets/pao-santo-brunch-2.png"]
+  },
+  {
+    type:"food", date:"2026-09-15", day:"Day 3", place:"Nicolau Lisboa", city:"Lisbon",
+    ordered:"Protein smoothie, cold brew, pancakes, scrambled eggs (Alec) · Energy shot + breakfast sandwich (Allison)", rating:9, confirmed:true,
+    note:"A great rec — lush green foliage entrance, glossy green-turquoise tiled walls, cozy brunch vibe.",
+    notes:"", photos:[]
+  },
+  {
+    type:"sight", date:"2026-09-15", day:"Day 3", place:"Museu de Lisboa – Santo António", city:"Lisbon",
+    saw:"The floral photo-wall installation with family portraits.", rating:null, confirmed:false,
+    note:"", notes:"", photos:[]
+  },
+  {
+    type:"sight", date:"2026-09-15", day:"Day 3", place:"Igreja de Santo António", city:"Lisbon",
+    saw:"Church of Saint Anthony of Lisbon.", rating:null, confirmed:false,
+    note:"", notes:"", photos:[]
+  },
+  {
+    type:"sight", date:"2026-09-15", day:"Day 3", place:"Praça da Figueira", city:"Lisbon",
+    saw:"Dom João I equestrian statue in Baixa.", rating:null, confirmed:false,
+    note:"", notes:"", photos:[]
+  },
+
+  // ------ uncertain / not tied to a named spot (kept separate until confirmed) ------
+  {
+    type:"family", date:"2026-09-13 → 09-15", day:"Days 1–3", place:"Other Sights & Family Moments", city:"Lisbon",
+    moment:"Arrival, the Rua Augusta arch district, Tagus waterfront, side streets, café breaks and lots of Enzo — anything not tied to a named spot.",
+    rating:null, confirmed:true,
+    note:"", notes:"", photos:[]
+  }
+];
+
+// ---- Planned cities / saved ideas for the TODAY + MAP views ----
+const TODAY = {
+  date:"2026-09-15",
+  confirmedToday:[
+    {t:"Pão Santo Brunch Café", sub:"Empanadas + espresso (feed Enzo) · confirmed"},
+    {t:"Nicolau Lisboa", sub:"Breakfast/brunch · 9/10 · great rec · confirmed"},
+    {t:"Toy & Gift Store", sub:"Shopping · next to Pão Santo · confirmed"}
+  ],
+  nearbyOptions:[
+    {t:"Santa Justa Lift", sub:"Elevador de Santa Justa — walkway views", tag:"planned"},
+    {t:"Museu de Lisboa – Santo António", sub:"Flower-wall photo op · needs confirm", tag:"new"},
+    {t:"Time Out Market Lisboa", sub:"Great food-hall backup near Cais do Sodré", tag:"saved"}
+  ],
+  savedIdeas:[
+    {t:"Pastel de nata hunt", sub:"Best custard tart in Lisbon — still picking a favorite"},
+    {t:"São Jorge Castle at golden hour", sub:"Best light + fewer crowds"},
+    {t:"Dinner by the Tagus", sub:"Lively evening option along the waterfront"}
+  ]
+};
+
+// City centroids on the stylized map
+const CITY_POS = { "Lisbon":[130,200], "Seville":[310,270], "Marbella":[440,315] };
+
+// Verified real-world coordinates (approx) for tappable place cards + map
+const PLACE_COORDS = {
+  "Jamie Oliver's":[38.707,-9.141],
+  "Pão Santo Brunch Café":[38.710,-9.142],
+  "Nicolau Lisboa":[38.716,-9.145],
+  "CORK Kitchen & Cocktail Club":[38.710,-9.143],
+  "La Dolcerie Roma (Gelato)":[38.710,-9.145],
+  "Praça Luís de Camões":[38.711,-9.142],
+  "Santa Justa Lift & São Jorge Castle":[38.712,-9.138],
+  "Museu de Lisboa – Santo António":[38.710,-9.139],
+  "Igreja de Santo António":[38.710,-9.139],
+  "Praça da Figueira":[38.713,-9.137],
+  "Toy & Gift Store":[38.710,-9.142]
+};
+function coordToMap(lat,lon){
+  // lon -9.145..-8.8, lat 36.5..38.72 → map 600x400
+  const x = (lon - (-9.16)) / ( (-8.75) - (-9.16)) * 560 + 20;
+  const y = (38.72 - lat) / (38.72 - 36.5) * 360 + 20;
+  return [x, y];
+}
+
+// Album photo mapping (photo filename -> {place,label})
+const STOP_PHOTO_PLACES = {
+  "Jamie Oliver's": ["jamie-olivers"],
+  "Toy & Gift Store": ["toy-store"],
+  "Pão Santo Brunch Café": ["pao-santo"],
+  "Nicolau Lisboa": ["nicolau-lisboa"],
+  "CORK Kitchen & Cocktail Club": ["cork-kitchen"],
+  "La Dolcerie Roma (Gelato)": ["la-dolcerie"],
+  "Praça Luís de Camões": ["lisbon-sights"],
+  "Museu de Lisboa – Santo António": ["museu-santo-antonio"],
+  "Igreja de Santo António": ["santo-antonio-church"],
+  "Praça da Figueira": ["praça-figueira"],
+  "Santa Justa Lift & São Jorge Castle": ["lisbon-streets"],
+  "Other Sights & Family Moments": ["airplane-enroute","arrival-garage","apartment","outdoor-cafe"]
+};
+let ALBUM_PHOTOS = {};
+function loadAlbumMap(){
+  return fetch("photo-map.json").then(r=>r.json()).then(data=>{ ALBUM_PHOTOS = data.photos || {}; }).catch(()=>{ ALBUM_PHOTOS = {}; });
+}
+function photosForPlace(placeKey){
+  return Object.entries(ALBUM_PHOTOS)
+    .filter(([fn,m])=> m.place===placeKey)
+    .map(([fn])=> ["assets/album/"+fn, fn.endsWith(".mp4")?"video":"img"]);
+}
+
+// ---- persisted confirmations (review queue) ----
+const CONFIRM_KEY = "kennedyTripConfirmed";
+let confirmedSet = new Set();
+function getConfirmed(){ try{ return JSON.parse(localStorage.getItem(CONFIRM_KEY)||"[]"); }catch(e){ return []; } }
+function isConfirmed(place){ return confirmedSet.has(place); }
+
+// ---- Rendering helpers ----
+function stars(n){
+  if(n==null) return '<span class="stars empty">☆☆☆☆☆</span>';
+  let s="";for(let i=1;i<=5;i++)s+=`<span class="${i<=Math.round(n/2)?'':'empty'}">★</span>`;return `<span class="stars">${s}</span>`;
+}
+function typeChip(t){
+  const map={food:["Food","food"],sight:["Sightseeing","sight"],family:["Family moment","family"],shop:["Shopping","shop"]};
+  const [label,cls]=map[t]||[t,t];
+  return `<span class="type-chip ${cls}">${label}</span>`;
+}
+function fieldFor(s){
+  if(s.type==="food") return `<div class="field"><span class="k">Ordered:</span> ${s.ordered||"—"}</div>`;
+  if(s.type==="sight") return s.saw?`<div class="field"><span class="k">What we saw:</span> ${s.saw}</div>`:"";
+  if(s.type==="family") return s.moment?`<div class="field"><span class="k">The moment:</span> ${s.moment}</div>`:"";
+  if(s.type==="shop") return s.detail?`<div class="field"><span class="k">The spot:</span> ${s.detail}</div>`:"";
+  return "";
+}
+function typeTitle(s){
+  return (s.type==="food"?"food":s.type==="sight"?"the sights":s.type==="family"?"these moments":s.type==="shop"?"this little detour":"");
+}
+
+function mediaHTML(s){
+  let photos=(s.photos||[]).map(p=>["assets/"+p,"img"]);
+  (STOP_PHOTO_PLACES[s.place]||[]).forEach(k=>photos=photos.concat(photosForPlace(k)));
+  if(!photos.length) return "";
+  return `<div class="photos">`+photos.map(([p,kind])=>
+    kind==="video"
+      ? `<video src="${p}" controls preload="metadata" onclick="openMedia(this,event)"></video>`
+      : `<img src="${p}" alt="${s.place}" onclick="openMedia(this,event)">`
+  ).join("")+`</div>`;
+}
+
+// ---- Today view ----
+function renderToday(){
+  const box=document.getElementById("todayContent");
+  let h=`<div class="today-block"><h3>🌅 ${formatDayHeading(TODAY.date)}</h3>`;
+  h+=`<div class="empty-note">Confirmed plans, useful nearby options, and a place to jot quick notes for the trip.</div>`;
+
+  // Confirmed today
+  h+=`<h3 style="margin-top:16px">✔ Confirmed · ${TODAY.date}</h3>`;
+  if(TODAY.confirmedToday.length){
+    TODAY.confirmedToday.forEach(c=>{
+      h+=`<div class="today-item"><div><span class="t-title">${c.t}</span><span class="tag new">visited</span></div><div class="t-sub">${c.sub}</div></div>`;
+    });
+  }else{
+    h+=`<div class="empty-note">Nothing confirmed yet today.</div>`;
+  }
+
+  // Nearby useful options
+  h+=`<h3 style="margin-top:16px">🧭 Useful nearby</h3>`;
+  TODAY.nearbyOptions.forEach(c=>{
+    h+=`<div class="today-item"><div><span class="t-title">${c.t}</span><span class="tag ${c.tag}">${c.tag}</span></div><div class="t-sub">${c.sub}</div></div>`;
+  });
+
+  // Saved ideas
+  h+=`<h3 style="margin-top:16px">💡 Saved ideas</h3>`;
+  TODAY.savedIdeas.forEach(c=>{
+    h+=`<div class="today-item saved"><div><span class="t-title">${c.t}</span></div><div class="t-sub">${c.sub}</div></div>`;
+  });
+  h+=`</div>`;
+
+  // Quick capture
+  h+=`<div class="quick-capture"><h3>📝 Quick capture</h3>
+    <p style="font-size:.88rem;color:var(--muted);margin-bottom:8px">Jot a spot, thought, or idea here — it stays on this device for now.</p>
+    <input id="qcInput" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.95rem" placeholder="e.g. Great pastel de nata near Baixa…">
+    <div style="margin-top:8px;display:flex;gap:8px">
+      <button class="btn confirm" onclick="captureNote()">Save note</button>
+      <button class="btn" onclick="document.getElementById('qcInput').value=''">Clear</button>
+    </div>
+    <div id="qcList" style="margin-top:12px"></div>
+  </div>`;
+  box.innerHTML=h;
+  renderCapturedNotes();
+}
+function captureNote(){
+  const inp=document.getElementById("qcInput");
+  const v=inp.value.trim(); if(!v) return;
+  let list=JSON.parse(localStorage.getItem("kennedyQuickCapture")||"[]");
+  list.unshift({text:v, at:new Date().toISOString()});
+  localStorage.setItem("kennedyQuickCapture",JSON.stringify(list));
+  inp.value=""; renderCapturedNotes();
+}
+function renderCapturedNotes(){
+  let list=JSON.parse(localStorage.getItem("kennedyQuickCapture")||"[]");
+  const box=document.getElementById("qcList");
+  if(!box) return;
+  box.innerHTML=list.length? list.map(n=>`<div class="today-item"><div class="t-sub">• ${n.text}</div></div>`).join("")
+    : `<div class="empty-note" style="padding:4px 0">No notes yet.</div>`;
+}
+
+// ---- Our Story ----
+function chapterCard(s){
+  const badge = s.rating!=null ? `<span class="rating-badge">${s.rating}/10</span>` : "";
+  const pending = (!isConfirmed(s.place) && !s.confirmed) ? `<span class="pending-chip">pending confirm</span>` : "";
+  const ph = mediaHTML(s);
+  return `<article class="chapter">
+    <div class="daytag">${s.day} · ${s.date}</div>
+    <h3>${s.place}${typeChip(s.type)}${badge}${pending}</h3>
+    <div class="city">${s.city}</div>
+    ${ph}
+    ${fieldFor(s)}
+    <div class="star-row">${stars(s.rating)}${s.rating!=null?`<span style="font-size:.82rem;color:var(--muted)">${s.rating}/10</span>`:""}</div>
+    ${s.note?`<div class="note quote">${s.note}</div>`:""}
+  </article>`;
+}
+
+function buildChapters(){
+  const box=document.getElementById("chapters"); box.innerHTML="";
+
+  // Confirmed stops, grouped chronologically by day (keeping uncertain grouped at the end, flagged)
+  const confirmed = STOPS.filter(s=> isConfirmed(s.place) || s.confirmed);
+  const pending  = STOPS.filter(s=> !(isConfirmed(s.place) || s.confirmed));
+
+  const groups={};
+  confirmed.forEach(s=>{ (groups[s.day+"|"+s.date] = groups[s.day+"|"+s.date]||[]).push(s); });
+
+  let order = Object.entries(groups).sort((a,b)=>{
+    const da=a[0].split("|")[1], db=b[0].split("|")[1];
+    // dates like "2026-09-15" and "2026-09-13 → 09-15" — sort by first date
+    const sa=da.match(/\d{4}-\d{2}-\d{2}/), sb=db.match(/\d{4}-\d{2}-\d{2}/);
+    const va=sa?new Date(sa[0]):0, vb=sb?new Date(sb[0]):0;
+    return va-vb;
+  });
+
+  order.forEach(([,arr],gi)=>{
+    const dayTag = arr[0].day, dateTxt = arr[0].date;
+    const uncertain = dateTxt.includes("→");
+    box.insertAdjacentHTML("beforeend",
+      `<div class="dayhead"><h2>${dayTag}${uncertain?' <span style="font-size:.8rem;color:var(--muted)">(uncertain dates)</span>':''}</h2><div class="dsub">${dateTxt}</div></div>`);
+    arr.forEach(s=> box.insertAdjacentHTML("beforeend", chapterCard(s)));
+  });
+
+  // Confirmed-note banner
+  const note=document.getElementById("confirmedNote");
+  const totalConfirmed = confirmed.length;
+  note.style.display = "block";
+  note.innerHTML = `<div style="background:#eef6ef;border:1px solid #cfe3d4;border-radius:10px;padding:12px 16px;font-size:.9rem;color:var(--accent2);margin-top:8px">
+    ✅ <b>${totalConfirmed} confirmed stops</b> are shown above. Auto-identified places wait in the review queue below until you confirm them.</div>`;
+
+  // Review queue
+  const rq=document.getElementById("reviewQueue");
+  if(pending.length){
+    let h=`<div class="rq"><h3>🔍 Confirm this place</h3>
+      <p>These were auto-identified from the album. Confirm the ones you actually visited so they join your story — otherwise they stay unlabeled for now.</p>`;
+    pending.forEach(s=>{
+      h+=`<div class="rq-item" id="rq-${slug(s.place)}">
+        <div class="rq-info"><div class="rq-name">${s.place}</div>
+        <div class="rq-meta">${s.day} · ${s.city} · ${typeTitle(s)} · ${s.type==="sight"?("suggested: "+s.saw):""}</div></div>
+        <div class="rq-actions">
+          <button class="btn confirm" onclick="confirmPlace('${slug(s.place)}')">Confirm</button>
+          <button class="btn" onclick="skipPlace('${slug(s.place)}')">Not sure</button>
+        </div>
+      </div>`;
+    });
+    h+=`</div>`;
+    rq.innerHTML=h;
+  } else {
+    rq.innerHTML=`<div class="rq"><h3>🔍 Confirm this place</h3><p>✅ All auto-identified places are confirmed. Nothing waiting in review.</p></div>`;
+  }
+}
+function slug(n){ return n.toLowerCase().replace(/[^a-z0-9]+/g,"-"); }
+function confirmPlace(id){
+  // find by slug among pending stops
+  const stop = STOPS.find(s=> slug(s.place)===id);
+  if(stop){ confirmedSet.add(stop.place); persistConfirmed(); }
+  buildChapters(); buildStats(); buildMap();
+}
+function skipPlace(id){
+  const stop = STOPS.find(s=> slug(s.place)===id);
+  if(stop){ stop.confirmed=false; stop.hidden=true; }
+  // visually mark skipped
+  const el=document.getElementById("rq-"+id); if(el) el.style.opacity=.4;
+}
+function persistConfirmed(){ localStorage.setItem(CONFIRM_KEY, JSON.stringify([...confirmedSet])); }
+
+// ---- Stats (real counts per category) ----
+function buildStats(){
+  const box=document.getElementById("statGrid");
+  const active = STOPS.filter(s=> (s.confirmed || isConfirmed(s.place)) && !s.hidden);
+  const meals = active.filter(s=> s.type==="food");
+  const sights = active.filter(s=> s.type==="sight");
+  const fam = active.filter(s=> s.type==="family");
+  const shops = active.filter(s=> s.type==="shop");
+  const rated = meals.filter(s=> s.rating!=null);
+  const avg = rated.length? (rated.reduce((a,b)=>a+b.rating,0)/rated.length).toFixed(1) : "—";
+
+  // NOTE: 'Meals' now counts only actual dining entries (food), not sightseeing/shopping.
+  box.innerHTML=`
+    <div class="stat-break">🍽 Meals &amp; drinks</div>
+    <div class="stat"><div class="num">${meals.length}</div><div class="lbl">Places eaten</div></div>
+    <div class="stat"><div class="num">${avg}</div><div class="lbl">Avg. rating</div></div>
+    <div class="stat-break">📍 Sights &amp; moments</div>
+    <div class="stat"><div class="num">${sights.length}</div><div class="lbl">Sightseeing</div></div>
+    <div class="stat"><div class="num">${fam.length}</div><div class="lbl">Family moments</div></div>
+    <div class="stat"><div class="num">${shops.length}</div><div class="lbl">Shopping</div></div>
+    <div class="stat-break">Trip</div>
+    <div class="stat"><div class="num">${new Set(active.map(s=>s.city)).size}</div><div class="lbl">Cities</div></div>
+    <div class="stat"><div class="num">${active.length}</div><div class="lbl">Stops logged</div></div>`;
+
+  const best = rated.slice().sort((a,b)=>b.rating-a.rating)[0];
+  document.getElementById("bestOf").innerHTML= best ? `
+    <div class="bestcard"><h4>🏆 Top pick so far</h4>
+    <strong>${best.place}</strong> — ${best.rating}/10 · ${best.ordered}</div>` : "";
+}
+
+// ---- Map ----
+function buildMap(){
+  const svg=document.getElementById("recapMap");
+  const active = STOPS.filter(s=> (s.confirmed || isConfirmed(s.place)) && !s.hidden);
+  let dots="";
+  // Planned cities (outline, not yet visited) vs visited (filled)
+  const visitedCities = new Set(active.filter(s=>!s.date.includes("→")).map(s=>s.city));
+  Object.entries(CITY_POS).forEach(([c,[x,y]])=>{
+    const visited = visitedCities.has(c);
+    dots+=`<circle cx="${x}" cy="${y}" r="7" fill="${visited?'#2e7d5b':'#f0e6d2'}" stroke="${visited?'#2e7d5b':'#c1440e'}" stroke-width="2.5" stroke-dasharray="${visited?'':'4 3'}"/>`;
+    dots+=`<text x="${x}" y="${y-13}" text-anchor="middle" font-family="Georgia" font-size="13" fill="#4a3420" font-weight="bold">${c}</text>`;
+    dots+=`<text x="${x}" y="${y+3}" text-anchor="middle" font-family="Georgia" font-size="8" fill="${visited?'#2e7d5b':'#c1440e'}" opacity=".8">${visited?'visited':'planned'}</text>`;
+  });
+  // route line
+  const pts=[CITY_POS["Lisbon"][0],CITY_POS["Lisbon"][1],CITY_POS.Seville[0],CITY_POS.Seville[1],CITY_POS.Marbella[0],CITY_POS.Marbella[1]];
+  dots+=`<polyline points="${pts.join(",")}" fill="none" stroke="#c1440e" stroke-width="2.5" stroke-dasharray="6 5" opacity=".6"/>`;
+
+  // confirmed stops → verified-ish coords (tappable), numbered
+  let idx=0;
+  active.filter(s=>s.city!=="Lisbon"||s.date.includes("→")===false).forEach(s=>{
+    if(s.date.includes("→")) return; // skip the catch-all for the numbered pins
+    const c = PLACE_COORDS[s.place] || PLACE_COORDS["Lisbon"];
+    const [x,y] = coordToMap(c[0],c[1]);
+    idx++;
+    dots+=`<circle cx="${x}" cy="${y}" r="8" fill="${s.rating&&s.rating>=8?'#2e7d5b':'#c1440e'}" stroke="#fff" stroke-width="2" class="pin" data-name="${s.place}"/>`;
+    dots+=`<text x="${x}" y="${y+4}" text-anchor="middle" font-family="Georgia" font-size="9" fill="#fff" font-weight="bold">${idx}</text>`;
+  });
+  svg.innerHTML=dots;
+
+  // place cards (tappable)
+  const pc=document.getElementById("placeCards");
+  let h=`<div style="font-weight:700;color:var(--accent);margin-top:10px">Places</div>`;
+  active.filter(s=>!s.date.includes("→")).forEach((s,i)=>{
+    h+=`<div class="placecard" data-name="${s.place}"><div class="pc-num">${i+1}</div>
+      <div><div class="pc-name">${s.place}</div><div class="pc-meta">${s.day} · ${s.city} · ${typeTitle(s)}</div></div>
+      <span class="pc-tag tag ${s.type==='food'?'new':'planned'}">${s.type==='food'?'eaten':s.type}</span>
+    </div>`;
+  });
+  pc.innerHTML=h;
+  pc.querySelectorAll(".placecard").forEach(c=> c.addEventListener("click",()=>{
+    const name=c.dataset.name;
+    const s=STOPS.find(x=>x.place===name);
+    if(s && s.photos && s.photos.length){ openMedia(document.querySelector('img[alt="'+name+'"], video'),null); }
+    else alert(s? s.type==="sight"?(s.saw||("Visited "+name)): (s.ordered?("Ordered: "+s.ordered):name) : name);
+  }));
+}
+
+function formatDayHeading(iso){
+  const d=new Date(iso+ (iso.length===10?"T12:00:00":""));
+  if(isNaN(d)) return iso;
+  return d.toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
+}
+
+// ---- Nav + lightbox ----
+document.querySelectorAll(".nav button").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    document.querySelectorAll("section.panel").forEach(p=>p.classList.remove("active"));
+    document.getElementById("panel-"+btn.dataset.panel).classList.add("active");
+  });
+});
+function openMedia(el,ev){
+  if(ev && ev.cancelBubble!==undefined) ev.stopPropagation();
+  const lb=document.getElementById("lightbox"), img=document.getElementById("lightboxImg");
+  if(el&&el.tagName==="VIDEO"){
+    img.outerHTML=`<video id="lightboxImg" src="${el.src}" controls autoplay></video>`;
+  } else {
+    if(document.getElementById("lightboxImg").tagName!=="IMG"){
+      document.getElementById("lightboxImg").outerHTML='<img id="lightboxImg" alt="">';
+    }
+    document.getElementById("lightboxImg").src=el?el.src:"";
+  }
+  lb.classList.add("open");
+}
+document.getElementById("lightbox").addEventListener("click",()=>document.getElementById("lightbox").classList.remove("open"));
+
+// ---- Init ----
+confirmedSet = new Set(getConfirmed());
+renderToday();
+buildChapters(); buildStats(); buildMap();
+
+loadAlbumMap().then(()=>{ buildChapters(); buildStats(); buildMap(); });
+</script>
+</body>
+</html>
