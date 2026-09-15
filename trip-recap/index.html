@@ -95,9 +95,13 @@
   .quick-capture h3{color:#8a6d1a;margin-bottom:8px}
 
   /* ------- map ------- */
-  .mapbox{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:18px 0;background:#eae2d3}
-  #recapMap{display:block;width:100%;height:440px;background:#eae2d3}
-  .map-legend{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;padding:10px;font-size:.8rem;color:var(--muted)}
+  .mapbox{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:18px 0;background:#eae2d3;position:relative}
+  #recapMap{width:100%;height:440px;background:#eae2d3;z-index:1}
+  .panel .leaflet-container{font-family:inherit}
+  .panel .leaflet-popup-content-wrapper,.panel .leaflet-popup-tip{background:#fff8ec;color:var(--ink)}
+  .panel .leaflet-popup-content{margin:10px 14px;font-size:.9rem;line-height:1.35}
+  .panel .leaflet-popup-content b{color:var(--accent)}
+  .map-legend{z-index:10;position:relative}
   .map-legend span{display:inline-flex;align-items:center;gap:6px}
   .legend-dot{width:12px;height:12px;border-radius:50%;display:inline-block;border:1px solid #fff}
   .placecard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:10px 0;cursor:pointer;display:flex;align-items:center;gap:12px;transition:.15s}
@@ -119,6 +123,11 @@
   .empty-note{color:var(--muted);font-style:italic;font-size:.9rem;padding:14px 0}
   @media(max-width:520px){header.hero h1{font-size:1.5rem}.chapter{padding:15px}}
 </style>
+  <!-- Leaflet for the interactive map (pan/zoom, real geography, tap pins) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
   <script>window.__ALBUM_PHOTOS__ = {"IMG_5915.jpg":{"date":"2026-09-13","place":"airplane-enroute","label":"Airplane selfie with family","category":"travel"},"IMG_5916.jpg":{"date":"2026-09-13","place":"airplane-enroute","label":"Airplane selfie, baby on lap","category":"travel"},"IMG_5917.jpg":{"date":"2026-09-13","place":"airplane-enroute","label":"Airplane selfie, baby resting","category":"travel"},"IMG_5934.jpg":{"date":"2026-09-13","place":"arrival-garage","label":"Family in parking garage after arrival","category":"travel"},"IMG_5935.jpg":{"date":"2026-09-13","place":"arrival-garage","label":"Garage selfie with baby in car seat","category":"travel"},"IMG_5936.jpg":{"date":"2026-09-13","place":"arrival-garage","label":"Baby asleep in car seat","category":"baby"},"IMG_5937.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Portuguese café menu board","category":"food"},"IMG_5938.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Café menu board, pastelaria","category":"food"},"IMG_5939.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Central Lisbon street, Chiado/Bairro Alto","category":"street"},"IMG_5940.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Praça Luís de Camões statue","category":"landmark"},"IMG_5941.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Praça Luís de Camões, Chiado","category":"landmark"},"IMG_5942.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Luís de Camões monument close-up","category":"landmark"},"IMG_5943.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Praça Luís de Camões plaza view","category":"landmark"},"IMG_5944.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Lisbon street toward Tagus River","category":"street"},"IMG_5945.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Elevated view, Chiado/Baixa street","category":"street"},"IMG_5946.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Baby in stroller, Tagus waterfront","category":"baby"},"IMG_5947.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Baby in stroller by Tagus River","category":"baby"},"IMG_5949.jpg":{"date":"2026-09-14","place":"lisbon-sights","label":"Pedestrian shopping street, Chiado/Baixa","category":"street"},"IMG_5950.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Mom and baby at Cork Kitchen café","category":"baby"},"IMG_5951.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Mom kissing baby at Cork Kitchen","category":"baby"},"IMG_5952.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Baby at Cork Kitchen terrace","category":"baby"},"IMG_5953.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Cork Kitchen terrace, happy hour sign","category":"baby"},"IMG_5954.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Mom holding baby at café terrace","category":"baby"},"IMG_5955.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Mom and baby at Cork Kitchen","category":"baby"},"IMG_5956.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Baby facing camera at café","category":"baby"},"IMG_5957.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Mom cuddling baby at terrace","category":"baby"},"IMG_5958.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Baby's hand near mouth at café","category":"baby"},"IMG_5959.jpg":{"date":"2026-09-14","place":"apartment","label":"Smart-home tablet in rental apartment","category":"other"},"IMG_5960.jpg":{"date":"2026-09-14","place":"cork-kitchen","label":"Monte Baixo red wine on corks table","category":"food"},"IMG_5961.jpg":{"date":"2026-09-14","place":"jamie-olivers","label":"Red wine at window table","category":"food"},"IMG_5962.jpg":{"date":"2026-09-14","place":"jamie-olivers","label":"Wine toast, street view","category":"food"},"IMG_5963.jpg":{"date":"2026-09-14","place":"jamie-olivers","label":"Dinner table, theatre across street","category":"food"},"IMG_5965.jpg":{"date":"2026-09-14","place":"jamie-olivers","label":"Wine, vinegar, olive oil on table","category":"food"},"IMG_5966.jpg":{"date":"2026-09-14","place":"jamie-olivers","label":"Dinner table, tuk-tuk outside","category":"food"},"IMG_5967.jpg":{"date":"2026-09-14","place":"jamie-olivers","label":"Baby asleep in stroller at dinner","category":"baby"},"IMG_5968.jpg":{"date":"2026-09-14","place":"jamie-olivers","label":"Baby stroller beside dinner table","category":"baby"},"IMG_5969.jpg":{"date":"2026-09-14","place":"apartment","label":"Modern bathroom, freestanding tub","category":"other"},"IMG_5970.jpg":{"date":"2026-09-14","place":"apartment","label":"Bathroom tub and mirrored wall","category":"other"},"IMG_5971.jpg":{"date":"2026-09-14","place":"apartment","label":"Bathroom after baby bath","category":"other"},"IMG_5972.jpg":{"date":"2026-09-14","place":"la-dolcerie","label":"Gelato at La Dolcerie Roma","category":"food"},"IMG_5973.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Rua Augusta toward Arco da Rua Augusta","category":"landmark"},"IMG_5974.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Rua Augusta toward the arch","category":"landmark"},"IMG_5975.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Rua Augusta, yellow Pousadas building","category":"landmark"},"IMG_5976.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Nicolau Lisboa exterior, green façade","category":"food"},"IMG_5977.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Nicolau Lisboa bar counter","category":"food"},"IMG_5978.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Nicolau Lisboa dining room","category":"food"},"IMG_5979.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Nicolau Lisboa interior from table","category":"food"},"IMG_5980.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Nicolau Lisboa counter/dining view","category":"food"},"IMG_5981.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Iced drink with dried citrus garnish","category":"food"},"IMG_5982.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Pancakes with powdered sugar","category":"food"},"IMG_5983.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Breakfast sandwich, brioche bun","category":"food"},"IMG_5984.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Egg-avocado breakfast sandwich","category":"food"},"IMG_5985.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Pancakes with syrup, fruit bowl","category":"food"},"IMG_5986.jpg":{"date":"2026-09-15","place":"nicolau-lisboa","label":"Powdered-sugar pancakes close-up","category":"food"},"IMG_5994.jpg":{"date":"2026-09-15","place":"pao-santo","label":"Pão Santo café, pastry case","category":"food"},"IMG_5996.jpg":{"date":"2026-09-15","place":"pao-santo","label":"Mom bottle-feeding baby at Pão Santo","category":"baby"},"IMG_6001.jpg":{"date":"2026-09-15","place":"santo-antonio-church","label":"Outside Igreja de Santo António","category":"baby"},"IMG_6002.jpg":{"date":"2026-09-15","place":"santo-antonio-church","label":"Igreja de Santo António family portrait","category":"baby"},"IMG_6005.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Flower wall, Museu de Lisboa Santo António","category":"baby"},"IMG_6006.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Flower wall wider view","category":"baby"},"IMG_6007.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Museu de Lisboa Santo António flower wall","category":"baby"},"IMG_6008.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Mom and baby under flower wall","category":"baby"},"IMG_6009.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Family portrait at flower wall","category":"baby"},"IMG_6010.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Family portrait, flower wall","category":"baby"},"IMG_6011.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Family portrait, flower wall","category":"baby"},"IMG_6012.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Close-up family portrait, flower wall","category":"baby"},"IMG_6013.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Family portrait, flower wall","category":"baby"},"IMG_6014.jpg":{"date":"2026-09-15","place":"museu-santo-antonio","label":"Tight family portrait, flower wall","category":"baby"},"IMG_6015.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Dad holding baby on street","category":"baby"},"IMG_6025.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Baby in sunhat on side street","category":"baby"},"IMG_6026.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Baby in sunhat, orange wall street","category":"baby"},"IMG_6027.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Baby in sunhat by parked car","category":"baby"},"IMG_6028.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Family selfie on cobblestone street","category":"baby"},"IMG_6029.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Family selfie, parked cars behind","category":"baby"},"IMG_6030.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Family selfie, baby smiling","category":"baby"},"IMG_6031.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Family selfie, same location","category":"baby"},"IMG_6032.jpg":{"date":"2026-09-15","place":"praça-figueira","label":"Praça da Figueira, Dom João I statue","category":"landmark"},"IMG_6034.jpg":{"date":"2026-09-15","place":"praça-figueira","label":"Praça da Figueira wider view","category":"landmark"},"IMG_6035.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Baixa street, Feira dos Tecidos","category":"street"},"IMG_6037.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Santa Justa Lift walkway, Baixa","category":"landmark"},"IMG_6038.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Santa Justa Lift elevated walkway","category":"landmark"},"IMG_6039.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Castelo de São Jorge on hill","category":"landmark"},"IMG_6040.jpg":{"date":"2026-09-15","place":"lisbon-streets","label":"Castelo de São Jorge view, Baixa","category":"landmark"},"IMG_6041.jpg":{"date":"2026-09-15","place":"outdoor-cafe","label":"Baby sleeping in stroller, café terrace","category":"baby"},"IMG_6042.jpg":{"date":"2026-09-15","place":"outdoor-cafe","label":"Baby asleep in stroller, café","category":"baby"},"IMG_6043.jpg":{"date":"2026-09-15","place":"outdoor-cafe","label":"Baby in stroller, Salão Musical sign","category":"baby"},"IMG_6044.jpg":{"date":"2026-09-15","place":"apartment","label":"Baby in high chair with plush turtle","category":"baby"},"IMG_6048.jpg":{"date":"2026-09-15","place":"apartment","label":"Baby in high chair by window","category":"baby"},"IMG_6049.jpg":{"date":"2026-09-15","place":"apartment","label":"Baby in high chair with turtle toy","category":"baby"},"IMG_6050.jpg":{"date":"2026-09-15","place":"apartment","label":"Baby in high chair, tiled façade","category":"baby"},"IMG_6051.jpg":{"date":"2026-09-15","place":"apartment","label":"Baby in high chair with plush octopus","category":"baby"},"IMG_6052.jpg":{"date":"2026-09-15","place":"apartment","label":"Baby in high chair, bright living room","category":"baby"}};</script>
@@ -153,7 +162,7 @@
   <!-- MAP -->
   <section class="panel" id="panel-map">
     <div class="mapbox">
-      <svg id="recapMap" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet"></svg>
+      <div id="recapMap" style="height:100%;min-height:420px;width:100%"></div>
     </div>
     <div class="map-legend">
       <span><span class="legend-dot" style="background:#2e7d5b"></span>Visited</span>
@@ -278,8 +287,8 @@ const TODAY_OPTIONS = {
   ]
 };
 
-// City centroids on the stylized map
-const CITY_POS = { "Lisbon":[130,200], "Seville":[310,270], "Marbella":[440,315] };
+// Real lat/lon for the planned cities (used by the Leaflet map + route line)
+const CITY_POS = { "Lisbon":[38.7223,-9.1393], "Seville":[37.3891,-5.9845], "Marbella":[36.5101,-4.8838] };
 
 // Verified real-world coordinates (approx) for tappable place cards + map
 const PLACE_COORDS = {
@@ -295,12 +304,8 @@ const PLACE_COORDS = {
   "Praça da Figueira":[38.713,-9.137],
   "Toy & Gift Store":[38.710,-9.142]
 };
-function coordToMap(lat,lon){
-  // lon -9.145..-8.8, lat 36.5..38.72 → map 600x400
-  const x = (lon - (-9.16)) / ( (-8.75) - (-9.16)) * 560 + 20;
-  const y = (38.72 - lat) / (38.72 - 36.5) * 360 + 20;
-  return [x, y];
-}
+// (Legacy SVG pixel mapper — no longer used since the map switched to Leaflet.)
+// function coordToMap(lat,lon){...} removed.
 
 // Album photo mapping (photo filename -> {place,label})
 const STOP_PHOTO_PLACES = {
@@ -680,51 +685,142 @@ function buildStats(){
 }
 
 // ---- Map ----
-function buildMap(){
-  const svg=document.getElementById("recapMap");
-  const active = STOPS.filter(s=> !isDismissed(s.place) && (s.confirmed || isConfirmed(s.place)));
-  let dots="";
-  // Planned cities (outline, not yet visited) vs visited (filled)
-  const visitedCities = new Set(active.filter(s=>!s.date.includes("→")).map(s=>s.city));
-  Object.entries(CITY_POS).forEach(([c,[x,y]])=>{
-    const visited = visitedCities.has(c);
-    dots+=`<circle cx="${x}" cy="${y}" r="7" fill="${visited?'#2e7d5b':'#f0e6d2'}" stroke="${visited?'#2e7d5b':'#c1440e'}" stroke-width="2.5" stroke-dasharray="${visited?'':'4 3'}"/>`;
-    dots+=`<text x="${x}" y="${y-13}" text-anchor="middle" font-family="Georgia" font-size="13" fill="#4a3420" font-weight="bold">${c}</text>`;
-    dots+=`<text x="${x}" y="${y+3}" text-anchor="middle" font-family="Georgia" font-size="8" fill="${visited?'#2e7d5b':'#c1440e'}" opacity=".8">${visited?'visited':'planned'}</text>`;
-  });
-  // route line
-  const pts=[CITY_POS["Lisbon"][0],CITY_POS["Lisbon"][1],CITY_POS.Seville[0],CITY_POS.Seville[1],CITY_POS.Marbella[0],CITY_POS.Marbella[1]];
-  dots+=`<polyline points="${pts.join(",")}" fill="none" stroke="#c1440e" stroke-width="2.5" stroke-dasharray="6 5" opacity=".6"/>`;
+/* ---- Interactive map (Leaflet + OpenStreetMap) ----
+   A real, pannable/zoomable map. Markers are placed at real lat/lon and show
+   a popup with the place + a thumbnail (when a photo exists). Tapping a marker
+   or a place card below flies to that marker and opens its popup.
+   The map is created lazily the first time buildMap() runs; subsequent calls
+   rebuild markers in place. Because the map panel starts hidden (display:none),
+   we call invalidateSize() whenever it becomes active so tiles/pins lay out. */
+let recapMap = null;          // Leaflet map instance (created once)
+let recapLayer = null;        // feature group holding markers/lines (rebuilt each call)
+let recapMarkers = {};        // place -> marker (built once, reused for fly-to)
+let recapInitializedAt = 0;   // ms timestamp of first init (for fresh-invalidate)
 
-  // confirmed stops → verified coords (tappable), numbered; skip any with no coords
-  let idx=0;
-  active.filter(s=>!s.date.includes("→")).forEach(s=>{
-    const c = PLACE_COORDS[s.place] || PLACE_COORDS[s.city]; // fall back to city centroid if known
-    if(!c) return; // no coordinates → skip the pin rather than error
-    const [x,y] = coordToMap(c[0],c[1]);
-    idx++;
-    dots+=`<circle cx="${x}" cy="${y}" r="8" fill="${s.rating&&s.rating>=8?'#2e7d5b':'#c1440e'}" stroke="#fff" stroke-width="2" class="pin" data-name="${s.place}"/>`;
-    dots+=`<text x="${x}" y="${y+4}" text-anchor="middle" font-family="Georgia" font-size="9" fill="#fff" font-weight="bold">${idx}</text>`;
-  });
-  svg.innerHTML=dots;
-
-  // place cards (tappable)
-  const pc=document.getElementById("placeCards");
-  let h=`<div style="font-weight:700;color:var(--accent);margin-top:10px">Places</div>`;
-  active.filter(s=>!s.date.includes("→")).forEach((s,i)=>{
-    h+=`<div class="placecard" data-name="${s.place}"><div class="pc-num">${i+1}</div>
-      <div><div class="pc-name">${s.place}</div><div class="pc-meta">${s.day} · ${s.city} · ${typeTitle(s)}</div></div>
-      <span class="pc-tag tag ${s.type==='food'?'new':'planned'}">${s.type==='food'?'eaten':s.type}</span>
-    </div>`;
-  });
-  pc.innerHTML=h;
-  pc.querySelectorAll(".placecard").forEach(c=> c.addEventListener("click",()=>{
-    const name=c.dataset.name;
-    const s=STOPS.find(x=>x.place===name);
-    if(s && s.photos && s.photos.length){ openMedia(document.querySelector('img[alt="'+name+'"], video'),null); }
-    else alert(s? s.type==="sight"?(s.saw||("Visited "+name)): (s.ordered?("Ordered: "+s.ordered):name) : name);
-  }));
+function initRecapMap(){
+  if(recapMap) return recapMap;
+  if(typeof L === "undefined" || !document.getElementById("recapMap")) return null;
+  recapMap = L.map("recapMap", {
+    zoomControl: true,
+    attributionControl: true,
+    worldCopyJump: true
+  }).setView([38.71, -9.14], 13); // start over Lisbon
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "&copy; OpenStreetMap contributors"
+  }).addTo(recapMap);
+  recapLayer = L.featureGroup().addTo(recapMap);
+  recapInitializedAt = Date.now();
+  return recapMap;
 }
+
+function mapPopupHTML(s, firstPhoto){
+  const pic = firstPhoto
+    ? `<div style="margin:-4px -2px 6px"><img src="${firstPhoto}" alt="${s.place}" style="width:100%;max-height:110px;object-fit:cover;border-radius:6px"></div>`
+    : "";
+  const sub = s.type==="food" ? (s.ordered||s.city) : (s.type==="sight" ? (s.saw||s.city) : (s.type==="shop" ? (s.detail||s.city) : s.city));
+  const star = s.rating!=null ? ` &nbsp;<span style="color:#c9a227">${s.rating}/10</span>` : "";
+  return `${pic}<div><b>${s.place}</b>${star}</div><div style="color:#6b5e4c;font-size:.85rem">${sub}</div>`;
+}
+
+function firstPhotoFor(s){
+  let p=(s.photos||[])[0];
+  if(p) return p.startsWith("assets/")?p:"assets/"+p;
+  const keys=(STOP_PHOTO_PLACES[s.place]||[]);
+  if(keys.length){
+    for(const k of keys){
+      const arr=photosForPlace(k);
+      if(arr.length) return arr[0][0];
+    }
+  }
+  return null;
+}
+
+function buildMap(){
+  const map=initRecapMap();
+  const pc=document.getElementById("placeCards");
+  const active = STOPS.filter(s=> !isDismissed(s.place) && (s.confirmed || isConfirmed(s.place)));
+  const list = active.filter(s=>!s.date.includes("→"));
+
+  // ---- rebuild the place-card list (unchanged behaviour) ----
+  if(pc){
+    let h=`<div style="font-weight:700;color:var(--accent);margin-top:10px">Places</div>`;
+    list.forEach((s,i)=>{
+      h+=`<div class="placecard" data-name="${s.place}"><div class="pc-num">${i+1}</div>
+        <div><div class="pc-name">${s.place}</div><div class="pc-meta">${s.day} · ${s.city} · ${typeTitle(s)}</div></div>
+        <span class="pc-tag tag ${s.type==='food'?'new':'planned'}">${s.type==='food'?'eaten':s.type}</span>
+      </div>`;
+    });
+    pc.innerHTML=h;
+  }
+  // Wire place cards to fly-to + open popup (delegated so rebuilds keep working)
+  if(pc) pc.onclick=(ev)=>{
+    const card=ev.target.closest(".placecard");
+    if(!card) return;
+    const m=recapMarkers[card.dataset.name];
+    if(m && recapMap){
+      recapMap.flyTo(m.getLatLng(), Math.max(recapMap.getZoom(), 15), {duration:0.8});
+      m.openPopup();
+    }
+  };
+
+  // ---- map markers + route (only when Leaflet actually loaded) ----
+  if(!map || !recapLayer) {
+    if(pc) pc.insertAdjacentHTML("beforebegin",
+      `<div class="empty-note" style="padding:10px">Map couldn't load (Leaflet unavailable) — places are listed below.</div>`);
+    return;
+  }
+  recapLayer.clearLayers();
+  recapMarkers = {};
+
+  // city markers (visited = green filled, planned = orange)
+  const visitedCities = new Set(list.map(s=>s.city));
+  Object.entries(CITY_POS).forEach(([c,[lat,lon]])=>{
+    const visited = visitedCities.has(c);
+    const col = visited ? "#2e7d5b" : "#c1440e";
+    L.circleMarker([lat,lon],{radius:visited?9:7,color:"#fff",weight:2,fillColor:col,fillOpacity:1})
+      .addTo(recapLayer)
+      .bindPopup(`<div><b>${c}</b> · ${visited?"visited":"planned"}</div>`);
+  });
+
+  // route line Lisbon → Seville → Marbella
+  const routeCoords = [CITY_POS.Lisbon, CITY_POS.Seville, CITY_POS.Marbella];
+  L.polyline(routeCoords,{color:"#c1440e",weight:2.5,dashArray:"6 6",opacity:.65}).addTo(recapLayer);
+
+  // stop pins at real lat/lon
+  list.forEach((s,i)=>{
+    const ll = PLACE_COORDS[s.place] || PLACE_COORDS[s.city];
+    if(!ll) return;
+    const col = (s.rating&&s.rating>=8)?"#2e7d5b":"#c1440e";
+    const m = L.circleMarker(ll,{radius:9,color:"#fff",weight:2,fillColor:col,fillOpacity:1})
+      .addTo(recapLayer)
+      .bindPopup(mapPopupHTML(s, firstPhotoFor(s)))
+      .on("click",()=>{ /* popup auto-opens; also keep in sync */ });
+    recapMarkers[s.place] = m;
+  });
+
+  // Fit the map to the pins
+  if(recapLayer.getLayers().length){
+    recapMap.fitBounds(recapLayer.getBounds().pad(0.18), {maxZoom: 13});
+  }
+  // The map panel is hidden at first render → force a size recalculation so
+  // tiles/pins actually appear once the panel is shown.
+  setTimeout(()=>{ try{ recapMap.invalidateSize(); }catch(e){} }, 60);
+  setTimeout(()=>{ try{ recapMap.invalidateSize(); }catch(e){} }, 350);
+}
+
+// When the map nav button is clicked, make sure Leaflet re-measures its size
+// (the panel was display:none when the map was built, so without this the
+// containers would stay 0-height until a resize).
+document.addEventListener("DOMContentLoaded", ()=>{
+  document.querySelectorAll(".nav button").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      if(btn.dataset.panel==="map"){
+        setTimeout(()=>{ try{ if(recapMap) recapMap.invalidateSize(); }catch(e){} }, 120);
+      }
+    });
+  });
+});
 
 function formatDayHeading(iso){
   const d=new Date(iso+ (iso.length===10?"T12:00:00":""));
