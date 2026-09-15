@@ -648,6 +648,10 @@ async function loadSharedState(){
 // ---- Stats (real counts per category) ----
 function buildStats(){
   const box=document.getElementById("statGrid");
+  // The current redesigned layout has no standalone Stats panel/element, so
+  // stats are optional: bail out instead of crashing on a null target (which
+  // previously aborted the init sequence before buildMap() ran).
+  if(!box) return;
   const active = STOPS.filter(s=> !isDismissed(s.place) && (s.confirmed || isConfirmed(s.place)));
   const meals = active.filter(s=> s.type==="food");
   const sights = active.filter(s=> s.type==="sight");
